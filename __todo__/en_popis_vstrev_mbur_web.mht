@@ -1,0 +1,3384 @@
+From: <Uloženo v aplikaci Windows Internet Explorer 8>
+Subject: M-Bus Documentation
+Date: Mon, 3 Jun 2013 10:28:09 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CE6045.0B33FF10"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.6157
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CE6045.0B33FF10
+Content-Type: text/html;
+	charset="windows-1250"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.m-bus.com/mbusdoc/md6.php
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>M-Bus Documentation</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1250" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.23487"></HEAD>
+<BODY link=3D#0000ff bgColor=3D#ffffff vLink=3D#000080>
+<H1><STRONG>The M-Bus: A Documentation</STRONG></H1><BR><STRONG><A=20
+href=3D"http://www.m-bus.com/mbusdoc/md7.php">&nbsp;<IMG border=3D0 =
+align=3DabsMiddle=20
+src=3D"http://www.m-bus.com/symbol/b_r1.gif"> Next Chapter</A> <A=20
+href=3D"http://www.m-bus.com/mbusdoc/default.php">&nbsp;<IMG border=3D0=20
+align=3DabsMiddle src=3D"http://www.m-bus.com/symbol/b_r2.gif"> Table of =
+
+Contents</A> <A href=3D"http://www.m-bus.com/default.php">&nbsp;<IMG =
+border=3D0=20
+align=3DabsMiddle src=3D"http://www.m-bus.com/symbol/b_up.gif"> M-Bus=20
+Home</A></STRONG>=20
+<HR SIZE=3D2>
+<B><FONT color=3D#0000ff size=3D5>
+<P align=3Djustify><A name=3DB_Toc310233578><A name=3D_Toc403799188>6 =
+Application=20
+Layer</A></A></P></B></FONT>
+<P align=3Djustify>The standardized application protocol in the standard =
+EN1434-3=20
+for data exchange with heat meters will be the basis for the following=20
+discussion. This standard is also suitable for other consumer utility =
+meters,=20
+e.g. for gas and water. However, EN1434-3 only covers the data structure =
+in the=20
+reply direction, the data structure generally used in the direction =
+master to=20
+slave will be presented here.</P>
+<P align=3Djustify>&nbsp;</P><B><FONT color=3D#800080 size=3D4>
+<P align=3Djustify><A name=3DB_Toc310233579><A name=3D_Toc403799189>6.1=20
+CI-Field</A></A></P></B></FONT>
+<P align=3Djustify>The CI-Field codes the type and sequence of =
+application data to=20
+be transmitted in this frame.</P>
+<P align=3Djustify>The EN1434-3 defines two possible data sequences in =
+multibyte=20
+records. The bit two (counting begins with bit 0, value 4), which is =
+called M=20
+bit or Mode bit, in the CI field gives an information about the used =
+byte=20
+sequence in multibyte data structures. If the Mode bit is not set (Mode =
+1), the=20
+least significant byte of a multibyte record is transmitted first, =
+otherwise=20
+(Mode 2) the most significant byte. The Usergroup recommends to use only =
+the=20
+Mode 1 in future applications.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dright>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"13%"><B>
+      <P align=3Dcenter>Mode 1</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"13%"><B>
+      <P align=3Dcenter>Mode 2</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"50%"><B>
+      <P align=3Dcenter>Application</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"25%"><B>
+      <P align=3Dcenter>Definition in</B></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>51h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>55h</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>data send</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>EN1434-3</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>52h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>56h</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>selection of slaves</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup July =EF93</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>50h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>application reset</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup March =EF94</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>54h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>synronize action</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>suggestion</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>B8h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>set baudrate to 300 baud</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup July =EF93</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>B9h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>set baudrate to 600 baud</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup July =EF93</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>BAh</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>set baudrate to 1200 baud</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup July =EF93</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>BBh</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>set baudrate to 2400 baud</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup July =EF93</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>BCh</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>set baudrate to 4800 baud</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup July =EF93</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>BDh</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>set baudrate to 9600 baud</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup July =EF93</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>BEh</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>set baudrate to 19200 baud</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>suggestion</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>BFh</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>set baudrate to 38400 baud</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>suggestion</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>B1h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>request readout of complete RAM content</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Techem suggestion</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>B2h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>send user data (not standardized RAM =
+write)</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Techem suggestion</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>B3h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>initialize test calibration mode</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup July =EF93</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>B4h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>EEPROM read</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Techem suggestion</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>B6h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>start software test</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Techem suggestion</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>90h to 97h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>codes used for hashing</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>obsolete and no longer=20
+recommended</P></TD></TR></TBODY></TABLE></P><B>
+<P align=3Djustify>Table 2 </B><I>CI-Field codes used by the =
+master</P></I><B><U>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Application reset (CI =3D $50)</P></B></U>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>With the CI-Code $50 the master can release a reset =
+of the=20
+application layer in the slaves. Each slave himself decides which =
+parameters to=20
+change - e.g. which data output is default - after it has received such =
+an=20
+application reset. This application reset by a SND_UD with CI=3D$50 is =
+the=20
+counterpart to the reset of the data link layer by a SND_NKE.</P>
+<P align=3Djustify>&nbsp;</P><B><U>
+<P align=3Djustify>Application reset subcode <FONT =
+face=3DSymbol>=A7</FONT>=20
+</P></B></U>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>It is allowed to use optional parameters after CI =3D =
+$50. The=20
+first parameter (the application reset subcode) defines which telegram =
+function=20
+and which subtelegram is requested by the master. The datatype of this =
+parameter=20
+is 8 bit binary. The upper 4 bits define the telegram type or telegram=20
+application and the lower 4 bits define the number of the subtelegram. =
+The use=20
+of the value zero for the number of the subtelegram means that all =
+telegrams are=20
+requested.</P>
+<P align=3Djustify>Slaves with only one type of telegram may ignore =
+application=20
+reset and the added parameters but have to confirm it ($E5). </P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The following codes can be used for the upper 4 bits =
+of the=20
+first parameter:</P>
+<P align=3Djustify>&nbsp;</P>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D607>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"15%"><B>
+      <P align=3Dcenter>Coding</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"47%"><B>
+      <P align=3Dcenter>Description</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"39%"><B>
+      <P align=3Dcenter>Examples</B></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>0000b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>All</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>0001b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>User data </P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>consumption</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>0010b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Simple billing</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>actual and fixed date values+dates</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>0011b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Enhanced billing</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>historic values</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>0100b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Multi tariff billing</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>0101b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Instaneous values</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>for regulation</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>0110b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Load management values for management</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>0111b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>1000b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Installation and startup</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>bus adress, fixed dates</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>1001b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Testing</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>high resolution values</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>1010b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Calibration</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>1011b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Manufacturing</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>1100b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Development</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>1101b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Selftest</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>1110b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>1111b</P></TD>
+    <TD vAlign=3Dtop width=3D"47%">
+      <P align=3Dcenter>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR></TBODY></TABLE><B>
+<P align=3Djustify>Table 3<I> </B>Coding of the upper four bits of the =
+first=20
+parameter after CI =3D $50</P></I>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>Example:</P></U>
+<P align=3Djustify>The master releases an enhanced application reset to =
+all=20
+slaves. All telegrams of the user data type are requested.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Master to Slave: 68 04 04 68 | 53 FE 50 | 10 | B1 =
+16</P>
+<P align=3Djustify>Slave to Master: E5</P>
+<P align=3Djustify>&nbsp;</P><B><U>
+<P align=3Djustify>Syncronize action (CI =3D $54) <FONT =
+face=3DSymbol>=A7</FONT>=20
+</P></B></U>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>This CI-code can be used for syncronizing functions =
+in slaves=20
+and masters (e.g. clock syncronization).</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The use of the other control information codes is =
+described in=20
+the chapters 6.4.1 (set baudrate to 300 .. 38400 Bd), 6.4.2 (data send) =
+and 7=20
+(selection of slaves).</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The following codes can be used for the direction =
+slave to=20
+master:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"13%"><B>
+      <P align=3Dcenter>CI M=3D0</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"13%"><B>
+      <P align=3Dcenter>CI M=3D1</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"50%"><B>
+      <P align=3Dcenter>Application</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"25%"><B>
+      <P align=3Dcenter>Defined in</B></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>70h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>report of general application errors</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup March =EF94</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>71h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>report of alarm status</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Usergroup March =EF94</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>72h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>76h</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>variable data respond</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>EN1434-3</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>73h</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>77h</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Dcenter>fixed data respond</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>EN1434-3</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Table 4 </B><I>CI-Field codes used by the =
+slave</P></I>
+<P align=3Djustify>The use of these control information codes is =
+described in the=20
+chapters 6.1 (fixed data respond), 6.2 (variable data respond), 6.6 =
+(report of=20
+general application errors) and 8.1 (report of alarm =
+status).</P><B><FONT=20
+color=3D#800080 size=3D4>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify><A name=3DB_Toc310233580><A name=3D_Toc403799190>6.2 =
+Fixed Data=20
+Structure</A></A></P></B></FONT>
+<P align=3Djustify>In the reply direction with a long frame two =
+different data=20
+structures are used. The fixed data structure, besides a fixed length, =
+is=20
+limited to the transmission of only two counter states of a =
+predetermined=20
+length, which have binary or BCD coding. In contrast the variable data =
+structure=20
+allows the transmission of more counter states in various codes and =
+further=20
+useful information about the data. The number of bytes of the =
+transmitted=20
+counter states is also variable with this data structure. Contrary to =
+the fixed=20
+structure, the variable structure can also be used in calling direction. =
+For=20
+this reasons the fixed data structure is not recommended for future=20
+developments.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>To identify the fixed data structure, the numbers =
+73h/77h for=20
+the control information field are used. In this way the master software =
+can see=20
+how it must interpret the data.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D603>
+  <TBODY>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"21%">
+      <P align=3Dcenter>Identification No.</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"17%">
+      <P align=3Dcenter>Access No.</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>Status</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>Medium/Unit</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>Counter 1</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>Counter 2</P></TD></TR>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"21%">
+      <P align=3Dcenter>4 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"17%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>2 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>4 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>4 Byte</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B><I>
+<P align=3Djustify>Fig. 15 </B>Fixed Data Structure in Reply Direction =
+(transmit=20
+sequence from left to right)</P></I>
+<P align=3Djustify>The <B>Identification Number</B> is a serial number =
+allocated=20
+during manufacture, coded with 8 BCD packed digits (4 Byte), and which =
+thus runs=20
+from 00000000 to 99999999. </P>
+<P align=3Djustify>The <B>Access Number</B> has unsigned binary coding, =
+and is=20
+increased by one after each RSP_UD from the slave. With the field =
+<B>Status</B>=20
+various information about the status of counters, and faults which have=20
+occurred, can be communicated - see Figure 16:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D601>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff height=3D32 vAlign=3Dtop width=3D"9%"><B>
+      <P align=3Dcenter>Bit</B></P></TD>
+    <TD bgColor=3D#ffffff height=3D32 vAlign=3Dtop width=3D"45%"><B>
+      <P align=3Dcenter>Meaning with Bit set</B></P></TD>
+    <TD bgColor=3D#ffffff height=3D32 vAlign=3Dtop width=3D"45%"><B>
+      <P align=3Dcenter>Significance with Bit not set</B></P></TD></TR>
+  <TR>
+    <TD height=3D24 vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Counter 1 and 2 coded signed binary</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Counter 1 and 2 coded BCD</P></TD></TR>
+  <TR>
+    <TD height=3D24 vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Counter 1 and 2 are stored at fixed =
+date</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Counter 1 and 2 are actual values</P></TD></TR>
+  <TR>
+    <TD height=3D24 vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>2</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Power low</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Not power low</P></TD></TR>
+  <TR>
+    <TD height=3D24 vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>3</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Permanent error</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>No permanent error</P></TD></TR>
+  <TR>
+    <TD height=3D24 vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>4</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Temporary error</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>No temporary error</P></TD></TR>
+  <TR>
+    <TD height=3D24 vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>5</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Specific to manufacturer</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Specific to manufacturer</P></TD></TR>
+  <TR>
+    <TD height=3D24 vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>6</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Specific to manufacturer</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Specific to manufacturer</P></TD></TR>
+  <TR>
+    <TD height=3D24 vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>7</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Specific to manufacturer</P></TD>
+    <TD height=3D24 vAlign=3Dtop width=3D"45%">
+      <P align=3Dcenter>Specific to =
+manufacturer</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B><I>
+<P align=3Djustify>Fig. 16 </B>Coding of the Status Field </P></I>
+<P align=3Djustify>The field <B>Medium/Unit</B> is <B>always</B> =
+transmitted with=20
+least significant byte first and gives the medium measured for both =
+counter=20
+states, and the units for each of the two counter states. The units of =
+counter 1=20
+are coded with the first 6 bits of the first byte, and the units of =
+counter 2=20
+with the first 6 bits of the second byte. The coding of the medium is =
+made up of=20
+the two highest bits of these bytes, and can therefore have 16 different =
+values=20
+(4 bits). Tables to represent the physical units and the coding of the =
+medium=20
+are in the appendix.</P>
+<P align=3Djustify>&nbsp;</P><B><U>
+<P align=3Djustify>&nbsp;</P></B></U>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D613>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>Byte</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"47%" colSpan=3D8><B><FONT size=3D2>
+      <P align=3Dcenter>Byte No. 8 (byte 2 of =
+medium/unit)</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"47%" colSpan=3D8><B><FONT size=3D2>
+      <P align=3Dcenter>Byte No. 7 (byte 1 of =
+medium/unit)</B></FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>Bit</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>16</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>15</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>14</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>13</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>12</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>11</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>10</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>9</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>8</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>7</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>6</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>5</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>4</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>3</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>2</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D2>
+      <P align=3Dcenter>1</B></FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"12%" colSpan=3D2><B><FONT size=3D2>
+      <P align=3Dcenter>Medium</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"35%" colSpan=3D6><B><FONT size=3D2>
+      <P align=3Dcenter>physical unit of counter 2</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"12%" colSpan=3D2><B><FONT size=3D2>
+      <P align=3Dcenter>Medium</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"35%" colSpan=3D6><B><FONT size=3D2>
+      <P align=3Dcenter>physical unit of counter =
+1</B></FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D1>
+      <P align=3Dcenter>MSB</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D1>
+      <P align=3Dcenter>MSB</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D1>
+      <P align=3Dcenter>LSB</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D1>
+      <P align=3Dcenter>LSB</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D1>
+      <P align=3Dcenter>MSB</B></FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"6%"><B><FONT size=3D1>
+      <P align=3Dcenter>LSB</B></FONT></P></TD></TR></TBODY></TABLE><B>
+<P align=3Djustify>Fig. 17 </B><I>Coding of physical unit and medium in =
+fixed data=20
+structure (data type E)</P></I>
+<P align=3Djustify>To allow transmission of one historic value with one =
+of the two=20
+counters the special unit (111110b or hex code share of 3Eh) has been =
+defined.=20
+This unit declares that this historic counter has the same unit as the =
+other=20
+actual counter.</P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>Example for a RSP_UD with fixed data structure (mode=20
+1):</P></U>
+<P align=3Djustify>The slave with address 5 and identification number =
+12345678=20
+responds with the following data (all values hex.):</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>68 13 13 68 header of RSP_UD telegram (L-Field =3D =
+13h =3D 19d)</P>
+<P align=3Djustify>08 05 73 C field =3D 08h (RSP_UD), address 5, CI =
+field =3D 73h=20
+(fixed, LSByte first)</P>
+<P align=3Djustify>78 56 34 12 identification number =3D 12345678</P>
+<P align=3Djustify>0A transmission counter =3D 0Ah =3D 10d</P>
+<P align=3Djustify>00 status 00h: counters coded BCD, actual values, no =
+errors</P>
+<P align=3Djustify>E9 7E Type&amp;Unit: medium water, unit1 =3D 1l, =
+unit2 =3D 1l=20
+(same, but historic)</P>
+<P align=3Djustify>01 00 00 00 counter 1 =3D 1l (actual value)</P>
+<P align=3Djustify>35 01 00 00 counter 2 =3D 135 l (historic value)</P>
+<P align=3Djustify>3C 16 checksum and stop sign</P>
+<P align=3Djustify>&nbsp;</P><B><FONT color=3D#800080 size=3D4>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify><A name=3DB_Toc310233581><A name=3D_Toc403799191>6.3 =
+Variable Data=20
+Structure</A></A></P></B></FONT>
+<P align=3Djustify>The CI-Field codes 72h/76h are used to indicate the =
+variable=20
+data structure in long frames (RSP_UD). Figure 18 shows the way this =
+data is=20
+represented:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Fixed Data Header</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"38%">
+      <P align=3Dcenter>Variable Data Blocks (Records)</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>MDH</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Mfg.specific data</P></TD></TR>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>12 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"38%">
+      <P align=3Dcenter>variable number</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>variable =
+number</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 18<I> </B>Variable Data Structure in Reply=20
+Direction</P></I><U>
+<P align=3Djustify>&nbsp;</P></U><B><FONT color=3D#008000>
+<P align=3Djustify><A name=3DB_Toc310233582><A =
+name=3D_Toc403799192>6.3.1 Fixed Data=20
+Header</A></A></P></B></FONT>
+<P align=3Djustify>The first twelve bytes of the user data consist of a =
+block with=20
+a fixed length and structure (see fig. 19). </P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D601>
+  <TBODY>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>Ident. Nr.</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>Manufr.</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>Version</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>Medium</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>Access No.</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>Status</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>Signature</P></TD></TR>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>4 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>2 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>2 Byte</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 19 </B><I>Fixed Data Block</P></I>
+<P align=3Djustify><FONT face=3DSymbol>=A7</FONT> In contrast to the =
+fixed data=20
+structure here the <B>Identification Number</B> is a customer number, =
+coded with=20
+8 BCD packed digits (4 Byte), and which thus runs from 00000000 to =
+99999999. It=20
+can be preset at fabrication time with a unique number, but could be =
+changeable=20
+afterwards, especially if in addition an unique and not changeable =
+fabrication=20
+number (DIF =3D $0C, VIF =3D $78, see chapter 6.7.3) is provided. </P>
+<P align=3Djustify>The <B>access number</B> is described above in the =
+fixed data=20
+structure (see chapter 6.2).</P>
+<P align=3Djustify>The field <B>manufacturer</B> is coded unsigned =
+binary with 2=20
+bytes. This manufacturer ID is calculated from the ASCII code of EN =
+61107=20
+manufacturer ID (three uppercase letters) with the following =
+formula:</P>
+<P align=3Djustify>&nbsp;</P>
+<DIR>
+<DIR>
+<DIR>
+<P>IEC 870 Man. ID =3D [ASCII(1st letter) - 64] <FONT =
+face=3DSymbol>=B7</FONT> 32=20
+<FONT face=3DSymbol>=B7</FONT> 32</P>
+<P>+ [ASCII(2nd letter) - 64] <FONT face=3DSymbol>=B7</FONT> 32</P>
+<P>+ [ASCII(3rd letter) - 64]</P>
+<P>&nbsp;</P></DIR></DIR></DIR>
+<P align=3Djustify>The field <B>version</B> specifies the generation or =
+version of=20
+this counter and depends on the manufacturer. In contrast to the fixed =
+data=20
+structure, the <B>Medium</B> is coded with a whole byte instead of four =
+bits and=20
+the lowest two bits of the <B>Status</B> field are used to indicate =
+application=20
+errors (see chapter 6.6). Apart from this, the significance of the =
+individual=20
+bits of the Status field is the same as that of the fixed data =
+structure. The=20
+<B>Signature</B> remains reserved for future encryptation applications, =
+and=20
+until then is allocated the value 00 00 h.</P>
+<P align=3Djustify>&nbsp;</P><B><FONT color=3D#008000>
+<P align=3Djustify><A name=3DB_Toc310233583><A =
+name=3D_Toc403799193>6.3.2 Variable=20
+Data Blocks</A></A></P></B></FONT>
+<P align=3Djustify>The data, together with information regarding coding, =
+length=20
+and the type of data is transmitted in data records. As many blocks of =
+data can=20
+be transferred as there is room for, within the maximum data length of =
+255=20
+Bytes, and taking account of the C, A , and CI fields, the fixed data =
+block. The=20
+upper limit for characters in the variable data blocks is thus 240 byte. =
+The=20
+Usergroup recommends a maximum total telegram length of 255 bytes (234 =
+bytes for=20
+variable data blocks) to avoid problems in modem communication. The =
+manufacturer=20
+data header (MDH) is made up by the character 0Fh or 1Fh and indicates =
+the=20
+beginning of the manufacturer specific part of the user data and should =
+be=20
+omitted, if there is no manufacturer specific data.</P><B><U>
+<P align=3Djustify>Data Information Block</P></B></U>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"18%">
+      <P align=3Dcenter>DIF</P></TD>
+    <TD vAlign=3Dtop width=3D"22%">
+      <P align=3Dcenter>DIFE</P></TD>
+    <TD vAlign=3Dtop width=3D"18%">
+      <P align=3Dcenter>VIF</P></TD>
+    <TD vAlign=3Dtop width=3D"22%">
+      <P align=3Dcenter>VIFE</P></TD>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>Data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"18%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD vAlign=3Dtop width=3D"22%">
+      <P align=3Dcenter>0-10 (1 Byte each)</P></TD>
+    <TD vAlign=3Dtop width=3D"18%">
+      <P align=3Dcenter>1 Byte</P></TD>
+    <TD vAlign=3Dtop width=3D"22%">
+      <P align=3Dcenter>0-10 (1 Byte each)</P></TD>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>0-N Byte</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"40%" colSpan=3D2>
+      <P align=3Dcenter>Data Information Block DIB</P></TD>
+    <TD vAlign=3Dtop width=3D"40%" colSpan=3D2>
+      <P align=3Dcenter>Value Information Block VIB</P></TD>
+    <TD vAlign=3Dtop width=3D"20%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"80%" colSpan=3D4>
+      <P align=3Dcenter>Data Record Header DRH</P></TD>
+    <TD vAlign=3Dtop =
+width=3D"20%">&nbsp;</TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 20 </B><I>Structure of a Data Record =
+(transmitted from=20
+left to right)</P></I>
+<P align=3Djustify>Each data record contains one value with its =
+description as=20
+shown in figure 20, a data record, which consists of a data record =
+header (DRH)=20
+and the actual data. The DRH in turn consists of the DIB (data =
+information=20
+block) to describe the length, type and coding of the data, and the VIB =
+(value=20
+information block) to give the value of the unit and the multiplier.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The DIB contains at least one byte (DIF, data =
+information=20
+field), and can be extended by a maximum of ten DIFE's (data information =
+field=20
+extensions). The following information is contained in a DIF:</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>Bit 7</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>6</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>5</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>4</P></TD>
+    <TD vAlign=3Dtop width=3D"12%" colSpan=3D2>
+      <P align=3Dcenter>3</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>2</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>0</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>Extension</P>
+      <P align=3Dcenter>Bit</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>LSB of storage number</P></TD>
+    <TD vAlign=3Dtop width=3D"25%" colSpan=3D3>
+      <P align=3Dcenter>&nbsp;</P>
+      <P align=3Dcenter>Function Field</P></TD>
+    <TD vAlign=3Dtop width=3D"50%" colSpan=3D4>
+      <P align=3Dcenter>Data Field :</P>
+      <P align=3Dcenter>Length and coding of =
+data</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 21 </B><I>Coding of the Data Information Field=20
+(DIF)</P></I>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The <B>function field</B> gives the type of data as=20
+follows:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"13%"><B>
+      <P align=3Dcenter>Code</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"38%"><B>
+      <P align=3Dcenter>Description</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"13%"><B>
+      <P align=3Dcenter>Code</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"38%"><B>
+      <P align=3Dcenter>Description</B></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>00b</P></TD>
+    <TD vAlign=3Dtop width=3D"38%">
+      <P align=3Dcenter>Instantaneous value</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>01b</P></TD>
+    <TD vAlign=3Dtop width=3D"38%">
+      <P align=3Dcenter>Maximum value</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>10b</P></TD>
+    <TD vAlign=3Dtop width=3D"38%">
+      <P align=3Dcenter>Minimum value</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>11b</P></TD>
+    <TD vAlign=3Dtop width=3D"38%">
+      <P align=3Dcenter>Value during error =
+state</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The <B>data field</B> shows how the data from the =
+master must=20
+be interpreted in respect of length and coding. The following table =
+contains the=20
+possible coding of the data field:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"20%"><B>
+      <P align=3Dcenter>Length in Bit</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"14%"><B>
+      <P align=3Dcenter>Code</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"26%"><B>
+      <P align=3Dcenter>Meaning</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"14%"><B>
+      <P align=3Dcenter>Code</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"26%"><B>
+      <P align=3Dcenter>Meaning</B></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>0000</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>No data</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1000</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>Selection for Readout</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>8</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>0001</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>8 Bit Integer</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1001</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>2 digit BCD</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>16</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>0010</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>16 Bit Integer</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1010</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>4 digit BCD</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>24</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>0011</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>24 Bit Integer</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1011</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>6 digit BCD</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>32</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>0100</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>32 Bit Integer</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1100</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>8 digit BCD</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>32 / N</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>0101</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>32 Bit Real</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1101</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>variable length</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>48</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>0110</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>48 Bit Integer</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1110</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>12 digit BCD</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"20%">
+      <P align=3Dcenter>64</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>0111</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>64 Bit Integer</P></TD>
+    <TD vAlign=3Dtop width=3D"14%">
+      <P align=3Dcenter>1111</P></TD>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>Special =
+Functions</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Table 5 </B><I>Coding of the data field</P></I>
+<P align=3Djustify>For a detailed description of data types refer to =
+appendix 8.2=20
+" Coding of data records"<BR>(BCD =3D Type A, Integer =3D Type B, Real =
+=3D Type=20
+H).</P>
+<DIR><U>
+<P align=3Djustify>Variable Length:</P></DIR></U>
+<P align=3Djustify>With data field =3D `1101b` several data types with =
+variable=20
+length can be used. The length of the data is given after the DRH with =
+the first=20
+byte of real data, which is here called LVAR (e.g. LVAR =3D 02h: ASCII =
+string with=20
+two characters follows) <FONT face=3DSymbol>=A7</FONT> .</P>
+<DIR>
+<P align=3Djustify>LVAR =3D 00h .. BFh : ASCII string with LVAR =
+characters</P>
+<P align=3Djustify>LVAR =3D C0h .. CFh : positive BCD number with (LVAR =
+- C0h) <FONT=20
+face=3DSymbol>=B7</FONT> 2 digits</P>
+<P align=3Djustify>LVAR =3D D0h .. DFH : negative BCD number with (LVAR =
+- D0h) <FONT=20
+face=3DSymbol>=B7</FONT> 2 digits</P>
+<P align=3Djustify>LVAR =3D E0h .. EFh : binary number with (LVAR - E0h) =
+bytes</P>
+<P align=3Djustify>LVAR =3D F0h .. FAh : floating point number with =
+(LVAR - F0h)=20
+bytes [to be defined]</P>
+<P align=3Djustify>LVAR =3D FBh .. FFh : Reserved</P></DIR>
+<P align=3Djustify>Like all multibyte fields in mode 1 the last =
+character and in=20
+mode 2 the first character is transmitted first.</P><U>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Special Functions (data field =3D 1111b):</P>
+<P align=3Djustify>&nbsp;</P></U>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"16%"><B>
+      <P align=3Dcenter>DIF</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"84%"><B>
+      <P align=3Dcenter>Function</B></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%">
+      <P align=3Dcenter>0Fh</P></TD>
+    <TD vAlign=3Dtop width=3D"84%">
+      <P>Start of manufacturer specific data structures to end of user=20
+    data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%">
+      <P align=3Dcenter>1Fh</P></TD>
+    <TD vAlign=3Dtop width=3D"84%">
+      <P>Same meaning as DIF =3D 0Fh + More records follow in next=20
+  telegram</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%">
+      <P align=3Dcenter>2Fh</P></TD>
+    <TD vAlign=3Dtop width=3D"84%">
+      <P>Idle Filler (not to be interpreted), following byte =3D =
+DIF</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%">
+      <P align=3Dcenter>3Fh..6Fh</P></TD>
+    <TD vAlign=3Dtop width=3D"84%">
+      <P>Reserved</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%">
+      <P align=3Dcenter>7Fh</P></TD>
+    <TD vAlign=3Dtop width=3D"84%">
+      <P>Global readout request (all storage#, units, tariffs, function=20
+      fields)</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>If data follows after DIF=3D$0F or $1F these are =
+manufacturer=20
+specific data records. The number of bytes in these manufacturer =
+specific data=20
+can be calculated with the L-Field. The DIF 1Fh signals a request from =
+the slave=20
+to the master to readout the slave once again. The master must readout =
+the slave=20
+until there is no DIF=3D1Fh inside the respond telegram (multi telegram=20
+readout).</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The Bit 6 of the DIF serves to give the <B>storage =
+number</B>=20
+of the data concerned, and the slave can in this way indicate and =
+transmit=20
+various stored counter states or historical values, in the order in =
+which they=20
+occur. This bit is the least significant bit of the storage number and =
+allows=20
+therefore the storage numbers 0 and 1 to be given without further =
+DIFE's. In=20
+this way the storage number 0 stands for the actual value. If higher =
+storage=20
+numbers are needed, the slave allows a DIFE to follow the DIF, and =
+indicates=20
+this by setting the extension bit.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Each DIFE (maximum ten) contains again an extension =
+bit to show=20
+that a further DIFE is being sent. Besides giving the next most =
+significant bit=20
+of the storage number, this DIFE allows the transmission of informations =
+about=20
+the <B>tariff</B> and the <B>subunit</B> of the device from which the =
+data come.=20
+In this way, exactly as with the storage number, the next most =
+significant bit=20
+or bits will be transmitted. The figure 22 which follows shows the =
+structure of=20
+a DIFE:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>Bit 7</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>6</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>5</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>4</P></TD>
+    <TD vAlign=3Dtop width=3D"12%" colSpan=3D2>
+      <P align=3Dcenter>3</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>2</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>0</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>Extension Bit</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>(Device) Unit</P></TD>
+    <TD vAlign=3Dtop width=3D"25%" colSpan=3D3>
+      <P align=3Dcenter>Tariff</P></TD>
+    <TD vAlign=3Dtop width=3D"50%" colSpan=3D4>
+      <P align=3Dcenter>Storage =
+Number</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 22 </B><I>Coding of the Data Information Field =
+Extension=20
+(DIFE)</P></I>
+<P align=3Djustify>With the maximum of ten DIFE=EFs which are provided, =
+there are 41=20
+bits for the storage number, 20 bits for the tariff, and 10 bits for the =
+subunit=20
+of the meter. There is no application conceivable in which this immense =
+number=20
+of bits could all be used.</P><B><U>
+<P align=3Djustify>Value Information Block (VIB)</P></B></U>
+<P align=3Djustify>After a DIF or DIFE without a set extension bit there =
+follows=20
+the VIB (value information block). This consists at least of the VIF =
+(value=20
+information field) and can be expanded with a maximum of 10 extensions =
+(VIFE).=20
+The VIF and also the VIFE's show with a set MSB that a VIFE will follow. =
+In the=20
+value information field VIF the other seven bits give the unit and the=20
+multiplier of the transmitted value.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>Bit 7</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>6</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>5</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>4</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>3</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>2</P></TD>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"13%">
+      <P align=3Dcenter>0</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%">
+      <P align=3Dcenter>Extension Bit</P></TD>
+    <TD vAlign=3Dtop width=3D"88%" colSpan=3D7>
+      <P align=3Dcenter>Unit and multiplier=20
+(value)</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 23 </B><I>Coding of the Value Information Field=20
+(VIF)</P></I><U>
+<P align=3Djustify>There are five types of coding depending on the =
+VIF:</P></U><B>
+<P align=3Djustify>1. Primary VIF: E000 0000b .. E111 1011b</P>
+<DIR></B>
+<P align=3Djustify>The unit and multiplier is taken from the table for =
+primary VIF=20
+(chapter 8.4.3).</P></DIR><B>
+<P align=3Djustify>2. Plain-text VIF: E111 1100b</P>
+<DIR></B>
+<P align=3Djustify>In case of VIF =3D 7Ch / FCh the true VIF is =
+represented by the=20
+following ASCII string with the length given in the first byte. Please =
+note that=20
+the byte order of the characters after the length byte depends on the =
+used byte=20
+sequence. This plain text VIF allows the user to code units that are not =
+
+included in the VIF tables.</P></DIR><B>
+<P align=3Djustify>3. Linear VIF-Extension: FDh and FBh </P>
+<DIR></B>
+<P align=3Djustify>In case of VIF =3D FDh and VIF =3D FBh the true VIF =
+is given by the=20
+next byte and the coding is taken from the table for secondary VIF =
+(chapter=20
+8.4.4). This extends the available VIF=EFs by another 256 =
+codes.</P></DIR><B>
+<P align=3Djustify>4. Any VIF: 7Eh / FEh</P>
+<DIR></B>
+<P align=3Djustify>This VIF-Code can be used in direction master to =
+slave for=20
+readout selection of all VIF=EFs. See chapter 6.4.3.</P></DIR><B>
+<P align=3Djustify>5. Manufacturer specific: 7Fh / FFh </P>
+<DIR></B>
+<P align=3Djustify>In this case the remainder of this data record =
+including VIFE=EFs=20
+has manufacturer specific coding.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P></DIR>
+<P align=3Djustify>The <B>VIFE</B> can be used for actions which shall =
+be done=20
+with the data (master to slave, chapter 6.5), for reports of application =
+errors=20
+(slave to master, chapter 6.6) and for an enhancement of the VIF =
+(orthogonal=20
+VIF, chapter 8.4.5). The last feature allows setting VIF=EFs into =
+relation to the=20
+base physical units (e.g. VIF=3D10 liter, VIFE=3D per hour) or coding =
+indirect=20
+units, pulse increments and change speeds.</P>
+<P align=3Djustify>In case of <B>VIFE</B> =3D FFh the next <B>VIFE's</B> =
+and the=20
+data of this block are manufacturer specific, but the VIF is coded as=20
+normal.</P>
+<P align=3Djustify>After a VIF or VIFE with an extension bit of "0", the =
+value=20
+information block is closed, and therefore also the data record header, =
+and the=20
+actual data follow in the previously given length and coding.</P>
+<P align=3Djustify>&nbsp;</P><B><FONT color=3D#008000>
+<P align=3Djustify><A name=3DB_Toc310233584><A =
+name=3D_Toc403799194>6.3.3 Manufacturer=20
+Specific Data Block</A></A></P></B></FONT>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The MDH consists of the character 0Fh or 1Fh (DIF =3D =
+0Fh or 1Fh)=20
+and indicates that all following data are manufacturer specific. When =
+the number=20
+of bytes given in the length field of the connection protocol has not =
+yet been=20
+used up, then manufacturer specific data follow this character, whose =
+coding is=20
+left to the manufacturer. The length of this data is calculated from the =
+L-Field=20
+minus the length of the so-called standard data (C-Field, A-Field, =
+CI-Field and=20
+the data up to and including the data block 0Fh).</P>
+<P align=3Djustify>In case of MDH =3D 1Fh the slave signals to the =
+master that it=20
+wants to be readout once again (multitelegram readouts). The master must =
+readout=20
+the data until there is no MDH =3D 1Fh in the respond telegram.</P>
+<P align=3Djustify>&nbsp;</P><B><U>
+<P align=3Djustify>Example for a RSP_UD with variable data structure =
+answer (mode=20
+1):</P></B></U>
+<P align=3Djustify>(all values are hex.)</P>
+<P align=3Djustify>68 1F 1F 68 header of RSP_UD telegram (length =
+1Fh=3D31d=20
+bytes)</P>
+<P align=3Djustify>08 02 72 C field =3D 08 (RSP), address 2, CI field =
+72H=20
+(var.,LSByte first)</P>
+<P align=3Djustify>78 56 34 12 identification number =3D 12345678</P>
+<P align=3Djustify>24 40 01 07 manufacturer ID =3D 4024h (PAD in EN =
+61107),=20
+generation 1, water</P>
+<P align=3Djustify>55 00 00 00 TC =3D 55h =3D 85d, Status =3D 00h, =
+Signature =3D 0000h</P>
+<P align=3Djustify>03 13 15 31 00 <B>Data block 1:</B> unit 0, storage =
+No 0, no=20
+tariff, instantaneous volume,</P>
+<P align=3Djustify>12565 l (24 bit integer)</P>
+<P align=3Djustify>DA 02 3B 13 01 <B>Data block 2: </B>unit 0, storage =
+No 5, no=20
+tariff, maximum volume flow,</P>
+<P align=3Djustify>113 l/h (4 digit BCD)</P>
+<P align=3Djustify>8B 60 04 37 18 02 <B>Data block 3:</B> unit 1, =
+storage No 0,=20
+tariff 2, instantaneous energy,</P>
+<P align=3Djustify>218,37 kWh (6 digit BCD)</P>
+<P align=3Djustify>18 16 checksum and stopsign</P><B><FONT =
+color=3D#800080 size=3D4>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify><A name=3DB_Toc310233585><A name=3D_Toc403799195>6.4 =
+Configuring=20
+Slaves</A></A></P></B></FONT>
+<P align=3Djustify>The means for configuring slaves, for example set =
+primary=20
+address or secondary address, set baudrate or set other configuration =
+data=20
+inside the slave are explained in this section.</P><B><FONT =
+color=3D#008000>
+<P align=3Djustify><A name=3DB_Toc310233586><A =
+name=3D_Toc403799196>6.4.1 Switching=20
+Baudrate</A></A></P></B></FONT>
+<P align=3Djustify>All slaves must be able to communicate with the =
+master using=20
+the minimum transmission speed of 300 baud. Splitted baudrates between =
+transmit=20
+and receive are not allowed, but there can be devices with different =
+baudrates=20
+on the bus.</P>
+<P align=3Djustify>In point to point connections the slave is set to =
+another=20
+baudrate by a Control Frame (SND_UD with L-Field =3D 3) with address FEh =
+and one=20
+of the following CI-Field codes:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D605>
+  <TBODY>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>CI-Field</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>B8h</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>B9h</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>BAh</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>BBh</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>BCh</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>BDh</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>BEh</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>BFh</P></TD></TR>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>Baud</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>300</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>600</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>1200</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>2400</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>4800</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>9600</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>19200</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>38400</P></TD></TR>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"15%">
+      <P align=3Dcenter>Note</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P></P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>1</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>1</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P></P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>1</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P></P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>1,2</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"11%">
+      <P align=3Dcenter>2</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 24 </B><I>CI-Field-Codes for Baudrate =
+Switching</P></I>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Notes:</P>
+<P align=3Djustify>1) These baudrates are not recommended.</P>
+<P align=3Djustify>2) These baudrates will be available in future with =
+new=20
+repeater hardware. CI-Field codes are suggestions by the Usergroup.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The slave confirms the correctly received telegram by =
+
+transmitting an E5h with the old baudrate and uses the new baudrate from =
+now on,=20
+if he is capable of this.</P>
+<P align=3Djustify>The master must know the highest available baudrate =
+on the bus=20
+to forbid the user switching to a transmission speed, which is not =
+available on=20
+the bus. Otherwise the slave would never answer again.</P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>Example:</P></U>
+<P align=3Djustify>The master switches the slave (in point to point =
+connection)=20
+from now 2400 baud to 9600 baud.</P>
+<P align=3Djustify>Master to slave: 68 03 03 68 | 53 FE BD | 0E 16 with =
+2400=20
+baud</P>
+<P align=3Djustify>Slave to master: E5 with 2400 baud</P>
+<P align=3Djustify>From that time on the slave communicates with the =
+transmission=20
+speed 9600 baud.</P><B><FONT color=3D#008000>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify><A name=3DB_Toc310233587><A =
+name=3D_Toc403799197>6.4.2 Writing Data=20
+to a Slave</A></A></P></B></FONT>
+<P align=3Djustify>The master can send data to a slave using a SND_UD =
+with=20
+CI-Field 51h for mode 1 or 55h for mode 2. Note that the data structure =
+in such=20
+a write telegram has been changed in contrast to previous definitions by =
+means=20
+of leaving out the fixed data header of 12 byte. The following figure =
+shows the=20
+data structure for a write telegram. The order of the first three blocks =
+in the=20
+following figure can be turned round, but the write only data record =
+must be at=20
+the end of the telegram. All records are optional.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Primary Address Record</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Enhanced Identifica-</P>
+      <P align=3Dcenter>tion Record</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Normal</P>
+      <P align=3Dcenter>Data Records</P></TD>
+    <TD vAlign=3Dtop width=3D"25%">
+      <P align=3Dcenter>Write Only Data =
+Records</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 25 </B><I>Data Structure for Writing =
+Data</P></I>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT><U>Primary=20
+Address Record:</P>
+<DIR></U>
+<P align=3Djustify>The primary address record is optional and consists =
+of three=20
+bytes:</P></DIR>
+<P align=3Dright>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D580>
+  <TBODY>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>DIF =3D 01h</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>VIF =3D 7Ah</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"48%">
+      <P align=3Dcenter>Data =3D Address (1 byte =
+binary)</P></TD></TR></TBODY></TABLE></P>
+<DIR>
+<P align=3Djustify>With this data record a primary address can be =
+assigned to a=20
+slave in point to point connections. The master must know all the used =
+addresses=20
+on the bus and forbid setting the address of a slave to an already used =
+address.=20
+Otherwise both slaves with the same address couldn=EFt be read out =
+anymore.</P>
+<P align=3Djustify>&nbsp;</P></DIR>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT><U>Enhanced=20
+Identification Record:</P>
+<DIR></U>
+<P align=3Djustify>With this optional data record the identification =
+(secondary=20
+address) can be changed. There are two cases to be distinguished:</P>
+<P align=3Djustify>1) Data is only the identification number</P></DIR>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D580>
+  <TBODY>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>DIF =3D 0Ch</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>VIF =3D 79h</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"48%">
+      <P align=3Dcenter>Data =3D Identification No. (8 digit=20
+BCD)</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<DIR>
+<P align=3Djustify>2) Data is the complete identification</P></DIR>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D580>
+  <TBODY>
+  <TR>
+    <TD height=3D32 vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>DIF =3D 07h</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>VIF =3D 79h</P></TD>
+    <TD height=3D32 vAlign=3Dtop width=3D"48%">
+      <P align=3Dcenter>Data =3D complete ID (64 bit=20
+integer)</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<DIR>
+<P align=3Djustify>The data is packed exactly as in the readout header =
+of a=20
+$72/$76 variable protocol with low byte first for mode 1 and high byte =
+first for=20
+mode 2:</P></DIR>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D557>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"5%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"24%">
+      <P align=3Dcenter>Identification No.</P></TD>
+    <TD vAlign=3Dtop width=3D"24%">
+      <P align=3Dcenter>Manufacturer ID</P></TD>
+    <TD vAlign=3Dtop width=3D"24%">
+      <P align=3Dcenter>Generation</P></TD>
+    <TD vAlign=3Dtop width=3D"24%">
+      <P align=3Dcenter>Medium</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"5%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"24%">
+      <P align=3Dcenter>4 byte</P></TD>
+    <TD vAlign=3Dtop width=3D"24%">
+      <P align=3Dcenter>2 byte</P></TD>
+    <TD vAlign=3Dtop width=3D"24%">
+      <P align=3Dcenter>1 byte</P></TD>
+    <TD vAlign=3Dtop width=3D"24%">
+      <P align=3Dcenter>1 byte</P></TD></TR></TBODY></TABLE>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT><U>Normal Data=20
+Records:</P>
+<DIR></U>
+<P align=3Djustify>The data records, which can be read out with a =
+REQ_UD2, are=20
+sent back to the slave with the received DIF and VIF and the new data =
+contents.=20
+Additional features can be implemented using the generalized object =
+layer (see=20
+chapter 6.5 <FONT face=3DSymbol>=A7</FONT> ).</P></DIR>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT><U>Write-Only=20
+Data:</P>
+<DIR></U>
+<P align=3Djustify>Data, which cannot be read out of the slave with a =
+normal data=20
+block, can be transmitted using the VIF =3D 7Fh for manufacturer =
+specific coding.=20
+The DIF must have a value corresponding to the type and length of =
+data.</P>
+<P align=3Djustify>&nbsp;</P></DIR>
+<P align=3Djustify>After receiving the SND_UD correctly without any =
+error in data=20
+link layer the slave must answer with an acknowledgement (E5h). The =
+slave=20
+decides whether to change variables or not after a data write from the =
+master.=20
+In case of errors in executing parts of or whole write instructions the =
+slave=20
+can decide whether to change no variables or single correct variables. =
+The slave=20
+can report the this errors to the master in the next RSP_UD telegram =
+using some=20
+of the methods which are described in chapter 6.6.</P>
+<P align=3Djustify>There are some methods for implementing write =
+protect, for=20
+example allowing only one write after a hardware reset of the processor =
+or=20
+enabling write if a protect disable jumper is set.</P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>Examples:</P>
+<DIR></U>
+<P align=3Djustify>1. Set the slave to primary address 8 without =
+changing anything=20
+else:</P>
+<P align=3Djustify>68 06 06 68 | 53 FE 51 | 01 7A 08 | 25 16</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>2. Set the complete identification of the slave =
+(ID=3D01020304,=20
+Man=3D4024h (PAD), Gen=3D1, Med=3D4 (Heat):</P>
+<P align=3Djustify>68 0D 0D 68 | 53 FE 51 | 07 79 04 03 02 01 24 40 01 =
+04 | 95 16=20
+<FONT face=3DSymbol>=A7</FONT> </P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>3. Set identification number of the slave to =
+"12345678" and the=20
+8 digit BCD-Counter (unit 1 kWh) to 107 kWh.</P>
+<P align=3Djustify>68 0F 0F 68 | 53 FE 51| 0C 79 78 56 34 12 | 0C 06 07 =
+01 00 00 |=20
+55 16</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P><B><FONT color=3D#008000>
+<P align=3Djustify>&nbsp;</P></DIR>
+<P align=3Djustify><A name=3DB_Toc310233588><A =
+name=3D_Toc403799198>6.4.3 Configuring=20
+Data Output</A></A></P></B></FONT>
+<P align=3Djustify>For default the slave transmits all his data with a =
+RSP_UD. It=20
+could be useful for some applications to read only selected data records =
+out of=20
+one or more devices. There are two ways to select data records:</P>
+<P align=3Djustify>&nbsp;</P><B>
+<P align=3Djustify>Selection without specified data field</P></B>
+<P align=3Djustify>The selection of the wanted data records can be =
+performed with=20
+a SND_UD (CI-Field =3D 51h/55h) and data records containing the data =
+field 1000b,=20
+which means "selection for readout request". The following VIF defines =
+the=20
+selected data as listed in EN1434-3 and no data are transmitted. The =
+answer data=20
+field is determined by the slave. The master can select several =
+variables by=20
+sending more data blocks with this data field in the same telegram.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Special multiple values can be selected with the =
+following=20
+methods:</P>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT>Any VIF:</P>
+<DIR>
+<P align=3Djustify>The VIF-Code $7E (any VIF) is especially for readout =
+request of=20
+"all VIF" from the slave and can be interpreted as a selection wildcard =
+for the=20
+value information field.</P></DIR>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT>Global readout=20
+request:</P>
+<DIR>
+<P align=3Djustify>The DIF-Code $7F is defined as "selection of all data =
+for=20
+readout request", i.e. all storage numbers, units, tariffs and =
+functions. If=20
+this DIF is the last byte of user data or the VIF=3D$7E follows, then =
+all data is=20
+requested. So the selection of all data of one slave can de done with a =
+SND_UD=20
+and the character $7F as the user data. If there follows a DIF unequal =
+to $7E,=20
+then all subfields of this VIF are selected for readout.</P></DIR>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT>All Tariffs:</P>
+<DIR>
+<P align=3Djustify>The highest tariff number in the selection record is =
+defined as=20
+selection of "all tariffs". For example the tariff 1111b (15) means =
+selection of=20
+all tariffs in a record with two DIFE=EFs.</P></DIR>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT>All Storage=20
+Numbers:</P>
+<DIR>
+<P align=3Djustify>A selection of all storage numbers can be done with =
+the maximum=20
+storage number if there is a minimum of one DIFE. For example the =
+highest=20
+storage number is $1F (31) with one DIFE and $1FF (511) with two=20
+DIFE=EFs.</P></DIR>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT>All Units:</P>
+<DIR>
+<P align=3Djustify>"All units" can be selected by using a data record =
+header with=20
+minimum two DIFE=EFs and the highest unit number.</P>
+<P align=3Djustify>&nbsp;</P></DIR>
+<P align=3Djustify><FONT face=3DSymbol>=B7</FONT> <FONT =
+size=3D2></FONT>High Resolution=20
+Readout:</P>
+<DIR>
+<P align=3Djustify>The master can select the slave to answer with the =
+maximum=20
+resolution to a given value / unit by a VIF with "nnn" =3D 000 (minimum =
+exponent=20
+for range coding). The meter may then answer with a resolution of e.g. =
+1mWh=20
+(VIF=3D0000000b) or some higher decimal value if required. The unit =
+values have=20
+been chosen so that their minimum provides sufficient resolution even =
+for=20
+calibration. A readout request for a VIF with "nnn"=3Dmax (maximum =
+exponent for=20
+range coding) signals a request for the standard resolution of the =
+meter.</P>
+<P align=3Djustify>&nbsp;</P></DIR>
+<P align=3Djustify>After the next REQ_UD2 the slave answers with the =
+selected data=20
+in his own format, if the requested data are available. Otherwise the =
+slave=20
+transmits his normal data and the master has to find out that the data =
+are not=20
+the requested one. If there are more than one variables with the =
+selected VIF,=20
+the device should send all these data records.</P>
+<P align=3Djustify>&nbsp;</P><B>
+<P align=3Djustify>Selection with specified data field</P></B>
+<P align=3Djustify>The master is able to perform a readout request with =
+a=20
+specified data field by using the object action "add to readout list" =
+(VIFE =3D=20
+E000 1100b) from VIFE-table for object actions (see chapter 6.5). The =
+master=20
+transmits a SND_UD (CI-Field =3D 51h/55h) with a data record which =
+consists of the=20
+desired DIF (data field), VIF and the VIFE =3D 0Ch / 8Ch. No data =
+follows this=20
+VIFE and the slave should ignore the data field on reception. The slave =
+should=20
+transmit this data record with the requested data field from now on, if =
+he is=20
+capable of this. If the slave doesn=EFt support this data field (data =
+coding), it=20
+can report a record error using one of the VIFE =3D E000 011x (data =
+class not=20
+implemented or data size not implemented).</P>
+<P align=3Djustify>&nbsp;</P><B>
+<P align=3Djustify>Deselection of data records</P></B>
+<P align=3Djustify>The master can release a reset of the application =
+layer and=20
+especially a fallback to the slaves standard RSP_UD-Telegram by =
+transmitting a=20
+SND_UD with the CI-Field $50.</P>
+<P align=3Djustify>Single data records can be deselected by transmitting =
+a data=20
+record with DIF, VIF and the VIFE for the object action "Delete from=20
+Readout-List" (VIFE =3D E000 1101b).</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>If the selected data is supported by the slave but =
+too long for=20
+one RSP_UD telegram (especially for readout of all historic values), the =
+slave=20
+transmits an additional data record consisting only of the DIF=3D$1F, =
+which means=20
+that more data records follow in the next respond telegram. In this case =
+the=20
+master must readout the slave again until the respond telegram is only =
+an $E5=20
+(no data) or there is no DIF=3D$1F in the RSP_UD.</P>
+<P align=3Djustify>To avoid lost of data respond telegrams the slave =
+should in=20
+this case support the Frame Count Bit (FCB). If the master wants to =
+premature=20
+end such a multitelegram sequential readout of the selected data, it may =
+send an=20
+application reset with CI=3D$50 instead of further REQ_UD2=EFs.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>Examples:</P>
+<P align=3Djustify>&nbsp;</P></U>
+<P align=3Djustify>1. A slave with address 7 is to be configured to =
+respond with=20
+the data records containing volume (VIF=3D13h: volume, unit 1l) and flow =
+
+temperature (VIF=3D5Ah: flow temp., </P>
+<P align=3Djustify>unit 0.1 =F8C).</P>
+<P align=3Djustify>68 07 07 68 | 53 07 51 | 08 13 08 5A | 28 16</P><FONT =
+
+face=3D"Courier,Courier New">
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>2. </FONT>A slave with address 1 is to be configured =
+to respond=20
+with all storage numbers, all tariffs, </P>
+<P align=3Djustify>and all VIF=EFs from unit 0.</P>
+<P align=3Djustify>68 06 06 68 | 53 01 51 | C8 3F 7E | 2A 16</P>
+<P align=3Djustify>&nbsp;</P>
+<DIR>
+<P align=3Djustify>3. A slave with address 3 is to be configured to =
+respond with=20
+all data for a complete readout of all available. After that the master =
+can poll=20
+the slave to get the data.</P>
+<P align=3Djustify>68 04 04 68 | 53 03 51 | 7F | 26 16</P><B><FONT =
+color=3D#800080=20
+size=3D4>
+<P align=3Djustify>&nbsp;</P></DIR>
+<P align=3Djustify><A name=3DB_Toc310233589><A name=3D_Toc403799199>6.5 =
+Generalized=20
+Object Layer</A></A></P></B></FONT>
+<P align=3Djustify>The fundamental idea of an object is the =
+encapsulation of data=20
+and methods or actions for the data. In case of writing data to a slave =
+the=20
+master software can pack data and information about the action, which =
+the slave=20
+shall do with this data, in one data record. This variable data record =
+with=20
+actions is now called an object. If the VIF has not got the value $FD =
+(extended=20
+VIF-Code table) the following VIFE-Codes define the action:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Action: (E: extension bit)</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D579>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"26%"><B>
+      <P align=3Dcenter>VIFE-Code binary</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"35%"><B>
+      <P align=3Dcenter>Action</B></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"39%"><B>
+      <P align=3Dcenter>Explanation</B></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 0000</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Write (Replace)</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>replace old with new data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 0001</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Add Value</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>add data to old data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 0010</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Subtract Value</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>subtract data from old data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 0011</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>OR (Set Bits)</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>data OR old data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 0100</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>AND</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>data AND old data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 0101</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>XOR (Toggle Bits)</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>data XOR old data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 0110</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>AND NOT (Clear Bits)</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>NOT data AND old data</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 0111</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Clear</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>set data to zero</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 1000</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Add Entry</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>create a new data record</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 1001</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Delete Entry</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>delete an existing data record</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 1010</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 1011</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Freeze Data</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>freeze data to storage no.</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 1100</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Add to Readout-List</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>add data record to RSP_UD</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 1101</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Delete from Readout-List</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">
+      <P align=3Dcenter>delete data record from RSP_UD</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E000 111x</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"39%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"26%">
+      <P align=3Dcenter>E001 xxxx</P></TD>
+    <TD vAlign=3Dtop width=3D"35%">
+      <P align=3Dcenter>Reserved</P></TD>
+    <TD vAlign=3Dtop =
+width=3D"39%">&nbsp;</TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 26 </B><I>Action Codes for the Generalized =
+Object layer=20
+(Master to Slave)</P></I>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>With these actions the master can alter the data of =
+the slaves=20
+or configure the output data of the slaves (actions 12 and 13). The =
+actions 0 to=20
+6 alter the data of the slave by replacing the old data (action 0, =
+equals to=20
+data write without VIFE) or do arithmetical or logical operations with =
+the old=20
+and the transmitted data.</P>
+<P align=3Djustify>Note that this method of configuring the readout list =
+(action=20
+12 and 13) allows not only the adding but also the removal of elements =
+in=20
+contrast to the method of using the DIF=3D1000b-type of readout request =
+(described=20
+in chapter 6.4.3).</P>
+<P align=3Djustify>All these actions can be used for normal slaves and =
+for=20
+intelligent master which are manipulated by a higher order master.</P>
+<P align=3Djustify>The functions "Add entry" and "Delete entry" are =
+useful to tell=20
+an intelligent master to add e.g. a new data record like maximum or =
+minimum=20
+values of any slave.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>With the action "freeze data to storage #" the master =
+can tell=20
+the slave to freeze the actual value corresponding to the transmitted =
+VIF, unit,=20
+tariff and function to a certain storage number given in the =
+DIF/DIFE=EFs. In this=20
+case the data field inside the VIF has got the value 0000b (no data). =
+This=20
+action allows freeze of selected values or multiple freeze with =
+VIF=3D$7E (all=20
+VIF). The date / time should also be freezed to the same storage =
+number.</P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>Examples:</P></U>
+<P align=3Djustify>1) Set the 8 digit BCD-Counter (instantaneous, actual =
+value, no=20
+tariff, unit 0) with VIF=3D06 (1kWh) of the slave with address 1 to 107 =
+kWh.</P>
+<P align=3Djustify>68 0A 0A 68 | 53 01 51 | 0C 86 00 07 01 00 00 | 3F =
+16</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>2) Same as in example 1) but add 10 kWh to the old =
+data.</P>
+<P align=3Djustify>68 0A 0A 68 | 53 01 51 | 0C 86 01 10 00 00 00 | 48 16 =
+</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>3) Add an entry with an 8 digit BCD-Counter =
+(instantaneous,=20
+actual value, no tariff, </P>
+<P align=3Djustify>unit 0, 1kWh) with the start value of 511 kWh to the =
+data=20
+records of the slave with address 5.</P>
+<P align=3Djustify>68 0A 0A 68 | 53 05 51 | 0C 86 08 11 05 00 00 | 59 16 =
+</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>4) Freeze actual flow temperature (0.1 =F8C: VIF =3D =
+5Ah) of the=20
+slave with address 1</P>
+<P align=3Djustify>into the storage number 1.</P>
+<P align=3Djustify>68 06 06 68 | 53 01 51 | 40 DA 0B | CA 16</P>
+<P align=3Djustify>&nbsp;</P><B><FONT color=3D#800080 size=3D4>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify><A name=3DB_Toc310233590><A name=3D_Toc403799200>6.6 =
+Application=20
+Layer Status</A></A></P></B></FONT>
+<P align=3Djustify>There can be so far only data link layer errors =
+reported from=20
+slave to master by means of leaving out the acknowledgement or negative=20
+acknowledgement. It is not allowed to report errors in the application =
+layer,=20
+which can occur for example in data writing, using any of the above =
+methods,=20
+because these are reserved for link layer errors. The slave can transmit =
+an $E5=20
+after a REQ_UD2 to indicate that it has received the telegram, but =
+can=EFt respond=20
+with data. There are three different techniques for reporting =
+application=20
+errors:</P><U>
+<P align=3Djustify>1. Status Field</P></U>
+<P align=3Djustify>One possible solution is to use the reserved 2 lowest =
+bits of=20
+the Status field in the variable data structure for the application =
+layer=20
+status:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D403>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"50%"><B><FONT size=3D3>
+      <P align=3Dcenter>Status bit 1 bit 0</B></FONT></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"50%"><B><FONT size=3D3>
+      <P align=3Dcenter>Application status</B></FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"50%"><FONT size=3D3>
+      <P align=3Dcenter>0 0</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"50%"><FONT size=3D3>
+      <P align=3Dcenter>No Error</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"50%"><FONT size=3D3>
+      <P align=3Dcenter>0 1</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"50%"><FONT size=3D3>
+      <P align=3Dcenter>Application Busy</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"50%"><FONT size=3D3>
+      <P align=3Dcenter>1 0</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"50%"><FONT size=3D3>
+      <P align=3Dcenter>Any Application Error</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"50%"><FONT size=3D3>
+      <P align=3Dcenter>1 1</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"50%"><FONT size=3D3>
+      <P =
+align=3Dcenter>Reserved</FONT></P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 27 </B><I>Application Errors coded with the=20
+Status-Field</P></I><U>
+<P align=3Djustify>2. General Application Errors</P></U>
+<P align=3Djustify>For reporting general application errors a slave can =
+use a=20
+RSP_UD telegram with CI=3D$70 and zero or one byte data, which then =
+describes the=20
+type of error:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>68h</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>04h</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>04h</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>68h</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>08h</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>PAdr</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>70h</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>DATA</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>CS</P></TD>
+    <TD vAlign=3Dtop width=3D"10%">
+      <P align=3Dcenter>16h</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Fig. 28 </B><I>Telegram for reporting general =
+application=20
+errors</P></I>
+<P align=3Djustify>The following values for DATA are defined:</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D18 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>0</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>Unspecified error: also if data field is=20
+      missing</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>1</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>Unimplemented CI-Field</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>2</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>Buffer too long, truncated</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>3</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>Too many records</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>4</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>Premature end of record</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>5</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>More than 10 DIFE=EFs</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>6</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>More than 10 VIFE=EFs</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>7</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>Reserved</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>8</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>Application too busy for handling readout=20
+      request</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>9</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P align=3Djustify>Too many readouts (for slaves with limited =
+readouts per=20
+      time)</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"16%"><FONT size=3D3>
+      <P align=3Dcenter>10..255</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"84%"><FONT size=3D3>
+      <P =
+align=3Djustify>Reserved</FONT></P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Table 6 </B><I>Codes for general application =
+errors</P></I><U>
+<P align=3Djustify>3. Record Errors</P></U>
+<P align=3Djustify>To report errors belonging to a special record the =
+slave can=20
+use this data record header with a VIFE containing one of the following =
+values=20
+to code the type of application error, which has been occured.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D18 width=3D604>
+  <TBODY>
+  <TR>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"19%"><B><FONT size=3D3>
+      <P align=3Dcenter>VIFE-Code</B></FONT></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"50%"><B><FONT size=3D3>
+      <P align=3Dcenter>Type of Record Error</B></FONT></P></TD>
+    <TD bgColor=3D#ffffff vAlign=3Dtop width=3D"31%"><B><FONT size=3D3>
+      <P align=3Dcenter>Error Group</B></FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 0000</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>None</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 0001</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Too many DIFE=EFs</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 0010</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Storage number not implemented</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 0011</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Unit number not implemented</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 0100</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Tariff number not implemented</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">
+      <P align=3Dcenter>DIF Errors</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 0101</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Function not implemented</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 0110</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Data class not implemented</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 0111</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Data size not implemented</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 1000 to</P>
+      <P align=3Dcenter>E000 1010</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 1011</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Too many VIFE=EFs</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 1100</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Illegal VIF-Group</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 1101</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Illegal VIF-Exponent</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">
+      <P align=3Dcenter>VIF Errors</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 1110</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>VIF/DIF mismatch</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E000 1111</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Unimplemented action</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E001 0000 to</P>
+      <P align=3Dcenter>E001 0100</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E001 0101</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>No data available (undefined value)</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E001 0110</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Data overflow</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E001 0111</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Data underflow</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E001 1000</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Data error</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">
+      <P align=3Dcenter>Data Errors</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E001 1001 to</P>
+      <P align=3Dcenter>E001 1011</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E001 1100</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Premature end of record</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"19%">
+      <P align=3Dcenter>E001 1101</P>
+      <P align=3Dcenter>to</P>
+      <P align=3Dcenter>E001 1111</P></TD>
+    <TD vAlign=3Dtop width=3D"50%">
+      <P align=3Djustify>Reserved</P></TD>
+    <TD vAlign=3Dtop width=3D"31%">
+      <P align=3Dcenter>Other =
+Errors</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><B>
+<P align=3Djustify>Table 7 </B><I>Codes for record errors (E =3D =
+extension=20
+bit)</P></I>
+<P align=3Djustify>In case of record errors the data maybe invalid. The =
+slave has=20
+some options to transmit the data:</P>
+<DIR><FONT face=3DSymbol>
+<P align=3Djustify>=FA </FONT>datafield =3D 0000b: no data</P><FONT =
+face=3DSymbol>
+<P align=3Djustify>=FA </FONT>datafield =3D 0000b: no data and idle =
+filler (DIF=3D$2F):=20
+fill telegram up to the normal length</P><FONT face=3DSymbol>
+<P align=3Djustify>=FA </FONT>other datafield: dummy data of correct =
+length</P><FONT=20
+face=3DSymbol>
+<P align=3Djustify>=FA </FONT>other datafield: unsafe or estimated =
+data</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P></DIR><B><FONT color=3D#800080 size=3D4>
+<P align=3Djustify><A name=3DB_Toc310233591><A name=3D_Toc403799201>6.7 =
+Special Slave=20
+Features</A></A></P></B></FONT>
+<P align=3Djustify>Some optional or recommended features of the slaves, =
+which are=20
+not mentioned in EN1434-3, will be described in this =
+section.</P><B><FONT=20
+color=3D#008000>
+<P align=3Djustify><A name=3DB_Toc310233592><A =
+name=3D_Toc403799202>6.7.1 Auto Speed=20
+Detect</A></A></P></B></FONT>
+<P align=3Djustify><FONT face=3DSymbol>=A7</FONT> <B></B>This feature is =
+implemented=20
+in several slaves. It is no longer recommended by the M-Bus Usergroup =
+because it=20
+is difficult to guarantee a hamming distance of four with this method. =
+</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The fact that several baudrates are allowed on the =
+bus causes=20
+the problem for the master to know the used baudrates of all connected =
+slaves.=20
+The software must perform the search for primary and secondary addresses =
+with=20
+all allowed baudrates. For this reasons it is useful, if the slaves =
+would answer=20
+with just the baudrate, which the master uses for this telegram. In =
+addition the=20
+risk to loose contact with a slave would be dismissed and commands for =
+baudrate=20
+switching would no longer be required.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The slave detects the baudrate by scanning the start =
+sign of=20
+the telegram, which has the value 10h for a short frame or the value 68h =
+for a=20
+long frame.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Startsign 10h on the bus:</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Start</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>LSB</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 1</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 2</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 3</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 4</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 5</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 6</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>MSB</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Parity</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Stop</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>Startsign 68h on the bus:</P>
+<P align=3Dcenter>
+<CENTER>
+<TABLE border=3D1 cellSpacing=3D1 cellPadding=3D4 width=3D604>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Start</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>LSB</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 1</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 2</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 3</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 4</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 5</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Bit 6</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>MSB</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Parity</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>Stop</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"9%">
+      <P align=3Dcenter>1</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The startsign 10h begins with five space bits and the =
+startsign=20
+68h with four space bits on the line. After detecting the beginning of a =
+new=20
+telegram the device measures the duration of space. By comparing the =
+space=20
+duration with a stored table of ranges for five and four bits of all =
+implemented=20
+transmission speeds the slave makes a decision about the baudrate and =
+the number=20
+of space bits (four or five). Then it receives the remaining bits of the =
+
+startsign (seven or six) with the detected transmission speed. This =
+procedure=20
+has to set for example a flag or a variable to tell the normal receive =
+procedure=20
+the used baudrate.</P>
+<P align=3Djustify>Auto speed detect of 300, 2400 and 9600 baud has been =
+
+implemented with an eigth bit microcontroller and works fine. This =
+feature can=20
+be easily programmed in microcontrollers using software polling for=20
+communication, but is more difficult with UART-based communication.</P>
+<P align=3Djustify>&nbsp;</P><B><FONT color=3D#008000>
+<P align=3Djustify><A name=3DB_Toc310233593><A =
+name=3D_Toc403799203>6.7.2 Slave=20
+Collision Detect</A></A></P></B></FONT>
+<P align=3Djustify>Collisions between transmitting slaves can occur =
+during slave=20
+search activities by the master. Very light collisions of (22..33) mA, =
+which are=20
+equivalent to 2 or 3 transmitting slaves, are electrically undetectable =
+by=20
+master and slave. New master hardware with double current detect can =
+detect=20
+light collisons of (20..200) mA and then transmit a break (50 ms space) =
+on the=20
+bus. The slave can detect medium collisions of (70..500) mA, if this is =
+a=20
+collision between a mark and a space and if the slave supports this =
+feature.=20
+Heavy collisions of (90..5000mA) will have the effect of a break down of =
+the bus=20
+voltage (power fail in the slave) and possibly a shortcircuit in the =
+master.</P>
+<P align=3Djustify>To avoid these consequences of (heavy) collisions new =
+master=20
+have the feature of double current detect with break signaling and =
+switching off=20
+the bus in overcurrent states. There are some means for the slaves to =
+detect=20
+collisions and then stop transmitting:</P>
+<P align=3Djustify>&nbsp;</P>
+<DIR>
+<P align=3Djustify>1. Software based UART=EFs can test at the end of =
+each=20
+Mark-Send-Bit whether the input is really a mark. This guarantees a very =
+fast=20
+detection of collisions, is simple to implement and is strongly =
+recommended for=20
+pure software UART.</P>
+<P align=3Djustify>2. A variation of the preceeding method is to test =
+whether the=20
+bus voltage is mark after each stop-bit. This is simple for a software =
+UART, but=20
+very tricky for a hardware UART and requires a master sending a break on =
+
+collision detect.</P>
+<P align=3Djustify>3. A simple method for unbuffered hardware UART, but =
+tricky for=20
+buffered hardware UART, is to compare the transmitted with the received=20
+byte.</P>
+<P align=3Djustify>4. Another method, which requires a master with break =
+collision=20
+detect, is a hardware UART with break detect.</P>
+<P align=3Djustify>5. The baudrate of the communication process after a =
+detected=20
+break will be 300 Baud <FONT face=3DSymbol>=A7</FONT> . </P>
+<P align=3Djustify>&nbsp;</P></DIR><B><FONT color=3D#008000>
+<P align=3Djustify><A name=3D_Toc403799204>6.7.3 Use of the fabrication=20
+Number</A></P></B></FONT>
+<P align=3Djustify>(<FONT face=3DSymbol>=A7</FONT> new chapter)</P>
+<P align=3Djustify>The fabrication number is a serial number allocated =
+during=20
+manufacture. It is part of the variable data block (DIF =3D $0C and VIF =
+=3D $78) and=20
+coded with 8 BCD packed digits (4 Byte). </P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>Example:</P></U>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>68 15 15 68 header of RSP_UD telegram (length =
+1Fh=3D31d=20
+bytes)</P>
+<P align=3Djustify>08 02 72 C field =3D 08 (RSP), address 2, CI field =
+72H=20
+(var.,LSByte first)</P>
+<P align=3Djustify>78 56 34 12 identification number =3D 12345678</P>
+<P align=3Djustify>24 40 01 07 manufacturer ID =3D 4024h (PAD in EN =
+61107),=20
+generation 1, water</P>
+<P align=3Djustify>13 00 00 00 TC =3D 13h =3D 19d, Status =3D 00h, =
+Signature =3D 0000h</P>
+<P align=3Djustify>0C 78 04 03 02 01 fabrication number =3D 01020304</P>
+<P align=3Djustify>9D 16 checksum and stopsign</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>The use of this number is recommended if the =
+identification=20
+number is changeable. In this case two or more slaves can get the same =
+secondary=20
+adress and can not be uniquely selected. The fabrication number together =
+with=20
+manufacturer, version and medium field build an unique number instaed. =
+Suitable=20
+masters use this number for an enhanced selection method if two or more =
+slaves=20
+have the same secondary adress (see chapter 7.4). </P>
+<DIR>
+<P align=3Djustify></P></DIR><B><FONT color=3D#008000>
+<P align=3Djustify><A name=3D_Toc403799205>6.7.4 Hex-Codes $A-$F in =
+BCD-data=20
+fields</A></P></B></FONT>
+<P align=3Djustify>(<FONT face=3DSymbol>=A7</FONT> new =
+chapter)</P><B><U>
+<P align=3Djustify>General description</P></B>
+<P align=3Djustify>1.) Standard Reference</P></U>
+<P align=3Djustify>EN1434 allows multi-digit BCD-coded datafields. The =
+current=20
+standard does not contain information about what happens if a non-BCD =
+hex code=20
+($A-$F) is detected by the master software.</P><U>
+<P align=3Djustify>2.) Purpose of this proposal</P>
+<P align=3Djustify>a) Define the treatment of non BCD-digits in slave to =
+master=20
+RSP_UD-telegrams </P></U>
+<P align=3Djustify>To fully define a master software including error =
+treatment=20
+such a definition would be desirable.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>b) Utilize these codes for simplified error treatment =
+by=20
+slave</P></U>
+<P align=3Djustify>The current user group proposal contains various =
+techniques for=20
+signalling errors or abnormal situations. Most of them are hard to =
+implement on=20
+weak mikro-processors. Utilizing these "illegal" codes $A to $F for =
+signalling=20
+these states to the master would simplify the software design of the=20
+slaves.</P><U>
+<P align=3Djustify>c) Anormal states of variables</P>
+<UL></U>
+  <P align=3Djustify>
+  <LI>Value not available
+  <P></P></LI></UL>
+<DIR>
+<P align=3Djustify>This happens for example, if a fixed date value is =
+not yet=20
+available, because the first fixed date is in the future. The display at =
+the=20
+meter or the remote PC should read "----".</P></DIR>
+<UL>
+  <P align=3Djustify>
+  <LI>Device error
+  <P></P></LI></UL>
+<DIR>
+<P align=3Djustify>This could happen for a temperature variable, if the =
+sensor is=20
+malfunctioning. The display at the meter or a remote PC should signal =
+some error=20
+code. Multiple error codes should be supported.</P></DIR>
+<UL>
+  <P align=3Djustify>
+  <LI>Soft overflow
+  <P></P></LI></UL>
+<DIR>
+<P align=3Djustify>Exceeding the upper count limit on integral values or =
+the upper=20
+value limit on momentary values should be signallable. For a wrap around =
+carry=20
+of integral variables the display should be consistent with old =
+mechanical wrap=20
+around counters. In addition a wrap around flag should be =
+extractable.</P></DIR>
+<UL>
+  <P align=3Djustify>
+  <LI>Soft underflow
+  <P></P></LI></UL>
+<DIR>
+<P align=3Djustify>Underflowing the lower count limit of 00 on integral =
+values or=20
+a negative value on momentary values should be signallable. For a wrap =
+around=20
+carry of integral variables the display should be consistent with old =
+mechanical=20
+wrap around counters. In addition a wrap around flag should be=20
+extractable.</P></DIR>
+<UL>
+  <P align=3Djustify>
+  <LI>Simple visible error signalling
+  <P></P></LI></UL>
+<DIR>
+<P align=3Djustify>To simplify the design of slaves with integrated =
+displays, the=20
+above mentioned non-BCD states of the variables should be both =
+transmittable in=20
+the form of suitable (Hex) codes but also be displayable directly from =
+the value=20
+codes of a 7-segment (usually LCD) display by extending the normal ten =
+entry BCD=20
+to 7-segment decoding table to either a dual 16-entry or a single =
+32-entry=20
+decoding table where 16 entries are used for decoding the MSD (Most =
+Significant=20
+Digit) and the other 16 entries are used for the decoding for all other =
+for all=20
+other digits. For very weak mikroprocessors with a maximum of a single =
+decoding=20
+table with only 16-entries a compatible solution with decreased =
+functionality is=20
+also presented.</P>
+<P align=3Djustify>&nbsp;</P></DIR><B><U>
+<P align=3Djustify>New proposal</P></B>
+<P align=3Djustify>1.) Definition of hex code meanings</P>
+<DIR></U>
+<P align=3Djustify>a) $A </P></DIR>
+<P align=3Djustify>Such a code in the MSD (Most significant digit) =
+position=20
+signals a one digit value overflow either of a number or due to an =
+addition or=20
+increment carry. The display at the meter or a remote PC should display =
+a "0" at=20
+the appropriate display position. This makes the display compatible with =
+
+conventional counter rollover. In addition the leading digit can be =
+treated by=20
+the slave software simply as a hexadecimal digit instead of the =
+BCD-coded other=20
+digits to realize this function. Processing software in the master could =
+convert=20
+this data digit to a value of 10 in an extended length data field. In =
+addition=20
+an appropriate application error code could be generated if desired. If =
+this hex=20
+code appears in any other digit position than the MSD, it signals a =
+value error=20
+of the complete data field. If an alternative display decoding table for =
+the=20
+digits other than the MSD is possible, this hex code should be displayed =
+in=20
+these other digit positions as the symbol "A". This would allow more =
+flexible=20
+displayable error codes. </P>
+<DIR>
+<DIR>
+<DIR><U>
+<P align=3Djustify>Example:</U> A 4-digit BCD code of "A321" should be =
+interpreted=20
+by the master software as "10321" with an optional overrange VIFE-error =
+code and=20
+displayed as 0321 on a 4-digit only display.</P>
+<P align=3Djustify>&nbsp;</P></DIR></DIR>
+<P align=3Djustify>b) $B</P></DIR>
+<P align=3Djustify>Such a code in the MSD digit position signals a two =
+digit value=20
+overflow either of a number or due to an addtion or increment carry. The =
+display=20
+at the meter or a remote PC should display a "1" at the appropriate =
+display=20
+position. This makes the display compatible with conventional counter =
+rollover.=20
+In addition the leading digit can be treated by the slave software =
+simply as a=20
+hexadecimal digit instead of the BCD-coded other digits to realize this=20
+function. Processing software could convert this data digit to a value =
+of 11 in=20
+an extended length data field. In addition an appropriate application =
+error code=20
+could be generated if desired. If this hex code appears in any other =
+digit=20
+position than the MSD, it signals a value or availability error of the =
+complete=20
+data field. It should be displayed as the symbol "-". </P>
+<DIR>
+<DIR>
+<DIR><U>
+<P align=3Djustify>Example:</U> A 4-digit BCD code of "B321" should be =
+interpreted=20
+by the master software as "11321" with an optional overrange VIFE-error =
+code and=20
+displayed as 1321 on a 4-digit only display with digit selective =
+decoding.</P>
+<P align=3Djustify>&nbsp;</P></DIR></DIR>
+<P align=3Djustify>c) $C</P></DIR>
+<P align=3Djustify>Such a code in the MSD digit position signals a three =
+digit=20
+value overflow either of a number or due to an addition or increment =
+carry. The=20
+display at the meter or a remote PC should display a "2" at the =
+appropriate=20
+display position. This makes the display compatible with conventional =
+counter=20
+rollover. In addition the leading digit can be treated by the slave =
+software=20
+simply as a hexadecimal digit instead of the BCD-coded other digits to =
+realize=20
+this function. Processing software could convert this data digit to a =
+value of=20
+12 in an extended length data field. In addition an appropriate =
+application=20
+error code could be generated if desired. If this hex code appears in =
+any other=20
+digit position than the MSD, it signals a value error of the complete =
+data=20
+field. It should be displayed as the symbol "C". Note that the suggested =
+
+interpretation of $A to $C in the MSD effectivly supports a 30% =
+overrange guard=20
+band against an undetected rollover and flexible error codes including =
+the=20
+letters "A", "C", "E" and "F".</P>
+<DIR>
+<DIR>
+<DIR><U>
+<P align=3Djustify>Example:</U> A 4-digit BCD code of "C321" should be =
+interpreted=20
+by the master software as "12321" with an optional overrange VIFE-error =
+code and=20
+displayed as 2321 on a 4-digit only display.</P>
+<P align=3Djustify>&nbsp;</P></DIR></DIR>
+<P align=3Djustify>d) $D</P></DIR>
+<P align=3Djustify>Such a code in any digit position signals a general =
+error of=20
+the complete data field. The display at the meter or a remote PC should =
+display=20
+a blank at the appropriate display position. Since both an overflow from =
+$C and=20
+an underflow from $E end in this out of range type error the function of =
+an=20
+out-of-range over/underflow can be implemented by simple hex arithmetic. =
+It is=20
+however recommended that the slave arithmetic checks this $D-code in the =
+MSD=20
+before incrementing or decrementing the value for integral variables to =
+make=20
+such an error irreversible if the slave does not expect such an over- or =
+
+underflow.</P>
+<P align=3Djustify>&nbsp;</P>
+<DIR>
+<P align=3Djustify>e) $E</P></DIR>
+<P align=3Djustify>Such a code in the MSD digit position signals a two =
+digit value=20
+underflow either of a number or due to a subtraction or decrement =
+borrow. The=20
+display at the meter or a remote PC should display an "8" at the =
+appropriate=20
+display position. This makes the display compatible with conventional =
+counter=20
+rollunder. In addition the leading digit can be treated by the slave =
+software=20
+simply as a hexadecimal digit instead of the BCD-coded other digits to =
+realize=20
+this function. Processing software could convert the data in the field =
+to a=20
+negative value using 16=EFs complement on the leading digit and tens =
+complement at=20
+the other digits. In addition an appropriate application error code =
+could be=20
+generated if desired. If this hex code appears in any other digit =
+position than=20
+the MSD, it signals a value error of the complete data field. It should =
+be=20
+displayed as the symbol "E". </P>
+<DIR>
+<DIR>
+<DIR><U>
+<P align=3Djustify>Example:</U> A 4-digit BCD code of "E321" should be =
+interpreted=20
+by the master software as "- 1679" (F999-E321+1) with an optional =
+underrange=20
+VIFE-error code and displayed as 8321 on a 4-digit only =
+display.</P></DIR></DIR>
+<P align=3Djustify>f) $F</P></DIR>
+<P align=3Djustify>Such a code in the MSD digit position signals an one =
+digit=20
+value underflow either of a number or due to a subtraction or decrement =
+borrow.=20
+The display at the meter or a remote PC should display an "9" at the =
+appropriate=20
+display position. This makes the display compatible with conventional =
+counter=20
+rollunder. In addition the leading digit can be treated by the slave =
+software=20
+simply as a hexadecimal digit instead of the BCD-coded other digits to =
+realize=20
+this function. Processing software could convert the data in the field =
+to a=20
+negative value using 16=EFs complement on the leading digit and tens =
+complement at=20
+the other digits. In addition an appropriate application error code =
+could be=20
+generated if desired. If an alternative display decoding table for the =
+digits=20
+other than the MSD is possible, this hex code should be displayed in =
+these other=20
+digit positions as the symbol "F". Note that the suggested =
+interpretation of $E=20
+and $F in the MSD effectivly supports a 20% underrange guard band =
+against an=20
+undetected rollunder for displays and flexible error displays if dual =
+decoding=20
+tables are available. In addition it allows a simplified coding for =
+small=20
+negative values as often required for values like temperature or flow =
+rate.</P>
+<DIR>
+<DIR>
+<DIR><U>
+<P align=3Djustify>Example:</U> A 4-digit BCD code of "F321" should be =
+interpreted=20
+by the master software as "- 0679" (F999-F321+1) with an optional =
+underrange=20
+VIFE-error code and displayed as 9321 on a 4-digit only display.</P>
+<P align=3Djustify>&nbsp;</P></DIR></DIR></DIR>
+<P align=3Djustify>g) Combinations</P>
+<P align=3Djustify>If with the exception of the MSD all other digits are =
+true=20
+BCD-digits ($0-$9) the value is either considered as "Overflow" for the =
+MSD hex=20
+codes $A to $C or as "Underflow" for the MSD hex codes $E and $F or a =
+general=20
+error for the MSD hex code $D. </P>
+<P align=3Djustify>The code $DB..BB in the data field is always =
+considered as "not=20
+available". This is displayed as " ----" (with a blank in the MSD). Any =
+other=20
+non BCD-hex codes in one or several digits other than the MSD is =
+interpreted as=20
+an error for the complete data field. The error type is formed from the=20
+characters "A", "C", "E", "F" (all corresponding to their hex code), =
+"-", blank=20
+and the digits 0-9. The display may show an identical error code if =
+displaying=20
+the variable, but the MSD digit on the display can contain only blank or =
+the=20
+digits 0..9.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>h) Decoding table for 2*16 entries (or 32 =
+entries)</P>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D581>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%">&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>0</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>1</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>2</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>3</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>4</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>5</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>6</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>7</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>8</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>9</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>$A</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>$B</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>$C</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>$D</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>$E</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>$F</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%"><FONT size=3D2>
+      <P align=3Djustify>MSD</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"0"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"1"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"2"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"3"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"4"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"5"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"6"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"7"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"8"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"9"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"0"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"1"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"2"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>" "</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"8"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"9"</FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"12%"><FONT size=3D2>
+      <P align=3Djustify>other digits</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"0"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"1"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"2"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"3"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"4"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"5"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"6"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"7"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"8"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"5%"><FONT size=3D2>
+      <P align=3Dcenter>"9"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"A"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"-"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"C"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>" "</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"E"</FONT></P></TD>
+    <TD vAlign=3Dtop width=3D"7%"><FONT size=3D2>
+      <P align=3Dcenter>"F"</FONT></P></TD></TR></TBODY></TABLE>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>i) Subset functions</P>
+<P align=3Djustify>A slave may utilize either non, a single, several or =
+all=20
+suggested special functions and their associated hex codes. A slave =
+might=20
+utilize also a different number of hex code functions for different data =
+fields.=20
+A slave could also use different display implementations for the various =
+special=20
+functions and error displays but the suggested solution would simplify =
+the=20
+operation of the system, since the master display will be identical to =
+the slave=20
+display for the value associated with the appropriate data field.</P>
+<P align=3Djustify>&nbsp;</P><U>
+<P align=3Djustify>2.) Subset for single 16-entry display =
+decoding</P></U>
+<P align=3Djustify>a) Decoding table</P>
+<TABLE border=3D1 cellSpacing=3D2 cellPadding=3D4 width=3D613>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>0</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>1</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>2</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>3</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>4</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>5</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>6</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>7</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>8</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>9</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>$A</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>$B</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>$C</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>$D</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>$E</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>$F</P></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"0"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"1"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"2"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"3"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"4"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"5"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"6"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"7"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"8"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"9"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"0"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"-"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"C"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>" "</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"E"</P></TD>
+    <TD vAlign=3Dtop width=3D"6%">
+      <P align=3Dcenter>"9"</P></TD></TR></TBODY></TABLE>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>b) Overrange</P>
+<P align=3Djustify>The overrange feature should be limited to a 10% =
+overrange ($A=20
+in MSD). A further increment should lead directly to the MSD-error hex =
+code $D,=20
+which should stop further increment and decrement and generate a =
+suitable error=20
+code in the other digits</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>c) Underrange</P>
+<P align=3Djustify>The underrange feature should be limited to a 10% =
+underrange=20
+($F in MSD). A further decrement should lead directly to the MSD-error =
+hex code=20
+$D, which should stop further increment and decrement and generate a =
+suitable=20
+error code in the other digits.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>d) Error codes</P>
+<P align=3Djustify>Error codes may contain only the letters "C" and "E", =
+blank,=20
+"-" and the digits 0-9.</P>
+<P align=3Djustify>&nbsp;</P>
+<P align=3Djustify>e) Compatiblity</P>
+<P align=3Djustify>At the master side this subset realisation is =
+completely=20
+compatible and transparent to the full implementation.</P>
+<P align=3Djustify>&nbsp;</P>
+<HR SIZE=3D2>
+<STRONG><A href=3D"http://www.m-bus.com/mbusdoc/md7.php">&nbsp;<IMG =
+border=3D0=20
+align=3DabsMiddle src=3D"http://www.m-bus.com/symbol/b_r1.gif"> Next =
+Chapter</A> <A=20
+href=3D"http://www.m-bus.com/mbusdoc/default.php">&nbsp;<IMG border=3D0=20
+align=3DabsMiddle src=3D"http://www.m-bus.com/symbol/b_r2.gif"> Table of =
+
+Contents</A> <A href=3D"http://www.m-bus.com/default.php">&nbsp;<IMG =
+border=3D0=20
+align=3DabsMiddle src=3D"http://www.m-bus.com/symbol/b_up.gif"> M-Bus=20
+Home</A></STRONG> </BODY></HTML>
+
+------=_NextPart_000_0000_01CE6045.0B33FF10
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.m-bus.com/symbol/b_r1.gif
+
+R0lGODlhHwAfAMQAAP////f39+fv9+fn7+/v/xAQEAAAALW1vd7e58bGzqWlrdbW3tbW1ikpKa2t
+tTk5Oc7OzhgYIZSUnIyMlJSUlGNja7W9vQgICEpKSlJSUlpaWmtrc3t7hM7W1r29xnNzcyH5BAAA
+AAAALAAAAAAfAB8AQAX/ICCOIrQ9hWFczwYFZDxCxhcIg6ATelFUvBth4VBUDBTIAAb4GA6JziCo
+E6AKj6mAMHBMKIaHI7GUBRwNVSRTqWAiao7DkmCUZYM0BSZA+Ad+Cx0JHhYcBg1KTCMGGwsLORE+
+k5Q+QAQIChJHY3cAGAYcBwcedgQEAahcEAocE04NCgeKMrUBt7i3tbsAAxkGBRsJgY8dBxsXBhh2
+izEWBhV8Oag6N1t9CaMaBhPMIw8NfghVNzcDVxo8W6wKDREH3gUZHR0IAQukox4HDpJYCKcWSKCA
+4YICC/ZENLhAahgPaqnUocrEgYIPWbRG5DGgQYHHj5ooTBj5KwKFOd54/QEIAIgBhAR06NRJqbKm
+TZUW0iDKsGFDBp0NHHjiFSBNBXt9EBRLwNTDtgg0Y/zaAwDHtFOnBizIduDQg6gAIlxAUDWHNWoC
+hGCyUORChGEDRjhJ0GcJFQJXKlTjckCTsjpM5C1AkAPfqMP9fGCwN8SBBAwFOsFo9GiKv0qUHqTN
+ROHIQQYwwEVZ8HALj3M+sqhKIEFChFiAAdCowHTBNSGSsuwgAEHkNjkZPXAc5fCauogLFJCsMQY0
+iY2iFDiYNVhpAk0jnZiEArqZiAGgLlSQoKl16wkakjWgcMAC2BgsD2hYqOJCAwwTiEN4vwvXgAF2
+MGDHf7jcZKBNIQAAOw==
+
+------=_NextPart_000_0000_01CE6045.0B33FF10
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.m-bus.com/symbol/b_r2.gif
+
+R0lGODlhFAAUALMAAP///+/v/8bGztbW3iEhIa2ttZycnISEhDE5OUJCQlpaY3NzcxgYGFJSUggI
+EAAAACH5BAAAAAAALAAAAAAUABQAQATLEMgZhjnHiDCnIFs1CMNwPIwRBIKRLFKgEEdRCHhrLAkx
+dArEbzVYEXGzIeJQXEkMDkYBsCocENPYbEEq4RYIEFBhNBqw1Ipg4SsgQrxEopFgoKYWRQMwoOHK
+MSwXSx0SAjMECD2JBj+FEwUJCAgKCpIIKo8BDW9pRCUFMwIeYhVGniNuB1SYfBwSBVFTKy1YAm8V
+DQwEvAR2DnihDX0FJUQVC7JUtTA8f0YFC7OCSRIHBBokZSMXPY4TbAkYFxgNBAmjjzEDVhkkjxEA
+Ow==
+
+------=_NextPart_000_0000_01CE6045.0B33FF10
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.m-bus.com/symbol/b_up.gif
+
+R0lGODlhGAAWALMAAP///+/v/8bGztbW3hgYGJycnAAAAISEhCkxMa2ttXNzc0JCSlpaYzE5ObW1
+vVJSUiH5BAEAAAAALAAAAAAYABYAQATmEMhJq60FiRECSIRhEAkQDMVBFNWwNIPZcZ0gFMQTWziT
+2JuBIJFarCwKBK0DGIg8nYBApbhITo7DQVFwcKwVB4OAaDAYCASB4bAGkr9lolQrKAgKz+TBoAEa
+BgciCgZVUgcLDxQDCIZMTgZRUgkLCzsVAkYMBUAJiGsCYBMBWQtpCwcOeqI4jQUFRCloJFYDoBtM
+MjeICG2LjQN+BSJ0UgUPvRQKDbgBICIitId4FHxLsJAoCXUNihMZApIAAiIxM55Ho3ehUZBRNioH
+qxOZzFAzQioLoWADvAQNGpB5UOCSqIMWIgAAOw==
+
+------=_NextPart_000_0000_01CE6045.0B33FF10--

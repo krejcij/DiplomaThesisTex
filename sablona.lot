@@ -1,0 +1,15 @@
+\select@language {czech}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } pr\IeC {\r u}myslov\IeC {\'e}ho a spot\IeC {\v r}ebitelsk\IeC {\'e}ho IoT \cite {SvetHardwareInternetVeci, PohankaInternetVeci}}}{7}{table.9}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } model\IeC {\r u} UniPi NEURON dle IO \cite {UniPiBoard2}}}{30}{table.78}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Varianty model\IeC {\r u} UniPi NEURON dle CPU a RAM \cite {UniPiBoard2}}}{31}{table.79}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Popis standardu EN-13757 \cite {WmbusTables}}}{42}{table.105}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Re\IeC {\v z}imy p\IeC {\v r}enosu WM-Bus protokolu \cite {WmbusTables}}}{44}{table.108}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky \cite {FormatDatoveJednotky}}}{46}{table.111}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky protokolu Wireless M-Bus \cite {FormatDatoveJednotky}}}{46}{table.112}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Zkr\IeC {\'a}cen\IeC {\'y} form\IeC {\'a}t datov\IeC {\'e} jednotky \cite {FormatDatoveJednotky}}}{46}{table.113}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Tabulka k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } 3 ze 6 \cite {WMencodeing}}}{48}{table.118}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Telegram z modulu Bonega \cite {BonegaCidlo}}}{53}{table.141}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Weptech 868A \cite {WeptechCidlo}}}{56}{table.147}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Konfigurace intervalu zas\IeC {\'\i }l\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } DIP p\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e \cite {WeptechCidlo}}}{58}{table.149}
+\contentsline {table}{\numberline {6.4}{\ignorespaces P\IeC {\v r}ehled nastaven\IeC {\'\i } \IeC {\v c}idla \cite {WeptechCidlo}}}{58}{table.150}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{63}{table.184}
