@@ -1,0 +1,331 @@
+\chapter{Návrh implementace}
+Jak již bylo zmíněno na začátku práce, samotná implementace je rozdělena do dvou částí:
+\begin{enumerate}
+	\item Komunikace RaspberryPi přes rozšiřující desku UniPi s bezdrátovým modulem a pomocí něj s poskytnutými WM-Bus zařízeními.
+	\item Zachytávání šifrované i nešifrované komunikace s WM-Bus zařízeními. Uložení, analýza a následná vizualizace zachycených dat. 
+\end{enumerate}
+
+Jelikož žádný z dostupných softwarů pro UniPi nepodporuje daný bezdrátový modul, ani UART zařízení obecně, je nutné tuto komunikaci implementovat již na úrovni operačního systému.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Výběr OS}
+Jako operační sytém je využita aktuální verze Raspbianu Jessie s datem vydání 2017-01-11. UART rozhraní se na RaspberryPi verze 1 a 2 nachází v /dev/ttyAMA0. To se ale v případě RaspberryPi 3 odkazuje na integrovaný BT modul a původní sériový port je zde v /dev/ttyS0. Samotné UART rozhraní je ale ve výchozím nastavení Raspbianu zakázáno.
+
+Pro zpřístupnění UART rozhraní je nutné provést drobné úpravy jeho konfigurace:
+
+
+\begin{enumerate}
+	\item Nejdříve je nutné provést kompletní aktualizaci Raspbianu, tedy v konzoli spustit posloupnost příkazů:
+	
+	\begin{lstlisting}[style=MyCodeBash]
+		sudo apt-get update
+		sudo apt-get upgrade
+		sudo apt-get dist-upgrade
+		sudo apt-get rpi-upgrade	
+	\end{lstlisting}
+					
+	\item Poté je potřeba v /boot/config.txt změnit položku ENABLE\_UART na hodnotu 1. Tím dojde k zpřístupnení sběrnice UART. Tato položka může být v budoucnu při aktualizaci Raspbianu přepsána, proto při prvním náznaku nefunkčnosti, je potřeba tuto položku zkontrolovat jako první.
+	\item V souboru /boot/cmdline.txt je potřeba odebrat úsek textu \textit{console=ttyAMA0, 115200}, aby při startování systému nedocházelo k výpisu do seríové linky. 
+	\item V případě, že se jedná o RaspberryPi verze 3, je potřeba do /boot/config.txt dopsat položku \textit{dtoverlay=pi3-miniuart-bt}, která zakáže BT na mini-UART a provede přemapování zpět na /dev/ttyAMA0. Tento krok je takto řešený z důvodu kompatibility, kdy je sériová komunikace směrována přes /dev/ttyAMAO nezávisle na použité verzi RaspberryPi.
+\end{enumerate}
+
+Po každém z těchto kroků je doporučován restart zařízení. Kroky byly otestovány pouze na výše zmíněné verzi Raspbianu a v jiných distribucích se monou mírně lišit. Úspěšnost provedení těchto kroků lze zkontrolovat pomocí zadání příkazu konzole 
+	\begin{lstlisting}[style=MyCodeBash]
+			sudo dmesg | grep tty
+	\end{lstlisting}
+
+jehož výstup by měl být následující:
+					
+	\begin{lstlisting}[style=MyCodeBash]
+[    0.000974] console [tty1] enabled
+[    0.130442] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 81, base_baud = 0) is a PL011 rev2
+	\end{lstlisting}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Výběr programovacího jazyka}
+Jelikož primárním jazykem využívaným na platformě RaspberryPi je Python, který již obsahuje knihovny pro sériovou komunikaci, je současný kód napsán v jazyce Python 3.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Nastavení komunikačního modulu a čidla}
+
+Před samotným vyčítáním dat bylo potřeba zjistit či nastavit přenosové parametry všech použitých zařízení:
+
+\begin{itemize}
+	\item Komunikační modul IQRF nastaven do módu T ve funkci skeneru.
+	\item Čidlo Weptech je nastaveno do módu T1 s intervalem zasílání 1 minuta. 
+	\item Modul Bonega je nastaven do módu T1 se zapnutým šifrováním AES128 v módu 5 a s intervalem zasílání 20-24 sekund v odpočtovém období a 4 intervalem minuty mimo odpočtové období.
+	\item \colorbox[rgb]{0,1,0}{Doplnit dle ZPA a Kamstrupu}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Zajištění dedikovaného běhu}
+Pro zajištění běhu aplikace nezávisle na typu provozu RaspberryPi bude daný program spouštěn ihned po startu operačního systému pomocí příkazu screen. Je tedy nutné ho doinstalovat:
+ 
+\begin{lstlisting}[style=MyCodeBash]
+		sudo apt-get update
+		sudo install screen		
+	\end{lstlisting}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Zajištění podpory šifrování}
+Některá ze zařízení používají pro přenos dat šifrování AES. Pro zajištění podpory šifrování byla zvolena knihovna PyCrypto, která podporuje jak šifrování DES tak i AES. 
+Umoňuje pohodlnou implementaci AES128 pomocí jazyku Python3. Na rozdíl od ostatních knihoven není závislá na balíčku OpenSSL a je součástí repozitářů Raspbianu. 
+
+Je nutné doinstalovat nezbytné balíčky:	
+ 
+\begin{lstlisting}[style=MyCodeBash]
+		sudo apt-get update
+		sudo install python-crypto
+		sudo install python-dev
+	\end{lstlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Zpracování dat}
+
+\subsection{Nešifrovaný přenos}
+
+Jednoduchým spuštěním komunikačního modulu v módu snifferu, byl zachycen telegram
+
+\begin{verbatim}
+	32002E44B05C10000000021B7A620800002F2F0A6699010AFB1
+	A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
+\end{verbatim}
+
+který byl pomoci datasheetu použitého komunikačního modulu \cite{iqrfmodul} a čidla \cite{WeptechCidlo} analyzován, a přehledně zobrazen do tabulky \ref{PacketTableAnalysis}.
+
+\subsection{Šifrovaný přenos}
+
+V okamžiku kdy bylo zařízení přepnuto do šifrovaného módu dle tabulky \ref{TablukaSETUP} byl zachycen šifrovaný telegram
+
+\begin{verbatim}
+	32002e44b05c10000000021b7ac40820053ed44a38a9c3c86f5
+	8210f9b979353c39dc1d5e0c873eb81994d28c099ef1d55b008
+\end{verbatim}
+
+který byl pomoci datasheetů použitého komunikačního modulu \cite{iqrfmodul} a čidla \cite{WeptechCidlo} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
+\begin{itemize}
+	\item 30-33 pro informaci použitém šifrování,
+	\item 8-25 pro sestavení inicializačního vektoru a
+	\item 38-93 pro šifrovanou část dat.
+\end{itemize}
+
+Poté byla daná data v souladu s normou \colorbox[rgb]{0,1,0}{REF-KODA} dešifrována:
+
+
+..\colorbox[rgb]{0,1,0}{popsat prakticky jak se to dešifrovalo}..
+
+
+ a byl získán dešifrovaný telegram:
+
+\begin{verbatim}
+	32002e44b05c10000000021b7ac40820052F2F0A6699010AFB1
+	A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
+\end{verbatim}
+
+Poté lze dešifrovaná data vyparsovat jako při nešifrovaném přenosu popsaném v předchozí kapitole.
+
+\begin{table}[]
+\centering
+\caption{Rozklíčovaný zachycený paket}
+\resizebox{\textwidth}{!}{%
+\label{PacketTableAnalysis}
+\begin{tabular}{|c|c|c|l|l|c|c|l|}
+\hline
+\textbf{Pozice} & \textbf{\begin{tabular}[c]{@{}c@{}}Tele-\\ gram\end{tabular}} & \textbf{Vrstva} & \multicolumn{1}{c|}{\textbf{Pole}} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{Hodnota} & \textbf{\begin{tabular}[c]{@{}c@{}}Číselné\\ vyjádření\end{tabular}} & \multicolumn{1}{c|}{\textbf{Význam pro uživatele}} \\ \hline
+0 & 32 & \begin{tabular}[c]{@{}c@{}}IQRF\\ obálka\end{tabular} &  &  &  &  &  \\ \hline
+2 & 0 & \begin{tabular}[c]{@{}c@{}}IQRF\\ obálka\end{tabular} &  &  &  &  &  \\ \hline
+4 & 2E & \begin{tabular}[c]{@{}c@{}}Linková\\ vrstva\end{tabular} & L-Pole & Délka telegramu & 1Eh & 46 & Paket má 46 bytů \\ \hline
+6 & 44 & \begin{tabular}[c]{@{}c@{}}Linková\\ vrstva\end{tabular} & C-Pole & Typ telegramu & 44h & 44 & \begin{tabular}[c]{@{}l@{}}Paket je typu \\ SND-NR\end{tabular} \\ \hline
+8 & B0 & \begin{tabular}[c]{@{}c@{}}Linková\\ vrstva\end{tabular} & M-Pole & Výrobce zařízení & B0h & 5CB0 & \begin{tabular}[c]{@{}l@{}}Výrobcem \\ je WEPtech\end{tabular} \\ \hline
+10 & 5C & \begin{tabular}[c]{@{}c@{}}Linková \\ vrstva\end{tabular} & M-Pole & Výrobce zařízení & 5Ch &  &  \\ \hline
+12 & 10 & \begin{tabular}[c]{@{}c@{}}Linková\\ vrstva\end{tabular} & A-Pole & Sériové číslo & 11h & 10 & SN je 00000010 \\ \hline
+14 & 00 & \begin{tabular}[c]{@{}c@{}}Linková\\ vrstva\end{tabular} & A-Pole & Sériové číslo & 47h &  &  \\ \hline
+16 & 00 & \begin{tabular}[c]{@{}c@{}}Linková\\ vrstva\end{tabular} & A-Pole & Sériové číslo & 15h &  &  \\ \hline
+18 & 00 & \begin{tabular}[c]{@{}c@{}}Linková \\ vrstva\end{tabular} & A-Pole & Sériové číslo & 08h &  &  \\ \hline
+20 & 02 & \begin{tabular}[c]{@{}c@{}}Linková\\ vrstva\end{tabular} & A-Pole & Verze zařízení & 01h & 2 & \begin{tabular}[c]{@{}l@{}}Druhá verze \\ zařízení\end{tabular} \\ \hline
+22 & 1B & \begin{tabular}[c]{@{}c@{}}Linková\\ vrstva\end{tabular} & A-Pole & Typ zařízení & 1Bh & 1B & \begin{tabular}[c]{@{}l@{}}Zařízení je \\ pokojové čidlo\end{tabular} \\ \hline
+24 & 7A & \begin{tabular}[c]{@{}c@{}}Aplikační\\ vrstva\end{tabular} & Ci-Pole & Odpověd od zařízení & 7Ah & 7A & jedná se o M-Bus \\ \hline
+26 & 62 & \begin{tabular}[c]{@{}c@{}}Aplikační\\ vrstva\end{tabular} & AccNo & Číslo přístupu & 41h & 214 & 214. přístup \\ \hline
+28 & 08 & \begin{tabular}[c]{@{}c@{}}Aplikační\\ vrstva\end{tabular} & Status & Status zařízení & 00h & 8 &  \\ \hline
+30 & 00 & \begin{tabular}[c]{@{}c@{}}Aplikační\\ vrstva\end{tabular} & \begin{tabular}[c]{@{}l@{}}Config.\\ word\end{tabular} & Šifrování AES & 00h &  &  \\ \hline
+32 & 00 & \begin{tabular}[c]{@{}c@{}}Aplikační\\ vrstva\end{tabular} & \begin{tabular}[c]{@{}l@{}}Config.\\ word\end{tabular} & Šifrování AES & 00h &  &  \\ \hline
+34 & 2F & Data & \begin{tabular}[c]{@{}l@{}}AES \\ encryption\end{tabular} & Šifrování AES & 2Fh &  &  \\ \hline
+36 & 2F & Data & \begin{tabular}[c]{@{}l@{}}AES \\ encryption\end{tabular} & Šifrování AES & 2Fh &  &  \\ \hline
+38 & 0A & Data & DR1 & DIF: 4 cifry BCD & 0Ah &  &  \\ \hline
+40 & 66 & Data & DR1 & \begin{tabular}[c]{@{}l@{}}VIF: první \\ měřená veličina\end{tabular} & 66h & 66 & Teplota v \degree\,C\textsuperscript{-1} \\ \hline
+42 & 99 & Data & DR1 & hodnota teploty & 99h & 0199 & Teplota je 19.9\degree\,C \\ \hline
+44 & 01 & Data & DR1 & hodnota teploty & 01h &  &  \\ \hline
+46 & 0A & Data & DR2 & DIF: 4 cifry BCD & 0Ah &  &  \\ \hline
+48 & FB & Data & DR2 & \begin{tabular}[c]{@{}l@{}}VIF: První \\ rozšiřovací \\ tabulka\end{tabular} & FBh &  &  \\ \hline
+50 & 1A & Data & DR2 & \begin{tabular}[c]{@{}l@{}}VIFE: druhá \\ měřená veličina\end{tabular} & 1Ah & 1A & Relativní vlhkost v \%\textsuperscript{-1} \\ \hline
+52 & 93 & Data & DR2 & hodnota vlhkosti & 93h & 0293 & Vlhkost je 29.3\,\% \\ \hline
+54 & 02 & Data & DR2 & hodnota vlhkosti & 02h &  &  \\ \hline
+\end{tabular}}
+\end{table}
+
+\newpage
+
+\begin{table}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|l|l|c|c|l|}
+\hline
+\textbf{Pozice} & \textbf{\begin{tabular}[c]{@{}c@{}}Tele-\\ gram\end{tabular}} & \textbf{Vrstva} & \multicolumn{1}{c|}{\textbf{Pole}} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{Hodnota} & \textbf{\begin{tabular}[c]{@{}c@{}}Číselné\\ vyjádření\end{tabular}} & \multicolumn{1}{c|}{\textbf{Význam pro uživatele}} \\ \hline
+56 & 02 & Data & DR3 & \begin{tabular}[c]{@{}l@{}}DIF: 16bit \\ integer/binary\end{tabular} & 02h &  &  \\ \hline
+58 & FD & Data & DR3 & \begin{tabular}[c]{@{}l@{}}VIF: Druhá \\ rozšiřovací \\ tabulka\end{tabular} & FDh &  &  \\ \hline
+60 & 97 & Data & DR3 & \begin{tabular}[c]{@{}l@{}}VIFE0: Chybové \\ stavy\end{tabular} & 97h &  &  \\ \hline
+62 & 1D & Data & DR3 & VIFE1: Norma & 1Dh &  &  \\ \hline
+64 & 01 & Data & DR3 & Příznak sabotáže & 00h & 1 & Čidlo bylo otevřeno \\ \hline
+66 & 00 & Data & DR3 & \begin{tabular}[c]{@{}l@{}}Příznak vybité\\  baterie\end{tabular} & 00h & 0 & Baterie je nabitá \\ \hline
+68 & 2F & Data & Fill & Výplňové byty & 2Fh &  &  \\ \hline
+... & 2F & Data & Fill & \begin{tabular}[c]{@{}l@{}}Výplňové byty \\ (11x)\end{tabular} & 2Fh &  &  \\ \hline
+92 & 2F & Data & Fill & Výplňové byty & 2Fh &  &  \\ \hline
+94 & 87 & \begin{tabular}[c]{@{}c@{}}IQRF\\  obálka\end{tabular} & CRC & Kontrolní součet & 87h &  &  \\ \hline
+96 & 9e & \begin{tabular}[c]{@{}c@{}}IQRF \\ obálka\end{tabular} & RSSI & \begin{tabular}[c]{@{}l@{}}Síla přijímaného \\ signálu\end{tabular} & 9Eh & 158 & \begin{tabular}[c]{@{}l@{}}Síla signálu \\ je -51dBm\end{tabular} \\ \hline
+98 & 0D & \begin{tabular}[c]{@{}c@{}}UART \\ obálka\end{tabular} &  & Konec řádku & 0Dh &  & CR znak \\ \hline
+100 & 0A & \begin{tabular}[c]{@{}c@{}}UART\\  obálka\end{tabular} &  & \begin{tabular}[c]{@{}l@{}}Příkaz pokračuj \\ dále jako Sniffer\end{tabular} & 0Ah &  &  \\ \hline
+\end{tabular}}
+\end{table}
+
+
+Z tabulky je patrné, že nutné vyparsovat položky na následujících pozicích:
+\begin{itemize}
+	\item 8-23 pro informace o daném čidlu,
+	\item 24-25 pro určení pořadí telegramu,
+	\item 42-45 pro hodnotu naměřené teploty,
+	\item 52-55 pro hodnotu naměřené vlhkosti,
+	\item 64-67 pro kontrolu stavu čidla a
+	\item 96 pro úroveň signálu.	
+\end{itemize}
+
+a jejich následnou správnou interpretací dle specifikace (zohlednění uložení LSB, převod hexadecimálních hodnot na dekadické) předat k dalšímu zpracování či uložení do databáze.
+
+
+\section{Zajištění uložení dat}
+Zachycená a naměřená data se ukládají do databáze k pozdějšímu zpracování. Zvolena byla databáze SqLite3 pro svoji jednoduchost, nenáročnost na sytémové prostředky a možností instalace z repozitáře Raspbianu:
+ 
+\begin{lstlisting}[style=MyCodeBash]
+		sudo apt-get update
+		sudo apt-get install sqlite3
+	\end{lstlisting}
+
+Byla zvolena jedna databáze se třemi tabulkami:
+\begin{itemize}
+	\item DEVICES - evidence známých zařízení a jejich AES klíčů
+	\item VALUES - uložení naměřených hodnot
+	\item TELEGRAMS - uložení zachycených dat a AES klíče modulu
+\end{itemize}
+
+Struktura tabulek je popsána na obrázku... \colorbox[rgb]{0,1,0}{toto je stale tezce pracovni verze}
+	
+\section{Zajištění vizualizace dat}	
+\colorbox[rgb]{0,1,0}{přesazet texty k vizualizaci}
+
+\colorbox[rgb]{0,1,0}{sepsat dokumentaci k uploadu na googlesheets}
+
+\section{Struktura aplikace}
+Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura aplikace znázorněná na obrázku \ref{AplikaceDiagram}. Diagram je pro přehlednost odlišen barevnými bloky:
+\begin{itemize}
+	\item modrou barvou je znázorněna kostra programu,
+	\item zelenou barvou je nekonečná smyčka naslouchání dat,
+	\item růžovou barvou je případné dešifrování přenášených dat,
+	\item červenou barvou jsou chyby znemožnující běh programu,
+	\item oranžovou barvou jsou chyby znemožňující platnou analýzu či dešifrování daného telegramu a
+	\item černou barvu je řízení samotného programu.
+\end{itemize}
+
+V následujících podkapitolách budou jednotlivé bloky aplikace představeny podrobněji.
+
+\subsection{Start programu v rámci operačního systému}
+Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. \colorbox[rgb]{0,1,0}{Zeptat se RŠ jak z toho udělat službu nebo tak něco.} Tím je zajištěna nezávilost na typu nasazení RaspberryPi a případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
+
+ \begin{figure}[!]
+  \begin{center}
+    \includegraphics[scale=0.6]{obrazky/aplikace_diagram}
+  \end{center}
+  \caption{Vývojový diagram aplikace pro vyčítání dat}
+	\label{AplikaceDiagram}
+\end{figure}
+
+\subsection{Start programu z pohledu aplikace}
+Program při startu kontroluje, zdali  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQLite databázi.
+Dále program kontroluje přítomnost a možnost otevření sériového portu. V případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následujě příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
+
+\colorbox[rgb]{0,1,0}{dál je jsou pouze poznámky, zatím ve výstavbě}
+
+\colorbox[rgb]{0,1,0}{doplnit potom i veci ze clanku, primarne}
+
+\subsection{Základní kontrola a parsování dat}
+\begin{itemize}
+\item - jak se resi datasheety specifikaci
+\item - co se tam kontroluje (signatura, rozsifrovani, delka paketu, statove bajty)
+\item - jak se zjisti jestli se ma desifrovat
+\end{itemize}
+
+\subsection{Dešifrování dat}
+\begin{itemize}
+\item - proc se to tak debilne desifruje
+\item - kde se berou ty klice
+\item - jak se pocita IV
+\item - jak se kontroluje desifrovani
+\end{itemize}
+
+\subsection{Parsování dat}
+\begin{itemize}
+\item - co to umí
+\item - jaká je aplikační logika pro RSSI a VendorID
+\item - jak se to dělá pro jednotlivé výrobce
+\item - co se tam kontroluje (signatura, rozsifrovani, delka paketu, statove bajty)
+\end{itemize}
+
+\subsection{Uložení dat}
+\begin{itemize}
+\item - jak se osetri ktere chyby
+\item - co davame kam jak na vedomi
+\item - co se zapise do logu a co do db
+\end{itemize}
+
+\subsection{Ošetření chyb a vyjímek}
+\begin{itemize}
+\item - jak se ukladaji vysledky
+\item - jak to vypada v DB, kolik je tabulek s cim
+\item - kdy se kam co uklada a v jakem formatu
+\item - co se zapise do logu a co do db
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+

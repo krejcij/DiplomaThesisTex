@@ -63,59 +63,61 @@
 \contentsline {section}{\numberline {4.1}Obecn\IeC {\'y} popis modulu TR-72D-WMB}{38}{section.96}
 \contentsline {section}{\numberline {4.2}Komunika\IeC {\v c}n\IeC {\'\i } m\IeC {\'o}dy}{39}{section.100}
 \contentsline {section}{\numberline {4.3}Komunika\IeC {\v c}n\IeC {\'\i } protokol}{40}{section.102}
-\contentsline {chapter}{\numberline {5}Wireless M-Bus protokol}{42}{chapter.104}
-\contentsline {section}{\numberline {5.1}Princip komunikace}{42}{section.106}
-\contentsline {section}{\numberline {5.2}Re\IeC {\v z}imy p\IeC {\v r}enosu}{43}{section.107}
-\contentsline {section}{\numberline {5.3}Struktura zas\IeC {\'\i }lan\IeC {\'y}ch dat}{45}{section.110}
-\contentsline {section}{\numberline {5.4}Popis jednotliv\IeC {\'y}ch vrstev}{47}{section.114}
-\contentsline {subsubsection}{Fyzick\IeC {\'a} vrstva Wireless M-Bus}{47}{section*.115}
-\contentsline {subsubsection}{K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } pou\IeC {\v z}\IeC {\'\i }van\IeC {\'a} ve Wireless M-Bus}{47}{section*.116}
-\contentsline {subsubsection}{Linkov\IeC {\'a} vrstva Wireless M-Bus}{48}{section*.119}
-\contentsline {subsubsection}{L-Pole}{49}{section*.120}
-\contentsline {subsubsection}{C-Pole}{49}{section*.121}
-\contentsline {subsubsection}{M-Pole}{49}{section*.122}
-\contentsline {subsubsection}{A-Pole}{49}{section*.123}
-\contentsline {subsubsection}{Cl-Pole}{49}{section*.124}
-\contentsline {subsubsection}{CRC}{49}{section*.125}
-\contentsline {section}{\numberline {5.5}\IeC {\v S}ifrov\IeC {\'a}n\IeC {\'\i } dat}{49}{section.126}
-\contentsline {subsection}{\numberline {5.5.1}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus DES}{50}{subsection.127}
-\contentsline {subsection}{\numberline {5.5.2}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus AES}{50}{subsection.128}
-\contentsline {subsection}{\numberline {5.5.3}Ur\IeC {\v c}en\IeC {\'\i } \IeC {\v s}ifrovan\IeC {\'y}ch dat}{50}{subsection.129}
-\contentsline {subsection}{\numberline {5.5.4}M\IeC {\'o}dy \IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES}{50}{subsection.130}
-\contentsline {subsection}{\numberline {5.5.5}\IeC {\v S}ifrovac\IeC {\'\i } kl\IeC {\'\i }\IeC {\v c}}{50}{subsection.131}
-\contentsline {subsection}{\numberline {5.5.6}Inicializa\IeC {\v c}n\IeC {\'\i } vektor}{50}{subsection.132}
-\contentsline {subsection}{\numberline {5.5.7}Princip de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i }}{51}{subsection.134}
-\contentsline {subsection}{\numberline {5.5.8}Kontrola roz\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{51}{subsection.135}
-\contentsline {chapter}{\numberline {6}Vy\IeC {\v c}\IeC {\'\i }tan\IeC {\'a} Wireless M-Bus za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}{52}{chapter.136}
-\contentsline {section}{\numberline {6.1}Bonega}{52}{section.137}
-\contentsline {subsubsection}{Parametry modulu}{52}{section*.139}
-\contentsline {subsubsection}{Form\IeC {\'a}t telegramu}{53}{section*.140}
-\contentsline {section}{\numberline {6.2}Pikkerton}{54}{section.142}
-\contentsline {section}{\numberline {6.3}Weptech OMST-868A}{54}{section.143}
-\contentsline {subsubsection}{Parametry \IeC {\v c}idla}{55}{section*.145}
-\contentsline {subsubsection}{Form\IeC {\'a}t telegramu}{55}{section*.146}
-\contentsline {subsubsection}{Nastaven\IeC {\'\i } \IeC {\v c}idla}{57}{section*.148}
-\contentsline {section}{\numberline {6.4}ZPA}{58}{section.151}
-\contentsline {chapter}{\numberline {7}N\IeC {\'a}vrh implementace}{59}{chapter.152}
-\contentsline {section}{\numberline {7.1}V\IeC {\'y}b\IeC {\v e}r OS}{59}{section.155}
-\contentsline {section}{\numberline {7.2}V\IeC {\'y}b\IeC {\v e}r programovac\IeC {\'\i }ho jazyka}{60}{section.170}
-\contentsline {section}{\numberline {7.3}Nastaven\IeC {\'\i } komunika\IeC {\v c}n\IeC {\'\i }ho modulu a \IeC {\v c}idla}{60}{section.171}
-\contentsline {section}{\numberline {7.4}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } dedikovan\IeC {\'e}ho b\IeC {\v e}hu}{60}{section.172}
-\contentsline {section}{\numberline {7.5}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } podpory \IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i }}{61}{section.176}
-\contentsline {section}{\numberline {7.6}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{61}{section.181}
-\contentsline {subsection}{\numberline {7.6.1}Ne\IeC {\v s}ifrovan\IeC {\'y} p\IeC {\v r}enos}{61}{subsection.182}
-\contentsline {subsection}{\numberline {7.6.2}\IeC {\v S}ifrovan\IeC {\'y} p\IeC {\v r}enos}{61}{subsection.183}
-\contentsline {section}{\numberline {7.7}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } ulo\IeC {\v z}en\IeC {\'\i } dat}{64}{section.185}
-\contentsline {section}{\numberline {7.8}Struktura aplikace}{65}{section.189}
-\contentsline {subsection}{\numberline {7.8.1}Start programu v r\IeC {\'a}mci opera\IeC {\v c}n\IeC {\'\i }ho syst\IeC {\'e}mu}{65}{subsection.190}
-\contentsline {subsection}{\numberline {7.8.2}Start programu z pohledu aplikace}{65}{subsection.192}
-\contentsline {subsection}{\numberline {7.8.3}Z\IeC {\'a}kladn\IeC {\'\i } kontrola a parsov\IeC {\'a}n\IeC {\'\i } dat}{67}{subsection.193}
-\contentsline {subsection}{\numberline {7.8.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{67}{subsection.194}
-\contentsline {subsection}{\numberline {7.8.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{67}{subsection.195}
-\contentsline {subsection}{\numberline {7.8.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{67}{subsection.196}
-\contentsline {subsection}{\numberline {7.8.7}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{67}{subsection.197}
-\contentsline {chapter}{\numberline {8}ToDo Pozn\IeC {\'a}mky}{68}{chapter.198}
-\contentsline {chapter}{\numberline {9}Z\IeC {\'a}v\IeC {\v e}r}{69}{chapter.199}
-\contentsline {chapter}{Literatura}{70}{section*.201}
-\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{75}{section*.203}
-\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{78}{section*.205}
+\contentsline {chapter}{\numberline {5}Wireless M-Bus protokol}{42}{chapter.108}
+\contentsline {section}{\numberline {5.1}Princip komunikace}{42}{section.110}
+\contentsline {section}{\numberline {5.2}Re\IeC {\v z}imy p\IeC {\v r}enosu}{43}{section.111}
+\contentsline {section}{\numberline {5.3}Struktura zas\IeC {\'\i }lan\IeC {\'y}ch dat}{45}{section.114}
+\contentsline {section}{\numberline {5.4}Popis jednotliv\IeC {\'y}ch vrstev}{47}{section.118}
+\contentsline {subsubsection}{Fyzick\IeC {\'a} vrstva Wireless M-Bus}{47}{section*.119}
+\contentsline {subsubsection}{K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } pou\IeC {\v z}\IeC {\'\i }van\IeC {\'a} ve Wireless M-Bus}{47}{section*.120}
+\contentsline {subsubsection}{Linkov\IeC {\'a} vrstva Wireless M-Bus}{48}{section*.123}
+\contentsline {subsubsection}{L-Pole}{49}{section*.124}
+\contentsline {subsubsection}{C-Pole}{49}{section*.125}
+\contentsline {subsubsection}{M-Pole}{49}{section*.126}
+\contentsline {subsubsection}{A-Pole}{49}{section*.127}
+\contentsline {subsubsection}{Cl-Pole}{49}{section*.128}
+\contentsline {subsubsection}{CRC}{49}{section*.129}
+\contentsline {section}{\numberline {5.5}\IeC {\v S}ifrov\IeC {\'a}n\IeC {\'\i } dat}{49}{section.130}
+\contentsline {subsection}{\numberline {5.5.1}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus DES}{50}{subsection.131}
+\contentsline {subsection}{\numberline {5.5.2}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus AES}{50}{subsection.132}
+\contentsline {subsection}{\numberline {5.5.3}Ur\IeC {\v c}en\IeC {\'\i } \IeC {\v s}ifrovan\IeC {\'y}ch dat}{50}{subsection.133}
+\contentsline {subsection}{\numberline {5.5.4}M\IeC {\'o}dy \IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES}{50}{subsection.134}
+\contentsline {subsection}{\numberline {5.5.5}\IeC {\v S}ifrovac\IeC {\'\i } kl\IeC {\'\i }\IeC {\v c}}{50}{subsection.135}
+\contentsline {subsection}{\numberline {5.5.6}Inicializa\IeC {\v c}n\IeC {\'\i } vektor}{50}{subsection.136}
+\contentsline {subsection}{\numberline {5.5.7}Princip de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i }}{51}{subsection.138}
+\contentsline {subsection}{\numberline {5.5.8}Kontrola roz\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{51}{subsection.139}
+\contentsline {chapter}{\numberline {6}Vy\IeC {\v c}\IeC {\'\i }tan\IeC {\'a} Wireless M-Bus za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}{52}{chapter.140}
+\contentsline {section}{\numberline {6.1}Weptech OMST-868A}{52}{section.141}
+\contentsline {subsubsection}{Parametry \IeC {\v c}idla}{52}{section*.143}
+\contentsline {subsubsection}{Form\IeC {\'a}t telegramu}{53}{section*.144}
+\contentsline {subsubsection}{Nastaven\IeC {\'\i } \IeC {\v c}idla}{55}{section*.146}
+\contentsline {section}{\numberline {6.2}Bonega}{56}{section.149}
+\contentsline {subsubsection}{Parametry modulu}{56}{section*.151}
+\contentsline {subsubsection}{Form\IeC {\'a}t telegramu}{57}{section*.152}
+\contentsline {section}{\numberline {6.3}Kamstrup}{59}{section.154}
+\contentsline {section}{\numberline {6.4}ZPA}{59}{section.155}
+\contentsline {section}{\numberline {6.5}Pikkerton}{59}{section.156}
+\contentsline {chapter}{\numberline {7}N\IeC {\'a}vrh implementace}{60}{chapter.157}
+\contentsline {section}{\numberline {7.1}V\IeC {\'y}b\IeC {\v e}r OS}{60}{section.160}
+\contentsline {section}{\numberline {7.2}V\IeC {\'y}b\IeC {\v e}r programovac\IeC {\'\i }ho jazyka}{61}{section.175}
+\contentsline {section}{\numberline {7.3}Nastaven\IeC {\'\i } komunika\IeC {\v c}n\IeC {\'\i }ho modulu a \IeC {\v c}idla}{61}{section.176}
+\contentsline {section}{\numberline {7.4}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } dedikovan\IeC {\'e}ho b\IeC {\v e}hu}{61}{section.177}
+\contentsline {section}{\numberline {7.5}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } podpory \IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i }}{62}{section.181}
+\contentsline {section}{\numberline {7.6}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{62}{section.186}
+\contentsline {subsection}{\numberline {7.6.1}Ne\IeC {\v s}ifrovan\IeC {\'y} p\IeC {\v r}enos}{62}{subsection.187}
+\contentsline {subsection}{\numberline {7.6.2}\IeC {\v S}ifrovan\IeC {\'y} p\IeC {\v r}enos}{62}{subsection.188}
+\contentsline {section}{\numberline {7.7}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } ulo\IeC {\v z}en\IeC {\'\i } dat}{63}{section.190}
+\contentsline {section}{\numberline {7.8}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } vizualizace dat}{63}{section.194}
+\contentsline {section}{\numberline {7.9}Struktura aplikace}{65}{section.195}
+\contentsline {subsection}{\numberline {7.9.1}Start programu v r\IeC {\'a}mci opera\IeC {\v c}n\IeC {\'\i }ho syst\IeC {\'e}mu}{65}{subsection.196}
+\contentsline {subsection}{\numberline {7.9.2}Start programu z pohledu aplikace}{65}{subsection.198}
+\contentsline {subsection}{\numberline {7.9.3}Z\IeC {\'a}kladn\IeC {\'\i } kontrola a parsov\IeC {\'a}n\IeC {\'\i } dat}{65}{subsection.199}
+\contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{67}{subsection.200}
+\contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{67}{subsection.201}
+\contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{67}{subsection.202}
+\contentsline {subsection}{\numberline {7.9.7}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{67}{subsection.203}
+\contentsline {chapter}{\numberline {8}ToDo Pozn\IeC {\'a}mky}{68}{chapter.204}
+\contentsline {chapter}{\numberline {9}Z\IeC {\'a}v\IeC {\v e}r}{69}{chapter.205}
+\contentsline {chapter}{Literatura}{70}{section*.207}
+\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{75}{section*.209}
+\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{78}{section*.211}

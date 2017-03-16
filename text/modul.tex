@@ -54,7 +54,7 @@ V módu koncentrátoru slouží modul jako komunikační zařízení pro sběr d
 
 V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu přenosu. Díky vnitřní implementaci Wireless M-Bus protokolu je modul schopen zachytávat a dešifrovat šifrovanou komunikaci.
 
-Praktické využíti jednotlivých módu zobrazuje obrázek \ref{TopologieIQRF}. \colorbox[rgb]{0,1,0}{Bude předělán}
+Praktické využíti jednotlivých módu zobrazuje obrázek \ref{TopologieIQRF}.
 
  \begin{figure}[!h]
   \begin{center}
@@ -79,34 +79,33 @@ Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfigur
 
 Obecná struktura\cite{iqrfmodul} paketu příkazu je 
 
-\begin{verbatim}
+\begin{eqnarray}
 	>[CC][RW][DATA][CR]
-\end{verbatim}
+\end{eqnarray}
 
 kde CC je jednobajtový kód daného příkazu, RW je jednobajtový příznak zápisu (\textbf{:}) či čtení dat (\textbf{?}) dat, DATA jsou zapisovaná data, pokud se jedná o zápis a CR je znak ukončení.
 
 Obecná skruktura odpovědi je následující
 
-\begin{verbatim}
+\begin{eqnarray}
 	<[DATA][CR]
-\end{verbatim}
+\end{eqnarray}
 
 kde DATA obsahuje přenášená data či návratové kódy (OK pro správné dokončení příkazu, ERR1 pro chybu syntaxe a ERR2 pro neplatnou vstupní hodnotu). Některé bajty jsou kódovány v šestnáckové soustavě či využívají uložení BigEndian.
 
 Například dotaz a odpověd pro aktuální AES klíč je:
 
-\begin{verbatim}
+\begin{eqnarray}
 	>03?[CR]
 	<010203040506070809a0b0c0d0e0f[CR]
-\end{verbatim}
+\end{eqnarray}
 
 a pro případnou změnu AES klíče:
 
-\begin{verbatim}
-	>03:112233445566778899aabbccddeeff[CR]
-	>OK[CR]
-\end{verbatim}
-
+\begin{eqnarray}
+>03:112233445566778899aabbccddeeff[CR]\\
+>OK[CR]
+\end{eqnarray}
 
 Bližší popis jednotlivých podporovaných příkazů je součástí \hyperlink{prilohaB}{přílohy B} této práce.
 
