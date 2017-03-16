@@ -4,20 +4,20 @@ Spolu se zařízením UniPi Neuron S103 byl zapůjčen i modul IQRF TR-72DC-WMB,
 
 \section{Obecný popis modulu TR-72D-WMB}
 
-Modul IQRF TR-72D-WMB je bezdrátový komunikační modul velikosti SIM karty z výroby české firmy \href{http://microrisc.com/cs/}{MICRORISC s.r.o.}. Vychází z řady produktů technologie IQRF, s tím rozdílem, že místo IQRF softwaru má přímo implementovaný Wireless M-Bus protokol \cite{iqrfmodul}. 
+Modul IQRF TR-72DA-WMB je bezdrátový komunikační modul velikosti SIM karty z výroby české firmy \href{http://microrisc.com/cs/}{MICRORISC s.r.o.}. Vychází z řady produktů technologie IQRF, s tím rozdílem, že místo IQRF softwaru má přímo implementovaný Wireless M-Bus protokol \cite{iqrfmodul}. 
 
  \begin{figure}[!h]
   \begin{center}
     \includegraphics[scale=0.6]{obrazky/modul_modul}
   \end{center}
-  \caption{Modul IQRF TR-72D-WMB \cite{iqrfmodul}}
+  \caption{Modul IQRF TR-72DA-WMB \cite{iqrfmodul}}
 \end{figure}
 
 Na malém prostoru se nachází vše potřebné pro uskutečnění bezdrátového přenosu: mikrokontrolér, externí EEPROM, teplotní senzor, kontrolní LED , 6 pinů a anténa dle typu komunikačního modulu (Obr.\label{BlokovkaIQRF}).
 
 
 
-Modul podporuje módy přenosu S1, S2, T1 a T2. Napájecí napětí modulu je v rozsahu 3.1 až 5.3\,V se spotřebou 1\,uA v režimu spánku a 8-22\,mA ve vysílacím režimu, dle nastavení výstupního výkonu, jehož maximální hodnota je 12.5\,W.
+Modul podporuje módy přenosu S1, S2, T1 a T2. Napájecí napětí modulu je v rozsahu 3.1 až 5.3\,V se spotřebou 1\,$\mu$A v režimu spánku a 8-22\,mA ve vysílacím režimu, dle nastavení výstupního výkonu, jehož maximální hodnota je 12.5\,W.
 V České republice je využíván pro přenos v bezlicenčním pásmu 868\,MHz, případně 433\,MHz a je možno jej přizpůsobit na vysílání v pásmu 916\,MHz, určené pro okolní státy.\newline
 
 \newpage
@@ -75,7 +75,7 @@ S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož 
   \caption{Zadní strana modulu s popisem pinů \colorbox[rgb]{0,1,0}{bude překreslen}}
 \end{figure}
 
-Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i ke samotné komunikaci s modulem. Každý příkaz začíná znakem \textbf{>}. Každá zpráva odpověď a stav reakce začíná znakem \textbf{<}. Každému příkazu musí předcházet budící znak NULL (\textbf{0x00}) následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem CR (\textbf{0x0D}). 
+Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i ke samotné komunikaci s modulem. Každý příkaz začíná znakem \textbf{\textgreater}. Každá zpráva odpověďi začíná znakem \textbf{\textless}. Každému příkazu musí předcházet budící znak NULL (\textbf{0x00}) následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem CR (\textbf{0x0D}). 
 
 Obecná struktura\cite{iqrfmodul} paketu příkazu je 
 

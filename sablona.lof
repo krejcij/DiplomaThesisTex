@@ -24,7 +24,7 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces UART r\IeC {\'a}mec \cite {sberniceUART} \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{34}{figure.86}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces GPIO na RaspberryPi 2 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{36}{figure.92}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru \cite {raspiGPIOs} \color@box {[rgb]}{0,1,0}{do tabulky}}}{36}{figure.93}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72D-WMB \cite {iqrfmodul}}}{38}{figure.97}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72DA-WMB \cite {iqrfmodul}}}{38}{figure.97}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma modulu TR-72D-WMB \cite {iqrfmodul}}}{39}{figure.98}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Prehled typu modulu dle anteny \cite {iqrfmodul}}}{39}{figure.99}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {iqrfmodul}}}{40}{figure.101}

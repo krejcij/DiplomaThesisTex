@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  7 MAR 2017 14:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  13 MAR 2017 19:29
 entering extended mode
 **sablona.tex
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.tex"
@@ -1115,26 +1115,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
 
  <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/modul_modul.png>]
-<obrazky/modul_block.png, id=997, 484.81125pt x 194.22563pt>
+<obrazky/modul_block.png, id=998, 484.81125pt x 194.22563pt>
 File: obrazky/modul_block.png Graphic file (type png)
  <use obrazky/modul_block.png>
 Package pdftex.def Info: obrazky/modul_block.png used on input line 27.
 (pdftex.def)             Requested size: 387.84952pt x 155.3807pt.
 
-<obrazky/modul_antena.png, id=999, 522.45187pt x 162.6075pt>
+<obrazky/modul_antena.png, id=1000, 522.45187pt x 162.6075pt>
 File: obrazky/modul_antena.png Graphic file (type png)
  <use obrazky/modul_antena.png>
 Package pdftex.def Info: obrazky/modul_antena.png used on input line 41.
 (pdftex.def)             Requested size: 365.7138pt x 113.82446pt.
  [39 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/modul_block.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/
 modul_antena.png>]
-<obrazky/modul_topologie.png, id=1009, 644.4075pt x 262.73157pt>
+<obrazky/modul_topologie.png, id=1010, 644.4075pt x 262.73157pt>
 File: obrazky/modul_topologie.png Graphic file (type png)
  <use obrazky/modul_topologie.png>
 Package pdftex.def Info: obrazky/modul_topologie.png used on input line 61.
 (pdftex.def)             Requested size: 386.64748pt x 157.64014pt.
 
-<obrazky/modul_zada.png, id=1011, 640.64343pt x 383.93437pt>
+<obrazky/modul_zada.png, id=1012, 640.64343pt x 383.93437pt>
 File: obrazky/modul_zada.png Graphic file (type png)
  <use obrazky/modul_zada.png>
 Package pdftex.def Info: obrazky/modul_zada.png used on input line 73.
@@ -1155,7 +1155,7 @@ Overfull \hbox (36.18404pt too wide) in paragraph at lines 76--77
 []\T1/lmr/m/n/12 Princip obou-sm¥rné ko-mu-ni-kace v mó-dech T2 a S2 je zná-zor-n¥n na [][][][][][]
  []
 
-<obrazky/wmbus_obousmerne.png, id=1047, 359.09157pt x 253.69781pt>
+<obrazky/wmbus_obousmerne.png, id=1048, 359.09157pt x 253.69781pt>
 File: obrazky/wmbus_obousmerne.png Graphic file (type png)
  <use obrazky/wmbus_obousmerne.png>
 Package pdftex.def Info: obrazky/wmbus_obousmerne.png used on input line 80.
@@ -1168,13 +1168,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Citation `PaketWm3' on page 46 undefined on input line 129.
 
-[46] <obrazky/wmbus_manchester.png, id=1065, 866.48718pt x 298.11375pt>
+[46] <obrazky/wmbus_manchester.png, id=1066, 866.48718pt x 298.11375pt>
 File: obrazky/wmbus_manchester.png Graphic file (type png)
  <use obrazky/wmbus_manchester.png>
 Package pdftex.def Info: obrazky/wmbus_manchester.png used on input line 173.
 (pdftex.def)             Requested size: 259.94815pt x 89.43481pt.
  [47 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/wmbus_manchester.png>] [48] [49]
-<obrazky/sifrovani_vektor.png, id=1092, 427.5975pt x 70.76437pt>
+<obrazky/sifrovani_vektor.png, id=1093, 427.5975pt x 70.76437pt>
 File: obrazky/sifrovani_vektor.png Graphic file (type png)
  <use obrazky/sifrovani_vektor.png>
 Package pdftex.def Info: obrazky/sifrovani_vektor.png used on input line 304.
@@ -1185,7 +1185,7 @@ Overfull \hbox (0.87144pt too wide) in paragraph at lines 315--316
  []
 
 ) [51] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zarizeni.tex"
-<obrazky/bonega_fotky.png, id=1104, 514.92375pt x 191.21437pt>
+<obrazky/bonega_fotky.png, id=1105, 514.92375pt x 191.21437pt>
 File: obrazky/bonega_fotky.png Graphic file (type png)
  <use obrazky/bonega_fotky.png>
 Package pdftex.def Info: obrazky/bonega_fotky.png used on input line 21.
@@ -1204,7 +1204,7 @@ Overfull \hbox (0.63774pt too wide) in paragraph at lines 114--115
 [][][][][][][] 
  []
 
-<obrazky/weptech_fotky.png, id=1121, 596.98032pt x 189.70876pt>
+<obrazky/weptech_fotky.png, id=1122, 596.98032pt x 189.70876pt>
 File: obrazky/weptech_fotky.png Graphic file (type png)
  <use obrazky/weptech_fotky.png>
 Package pdftex.def Info: obrazky/weptech_fotky.png used on input line 127.
@@ -1236,7 +1236,7 @@ Overfull \hbox (6.31635pt too wide) in paragraph at lines 262--263
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 264.
 
-<obrazky/aplikace_diagram.pdf, id=1214, 697.8572pt x 1015.54407pt>
+<obrazky/aplikace_diagram.pdf, id=1215, 697.8572pt x 1015.54407pt>
 File: obrazky/aplikace_diagram.pdf Graphic file (type pdf)
  <use obrazky/aplikace_diagram.pdf>
 Package pdftex.def Info: obrazky/aplikace_diagram.pdf used on input line 266.
@@ -1394,15 +1394,16 @@ pdfTeX warning (dest): name{prilohaB} has been referenced but does not exist, re
 pdfTeX warning (dest): name{apendix-tablebig} has been referenced but does not exist, replaced by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri
-12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmtt12.pfb>
-Output written on sablona.pdf (79 pages, 10419222 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc
+}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
+lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
+lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmtt12.pfb>
+Output written on sablona.pdf (79 pages, 10616543 bytes).
 PDF statistics:
- 1488 PDF objects out of 1728 (max. 8388607)
+ 1493 PDF objects out of 1728 (max. 8388607)
  338 named destinations out of 1000 (max. 500000)
  969 words of extra memory for PDF output out of 10000 (max. 10000000)
 

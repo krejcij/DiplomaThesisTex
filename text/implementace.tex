@@ -270,7 +270,7 @@ Program je nyní spouštěn automaticky po startu operačního systému interpre
 \end{figure}
 
 \subsection{Start programu z pohledu aplikace}
-Program při startu kontroluje, zdali  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQL databázi.
+Program při startu kontroluje, zdali  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQLite databázi.
 Dále program kontroluje přítomnost a možnost otevření sériového portu. V případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následujě příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
 
 \colorbox[rgb]{0,1,0}{dál je jsou pouze poznámky, zatím ve výstavbě}
