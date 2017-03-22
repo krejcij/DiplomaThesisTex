@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=sablona.tex
 
 [Frame0_View0,0]
-TopLine=213
-Cursor=10954
+TopLine=189
+Cursor=10284
 
 [Frame1]
 Flags=0
@@ -36,7 +36,7 @@ Document=text\uvod.tex
 
 [Frame1_View0,0]
 TopLine=0
-Cursor=0
+Cursor=2454
 
 [Frame2]
 Flags=0
@@ -54,7 +54,7 @@ Document=text\iot.tex
 
 [Frame2_View0,0]
 TopLine=7
-Cursor=2839
+Cursor=3050
 
 [Frame3]
 Flags=0
@@ -71,8 +71,8 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame3_View0,0]
-TopLine=23
-Cursor=2421
+TopLine=351
+Cursor=21183
 
 [Frame4]
 Flags=0
@@ -89,8 +89,8 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame4_View0,0]
-TopLine=357
-Cursor=21371
+TopLine=328
+Cursor=18481
 
 [Frame5]
 Flags=0
@@ -215,8 +215,8 @@ Class=LaTeXView
 Document=text\literatura.tex
 
 [Frame11_View0,0]
-TopLine=0
-Cursor=586
+TopLine=81
+Cursor=7021
 
 [Frame12]
 Flags=0
@@ -256,7 +256,7 @@ Cursor=0
 
 [SessionInfo]
 FrameCount=14
-ActiveFrame=11
+ActiveFrame=4
 
 [Bookmarks]
 text\implementace.tex=309 

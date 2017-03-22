@@ -1,16 +1,16 @@
 \select@language {czech}
-\contentsline {table}{\numberline {1.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } pr\IeC {\r u}myslov\IeC {\'e}ho a spot\IeC {\v r}ebitelsk\IeC {\'e}ho IoT \cite {iot_svet_hardware_internet_veci, uvod_pohanka_internet_veci}}}{8}{table.9}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } model\IeC {\r u} UniPi NEURON dle IO \cite {UniPiBoard2}}}{31}{table.78}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Varianty model\IeC {\r u} UniPi NEURON dle CPU a RAM \cite {UniPiBoard2}}}{32}{table.79}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Format datove jednotky po prijeti modulem IQRF}}{43}{table.109}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Popis standardu EN-13757 \cite {WmbusTables}}}{44}{table.111}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Re\IeC {\v z}imy p\IeC {\v r}enosu WM-Bus protokolu \cite {WmbusTables}}}{46}{table.114}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky \cite {FormatDatoveJednotky}}}{48}{table.117}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky protokolu Wireless M-Bus \cite {FormatDatoveJednotky}}}{48}{table.118}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Zkr\IeC {\'a}cen\IeC {\'y} form\IeC {\'a}t datov\IeC {\'e} jednotky \cite {FormatDatoveJednotky}}}{48}{table.119}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Tabulka k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } 3 ze 6 \cite {WMencodeing}}}{50}{table.124}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Weptech 868A \cite {WeptechCidlo}}}{56}{table.147}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Konfigurace intervalu zas\IeC {\'\i }l\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } DIP p\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e \cite {WeptechCidlo}}}{58}{table.149}
-\contentsline {table}{\numberline {6.3}{\ignorespaces P\IeC {\v r}ehled nastaven\IeC {\'\i } \IeC {\v c}idla \cite {WeptechCidlo}}}{58}{table.150}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Telegram z modulu Bonega \cite {BonegaCidlo}}}{60}{table.155}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{67}{table.193}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } pr\IeC {\r u}myslov\IeC {\'e}ho a spot\IeC {\v r}ebitelsk\IeC {\'e}ho IoT \cite {iot_svet_hardware_internet_veci, uvod_pohanka_internet_veci}}}{9}{table.9}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } model\IeC {\r u} UniPi NEURON dle IO \cite {UniPiBoard2}}}{34}{table.83}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Varianty model\IeC {\r u} UniPi NEURON dle CPU a RAM \cite {UniPiBoard2}}}{35}{table.84}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Format datove jednotky po prijeti modulem IQRF}}{46}{table.114}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Popis standardu EN-13757 \cite {WmbusTables}}}{47}{table.116}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Re\IeC {\v z}imy p\IeC {\v r}enosu WM-Bus protokolu \cite {WmbusTables}}}{49}{table.119}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky \cite {FormatDatoveJednotky}}}{51}{table.122}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky protokolu Wireless M-Bus \cite {FormatDatoveJednotky}}}{51}{table.123}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Zkr\IeC {\'a}cen\IeC {\'y} form\IeC {\'a}t datov\IeC {\'e} jednotky \cite {FormatDatoveJednotky}}}{51}{table.124}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Tabulka k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } 3 ze 6 \cite {WMencodeing}}}{53}{table.129}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Weptech 868A \cite {WeptechCidlo}}}{59}{table.152}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Konfigurace intervalu zas\IeC {\'\i }l\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } DIP p\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e \cite {WeptechCidlo}}}{61}{table.154}
+\contentsline {table}{\numberline {6.3}{\ignorespaces P\IeC {\v r}ehled nastaven\IeC {\'\i } \IeC {\v c}idla \cite {WeptechCidlo}}}{61}{table.155}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Telegram z modulu Bonega \cite {BonegaCidlo}}}{63}{table.160}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{70}{table.198}

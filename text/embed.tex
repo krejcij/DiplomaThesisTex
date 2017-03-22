@@ -4,11 +4,9 @@ V současnosti existuje velké množství zařízení v roli výpočetní jednot
 
 Mezi nejznámější nízkovýkonové (embedded) zařízení patří open-source Arduino (\ref{KapArduino}), RaspberryPi (\ref{KapRaspi}) a jejich klony (\ref{KapArduinoKlony}, \ref{KapRaspiKlony}). Poté budou zmíněny desky předních firem výrobců procesorů Intel (\ref{KapIntel}) a AMD (\ref{KapAMD}) a v neposlední řadě se podíváme na desky firmy CubieBoard(\ref{KapCubie}), HardKernel(\ref{KapKernel}) a další. 
 
-\colorbox[rgb]{0,1,0}{Zdůvodnit proč tu nejsou všechny modely daných řad a někteří výrobci.}
-
-\colorbox[rgb]{0,1,0}{Upřesnit vazbu na UniPi, RPi a UART modul.}
-
 Jejich vlastnosti jsou přehledně shrnuty v \hyperlink{apendix-tablebig}{tabulce přílohy A}.
+
+\colorbox[rgb]{1,0,0}{doplnit finalne tabulku a dostat ji na lezatou A3 do prace}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,7 +21,7 @@ Jejich vlastnosti jsou přehledně shrnuty v \hyperlink{apendix-tablebig}{tabulc
 
 	Ardiuno je skupina několika jednodeskových počítačů založených mikrokontrolérech. Nejedná se však o klasický stolní počítač IBM PC, ale o protypovací desku, ke které se spíše jak ovládací  zobrazovací periferie připojují senzory, moduly, serva, displeje. Projekt je od svého počátku šířen jako open-source, příručka jazyka a externí knihovny jsou pak šířeny pod licencí Creative Commons.
 	
-	Výrobce těchto desek vytvořil vývojové prostředí shodné pro všechny produkty Ardiuno. To se nazvývá Arduino IDE, je dostupné zdarma na webu výrobce a podporuje jazyk Wiring \cite{embed_about_wiring_2011}, což je upravená verze jazyka C. Prostředí zároveň obsahuje i Serial Monitor, který slouží k oboustranné sériové komunikaci mezi Arduinem a PC. Alternativou ještě může být prostředí Processing \cite{AboutProcessing2015} využívající stejnojmenný jazyk, umožňující vytváření grafických multiplatformních aplikací.
+	Výrobce těchto desek vytvořil vývojové prostředí shodné pro všechny produkty Ardiuno. To se nazvývá Arduino IDE, je dostupné zdarma na webu výrobce a podporuje jazyk Wiring \cite{embed_about_wiring_2011}, což je upravená verze jazyka C. Prostředí zároveň obsahuje i Serial Monitor, který slouží k oboustranné sériové komunikaci mezi Arduinem a PC. Alternativou ještě může být prostředí Processing \cite{embed_about_processing_2015} využívající stejnojmenný jazyk, umožňující vytváření grafických multiplatformních aplikací.
 	
 	Na deskách bývá několik diod, resetovací tlačítko, různé přídavné sběrnice (UART, I2C), konektory pro ICSP programování, napájecí konektor, oscilátor a obvod zprostředkovávající komunikaci po USB.
 	
@@ -33,6 +31,13 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	
 		\subsection{Arduino Duemilanove} Arduino Duemilanove je vývojová jednoprocesorová deska s mikroprocesorem ATMega168 od firmy Atmel, tedy platformě Atmel AVR. 
 		Parametry: ATmega168 s 16\,MHz krystalem, 16\,KB flash, 1\,KB SRAM (Static Random Access Memory), 512\,B EEPROM (Electrically Erasable Programmable Read-Only Memory). 	Konektivita: 14 digitálních vstupně/výstupných pinů, z toho 6 z nich může být využito i PWM (Pulse Width Modulation) , vstupních analogových pinů (10\,bit A/D převodník, 0-5\,V), I2C (Inter-Integrated Circuit) sběrnici, UART (Universal Asynchronous Receiver/Transmitter) sběrnici, ICSP (In Circuit Serial Programming) rozhraní, USB (Universal Serial Bus) rozhraní \cite{ArduinoDuemilanove}.	
+			\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[scale=0.2]{obrazky/emded_arduino_duemilanove}
+  \end{center}
+  \caption{Arduino Duemilanove \cite{ArduinoDuemilanove}}
+\end{figure}
+	
 	
 		\subsection{Arduino Uno} Arduino Uno je v současné době asi nejčastěji používaný typ desky. Arduino Uno je vývojová jednoprocesorová deska s mikroprocesorem ATMega328. Od roku 2011 je nástupcem Arduina Duemilanove. Změny oproti předchůdci jsou pouze v použitém mikrokontroléru, došlo k zdvojnásobení velikosti paměti na 32\,KB flash, 2\,KB SRAM, 1\,KB EEPROM \cite{ArduinoUno}.
 		\begin{figure}[!h]
@@ -41,9 +46,15 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
   \end{center}
   \caption{Arduino UNO \cite{ArduinoUno}}
 \end{figure}
-		
+	
 		\subsection{Arduino Leonardo} 
 		Arduino Leonardo designově navazuje na Arduino Uno, liší se pouze v použitém čipu ATmega32u4 \cite{ArduinoLeonardo}.
+				\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[scale=0.2]{obrazky/emded_arduino_leonardo}
+  \end{center}
+  \caption{Arduino Leonardo \cite{ArduinoLeonardo}}
+\end{figure}
 		
 					\subsection{Arduino Mega} 
 					Arduino Mega je deska pro náročnější projekty. Oproti klasickému Arduinu má Arduino Mega rychlejší procesor (16\,MHz) a také více vstupních a výstupních pinů. K dispozici je 54 digitálních pinů, 14 PWM výstupů, 16 analogových vstupů a 4 hardwarové sériové porty. Dále má 256\,kB flash paměti, 8\,kB RAM paměti a 4\,kB EEPROM paměti \cite{ArduinoMega}.	
@@ -60,12 +71,34 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		Arduino Due je nástupcem Arduino Mega a je to první karta Arduino, na níž je umístěn 32-bitový řadič (32-bitový ARM procesor
 		Atmel SAM3X8E). Vysoká taktovací rychlost 84\,MHz ve spojení s celkem 54 I/O piny umožňuje realizaci značně rozsáhlých projektů. K 54 pinům mimo jiné patří 12 PWM výstupů a 12 analogových vstupů, 4 UARTy, 2 I2C a dvojitý digitálně-analogový měnič. Vlastní USB Host poskytuje kartě vedle standardů jako JTAG (Joint Test Action Group), SPI (Serial Peripheral Interface) a Micro USB širší možnosti konektivity \cite{ArduinoDue}.	
 		
+				\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[scale=0.5]{obrazky/emded_arduino_due}
+  \end{center}
+  \caption{Arduino Due\cite{ArduinoDue}}
+\end{figure}
+
+		
 
 \subsection{Arduino Mini} 
 	Arduino Mini je asi nejmenší oficiální verze Arduina, navržená pro úsporu místa. Daní za malé rozměry je však absence USB portu. K programování je tedy nutné použít externí USB2Serial převodník. Jeho výkon však nijak nezaostává za většími deskami. Běží na procesoru ATmega328 s taktem 16\,MHz. Pro své malé rozměry je vhodný k použití například v chytrých vypínačích, či dálkových ovladačích \cite{ArduinoMini}.	
 	
+			\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[scale=0.5]{obrazky/emded_arduino_mini}
+  \end{center}
+  \caption{Arduino Mini \cite{ArduinoMini}}
+\end{figure}
+	
 	\subsection{Arduino Micro} 
 	Arduino Micro je jedna z desek, která má čip obsahující předprogramovaný převodník ATmega32u4 \cite{ArduinoMicro}.	 
+	
+		\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[scale=0.2]{obrazky/emded_arduino_micro}
+  \end{center}
+  \caption{Arduino Micro \cite{ArduinoMicro}}
+\end{figure}
 	
 	\subsection{Arduino Nano} 
 	Arduino Nano navíc obsahuje ještě USB port a převodník \cite{ArduinoNano}.	
@@ -94,18 +127,18 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		Lilypad Arduino je postaveno na ATmega168V (energeticky úsporná verze ATmega168) nebo ATmega328V. Je určena wearables projekty, zejména pro implementaci do textilií, kdy jsou spoje tvořeny vodivou nití. Není však pratelná. Existuje více variant této desky \cite{ArduinoLilipad}.	
 			\begin{figure}[!h]
  \begin{center}
-    \includegraphics[scale=0.1]{obrazky/emded_arduino_lilipad}
+    \includegraphics[scale=0.5]{obrazky/emded_arduino_lilipad}
   \end{center}
-  \caption{LilyPad Arduino [docasne prevzeti]}
+  \caption{LilyPad Arduino \cite{ArduinoLilipad}}
 \end{figure}
 		
 	\subsection{Arduino Yun} 
 	Arduino Yun je deska založená na ATmega32u4 a Atheros AR9331, který je schopný běhu odlehčeného linuxu Linino. Ve výbavě je softwarový bridge (prostředník, most), který zajišťuje komunikaci mezi oběma čipy. Procesor Atheros podporuje linuxové distribuce založené na OpenWrt s názvem OpenWrt-Yun. Deska má vestavěný Ethernet a WiFi modul, USB-A port, slot pro MicroSD kartu. Dále disponuje 20 digitálními I/O piny, z toho 7 mohou být použito jako výstupy PWM a 12 jako analogové vstupy \cite{ArduinoYun}.	
 	\begin{figure}[!h]
   \begin{center}
-    \includegraphics[scale=0.05]{obrazky/emded_arduino_yun}
+    \includegraphics[scale=0.3]{obrazky/emded_arduino_yun}
   \end{center}
-  \caption{Arduino YUN [docasne prevzeti]}
+  \caption{Arduino YUN \cite{ArduinoYun}}
 \end{figure}
 
 	

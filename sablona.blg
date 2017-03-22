@@ -11,6 +11,7 @@ A level-1 auxiliary file: text/todo.aux
 A level-1 auxiliary file: text/zaver.aux
 A level-1 auxiliary file: text/literatura.aux
 A level-1 auxiliary file: text/zkratky.aux
+A level-1 auxiliary file: text/prilohy.aux
 I found no \bibdata command---while reading file sablona.aux
 I found no \bibstyle command---while reading file sablona.aux
 (There were 2 error messages)

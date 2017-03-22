@@ -1,125 +1,130 @@
 \select@language {czech}
-\contentsline {chapter}{\IeC {\'U}vod}{7}{section*.5}
-\contentsline {chapter}{\numberline {1}Internet v\IeC {\v e}c\IeC {\'\i }}{8}{chapter.6}
-\contentsline {subsubsection}{Spot\IeC {\v r}ebitelsk\IeC {\'y} Internet v\IeC {\v e}c\IeC {\'\i }}{8}{section*.7}
-\contentsline {subsubsection}{Pr\IeC {\r u}myslov\IeC {\'y} Internet v\IeC {\v e}c\IeC {\'\i }}{8}{section*.8}
-\contentsline {chapter}{\numberline {2}Embedded za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } pro IoT}{10}{chapter.10}
-\contentsline {section}{\numberline {2.1}Arduino}{10}{section.11}
-\contentsline {subsection}{\numberline {2.1.1}Arduino Duemilanove}{11}{subsection.12}
-\contentsline {subsection}{\numberline {2.1.2}Arduino Uno}{11}{subsection.13}
-\contentsline {subsection}{\numberline {2.1.3}Arduino Leonardo}{11}{subsection.15}
-\contentsline {subsection}{\numberline {2.1.4}Arduino Mega}{11}{subsection.16}
-\contentsline {subsection}{\numberline {2.1.5}Arduino Due}{12}{subsection.18}
-\contentsline {subsection}{\numberline {2.1.6}Arduino Mini}{12}{subsection.19}
-\contentsline {subsection}{\numberline {2.1.7}Arduino Micro}{12}{subsection.20}
-\contentsline {subsection}{\numberline {2.1.8}Arduino Nano}{12}{subsection.21}
-\contentsline {subsection}{\numberline {2.1.9}Arduino Fio}{12}{subsection.23}
-\contentsline {subsection}{\numberline {2.1.10}Lilypad Arduino}{13}{subsection.25}
-\contentsline {subsection}{\numberline {2.1.11}Arduino Yun}{13}{subsection.27}
-\contentsline {section}{\numberline {2.2}Arduino klony}{14}{section.29}
-\contentsline {subsection}{\numberline {2.2.1}Freeduino}{14}{subsection.30}
-\contentsline {subsection}{\numberline {2.2.2}LABduino}{14}{subsection.31}
-\contentsline {subsection}{\numberline {2.2.3}Arduelo Libero}{14}{subsection.32}
-\contentsline {subsection}{\numberline {2.2.4}Bare Bones Board}{14}{subsection.33}
-\contentsline {subsection}{\numberline {2.2.5}Runtime}{15}{subsection.34}
-\contentsline {subsection}{\numberline {2.2.6}Nanode}{15}{subsection.35}
-\contentsline {subsection}{\numberline {2.2.7}Freaduino}{15}{subsection.36}
-\contentsline {subsection}{\numberline {2.2.8}Seeeduino}{15}{subsection.37}
-\contentsline {subsection}{\numberline {2.2.9}Teensy}{15}{subsection.38}
-\contentsline {subsection}{\numberline {2.2.10}Diavolino}{15}{subsection.39}
-\contentsline {subsection}{\numberline {2.2.11}Boarduino}{15}{subsection.40}
-\contentsline {section}{\numberline {2.3}RaspberryPi}{16}{section.41}
-\contentsline {subsection}{\numberline {2.3.1}RaspberryPi}{17}{subsection.42}
-\contentsline {subsection}{\numberline {2.3.2}RaspberryPi 2}{17}{subsection.44}
-\contentsline {subsection}{\numberline {2.3.3}RaspberryPi 3}{18}{subsection.46}
-\contentsline {subsection}{\numberline {2.3.4}RaspberryPi Zero}{18}{subsection.47}
-\contentsline {section}{\numberline {2.4}RaspberryPi klony}{18}{section.48}
-\contentsline {subsection}{\numberline {2.4.1}BananaPi}{18}{subsection.49}
-\contentsline {subsection}{\numberline {2.4.2}OrangePi}{19}{subsection.50}
-\contentsline {subsection}{\numberline {2.4.3}CubieBoard}{19}{subsection.51}
-\contentsline {subsection}{\numberline {2.4.4}Up Board}{20}{subsection.53}
-\contentsline {subsection}{\numberline {2.4.5}PINE64}{21}{subsection.54}
-\contentsline {subsection}{\numberline {2.4.6}HardKernel Odroid}{22}{subsection.56}
-\contentsline {subsection}{\numberline {2.4.7}BeagleBoard }{22}{subsection.57}
-\contentsline {section}{\numberline {2.5}Intel}{23}{section.59}
-\contentsline {subsection}{\numberline {2.5.1}Intel Galileo}{23}{subsection.60}
-\contentsline {subsection}{\numberline {2.5.2}Intel Edison}{24}{subsection.62}
-\contentsline {section}{\numberline {2.6}AMD Gizmo}{25}{section.65}
-\contentsline {chapter}{\numberline {3}Roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i } deska UniPi}{27}{chapter.67}
-\contentsline {section}{\numberline {3.1}UniPi v1}{28}{section.70}
-\contentsline {subsubsection}{Popis desky}{28}{section*.72}
-\contentsline {section}{\numberline {3.2}UniPi v2 - Neuron}{29}{section.74}
-\contentsline {subsubsection}{Popis desky}{30}{section*.76}
-\contentsline {section}{\numberline {3.3}Srovn\IeC {\'a}n\IeC {\'\i } obou verz\IeC {\'\i }}{34}{section.84}
-\contentsline {section}{\numberline {3.4}Sb\IeC {\v e}rnice na UniPi}{34}{section.85}
-\contentsline {subsubsection}{UART}{35}{section*.86}
-\contentsline {subsubsection}{SPI}{35}{section*.88}
-\contentsline {subsubsection}{RS-485}{36}{section*.89}
-\contentsline {subsubsection}{I2C}{36}{section*.90}
-\contentsline {subsubsection}{1Wire}{36}{section*.91}
-\contentsline {subsubsection}{GPIO}{36}{section*.92}
-\contentsline {section}{\numberline {3.5}Software pro UniPi}{38}{section.95}
-\contentsline {chapter}{\numberline {4}Komunika\IeC {\v c}n\IeC {\'\i } modul Wireless M-Bus}{39}{chapter.96}
-\contentsline {section}{\numberline {4.1}Obecn\IeC {\'y} popis modulu TR-72D-WMB}{39}{section.97}
-\contentsline {section}{\numberline {4.2}Komunika\IeC {\v c}n\IeC {\'\i } m\IeC {\'o}dy}{40}{section.101}
-\contentsline {section}{\numberline {4.3}Komunika\IeC {\v c}n\IeC {\'\i } protokol}{41}{section.103}
-\contentsline {chapter}{\numberline {5}Wireless M-Bus protokol}{44}{chapter.110}
-\contentsline {section}{\numberline {5.1}Princip komunikace}{44}{section.112}
-\contentsline {section}{\numberline {5.2}Re\IeC {\v z}imy p\IeC {\v r}enosu}{45}{section.113}
-\contentsline {section}{\numberline {5.3}Struktura zas\IeC {\'\i }lan\IeC {\'y}ch dat}{47}{section.116}
-\contentsline {section}{\numberline {5.4}Popis jednotliv\IeC {\'y}ch vrstev}{49}{section.120}
-\contentsline {subsubsection}{Fyzick\IeC {\'a} vrstva Wireless M-Bus}{49}{section*.121}
-\contentsline {subsubsection}{K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } pou\IeC {\v z}\IeC {\'\i }van\IeC {\'a} ve Wireless M-Bus}{49}{section*.122}
-\contentsline {subsubsection}{Linkov\IeC {\'a} vrstva Wireless M-Bus}{50}{section*.125}
-\contentsline {subsubsection}{L-Pole}{51}{section*.126}
-\contentsline {subsubsection}{C-Pole}{51}{section*.127}
-\contentsline {subsubsection}{M-Pole}{51}{section*.128}
-\contentsline {subsubsection}{A-Pole}{51}{section*.129}
-\contentsline {subsubsection}{Cl-Pole}{51}{section*.130}
-\contentsline {subsubsection}{CRC}{51}{section*.131}
-\contentsline {section}{\numberline {5.5}\IeC {\v S}ifrov\IeC {\'a}n\IeC {\'\i } dat}{51}{section.132}
-\contentsline {subsection}{\numberline {5.5.1}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus DES}{52}{subsection.133}
-\contentsline {subsection}{\numberline {5.5.2}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus AES}{52}{subsection.134}
-\contentsline {subsection}{\numberline {5.5.3}Ur\IeC {\v c}en\IeC {\'\i } \IeC {\v s}ifrovan\IeC {\'y}ch dat}{52}{subsection.135}
-\contentsline {subsection}{\numberline {5.5.4}M\IeC {\'o}dy \IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES}{52}{subsection.136}
-\contentsline {subsection}{\numberline {5.5.5}\IeC {\v S}ifrovac\IeC {\'\i } kl\IeC {\'\i }\IeC {\v c}}{52}{subsection.137}
-\contentsline {subsection}{\numberline {5.5.6}Inicializa\IeC {\v c}n\IeC {\'\i } vektor}{52}{subsection.138}
-\contentsline {subsection}{\numberline {5.5.7}Princip de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i }}{53}{subsection.140}
-\contentsline {subsection}{\numberline {5.5.8}Kontrola roz\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{53}{subsection.141}
-\contentsline {chapter}{\numberline {6}Vy\IeC {\v c}\IeC {\'\i }tan\IeC {\'a} Wireless M-Bus za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}{54}{chapter.142}
-\contentsline {section}{\numberline {6.1}Weptech OMST-868A}{54}{section.143}
-\contentsline {subsubsection}{Parametry \IeC {\v c}idla}{54}{section*.145}
-\contentsline {subsubsection}{Form\IeC {\'a}t telegramu}{55}{section*.146}
-\contentsline {subsubsection}{Nastaven\IeC {\'\i } \IeC {\v c}idla}{57}{section*.148}
-\contentsline {section}{\numberline {6.2}Bonega}{58}{section.151}
-\contentsline {subsubsection}{Parametry modulu}{58}{section*.153}
-\contentsline {subsubsection}{Form\IeC {\'a}t telegramu}{59}{section*.154}
-\contentsline {section}{\numberline {6.3}Kamstrup}{61}{section.156}
-\contentsline {section}{\numberline {6.4}ZPA}{62}{section.158}
-\contentsline {section}{\numberline {6.5}Pikkerton}{62}{section.160}
-\contentsline {chapter}{\numberline {7}N\IeC {\'a}vrh implementace}{63}{chapter.161}
-\contentsline {section}{\numberline {7.1}V\IeC {\'y}b\IeC {\v e}r OS}{63}{section.164}
-\contentsline {section}{\numberline {7.2}V\IeC {\'y}b\IeC {\v e}r programovac\IeC {\'\i }ho jazyka}{64}{section.179}
-\contentsline {section}{\numberline {7.3}Nastaven\IeC {\'\i } komunika\IeC {\v c}n\IeC {\'\i }ho modulu a \IeC {\v c}idla}{64}{section.180}
-\contentsline {section}{\numberline {7.4}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } dedikovan\IeC {\'e}ho b\IeC {\v e}hu}{64}{section.181}
-\contentsline {section}{\numberline {7.5}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } podpory \IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i }}{65}{section.185}
-\contentsline {section}{\numberline {7.6}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{65}{section.190}
-\contentsline {subsection}{\numberline {7.6.1}Ne\IeC {\v s}ifrovan\IeC {\'y} p\IeC {\v r}enos}{65}{subsection.191}
-\contentsline {subsection}{\numberline {7.6.2}\IeC {\v S}ifrovan\IeC {\'y} p\IeC {\v r}enos}{65}{subsection.192}
-\contentsline {section}{\numberline {7.7}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } ulo\IeC {\v z}en\IeC {\'\i } dat}{66}{section.194}
-\contentsline {section}{\numberline {7.8}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } vizualizace dat}{66}{section.198}
-\contentsline {section}{\numberline {7.9}Struktura aplikace}{68}{section.199}
-\contentsline {subsection}{\numberline {7.9.1}Start programu v r\IeC {\'a}mci opera\IeC {\v c}n\IeC {\'\i }ho syst\IeC {\'e}mu}{68}{subsection.200}
-\contentsline {subsection}{\numberline {7.9.2}Start programu z pohledu aplikace}{68}{subsection.202}
-\contentsline {subsection}{\numberline {7.9.3}Z\IeC {\'a}kladn\IeC {\'\i } kontrola a parsov\IeC {\'a}n\IeC {\'\i } dat}{68}{subsection.203}
-\contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{70}{subsection.204}
-\contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{70}{subsection.205}
-\contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{70}{subsection.206}
-\contentsline {subsection}{\numberline {7.9.7}Export dat}{70}{subsection.207}
-\contentsline {subsection}{\numberline {7.9.8}Vizualizace dat}{71}{subsection.208}
-\contentsline {subsection}{\numberline {7.9.9}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{71}{subsection.210}
-\contentsline {chapter}{\numberline {8}ToDo Pozn\IeC {\'a}mky}{72}{chapter.211}
-\contentsline {chapter}{\numberline {9}Z\IeC {\'a}v\IeC {\v e}r}{73}{chapter.212}
-\contentsline {chapter}{Literatura}{75}{section*.214}
-\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{81}{section*.216}
-\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{84}{section*.218}
+\contentsline {chapter}{\IeC {\'U}vod}{8}{section*.5}
+\contentsline {chapter}{\numberline {1}Internet v\IeC {\v e}c\IeC {\'\i }}{9}{chapter.6}
+\contentsline {section}{\numberline {1.1}Spot\IeC {\v r}ebitelsk\IeC {\'y} Internet v\IeC {\v e}c\IeC {\'\i }}{9}{section.7}
+\contentsline {section}{\numberline {1.2}Pr\IeC {\r u}myslov\IeC {\'y} Internet v\IeC {\v e}c\IeC {\'\i }}{9}{section.8}
+\contentsline {chapter}{\numberline {2}Embedded za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } pro IoT}{11}{chapter.10}
+\contentsline {section}{\numberline {2.1}Arduino}{11}{section.11}
+\contentsline {subsection}{\numberline {2.1.1}Arduino Duemilanove}{12}{subsection.12}
+\contentsline {subsection}{\numberline {2.1.2}Arduino Uno}{12}{subsection.14}
+\contentsline {subsection}{\numberline {2.1.3}Arduino Leonardo}{12}{subsection.16}
+\contentsline {subsection}{\numberline {2.1.4}Arduino Mega}{13}{subsection.18}
+\contentsline {subsection}{\numberline {2.1.5}Arduino Due}{13}{subsection.20}
+\contentsline {subsection}{\numberline {2.1.6}Arduino Mini}{13}{subsection.22}
+\contentsline {subsection}{\numberline {2.1.7}Arduino Micro}{14}{subsection.24}
+\contentsline {subsection}{\numberline {2.1.8}Arduino Nano}{15}{subsection.26}
+\contentsline {subsection}{\numberline {2.1.9}Arduino Fio}{15}{subsection.28}
+\contentsline {subsection}{\numberline {2.1.10}Lilypad Arduino}{15}{subsection.30}
+\contentsline {subsection}{\numberline {2.1.11}Arduino Yun}{15}{subsection.32}
+\contentsline {section}{\numberline {2.2}Arduino klony}{16}{section.34}
+\contentsline {subsection}{\numberline {2.2.1}Freeduino}{16}{subsection.35}
+\contentsline {subsection}{\numberline {2.2.2}LABduino}{17}{subsection.36}
+\contentsline {subsection}{\numberline {2.2.3}Arduelo Libero}{17}{subsection.37}
+\contentsline {subsection}{\numberline {2.2.4}Bare Bones Board}{17}{subsection.38}
+\contentsline {subsection}{\numberline {2.2.5}Runtime}{17}{subsection.39}
+\contentsline {subsection}{\numberline {2.2.6}Nanode}{17}{subsection.40}
+\contentsline {subsection}{\numberline {2.2.7}Freaduino}{17}{subsection.41}
+\contentsline {subsection}{\numberline {2.2.8}Seeeduino}{17}{subsection.42}
+\contentsline {subsection}{\numberline {2.2.9}Teensy}{17}{subsection.43}
+\contentsline {subsection}{\numberline {2.2.10}Diavolino}{18}{subsection.44}
+\contentsline {subsection}{\numberline {2.2.11}Boarduino}{18}{subsection.45}
+\contentsline {section}{\numberline {2.3}RaspberryPi}{18}{section.46}
+\contentsline {subsection}{\numberline {2.3.1}RaspberryPi}{19}{subsection.47}
+\contentsline {subsection}{\numberline {2.3.2}RaspberryPi 2}{19}{subsection.49}
+\contentsline {subsection}{\numberline {2.3.3}RaspberryPi 3}{20}{subsection.51}
+\contentsline {subsection}{\numberline {2.3.4}RaspberryPi Zero}{20}{subsection.52}
+\contentsline {section}{\numberline {2.4}RaspberryPi klony}{20}{section.53}
+\contentsline {subsection}{\numberline {2.4.1}BananaPi}{20}{subsection.54}
+\contentsline {subsection}{\numberline {2.4.2}OrangePi}{21}{subsection.55}
+\contentsline {subsection}{\numberline {2.4.3}CubieBoard}{21}{subsection.56}
+\contentsline {subsection}{\numberline {2.4.4}Up Board}{23}{subsection.58}
+\contentsline {subsection}{\numberline {2.4.5}PINE64}{23}{subsection.59}
+\contentsline {subsection}{\numberline {2.4.6}HardKernel Odroid}{24}{subsection.61}
+\contentsline {subsection}{\numberline {2.4.7}BeagleBoard }{24}{subsection.62}
+\contentsline {section}{\numberline {2.5}Intel}{26}{section.64}
+\contentsline {subsection}{\numberline {2.5.1}Intel Galileo}{26}{subsection.65}
+\contentsline {subsection}{\numberline {2.5.2}Intel Edison}{27}{subsection.67}
+\contentsline {section}{\numberline {2.6}AMD Gizmo}{28}{section.70}
+\contentsline {chapter}{\numberline {3}Roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i } deska UniPi}{30}{chapter.72}
+\contentsline {section}{\numberline {3.1}UniPi v1}{31}{section.75}
+\contentsline {subsubsection}{Popis desky}{31}{section*.77}
+\contentsline {section}{\numberline {3.2}UniPi v2 - Neuron}{32}{section.79}
+\contentsline {subsubsection}{Popis desky}{33}{section*.81}
+\contentsline {section}{\numberline {3.3}Srovn\IeC {\'a}n\IeC {\'\i } obou verz\IeC {\'\i }}{35}{section.89}
+\contentsline {section}{\numberline {3.4}Sb\IeC {\v e}rnice na UniPi}{37}{section.90}
+\contentsline {subsection}{\numberline {3.4.1}UART}{37}{subsection.91}
+\contentsline {subsection}{\numberline {3.4.2}SPI}{38}{subsection.93}
+\contentsline {subsection}{\numberline {3.4.3}RS-485}{39}{subsection.94}
+\contentsline {subsection}{\numberline {3.4.4}I2C}{39}{subsection.95}
+\contentsline {subsection}{\numberline {3.4.5}1Wire}{39}{subsection.96}
+\contentsline {subsection}{\numberline {3.4.6}GPIO}{39}{subsection.97}
+\contentsline {section}{\numberline {3.5}Software pro UniPi}{41}{section.100}
+\contentsline {chapter}{\numberline {4}Komunika\IeC {\v c}n\IeC {\'\i } modul Wireless M-Bus}{42}{chapter.101}
+\contentsline {section}{\numberline {4.1}Obecn\IeC {\'y} popis modulu TR-72D-WMB}{42}{section.102}
+\contentsline {section}{\numberline {4.2}Komunika\IeC {\v c}n\IeC {\'\i } m\IeC {\'o}dy}{43}{section.106}
+\contentsline {section}{\numberline {4.3}Komunika\IeC {\v c}n\IeC {\'\i } protokol}{44}{section.108}
+\contentsline {chapter}{\numberline {5}Wireless M-Bus protokol}{47}{chapter.115}
+\contentsline {section}{\numberline {5.1}Princip komunikace}{47}{section.117}
+\contentsline {section}{\numberline {5.2}Re\IeC {\v z}imy p\IeC {\v r}enosu}{48}{section.118}
+\contentsline {section}{\numberline {5.3}Struktura zas\IeC {\'\i }lan\IeC {\'y}ch dat}{50}{section.121}
+\contentsline {section}{\numberline {5.4}Popis jednotliv\IeC {\'y}ch vrstev}{52}{section.125}
+\contentsline {subsubsection}{Fyzick\IeC {\'a} vrstva Wireless M-Bus}{52}{section*.126}
+\contentsline {subsubsection}{K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } pou\IeC {\v z}\IeC {\'\i }van\IeC {\'a} ve Wireless M-Bus}{52}{section*.127}
+\contentsline {subsubsection}{Linkov\IeC {\'a} vrstva Wireless M-Bus}{53}{section*.130}
+\contentsline {subsubsection}{L-Pole}{54}{section*.131}
+\contentsline {subsubsection}{C-Pole}{54}{section*.132}
+\contentsline {subsubsection}{M-Pole}{54}{section*.133}
+\contentsline {subsubsection}{A-Pole}{54}{section*.134}
+\contentsline {subsubsection}{Cl-Pole}{54}{section*.135}
+\contentsline {subsubsection}{CRC}{54}{section*.136}
+\contentsline {section}{\numberline {5.5}\IeC {\v S}ifrov\IeC {\'a}n\IeC {\'\i } dat}{54}{section.137}
+\contentsline {subsection}{\numberline {5.5.1}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus DES}{55}{subsection.138}
+\contentsline {subsection}{\numberline {5.5.2}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus AES}{55}{subsection.139}
+\contentsline {subsection}{\numberline {5.5.3}Ur\IeC {\v c}en\IeC {\'\i } \IeC {\v s}ifrovan\IeC {\'y}ch dat}{55}{subsection.140}
+\contentsline {subsection}{\numberline {5.5.4}M\IeC {\'o}dy \IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES}{55}{subsection.141}
+\contentsline {subsection}{\numberline {5.5.5}\IeC {\v S}ifrovac\IeC {\'\i } kl\IeC {\'\i }\IeC {\v c}}{55}{subsection.142}
+\contentsline {subsection}{\numberline {5.5.6}Inicializa\IeC {\v c}n\IeC {\'\i } vektor}{55}{subsection.143}
+\contentsline {subsection}{\numberline {5.5.7}Princip de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i }}{56}{subsection.145}
+\contentsline {subsection}{\numberline {5.5.8}Kontrola roz\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{56}{subsection.146}
+\contentsline {chapter}{\numberline {6}Vy\IeC {\v c}\IeC {\'\i }tan\IeC {\'a} Wireless M-Bus za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}{57}{chapter.147}
+\contentsline {section}{\numberline {6.1}Weptech OMST-868A}{57}{section.148}
+\contentsline {subsubsection}{Parametry \IeC {\v c}idla}{57}{section*.150}
+\contentsline {subsubsection}{Form\IeC {\'a}t telegramu}{58}{section*.151}
+\contentsline {subsubsection}{Nastaven\IeC {\'\i } \IeC {\v c}idla}{60}{section*.153}
+\contentsline {section}{\numberline {6.2}Bonega}{61}{section.156}
+\contentsline {subsubsection}{Parametry modulu}{61}{section*.158}
+\contentsline {subsubsection}{Form\IeC {\'a}t telegramu}{62}{section*.159}
+\contentsline {section}{\numberline {6.3}Kamstrup}{64}{section.161}
+\contentsline {section}{\numberline {6.4}ZPA}{65}{section.163}
+\contentsline {section}{\numberline {6.5}Pikkerton}{65}{section.165}
+\contentsline {chapter}{\numberline {7}N\IeC {\'a}vrh implementace}{66}{chapter.166}
+\contentsline {section}{\numberline {7.1}V\IeC {\'y}b\IeC {\v e}r OS}{66}{section.169}
+\contentsline {section}{\numberline {7.2}V\IeC {\'y}b\IeC {\v e}r programovac\IeC {\'\i }ho jazyka}{67}{section.184}
+\contentsline {section}{\numberline {7.3}Nastaven\IeC {\'\i } komunika\IeC {\v c}n\IeC {\'\i }ho modulu a \IeC {\v c}idla}{67}{section.185}
+\contentsline {section}{\numberline {7.4}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } dedikovan\IeC {\'e}ho b\IeC {\v e}hu}{67}{section.186}
+\contentsline {section}{\numberline {7.5}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } podpory \IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i }}{68}{section.190}
+\contentsline {section}{\numberline {7.6}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{68}{section.195}
+\contentsline {subsection}{\numberline {7.6.1}Ne\IeC {\v s}ifrovan\IeC {\'y} p\IeC {\v r}enos}{68}{subsection.196}
+\contentsline {subsection}{\numberline {7.6.2}\IeC {\v S}ifrovan\IeC {\'y} p\IeC {\v r}enos}{68}{subsection.197}
+\contentsline {section}{\numberline {7.7}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } ulo\IeC {\v z}en\IeC {\'\i } dat}{69}{section.199}
+\contentsline {section}{\numberline {7.8}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } vizualizace dat}{69}{section.203}
+\contentsline {section}{\numberline {7.9}Struktura aplikace}{71}{section.204}
+\contentsline {subsection}{\numberline {7.9.1}Start programu v r\IeC {\'a}mci opera\IeC {\v c}n\IeC {\'\i }ho syst\IeC {\'e}mu}{71}{subsection.205}
+\contentsline {subsection}{\numberline {7.9.2}Start programu z pohledu aplikace}{71}{subsection.207}
+\contentsline {subsection}{\numberline {7.9.3}Z\IeC {\'a}kladn\IeC {\'\i } kontrola a parsov\IeC {\'a}n\IeC {\'\i } dat}{71}{subsection.208}
+\contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{73}{subsection.209}
+\contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{73}{subsection.210}
+\contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{73}{subsection.211}
+\contentsline {subsection}{\numberline {7.9.7}Export dat}{73}{subsection.212}
+\contentsline {subsection}{\numberline {7.9.8}Vizualizace dat}{74}{subsection.213}
+\contentsline {subsection}{\numberline {7.9.9}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{74}{subsection.215}
+\contentsline {chapter}{\numberline {8}ToDo Pozn\IeC {\'a}mky}{75}{chapter.216}
+\contentsline {chapter}{\numberline {9}Z\IeC {\'a}v\IeC {\v e}r}{76}{chapter.217}
+\contentsline {chapter}{Literatura}{78}{section*.219}
+\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{84}{section*.221}
+\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{88}{section*.223}
+\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{89}{chapter.224}
+\contentsline {chapter}{\numberline {B}Komunika\IeC {\v c}n\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }kazy modulu TR-72D-WMB }{90}{chapter.225}
+\contentsline {chapter}{\numberline {C}Zdrojov\IeC {\'y} k\IeC {\'o}d skriptu pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat }{91}{chapter.226}
+\contentsline {chapter}{\numberline {D}Uk\IeC {\'a}zka v\IeC {\'y}stupu vy\IeC {\v c}\IeC {\'\i }tan\IeC {\'y}ch dat }{93}{chapter.287}
+\contentsline {chapter}{\numberline {E}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{94}{chapter.315}

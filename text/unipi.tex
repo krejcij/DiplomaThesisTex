@@ -1,7 +1,7 @@
 \chapter{Rozšiřující deska UniPi}
 \label{KapUnipi}
 
-UniPi je česká firma, nyní dceřiná společnost Faster.cz, původně její oddělení měření a regulace, která se zaměřuje na inteligentní stavební řešení, domácí automatizaci a internet věcí. Dále provozuje výzkum a vývoj rozšiřujicích desek UniPi, včetně jejich softwarového vybavení \cite{UniPiBoard}.
+UniPi je česká firma, nyní dceřiná společnost Faster.cz, původně její oddělení měření a regulace, která se zaměřuje na inteligentní stavební řešení, domácí automatizaci a internet věcí. Dále provozuje výzkum a vývoj rozšiřujicích desek UniPi, včetně jejich softwarového vybavení \cite{UniPi}.
 
 UniPi je taktéž pojmenování pro přídavné rozšiřující desky pro RaspberryPi, se kterou je plně kompatibilní ve všech verzích. Je vybavena řadou komponent, jako jsou například digitální galvanicky oddělené vstupy s LED signalizací, 0\,-\,10\,V analogové vstupy, 0\,-\,10\,V analogové výstupy, spínací relé, jednokanálová 1Wire sběrnice, I2C sběrnice, UART sběrnice, SPI sběrnice a RS-485 sběrnice.
 
@@ -174,24 +174,26 @@ x & \textbf{Osazená deska} & \textbf{CPU} & \textbf{RAM} & \textbf{Další vlas
 	\end{center}
 \end{table}
 
-S RaspberryPi je deska UniPi propojena, obdobně jako u první verze, pomocí 26 pinové desky propoující GPIO port na RaspberryPi s konektorem na rozšiřující desce UniPi. Na samotné propojující desce (Obr.\ref{PicureUniPi1}) je vyvedena UART a I2C sběrnice. 
+S RaspberryPi je deska UniPi propojena, obdobně jako u první verze, pomocí 26 pinové desky propoující GPIO port na RaspberryPi s konektorem na rozšiřující desce UniPi. Na samotné propojující desce (Obr.\ref{PicureUniPiConnection}) je vyvedena UART a I2C sběrnice. 
 
  \begin{figure}[!h]
   \begin{center}
-    \includegraphics[scale=0.40]{obrazky/unipi_propojbrain}
+    \includegraphics[scale=0.30]{obrazky/unipi_propojbrain}
   \end{center}
-	\label{PicureUniPi1}
+	\label{PicureUniPiConnection}
   \caption{Detail propojení desek}
 \end{figure}
+
+\colorbox[rgb]{1,0,0}{pouklízet fotky a odkazy na ně, nějak to už nesedí}
 
 Na I2C sběrnici je nadále připojen panel (Obr.\ref{PicureUniPi2}) se signalizačními diodami. UART sběrnice je zde připravena pro připojenů dalších modulů. Tyto desky jsou k dostání v několika verzích, přizpůsobené konektorem pro konkrétní komunikační modul.
 
  \begin{figure}[!h]
   \begin{center}
-    \includegraphics[scale=0.40]{obrazky/unipi_propojbrain}
+    \includegraphics[scale=0.30]{obrazky/unipi_osazeny}
   \end{center}
 	\label{PicureUniPi11}
-  \caption{Detail propojení desek}
+  \caption{Detail osazené UniPi desky}
 \end{figure}
 
  \begin{figure}[!h]
@@ -261,7 +263,7 @@ Vzhledem k tomu, že UniPi NEURON je v době vypracování práce jediná vývoj
 \section{Sběrnice na UniPi}
 Jak je patrné z předhozích kapitol, jednodeskové počítače i rozšiřující moduly disponují množstvím komunikačních sběrnic. V této kapitole budou stručně představeny všechny výše zmíněné a zaměříme se na sběrnici UART, která bude sloužit pro komunikaci mezi RaspberryPi a WM-Bus modulem.
 
-\subsubsection{UART}
+\subsection{UART}
 UART je synchronní a asynchronní sériové rozhraní pro přenos dat mezi zařízeními v obou směrech. Používá se pro komunikaci mezi mikrokontroléry, počítači a dalšími zařízeními podporující tento standard. Využívá dvouvodičovou sběrnici, vysílá data na pinu označovaném obvykle jako TX, přijímá na pinu RX.
 
 Pro přenos se používají rámce, které mohou mít 5 až 9 bitů a jsou od sebe odděleny jedním start bitem a jedním nebo dvěma stop bity. Každý rámec může obsahovat ještě paritní bit pro kontrolu rámce. Dále je možné nastavit rychlost přenosu dat od 1 200 bps až do 250 kbps. Lze nastavit buď pro asynchronní režim, označovaný jako SCI, například pro RS-232 či RS-485, anebo pro synchronní režim, běžně označovaný jako SPI.
@@ -278,7 +280,7 @@ Tato sběrnice je ve verzi 1 vyvedená do modulárního konektoru na desce, ve v
 
 
 
-\subsubsection{SPI}
+\subsection{SPI}
 SPI je sériové periferní rozhraní. Používá se pro komunikaci mezi řídícími mikroprocesory a ostatními integrovanými obvody. Jednotlivé obvody jsou propojeny čtyřmi vodiči:
 \begin{itemize}
 	\item Datový výstup MOSI (Master Out, Slave In) obvodu Master je připojen na vstupy MOSI všech obvodů Slave.
@@ -288,19 +290,19 @@ SPI je sériové periferní rozhraní. Používá se pro komunikaci mezi řídí
 \end{itemize}
 Komunikace je realizována pomocí společné sběrnice, je typu master-slave. Adresace se provádí pomocí zvláštních vodičů, které při logické nule aktivují příjem a vysílání zvoleného zařízení. Tato sběrnice se ani v jedné z desek UniPi nepoužívá ani neni vyvedena ven.
 
-\subsubsection{RS-485}
+\subsection{RS-485}
 RS-485 se používá především v průmyslovém prostředí. Vyznačuje se dvouvodičovým propojením jednotek. Tyto vodiče se označují písmeny A a B. Přenos je poloduplexní, a proto se vyžaduje řízení přenosu dat. Pomocí dvouvodičové linky je možné připojit až 32 zařízení. Tato sběrnice není součástí první verze desky, v druhé verzi je vyvedena na kontakty.
 
-\subsubsection{I2C}
+\subsection{I2C}
 I2C je interní datová sběrnice sloužící pro komunikaci a přenos dat mezi jednotlivými integrovanými obvody většinou v rámci jednoho zařízení. Sběrnice je duplexní a dvoudrátová. Na jednu sběrnici může být připojeno více obvodů, v základní sedmibitové verzi až 128 obvodů.
 Vodiče jsou označeny jako serial data (SDA) a serial clock (SCL). Sběrnice je typu master-slave. Master při přenosu generuje hodinový signál na vodiči SCL. Když jeden obvod vysílá, všechny ostatní poslouchají a pouze podle adresy určují, zda jsou data určena jim. Obvod, který chce vyslat/přijmout data musí nejprve definovat adresu čipu, s kterým chce komunikovat a zda půjde o příjem nebo vysílání - tedy o čtení nebo zápis. To určuje bit, který je součástí adresy. 
 
 Tato sběrnice je součástí obou verzí desky, využívá se pro propojení vnitřních funkčních bloků (EEPROM, RTC modul, AD převodník, 1Wire master, ...), v první verzi je i vyvedená do modulárního konektoru na desce, v druhé verzi již ne.
 
-\subsubsection{1Wire}
+\subsection{1Wire}
 Sběrnice 1Wire, navržená firmou Dallas Semiconductor, umožňuje připojit několik zařízení k řídící jednotce prostřednictvím pouhých dvou vodičů: data a zem. Sběrnice má jeden řídící obvod (master) a jeden či více ovládaných zařízení (slave). Všechny obvody jsou zapojeny jednak na společnou zem, a jednak paralelně na společný datový vodič. Tato sběrnice je součástí obou verzí desky, slouží pro připojení externích čidel (nejčastěji teplotní čidla) a u obou verzí desky je vyvedena do modulárního konektoru.
 
-\subsubsection{GPIO}
+\subsection{GPIO}
 \label{KapGPIO}
 GPIO jsou piny, které lze programovat pomocí softwaru. Do těchto pinů lze posílat elektrický signál nebo jej z nich naopak přijímat. Na RaspberryPi 1 je takových vývodů celkem 26, na RaspberryPi 2 a RaspberryPi 3 je vývodů 40. GPIO vývodů je zde standardně 8, krom nich se zde nachází i dva piny pro UART, dva pro I2C a šest pro SPI, ty však jdou také přenastavit pro GPIO využití. Nesmíme zapomenout ani na dva výstupy s napětím (3,3\,V a 5\,V) a zem.
 Obrázek \ref{ObrazekGPIO} demonstruje rozložení GPIO konektoru napříč verzemi RaspberryPi.
