@@ -1,37 +1,41 @@
 \select@language {czech}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Arduino UNO \cite {ArduinoUno}}}{10}{figure.14}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Arduino MEGA \cite {ArduinoMega}}}{11}{figure.17}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Arduino NANO \cite {ArduinoNano}}}{12}{figure.22}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Arduino FIO \cite {ArduinoFio}}}{12}{figure.24}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces LilyPad Arduino [docasne prevzeti]}}{12}{figure.26}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Arduino YUN [docasne prevzeti]}}{13}{figure.28}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Srovn\IeC {\'a}n\IeC {\'\i } verz\IeC {\'\i } RaspberryPi: Model A+, Model B a Model B+ \cite {RaspiOne}}}{16}{figure.43}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces RaspberryPi 2, Pi 3 a Pi Zero \cite {RaspiTwo},\cite {RaspiThree},\cite {RaspiZero}}}{16}{figure.45}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Cubieboard5 \cite {CubieBoards}}}{19}{figure.52}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces PINE A64+ 2GB \cite {Pine64}}}{20}{figure.55}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces BeagleBone Black \cite {BeagleBone}}}{22}{figure.58}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Intel Galileo \cite {IntelGalileo}}}{23}{figure.61}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Intel Edison a jeho umisteni na Arduino boardu \cite {IntelEdison}}}{23}{figure.63}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Intel Edison zasazeny na Intel breakout boardu \cite {IntelEdison}}}{24}{figure.64}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces AMD Gizmo 1 \cite {AmdGizmo1}}}{24}{figure.66}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Popis UniPi v1 \cite {UniPiBoard1}}}{27}{figure.71}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v1 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{28}{figure.73}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces UniPi roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i } deska \color@box {[rgb]}{0,1,0}{vyfotit rovn\IeC {\v e}}}}{29}{figure.75}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces UniPi NEURON S, M a L \cite {UniPiBoard2}}}{30}{figure.77}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Detail propojovac\IeC {\'\i } desky s p\IeC {\v r}ipojen\IeC {\'y}m WM-Bus modulem \color@box {[rgb]}{0,1,0}{p\IeC {\v r}efotit lip}}}{31}{figure.80}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Detail vnit\IeC {\v r}n\IeC {\'\i }ho uspo\IeC {\v r}\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } UniPi Neuronu S103 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}efotit lip}}}{32}{figure.81}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v2 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{32}{figure.82}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces UART r\IeC {\'a}mec \cite {sberniceUART} \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{34}{figure.86}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces GPIO na RaspberryPi 2 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{36}{figure.92}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru \cite {raspiGPIOs} \color@box {[rgb]}{0,1,0}{do tabulky}}}{36}{figure.93}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72DA-WMB \cite {iqrfmodul}}}{38}{figure.97}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma modulu TR-72D-WMB \cite {iqrfmodul}}}{39}{figure.98}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Prehled typu modulu dle anteny \cite {iqrfmodul}}}{39}{figure.99}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {iqrfmodul}}}{40}{figure.101}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Zadn\IeC {\'\i } strana modulu s popisem pin\IeC {\r u} \color@box {[rgb]}{0,1,0}{bude p\IeC {\v r}ekreslen}}}{40}{figure.103}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Princip obousm\IeC {\v e}rn\IeC {\'e} komunikace v m\IeC {\'o}dech T1 a S1}}{45}{figure.113}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester \cite {Manchester} \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{47}{figure.121}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Form\IeC {\'a}t inicializa\IeC {\v c}n\IeC {\'\i }ho vektoru \color@box {[rgb]}{0,1,0}{prekreslim}}}{50}{figure.137}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A \cite {WeptechCidlo}}}{52}{figure.142}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Bezdr\IeC {\'a}tov\IeC {\'y} modul Bonega \cite {BonegaCidlo} \color@box {[rgb]}{0,1,0}{vymenit}}}{57}{figure.150}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{66}{figure.197}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Arduino UNO \cite {ArduinoUno}}}{11}{figure.14}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Arduino MEGA \cite {ArduinoMega}}}{12}{figure.17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Arduino NANO \cite {ArduinoNano}}}{13}{figure.22}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Arduino FIO \cite {ArduinoFio}}}{13}{figure.24}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces LilyPad Arduino [docasne prevzeti]}}{13}{figure.26}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Arduino YUN [docasne prevzeti]}}{14}{figure.28}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Srovn\IeC {\'a}n\IeC {\'\i } verz\IeC {\'\i } RaspberryPi: Model A+, Model B a Model B+ \cite {RaspiOne}}}{17}{figure.43}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces RaspberryPi 2, Pi 3 a Pi Zero \cite {RaspiTwo},\cite {RaspiThree},\cite {RaspiZero}}}{17}{figure.45}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Cubieboard5 \cite {CubieBoards}}}{20}{figure.52}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces PINE A64+ 2GB \cite {Pine64}}}{21}{figure.55}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces BeagleBone Black \cite {BeagleBone}}}{23}{figure.58}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Intel Galileo \cite {IntelGalileo}}}{24}{figure.61}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Intel Edison a jeho umisteni na Arduino boardu \cite {IntelEdison}}}{24}{figure.63}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Intel Edison zasazeny na Intel breakout boardu \cite {IntelEdison}}}{25}{figure.64}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces AMD Gizmo 1 \cite {AmdGizmo1}}}{25}{figure.66}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Popis UniPi v1 \cite {UniPiBoard1}}}{28}{figure.71}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v1 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{29}{figure.73}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces UniPi roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i } deska \color@box {[rgb]}{0,1,0}{vyfotit rovn\IeC {\v e}}}}{30}{figure.75}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces UniPi NEURON S, M a L \cite {UniPiBoard2}}}{31}{figure.77}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Detail propojen\IeC {\'\i } desek}}{32}{figure.80}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Detail propojen\IeC {\'\i } desek}}{33}{figure.81}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Detail vnit\IeC {\v r}n\IeC {\'\i }ho uspo\IeC {\v r}\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } UniPi Neuronu S103 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}efotit lip}}}{33}{figure.82}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v2 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{33}{figure.83}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces UART r\IeC {\'a}mec \cite {sberniceUART} \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{35}{figure.87}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces GPIO na RaspberryPi 2 \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{37}{figure.93}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru \cite {raspiGPIOs} \color@box {[rgb]}{0,1,0}{do tabulky}}}{37}{figure.94}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72DA-WMB \cite {iqrfmodul}}}{39}{figure.98}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma modulu TR-72D-WMB \cite {iqrfmodul}}}{40}{figure.99}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Prehled typu modulu dle anteny \cite {iqrfmodul}}}{40}{figure.100}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {iqrfmodul}}}{41}{figure.102}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Zadn\IeC {\'\i } strana modulu s popisem pin\IeC {\r u} \color@box {[rgb]}{0,1,0}{bude p\IeC {\v r}ekreslen}}}{42}{figure.104}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Princip obousm\IeC {\v e}rn\IeC {\'e} komunikace v m\IeC {\'o}dech T1 a S1}}{47}{figure.115}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester \cite {Manchester} \color@box {[rgb]}{0,1,0}{p\IeC {\v r}ekreslit}}}{49}{figure.123}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Form\IeC {\'a}t inicializa\IeC {\v c}n\IeC {\'\i }ho vektoru \color@box {[rgb]}{0,1,0}{prekreslim}}}{52}{figure.139}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A \cite {WeptechCidlo}}}{54}{figure.144}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Bezdr\IeC {\'a}tov\IeC {\'y} modul Bonega \cite {BonegaCidlo}}}{59}{figure.152}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402 \cite {KamstrupCidlo}}}{61}{figure.157}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310 \cite {ZPACidlo}}}{62}{figure.159}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{69}{figure.201}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Ukazka vizualizace dat}}{71}{figure.209}

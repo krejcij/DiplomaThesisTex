@@ -251,24 +251,16 @@ Program je nyní spouštěn automaticky po startu operačního systému interpre
 Program při startu kontroluje, zdali  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQLite databázi.
 Dále program kontroluje přítomnost a možnost otevření sériového portu. V případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následujě příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
 
-\colorbox[rgb]{0,1,0}{dál je jsou pouze poznámky, zatím ve výstavbě}
-
-\colorbox[rgb]{0,1,0}{doplnit potom i veci ze clanku, primarne}
-
 \subsection{Základní kontrola a parsování dat}
-\begin{itemize}
-\item - jak se resi datasheety specifikaci
-\item - co se tam kontroluje (signatura, rozsifrovani, delka paketu, statove bajty)
-\item - jak se zjisti jestli se ma desifrovat
-\end{itemize}
+Nasledne dojde ke spusteni smycky naslouchani prichozich telegramu. Kazdy prichozi telegram je podroben serii kontrol, zdali doslo ke spravnemu odposlechnuti. Jako prvni kontrola je delka telegramu odpovidajici sudemu nasobku. Telegram je dale podroben zakladni analyze na parsovani polozek aplikacni a linkove vrstvy. Zde dochazi ke kontrole delky telegramu vuci hodnote uvedene v hlavicce, dale je provedena kontrola platnosti CRC souctu. Je take provedena kontrola obsahu Cl-pole, Status pole a ConfigurationWord pole.
 
 \subsection{Dešifrování dat}
+ Na zaklade analyzy posledni hodnoty se program dale vetvi:
 \begin{itemize}
-\item - proc se to tak debilne desifruje
-\item - kde se berou ty klice
-\item - jak se pocita IV
-\item - jak se kontroluje desifrovani
+	\item nesifrovane telegramy jsou zapsany do databaze, pote dle vyrobce daneho mericiho zarizeni podrobeny dukladne analyze prenasenych dat. Zjistene hodnoty doplnene o casovou znacku a informace o mericim zarizeni zapsany do databaze a sdeleny na graficky vstup.
+	\item v pripade ze analyzou pole ConfigurationWord je zjisteno sifrovani prenasenych dat algoritmem AES128 v modu CBC, dojde k rozsifrovani dat dle postupu popsanem v kapitole \ref{section_encrypted_communication} a pote program s telegramem zachazi jako s nesifrovanym, popsanym v predchozim bode.
 \end{itemize}
+Pokud nektera z operaci nad telegramem selze, dojde k vyjimce, dany telegram je zaevidovan, v jeho zpracovani se jiz nepokracuje a aplikace se vrati do stavu cekani na prichod dalsiho telegramu.
 
 \subsection{Parsování dat}
 \begin{itemize}
@@ -285,6 +277,20 @@ Dále program kontroluje přítomnost a možnost otevření sériového portu. V
 \item - co se zapise do logu a co do db
 \end{itemize}
 
+\subsection{Export dat}
+Dalsim krokem je vizualizace ziskanych dat. Kazdou pulnoc se automaticky spusti export databaze, ktery davkove vyexportuje data namerena za poslednich 24 hodin do Google SpreadSheetu. Pro kazdy senzor v danem dni existuje samostatny Worksheet.
+
+\subsection{Vizualizace dat}
+Nad temito daty se potom provadi vizualizace pomoci Google Graphs. Ten umoznuje interaktivni odecitani vykreslenych hodnot zachycenych danym senzorem v danem dni (Figure \ref{fig_sec4_chart_example}). 
+
+ \begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[scale=0.8]{obrazky/chart_weptech}
+  \end{center}
+  \caption{Ukazka vizualizace dat}
+	\label{fig_sec4_chart_example}
+\end{figure}
+
 \subsection{Ošetření chyb a vyjímek}
 \begin{itemize}
 \item - jak se ukladaji vysledky
@@ -292,9 +298,6 @@ Dále program kontroluje přítomnost a možnost otevření sériového portu. V
 \item - kdy se kam co uklada a v jakem formatu
 \item - co se zapise do logu a co do db
 \end{itemize}
-
-
-
 
 
 

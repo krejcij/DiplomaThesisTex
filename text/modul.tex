@@ -24,7 +24,7 @@ V České republice je využíván pro přenos v bezlicenčním pásmu 868\,MHz,
 
  \begin{figure}[!h]
   \begin{center}
-    \includegraphics[scale=0.8]{obrazky/modul_block}
+    \includegraphics[scale=0.6]{obrazky/modul_block}
   \end{center}
   \caption{Blokové schéma modulu TR-72D-WMB \cite{iqrfmodul}}
 	\label{BlokovkaIQRF}
@@ -52,7 +52,7 @@ V módu měřiče může být modul přes UART sběrnici zapojen k mikrokontrol�
 
 V módu koncentrátoru slouží modul jako komunikační zařízení pro sběr dat z meřičů. Aktuální firmware podporuje pouze obousměrnou komunikaci s měřiči v režimu S a T a je zatím ve fázi vývoje a do produkce nasazena jako experimentální. Z tohoto důvodu bude při implementaci samotné aplikace modul nasazen v režimu skeneru.
 
-V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu přenosu. Díky vnitřní implementaci Wireless M-Bus protokolu je modul schopen zachytávat a dešifrovat šifrovanou komunikaci.
+V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu přenosu. Díky vnitřní implementaci Wireless M-Bus protokolu je modul schopen zachytávat a dešifrovat šifrovanou komunikaci, je vsak nutne pocitat s tim, ze soucasny firmware neni staveny na vyuziti v modu skeneru pro prijem sifrovane komunikace. Modul totiz automaticky veskere zachycene sifrovane telegramy automaticky rozsifruje pomoci jedineho interniho AES klice. Jedna se vsak o klic daneho modulu, nikoliv vycitaneho zarizeni. Pri vycitani sifrovanych dat je tedy nutne postupovat sloziteji a provest nejdrive zpetne zasifrovani danych dat timto klicem a pote az provest rozsifrovani dle normy, blize popsane v sekci \ref{section_unencrypted_communication}.
 
 Praktické využíti jednotlivých módu zobrazuje obrázek \ref{TopologieIQRF}.
 
@@ -106,6 +106,18 @@ a pro případnou změnu AES klíče:
 >03:112233445566778899aabbccddeeff[CR]\\
 >OK[CR]
 \end{eqnarray}
+
+Pri prenosu datove jednotky uvedene v Tab. \ref{PaketWm3} modulem dochazi k jejimu rozsireni o polozky uvedene v Tab. \ref{PaketWm4}.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{ccccccc}
+1 Bajt & 1 Bajt & 12\,-\,n Bajtu & 1 Bajt & 1 Bajt & 1 Bajt & 1 Bajt\\ \hline
+\multicolumn{1}{|c|}{Length} & \multicolumn{1}{c|}{Status} & \multicolumn{1}{c|}{...} & \multicolumn{1}{c|}{CRC} & \multicolumn{1}{c|}{RSSI} & \multicolumn{1}{c|}{CR} & \multicolumn{1}{c|}{0A}\\ \hline
+\end{tabular}
+\caption{Format datove jednotky po prijeti modulem IQRF}
+\label{PaketWm4}
+\end{table}
 
 Bližší popis jednotlivých podporovaných příkazů je součástí \hyperlink{prilohaB}{přílohy B} této práce.
 
