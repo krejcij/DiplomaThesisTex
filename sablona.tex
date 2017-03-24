@@ -121,7 +121,7 @@ diploma						 % sazba diplomové práce
 
 %% Abstrakt
 \abstrakt{
-Předkládaná diplomová práce je zaměřena na implementaci protokolu Wireless M-Bus do embedded zařízení RaspberryPi za pomocí rozšiřující desky UniPi. Protokol je implementován v jazyce Python a s Wireless M-Bus zařízeními komunikuje pomocí komunikačního modulu IQRF připojeného na sběrnici UART. Teoretická část práce se zaměřuje na přehled embedded zařízení pro IoT, možnosti jejich rozšíření, popisuje danou rozšiřující desku i Wireless M-Bus komunikační modul. Podrobněji se zaměřuje na vrstvy protokolu Wireless M-bus, čímž poskytuje základy potřebné pro porozumění praktické části. V praktické části je provedena implementace aplikace pro vyčítání dat z Wireless M-Bus senzorů a jejich následnou vizualizaci. Aplikace je schopna vyčítat i zařízení umožňující šifrovaný přenos.
+Předkládaná diplomová práce je zaměřena na implementaci protokolu Wireless M-Bus do embedded zařízení RaspberryPi za pomocí rozšiřující desky UniPi. Protokol je implementován v jazyce Python a s Wireless M-Bus zařízeními komunikuje pomocí komunikačního modulu IQRF připojeného na sběrnici UART. Teoretická část práce se zaměřuje na přehled embedded zařízení pro IoT, možnosti jejich rozšíření, popisuje danou rozšiřující desku i Wireless M-Bus komunikační modul. Podrobněji se zaměřuje na vrstvy protokolu Wireless M-bus, čímž poskytuje základy potřebné pro porozumění praktické části. V praktické části je provedena implementace aplikace pro vyčítání dat z Wireless M-Bus senzorů a jejich následnou vizualizaci. Aplikace je schopna vyčítat i zařízení umožňující šifrovaný přenos. \colorbox[rgb]{0,0,0}{DOPLNIT}
 }
 {
 Presented diploma thesis is focused on the implementation of Wireless M-Bus protocol to embedded device RaspberryPi with expansion board UniPi. The protocol is implemented in Python with Wireless M-Bus devices communicating via IQRF transceiver connected to the UART bus. The theoretical part is focused on an overview of embedded devices for the IoT, the possibility of their expansion, describes the UniPi expansion board and Wireless M-Bus transceiver. More specifically focuses on the Wireless M-bus layers, which provides a basic knowledge for understanding the practical part. In the practical part is the implementation of the sample application for retrieving data from a Wireless M-Bus sensors.
@@ -129,8 +129,8 @@ Presented diploma thesis is focused on the implementation of Wireless M-Bus prot
 
 
 %% Klíčová slova
-\klicovaslova{IoT, RaspberryPi, UniPi, Wireless M-Bus, EN 13757-4, Python, Pikkerton, Bonega, Weptech, ZPA}%
-	{IoT, RaspberryPi, UniPi, Wireless M-Bus, EN 13757-4, Python, Pikkerton, Bonega, Weptech, ZPA}
+\klicovaslova{IIoT, RaspberryPi, UniPi, Neuron, Wireless M-Bus, EN 13757-4, Python, Google Charts, Weptech, Bonega, Kamstrup, ZPA, Pikkerton}%
+	{IIoT, RaspberryPi, UniPi, Neuron, Wireless M-Bus, EN 13757-4, Python, Google Charts, Weptech, Bonega, Kamstrup, ZPA, Pikkerton}
 
 %% Poděkování
 \podekovanitext{Rád bych poděkoval vedoucímu diplomové práce panu Ing.\ Pavlu Maškovi za odborné vedení, konzultace, trpělivost a podnětné návrhy k~práci.}
@@ -158,36 +158,35 @@ Presented diploma thesis is focused on the implementation of Wireless M-Bus prot
 
 
 %% Vložení desek generovaných informačním systémem
-%\includepdf[pages=1,offset=19mm 0mm]%
-%  {pdf/student-desky}% název souboru nesmí obsahovat mezery!
+%\includepdf[pages=1,offset=19mm 0mm]{pdf/student-desky}% název souboru nesmí obsahovat mezery!
 % nebo vytvoření desek z balíčku
 %\vytvorobalku
 %\setcounter{page}{1} %resetovani citace stranek - desky se necisluji
 
 %% Vložení titulního listu generovaného informačním systémem
-%\includepdf[pages=1,offset=19mm 0mm]{pdf/student-titulka}% název souboru nesmí obsahovat mezery!
+\includepdf[pages=1,offset=19mm 0mm]{pdf/student-titulka}% název souboru nesmí obsahovat mezery!
 % nebo vytvoření titulní stránky z balíčku
 %\vytvortitulku
    
 %% Vložení zadání generovaného informačním systémem
-%\includepdf[pages=1,offset=19mm 0mm]{pdf/student-zadani}% název souboru nesmí obsahovat mezery!
+\includepdf[pages=1,offset=19mm 0mm]{pdf/student-zadani}% název souboru nesmí obsahovat mezery!
 % nebo lze vytvořit prázdný list příkazem ze šablony
 %\stranka{}%
 %	{\sffamily\Huge\centering ZDE VLOŽIT LIST ZADÁNÍ}%
 %	{\sffamily\centering Z~důvodu správného číslování stránek}
 
 %% Vysázení stránky s abstraktem
-%\vytvorabstrakt
+\vytvorabstrakt
 
 %% Vysázení prohlaseni o samostatnosti
-%\vytvorprohlaseni
+\vytvorprohlaseni
 
 %% Vysázení poděkování
-%\vytvorpodekovani
+\vytvorpodekovani
 
 %% Vysázení poděkování projektu SIX
 % ----------- zakomentujte pokud neodpovida realite
-%\vytvorpodekovaniSIX
+\vytvorpodekovaniSIX
 
 %% Vysázení obsahu
 \obsah
