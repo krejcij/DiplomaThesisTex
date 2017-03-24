@@ -2,16 +2,16 @@
 
 Pro účely testování komunikace bylo využito několik typů dostupných zařízení:
 \begin{itemize}
-	\item pokojové čidlo teploty a vlhkosti Weptech OMST-868A \cite{WeptechCidlo},
-	\item modul pro vodoměry Bonega \cite{BonegaCidlo},
-	\item ultrazvukový měřič tepla a chladu Kamstrup Multical 402 \colorbox[rgb]{0,1,0}{link dodat},
-	\item třífázový elektroměr ZPA ZE302 \colorbox[rgb]{0,1,0}{link dodat},
-	\item obecná zařízení Pikkerton.
+	\item pokojové čidlo teploty a vlhkosti Weptech OMST-868A~\cite{CidloWeptech},
+	\item modul pro vodoměry Bonega~\cite{CidloBonega},
+	\item ultrazvukový měřič tepla a chladu Kamstrup Multical 402~\cite{CidloKamstrup},
+	\item třífázový elektroměr ZPA ZE302~\cite{CidloZpa},
+	\item obecná zařízení Pikkerton~\cite{CidloPikkerton}.
 \end{itemize}
 
-Všechna tyto zařízení poskytují formát dat dle platné specifikace OMS 3.0.1 \colorbox[rgb]{0,1,0}{[link]}, která využívá platnou normu EN 13757-4 \colorbox[rgb]{0,1,0}{[link]} pro bezdrátový protokol WM-Bus.
+Všechna tyto zařízení poskytují formát dat dle platné specifikace OMS~(Open Metering Standard)~3.0.1~\cite{NormaOMS}, která vychází z normy EN 13757-4~\cite{Norma4} pro bezdrátový protokol WM-Bus.
 
-Pro základní komunikaci bylo zvoleno čidlo teploty a vlhkosti Weptech OMST-868A, z důvodu volné dostupnosti kompletní dokumentace a možnost nastavení parametrů vysílání včetně volitelného šifrování přenášených dat. Jako jediné z výše jmenovaných čidel nevyžaduje ke své činnosti žádná doplňující média či přístroje.
+Pro základní komunikaci bylo zvoleno čidlo teploty a vlhkosti Weptech OMST-868A, z důvodu volné dostupnosti kompletní dokumentace a možnosto nastavení parametrů vysílání včetně volitelného šifrování přenášených dat. Jako jediné z výše jmenovaných čidel nevyžaduje ke své činnosti žádná doplňující média či přístroje.
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -25,33 +25,33 @@ Pro základní komunikaci bylo zvoleno čidlo teploty a vlhkosti Weptech OMST-86
   \begin{center}
     \includegraphics[scale=0.35]{obrazky/zarizeni_weptech}
   \end{center}
-  \caption{Čidlo Weptech OMST-868A \cite{WeptechCidlo}}
+  \caption{Čidlo Weptech OMST-868A~\cite{CidloWeptech}}
 \end{figure}
 
 
 \subsubsection{Parametry čidla}
 \begin{itemize}
-	\item Rozsah měření vlhkosti: 20 až 80\%.
-	\item Přesnost měření vlhkosti: ± 2\%.
-	\item Rozsah měření teploty: -10°C až 55°C.
-	\item Přesnost měření teploty: ± 0,3°C.
-	\item Teplotní hystereze: 0,1°C.
+	\item Rozsah měření vlhkosti: 20 až 80\,\%.
+	\item Přesnost měření vlhkosti: ± 2\,\%.
+	\item Rozsah měření teploty: -10\,°C až 55\,°C.
+	\item Přesnost měření teploty: ± 0,3\,°C.
+	\item Teplotní hystereze: 0,1\,°C.
 	\item Mód přenosu: S nebo T.
-	\item Interval přenosu: konfiugurovatelný v rozsahu 5 sekund až 24 hodin.
-	\item Šifrování přenosu: volitelný AES-128 mód 5.
-	\item Napájení: 2 x AA baterie.
-	\item Výdrž baterie: dle módu a intervalu přenosu až 10 let.
+	\item Interval přenosu: konfiugurovatelný v rozsahu 5~sekund až 24~hodin.
+	\item Šifrování přenosu: volitelný AES-128~mód~5.
+	\item Napájení: 2~x~AA baterie.
+	\item Výdrž baterie: dle módu a intervalu přenosu až 10~let.
 \end{itemize}
 
 
 \subsubsection{Formát telegramu}
 
-Telegram má specifickou základní strukturu popsanou v Tab\ref{TabulkaTelegram} \cite{WeptechCidlo}:
+Telegram má specifickou základní strukturu popsanou v Tab.~\ref{TabulkaTelegramWeptech}~\cite{CidloWeptech}:
 
 \begin{table}[!ht]
 \centering
-\caption{Telegram ze zařízení Weptech 868A \cite{WeptechCidlo}}
-\label{TabulkaTelegram}
+\caption{Telegram ze zařízení Weptech 868A~\cite{CidloWeptech}}
+\label{TabulkaTelegramWeptech}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
@@ -110,13 +110,13 @@ Některé z položek je potřeba blíže vysvětlit:
 
 \subsubsection{Nastavení čidla}
 Čidlo má k dispozici několik nastavení. Některé z nich lze nastavit pomocí čtyř přepínačů DIP na desce plošných spojů.
-První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná mezí módem vysílání S (poloha ON) a módem T (poloha OFF), třetí a čtvrtý přpínač určují interval zasílání telegramu, jejich nastavení shrnuje Tab.\ref{TablukaDIP}.
+První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná mezí módem vysílání S (poloha ON) a módem T (poloha OFF), třetí a čtvrtý přpínač určují interval zasílání telegramu, jejich nastavení shrnuje Tab.~\ref{TablukaDIP}.
 
 \newpage{}
 
 \begin{table}[!ht]
 \centering
-\caption{Konfigurace intervalu zasílání pomocí DIP přepínače \cite{WeptechCidlo}}
+\caption{Konfigurace intervalu zasílání pomocí DIP přepínače~\cite{CidloWeptech}}
 \label{TablukaDIP}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -128,11 +128,11 @@ První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná 
 \end{tabular}
 \end{table}
 
-Jiné mohou být nastaveny pouze během výroby daného setu, a to do příslušnch továrních nastavení, či uživatelsky vyžádaných nastavení, viz Tab. \ref{TablukaSETUP}.
+Jiné mohou být nastaveny pouze během výroby daného setu, a to do příslušnch továrních nastavení, či uživatelsky vyžádaných nastavení, viz Tab.~\ref{TablukaSETUP}.
 
 \begin{table}[!ht]
 \centering
-\caption{Přehled nastavení čidla \cite{WeptechCidlo}}
+\caption{Přehled nastavení čidla \cite{CidloWeptech}}
 \label{TablukaSETUP}
 \begin{tabular}{|c|l|c|}
 \hline
@@ -160,32 +160,32 @@ Modul Bonega je bezdrátové čidlo podporující protokol Wireless M-Bus. Jedn�
   \begin{center}
     \includegraphics[scale=0.70]{obrazky/zarizeni_bonega}
   \end{center}
-  \caption{Bezdrátový modul Bonega \cite{BonegaCidlo}}
+  \caption{Bezdrátový modul Bonega~\cite{CidloBonega}}
 \end{figure}
 
 
 \subsubsection{Parametry modulu}
 \begin{itemize}
 	\item Rozsah měření: 0 až 65536 m\textsuperscript{2}.
-	\item Přesnost měření: ± 1 litr.
-	\item Maximální detekovatelný průtok: 6 m\textsuperscript{3}/hod.
+	\item Přesnost měření: ± 1\,litr.
+	\item Maximální detekovatelný průtok: 6\,m\textsuperscript{3}/hod.
 	\item Mód přenosu: T1.
 	\item Stupeň krytí: IP64.
-	\item Interval přenosu: 20-24 sekund v odpočtovém období (od 1.11. do 15.1.)
-	\item Interval přenosu: 4 minuty mimo odpočtové období.
-	\item Šifrování přenosu: AES-128 mód 5.
+	\item Interval přenosu: 20-24\,sekund v odpočtovém období (od 1.11. do 15.1.)
+	\item Interval přenosu: 4\,minuty mimo odpočtové období.
+	\item Šifrování přenosu: AES-128~mód~5.
 	\item Napájení: integrovaná baterie.
-	\item Výdrž baterie: až 12 let.
+	\item Výdrž baterie: až 12~let.
 \end{itemize}
 
 
 \subsubsection{Formát telegramu}
 Zařízení vysílá postupně dva telegramy, s rozlišením šestým bajtem adresy zařízení, jeden pro vodoměr teplé vody a druhý pro vodoměr studené vody.
-Telegram má specifickou základní strukturu popsanou v Tab\ref{TabulkaTelegram2} \cite{BonegaCidlo}:
+Telegram má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegram2}~\cite{CidloBonega}:
 
 \begin{table}[!ht]
 \centering
-\caption{Telegram z modulu Bonega \cite{BonegaCidlo}}
+\caption{Telegram z modulu Bonega~\cite{CidloBonega}}
 \resizebox{\textwidth}{!}{%
 \label{TabulkaTelegram2}
 \begin{tabular}{|c|l|c|}
@@ -228,7 +228,7 @@ Data						   & Ověření AES                                    & 2Fh          
 
 \newpage{}
 
-Modul Bonega pracuje pouze v režimu šifrování přenášenných dat pomocí AES128 mód 5. Při přenosu je tedy celá sekce data šifrována, telegram popsaný v tabulce \ref{TabulkaTelegram2} je popisován po dešifrování.
+Modul Bonega pracuje pouze v režimu šifrování přenášenných dat pomocí AES128~mód~5. Při přenosu je tedy celá sekce data šifrována, telegram popsaný v Tab. \ref{TabulkaTelegram2} je popisován po dešifrování.
 
 Některé z položek je potřeba blíže vysvětlit:
 
@@ -253,8 +253,21 @@ Některé z položek je potřeba blíže vysvětlit:
   \begin{center}
     \includegraphics[scale=0.7]{obrazky/zarizeni_kamstrup}
   \end{center}
-  \caption{Kamstrup Multical 402 \cite{KamstrupCidlo}}
+  \caption{Kamstrup Multical 402~\cite{CidloKamstrup}}
 \end{figure}
+
+\begin{table}[!ht]
+\centering
+\caption{Telegram ze zařízení Kamstrup Multical 402~\cite{CidloKamstrup}}
+\label{TabulkaTelegramKamstrup}
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|c|}
+\hline
+\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline
+
+\end{tabular}%}
+\end{table}
 
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -262,12 +275,29 @@ Některé z položek je potřeba blíže vysvětlit:
 	
 	\section{ZPA}
 
+\colorbox[rgb]{1,0,0}{doplnit text}
+
 	 \begin{figure}[!h]
   \begin{center}
     \includegraphics[scale=0.5]{obrazky/zarizeni_zpa}
   \end{center}
-  \caption{ZPA ZE.310 \cite{ZPACidlo}}
+  \caption{ZPA ZE.310~\cite{CidloZpa}}
 \end{figure}
+
+\colorbox[rgb]{1,0,0}{doplnit telegram}
+
+\begin{table}[!ht]
+\centering
+\caption{Telegram ze zařízení ZPA ZE.302~\cite{CidloZpa}}
+\label{TabulkaTelegramKZPA}
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|c|}
+\hline
+\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline
+
+\end{tabular}%}
+\end{table}
 	
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -276,14 +306,21 @@ Některé z položek je potřeba blíže vysvětlit:
 
 \section{Pikkerton}
 
-\colorbox[rgb]{0,1,0}{Aplikace to má implementované,} 
-
-\colorbox[rgb]{0,1,0}{ale nebylo na cem otestovat.}
-
-\colorbox[rgb]{0,1,0}{Popsat tedy nejak obecneji.}
+\colorbox[rgb]{1,0,0}{doplnit obecny text}
 	
-	
-	
+	\begin{table}[!ht]
+\centering
+\caption{Telegram ze zařízení Pikkerton~\cite{CidloPikkerton}}
+\label{TabulkaTelegramPikkerton}
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|c|}
+\hline
+\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline
 
+\end{tabular}%}
+\end{table}
+
+\colorbox[rgb]{1,0,0}{doplnit telegram}
 
 

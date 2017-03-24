@@ -10,7 +10,7 @@ Modul IQRF TR-72DA-WMB je bezdrátový komunikační modul velikosti SIM karty z
   \begin{center}
     \includegraphics[scale=0.6]{obrazky/modul_modul}
   \end{center}
-  \caption{Modul IQRF TR-72DA-WMB \cite{iqrfmodul}}
+  \caption{Modul IQRF TR-72DA-WMB \cite{ModulIQRF}}
 \end{figure}
 
 Na malém prostoru se nachází vše potřebné pro uskutečnění bezdrátového přenosu: mikrokontrolér, externí EEPROM, teplotní senzor, kontrolní LED , 6 pinů a anténa dle typu komunikačního modulu (Obr.\label{BlokovkaIQRF}).
@@ -26,7 +26,7 @@ V České republice je využíván pro přenos v bezlicenčním pásmu 868\,MHz,
   \begin{center}
     \includegraphics[scale=0.6]{obrazky/modul_block}
   \end{center}
-  \caption{Blokové schéma modulu TR-72D-WMB \cite{iqrfmodul}}
+  \caption{Blokové schéma modulu TR-72D-WMB \cite{ModulIQRF}}
 	\label{BlokovkaIQRF}
 \end{figure}
 
@@ -40,7 +40,7 @@ Modul lze pořídit ve třech verzích (Obr.\label{ObrazekAnteny}) dle připojen
   \begin{center}
     \includegraphics[scale=0.7]{obrazky/modul_antena}
   \end{center}
-  \caption{Prehled typu modulu dle anteny \cite{iqrfmodul}}
+  \caption{Přehled typu modulu dle antény \cite{ModulIQRF}}
 	\label{ObrazekAnteny}
 \end{figure}
 
@@ -52,15 +52,15 @@ V módu měřiče může být modul přes UART sběrnici zapojen k mikrokontrol�
 
 V módu koncentrátoru slouží modul jako komunikační zařízení pro sběr dat z meřičů. Aktuální firmware podporuje pouze obousměrnou komunikaci s měřiči v režimu S a T a je zatím ve fázi vývoje a do produkce nasazena jako experimentální. Z tohoto důvodu bude při implementaci samotné aplikace modul nasazen v režimu skeneru.
 
-V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu přenosu. Díky vnitřní implementaci Wireless M-Bus protokolu je modul schopen zachytávat a dešifrovat šifrovanou komunikaci, je vsak nutne pocitat s tim, ze soucasny firmware neni staveny na vyuziti v modu skeneru pro prijem sifrovane komunikace. Modul totiz automaticky veskere zachycene sifrovane telegramy automaticky rozsifruje pomoci jedineho interniho AES klice. Jedna se vsak o klic daneho modulu, nikoliv vycitaneho zarizeni. Pri vycitani sifrovanych dat je tedy nutne postupovat sloziteji a provest nejdrive zpetne zasifrovani danych dat timto klicem a pote az provest rozsifrovani dle normy, blize popsane v sekci \ref{section_unencrypted_communication}.
+V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu přenosu. Díky vnitřní implementaci Wireless M-Bus protokolu je modul schopen zachytávat a dešifrovat šifrovanou komunikaci, je však nutné počítat s tím, že současný firmware není stavěný na vyžití modulu pro příjem šifrované komunikace v módu skeneru od více zařízení zároveň. Modul totiž automaticky veškeré zachycené šifrované telegramy automaticky rozšifruje pomocí jediného interního AES klíče. Jedná se však o klíč daného modulu, nikoliv vyčítaného zařízení. Při vyčítání šifrovaných dat je tedy nutné postupovat složitěji a provést nejdříve zpětné zašifrování daných dat tímto klíčem a až poté provést rozšifrování dat dle normy.
 
-Praktické využíti jednotlivých módu zobrazuje obrázek \ref{TopologieIQRF}.
+Praktické využíti jednotlivých módu zobrazuje Obr.~\ref{TopologieIQRF}.
 
  \begin{figure}[!h]
   \begin{center}
-    \includegraphics[scale=0.6]{obrazky/modul_topologie}
+    \includegraphics[scale=0.65]{obrazky/modul_topologie}
   \end{center}
-  \caption{Různé módy dle použité topologie \cite{iqrfmodul}}
+  \caption{Různé módy dle použité topologie \cite{ModulIQRF}}
 	\label{TopologieIQRF}
 \end{figure}
 
@@ -72,12 +72,14 @@ S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož 
   \begin{center}
     \includegraphics[scale=0.4]{obrazky/modul_zada}
   \end{center}
-  \caption{Zadní strana modulu s popisem pinů \colorbox[rgb]{0,1,0}{bude překreslen}}
+  \caption{Zadní strana modulu s popisem pinů \colorbox[rgb]{1,0,0}{PREDELAT}}
 \end{figure}
 
-Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i ke samotné komunikaci s modulem. Každý příkaz začíná znakem \textbf{\textgreater}. Každá zpráva odpověďi začíná znakem \textbf{\textless}. Každému příkazu musí předcházet budící znak NULL (\textbf{0x00}) následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem CR (\textbf{0x0D}). 
+Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i ke samotné komunikaci s modulem. Každý příkaz začíná znakem \textgreater. Každá zpráva odpověďi začíná znakem \textless. Každému příkazu musí předcházet budící znak NULL (0x00) následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem CR (0x0D). 
 
-Obecná struktura\cite{iqrfmodul} paketu příkazu je 
+Obecná struktura~\cite{ModulIQRF}~paketu příkazu je 
+
+\colorbox[rgb]{1,0,0}{Přebouchat příkazy a odpovědi do obecných ráměčků ala článek}
 
 \begin{eqnarray}
 	>[CC][RW][DATA][CR]
@@ -107,7 +109,7 @@ a pro případnou změnu AES klíče:
 >OK[CR]
 \end{eqnarray}
 
-Pri prenosu datove jednotky uvedene v Tab. \ref{PaketWm3} modulem dochazi k jejimu rozsireni o polozky uvedene v Tab. \ref{PaketWm4}.
+Při přenosu datové jednotky uvedené v Tab.~\ref{PaketWm3} modulem dochází k jejímu rozšíření o položky uvedené v Tab.~\ref{PaketWm4}.
 
 \begin{table}[!h]
 \centering
@@ -115,11 +117,9 @@ Pri prenosu datove jednotky uvedene v Tab. \ref{PaketWm3} modulem dochazi k jeji
 1 Bajt & 1 Bajt & 12\,-\,n Bajtu & 1 Bajt & 1 Bajt & 1 Bajt & 1 Bajt\\ \hline
 \multicolumn{1}{|c|}{Length} & \multicolumn{1}{c|}{Status} & \multicolumn{1}{c|}{...} & \multicolumn{1}{c|}{CRC} & \multicolumn{1}{c|}{RSSI} & \multicolumn{1}{c|}{CR} & \multicolumn{1}{c|}{0A}\\ \hline
 \end{tabular}
-\caption{Format datove jednotky po prijeti modulem IQRF}
+\caption{Formát datové jednotky po přijetí modulem IQRF}
 \label{PaketWm4}
 \end{table}
-
-Bližší popis jednotlivých podporovaných příkazů je součástí \hyperlink{prilohaB}{přílohy B} této práce.
 
 
 

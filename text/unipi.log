@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  19 MAR 2017 17:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  24 MAR 2017 17:31
 entering extended mode
 **unipi.tex
 ("C:\Users\krejci\OneDrive\VUT - diplomka\text\unipi.tex"
@@ -351,11 +351,11 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no [ in font nullfont!
-\citation{UniPiBoard}
+\citation{UniPi}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.4 ...h softwarového vybavení \cite{UniPiBoard}
+l.4 ...jejich softwarového vybavení \cite{UniPi}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -364,7 +364,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `UniPiBoard' on page  undefined on input line 4.
+LaTeX Warning: Citation `UniPi' on page  undefined on input line 4.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -1111,8 +1111,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no � in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no � in font nullfont!
@@ -1140,11 +1138,11 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no [ in font nullfont!
-\citation{UniPiBoard}
+\citation{UniPi}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.8 ...�dí několik příkladů \cite{UniPiBoard}
+l.8 ...e uvádí několik příkladů \cite{UniPi}
                                                   :
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1153,7 +1151,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `UniPiBoard' on page  undefined on input line 8.
+LaTeX Warning: Citation `UniPi' on page  undefined on input line 8.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no : in font nullfont!
@@ -2248,6 +2246,29 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no j in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no . in font nullfont!
+! Undefined control sequence.
+<write> ...ence `ObrazekUnipiV1' on page \thepage 
+                                                  \space undefined\on@line .
+l.48 Disponuje (viz Obr.~\ref{ObrazekUnipiV1}
+                                             ) osmi relé pro střídavý pr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `ObrazekUnipiV1' on page  undefined on input line 48.
+
+Missing character: There is no ) in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no m in font nullfont!
@@ -2694,6 +2715,11 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 48--49
  []
 
 
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 48--49
+[]
+ []
+
+
 ! LaTeX Error: Environment figure undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2717,7 +2743,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 50--51
 
 ! Undefined control sequence.
 l.52     \includegraphics
-                         [scale=0.7]{obrazky/unipi_v1}
+                         [scale=0.35]{obrazky/unipi_v1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2733,7 +2759,8 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 7 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 5 in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no b in font nullfont!
@@ -2751,13 +2778,13 @@ Missing character: There is no i in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.52 ...\includegraphics[scale=0.7]{obrazky/unipi_
+l.52 ...includegraphics[scale=0.35]{obrazky/unipi_
                                                   v1}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.52 ...cludegraphics[scale=0.7]{obrazky/unipi_v1}
+l.52 ...ludegraphics[scale=0.35]{obrazky/unipi_v1}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2831,7 +2858,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.54   \caption
-               {Popis UniPi v1 \cite{UniPiBoard1}}
+               {Popis UniPi v1 \cite{UniPiBoard1} \colorbox[rgb]{1,0,0}{NOVE...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2853,7 +2880,7 @@ Missing character: There is no [ in font nullfont!
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
 l.54   \caption{Popis UniPi v1 \cite{UniPiBoard1}
-                                                 }
+                                                  \colorbox[rgb]{1,0,0}{NOVE...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2864,6 +2891,36 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: Citation `UniPiBoard1' on page  undefined on input line 54.
 
 Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.54 ...opis UniPi v1 \cite{UniPiBoard1} \colorbox
+                                                  [rgb]{1,0,0}{NOVE KOMENTY}  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no Y in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -2871,24 +2928,24 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55 \end{figure}
+l.56 \end{figure}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (9.7512pt too wide) in paragraph at lines 52--56
+Overfull \hbox (9.7512pt too wide) in paragraph at lines 52--57
 []\OT1/cmr/m/n/10 1$
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 52--56
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 52--57
 []
  []
 
 ! Undefined control sequence.
-l.57 \subsubsection
+l.58 \subsubsection
                    {Popis desky}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2907,7 +2964,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no y in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 57--58
+Overfull \hbox (20.0pt too wide) in paragraph at lines 58--59
 [] 
  []
 
@@ -3394,7 +3451,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 71--72
+Overfull \hbox (20.0pt too wide) in paragraph at lines 72--73
 []
  []
 
@@ -3641,14 +3698,28 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no z in font nullfont!
 Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no O in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...ference `SchemaBlok1' on page \thepage 
                                                   \space undefined\on@line .
-l.73 ...unkčních celků  (obr. \ref{SchemaBlok1}
+l.74 ...�  (znázorněno na Obr.~\ref{SchemaBlok1}
                                                   ), které jsou propojeny p...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3657,7 +3728,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `SchemaBlok1' on page  undefined on input line 73.
+LaTeX Warning: Reference `SchemaBlok1' on page  undefined on input line 74.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -3768,7 +3839,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74  \begin{figure}
+l.75  \begin{figure}
                     [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3779,17 +3850,17 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 73--75
+Overfull \hbox (20.0pt too wide) in paragraph at lines 74--76
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 73--75
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 74--76
 []
  []
 
 ! Undefined control sequence.
-l.76     \includegraphics
+l.77     \includegraphics
                          [scale=0.7]{obrazky/unipi_schema1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3824,13 +3895,13 @@ Missing character: There is no i in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.76 ...\includegraphics[scale=0.7]{obrazky/unipi_
+l.77 ...\includegraphics[scale=0.7]{obrazky/unipi_
                                                   schema1}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.76 ...graphics[scale=0.7]{obrazky/unipi_schema1}
+l.77 ...graphics[scale=0.7]{obrazky/unipi_schema1}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3845,7 +3916,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.77   \end{center}
+l.78   \end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3857,7 +3928,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.77   \end{center}
+l.78   \end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3869,7 +3940,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.77   \end{center}
+l.78   \end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3877,7 +3948,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.77   \end{center}
+l.78   \end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3888,7 +3959,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.77   \end{center}
+l.78   \end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3903,8 +3974,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.78   \caption
-               {Blokové schéma UniPi v1 \colorbox[rgb]{0,1,0}{překreslit}}
+l.79   \caption
+               {Blokové schéma UniPi v1 \colorbox[rgb]{1,0,0}{PREKRESLIT}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3931,8 +4002,8 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no 1 in font nullfont!
 ! Undefined control sequence.
-l.78 ...aption{Blokové schéma UniPi v1 \colorbox
-                                                  [rgb]{0,1,0}{překreslit}}
+l.79 ...aption{Blokové schéma UniPi v1 \colorbox
+                                                  [rgb]{1,0,0}{PREKRESLIT}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3944,22 +4015,21 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no T in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -3967,14 +4037,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 \end{figure}
+l.81 \end{figure}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (38.08577pt too wide) in paragraph at lines 76--81
+Overfull \hbox (38.08577pt too wide) in paragraph at lines 77--82
 []\OML/cmm/m/it/10 chema\OT1/cmr/m/n/10 1$
  []
 
@@ -4049,7 +4119,7 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 82--83
+Overfull \hbox (20.0pt too wide) in paragraph at lines 83--84
 []
  []
 
@@ -4310,12 +4380,12 @@ Missing character: There is no O in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 89--90
+Overfull \hbox (20.0pt too wide) in paragraph at lines 90--91
 []
  []
 
 ! Undefined control sequence.
-l.97 \section
+l.98 \section
              {UniPi v2 - Neuron}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4338,7 +4408,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 97--99
+Overfull \hbox (20.0pt too wide) in paragraph at lines 98--100
 []
  []
 
@@ -4805,7 +4875,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.100 ...o ostatní zařízení \cite{UniPiBoard2}
+l.101 ...o ostatní zařízení \cite{UniPiBoard2}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4814,17 +4884,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `UniPiBoard2' on page  undefined on input line 100.
+LaTeX Warning: Citation `UniPiBoard2' on page  undefined on input line 101.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 100--101
+Overfull \hbox (20.0pt too wide) in paragraph at lines 101--102
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 100--101
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 101--102
 [] 
  []
 
@@ -4835,7 +4905,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.102  \begin{figure}
+l.103  \begin{figure}
                      [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4846,12 +4916,12 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 102--103
+Overfull \hbox (20.0pt too wide) in paragraph at lines 103--104
 [] 
  []
 
 ! Undefined control sequence.
-l.104     \includegraphics
+l.105     \includegraphics
                           [scale=0.8]{obrazky/unipi_unipi_deska}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4886,13 +4956,13 @@ Missing character: There is no i in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.104 ...includegraphics[scale=0.8]{obrazky/unipi_
+l.105 ...includegraphics[scale=0.8]{obrazky/unipi_
                                                   unipi_deska}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.104 ...ics[scale=0.8]{obrazky/unipi_unipi_deska}
+l.105 ...ics[scale=0.8]{obrazky/unipi_unipi_deska}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -4907,7 +4977,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105   \end{center}
+l.106   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4919,7 +4989,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105   \end{center}
+l.106   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4931,7 +5001,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105   \end{center}
+l.106   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4939,7 +5009,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.105   \end{center}
+l.106   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4950,7 +5020,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.105   \end{center}
+l.106   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4965,8 +5035,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.106   \caption
-                {UniPi rozšiřující deska \colorbox[rgb]{0,1,0}{vyfotit r...
+l.107   \caption
+                {UniPi rozšiřující deska \colorbox[rgb]{1,0,0}{PREFOTIT}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4996,8 +5066,8 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
-l.106 ...ion{UniPi rozšiřující deska \colorbox
-                                                  [rgb]{0,1,0}{vyfotit rovně}}
+l.107 ...ion{UniPi rozšiřující deska \colorbox
+                                                  [rgb]{1,0,0}{PREFOTIT}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -5009,24 +5079,19 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no � in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no T in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -5034,14 +5099,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107 \end{figure}
+l.109 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (47.96529pt too wide) in paragraph at lines 104--108
+Overfull \hbox (47.96529pt too wide) in paragraph at lines 105--110
 []\OML/cmm/m/it/10 nipi[]eska$
  []
 
@@ -5220,6 +5285,29 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no 2 in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no . in font nullfont!
+! Undefined control sequence.
+<write> ...e `UnipiV2DeskaUnipi' on page \thepage 
+                                                  \space undefined\on@line .
+l.111 ...verze 2 (viz Obr.~\ref{UnipiV2DeskaUnipi}
+                                                  ), propojovací desky pro ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `UnipiV2DeskaUnipi' on page  undefined on input line 111.
+
+Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -5260,6 +5348,29 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no y in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no . in font nullfont!
+! Undefined control sequence.
+<write> ...UniPiConnectionImage' on page \thepage 
+                                                  \space undefined\on@line .
+l.111 ...viz Obr.~\ref{PicureUniPiConnectionImage}
+                                                  ) a diodového panelu. To ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `PicureUniPiConnectionImage' on page  undefined on input line 111.
+
+Missing character: There is no ) in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -5404,12 +5515,22 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 109--110
+Overfull \hbox (20.0pt too wide) in paragraph at lines 111--112
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 111--112
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 111--112
 []
  []
 
 ! Undefined control sequence.
-l.112 \subsubsection
+l.114 \subsubsection
                     {Popis desky}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5428,7 +5549,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no y in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 112--113
+Overfull \hbox (20.0pt too wide) in paragraph at lines 114--115
 [] 
  []
 
@@ -5893,6 +6014,13 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ( in font nullfont!
 Missing character: There is no W in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no - in font nullfont!
 Missing character: There is no B in font nullfont!
@@ -5924,7 +6052,7 @@ Missing character: There is no � in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 124--125
+Overfull \hbox (20.0pt too wide) in paragraph at lines 126--127
 []
  []
 
@@ -5936,7 +6064,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 \newpage
+l.128 \newpage
               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -5946,7 +6074,7 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 <write> \newlabel{KapUnipi}{{}{\thepage 
                                         }}
-l.126 \newpage
+l.128 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5959,7 +6087,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{KapitolaUnipi1}{{}{\thepage 
                                               }}
-l.126 \newpage
+l.128 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5969,9 +6097,21 @@ and I'll forget about whatever was undefined.
 
 \newlabel{KapitolaUnipi1}{{}{}}
 ! Undefined control sequence.
+<write> \newlabel{ObrazekUnipiV1}{{}{\thepage 
+                                              }}
+l.128 \newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{ObrazekUnipiV1}{{}{}}
+! Undefined control sequence.
 <write> \newlabel{SchemaBlok1}{{}{\thepage 
                                            }}
-l.126 \newpage
+l.128 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5983,7 +6123,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{KapitolaUnipi2}{{}{\thepage 
                                               }}
-l.126 \newpage
+l.128 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5992,6 +6132,18 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 \newlabel{KapitolaUnipi2}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{UnipiV2DeskaUnipi}{{}{\thepage 
+                                                 }}
+l.128 \newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{UnipiV2DeskaUnipi}{{}{}}
 ]
 
 ! LaTeX Error: Environment figure undefined.
@@ -6000,7 +6152,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128  \begin{figure}
+l.130  \begin{figure}
                      [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6011,12 +6163,12 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 128--129
+Overfull \hbox (20.0pt too wide) in paragraph at lines 130--131
 [] 
  []
 
 ! Undefined control sequence.
-l.130     \includegraphics
+l.132     \includegraphics
                           [scale=1.05]{obrazky/unipi_unipi_verze}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6052,13 +6204,13 @@ Missing character: There is no i in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.130 ...ncludegraphics[scale=1.05]{obrazky/unipi_
+l.132 ...ncludegraphics[scale=1.05]{obrazky/unipi_
                                                   unipi_verze}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.130 ...cs[scale=1.05]{obrazky/unipi_unipi_verze}
+l.132 ...cs[scale=1.05]{obrazky/unipi_unipi_verze}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -6073,7 +6225,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131   \end{center}
+l.133   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6085,7 +6237,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131   \end{center}
+l.133   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6097,7 +6249,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131   \end{center}
+l.133   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6105,7 +6257,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.131   \end{center}
+l.133   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6116,7 +6268,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.131   \end{center}
+l.133   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6131,8 +6283,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132   \caption
-                {UniPi NEURON S, M a L  \cite{UniPiBoard2}}
+l.134   \caption
+                {UniPi NEURON S, M a L  \cite{UniPiBoard2}   \colorbox[rgb]{...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -6157,8 +6309,8 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.132 ...UniPi NEURON S, M a L  \cite{UniPiBoard2}
-                                                  }
+l.134 ...UniPi NEURON S, M a L  \cite{UniPiBoard2}
+                                                     \colorbox[rgb]{1,0,0}{Z...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -6166,9 +6318,36 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `UniPiBoard2' on page  undefined on input line 132.
+LaTeX Warning: Citation `UniPiBoard2' on page  undefined on input line 134.
 
 Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.134 ... S, M a L  \cite{UniPiBoard2}   \colorbox
+                                                  [rgb]{1,0,0}{ZAROVNAT}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no T in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -6176,19 +6355,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.133 \end{figure}
+l.135 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (47.0953pt too wide) in paragraph at lines 130--134
+Overfull \hbox (47.0953pt too wide) in paragraph at lines 132--136
 []\OML/cmm/m/it/10 nipi[]erze$
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 130--134
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 132--136
 []
  []
 
@@ -6312,7 +6491,7 @@ Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...erence `TableUnipiIO' on page \thepage 
                                                   \space undefined\on@line .
-l.136 ...počet je uveden v Tab.\ref{TableUnipiIO}
+l.138 ...počet je uveden v Tab.\ref{TableUnipiIO}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6321,16 +6500,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `TableUnipiIO' on page  undefined on input line 136.
+LaTeX Warning: Reference `TableUnipiIO' on page  undefined on input line 138.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 136--137
+Overfull \hbox (20.0pt too wide) in paragraph at lines 138--139
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 136--137
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 138--139
 [] 
  []
 
@@ -6341,7 +6520,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.140 \begin{table}
+l.142 \begin{table}
                    [!ht]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6359,7 +6538,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.141 \caption
+l.143 \caption
               {Porovnání modelů UniPi NEURON dle IO \cite{UniPiBoard2}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6403,7 +6582,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.141 ...ů UniPi NEURON dle IO \cite{UniPiBoard2}
+l.143 ...ů UniPi NEURON dle IO \cite{UniPiBoard2}
                                                   }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6412,16 +6591,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `UniPiBoard2' on page  undefined on input line 141.
+LaTeX Warning: Citation `UniPiBoard2' on page  undefined on input line 143.
 
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 140--143
+Overfull \hbox (20.0pt too wide) in paragraph at lines 142--145
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 140--143
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 142--145
 []
  []
 
@@ -6539,7 +6718,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no � in font nullfont!
 
-Overfull \hbox (172.05473pt too wide) in paragraph at lines 144--156
+Overfull \hbox (172.05473pt too wide) in paragraph at lines 146--158
  [] 
  []
 
@@ -6550,7 +6729,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.157 \end{table}
+l.159 \end{table}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6564,7 +6743,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.159 \newpage
+l.161 \newpage
               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6574,7 +6753,7 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 <write> \newlabel{TableUnipiIO}{{}{\thepage 
                                             }}
-l.159 \newpage
+l.161 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6606,7 +6785,7 @@ Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
 <write> ...rence `TableUnipiVar' on page \thepage 
                                                   \space undefined\on@line .
-l.161 Písmeno x v tabulce (\ref{TableUnipiVar}
+l.163 Písmeno x v tabulce (\ref{TableUnipiVar}
                                                ) bývá nahrazeno číslem 1...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6615,7 +6794,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `TableUnipiVar' on page  undefined on input line 161.
+LaTeX Warning: Reference `TableUnipiVar' on page  undefined on input line 163.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no b in font nullfont!
@@ -6674,12 +6853,12 @@ Missing character: There is no P in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 161--162
+Overfull \hbox (20.0pt too wide) in paragraph at lines 163--164
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 161--162
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 163--164
 []
  []
 
@@ -6690,7 +6869,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.163 \begin{table}
+l.165 \begin{table}
                    [!ht]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6708,7 +6887,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.164 \caption
+l.166 \caption
               {Varianty modelů UniPi NEURON dle CPU a RAM \cite{UniPiBoard2}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6754,7 +6933,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.164 ...i NEURON dle CPU a RAM \cite{UniPiBoard2}
+l.166 ...i NEURON dle CPU a RAM \cite{UniPiBoard2}
                                                   }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6763,16 +6942,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `UniPiBoard2' on page  undefined on input line 164.
+LaTeX Warning: Citation `UniPiBoard2' on page  undefined on input line 166.
 
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 163--166
+Overfull \hbox (20.0pt too wide) in paragraph at lines 165--168
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 163--166
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 165--168
 []
  []
 
@@ -6872,7 +7051,7 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no n in font nullfont!
 
-Overfull \hbox (195.2266pt too wide) in paragraph at lines 167--174
+Overfull \hbox (195.2266pt too wide) in paragraph at lines 169--176
  [] 
  []
 
@@ -6883,7 +7062,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.175 \end{table}
+l.177 \end{table}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7070,14 +7249,17 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
 Missing character: There is no O in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-<write> ...erence `PicureUniPi1' on page \thepage 
+<write> ...UniPiConnectionImage' on page \thepage 
                                                   \space undefined\on@line .
-l.177 ...opojující desce (Obr.\ref{PicureUniPi1}
+l.179 ...viz Obr.~\ref{PicureUniPiConnectionImage}
                                                   ) je vyvedena UART a I2C s...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7086,7 +7268,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `PicureUniPi1' on page  undefined on input line 177.
+LaTeX Warning: Reference `PicureUniPiConnectionImage' on page  undefined on input line 179.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no j in font nullfont!
@@ -7118,12 +7300,12 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 177--178
+Overfull \hbox (20.0pt too wide) in paragraph at lines 179--180
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 177--178
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 179--180
 []
  []
 
@@ -7134,7 +7316,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.179  \begin{figure}
+l.181  \begin{figure}
                      [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7145,13 +7327,13 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 179--180
+Overfull \hbox (20.0pt too wide) in paragraph at lines 181--182
 [] 
  []
 
 ! Undefined control sequence.
-l.181     \includegraphics
-                          [scale=0.70]{obrazky/unipi_propojbrain}
+l.183     \includegraphics
+                          [scale=0.30]{obrazky/unipi_propojbrain}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -7167,7 +7349,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 7 in font nullfont!
+Missing character: There is no 3 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -7186,13 +7368,13 @@ Missing character: There is no i in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.181 ...ncludegraphics[scale=0.70]{obrazky/unipi_
+l.183 ...ncludegraphics[scale=0.30]{obrazky/unipi_
                                                   propojbrain}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.181 ...cs[scale=0.70]{obrazky/unipi_propojbrain}
+l.183 ...cs[scale=0.30]{obrazky/unipi_propojbrain}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -7207,7 +7389,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.182   \end{center}
+l.184   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7219,7 +7401,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.182   \end{center}
+l.184   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7231,7 +7413,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.182   \end{center}
+l.184   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7239,7 +7421,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.182   \end{center}
+l.184   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7250,7 +7432,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.182   \end{center}
+l.184   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7265,8 +7447,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.184   \caption
-                {Detail propojení desek}
+l.185 	\caption
+               {Detail propojení desek}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -7298,15 +7480,85 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.185 \end{figure}
+l.187 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (52.6423pt too wide) in paragraph at lines 181--186
+Overfull \hbox (52.6423pt too wide) in paragraph at lines 183--188
 []\OML/cmm/m/it/10 ropojbrain$
+ []
+
+! Undefined control sequence.
+l.189 \colorbox
+               [rgb]{1,0,0}{pouklízet fotky a odkazy na ně, nějak to už ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 189--190
+[]
  []
 
 Missing character: There is no N in font nullfont!
@@ -7354,7 +7606,7 @@ Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...erence `PicureUniPi2' on page \thepage 
                                                   \space undefined\on@line .
-l.187 ...e připojen panel (Obr.\ref{PicureUniPi2}
+l.191 ...e připojen panel (Obr.\ref{PicureUniPi2}
                                                   ) se signalizačními diod...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7363,7 +7615,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `PicureUniPi2' on page  undefined on input line 187.
+LaTeX Warning: Reference `PicureUniPi2' on page  undefined on input line 191.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -7553,12 +7805,12 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 187--188
+Overfull \hbox (20.0pt too wide) in paragraph at lines 191--192
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 187--188
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 191--192
 []
  []
 
@@ -7569,7 +7821,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.189  \begin{figure}
+l.193  \begin{figure}
                      [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7580,12 +7832,197 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 189--190
+Overfull \hbox (20.0pt too wide) in paragraph at lines 193--194
 [] 
  []
 
 ! Undefined control sequence.
-l.191     \includegraphics
+l.195     \includegraphics
+                          [scale=0.30]{obrazky/unipi_osazeny}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no i in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.195 ...ncludegraphics[scale=0.30]{obrazky/unipi_
+                                                  osazeny}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.195 ...aphics[scale=0.30]{obrazky/unipi_osazeny}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Command \end{center} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196   \end{center}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196   \end{center}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196   \end{center}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.196   \end{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.196   \end{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.198   \caption
+                {Detail osazené UniPi desky}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no y in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.199 \end{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (35.43112pt too wide) in paragraph at lines 195--200
+[]\OML/cmm/m/it/10 sazeny$
+ []
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.201  \begin{figure}
+                     [!h]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 201--202
+[] 
+ []
+
+! Undefined control sequence.
+l.203     \includegraphics
                           [scale=0.65]{obrazky/unipi_propojuvnitr}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7621,13 +8058,13 @@ Missing character: There is no i in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.191 ...ncludegraphics[scale=0.65]{obrazky/unipi_
+l.203 ...ncludegraphics[scale=0.65]{obrazky/unipi_
                                                   propojuvnitr}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.191 ...s[scale=0.65]{obrazky/unipi_propojuvnitr}
+l.203 ...s[scale=0.65]{obrazky/unipi_propojuvnitr}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -7642,7 +8079,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.192   \end{center}
+l.204   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7654,7 +8091,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.192   \end{center}
+l.204   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7666,7 +8103,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.192   \end{center}
+l.204   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7674,7 +8111,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.192   \end{center}
+l.204   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7685,7 +8122,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.192   \end{center}
+l.204   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7700,7 +8137,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.194   \caption
+l.206   \caption
                 {Detail vnitřního uspořádání UniPi Neuronu S103 \color...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7753,8 +8190,8 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 3 in font nullfont!
 ! Undefined control sequence.
-l.194 ...pořádání UniPi Neuronu S103 \colorbox
-                                                  [rgb]{0,1,0}{přefotit lip}}
+l.206 ...pořádání UniPi Neuronu S103 \colorbox
+                                                  [rgb]{1,0,0}{PREFOTIT}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -7766,23 +8203,19 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no p in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no T in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -7790,14 +8223,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 \end{figure}
+l.207 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (57.60646pt too wide) in paragraph at lines 191--196
+Overfull \hbox (57.60646pt too wide) in paragraph at lines 203--208
 []\OML/cmm/m/it/10 ropojuvnitr$
  []
 
@@ -7871,7 +8304,7 @@ Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...ference `BlokSchema2' on page \thepage 
                                                   \space undefined\on@line .
-l.197 ...unkčních celků (Obr. \ref{BlokSchema2}
+l.209 ...unkčních celků (Obr. \ref{BlokSchema2}
                                                   ), které jsou propojeny p...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7880,7 +8313,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `BlokSchema2' on page  undefined on input line 197.
+LaTeX Warning: Reference `BlokSchema2' on page  undefined on input line 209.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -7991,7 +8424,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.198  \begin{figure}
+l.210  \begin{figure}
                      [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -8002,17 +8435,17 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 197--199
+Overfull \hbox (20.0pt too wide) in paragraph at lines 209--211
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 197--199
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 209--211
 []
  []
 
 ! Undefined control sequence.
-l.200     \includegraphics
+l.212     \includegraphics
                           [scale=0.55]{obrazky/unipi_schema2}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8048,13 +8481,13 @@ Missing character: There is no i in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.200 ...ncludegraphics[scale=0.55]{obrazky/unipi_
+l.212 ...ncludegraphics[scale=0.55]{obrazky/unipi_
                                                   schema2}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.200 ...aphics[scale=0.55]{obrazky/unipi_schema2}
+l.212 ...aphics[scale=0.55]{obrazky/unipi_schema2}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -8069,7 +8502,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.201   \end{center}
+l.213   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8081,7 +8514,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.201   \end{center}
+l.213   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8093,7 +8526,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.201   \end{center}
+l.213   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8101,7 +8534,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.201   \end{center}
+l.213   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8112,7 +8545,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.201   \end{center}
+l.213   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8127,8 +8560,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.203   \caption
-                {Blokové schéma UniPi v2 \colorbox[rgb]{0,1,0}{překreslit}}
+l.215   \caption
+                {Blokové schéma UniPi v2 \colorbox[rgb]{1,0,0}{PREKRESLIT}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -8155,8 +8588,8 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Undefined control sequence.
-l.203 ...ption{Blokové schéma UniPi v2 \colorbox
-                                                  [rgb]{0,1,0}{překreslit}}
+l.215 ...ption{Blokové schéma UniPi v2 \colorbox
+                                                  [rgb]{1,0,0}{PREKRESLIT}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -8168,22 +8601,21 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no T in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -8191,14 +8623,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.204 \end{figure}
+l.216 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (38.08577pt too wide) in paragraph at lines 200--205
+Overfull \hbox (38.08577pt too wide) in paragraph at lines 212--217
 []\OML/cmm/m/it/10 chema\OT1/cmr/m/n/10 2$
  []
 
@@ -8382,12 +8814,12 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no 3 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 208--209
+Overfull \hbox (20.0pt too wide) in paragraph at lines 220--221
 []
  []
 
 ! Undefined control sequence.
-l.226 \section
+l.238 \section
               {Srovnání obou verzí}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8416,7 +8848,7 @@ Missing character: There is no z in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no � in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 226--227
+Overfull \hbox (20.0pt too wide) in paragraph at lines 238--239
 []
  []
 
@@ -8457,7 +8889,7 @@ Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
 <write> ...ence `KapitolaUnipi1' on page \thepage 
                                                   \space undefined\on@line .
-l.228 ... předchozím textu (\ref{KapitolaUnipi1}
+l.240 ... předchozím textu (\ref{KapitolaUnipi1}
                                                   ,\ref{KapitolaUnipi2}), ob...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8466,13 +8898,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `KapitolaUnipi1' on page  undefined on input line 228.
+LaTeX Warning: Reference `KapitolaUnipi1' on page  undefined on input line 240.
 
 Missing character: There is no , in font nullfont!
 ! Undefined control sequence.
 <write> ...ence `KapitolaUnipi2' on page \thepage 
                                                   \space undefined\on@line .
-l.228 ...\ref{KapitolaUnipi1},\ref{KapitolaUnipi2}
+l.240 ...\ref{KapitolaUnipi1},\ref{KapitolaUnipi2}
                                                   ), obě verze UniPi se li�...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8481,7 +8913,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `KapitolaUnipi2' on page  undefined on input line 228.
+LaTeX Warning: Reference `KapitolaUnipi2' on page  undefined on input line 240.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -8636,17 +9068,17 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 228--229
+Overfull \hbox (20.0pt too wide) in paragraph at lines 240--241
 []
  []
 
 
-Overfull \hbox (21.7221pt too wide) in paragraph at lines 228--229
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 240--241
 [][]
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 231--231
+Overfull \hbox (20.0pt too wide) in paragraph at lines 243--243
 [] 
  []
 
@@ -9217,12 +9649,12 @@ Missing character: There is no O in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 237--238
+Overfull \hbox (20.0pt too wide) in paragraph at lines 249--250
 []
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 239--239
+Overfull \hbox (20.0pt too wide) in paragraph at lines 251--251
 [] 
  []
 
@@ -10057,12 +10489,12 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 246--247
+Overfull \hbox (20.0pt too wide) in paragraph at lines 258--259
 []
  []
 
 ! Undefined control sequence.
-l.253 \section
+l.265 \section
               {Sběrnice na UniPi}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10366,13 +10798,13 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 253--255
+Overfull \hbox (20.0pt too wide) in paragraph at lines 265--267
 []
  []
 
 ! Undefined control sequence.
-l.256 \subsubsection
-                    {UART}
+l.268 \subsection
+                 {UART}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10681,7 +11113,7 @@ Missing character: There is no R in font nullfont!
 Missing character: There is no X in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 256--258
+Overfull \hbox (20.0pt too wide) in paragraph at lines 268--270
 []
  []
 
@@ -11074,7 +11506,7 @@ Missing character: There is no P in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 259--260
+Overfull \hbox (20.0pt too wide) in paragraph at lines 271--272
 []
  []
 
@@ -11085,7 +11517,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.261  \begin{figure}
+l.273  \begin{figure}
                      [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -11096,12 +11528,12 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 261--262
+Overfull \hbox (20.0pt too wide) in paragraph at lines 273--274
 [] 
  []
 
 ! Undefined control sequence.
-l.263     \includegraphics
+l.275     \includegraphics
                           [scale=1.0]{obrazky/sbernice_uart}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11139,13 +11571,13 @@ Missing character: There is no e in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.263 ...ludegraphics[scale=1.0]{obrazky/sbernice_
+l.275 ...ludegraphics[scale=1.0]{obrazky/sbernice_
                                                   uart}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.263 ...raphics[scale=1.0]{obrazky/sbernice_uart}
+l.275 ...raphics[scale=1.0]{obrazky/sbernice_uart}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -11160,7 +11592,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.264   \end{center}
+l.276   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -11172,7 +11604,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.264   \end{center}
+l.276   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -11184,7 +11616,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.264   \end{center}
+l.276   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -11192,7 +11624,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.264   \end{center}
+l.276   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -11203,7 +11635,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.264   \end{center}
+l.276   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -11218,8 +11650,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.265   \caption
-                {UART rámec \cite{sberniceUART} \colorbox[rgb]{0,1,0}{přek...
+l.277   \caption
+                {UART rámec \cite{SberniceUART} \colorbox[rgb]{1,0,0}{PREKR...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -11234,12 +11666,12 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no [ in font nullfont!
-\citation{sberniceUART}
+\citation{SberniceUART}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.265   \caption{UART rámec \cite{sberniceUART}
-                                                 \colorbox[rgb]{0,1,0}{přek...
+l.277   \caption{UART rámec \cite{SberniceUART}
+                                                 \colorbox[rgb]{1,0,0}{PREKR...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -11247,12 +11679,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `sberniceUART' on page  undefined on input line 265.
+LaTeX Warning: Citation `SberniceUART' on page  undefined on input line 277.
 
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.265 ...UART rámec \cite{sberniceUART} \colorbox
-                                                  [rgb]{0,1,0}{překreslit}}
+l.277 ...UART rámec \cite{SberniceUART} \colorbox
+                                                  [rgb]{1,0,0}{PREKRESLIT}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -11264,22 +11696,21 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no T in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -11287,19 +11718,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.266 \end{figure}
+l.278 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (18.91443pt too wide) in paragraph at lines 263--267
+Overfull \hbox (18.91443pt too wide) in paragraph at lines 275--279
 []\OML/cmm/m/it/10 art$
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 263--267
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 275--279
 []
  []
 
@@ -11490,13 +11921,13 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 268--269
+Overfull \hbox (20.0pt too wide) in paragraph at lines 280--281
 []
  []
 
 ! Undefined control sequence.
-l.273 \subsubsection
-                    {SPI}
+l.285 \subsection
+                 {SPI}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -11674,7 +12105,7 @@ Missing character: There is no � in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 273--275
+Overfull \hbox (20.0pt too wide) in paragraph at lines 285--287
 []
  []
 
@@ -12244,8 +12675,8 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.283 \subsubsection
-                    {RS-485}
+l.295 \subsection
+                 {RS-485}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -12598,13 +13029,13 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 283--285
+Overfull \hbox (20.0pt too wide) in paragraph at lines 295--297
 []
  []
 
 ! Undefined control sequence.
-l.286 \subsubsection
-                    {I2C}
+l.298 \subsection
+                 {I2C}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -13307,7 +13738,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 286--289
+Overfull \hbox (20.0pt too wide) in paragraph at lines 298--301
 []
  []
 
@@ -13530,13 +13961,13 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 290--291
+Overfull \hbox (20.0pt too wide) in paragraph at lines 302--303
 []
  []
 
 ! Undefined control sequence.
-l.292 \subsubsection
-                    {1Wire}
+l.304 \subsection
+                 {1Wire}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -14041,13 +14472,13 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 292--294
+Overfull \hbox (20.0pt too wide) in paragraph at lines 304--306
 []
  []
 
 ! Undefined control sequence.
-l.295 \subsubsection
-                    {GPIO}
+l.307 \subsection
+                 {GPIO}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -14465,7 +14896,7 @@ Missing character: There is no k in font nullfont!
 ! Undefined control sequence.
 <write> ...ference `ObrazekGPIO' on page \thepage 
                                                   \space undefined\on@line .
-l.298 Obrázek \ref{ObrazekGPIO}
+l.310 Obrázek \ref{ObrazekGPIO}
                                  demonstruje rozložení GPIO konektoru nap�...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -14474,7 +14905,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `ObrazekGPIO' on page  undefined on input line 298.
+LaTeX Warning: Reference `ObrazekGPIO' on page  undefined on input line 310.
 
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -14540,12 +14971,12 @@ Missing character: There is no P in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 295--299
+Overfull \hbox (20.0pt too wide) in paragraph at lines 307--311
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 295--299
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 307--311
 []
  []
 
@@ -14556,7 +14987,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.300  \begin{figure}
+l.312  \begin{figure}
                      [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -14567,12 +14998,12 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 300--301
+Overfull \hbox (20.0pt too wide) in paragraph at lines 312--313
 [] 
  []
 
 ! Undefined control sequence.
-l.302     \includegraphics
+l.314     \includegraphics
                           [scale=0.4]{obrazky/sbernice_gpio}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -14610,13 +15041,13 @@ Missing character: There is no e in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.302 ...ludegraphics[scale=0.4]{obrazky/sbernice_
+l.314 ...ludegraphics[scale=0.4]{obrazky/sbernice_
                                                   gpio}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.302 ...raphics[scale=0.4]{obrazky/sbernice_gpio}
+l.314 ...raphics[scale=0.4]{obrazky/sbernice_gpio}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -14631,7 +15062,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.303   \end{center}
+l.315   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14643,7 +15074,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.303   \end{center}
+l.315   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14655,7 +15086,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.303   \end{center}
+l.315   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14663,7 +15094,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.303   \end{center}
+l.315   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -14674,7 +15105,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.303   \end{center}
+l.315   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -14689,8 +15120,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.304   \caption
-                {GPIO na RaspberryPi 2 \colorbox[rgb]{0,1,0}{překreslit}}
+l.316   \caption
+                {GPIO na RaspberryPi 2 \colorbox[rgb]{1,0,0}{PREKRESLIT}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -14713,8 +15144,8 @@ Missing character: There is no P in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Undefined control sequence.
-l.304   \caption{GPIO na RaspberryPi 2 \colorbox
-                                                [rgb]{0,1,0}{překreslit}}
+l.316   \caption{GPIO na RaspberryPi 2 \colorbox
+                                                [rgb]{1,0,0}{PREKRESLIT}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -14726,22 +15157,21 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no � in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no T in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -14749,14 +15179,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.305 \end{figure}
+l.317 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (17.97606pt too wide) in paragraph at lines 302--306
+Overfull \hbox (17.97606pt too wide) in paragraph at lines 314--318
 []\OML/cmm/m/it/10 pio$
  []
 
@@ -14767,7 +15197,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.307  \begin{figure}
+l.319  \begin{figure}
                      [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -14778,12 +15208,12 @@ Missing character: There is no ! in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 307--308
+Overfull \hbox (20.0pt too wide) in paragraph at lines 319--320
 [] 
  []
 
 ! Undefined control sequence.
-l.309     \includegraphics
+l.321     \includegraphics
                           [scale=0.6]{obrazky/unipi_gpio}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -14818,13 +15248,13 @@ Missing character: There is no i in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.309 ...includegraphics[scale=0.6]{obrazky/unipi_
+l.321 ...includegraphics[scale=0.6]{obrazky/unipi_
                                                   gpio}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.309 ...degraphics[scale=0.6]{obrazky/unipi_gpio}
+l.321 ...degraphics[scale=0.6]{obrazky/unipi_gpio}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -14839,7 +15269,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.310   \end{center}
+l.322   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14851,7 +15281,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.310   \end{center}
+l.322   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14863,7 +15293,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.310   \end{center}
+l.322   \end{center}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14871,7 +15301,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.310   \end{center}
+l.322   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -14882,7 +15312,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.310   \end{center}
+l.322   \end{center}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -14897,8 +15327,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.311   \caption
-                {Zpětná kompatibilita GPIO konektoru \cite{raspiGPIOs} \co...
+l.323   \caption
+                {Zpětná kompatibilita GPIO konektoru \cite{SberniceGPIO} \...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -14937,12 +15367,12 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no [ in font nullfont!
-\citation{raspiGPIOs}
+\citation{SberniceGPIO}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.311 ...tibilita GPIO konektoru \cite{raspiGPIOs}
-                                                   \colorbox[rgb]{0,1,0}{do ...
+l.323 ...bilita GPIO konektoru \cite{SberniceGPIO}
+                                                   \colorbox[rgb]{1,0,0}{SLO...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -14950,12 +15380,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `raspiGPIOs' on page  undefined on input line 311.
+LaTeX Warning: Citation `SberniceGPIO' on page  undefined on input line 323.
 
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.311 ...PIO konektoru \cite{raspiGPIOs} \colorbox
-                                                  [rgb]{0,1,0}{do tabulky}}
+l.323 ...O konektoru \cite{SberniceGPIO} \colorbox
+                                                  [rgb]{1,0,0}{SLOUCIT VYSE}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -14967,20 +15397,22 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no y in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no E in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -14988,19 +15420,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.313 \end{figure}
+l.325 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (17.97606pt too wide) in paragraph at lines 309--314
+Overfull \hbox (17.97606pt too wide) in paragraph at lines 321--326
 []\OML/cmm/m/it/10 pio$
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 309--314
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 321--326
 []
  []
 
@@ -15012,7 +15444,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.315 \newpage
+l.327 \newpage
               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -15022,7 +15454,7 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 <write> \newlabel{TableUnipiVar}{{}{\thepage 
                                              }}
-l.315 \newpage
+l.327 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15032,9 +15464,9 @@ and I'll forget about whatever was undefined.
 
 \newlabel{TableUnipiVar}{{}{}}
 ! Undefined control sequence.
-<write> \newlabel{PicureUniPi1}{{}{\thepage 
-                                            }}
-l.315 \newpage
+<write> ...icureUniPiConnectionImage}{{}{\thepage 
+                                                  }}
+l.327 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15042,11 +15474,23 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-\newlabel{PicureUniPi1}{{}{}}
+\newlabel{PicureUniPiConnectionImage}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{PicureUniPi11}{{}{\thepage 
+                                             }}
+l.327 \newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{PicureUniPi11}{{}{}}
 ! Undefined control sequence.
 <write> \newlabel{PicureUniPi2}{{}{\thepage 
                                             }}
-l.315 \newpage
+l.327 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15058,7 +15502,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{BlokSchema2}{{}{\thepage 
                                            }}
-l.315 \newpage
+l.327 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15070,7 +15514,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{KapGPIO}{{}{\thepage 
                                        }}
-l.315 \newpage
+l.327 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15082,7 +15526,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{ObrazekGPIO}{{}{\thepage 
                                            }}
-l.315 \newpage
+l.327 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15432,12 +15876,12 @@ Missing character: There is no � in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 317--318
+Overfull \hbox (20.0pt too wide) in paragraph at lines 329--330
 []
  []
 
 ! Undefined control sequence.
-l.325 \section
+l.337 \section
               {Software pro UniPi}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15462,7 +15906,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no P in font nullfont!
 Missing character: There is no i in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 325--326
+Overfull \hbox (20.0pt too wide) in paragraph at lines 337--338
 []
  []
 
@@ -15655,7 +16099,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 327--328
+Overfull \hbox (20.0pt too wide) in paragraph at lines 339--340
 []
  []
 
@@ -15925,7 +16369,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.329 ...porován software Mervis \cite{MervisWeb}
+l.341 ...porován software Mervis \cite{MervisWeb}
                                                   , který z UniPi dělá pl...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -15934,7 +16378,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `MervisWeb' on page  undefined on input line 329.
+LaTeX Warning: Citation `MervisWeb' on page  undefined on input line 341.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -16019,12 +16463,12 @@ Missing character: There is no � in font nullfont!
 Missing character: There is no � in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 329--330
+Overfull \hbox (20.0pt too wide) in paragraph at lines 341--342
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 329--330
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 341--342
 []
  []
 
@@ -16828,7 +17272,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 346--347
+Overfull \hbox (20.0pt too wide) in paragraph at lines 358--359
 []
  []
 
@@ -16840,11 +17284,11 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 346--347
 
  
 Here is how much of TeX's memory you used:
- 37 strings out of 493921
- 556 string characters out of 3147279
+ 39 strings out of 493921
+ 602 string characters out of 3147279
  57031 words of memory out of 3000000
- 3427 multiletter control sequences out of 15000+200000
+ 3429 multiletter control sequences out of 15000+200000
  3948 words of font info for 15 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 23i,12n,26p,577b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,12n,26p,585b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!

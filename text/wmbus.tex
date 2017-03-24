@@ -1,11 +1,11 @@
 \chapter{Wireless M-Bus protokol}
 Wireless M-Bus je v Evropě perspektivní otevřený standard pro automatické měření, který pracuje v subgi-gaherzovém bezlicenčním pásmu v okolí 868 MHz. Wireless M-Bus se primárně zaměřuje na použití v SRD (Short Range Device) zařízeních pro bezdrátovou komunikaci s měřiči energií, jako jsou: voda, plyn, teplo, elektřina, atd. Měřiče energií, vybavené bezdrátovým rozhraním Wireless M-Bus jsou schopny komunikovat jak se stacionárními, tak i s mobilními čtecími zařízeními. Předpokládá se, že rádiová část měřiče je napájena z baterie a je schopna provozu po dlouhou dobu bez zásahu, tj. bez výměny baterie. Na čtecích zařízeních, ať už stacionární nebo mobilní, není takový požadavek na dobu provozu na baterie a čtecí zařízení mohou být napájena i z externího zdroje.
 
-Wireless M-Bus má svůj původ v rámci norem Meter-Bus. Wireless Meter Bus je bezdrátovou variantou drátového Meter-Bus. To je standard zaměřený na aplikace pro sběr dat měřiče plynu, elektřiny a vody. Sběrnice je specifikována v evropské normě EN 13757 \cite{Norma1}. Tato specifikace je rozdělena do pěti částí (Tab.\ref{TableNorma}), z nichž jedna se zaměřuje na Wireless M-Bus.
+Wireless M-Bus má svůj původ v rámci norem Meter-Bus. Wireless Meter Bus je bezdrátovou variantou drátového Meter-Bus. To je standard zaměřený na aplikace pro sběr dat měřiče plynu, elektřiny a vody. Sběrnice je specifikována v evropské normě EN 13757~\cite{Norma1}. Tato specifikace je rozdělena do pěti částí (viz Tab.~\ref{TableNorma}), z nichž jedna se zaměřuje na Wireless M-Bus.
 
 \begin{table}[!ht]
 \centering
-\caption{Popis standardu EN-13757 \cite{WmbusTables}}
+\caption{Popis standardu EN-13757~\cite{WmbusTables}}
 \label{TableNorma}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|}
@@ -26,11 +26,11 @@ EN 13757-5 & \begin{tabular}[c]{@{}l@{}}Tato část adresy předávání. To zah
 
 \section{Princip komunikace}
 
-Bezdrátová komunikace Wireless M-Bus fyzicky probíhá ve 12ti kanálech v bezplatném vysílacím pásmu ISM (industrial, scientific and medical) okolo frekvence 868 MHz (2 kanály 868,3 a 868,95 MHz jsou využívány režimem S a T, 10 uživatelem volitelných kanálů 868.03 + n x 0.06 MHz v režimu R2), přičemž každý z výše uvedených režimů vyžaduje různé požadavky. Těmi například jsou specifikovaný kanál, přesnost frekvence, toleranci přenosové rychlosti atd. Velmi dobrá je stabilita frekvence až 27 let (dle údaje výrobce). V případě použití čtvrtvlné antény (délky 8,2 cm), tak na přímou viditelnost vysílací a přijímacího modulu je komunikační dosah 500 až 600 m.
+Bezdrátová komunikace Wireless M-Bus fyzicky probíhá ve 12 kanálech v bezplatném vysílacím pásmu ISM (industrial, scientific and medical) okolo frekvence 868\,MHz (2~kanály\,868,3 a 868,95\,MHz jsou využívány režimem S a T, 10 uživatelem volitelných kanálů 868.03 + n x 0.06\,MHz v režimu R2), přičemž každý z výše uvedených režimů vyžaduje různé požadavky. Těmi například jsou specifikovaný kanál, přesnost frekvence, toleranci přenosové rychlosti atd. Velmi dobrá je stabilita frekvence až 27 let (dle údaje výrobce). V případě použití čtvrtvlné antény (délky 8,2 cm), tak na přímou viditelnost vysílací a přijímacího modulu je komunikační dosah 500 až 600\,m.
 
-Komunikace má hvězdicovitou strukturu, kdy několik měřících jednotek / snímačů přenáší svá naměřená data jedné centrální jednotce, obvykle tvořené koncentrátorem. Ten tedy obvykle slouží pro příjem a shromaždování dat z několika měřících míst, z dále uvedených důvodů nikdy neinicializuje (nezahajuje) vzájemnou komunikaci. Pracuje tedy jako server (Master), tzn. že stále naslouchá a čeká na navázání komunikace měřící jednotkou a jí inicializovaný přenos dat. Ta tedy pracuje jako klient (Slave). V případě nastavené obousměrné komunikace přechází měřič/snímač do přijímacího režimu pouze po krátký čas jím navázané komunikaci. Pouze v tomto momentu může koncentrátor vyslat nějaké jednotce řídící data. Časování je rozdílné pro různé režimy a je přesně specifikováno ve standardu.
+Komunikace má hvězdicovitou strukturu, kdy několik měřících jednotek/snímačů přenáší svá naměřená data jedné centrální jednotce, obvykle tvořené koncentrátorem. Ten tedy obvykle slouží pro příjem a shromaždování dat z několika měřících míst, z dále uvedených důvodů nikdy neinicializuje (nezahajuje) vzájemnou komunikaci. Pracuje tedy jako server (Master), tzn. že stále naslouchá a čeká na navázání komunikace měřící jednotkou a jí inicializovaný přenos dat. Ta tedy pracuje jako klient (Slave). V případě nastavené obousměrné komunikace přechází měřič/snímač do přijímacího režimu pouze po krátký čas jím navázané komunikaci. Pouze v tomto momentu může koncentrátor vyslat nějaké jednotce řídící data. Časování je rozdílné pro různé režimy a je přesně specifikováno ve standardu.
 
-Adresování ve Wireless M-Bus sběrnici je převzato z klasické drátové verze M-BUSu. Zde však pouze klientské jednotky (měřiče/snímače) mají přidělenou adresu a využívají ji jak při příjmu, tak při vysílání. Každý koncentrátor by měl obsahovat tabulku adres, se kterými může komunikovat, resp. od kterých má přijímat data. Tato tabulka se obvykle vytváří automaticky během instalace / registrování nové jednotky do sítě. Samozřejmě je možné se obejít i bez ní, ale pak lze přijímat všechny snímače či měřiče v dosahu. Toho se dá využít jen v malých sítích. 
+Adresování ve Wireless M-Bus sběrnici je převzato z klasické drátové verze M-BUSu. Zde však pouze klientské jednotky (měřiče/snímače) mají přidělenou adresu a využívají ji jak při příjmu, tak při vysílání. Každý koncentrátor by měl obsahovat tabulku adres, se kterými může komunikovat, resp. od kterých má přijímat data. Tato tabulka se obvykle vytváří automaticky během instalace/registrování nové jednotky do sítě. Samozřejmě je možné se obejít i bez ní, ale pak lze přijímat všechny snímače či měřiče v dosahu. Toho se dá využít jen v malých sítích. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
@@ -38,13 +38,13 @@ Adresování ve Wireless M-Bus sběrnici je převzato z klasické drátové verz
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 
 \section{Režimy přenosu}
-Nejdůležitější vlastností technologie WM-Bus je možnost bateriového napájení měřicích zařízení. V případě bezdrátové komunikace je výhodné například měřiče tepla nebo vodoměry napájet jen bateriově a tím eliminovat jakoukoliv nutnost pokládání kabelů. To ale znamená velmi omezenou spotřebu elektrické energie, aby baterie vydržely co nejdéle, alespoň několik let. V současné době v případě napájení modulu lze dosáhnout životnost na jednu baterii až 12 let \cite{WeptechCidlo}. Aby to však bylo možné, řízení přenosu dat musí co nejčastěji přecházet do nízkopříkonového stavu (sleep mode) a vysílat data jen v nutných případech v co nejkratších časových slotech. Proto také centrální zařízení (koncentrátor), který obvykle slouží pro příjem a shromaždování dat z několika měřících míst, nikdy nesmí inicializovat vzájemnou komunikaci.
+Nejdůležitější vlastností technologie WM-Bus je možnost bateriového napájení měřicích zařízení. V případě bezdrátové komunikace je výhodné například měřiče tepla nebo vodoměry napájet jen bateriově a tím eliminovat jakoukoliv nutnost pokládání kabelů. To ale znamená velmi omezenou spotřebu elektrické energie, aby baterie vydržely co nejdéle, alespoň několik let. V současné době v případě napájení modulu lze dosáhnout životnost na jednu baterii až 12~let~\cite{CidloBonega,CidloWeptech}. Aby to však bylo možné, řízení přenosu dat musí co nejčastěji přecházet do nízkopříkonového stavu (sleep mode) a vysílat data jen v nutných případech v co nejkratších časových slotech. Proto také centrální zařízení (koncentrátor), který obvykle slouží pro příjem a shromaždování dat z několika měřících míst, nikdy nesmí inicializovat vzájemnou komunikaci.
 
-Protokol podporuje několik režimů přenosu, lišících se dle požadavků na konkretní aplikaci. Je definováno několik režimů označených jako S, T a R představující 3 různé různé přenosové rychlosti, které se dále dělí na režim 1 a 2, což značí jednosměrný či obousměrný přenos dat. U některých zařízení mohou být doplněny o režimy N, C a F. Tyto režimy jsou shrnuty v Tab.(\ref{TableRezimy}).
+Protokol podporuje několik režimů přenosu, lišících se dle požadavků na konkretní aplikaci. Je definováno několik režimů označených jako S, T a R představující 3 různé různé přenosové rychlosti, které se dále dělí na režim 1 a 2, což značí jednosměrný či obousměrný přenos dat. U některých zařízení mohou být doplněny o režimy N, C a F. Tyto režimy jsou shrnuty v Tab.~\ref{TableRezimy}.
 
 \begin{table}[!ht]
 \centering
-\caption{Režimy přenosu WM-Bus protokolu \cite{WmbusTables}}
+\caption{Režimy přenosu WM-Bus protokolu~\cite{WmbusTables}}
 \label{TableRezimy}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|l|l|l|l|}
@@ -73,11 +73,12 @@ Submód S2M podporuje oboustranou komunikaci v kontinuálních cyklech bez nutno
 V režimech S, T a R je každý bajt vysílán s nejvíce důležitým bitem na prvním místě.
 
 
-Princip obousměrné komunikace v módech T2 a S2 je znázorněn na \colorbox[rgb]{0,1,0}{obrázsek překreslím} obrázku \ref{ObrazekObousmerny}:
+Princip obousměrné komunikace v módech T2 a S2 je znázorněn na Obr.~\ref{ObrazekObousmerny}:
+\colorbox[rgb]{1,0,0}{PREKRESLIT POKUD ZUSTANE} 
 
 \begin{figure}[!ht]
  \begin{center}
-    \includegraphics[scale=1.0]{obrazky/wmbus_obousmerne}
+    \includegraphics[scale=0.8]{obrazky/wmbus_obousmerne}
   \end{center}
   \caption{Princip obousměrné komunikace v módech T1 a S1}
 	\label{ObrazekObousmerny}
@@ -93,15 +94,15 @@ Princip obousměrné komunikace v módech T2 a S2 je znázorněn na \colorbox[rg
 
 
 \section{Struktura zasílaných dat}
-Komunikace probíjá následovně: nadřazené aplikace realizující aplikační vrstvu standardu M-Bus vyšlou svá data do RF modemu v podobě datové jednotky, která je zobrazena v Tab\ref{PaketWm1}:
+Komunikace probíjá následovně: nadřazené aplikace realizující aplikační vrstvu standardu M-Bus vyšlou svá data do RF modemu v podobě datové jednotky, která je zobrazena v Tab.~\ref{PaketWm1}:
 
 \begin{table}[!h]
 \centering
 \begin{tabular}{ccc}
 1 Bajt & 1 Bajt & n Bajtů \\ \hline
-\multicolumn{1}{|c|}{Length} & \multicolumn{1}{c|}{CI} & \multicolumn{1}{c|}{App\_Layer} \\ \hline
+\multicolumn{1}{|c|}{Length} & \multicolumn{1}{c|}{CI} & \multicolumn{1}{c|}{AppLayer} \\ \hline
 \end{tabular}
-\caption{Formát datové jednotky \cite{FormatDatoveJednotky}}
+\caption{Formát datové jednotky~\cite{FormatDatoveJednotky}}
 \label{PaketWm1}
 \end{table}
 
@@ -109,7 +110,7 @@ Komunikační modul pracující jako modem dle požadavků standardu Wireless M-
 
 \begin{itemize}
 	\item Řídicí pole.
-\item Označení výrobce dle \cite{WmbusVendors}.
+\item Označení výrobce dle~\cite{WmbusVendors}.
 \item Unikátní komunikační adresy založené parametrech uložených v paměti modulu.
 \item Případně se ještě na závěr přidá informace o síle přijímaného signálu RSSI.
 \end{itemize}
@@ -120,9 +121,9 @@ Komunikační modul pracující jako modem dle požadavků standardu Wireless M-
 \centering
 \begin{tabular}{ccccccc}
 1 Bajt & 1 Bajt & 2 Bajty & 6 Bajtů & 1 Bajt & n Bajtů & 1 Bajt \\ \hline
-\multicolumn{1}{|c|}{Legth} & \multicolumn{1}{c|}{C} & \multicolumn{1}{c|}{ManID} & \multicolumn{1}{c|}{Address} & \multicolumn{1}{c|}{CI} & \multicolumn{1}{c|}{App\_Layer} & \multicolumn{1}{c|}{RSSI} \\ \hline
+\multicolumn{1}{|c|}{Legth} & \multicolumn{1}{c|}{C} & \multicolumn{1}{c|}{ManID} & \multicolumn{1}{c|}{Address} & \multicolumn{1}{c|}{CI} & \multicolumn{1}{c|}{AppLayer} & \multicolumn{1}{c|}{RSSI} \\ \hline
 \end{tabular}
-\caption{Formát datové jednotky protokolu Wireless M-Bus \cite{FormatDatoveJednotky}}
+\caption{Formát datové jednotky protokolu Wireless M-Bus~\cite{FormatDatoveJednotky}}
 \label{PaketWm2}
 \end{table}
 
@@ -133,13 +134,13 @@ Takovýto paket se pak zašifruje (obvykle algoritmem AES-128) a přenáší se 
 \centering
 \begin{tabular}{cccc}
 1 Bajt & 1 Bajt & n Bajtů & 1 Bajt \\ \hline
-\multicolumn{1}{|c|}{Legth} & \multicolumn{1}{c|}{CI} & \multicolumn{1}{c|}{App\_Layer} & \multicolumn{1}{c|}{RSSI} \\ \hline
+\multicolumn{1}{|c|}{Legth} & \multicolumn{1}{c|}{CI} & \multicolumn{1}{c|}{AppLayer} & \multicolumn{1}{c|}{RSSI} \\ \hline
 \end{tabular}
-\caption{Zkrácený formát datové jednotky \cite{FormatDatoveJednotky}}
+\caption{Zkrácený formát datové jednotky~\cite{FormatDatoveJednotky}}
 \label{PaketWm3}
 \end{table}
 			
-Obsah pole APP\_LAYER je již dán aplikační hladinou definovanou ve standardu M-Bus, které se používá jako mechanizmus komunikace z linkové vrstvy do vyšších protokolových vrstev, a je tedy shodný s obsahem pro klasický drátový M-BUS přenos.  Data následující za polem Cl jsou již závislá na aplikační vrstvě M-Bus. Komunikace mezi měřící jednotkou a RF modemem či mezi koncentrátorem a RF modem obvykle probíhá prostřednictvím sériového přenosu UART, například s využitím RS-232, RS-485 či USB.
+Obsah pole AppLayer je již dán aplikační hladinou definovanou ve standardu M-Bus, které se používá jako mechanizmus komunikace z linkové vrstvy do vyšších protokolových vrstev, a je tedy shodný s obsahem pro klasický drátový M-Bus přenos.  Data následující za polem Cl jsou již závislá na aplikační vrstvě M-Bus. Komunikace mezi měřící jednotkou a RF modemem či mezi koncentrátorem a RF modem obvykle probíhá prostřednictvím sériového přenosu UART, například s využitím RS-232, RS-485 či USB.
 
 
 
@@ -155,10 +156,10 @@ Obsah pole APP\_LAYER je již dán aplikační hladinou definovanou ve standardu
 
 Norma EN 13757-4 specifikuje fyzickou a linkovou vrstvu. Na ně následně navazuje aplikační vrstva, která je shodná s původním M-Bus protokolem.
 
-\subsubsection{Fyzická vrstva Wireless M-Bus}
+\subsection{Fyzická vrstva Wireless M-Bus}
 Fyzická vrstva definuje jak mají být bity kódovány a vysílány, tedy radiofrekvenční charakteristiky a radiofrekvenční parametry. Fyzická vrstva je realizována hardwarem, případně v kombinaci s firmwarem daného hardware.
 
-Wireless M-Bus dle normy ČSN EN 13757-4 \cite{Norma4} využívá tři pásma pro tři různé módy komunikace: 868,3 MHz pro módy Sx, 868,95 MHz pro módy Tx a 868,33 pro mód R2 jsou definovány tři různé operační módy komunikace. Všechny tři módy používají modulaci 2-FSK, tedy dvoustavovou frekvenční modulaci. Pro některé módy jsou některé parametry fyzické vrstvy stejné, proto je fyzické zařízení schopné s nezměněným hardwarem komunikovat v různých operačních módech.
+Wireless M-Bus dle normy ČSN~EN~13757-4~\cite{Norma4} využívá tři pásma pro tři různé módy komunikace: 868,3\,MHz pro módy Sx, 868,95\,MHz pro módy Tx a 868,33\,MHz pro mód R2 jsou definovány tři různé operační módy komunikace. Všechny tři módy používají modulaci 2-FSK, tedy dvoustavovou frekvenční modulaci. Pro některé módy jsou některé parametry fyzické vrstvy stejné, proto je fyzické zařízení schopné s nezměněným hardwarem komunikovat v různých operačních módech.
 
 
 \subsubsection{Kódování používaná ve Wireless M-Bus}
@@ -168,13 +169,13 @@ Wireless M-Bus definuje dvojí možné kódování:
 	\item kódování 3 ze 6. 
 \end{itemize}
 
-Kódování Manchester (Obr.\ref{ObrazekManechester}) slučuje datový a hodinový signál do jediného signálu. Toto kódování se krom bezdrátových přenosů používá i v sítích LAN, konkrétně v síti Ethernet. Výhodou kódu Manchester je konstantní střední hodnota takového signálu, která je 50\% z maximální hodnoty. Náběžné hrany ohraničují jeden bit dat a sestupné hrany určují kód Manchester. Logická jednička je reprezentována náběžnou hranou a logická nula hranou sestupnou. Pokud nejsou vysílána žádná data, výstup kódování Manchester je hodinový signál. Nevýhodou použití Manchester kódování je to, že na přenos jednoho bitu informace je potřeba dvou hodinových taktů.
+Kódování Manchester (viz Obr. \ref{ObrazekManechester}) slučuje datový a hodinový signál do jediného signálu. Toto kódování se krom bezdrátových přenosů používá i v sítích LAN, konkrétně v síti Ethernet. Výhodou kódu Manchester je konstantní střední hodnota takového signálu, která je 50\,\% z maximální hodnoty. Náběžné hrany ohraničují jeden bit dat a sestupné hrany určují kód Manchester. Logická jednička je reprezentována náběžnou hranou a logická nula hranou sestupnou. Pokud nejsou vysílána žádná data, výstup kódování Manchester je hodinový signál. Nevýhodou použití Manchester kódování je to, že na přenos jednoho bitu informace je potřeba dvou hodinových taktů.
 
 				\begin{figure}[!ht]
  \begin{center}
     \includegraphics[scale=0.3]{obrazky/wmbus_manchester}
   \end{center}
-  \caption{Princip kódování Manchester \cite{Manchester} \colorbox[rgb]{0,1,0}{překreslit}}
+  \caption{Princip kódování Manchester \cite{Manchester} \colorbox[rgb]{1,0,0}{PŘEKRESLIT}}
 	\label{ObrazekManechester}
 \end{figure}
 
@@ -187,7 +188,7 @@ Princip kódování 3 ze 6 spočívá v tom, že každé 4 bity (nibble) jsou za
 \caption{Tabulka kódování 3 ze 6 \cite{WMencodeing}}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{NRZ kód} & \textbf{Desítkově} & \textbf{3 ze 6} & \textbf{Desítkově} & \textbf{počet změn v kódu} \\ \hline
+\textbf{NRZ kód} & \textbf{Desítkově} & \textbf{3 ze 6} & \textbf{Desítkově} & \textbf{Počet změn v kódu} \\ \hline
 0                & 0                  & 10110               & 22                 & 4                          \\ \hline
 1                & 1                  & 1101                & 13                 & 3                          \\ \hline
 10               & 2                  & 1110                & 14                 & 2                          \\ \hline
@@ -207,11 +208,11 @@ Princip kódování 3 ze 6 spočívá v tom, že každé 4 bity (nibble) jsou za
 \end{tabular}
 \end{table}
 
-\subsubsection{Linková vrstva Wireless M-Bus}
+\subsection{Linková vrstva Wireless M-Bus}
 
 Linková vrstva poskytuje rozhraní mezi fyzickou a aplikační vrstvou. Její hlavní funkce jsou:
 \begin{itemize}
-	\item Poskytování služeb převádějících data mezi PHY a AL.
+	\item Poskytování služeb převádějících data mezi fyzickou a aplikační vrstvou.
 	\item Generování CRC pro odchozí zprávy.
 	\item Detekování CRC chyb v příchozích zprávách.
 	\item Poskytování adresování fyzické vrstvy.
@@ -277,50 +278,50 @@ Pro šifrování přenášených dat se v protokolu Wireless M-Bus používají 
 Šifrování DES dnes již není moc využiváne, je již nedostačující a zastaralé. Drtivá většina dnešních zařízení umožnujících šifrovaný přenos využívají šifrování AES, konkrétně verzi AES128 CBC.
 
 \subsection{Šifrovací algoritmus DES}
-\colorbox[rgb]{0,1,0}{fakt jen strucne}
+\colorbox[rgb]{1,0,0}{fakt jen strucne}
 
 \subsection{Šifrovací algoritmus AES}
-\colorbox[rgb]{0,1,0}{obecny popis sifry, jak to funguje, kde se to vzalo, proc je to tak super}
+\colorbox[rgb]{1,0,0}{obecny popis sifry, jak to funguje, kde se to vzalo, proc je to tak super}
 
 
 \subsection{Určení šifrovaných dat}
-\colorbox[rgb]{0,1,0}{neco malo jak se poznaji sifrovana data - bude castecne }
+\colorbox[rgb]{1,0,0}{neco malo jak se poznaji sifrovana data - bude castecne }
 
-\colorbox[rgb]{0,1,0}{duplicitni s popisem pole SignatureField nebo }
+\colorbox[rgb]{1,0,0}{duplicitni s popisem pole SignatureField nebo }
 
-\colorbox[rgb]{0,1,0}{ConfigurationWord v obecnem popisu telegramu.}
+\colorbox[rgb]{1,0,0}{ConfigurationWord v obecnem popisu telegramu.}
 
 
 \subsection{Módy šifrování AES}
-\colorbox[rgb]{0,1,0}{rozepsat mody sifrovani EBC, CTR, a hlavne poradne CBC.}
+\colorbox[rgb]{1,0,0}{rozepsat mody sifrovani EBC, CTR, a hlavne poradne CBC.}
 
-\colorbox[rgb]{0,1,0}{demonstrovat provazanost na specifiakce (mod5)}
+\colorbox[rgb]{1,0,0}{demonstrovat provazanost na specifiakce (mod5)}
 
 \subsection{Šifrovací klíč}
-\colorbox[rgb]{0,1,0}{...kecy ke klíčům...}
+\colorbox[rgb]{1,0,0}{...kecy ke klíčům...}
 
 \subsection{Inicializační vektor}
-Inicializační vektor má délku 16 Bajtů (128 bitů, odtud označení AES128) a je tvořený dynamicky z nešifrovaných bajtů následujícím způsobem:
+Inicializační vektor má délku 16 Bajtů (128 bitů, odtud označení AES128) a je tvořený dynamicky z nešifrovaných bajtů způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor}:
 \begin{figure}[!h]
  \begin{center}
     \includegraphics[scale=0.9]{obrazky/sifrovani_vektor}
   \end{center}
-  \caption{Formát inicializačního vektoru \colorbox[rgb]{0,1,0}{prekreslim}}
+  \caption{Formát inicializačního vektoru \colorbox[rgb]{1,0,0}{PREKRESLIT}}
+	\label{TabulkaInicializacniVektor}
 \end{figure}
 
-První 2 Bajty obsahují přidělené identifikační údaje výrobce, další čtyři obsahují sériové číslo daného zařízení, následující dva obsahují verzi zařízení a zbylých osm Bajtů je tvořeno opakováním se přístupového čísla. Vzhledem k faktu, že přístupové číslo se s každým vysláním telegramu změní, je nutné inicializační vektor přepočítat pro každý přijatý paket. Tím je zajištěna dynamičnost šifrování danou metodou.
+První 2 bajty obsahují přidělené identifikační údaje výrobce, další čtyři obsahují sériové číslo daného zařízení, následující dva obsahují verzi zařízení a zbylých osm Bajtů je tvořeno opakováním se přístupového čísla. Vzhledem k faktu, že přístupové číslo se s každým vysláním telegramu změní, je nutné inicializační vektor přepočítat pro každý přijatý paket. Tím je zajištěna dynamičnost šifrování danou metodou.
 
 \subsection{Princip dešifrování}
 
-\colorbox[rgb]{0,1,0}{popsat jak se to desifruje, propojit s ukazkama:}
+\colorbox[rgb]{1,0,0}{popsat jak se to desifruje, propojit s ukazkama:}
 
- \colorbox[rgb]{0,1,0}{desifrovani zminene u knihovny PyCrypto, pripadne pod diagramem s aplikaci}
+ \colorbox[rgb]{1,0,0}{desifrovani zminene u knihovny PyCrypto, pripadne pod diagramem s aplikaci}
 
 
 \subsection{Kontrola rozšifrování dat}
 Ke kontrole správnosti dešifrovaných dat slouží definovaná počáteční sekvence dat. U algoritmu DES začínají dešifrovaná data dvěma bajty obsahujícími datum a čas. Pro algoritmus AES jsou první dva bajty šestnáckové a oba obsahují znak 2F.
 
-%Due to the mathematical nature of the encryption methods, the number of encrypted bytes should be multiple of 8 for DES and multiple of 16 for AES-128. In the cases where these requirements are not fulfilled, to the data has to be added padding “dummy” bytes until data (mod a) = 0 (a = 8 or 16, depending on the encryption). Or 2F by AES.
 
 
 

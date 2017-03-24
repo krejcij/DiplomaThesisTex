@@ -67,7 +67,7 @@ Před samotným vyčítáním dat bylo potřeba zjistit či nastavit přenosové
 	\item Komunikační modul IQRF nastaven do módu T ve funkci skeneru.
 	\item Čidlo Weptech je nastaveno do módu T1 s intervalem zasílání 1 minuta. 
 	\item Modul Bonega je nastaven do módu T1 se zapnutým šifrováním AES128 v módu 5 a s intervalem zasílání 20-24 sekund v odpočtovém období a 4 intervalem minuty mimo odpočtové období.
-	\item \colorbox[rgb]{0,1,0}{Doplnit dle ZPA a Kamstrupu}
+	\item \colorbox[rgb]{1,0,0}{Doplnit dle ZPA a Kamstrupu}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -117,28 +117,28 @@ Jednoduchým spuštěním komunikačního modulu v módu snifferu, byl zachycen 
 	A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
 \end{verbatim}
 
-který byl pomoci datasheetu použitého komunikačního modulu \cite{iqrfmodul} a čidla \cite{WeptechCidlo} analyzován, a přehledně zobrazen do tabulky \ref{PacketTableAnalysis}.
+který byl pomoci datasheetu použitého komunikačního modulu~\cite{ModulIQRF} a~čidla~\cite{CidloWeptech} analyzován, a přehledně zobrazen do Tab. \ref{PacketTableAnalysis}.
 
 \subsection{Šifrovaný přenos}
 
-V okamžiku kdy bylo zařízení přepnuto do šifrovaného módu dle tabulky \ref{TablukaSETUP} byl zachycen šifrovaný telegram
+V okamžiku kdy bylo zařízení přepnuto do šifrovaného módu dle Tab.~\ref{TablukaSETUP} byl zachycen šifrovaný telegram
 
 \begin{verbatim}
 	32002e44b05c10000000021b7ac40820053ed44a38a9c3c86f5
 	8210f9b979353c39dc1d5e0c873eb81994d28c099ef1d55b008
 \end{verbatim}
 
-který byl pomoci datasheetů použitého komunikačního modulu \cite{iqrfmodul} a čidla \cite{WeptechCidlo} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
+který byl pomoci datasheetů použitého komunikačního modulu \cite{ModulIQRF} a normy~\cite{Norma1,NormaFIPS} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
 \begin{itemize}
 	\item 30-33 pro informaci použitém šifrování,
 	\item 8-25 pro sestavení inicializačního vektoru a
 	\item 38-93 pro šifrovanou část dat.
 \end{itemize}
 
-Poté byla daná data v souladu s normou \colorbox[rgb]{0,1,0}{REF-KODA} dešifrována:
+Poté byla daná data v souladu s normou \ref{NormaFIPS} dešifrována:
 
 
-..\colorbox[rgb]{0,1,0}{popsat prakticky jak se to dešifrovalo}..
+..\colorbox[rgb]{1,0,0}{popsat prakticky jak se to dešifrovalo}..
 
 
  a byl získán dešifrovaný telegram:
@@ -216,15 +216,13 @@ Byla zvolena jedna databáze se třemi tabulkami:
 	\item TELEGRAMS - uložení zachycených dat a AES klíče modulu
 \end{itemize}
 
-Struktura tabulek je popsána na obrázku... \colorbox[rgb]{0,1,0}{toto je stale tezce pracovni verze}
+Struktura tabulek je popsána na obrázku... \colorbox[rgb]{1,0,0}{DOPSAT + SCHEMA}
 	
 \section{Zajištění vizualizace dat}	
-\colorbox[rgb]{0,1,0}{přesazet texty k vizualizaci}
-
-\colorbox[rgb]{0,1,0}{sepsat dokumentaci k uploadu na googlesheets}
+\colorbox[rgb]{1,0,0}{POPSAT GOOGLE API}
 
 \section{Struktura aplikace}
-Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura aplikace znázorněná na obrázku \ref{AplikaceDiagram}. Diagram je pro přehlednost odlišen barevnými bloky:
+Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura aplikace znázorněná na Obr.~\ref{AplikaceDiagram}. Diagram je pro přehlednost odlišen barevnými bloky:
 \begin{itemize}
 	\item modrou barvou je znázorněna kostra programu,
 	\item zelenou barvou je nekonečná smyčka naslouchání dat,
@@ -237,7 +235,7 @@ Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura
 V následujících podkapitolách budou jednotlivé bloky aplikace představeny podrobněji.
 
 \subsection{Start programu v rámci operačního systému}
-Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. \colorbox[rgb]{0,1,0}{Zeptat se RŠ jak z toho udělat službu nebo tak něco.} Tím je zajištěna nezávilost na typu nasazení RaspberryPi a případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
+Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. Tím je zajištěna nezávilost na typu nasazení RaspberryPi a případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
 
  \begin{figure}[!]
   \begin{center}
@@ -252,9 +250,11 @@ Program při startu kontroluje, zdali  má k dispozici všechny potřebné kompo
 Dále program kontroluje přítomnost a možnost otevření sériového portu. V případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následujě příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
 
 \subsection{Základní kontrola a parsování dat}
+\colorbox[rgb]{1,0,0}{ta cestin!}
 Nasledne dojde ke spusteni smycky naslouchani prichozich telegramu. Kazdy prichozi telegram je podroben serii kontrol, zdali doslo ke spravnemu odposlechnuti. Jako prvni kontrola je delka telegramu odpovidajici sudemu nasobku. Telegram je dale podroben zakladni analyze na parsovani polozek aplikacni a linkove vrstvy. Zde dochazi ke kontrole delky telegramu vuci hodnote uvedene v hlavicce, dale je provedena kontrola platnosti CRC souctu. Je take provedena kontrola obsahu Cl-pole, Status pole a ConfigurationWord pole.
 
 \subsection{Dešifrování dat}
+\colorbox[rgb]{1,0,0}{ta cestin!}
  Na zaklade analyzy posledni hodnoty se program dale vetvi:
 \begin{itemize}
 	\item nesifrovane telegramy jsou zapsany do databaze, pote dle vyrobce daneho mericiho zarizeni podrobeny dukladne analyze prenasenych dat. Zjistene hodnoty doplnene o casovou znacku a informace o mericim zarizeni zapsany do databaze a sdeleny na graficky vstup.
@@ -263,6 +263,7 @@ Nasledne dojde ke spusteni smycky naslouchani prichozich telegramu. Kazdy pricho
 Pokud nektera z operaci nad telegramem selze, dojde k vyjimce, dany telegram je zaevidovan, v jeho zpracovani se jiz nepokracuje a aplikace se vrati do stavu cekani na prichod dalsiho telegramu.
 
 \subsection{Parsování dat}
+\colorbox[rgb]{1,0,0}{DOPSAT}
 \begin{itemize}
 \item - co to umí
 \item - jaká je aplikační logika pro RSSI a VendorID
@@ -271,6 +272,7 @@ Pokud nektera z operaci nad telegramem selze, dojde k vyjimce, dany telegram je 
 \end{itemize}
 
 \subsection{Uložení dat}
+\colorbox[rgb]{1,0,0}{DOPSAT}
 \begin{itemize}
 \item - jak se osetri ktere chyby
 \item - co davame kam jak na vedomi
@@ -278,10 +280,12 @@ Pokud nektera z operaci nad telegramem selze, dojde k vyjimce, dany telegram je 
 \end{itemize}
 
 \subsection{Export dat}
+\colorbox[rgb]{1,0,0}{ta cestin!}
 Dalsim krokem je vizualizace ziskanych dat. Kazdou pulnoc se automaticky spusti export databaze, ktery davkove vyexportuje data namerena za poslednich 24 hodin do Google SpreadSheetu. Pro kazdy senzor v danem dni existuje samostatny Worksheet.
 
 \subsection{Vizualizace dat}
-Nad temito daty se potom provadi vizualizace pomoci Google Graphs. Ten umoznuje interaktivni odecitani vykreslenych hodnot zachycenych danym senzorem v danem dni (Figure \ref{fig_sec4_chart_example}). 
+\colorbox[rgb]{1,0,0}{ta cestin!}
+Nad temito daty se potom provadi vizualizace pomoci Google Graphs. Ten umoznuje interaktivni odecitani vykreslenych hodnot zachycenych danym senzorem v danem dni, viz Obr.~\ref{fig_sec4_chart_example}). 
 
  \begin{figure}[!ht]
   \begin{center}
@@ -292,6 +296,7 @@ Nad temito daty se potom provadi vizualizace pomoci Google Graphs. Ten umoznuje 
 \end{figure}
 
 \subsection{Ošetření chyb a vyjímek}
+\colorbox[rgb]{1,0,0}{DOPSAT}
 \begin{itemize}
 \item - jak se ukladaji vysledky
 \item - jak to vypada v DB, kolik je tabulek s cim
