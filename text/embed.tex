@@ -31,7 +31,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	
 		\subsection{Arduino Duemilanove} Arduino Duemilanove je vývojová jednoprocesorová deska s mikroprocesorem ATMega168 od firmy Atmel, tedy platformě Atmel AVR. 
 		Parametry: ATmega168 s 16\,MHz krystalem, 16\,KB flash, 1\,KB SRAM (Static Random Access Memory), 512\,B EEPROM (Electrically Erasable Programmable Read-Only Memory). 	Konektivita: 14 digitálních vstupně/výstupných pinů, z toho 6 z nich může být využito i PWM (Pulse Width Modulation) , vstupních analogových pinů (10\,bit A/D převodník, 0-5\,V), I2C (Inter-Integrated Circuit) sběrnici, UART (Universal Asynchronous Receiver/Transmitter) sběrnici, ICSP (In Circuit Serial Programming) rozhraní, USB (Universal Serial Bus) rozhraní~\cite{ArduinoDuemilanove}.	
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.2]{obrazky/emded_arduino_duemilanove}
   \end{center}
@@ -40,7 +40,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	
 	
 		\subsection{Arduino Uno} Arduino Uno je v současné době asi nejčastěji používaný typ desky. Arduino Uno je vývojová jednoprocesorová deska s mikroprocesorem ATMega328. Od roku 2011 je nástupcem Arduina Duemilanove. Změny oproti předchůdci jsou pouze v použitém mikrokontroléru, došlo k zdvojnásobení velikosti paměti na 32\,KB flash, 2\,KB SRAM, 1\,KB EEPROM~\cite{ArduinoUno}.
-		\begin{figure}[!h]
+		\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.25]{obrazky/emded_arduino_uno}
   \end{center}
@@ -49,7 +49,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	
 		\subsection{Arduino Leonardo} 
 		Arduino Leonardo designově navazuje na Arduino Uno, liší se pouze v použitém čipu ATmega32u4~\cite{ArduinoLeonardo}.
-				\begin{figure}[!h]
+				\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.3]{obrazky/emded_arduino_leonardo}
   \end{center}
@@ -59,7 +59,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 					\subsection{Arduino Mega} 
 					Arduino Mega je deska pro náročnější projekty. Oproti klasickému Arduinu má Arduino Mega rychlejší procesor (16\,MHz) a také více vstupních a výstupních pinů. K dispozici je 54 digitálních pinů, 14 PWM výstupů, 16 analogových vstupů a 4 hardwarové sériové porty. Dále má 256\,kB flash paměti, 8\,kB RAM paměti a 4\,kB EEPROM paměti~\cite{ArduinoMega}.	
 			
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.8]{obrazky/emded_arduino_mega}
   \end{center}
@@ -71,7 +71,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		Arduino Due je nástupcem Arduino Mega a je to první karta Arduino, na níž je umístěn 32-bitový řadič (32-bitový ARM procesor
 		Atmel SAM3X8E). Vysoká taktovací rychlost 84\,MHz ve spojení s celkem 54 I/O piny umožňuje realizaci značně rozsáhlých projektů. K 54 pinům mimo jiné patří 12 PWM výstupů a 12 analogových vstupů, 4 UARTy, 2 I2C a dvojitý digitálně-analogový měnič. Vlastní USB Host poskytuje kartě vedle standardů jako JTAG (Joint Test Action Group), SPI (Serial Peripheral Interface) a Micro USB širší možnosti konektivity~\cite{ArduinoDue}.	
 		
-				\begin{figure}[!h]
+				\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.45]{obrazky/emded_arduino_due}
   \end{center}
@@ -81,7 +81,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		\subsection{Arduino Mini} 
 	Arduino Mini je asi nejmenší oficiální verze Arduina, navržená pro úsporu místa. Daní za malé rozměry je však absence USB portu. K programování je tedy nutné použít externí USB2Serial převodník. Jeho výkon však nijak nezaostává za většími deskami. Běží na procesoru ATmega328 s taktem 16\,MHz. Pro své malé rozměry je vhodný k použití například v chytrých vypínačích, či dálkových ovladačích~\cite{ArduinoMini}.	
 	
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.3]{obrazky/emded_arduino_mini}
   \end{center}
@@ -91,7 +91,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	\subsection{Arduino Micro} 
 	Arduino Micro je jedna z desek, která má čip obsahující předprogramovaný převodník ATmega32u4~\cite{ArduinoMicro}.	 
 	
-		\begin{figure}[!h]
+		\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.2]{obrazky/emded_arduino_micro}
   \end{center}
@@ -101,7 +101,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	\subsection{Arduino Nano} 
 	Arduino Nano navíc obsahuje ještě USB port a převodník~\cite{ArduinoNano}.	
 	
-	\begin{figure}[!h]
+	\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.5]{obrazky/emded_arduino_nano}
   \end{center}
@@ -114,7 +114,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		
 		\subsection{Arduino Fio} 
 		Arduino Fio je přizpůsobená k připojení různých bezdrátových modulů (například ZigBee nebo XBee moduly). Základem je procesor ATmega328P, který běží na frekvenci 8\,MHz. Napětí je zde kvůli kompatibilitě s moduly sníženo oproti většině ostatních desek z 5\,V na 3,3\,V~\cite{ArduinoFio}.	
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.45]{obrazky/emded_arduino_fio}
   \end{center}
@@ -123,7 +123,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	
 		\subsection{Lilypad Arduino} 
 		Lilypad Arduino je postaveno na ATmega168V (energeticky úsporná verze ATmega168) nebo ATmega328V. Je určena wearables projekty, zejména pro implementaci do textilií, kdy jsou spoje tvořeny vodivou nití. Není však pratelná. Existuje více variant této desky~\cite{ArduinoLilipad}.	
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
  \begin{center}
     \includegraphics[scale=0.5]{obrazky/emded_arduino_lilipad}
   \end{center}
@@ -132,7 +132,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		
 	\subsection{Arduino Yun} 
 	Arduino Yun je deska založená na ATmega32u4 a Atheros AR9331, který je schopný běhu odlehčeného linuxu Linino. Ve výbavě je softwarový bridge (prostředník, most), který zajišťuje komunikaci mezi oběma čipy. Procesor Atheros podporuje linuxové distribuce založené na OpenWrt s názvem OpenWrt-Yun. Deska má vestavěný Ethernet a WiFi modul, USB-A port, slot pro MicroSD kartu. Dále disponuje 20 digitálními I/O piny, z toho 7 mohou být použito jako výstupy PWM a 12 jako analogové vstupy~\cite{ArduinoYun}.	
-	\begin{figure}[!h]
+	\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.3]{obrazky/emded_arduino_yun}
   \end{center}
@@ -222,7 +222,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		\item \textbf{Model B+} obsahuje   Má slot na MicroSD kartu. Disponuje 512\,MB RAM. Obsahuje 2 USB porty. Má 40 GPIO pinů.
 	\end{itemize}
 	
-	\begin{figure}[!h]
+	\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.9]{obrazky/embed_raspi_1}
   \end{center}
@@ -232,14 +232,14 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	\subsection{RaspberryPi 2}
 	RaspberryPi 2 je pokračováním RaspBerryPi, které přináší zejména vyšší výkon. Díky čtyřjádrovému procesoru BCM2836 o taktu 900 MHz by měl být 3–6× rychlejší než jeho předchůdce. Tento model disponuje 1 GB paměti a má 4 USB porty~\cite{RaspiTwo}.
 	
-	%				\begin{figure}[!h]
+	%				\begin{figure}[!ht]
   %\begin{center}
    % \includegraphics[scale=0.4]{obrazky/embed_raspi_2}
   %\end{center}
   %\caption{RaspberryPi 2 [docasne prevzeti]}
 %\end{figure}
 
-	\begin{figure}[!h]
+	\begin{figure}[!ht]
   \begin{center}
    \includegraphics[scale=0.6]{obrazky/embed_raspi_all}
   \end{center}
@@ -307,7 +307,7 @@ Vzrůstající popularita RaspberryPi dala stejně jak u Arduina vzniknout celé
 		
 			\textbf{Cubieboard5 }nabízí osmijádrový procesor Allwinner H8, který doplňují 2\,GB RAM. Navíc oproti předchozím verzím má kromě HDMI i DP (Display Port), přináší taktéž konktor pro připojení externí baterie. Došlo k navýšení GPIO pinů na 70, které navíc přináší LRADC (Low Resolution Analog to Digital Converter) a PS2 (Personal System/2). SATA konektor pomocí speciální desky podporuje připojení dvou SATA disků s podporou RAIDu.
 		
-	\begin{figure}[!h]
+	\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.75]{obrazky/embed_cubie_1}
   \end{center}
@@ -333,7 +333,7 @@ Pine64 je rodina tří jednodeskových počítačů společnosti PINE64. Tyto po
 
 \textbf{PINE A64+ 2GB} má oproti předchozí verzi 2\,GB paměti.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.65]{obrazky/embed_pine}
   \end{center}
@@ -364,7 +364,7 @@ BeagleBoard je skupina jednodeskových počítačů produkovaných společností
 
 \textbf{BeagleBoard-X15} je založen na procesoru Sitara AM5728 s dvěma jádry ARM Cortex-A15 na frekvenci 1,5\,GHz a dvěma jádry ARM Cortex-M4 na frekvenci 212\,MHz and dvěma jádry TI C66x DSP na frekvenci 700\,MHz. Disponuje 2\,GB RAM. Použitý procesor přináší podporu HDMI 3.0, gigabit Ethernetu a grafického dvoujádrového čipu SGX544 na frekvenci 532\,MHz. 
 
-	\begin{figure}[!h]
+	\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.7]{obrazky/embed_beaglebone_black}
   \end{center}
@@ -388,7 +388,7 @@ Společnosti Intel přináší dva jednodeskové počítače založené na platf
 		\subsection{Intel Galileo}
 		Intel Galileo je jednočipový počítač, vyvinutý společností Intel, postavený na architektuře x86. Obsahuje procesor Intel Quark x86 na frekvenci 400\,MHz. Má 256\,MB RAM. Byl navržen pro výuku výpočetní techniky. Jedná se o první zařízení od Intelu, které je hardwarově i softwarově kompatibilní s Arduinem. Lze k němu připojovat Arduino shieldy i moduly a využívat vývojové prostředí Arduina, včetně jeho knihoven. 
 		Tento počítač obsahuje 14 digiálních I/O pinů, z toho 6 z nich lze využít jako PWM výstupy. Dále obsahuje 6 analogových vstupů, UART sběrnici, I2C sběrnici, SPI sběrnici, Ethernet konektor, slot na MicroSD kartu. Dále obsahuje 2 USB konektory, jeden USB-host, druhý USB-klient. Druhá generace této desky pak přináší podporu PoE (Power over Ethernet)a další drobné změny~\cite{IntelGalileo,ArduinoGalileo}.
-\begin{figure}[!h]
+\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.45]{obrazky/embed_intel_galileo}
   \end{center}
@@ -401,7 +401,8 @@ Společnosti Intel přináší dva jednodeskové počítače založené na platf
 			
 			\begin{itemize}
 				\item Arduino board - Arduino board je plně kompatibilní s Arduinem, včetně podpory Arduino shieldů a modulů. Dále tato deska zpřístupňuje 20 digiálních I/O pinů, z toho 4 z nich lze využít jako PWM výstupy. Dále obsahuje 6 analogových vstupů, UART sběrnici, I2C sběrnici, SPI sběrnici. Dále obsahuje 2 USB konektory, jeden pro napájení, druhý připojený k UART sběrnici a slot na SD kartu.
-				\begin{figure}[!h]
+				
+				\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.8]{obrazky/embed_intel_edison2}
   \end{center}
@@ -435,7 +436,7 @@ Desky Intel se hodí spíše pro větší typy projektů, kdy již vývojové pr
 	
 		\textbf{Gizmo Board 1} beží dvoujádrovém APU G-T40E od firmy AMD, běžíci na frekvenci 1GHz při příkonu 10\,W. Součástí procesoru je grafický čip Radeon HD 6250. K dispozici je 1\,GB RAM. Deska dále obsahuje dvojici USB, VGA, audio výstup, SATA a ethernet konektor. Další sběrnice jako GPIO, SPI, I2C, UART a PWM jsou dostupné po připojení rozšiřující karty přes LowSpeed~\cite{AmdGizmo1}.
 	
-				\begin{figure}[!h]
+				\begin{figure}[!ht]
  \begin{center}
     \includegraphics[scale=0.3]{obrazky/embed_amd_gizmo1}
   \end{center}

@@ -135,7 +135,7 @@ který byl pomoci datasheetů použitého komunikačního modulu \cite{ModulIQRF
 	\item 38-93 pro šifrovanou část dat.
 \end{itemize}
 
-Poté byla daná data v souladu s normou \ref{NormaFIPS} dešifrována:
+Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována:
 
 
 ..\colorbox[rgb]{1,0,0}{popsat prakticky jak se to dešifrovalo}..
@@ -150,7 +150,7 @@ Poté byla daná data v souladu s normou \ref{NormaFIPS} dešifrována:
 
 Poté lze dešifrovaná data vyparsovat jako při nešifrovaném přenosu popsaném v předchozí kapitole.
 
-\begin{table}[]
+\begin{table}[!ht]
 \centering
 \caption{Rozklíčovaný zachycený paket}
 \resizebox{\textwidth}{!}{%
@@ -237,7 +237,7 @@ V následujících podkapitolách budou jednotlivé bloky aplikace představeny 
 \subsection{Start programu v rámci operačního systému}
 Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. Tím je zajištěna nezávilost na typu nasazení RaspberryPi a případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
 
- \begin{figure}[!]
+ \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.6]{obrazky/aplikace_diagram}
   \end{center}
@@ -258,7 +258,7 @@ Nasledne dojde ke spusteni smycky naslouchani prichozich telegramu. Kazdy pricho
  Na zaklade analyzy posledni hodnoty se program dale vetvi:
 \begin{itemize}
 	\item nesifrovane telegramy jsou zapsany do databaze, pote dle vyrobce daneho mericiho zarizeni podrobeny dukladne analyze prenasenych dat. Zjistene hodnoty doplnene o casovou znacku a informace o mericim zarizeni zapsany do databaze a sdeleny na graficky vstup.
-	\item v pripade ze analyzou pole ConfigurationWord je zjisteno sifrovani prenasenych dat algoritmem AES128 v modu CBC, dojde k rozsifrovani dat dle postupu popsanem v kapitole \ref{section_encrypted_communication} a pote program s telegramem zachazi jako s nesifrovanym, popsanym v predchozim bode.
+	\item v pripade ze analyzou pole ConfigurationWord je zjisteno sifrovani prenasenych dat algoritmem AES128 v modu CBC, dojde k rozsifrovani dat dle postupu popsanem v kapitole \colorbox[rgb]{0,0,0}{LINK} a pote program s telegramem zachazi jako s nesifrovanym, popsanym v predchozim bode.
 \end{itemize}
 Pokud nektera z operaci nad telegramem selze, dojde k vyjimce, dany telegram je zaevidovan, v jeho zpracovani se jiz nepokracuje a aplikace se vrati do stavu cekani na prichod dalsiho telegramu.
 

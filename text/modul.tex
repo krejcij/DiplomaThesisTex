@@ -4,16 +4,16 @@ Spolu se zařízením UniPi Neuron S103 byl zapůjčen i modul IQRF TR-72DC-WMB,
 
 \section{Obecný popis modulu TR-72D-WMB}
 
-Modul IQRF TR-72DA-WMB je bezdrátový komunikační modul velikosti SIM karty z výroby české firmy \href{http://microrisc.com/cs/}{MICRORISC s.r.o.}. Vychází z řady produktů technologie IQRF, s tím rozdílem, že místo IQRF softwaru má přímo implementovaný Wireless M-Bus protokol \cite{iqrfmodul}. 
+Modul IQRF TR-72DA-WMB je bezdrátový komunikační modul velikosti SIM karty z výroby české firmy \href{http://microrisc.com/cs/}{MICRORISC s.r.o.}. Vychází z řady produktů technologie IQRF, s tím rozdílem, že místo IQRF softwaru má přímo implementovaný Wireless M-Bus protokol \cite{ModulIQRF}. 
 
- \begin{figure}[!h]
+ \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.6]{obrazky/modul_modul}
   \end{center}
   \caption{Modul IQRF TR-72DA-WMB \cite{ModulIQRF}}
 \end{figure}
 
-Na malém prostoru se nachází vše potřebné pro uskutečnění bezdrátového přenosu: mikrokontrolér, externí EEPROM, teplotní senzor, kontrolní LED , 6 pinů a anténa dle typu komunikačního modulu (Obr.\label{BlokovkaIQRF}).
+Na malém prostoru se nachází vše potřebné pro uskutečnění bezdrátového přenosu: mikrokontrolér, externí EEPROM, teplotní senzor, kontrolní LED , 6 pinů a anténa dle typu komunikačního modulu (Obr.\ref{BlokovkaIQRF}).
 
 
 
@@ -22,7 +22,7 @@ V České republice je využíván pro přenos v bezlicenčním pásmu 868\,MHz,
 
 \newpage
 
- \begin{figure}[!h]
+ \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.6]{obrazky/modul_block}
   \end{center}
@@ -30,13 +30,14 @@ V České republice je využíván pro přenos v bezlicenčním pásmu 868\,MHz,
 	\label{BlokovkaIQRF}
 \end{figure}
 
-Modul lze pořídit ve třech verzích (Obr.\label{ObrazekAnteny}) dle připojení antény:
+Modul lze pořídit ve třech verzích (viz Obr.~\ref{ObrazekAnteny}) dle připojení antény:
 \begin{itemize}
 		\item TR-72D-WMB má zdířku pro připájení antény.
 		\item TR-72DC-WMB	má vyveden koaxiální anténí konektor U.FL. 
 		\item TR-72DA-WMB má integrovanou anténu přímo na desce modulu. Dosah signálu toto typu je až 320\,m v módu T a 365\,m v módu S.
 \end{itemize}
- \begin{figure}[!h]
+
+ \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.7]{obrazky/modul_antena}
   \end{center}
@@ -46,7 +47,7 @@ Modul lze pořídit ve třech verzích (Obr.\label{ObrazekAnteny}) dle připojen
 
 \section{Komunikační módy}
 
-Modul může být v závislosti na použité topologii nastaven do jednoho ze tří provozních módů: měřič, koncentrátor, skener \cite{iqrfmodul}. 
+Modul může být v závislosti na použité topologii nastaven do jednoho ze tří provozních módů: měřič, koncentrátor, skener \cite{ModulIQRF}. 
 
 V módu měřiče může být modul přes UART sběrnici zapojen k mikrokontroléru, který zajistí zpracování dat od senzorů. Může tedy sloužit k sestavení vlastních měřicích zařízení postavených na protokolu Wireless M-Bus.
 
@@ -56,7 +57,7 @@ V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu p
 
 Praktické využíti jednotlivých módu zobrazuje Obr.~\ref{TopologieIQRF}.
 
- \begin{figure}[!h]
+ \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.65]{obrazky/modul_topologie}
   \end{center}
@@ -68,7 +69,7 @@ Praktické využíti jednotlivých módu zobrazuje Obr.~\ref{TopologieIQRF}.
 
 S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož parametry jsou 19200\,Bd, 8\,bitů, žádná parita a 1 stop bit.
 		
- \begin{figure}[!h]
+ \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.4]{obrazky/modul_zada}
   \end{center}

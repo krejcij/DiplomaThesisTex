@@ -50,14 +50,14 @@
 \contentsline {subsubsection}{Popis desky}{30}{section*.77}
 \contentsline {section}{\numberline {3.2}UniPi v2 - Neuron}{31}{section.79}
 \contentsline {subsubsection}{Popis desky}{32}{section*.81}
-\contentsline {section}{\numberline {3.3}Srovn\IeC {\'a}n\IeC {\'\i } obou verz\IeC {\'\i }}{34}{section.89}
-\contentsline {section}{\numberline {3.4}Sb\IeC {\v e}rnice na UniPi}{36}{section.90}
-\contentsline {subsection}{\numberline {3.4.1}UART}{36}{subsection.91}
+\contentsline {section}{\numberline {3.3}Srovn\IeC {\'a}n\IeC {\'\i } obou verz\IeC {\'\i }}{35}{section.89}
+\contentsline {section}{\numberline {3.4}Sb\IeC {\v e}rnice na UniPi}{37}{section.90}
+\contentsline {subsection}{\numberline {3.4.1}UART}{37}{subsection.91}
 \contentsline {subsection}{\numberline {3.4.2}SPI}{37}{subsection.93}
 \contentsline {subsection}{\numberline {3.4.3}RS-485}{38}{subsection.94}
 \contentsline {subsection}{\numberline {3.4.4}I2C}{38}{subsection.95}
 \contentsline {subsection}{\numberline {3.4.5}1Wire}{38}{subsection.96}
-\contentsline {subsection}{\numberline {3.4.6}GPIO}{38}{subsection.97}
+\contentsline {subsection}{\numberline {3.4.6}GPIO}{39}{subsection.97}
 \contentsline {section}{\numberline {3.5}Software pro UniPi}{39}{section.99}
 \contentsline {chapter}{\numberline {4}Komunika\IeC {\v c}n\IeC {\'\i } modul Wireless M-Bus}{41}{chapter.100}
 \contentsline {section}{\numberline {4.1}Obecn\IeC {\'y} popis modulu TR-72D-WMB}{41}{section.101}
@@ -108,21 +108,21 @@
 \contentsline {subsection}{\numberline {7.6.2}\IeC {\v S}ifrovan\IeC {\'y} p\IeC {\v r}enos}{68}{subsection.199}
 \contentsline {section}{\numberline {7.7}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } ulo\IeC {\v z}en\IeC {\'\i } dat}{69}{section.201}
 \contentsline {section}{\numberline {7.8}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } vizualizace dat}{69}{section.205}
-\contentsline {section}{\numberline {7.9}Struktura aplikace}{71}{section.206}
+\contentsline {section}{\numberline {7.9}Struktura aplikace}{70}{section.206}
 \contentsline {subsection}{\numberline {7.9.1}Start programu v r\IeC {\'a}mci opera\IeC {\v c}n\IeC {\'\i }ho syst\IeC {\'e}mu}{71}{subsection.207}
 \contentsline {subsection}{\numberline {7.9.2}Start programu z pohledu aplikace}{71}{subsection.209}
 \contentsline {subsection}{\numberline {7.9.3}Z\IeC {\'a}kladn\IeC {\'\i } kontrola a parsov\IeC {\'a}n\IeC {\'\i } dat}{71}{subsection.210}
-\contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{73}{subsection.211}
-\contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{73}{subsection.212}
-\contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{73}{subsection.213}
-\contentsline {subsection}{\numberline {7.9.7}Export dat}{73}{subsection.214}
-\contentsline {subsection}{\numberline {7.9.8}Vizualizace dat}{74}{subsection.215}
-\contentsline {subsection}{\numberline {7.9.9}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{74}{subsection.217}
-\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{75}{chapter.218}
-\contentsline {chapter}{Literatura}{77}{section*.220}
-\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{83}{section*.222}
-\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{87}{section*.224}
-\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{88}{chapter.225}
-\contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{89}{chapter.226}
-\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{90}{chapter.253}
-\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{91}{chapter.254}
+\contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{71}{subsection.211}
+\contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{72}{subsection.212}
+\contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{72}{subsection.213}
+\contentsline {subsection}{\numberline {7.9.7}Export dat}{72}{subsection.214}
+\contentsline {subsection}{\numberline {7.9.8}Vizualizace dat}{72}{subsection.215}
+\contentsline {subsection}{\numberline {7.9.9}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{73}{subsection.217}
+\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{76}{chapter.218}
+\contentsline {chapter}{Literatura}{78}{section*.220}
+\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{84}{section*.222}
+\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{88}{section*.224}
+\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{89}{chapter.225}
+\contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{90}{chapter.226}
+\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{91}{chapter.253}
+\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{92}{chapter.254}
