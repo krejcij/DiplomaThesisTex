@@ -18,7 +18,7 @@ Document=sablona.tex
 
 [Frame0_View0,0]
 TopLine=0
-Cursor=8193
+Cursor=702
 
 [Frame1]
 Flags=0
@@ -53,8 +53,8 @@ Class=LaTeXView
 Document=text\iot.tex
 
 [Frame2_View0,0]
-TopLine=13
-Cursor=2932
+TopLine=15
+Cursor=2780
 
 [Frame3]
 Flags=0
@@ -71,7 +71,7 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame3_View0,0]
-TopLine=260
+TopLine=288
 Cursor=18648
 
 [Frame4]
@@ -89,7 +89,7 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame4_View0,0]
-TopLine=234
+TopLine=250
 Cursor=12155
 
 [Frame5]
@@ -125,7 +125,7 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame6_View0,0]
-TopLine=212
+TopLine=241
 Cursor=13235
 
 [Frame7]
@@ -143,7 +143,7 @@ Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame7_View0,0]
-TopLine=419
+TopLine=435
 Cursor=25597
 
 [Frame8]
@@ -197,7 +197,7 @@ Class=LaTeXView
 Document=text\literatura.tex
 
 [Frame10_View0,0]
-TopLine=130
+TopLine=133
 Cursor=10933
 
 [Frame11]
@@ -233,7 +233,7 @@ Class=LaTeXView
 Document=text\prilohy.tex
 
 [Frame12_View0,0]
-TopLine=82
+TopLine=85
 Cursor=10100
 
 [Frame13]
@@ -256,7 +256,7 @@ Cursor=0
 
 [SessionInfo]
 FrameCount=14
-ActiveFrame=9
+ActiveFrame=0
 
 [Bookmarks]
 text\implementace.tex=309 
