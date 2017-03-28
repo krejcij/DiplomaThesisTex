@@ -119,14 +119,13 @@
 \contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{80}{subsection.227}
 \contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{81}{subsection.228}
 \contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{81}{subsection.229}
-\contentsline {subsection}{\numberline {7.9.7}Export dat}{81}{subsection.230}
-\contentsline {subsection}{\numberline {7.9.8}Vizualizace dat}{81}{subsection.231}
-\contentsline {subsection}{\numberline {7.9.9}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{82}{subsection.233}
-\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{85}{chapter.234}
-\contentsline {chapter}{Literatura}{86}{section*.236}
-\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{92}{section*.238}
-\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{96}{section*.240}
-\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{97}{chapter.241}
-\contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{98}{chapter.243}
-\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{99}{chapter.270}
-\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{100}{chapter.272}
+\contentsline {subsection}{\numberline {7.9.7}Vizualizace dat}{81}{subsection.230}
+\contentsline {subsection}{\numberline {7.9.8}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{81}{subsection.232}
+\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{84}{chapter.233}
+\contentsline {chapter}{Literatura}{85}{section*.235}
+\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{91}{section*.237}
+\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{95}{section*.239}
+\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{96}{chapter.240}
+\contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{97}{chapter.242}
+\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{98}{chapter.269}
+\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{99}{chapter.271}

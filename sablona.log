@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  28 MAR 2017 15:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  28 MAR 2017 15:25
 entering extended mode
 **sablona.tex
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.tex"
@@ -1158,11 +1158,11 @@ File: obrazky/unipi_unipi_deska.png Graphic file (type png)
 Package pdftex.def Info: obrazky/unipi_unipi_deska.png used on input line 105.
 (pdftex.def)             Requested size: 238.71521pt x 158.08954pt.
  [38 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_unipi_deska.png>]
-<obrazky/unipi_unipi_verze.png, id=1166, 368.87813pt x 225.84375pt>
+<obrazky/unipi_unipi_verze.png, id=1166, 368.87813pt x 137.01187pt>
 File: obrazky/unipi_unipi_verze.png Graphic file (type png)
  <use obrazky/unipi_unipi_verze.png>
 Package pdftex.def Info: obrazky/unipi_unipi_verze.png used on input line 132.
-(pdftex.def)             Requested size: 184.4386pt x 112.92159pt.
+(pdftex.def)             Requested size: 276.6579pt x 102.75865pt.
 
 Overfull \hbox (10.33553pt too wide) in paragraph at lines 162--163
 []\T1/lmr/m/n/12 Písmeno x v ta-bulce []3.2[] bývá na-hra-zeno £ís-lem 1-3 dle osa-ze-ného typu RaspberryPi: 
@@ -1346,11 +1346,11 @@ Package pdftex.def Info: obrazky/aplikace_diagram.pdf used on input line 243.
 <obrazky/chart_weptech.pdf, id=1566, 493.844pt x 416.28323pt>
 File: obrazky/chart_weptech.pdf Graphic file (type pdf)
  <use obrazky/chart_weptech.pdf>
-Package pdftex.def Info: obrazky/chart_weptech.pdf used on input line 293.
+Package pdftex.def Info: obrazky/chart_weptech.pdf used on input line 289.
 (pdftex.def)             Requested size: 395.07573pt x 333.02704pt.
- [81]) [82] [83 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_diagram.pdf>] [84 <C:/Users/krejci/OneDrive/VU
-T - diplomka/obrazky/chart_weptech.pdf, page is rotated 90 degrees>] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zave
-r.tex") [85
+) [81] [82 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_diagram.pdf>] [83 <C:/Users/krejci/OneDrive/VUT - d
+iplomka/obrazky/chart_weptech.pdf, page is rotated 90 degrees>] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zaver.tex
+") [84
 
 
 
@@ -1373,7 +1373,7 @@ Underfull \hbox (badness 1365) in paragraph at lines 13--14
 []
  []
 
-[86
+[85
 
 
 
@@ -1383,7 +1383,7 @@ Underfull \hbox (badness 3375) in paragraph at lines 51--52
 \T1/lmr/m/n/12 2016-12-14]. Do-stupné z: []$\T1/lmtt/m/n/12 https : / / www . element14 . com / community / docs /
  []
 
-[87]
+[86]
 Underfull \hbox (badness 4242) in paragraph at lines 69--70
 []\T1/lmr/m/n/12 SoC and Me-mory Spe-ci-fi-cation \T1/lmr/m/it/12 PINE64 \T1/lmr/m/n/12 [on-line]. 2016 [cit. 2016-12-
  []
@@ -1394,7 +1394,7 @@ Underfull \hbox (badness 1648) in paragraph at lines 75--76
 Do-
  []
 
-[88]
+[87]
 Underfull \hbox (badness 5203) in paragraph at lines 97--98
 []\T1/lmr/m/n/12 PiBrella com-pa-ti-bi-lity \T1/lmr/m/it/12 Mod-MyPi \T1/lmr/m/n/12 [on-line]. 2016 [cit. 2016-12-14]. D
 o-
@@ -1431,7 +1431,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 \T1/lmtt/m/n/12 jsessionid = 4B46107107AC62A5CB24E33F6A51A5E4 ? preview = &dokkey =
  []
 
-[89]
+[88]
 Underfull \hbox (badness 8151) in paragraph at lines 117--118
 []\T1/lmr/m/n/12 Wireless M-Bus / OMS Hu-mi-dity and tem-pe-ra-ture sen-sor WEP-
  []
@@ -1446,7 +1446,7 @@ Underfull \hbox (badness 1038) in paragraph at lines 155--156
 \T1/lmr/m/n/12 2017-03-11]. Do-stupne z: []$\T1/lmtt/m/n/12 http : / / www . iqrf . org / products / transceivers /
  []
 
-[90]
+[89]
 Underfull \hbox (badness 8151) in paragraph at lines 156--157
 []\T1/lmr/m/n/12 Wireless M-Bus / OMS Hu-mi-dity and tem-pe-ra-ture sen-sor WEP-
  []
@@ -1456,30 +1456,30 @@ Underfull \hbox (badness 2469) in paragraph at lines 156--157
 \T1/lmr/m/n/12 OMSF-868A \T1/lmr/m/it/12 WEP-TECH elek-tro-nik GmbH \T1/lmr/m/n/12 [on-line]. 2016 [cit. 2017-03-
  []
 
-[91]) ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zkratky.tex" [92
+[90]) ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zkratky.tex" [91
 
 
 
 
-] [93] [94] [95])
+] [92] [93] [94])
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.toa")
 \tf@toa=\write8
- [96
+ [95
 
 
-] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/prilohy.tex" [97
+] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/prilohy.tex" [96
 
 
-] [98
+] [97
 
 ]
 File: obrazky/chart_weptech.pdf Graphic file (type pdf)
  <use obrazky/chart_weptech.pdf>
 Package pdftex.def Info: obrazky/chart_weptech.pdf used on input line 105.
 (pdftex.def)             Requested size: 395.07573pt x 333.02704pt.
- [99
+ [98
 
-]) [100
+]) [99
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
@@ -1495,33 +1495,69 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
 ("C:\Users\krejci\OneDrive\VUT - diplomka\text/prilohy.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
-Package rerunfilecheck Info: File `sablona.out' has not changed.
-(rerunfilecheck)             Checksum: 7E6B20B15ED703C09FABFAFCB46EC9B9;16465.
+
+
+Package rerunfilecheck Warning: File `sablona.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sablona.out':
+(rerunfilecheck)             Before: 7E6B20B15ED703C09FABFAFCB46EC9B9;16465
+(rerunfilecheck)             After:  161B14C232AEA6D53E64DDEFAC4A9DFF;16350.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
  ) 
 Here is how much of TeX's memory you used:
- 14834 strings out of 493921
- 212148 string characters out of 3147279
+ 14845 strings out of 493921
+ 212274 string characters out of 3147279
  424381 words of memory out of 3000000
  17299 multiletter control sequences out of 15000+200000
  88915 words of font info for 71 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  38i,18n,54p,1124b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/lm/lmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on sablona.pdf (100 pages, 13853771 bytes).
+pdfTeX warning (dest): name{table.242} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.271} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.232} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.272} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.270} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.243} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.241} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.240} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.238} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.236} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.234} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.233} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.231} has been referenced but does not exist, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on sablona.pdf (99 pages, 13870833 bytes).
 PDF statistics:
- 1959 PDF objects out of 2073 (max. 8388607)
- 431 named destinations out of 1000 (max. 500000)
+ 1971 PDF objects out of 2073 (max. 8388607)
+ 442 named destinations out of 1000 (max. 500000)
  1200 words of extra memory for PDF output out of 10000 (max. 10000000)
 
