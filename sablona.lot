@@ -1,7 +1,7 @@
 \select@language {czech}
 \contentsline {table}{\numberline {1.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } pr\IeC {\r u}myslov\IeC {\'e}ho a spot\IeC {\v r}ebitelsk\IeC {\'e}ho IoT \cite {iot_svet_hardware_internet_veci, iot_pohanka_internet_veci}}}{15}{table.9}
 \contentsline {table}{\numberline {3.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } model\IeC {\r u} UniPi NEURON dle I/O \cite {UniPiBoard2}}}{39}{table.83}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Varianty model\IeC {\r u} UniPi NEURON dle CPU a RAM \cite {UniPiBoard2}}}{40}{table.84}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Varianty model\IeC {\r u} UniPi NEURON dle CPU a RAM \cite {UniPiBoard2}}}{39}{table.84}
 \contentsline {table}{\numberline {4.1}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky po p\IeC {\v r}ijet\IeC {\'\i } modulem IQRF}}{51}{table.113}
 \contentsline {table}{\numberline {5.1}{\ignorespaces Popis standardu EN-13757~\cite {WmbusTables}}}{52}{table.115}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Re\IeC {\v z}imy p\IeC {\v r}enosu WM-Bus protokolu~\cite {WmbusTables}}}{54}{table.118}
@@ -13,7 +13,7 @@
 \contentsline {table}{\numberline {6.2}{\ignorespaces Konfigurace intervalu zas\IeC {\'\i }l\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } DIP p\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e~\cite {CidloWeptech}}}{66}{table.153}
 \contentsline {table}{\numberline {6.3}{\ignorespaces P\IeC {\v r}ehled nastaven\IeC {\'\i } \IeC {\v c}idla \cite {CidloWeptech}}}{66}{table.154}
 \contentsline {table}{\numberline {6.4}{\ignorespaces Telegram z modulu Bonega~\cite {CidloBonega}}}{68}{table.159}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Kamstrup Multical 402~\cite {CidloKamstrup}}}{71}{table.164}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } ZPA ZE.302~\cite {CidloZpa}}}{72}{table.168}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{79}{table.201}
-\contentsline {table}{\numberline {A.1}{\ignorespaces P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u}}}{98}{table.227}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Kamstrup Multical 402~\cite {CidloKamstrup}}}{71}{table.176}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } ZPA ZE.302~\cite {CidloZpa}}}{73}{table.181}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{79}{table.214}
+\contentsline {table}{\numberline {A.1}{\ignorespaces P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u}}}{97}{table.240}

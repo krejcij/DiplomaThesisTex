@@ -102,7 +102,7 @@ UniPi Neuron představuje modulární PLC (Programmable Logic Controller) pro ch
 
  \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.8]{obrazky/unipi_unipi_deska}
+    \includegraphics[scale=0.7]{obrazky/unipi_unipi_deska}
   \end{center}
   \caption{UniPi rozšiřující deska \colorbox[rgb]{1,0,0}{PREFOTIT}}
 	\label{UnipiV2DeskaUnipi}
@@ -129,7 +129,7 @@ UniPi Neuron existuje v několika verzích, odvislých od počtu digitálních v
 
  \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=1.05]{obrazky/unipi_unipi_verze}
+    \includegraphics[scale=0.5]{obrazky/unipi_unipi_verze}
   \end{center}
   \caption{UniPi NEURON S, M a L  \cite{UniPiBoard2}   \colorbox[rgb]{1,0,0}{ZAROVNAT}}
 \end{figure}
@@ -158,8 +158,6 @@ Standardní modely NEURON mají proměnlivé množství digitálních vstupů a 
 	\end{center}
 \end{table}
 
-\newpage
-
 Písmeno x v tabulce~\ref{TableUnipiVar} bývá nahrazeno číslem 1-3 dle osazeného typu RaspberryPi:
 
 \begin{table}[!ht]
@@ -175,6 +173,8 @@ x & \textbf{Osazená deska} & \textbf{CPU} & \textbf{RAM} & \textbf{Další vlas
 \end{tabular}
 	\end{center}
 \end{table}
+
+\newpage
 
 S RaspberryPi je deska UniPi propojena, obdobně jako u první verze, pomocí 26 pinové desky propoující GPIO port na RaspberryPi s konektorem na rozšiřující desce UniPi. Na samotné propojující desce (viz Obr.~\ref{PicureUniPiConnectionImage}) je vyvedena UART a I2C sběrnice. 
 
@@ -196,7 +196,9 @@ Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{PicureUniPiKrabicka}) s
 	\label{PicureUniPiOsazena}
 \end{figure}
 
-\newpage{}
+\newpage
+
+Celá sestava desek je poté uložena v kovové krabičce s označením vstupů a výstupů (viz Obr.~\ref{PicureUniPiKrabicka}).
 
  \begin{figure}[!ht]
   \begin{center}
@@ -206,6 +208,7 @@ Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{PicureUniPiKrabicka}) s
 	\label{PicureUniPiKrabicka}
 \end{figure}
 
+
 Vnitřní uspořádání desky je řešeno pomocí funkčních celků (viz Obr.~\ref{BlokUniPi2Schema}), které jsou propojeny pomocí I2C sběrnice. Výstupy jednotlivých celků jsou poté vyvedeny na konektory desky.
  \begin{figure}[!ht]
   \begin{center}
@@ -214,8 +217,6 @@ Vnitřní uspořádání desky je řešeno pomocí funkčních celků (viz Obr.~
 	\caption{Blokové schéma UniPi v2 \colorbox[rgb]{1,0,0}{PREKRESLIT}}
 	\label{BlokUniPi2Schema}
 \end{figure}
-
-
 
 Napájení desky je pomocí 24\,V/1.5\,A adaptéru přímo na rozšiřující desku UniPi. Pro účely testování a implementace byla zapůjčena deska UniPi Neuron S103 vybavená počítačem RaspberryPi3.
 
@@ -234,7 +235,7 @@ Napájení desky je pomocí 24\,V/1.5\,A adaptéru přímo na rozšiřující de
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \section{Srovnání obou verzí}
 
 Jak bylo popsáno v předchozím textu (Kap.~\ref{KapitolaUnipi1}~a~\ref{KapitolaUnipi2}), obě verze UniPi se liší svými parametry a využitím. I když vývoj UniPi byl nahrazen vývojem UniPi NEURONu, stále se najdou aplikace vhodné pouze pro původní desku:

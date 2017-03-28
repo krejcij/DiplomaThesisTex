@@ -232,9 +232,6 @@ Modul Bonega pracuje pouze v režimu šifrování přenášenných dat pomocí A
 Některé z položek je potřeba blíže vysvětlit:
 
 \begin{itemize}
-	\item Access number - Toto číslo se s každým požadavkem zvýší o hodnotu 1.
-	\item Status - V případě úspěšného přenosu je zde uložena nula, v opačném případě je zde uložena logická jednička a nastal tedy chybový stav 'únik vody' nebo 'vybitá baterie'.
-	\item Signature field - V případě zapnutého šifrovaní, první bajt obsahuje počet zašifrovaných bloků, obsah telegarmu a inkrement. Druhý bajt obsahuje záznam o obousměrnosti, dostupnosti, synchronizaci a šifrování. Pokud je šifrování zapnuto, je nastaven mód 5, v opačném případě jsou oba bajty nulové.
 	\item Hodnota průtoku - aktuální hodnota průtoku je zde vyjádřena čtyři hexadecimálními bajty v LSB pořadí.
 	\item Čas odeslání měření - Datum a čas provedení posledního měření. Nejedná se očas posledního odečtu či odeslání posledního telegramu.
 \end{itemize}
@@ -288,7 +285,22 @@ Měřič pracuje v režimech T1 a C1  povinným šifrováním přenášených da
 Souhrné hodnoty jsou ve výchozím stavu zasílány jako roční přehled, ale lze je překonfigurováním WM-Bus modulu v měřiči změnit na měsíční interval.
 
 \subsubsection{Formát telegramu}
-Telegram je ve výchozím stavu vysílán každých 15 minut pro aktuální hodnoty a má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegram2}~\cite{CidloBonega}:
+Telegram je ve výchozím stavu vysílán každých 15 minut pro aktuální hodnoty a má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegramKamstrup}~\cite{CidloKamstrup}, kde sekce DR1 až DR12 postupně odpovídají měřeným hodnotám:
+
+	\begin{enumerate}
+		\item Tepelná energie (přívodní nebo vratné potrubí)
+		\item Enegie chladu (přívodní nebo vratné potrubí))
+		\item Energie vratného potrubí
+		\item Energie přívodního potrubí
+		\item Průtok
+		\item Výkonu
+		\item Teplota
+		\item Minimální průtok a výkon
+		\item Minimální výkon
+		\item Maximální průtok
+		\item Maximální výkon
+		\item Čas provedení odečtu
+	\end{enumerate}
 
 \begin{table}[!ht]
 \centering
@@ -333,7 +345,6 @@ Fill               & Výplňové byty         & 2Fh \\ \hline
 \end{tabular}%}
 \end{table}
 
-
 \newpage
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -360,10 +371,13 @@ ZPA ZE310 je třífázový elektronický dvoutarifní elektroměr pro měření 
 	\item Interval přenosu: 1\,minuta 
 \end{itemize}
 
+\subsubsection{Formát telegramu}
+Telegram je ve výchozím stavu vysílán každou minutu a poskytuje výrobcem doplněnou základní strukturu popsanou v Tab. \ref{TabulkaTelegramZPA}~\cite{CidloZpa}.
+
 \begin{table}[!ht]
 \centering
 \caption{Telegram ze zařízení ZPA ZE.302~\cite{CidloZpa}}
-\label{TabulkaTelegramKZPA}
+\label{TabulkaTelegramZPA}
 %\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
@@ -372,18 +386,6 @@ L-Field & Délka telegramu & 2Ah \\ \hline
 C-Field & Typ telegramu & 44h \\ \hline
 M-Field & Výrobce zařízení & 01h \\ \hline
 M-Field & Výrobce zařízení & 6Ah \\ \hline
-
-\end{tabular}
-\end{table}
-
-
-
-\begin{table}[!ht]
-\centering
-%\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|l|c|}
-\hline
-\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
 A-Field & Sériové číslo & 44h \\ \hline
 A-Field & Sériové číslo & 93h \\ \hline
 A-Field & Sériové číslo & 67h \\ \hline
@@ -413,12 +415,6 @@ CRC & Kontrolní součet & 97h \\ \hline
 VIFE & VIFE & 00h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 76h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 23h \\ \hline
-DATA1 & Hodnota spotřeby tafifu 1 & 85h \\ \hline
-DATA1 & Hodnota spotřeby tafifu 1 & 01h \\ \hline
-DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
-DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
-DIF & DIF & 86h \\ \hline
-DIFE & DIFE & 20h \\ \hline
 \end{tabular}
 \end{table}
 
@@ -428,6 +424,12 @@ DIFE & DIFE & 20h \\ \hline
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 85h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 01h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
+DIF & DIF & 86h \\ \hline
+DIFE & DIFE & 20h \\ \hline
 VIF & VIF & 83h \\ \hline
 VIFE & VIFE & 00h \\ \hline
 DATA2 & Hodnota spotřeby tafifu 2 & 97h \\ \hline
@@ -443,4 +445,9 @@ CRC & Kontrolní součet & 97h \\ \hline
 \end{tabular}
 \end{table}
 
+\newpage
+
+\vspace{+10pt}	
+
+Položky DATA1 a DATA2 obsahují hodnoty obou tarifů uložené v LSB a vyjádřené v KWh.
 

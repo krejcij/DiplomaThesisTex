@@ -64,10 +64,11 @@ Jelikož primárním jazykem využívaným na platformě RaspberryPi je Python, 
 Před samotným vyčítáním dat bylo potřeba zjistit či nastavit přenosové parametry všech použitých zařízení:
 
 \begin{itemize}
-	\item Komunikační modul IQRF nastaven do módu T ve funkci skeneru.
+	\item Komunikační modul IQRF nastaven do módu T1 ve funkci skeneru.
 	\item Čidlo Weptech je nastaveno do módu T1 s intervalem zasílání 1 minuta. 
 	\item Modul Bonega je nastaven do módu T1 se zapnutým šifrováním AES128 v módu 5 a s intervalem zasílání 20-24 sekund v odpočtovém období a 4 intervalem minuty mimo odpočtové období.
-	\item \colorbox[rgb]{1,0,0}{Doplnit dle ZPA a Kamstrupu}
+	\item Elektroměr ZPA je nastaven do módu T2 s intervalem vysílání 1 minuta.
+	\item Měřič Kamstrup je nastaven do módu T1 s intervalem vysílání 15 minut.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

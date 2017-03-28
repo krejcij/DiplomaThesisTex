@@ -24,9 +24,9 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces UniPi roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i } deska \color@box {[rgb]}{1,0,0}{PREFOTIT}}}{38}{figure.80}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces UniPi NEURON S, M a L \cite {UniPiBoard2} \color@box {[rgb]}{1,0,0}{ZAROVNAT}}}{39}{figure.82}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Detail propojen\IeC {\'\i } desek}}{40}{figure.85}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Detail osazen\IeC {\'e} UniPi desky}}{41}{figure.86}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Detail osazen\IeC {\'e} UniPi desky}}{40}{figure.86}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Detail vnit\IeC {\v r}n\IeC {\'\i }ho uspo\IeC {\v r}\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } UniPi Neuronu S103 \color@box {[rgb]}{1,0,0}{PREFOTIT}}}{41}{figure.87}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v2 \color@box {[rgb]}{1,0,0}{PREKRESLIT}}}{42}{figure.88}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v2 \color@box {[rgb]}{1,0,0}{PREKRESLIT}}}{41}{figure.88}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces UART r\IeC {\'a}mec \cite {SberniceUART} \color@box {[rgb]}{1,0,0}{PREKRESLIT}}}{43}{figure.92}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru \cite {SberniceGPIO} \color@box {[rgb]}{1,0,0}{SLOUCIT VYSE}}}{45}{figure.98}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72DA-WMB \cite {ModulIQRF}}}{47}{figure.102}
@@ -40,6 +40,7 @@
 \contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{62}{figure.148}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Bezdr\IeC {\'a}tov\IeC {\'y} modul Bonega~\cite {CidloBonega}}}{67}{figure.156}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{69}{figure.161}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{72}{figure.166}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{83}{figure.209}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Ukazka vizualizace dat}}{84}{figure.217}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{72}{figure.178}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{83}{figure.222}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Ukazka vizualizace dat}}{84}{figure.230}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Ukazka vizualizace dat}}{99}{figure.269}
