@@ -4,10 +4,7 @@ V současnosti existuje velké množství zařízení v roli výpočetní jednot
 
 Mezi nejznámější nízkovýkonové (embedded) zařízení patří open-source Arduino (Kap.~\ref{KapArduino}), RaspberryPi (Kap.~\ref{KapRaspi}) a jejich klony (Kap.~\ref{KapArduinoKlony} a \ref{KapRaspiKlony}). Poté budou zmíněny desky předních firem výrobců procesorů Intel (Kap.~\ref{KapIntel}) a AMD (Kap.~\ref{KapAMD}) a v neposlední řadě se podíváme na desky firmy CubieBoard (Kap.~\ref{KapCubie}), HardKernel (Kap.~\ref{KapKernel}) a další. 
 
-Jejich vlastnosti jsou přehledně shrnuty v příloze \ref{PrilohaTabulka}.
-
-\colorbox[rgb]{1,0,0}{doplnit finalne tabulku a dostat ji na lezatou A3 do prace}
-
+Jejich vlastnosti jsou přehledně shrnuty v příloze \ref{PrilohaTabulkaTabulka}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -19,11 +16,11 @@ Jejich vlastnosti jsou přehledně shrnuty v příloze \ref{PrilohaTabulka}.
 \section{Arduino}
 \label{KapArduino}
 
-	Ardiuno je skupina několika jednodeskových počítačů založených mikrokontrolérech. Nejedná se však o klasický stolní počítač IBM PC, ale o protypovací desku, ke které se spíše jak ovládací  zobrazovací periferie připojují senzory, moduly, serva, displeje. Projekt je od svého počátku šířen jako open-source, příručka jazyka a externí knihovny jsou pak šířeny pod licencí Creative Commons.
+Ardiuno je skupina několika jednodeskových počítačů založených mikrokontrolérech. Nejedná se však o klasický stolní počítač IBM PC, ale o protypovací desku, ke které se spíše jak ovládací  zobrazovací periferie připojují senzory, moduly, serva, displeje. Projekt je od svého počátku šířen jako open-source, příručka jazyka a externí knihovny jsou pak šířeny pod licencí Creative Commons.
 	
-	Výrobce těchto desek vytvořil vývojové prostředí shodné pro všechny produkty Ardiuno. To se nazvývá Arduino IDE, je dostupné zdarma na webu výrobce a podporuje jazyk Wiring~\cite{embed_about_wiring_2011}, což je upravená verze jazyka C. Prostředí zároveň obsahuje i Serial Monitor, který slouží k oboustranné sériové komunikaci mezi Arduinem a PC. Alternativou ještě může být prostředí Processing~\cite{embed_about_processing_2015} využívající stejnojmenný jazyk, umožňující vytváření grafických multiplatformních aplikací.
+Výrobce těchto desek vytvořil vývojové prostředí shodné pro všechny produkty Ardiuno. To se nazvývá Arduino IDE, je dostupné zdarma na webu výrobce a podporuje jazyk Wiring~\cite{embed_about_wiring_2011}, což je upravená verze jazyka C. Prostředí zároveň obsahuje i Serial Monitor, který slouží k oboustranné sériové komunikaci mezi Arduinem a PC. Alternativou ještě může být prostředí Processing~\cite{embed_about_processing_2015} využívající stejnojmenný jazyk, umožňující vytváření grafických multiplatformních aplikací.
 	
-	Na deskách bývá několik diod, resetovací tlačítko, různé přídavné sběrnice (UART, I2C), konektory pro ICSP programování, napájecí konektor, oscilátor a obvod zprostředkovávající komunikaci po USB.
+Na deskách bývá několik diod, resetovací tlačítko, různé přídavné sběrnice (UART, I2C), konektory pro ICSP programování, napájecí konektor, oscilátor a obvod zprostředkovávající komunikaci po USB.
 	
 Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývají Shieldy, mají převážně stejný tvar jako deska Arduina a připojují se pomocí dlouhých pinů. Zabírají celou plochu, ale většina z nich dále zpřístupňuje GPIO (General Purpose Input/Output) piny, lze je tedy skládat na sebe. Stejně jako Arduino desek existuje i celá řada shieldů.
 	
@@ -73,7 +70,7 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		
 				\begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.45]{obrazky/emded_arduino_due}
+    \includegraphics[scale=0.40]{obrazky/emded_arduino_due}
   \end{center}
   \caption{Arduino Due~\cite{ArduinoDue}}
 \end{figure}
@@ -81,7 +78,8 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 		\subsection{Arduino Mini} 
 	Arduino Mini je asi nejmenší oficiální verze Arduina, navržená pro úsporu místa. Daní za malé rozměry je však absence USB portu. K programování je tedy nutné použít externí USB2Serial převodník. Jeho výkon však nijak nezaostává za většími deskami. Běží na procesoru ATmega328 s taktem 16\,MHz. Pro své malé rozměry je vhodný k použití například v chytrých vypínačích, či dálkových ovladačích~\cite{ArduinoMini}.	
 	
-			\begin{figure}[!ht]
+
+\begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.3]{obrazky/emded_arduino_mini}
   \end{center}
@@ -408,9 +406,6 @@ Společnosti Intel přináší dva jednodeskové počítače založené na platf
   \end{center}
   \caption{Intel Edison a jeho umisteni na Arduino boardu~\cite{IntelEdison}}
 \end{figure}
-
-\colorbox[rgb]{1,0,0}{VYMENIT OBRAZKY ZA LEPSI}
-
 				\item Intel breakout board -  Tato deska je díky svým malým rozměrům vhodná pro prototypování nositelné elektroniky či pro Internet věcí. Obsahuje pájitelnou mřížku pro zpřístupnění věškerých dostupých rozhraní. Na desku jsou vyvedeny pouze dva USB konektory, jeden pro napájení a druhý připojený k UART sběrnici.
 				\begin{figure}[!h]
   \begin{center}

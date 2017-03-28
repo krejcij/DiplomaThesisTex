@@ -5,8 +5,7 @@ Pro účely testování komunikace bylo využito několik typů dostupných zař
 	\item pokojové čidlo teploty a vlhkosti Weptech OMST-868A~\cite{CidloWeptech},
 	\item modul pro vodoměry Bonega~\cite{CidloBonega},
 	\item ultrazvukový měřič tepla a chladu Kamstrup Multical 402~\cite{CidloKamstrup},
-	\item třífázový elektroměr ZPA ZE302~\cite{CidloZpa},
-	\item obecná zařízení Pikkerton~\cite{CidloPikkerton}.
+	\item třífázový elektroměr ZPA ZE302~\cite{CidloZpa}.
 \end{itemize}
 
 Všechna tyto zařízení poskytují formát dat dle platné specifikace OMS~(Open Metering Standard)~3.0.1~\cite{NormaOMS}, která vychází z normy EN 13757-4~\cite{Norma4} pro bezdrátový protokol WM-Bus.
@@ -228,7 +227,7 @@ Data						   & Ověření AES                                    & 2Fh          
 
 \newpage{}
 
-Modul Bonega pracuje pouze v režimu šifrování přenášenných dat pomocí AES128~mód~5. Při přenosu je tedy celá sekce data šifrována, telegram popsaný v Tab. \ref{TabulkaTelegram2} je popisován po dešifrování.
+Modul Bonega pracuje pouze v režimu šifrování přenášenných dat pomocí AES128 mód 5. Při přenosu je tedy celá sekce data šifrována, telegram popsaný v Tab. \ref{TabulkaTelegram2} je popisován po dešifrování.
 
 Některé z položek je potřeba blíže vysvětlit:
 
@@ -247,14 +246,49 @@ Některé z položek je potřeba blíže vysvětlit:
 	
 	\section{Kamstrup}
 	
-	Kamstrup Multical 402 je kompatkní ultrazvukový měřič tepla a chladu, tedy kombinace kalorimetru a ultrazvukového průtokoměru. Je určen k měření tepla, chladu a kombinovanemu měření tepla a chladu ve všech systémech na bázi vody s rozmetím teplot 2\,$^{\circ}$C az 130\,$^{\circ}$C. Skládá se z kalkulátoru, průtokoměru a dvou teplotních snímačů. Měřič pracuje v režimech T1 a C1  povinným šifrováním přenášených dat pomocí AES128 v módu CBC. Při každém přenosu poskytuje 9 aktuálních hodnot a 2 měsíční souhrny.
+	Kamstrup Multical 402 je kompatkní ultrazvukový měřič tepla a chladu, tedy kombinace kalorimetru a ultrazvukového průtokoměru. Je určen k měření tepla, chladu a kombinovanemu měření tepla a chladu ve všech systémech na bázi vody s rozmetím teplot 2\,$^{\circ}$C az 130\,$^{\circ}$C. Skládá se z kalkulátoru, průtokoměru a dvou teplotních snímačů. 
 	
-	 \begin{figure}[!ht]
+ \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.7]{obrazky/zarizeni_kamstrup}
   \end{center}
   \caption{Kamstrup Multical 402~\cite{CidloKamstrup}}
 \end{figure}
+	
+		
+\subsubsection{Parametry zařízení}
+\begin{itemize}
+	\item Rozsah měření průtoku: 0,6 až 15 m\textsuperscript{3/hod}.
+	\item Rozsah měření teploty vody: 2 až 180 $^{\circ}$C.
+	\item Rozsah teploty vody kalkulátorem: 2 až 130 $^{\circ}$C.
+	\item Mód přenosu: T1 nebo C1.
+	\item Interval přenosu: 15\,minut 
+	\item Šifrování přenosu: AES-128~mód~5.
+	\item Napájení: integrovaná baterie.
+	\item Výdrž baterie: až 16~let.
+\end{itemize}
+
+\vspace{+10pt}	
+	
+Měřič pracuje v režimech T1 a C1  povinným šifrováním přenášených dat pomocí AES128 v módu CBC. Při každém přenosu poskytuje 9 aktuálních hodnot a 2 souhrné hodnoty za poslední rok:
+
+\begin{itemize}
+	\item Tepelná energie (přívodní nebo vratné potrubí)
+	\item Enegie chladu (přívodní nebo vratné potrubí))
+	\item Energie vratného potrubí
+	\item Energie přívodního potrubí
+	\item Měření průtoku
+	\item Měření výkonu
+	\item Minimální a maximální průtok a výkon
+	\item Měření teploty
+\end{itemize}
+
+\vspace{+10pt}	
+
+Souhrné hodnoty jsou ve výchozím stavu zasílány jako roční přehled, ale lze je překonfigurováním WM-Bus modulu v měřiči změnit na měsíční interval.
+
+\subsubsection{Formát telegramu}
+Telegram je ve výchozím stavu vysílán každých 15 minut pro aktuální hodnoty a má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegram2}~\cite{CidloBonega}:
 
 \begin{table}[!ht]
 \centering
@@ -264,27 +298,67 @@ Některé z položek je potřeba blíže vysvětlit:
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
-Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline
-
+A-Field            & Sériové číslo         & 11h \\ \hline
+A-Field            & Sériové číslo         & 37h \\ \hline
+A-Field            & Sériové číslo         & 35h \\ \hline
+A-Field            & Verze zařízení        & 11h \\ \hline
+A-Field            & Typ zařízení          & 04h \\ \hline
+Ci-pole            & Odpověd od zařízení   & 72h \\ \hline
+AccNo              & Číslo přístupu        & CAh \\ \hline
+Status             & Status zařízení       & 10h \\ \hline
+Configuration word & Položky šifrovaní AES & 50h \\ \hline
+Configuration word & Položky šifrovaní AES & 05h \\ \hline
+AES encryption     & Položky šifrovaní AES & 2Fh \\ \hline
+AES encryption     & Položky šifrovaní AES & 2Fh \\ \hline
+DR1                & DIF: 4 binarni byty   & 04h \\ \hline
+DR1                & VIF: energie v kWh    & 0Fh \\ \hline
+DR1                & hodnota energie       & 99h \\ \hline
+DR1                & hodnota energie       & 99h \\ \hline
+DR1                & hodnota energie       & 99h \\ \hline
+DR1                & hodnota energie       & 99h \\ \hline
+…                  & …                     & ..  \\ \hline
+DR12               & DIF: 4 binarni byty   & 04h \\ \hline
+DR12               & VIF: průtok v m3      & 14h \\ \hline
+DR12               & hodnota průtoku       & 99h \\ \hline
+DR12               & hodnota průtoku       & 99h \\ \hline
+DR12               & hodnota průtoku       & 99h \\ \hline
+DR12               & hodnota průtoku       & 99h \\ \hline
+Fill               & Výplňové byty         & 2Fh \\ \hline
+Fill               & Výplňové byty         & 2Fh \\ \hline
+Fill               & Výplňové byty         & 2Fh \\ \hline
+Fill               & Výplňové byty         & 2Fh \\ \hline
+Fill               & Výplňové byty         & 2Fh \\ \hline
+Fill               & Výplňové byty         & 2Fh \\ \hline
+Fill               & Výplňové byty         & 2Fh \\ \hline
 \end{tabular}%}
 \end{table}
 
+
+\newpage
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\section{ZPA}
 
-\colorbox[rgb]{1,0,0}{doplnit text}
+ZPA ZE310 je třífázový elektronický dvoutarifní elektroměr pro měření činné energie, určený pro přímé i nepřímé připojení. Daný model vysílá v módu T2 s intervalem vysílání jedna minuta, vysílány jsou hodnoty spotřeby v obou tarfiech.
 
 	 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[scale=0.5]{obrazky/zarizeni_zpa}
+    \includegraphics[scale=0.35]{obrazky/zarizeni_zpa}
   \end{center}
   \caption{ZPA ZE.310~\cite{CidloZpa}}
 \end{figure}
 
-\colorbox[rgb]{1,0,0}{doplnit telegram}
+
+\subsubsection{Parametry zařízení}
+\begin{itemize}
+	\item Počet měřených fází: 3 (daný subtyp)
+	\item Počet tarifů: 2 (daný subtyp)
+	\item Režim krytí: IP54
+	\item Mód přenosu: T1.
+	\item Interval přenosu: 1\,minuta 
+\end{itemize}
 
 \begin{table}[!ht]
 \centering
@@ -294,33 +368,79 @@ Fill               & Výplňové byty (13x)                                 & 2F
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
-Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline
+L-Field & Délka telegramu & 2Ah \\ \hline
+C-Field & Typ telegramu & 44h \\ \hline
+M-Field & Výrobce zařízení & 01h \\ \hline
+M-Field & Výrobce zařízení & 6Ah \\ \hline
 
-\end{tabular}%}
+\end{tabular}
 \end{table}
-	
-	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
 
-\section{Pikkerton}
 
-\colorbox[rgb]{1,0,0}{doplnit obecny text}
-	
-	\begin{table}[!ht]
+
+\begin{table}[!ht]
 \centering
-\caption{Telegram ze zařízení Pikkerton~\cite{CidloPikkerton}}
-\label{TabulkaTelegramPikkerton}
 %\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
-Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline
-
-\end{tabular}%}
+A-Field & Sériové číslo & 44h \\ \hline
+A-Field & Sériové číslo & 93h \\ \hline
+A-Field & Sériové číslo & 67h \\ \hline
+A-Field & Sériové číslo & 12h \\ \hline
+A-Field & Verze zařízení & 01h \\ \hline
+A-Field & Typ zařízení & 02h \\ \hline
+CRC & Kontrolní součet & 22h \\ \hline
+CRC & Kontrolní součet & 80h \\ \hline
+Ci-pole & Odpověd od zařízení & 72h \\ \hline
+Identification Number & Sériové číslo & 44h \\ \hline
+Identification Number & Sériové číslo & 93h \\ \hline
+Identification Number & Sériové číslo & 67h \\ \hline
+Identification Number & Sériové číslo & 12h \\ \hline
+Manifacturer ID & Výrobce zařízení & 01h \\ \hline
+Manifacturer ID & Výrobce zařízení & 6Ah \\ \hline
+Version & Verze zařízení & 01h \\ \hline
+Device type & Typ zařízení & 02h \\ \hline
+AccNo & Číslo přístupu & CAh \\ \hline
+Status & Status zařízení & 10h \\ \hline
+Configuration word & Položky šifrovaní AES & 50h \\ \hline
+Configuration word & Položky šifrovaní AES & 05h \\ \hline
+DIF & DIF & 86h \\ \hline
+DIFE & DIFE & 20h \\ \hline
+VIF & VIF & 83h \\ \hline
+CRC & Kontrolní součet & C8h \\ \hline
+CRC & Kontrolní součet & 97h \\ \hline
+VIFE & VIFE & 00h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 76h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 23h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 85h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 01h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
+DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
+DIF & DIF & 86h \\ \hline
+DIFE & DIFE & 20h \\ \hline
+\end{tabular}
 \end{table}
 
-\colorbox[rgb]{1,0,0}{doplnit telegram}
+\begin{table}[!ht]
+\centering
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|c|}
+\hline
+\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+VIF & VIF & 83h \\ \hline
+VIFE & VIFE & 00h \\ \hline
+DATA2 & Hodnota spotřeby tafifu 2 & 97h \\ \hline
+DATA2 & Hodnota spotřeby tafifu 2 & 31h \\ \hline
+DATA2 & Hodnota spotřeby tafifu 2 & 92h \\ \hline
+DATA2 & Hodnota spotřeby tafifu 2 & 00h \\ \hline
+DATA2 & Hodnota spotřeby tafifu 2 & 00h \\ \hline
+CRC & Kontrolní součet & C8h \\ \hline
+CRC & Kontrolní součet & 97h \\ \hline
+Data & Kontrolní data & 00h \\ \hline
+CRC & Kontrolní součet & C8h \\ \hline
+CRC & Kontrolní součet & 97h \\ \hline
+\end{tabular}
+\end{table}
 
 
