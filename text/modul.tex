@@ -37,13 +37,16 @@ Modul je vyráběn ve třech verzích (viz Obr.~\ref{ObrazekAnteny}) dle připoj
 		\item TR-72DA-WMB má integrovanou anténu přímo na desce modulu. Dosah signálu toto typu je až 320\,m v módu T a 365\,m v módu S.
 \end{itemize}
 
- \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.7]{obrazky/modul_antena}
-  \end{center}
-  \caption{Přehled typu modulu dle antény \cite{ModulIQRF}}
-	\label{ObrazekAnteny}
-\end{figure}
+\begin{figure*}[!ht]
+    \centering
+			\subfigure[TR-72D-WMB]{\includegraphics[width=0.3\textwidth]{obrazky/modul_antenaa}\label{modul_antenaa}}
+			\hspace*{5mm}
+			\subfigure[TR-72DC-WMB]{\includegraphics[width=0.3\textwidth]{obrazky/modul_antenab}\label{modul_antenab}}
+			\hspace*{5mm}
+			\subfigure[TR-72DA-WMB]{\includegraphics[width=0.3\textwidth]{obrazky/modul_antenac}\label{modul_antenac}}
+		\caption{Přehled typu modulu dle antény \cite{ModulIQRF}}
+		\label{ObrazekAnteny}
+\end{figure*}
 
 \section{Komunikační módy}
 
@@ -69,21 +72,12 @@ Praktické využíti jednotlivých módu zobrazuje Obr.~\ref{TopologieIQRF}.
 
 S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož parametry jsou 19200\,Bd, 8\,bitů, žádná parita a 1 stop bit.
 		
- \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.4]{obrazky/modul_zada}
-  \end{center}
-  \caption{Zadní strana modulu s popisem pinů \colorbox[rgb]{1,0,0}{PREDELAT}}
-\end{figure}
-
 Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i ke samotné komunikaci s modulem. Každý příkaz začíná znakem \textgreater. Každá zpráva odpověďi začíná znakem \textless. Každému příkazu musí předcházet budící znak NULL (0x00) následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem CR (0x0D). 
 
 Obecná struktura~\cite{ModulIQRF}~paketu příkazu je 
 
-\colorbox[rgb]{1,0,0}{Přebouchat příkazy a odpovědi do obecných ráměčků ala článek}
-
 \begin{eqnarray}
-	>[CC][RW][DATA][CR]
+			>[CC][RW][DATA][CR]
 \end{eqnarray}
 
 kde CC je jednobajtový kód daného příkazu, RW je jednobajtový příznak zápisu (\textbf{:}) či čtení dat (\textbf{?}) dat, DATA jsou zapisovaná data, pokud se jedná o zápis a CR je znak ukončení.
