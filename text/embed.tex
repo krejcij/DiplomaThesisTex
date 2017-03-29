@@ -4,6 +4,8 @@ V současnosti existuje velké množství zařízení v roli výpočetní jednot
 
 Mezi nejznámější nízkovýkonové (embedded) zařízení patří open-source Arduino (Kap.~\ref{KapArduino}), RaspberryPi (Kap.~\ref{KapRaspi}) a jejich klony (Kap.~\ref{KapArduinoKlony} a \ref{KapRaspiKlony}). Poté budou zmíněny desky předních firem výrobců procesorů Intel (Kap.~\ref{KapIntel}) a AMD (Kap.~\ref{KapAMD}) a v neposlední řadě se podíváme na desky firmy CubieBoard (Kap.~\ref{KapCubie}), HardKernel (Kap.~\ref{KapKernel}) a další. 
 
+Z výše uvedených byly vybrány jen nízkovýkonová zařízení, využitelná pro chytrou domácnost či Internet věcí, s vyvedenými GPIO piny a dostatečnou dokumentací.
+
 Jejich vlastnosti jsou přehledně shrnuty v příloze \ref{PrilohaTabulkaTabulka}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,14 +135,21 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	\subsection{Bare Bones Board} 
 	Bare Bones Board je kompatibilní deska, tvarově nepřipomínající žádný Arduino produkt. Kvůli rozložení pinů nepodporující shieldy. Vyráběná a prodávané jako kit firmou Modern Device Company.
 	
+	\begin{figure*}[!ht]
+    \centering
+			\subfigure[Bare Bones Board]{\includegraphics[width=0.45\textwidth]{obrazky/embed_barebones}\label{emded_barebones}}
+			\subfigure[Freaduino]{\includegraphics[width=0.45\textwidth]{obrazky/embed_freaduino}\label{emded_freaduino}}
+					\caption{Bare Bones Board a Freaduino}
+	\end{figure*}	
+		
+	\subsection{Freaduino} 
+	Freaduino je kompatibilní deska, tvarově shodná s Arduino UNO, vyráběná a prodávaná firmou ElecFreak jako kit The Freaduino Uno. Podporuje 3.3\,V logiku a napájení. Má piny na připojení modulů (XBee). Napájecí piny zvládají zátěž až 2\,A.
+	
 	\subsection{Runtime} 
 	Runtime je kompatibilní deska, tvarově nepřipomínající žádný Arduino produkt. Kvůli rozložení pinů nepodporující shieldy. Vyráběná a prodávaná jako kit firmou NKC Electronics.
 	
 	\subsection{Nanode} 
 	Nanode je kompatibilní deska, tvarově nepřipomínající žádný Arduino produkt. Tvarově připomíná Arduino UNO, rozložení pinů je kompatibilní.
-	
-	\subsection{Freaduino} 
-	Freaduino je kompatibilní deska, tvarově shodná s Arduino UNO, vyráběná a prodávaná firmou ElecFreak jako kit The Freaduino Uno. Podporuje 3.3\,V logiku a napájení. Má piny na připojení modulů (XBee). Napájecí piny zvládají zátěž až 2\,A.
 	
 	\subsection{Seeeduino} 
 	Seeeduino je kompatibilní deska, vzhledem připomínající Arduino UNO, parametricky shodná s Arduino Mega.
@@ -150,10 +159,16 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 	
 	\subsection{Diavolino} 
 	Diavolino je free klon Arduina, vzhledově i parametricky podobný Arduino UNO, bez vyvedených konektorů. Vyráběná a prodávané jako kit firmou Evil Mad Scientist.
+		
+\begin{figure*}[!ht]
+    \centering
+			\subfigure[Diavolino]{\includegraphics[width=0.45\textwidth]{obrazky/embed_diavolino}\label{emded_diavolino}}
+			\subfigure[Boarduino]{\includegraphics[width=0.45\textwidth]{obrazky/embed_boarduino}\label{emded_boarduino}}
+					\caption{Diavolino a Boarduino}
+	\end{figure*}		
 	
 	\subsection{Boarduino} 
 	Boarduino je levnější klon Arduina Diecimila s piny pro zapojení rovnou do nepájivého pole.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -241,6 +256,16 @@ Vzrůstající popularita RaspberryPi dala stejně jak u Arduina vzniknout celé
 	\textbf{BananaPi BPI-M3} obsahuje osmijádrový procesor 1,8\,GHz s 2\,GB RAM, dále zahrnuje Wifi b/g/n a integrované Bluetooth 4. Obsahuje SATA port.
 	
 	\textbf{BananaPi BPI-M64} obsahuje čtyřjádrový 64 bitový SoC procesor Allwinner A64.
+	
+	
+	\begin{figure*}[!ht]
+    \centering
+			\subfigure[BananaPi BPI-M2]{\includegraphics[width=0.45\textwidth]{obrazky/embed_bananapim2}\label{embed_bananapim2}}
+			\subfigure[OrangePi Plus2]{\includegraphics[width=0.45\textwidth]{obrazky/embed_orangepiplus2}\label{embed_orangepiplus2}}
+			\caption{BananaPi BPI-M2 a OrangePi Plus2}
+\end{figure*}
+	
+	
 
 	%%% ======================================= ORANGE PI ============================== %%%
 	\subsection{OrangePi}
@@ -270,12 +295,12 @@ Vzrůstající popularita RaspberryPi dala stejně jak u Arduina vzniknout celé
 		
 			\textbf{Cubieboard5 }nabízí osmijádrový procesor Allwinner H8, který doplňují 2\,GB RAM. Navíc oproti předchozím verzím má kromě HDMI i DP (Display Port), přináší taktéž konktor pro připojení externí baterie. Došlo k navýšení GPIO pinů na 70, které navíc přináší LRADC (Low Resolution Analog to Digital Converter) a PS2 (Personal System/2). SATA konektor pomocí speciální desky podporuje připojení dvou SATA disků s podporou RAIDu.
 		
-	\begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.75]{obrazky/embed_cubie_1}
-  \end{center}
-  \caption{Cubieboard5~\cite{CubieBoards}}
-\end{figure}
+	\begin{figure*}[!ht]
+    \centering
+			\subfigure[Cubieboard1]{\includegraphics[width=0.45\textwidth]{obrazky/embed_cubie_1}\label{embed_cubie_1}}
+			\subfigure[UpBoard 1]{\includegraphics[width=0.45\textwidth]{obrazky/embed_upboard}\label{embed_upboard}}
+			\caption{Cubieboard1 a UpBoard 1}
+\end{figure*}
 		
 
 CubieBoardy již poskytují dostatečný výkon pro embeeded zařízení, přináší oproti RaspberryPi mnoho rozšiřujících sběrnic, avšak pro nedostatečnou podporu či zastoupení v evropských zemí a velmi častou nedostupnost webu výrobce, včetně dostupnosti anglické dokumentace pro  programování jednotlivých rozhraní, není moc vhodná pro IoT. Hodí se spíše pro aplikace jako multimediální centrum či nízkokládový počítač. 	
@@ -296,14 +321,12 @@ Pine64 je rodina tří jednodeskových počítačů společnosti PINE64. Tyto po
 
 \textbf{PINE A64+ 2GB} má oproti předchozí verzi 2\,GB paměti.
 
-\begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.65]{obrazky/embed_pine}
-  \end{center}
-  \caption{PINE A64+ 2GB~\cite{Pine64}}
-\end{figure}
-
-\newpage
+	\begin{figure*}[!ht]
+    \centering
+			\subfigure[PINE A64+ 2GB]{\includegraphics[width=0.45\textwidth]{obrazky/embed_pine}\label{embed_pine}}
+			\subfigure[HardKernel Odroid-C2]{\includegraphics[width=0.45\textwidth]{obrazky/embed_odroidc2}\label{embed_odroidc2}}
+			\caption{PINE A64+ 2GB a HardKernel Odroid-C2}
+\end{figure*}
 
 %%% ======================================= ODROID ============================== %%%
 \subsection{HardKernel Odroid}
@@ -392,6 +415,10 @@ Desky Intel se hodí spíše pro větší typy projektů, kdy již vývojové pr
 	
 		\textbf{Gizmo Board 1} beží dvoujádrovém APU G-T40E od firmy AMD, běžíci na frekvenci 1GHz při příkonu 10\,W. Součástí procesoru je grafický čip Radeon HD 6250. K dispozici je 1\,GB RAM. Deska dále obsahuje dvojici USB, VGA, audio výstup, SATA a ethernet konektor. Další sběrnice jako GPIO, SPI, I2C, UART a PWM jsou dostupné po připojení rozšiřující karty přes LowSpeed~\cite{AmdGizmo1}.
 	
+	\textbf{ Gizmo Board 2} je vybaven APU AMD GX210HA na frekvenci 1 GHz, s integrovaným GPU AMD Radeon HD 8210E s frekvencí 300\,MHz. Příkon je 9\,W. Tento model má také 1\,GB RAM. tato verze disponuje 4 USB, HDMI výstupem, MicroSD slotem a ethernetovým portem. Mezi další rozhraní patří PCI Express (Peripheral Component Interconnect Express), GPIO, SPI, I2C, UART, DAC/ADC nebo PWM \cite{AmdGizmo2}.
+
+
+	\newpage
 
 \begin{figure*}[!ht]
     \centering
@@ -400,9 +427,7 @@ Desky Intel se hodí spíše pro větší typy projektů, kdy již vývojové pr
 		\caption{AMD Gizmo}
 \end{figure*}
 
-\newpage
 
-\textbf{ Gizmo Board 2} je vybaven APU AMD GX210HA na frekvenci 1 GHz, s integrovaným GPU AMD Radeon HD 8210E s frekvencí 300\,MHz. Příkon je 9\,W. Tento model má také 1\,GB RAM. tato verze disponuje 4 USB, HDMI výstupem, MicroSD slotem a ethernetovým portem. Mezi další rozhraní patří PCI Express (Peripheral Component Interconnect Express), GPIO, SPI, I2C, UART, DAC/ADC nebo PWM \cite{AmdGizmo2}.
 
 	
 Oba počítače již poskytují dostatečný výkon pro embeeded zařízení, avšak oba již využívají aktivní chlazení, jsou hlučnější, větších rozměrů a nemají dostatečnou dokumentaci k přístupu a programování jednotlivých rozhraní. Hodí se spíše pro aplikace jako multimediální centrum či jednodušší počítač, než pro IoT nebo průmyslovou automatizaci. Komunita okolo AMD Gizmo prakticky neexistuje.

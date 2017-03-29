@@ -123,17 +123,18 @@ UniPi Neuron je na rozdíl od první verze, kdy se rozšiřující deska Raspber
 \item Notifikační diody pro zobrazení stavu jednotlivých portů.
 \end{itemize}
 
-UniPi Neuron existuje v několika verzích (viz Obr.~\ref{UniNeuronModels}), odvislých od počtu digitálních vstupů a výstupů, parametrů procesoru a velikosti paměti RAM. Do budoucna by měly být také k dostání verze s jedním konkrétním modulem (Wireless M-Bus, ZigBee, GPRS, \ldots) uvnitř.
+UniPi Neuron existuje v několika verzích (viz Obr.~\ref{UnipiNeuronModels}), odvislých od počtu digitálních vstupů a výstupů, parametrů procesoru a velikosti paměti RAM. Do budoucna by měly být také k dostání verze s jedním konkrétním modulem (Wireless M-Bus, ZigBee, GPRS, \ldots) uvnitř.
 
 \newpage
 
- \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.75]{obrazky/unipi_unipi_verze}
-  \end{center}
-  \caption{UniPi NEURON S, M a L  \cite{UniPiBoard2}   \colorbox[rgb]{1,0,0}{ZAROVNAT}}
-	\label{UniNeuronModels}
-\end{figure}
+\begin{figure*}[!ht]
+    \centering
+			\subfigure[S103]{\includegraphics[width=0.3\textwidth]{obrazky/unipi_neuron_s}\label{unipi_neuron_s}}
+			\subfigure[M203]{\includegraphics[width=0.3\textwidth]{obrazky/unipi_neuron_m}\label{unipi_neuron_m}}
+			\subfigure[L303]{\includegraphics[width=0.35\textwidth]{obrazky/unipi_neuron_l}\label{unipi_neuron_l}}
+			\caption{Unipi Neuron~\cite{UniPiBoard2}}
+			\label{UnipiNeuronModels}
+\end{figure*}
 
 
 Standardní modely NEURON mají proměnlivé množství digitálních vstupů a reléových výstupů. Jejich počet je uveden v Tab.~\ref{TableUnipiIO}.
@@ -159,11 +160,11 @@ Standardní modely NEURON mají proměnlivé množství digitálních vstupů a 
 	\end{center}
 \end{table}
 
-Písmeno x v tabulce~\ref{TableUnipiVar} bývá nahrazeno číslem 1-3 dle osazeného typu RaspberryPi:
+Písmeno x v Tab.~\ref{TableUnipiVar} bývá nahrazeno číslem 1-3 dle osazeného typu RaspberryPi:
 
 \begin{table}[!ht]
 \caption{Varianty modelů UniPi NEURON dle CPU a RAM \cite{UniPiBoard2}}
-\label{TableUnipiVar}
+\label{TableUnipiIO}
 	\begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
