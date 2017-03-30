@@ -102,9 +102,9 @@ UniPi Neuron představuje modulární PLC (Programmable Logic Controller) pro ch
 
  \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.7]{obrazky/unipi_unipi_deska}
+    \includegraphics[scale=0.25]{obrazky/unipi_unipi_deska}
   \end{center}
-  \caption{UniPi rozšiřující deska \colorbox[rgb]{1,0,0}{PREFOTIT}}
+  \caption{UniPi rozšiřující deska}
 	\label{UnipiV2DeskaUnipi}
 \end{figure}
 
@@ -124,8 +124,6 @@ UniPi Neuron je na rozdíl od první verze, kdy se rozšiřující deska Raspber
 \end{itemize}
 
 UniPi Neuron existuje v několika verzích (viz Obr.~\ref{UnipiNeuronModels}), odvislých od počtu digitálních vstupů a výstupů, parametrů procesoru a velikosti paměti RAM. Do budoucna by měly být také k dostání verze s jedním konkrétním modulem (Wireless M-Bus, ZigBee, GPRS, \ldots) uvnitř.
-
-\newpage
 
 \begin{figure*}[!ht]
     \centering
@@ -147,9 +145,10 @@ Standardní modely NEURON mají proměnlivé množství digitálních vstupů a 
 \caption{Porovnání modelů UniPi NEURON dle I/O \cite{UniPiBoard2}}
 \label{TableUnipiIO}
 	\begin{center}
+	\resizebox{\textwidth}{!}{%
 	\begin{tabular}{|l|c|c|c|}
 		\hline
-		\textbf{Model} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Počet\\ digitálních \\ vstupů\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Počet \\ digitálních \\ výstupů\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Velikost \\ na DIN liště\end{tabular}}} \\ \hline
+		\textbf{Model} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Počet digitálních vstupů\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Počet digitálních výstupů\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Velikost na DIN liště\end{tabular}}} \\ \hline
 		\textbf{S10x} & 4 & 0 & 4 moduly \\ \hline
 		\textbf{M10x} & 12 & 8 & 8 modulů \\ \hline
 		\textbf{M20x} & 20 & 14 & 8 modulů \\ \hline
@@ -158,7 +157,7 @@ Standardní modely NEURON mají proměnlivé množství digitálních vstupů a 
 		\textbf{L20x} & 36 & 28 & 12 modulů \\ \hline
 		\textbf{L30x} & 64 & 0 & 12 modulů \\ \hline
 		\textbf{L40x} & 4 & 56 & 12 modulů \\ \hline
-	\end{tabular}
+	\end{tabular}}
 	\end{center}
 \end{table}
 
@@ -180,38 +179,28 @@ x & \textbf{Osazená deska} & \textbf{CPU} & \textbf{RAM} & \textbf{Další vlas
 
 \newpage
 
-S RaspberryPi je deska UniPi propojena, obdobně jako u první verze, pomocí 26 pinové desky propoující GPIO port na RaspberryPi s konektorem na rozšiřující desce UniPi. Na samotné propojující desce (viz Obr.~\ref{PicureUniPiConnectionImage}) je vyvedena UART a I2C sběrnice. 
+S RaspberryPi je deska UniPi propojena, obdobně jako u první verze, pomocí 26 pinové desky propoující GPIO port na RaspberryPi s konektorem na rozšiřující desce UniPi. Na samotné propojující desce (viz Obr.~\ref{unipi_propojbrain}) je vyvedena UART a I2C sběrnice. 
 
- \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.30]{obrazky/unipi_propojbrain}
-  \end{center}
-	\caption{Detail propojení desek}
-	\label{PicureUniPiConnectionImage}
-\end{figure}
+\begin{figure*}[!ht]
+    \centering
+			\subfigure[Propojení desek]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_propojbrain}\label{unipi_propojbrain}}
+			\hspace*{5mm}
+			\subfigure[Osazená UniPi deska]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_osazeny}\label{unipi_osazeny}}
+			\caption{Detaily UNiPi desky}
+\end{figure*}
 
-Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{PicureUniPiKrabicka}) se signalizačními diodami. UART sběrnice je zde připravena pro připojenů dalších modulů. Tyto desky jsou k dostání v několika verzích, přizpůsobené konektorem pro konkrétní komunikační modul (viz Obr.~\ref{PicureUniPiOsazena}).
+Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{unipi_propojuvnitr}) se signalizačními diodami. UART sběrnice je zde připravena pro připojenů dalších modulů. Tyto desky jsou k dostání v několika verzích, přizpůsobené konektorem pro konkrétní komunikační modul (viz Obr.~\ref{unipi_osazeny}).
+ 
+Celá sestava desek je poté uložena v kovové krabičce s označením vstupů a výstupů (viz Obr.~\ref{unipi_unipi_box}).
 
- \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.30]{obrazky/unipi_osazeny}
-  \end{center}
-	\caption{Detail osazené UniPi desky}
-	\label{PicureUniPiOsazena}
-\end{figure}
 
-\newpage
-
-Celá sestava desek je poté uložena v kovové krabičce s označením vstupů a výstupů (viz Obr.~\ref{PicureUniPiKrabicka}).
-
- \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.65]{obrazky/unipi_propojuvnitr}
-  \end{center}
-	\caption{Detail vnitřního uspořádání UniPi Neuronu S103 \colorbox[rgb]{1,0,0}{PREFOTIT}}
-	\label{PicureUniPiKrabicka}
-\end{figure}
-
+\begin{figure*}[!ht]
+    \centering
+			\subfigure[Uložení v krabičce]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_unipi_box}\label{unipi_unipi_box}}
+			\hspace*{5mm}
+			\subfigure[Připojení diodového panelu]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_propojuvnitr}\label{unipi_propojuvnitr}}
+			\caption{Detaily vnitřního uspořádání UniPi Neuronu S103}
+\end{figure*}
 
 Vnitřní uspořádání desky je řešeno pomocí funkčních celků (viz Obr.~\ref{BlokUniPi2Schema}), které jsou propojeny pomocí I2C sběrnice. Výstupy jednotlivých celků jsou poté vyvedeny na konektory desky.
  \begin{figure}[!ht]
