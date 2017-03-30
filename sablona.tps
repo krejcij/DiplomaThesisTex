@@ -89,7 +89,7 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame4_View0,0]
-TopLine=113
+TopLine=120
 Cursor=6745
 
 [Frame5]
@@ -125,7 +125,7 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame6_View0,0]
-TopLine=143
+TopLine=172
 Cursor=13795
 
 [Frame7]
@@ -143,7 +143,7 @@ Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame7_View0,0]
-TopLine=170
+TopLine=178
 Cursor=12390
 
 [Frame8]
@@ -161,7 +161,7 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame8_View0,0]
-TopLine=267
+TopLine=273
 Cursor=15671
 
 [Frame9]
@@ -256,7 +256,7 @@ Cursor=0
 
 [SessionInfo]
 FrameCount=14
-ActiveFrame=8
+ActiveFrame=0
 
 [Bookmarks]
 text\implementace.tex=309 
