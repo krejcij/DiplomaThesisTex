@@ -36,7 +36,7 @@ Document=text\uvod.tex
 
 [Frame1_View0,0]
 TopLine=0
-Cursor=2454
+Cursor=2426
 
 [Frame2]
 Flags=0
@@ -71,8 +71,8 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame3_View0,0]
-TopLine=500
-Cursor=39900
+TopLine=260
+Cursor=20678
 
 [Frame4]
 Flags=0
@@ -89,7 +89,7 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame4_View0,0]
-TopLine=120
+TopLine=127
 Cursor=6745
 
 [Frame5]
@@ -125,7 +125,7 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame6_View0,0]
-TopLine=172
+TopLine=201
 Cursor=13795
 
 [Frame7]
@@ -143,7 +143,7 @@ Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame7_View0,0]
-TopLine=178
+TopLine=186
 Cursor=12390
 
 [Frame8]
@@ -161,7 +161,7 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame8_View0,0]
-TopLine=273
+TopLine=279
 Cursor=15671
 
 [Frame9]
@@ -256,7 +256,7 @@ Cursor=0
 
 [SessionInfo]
 FrameCount=14
-ActiveFrame=0
+ActiveFrame=3
 
 [Bookmarks]
 text\implementace.tex=309 

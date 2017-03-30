@@ -34,12 +34,12 @@
 \contentsline {subsection}{\numberline {2.3.1}RaspberryPi}{24}{subsection.62}
 \contentsline {subsection}{\numberline {2.3.2}RaspberryPi 2}{25}{subsection.67}
 \contentsline {subsection}{\numberline {2.3.3}RaspberryPi 3}{25}{subsection.68}
-\contentsline {subsection}{\numberline {2.3.4}RaspberryPi Zero}{25}{subsection.69}
-\contentsline {section}{\numberline {2.4}RaspberryPi klony}{25}{section.74}
+\contentsline {subsection}{\numberline {2.3.4}RaspberryPi Zero}{25}{subsection.73}
+\contentsline {section}{\numberline {2.4}RaspberryPi klony}{26}{section.74}
 \contentsline {subsection}{\numberline {2.4.1}BananaPi}{26}{subsection.75}
 \contentsline {subsection}{\numberline {2.4.2}OrangePi}{26}{subsection.79}
 \contentsline {subsection}{\numberline {2.4.3}CubieBoard}{27}{subsection.80}
-\contentsline {subsection}{\numberline {2.4.4}Up Board}{28}{subsection.84}
+\contentsline {subsection}{\numberline {2.4.4}Up Board}{29}{subsection.84}
 \contentsline {subsection}{\numberline {2.4.5}PINE64}{29}{subsection.85}
 \contentsline {subsection}{\numberline {2.4.6}HardKernel Odroid}{30}{subsection.89}
 \contentsline {subsection}{\numberline {2.4.7}BeagleBoard }{30}{subsection.90}

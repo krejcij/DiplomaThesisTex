@@ -24,9 +24,7 @@ Výrobce těchto desek vytvořil vývojové prostředí shodné pro všechny pro
 	
 Na deskách bývá několik diod, resetovací tlačítko, různé přídavné sběrnice (UART, I2C), konektory pro ICSP programování, napájecí konektor, oscilátor a obvod zprostředkovávající komunikaci po USB.
 	
-Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývají Shieldy, mají převážně stejný tvar jako deska Arduina a připojují se pomocí dlouhých pinů. Zabírají celou plochu, ale většina z nich dále zpřístupňuje GPIO (General Purpose Input/Output) piny, lze je tedy skládat na sebe. Stejně jako Arduino desek existuje i celá řada shieldů.
-	
-Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým připojením na dané piny. Je však třeba dbát na to, že Arduino pracuje s 5\,V logikou, zatímco například RaspberryPi pracuje s 3.3\,V logikou.
+Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývají Shieldy, mají převážně stejný tvar jako deska Arduina a připojují se pomocí dlouhých pinů. Zabírají celou plochu, ale většina z nich dále zpřístupňuje GPIO (General Purpose Input/Output) piny, lze je tedy skládat na sebe. Stejně jako Arduino desek existuje i celá řada shieldů. Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým připojením na dané piny. Je však třeba dbát na to, že Arduino pracuje s 5\,V logikou, zatímco například RaspberryPi pracuje s 3.3\,V logikou.
 	
 		\subsection{Arduino Duemilanove} Arduino Duemilanove je vývojová jednoprocesorová deska s mikroprocesorem ATMega168 od firmy Atmel, tedy platformě Atmel AVR. 
 		Parametry: ATmega168 s 16\,MHz krystalem, 16\,KB flash, 1\,KB SRAM (Static Random Access Memory), 512\,B EEPROM (Electrically Erasable Programmable Read-Only Memory). 	Konektivita: 14 digitálních vstupně/výstupných pinů, z toho 6 z nich může být využito i PWM (Pulse Width Modulation) , vstupních analogových pinů (10\,bit A/D převodník, 0-5\,V), I2C (Inter-Integrated Circuit) sběrnici, UART (Universal Asynchronous Receiver/Transmitter) sběrnici, ICSP (In Circuit Serial Programming) rozhraní, USB (Universal Serial Bus) rozhraní~\cite{ArduinoDuemilanove}.	
@@ -232,11 +230,6 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 \subsection{RaspberryPi 3}
 		RaspberryPi 3, dostupný od roku 2016 je vybaven čtyřjádrovým 64bitovým procesorem ARM Cortex-A53 o taktu 1,2 GHz. Oproti předchozímu modelu přináší integraci WiFi a Bluetooth modulů přímo na desce a měl by být 2x rychlejší~\cite{RaspiThree}.
 		
-
-	
-\subsection{RaspberryPi Zero}
-		RaspberryPi Zero je nejúspornější varianta RaspberryPi, ideální pro použití v IoT. Vychází z modelu A+, ve srovnání s ním nabízí procesor s frekvencí 1 GHz a 512 MB paměti. Má přibližně poloviční velikost, nemá však vyvedené piny GPIO konektoru, USB konektory má ve verzi micro a HDMI ve verzi mini~\cite{RaspiZero}.
-
 \begin{figure*}[!ht]
     \centering
 			\subfigure[RaspberryPi 2]{\includegraphics[width=0.3\textwidth]{obrazky/embed_raspi_2}\label{embed_raspi_2}}
@@ -246,6 +239,11 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 			\subfigure[RaspberryPi Zero]{\includegraphics[width=0.3\textwidth]{obrazky/embed_raspi_zero}\label{embed_raspi_zero}}
 		\caption{RaspberryPi následujících verzí}
 \end{figure*}
+	
+\subsection{RaspberryPi Zero}
+		RaspberryPi Zero je nejúspornější varianta RaspberryPi, ideální pro použití v IoT. Vychází z modelu A+, ve srovnání s ním nabízí procesor s frekvencí 1 GHz a 512 MB paměti. Má přibližně poloviční velikost, nemá však vyvedené piny GPIO konektoru, USB konektory má ve verzi micro a HDMI ve verzi mini~\cite{RaspiZero}.
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
