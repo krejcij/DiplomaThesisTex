@@ -72,21 +72,6 @@ Submód S2M podporuje oboustranou komunikaci v kontinuálních cyklech bez nutno
 
 V režimech S, T a R je každý bajt vysílán s nejvíce důležitým bitem na prvním místě.
 
-
-Princip obousměrné komunikace v módech T2 a S2 je znázorněn na Obr.~\ref{ObrazekObousmerny}:
-\colorbox[rgb]{1,0,0}{PREKRESLIT POKUD ZUSTANE} 
-
-\begin{figure}[!ht]
- \begin{center}
-    \includegraphics[scale=0.8]{obrazky/wmbus_obousmerne}
-  \end{center}
-  \caption{Princip obousměrné komunikace v módech T1 a S1}
-	\label{ObrazekObousmerny}
-\end{figure}
-
- V obousměrném vysílacím módu měřič s periodou několika sekund vysílá krátkou zprávu se svým ID a pokud koncentrátor na tuto výzvu odpoví, zahájí se obousměrná komunikace.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
@@ -105,8 +90,6 @@ Komunikace probíjá následovně: nadřazené aplikace realizující aplikačn�
 \caption{Formát datové jednotky~\cite{FormatDatoveJednotky}}
 \label{PaketWm1}
 \end{table}
-
-\newpage
 
 Komunikační modul pracující jako modem dle požadavků standardu Wireless M-Bus automaticky přidá následující pole:
 
@@ -150,8 +133,6 @@ Obsah pole AppLayer je již dán aplikační hladinou definovanou ve standardu M
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
-
-\newpage
 
 
 \section{Popis jednotlivých vrstev}
@@ -305,13 +286,20 @@ Pro šifrování přenášených dat se v protokolu Wireless M-Bus používají 
 
 \subsection{Inicializační vektor}
 Inicializační vektor má délku 16 Bajtů (128 bitů, odtud označení AES128) a je tvořený dynamicky z nešifrovaných bajtů způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor}:
-\begin{figure}[!ht]
- \begin{center}
-    \includegraphics[scale=0.9]{obrazky/sifrovani_vektor}
-  \end{center}
-  \caption{Formát inicializačního vektoru \colorbox[rgb]{1,0,0}{PREKRESLIT}}
+
+\begin{table}[!ht]
+  \caption{Formát inicializačního vektoru}
 	\label{TabulkaInicializacniVektor}
-\end{figure}
+	\begin{center}
+\resizebox{\textwidth}{!}{%
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+LSB & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 &... & 13 & 14 & MSB \\ \hline
+\multicolumn{2}{|c|}{M-Pole} & \multicolumn{6}{c|}{A-Pole} & \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} &  \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} & ... & \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} & \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} & \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} \\ \hline
+
+	\end{tabular}}
+\end{center}
+\end{table}
 
 První 2 bajty obsahují přidělené identifikační údaje výrobce, další čtyři obsahují sériové číslo daného zařízení, následující dva obsahují verzi zařízení a zbylých osm Bajtů je tvořeno opakováním se přístupového čísla. Vzhledem k faktu, že přístupové číslo se s každým vysláním telegramu změní, je nutné inicializační vektor přepočítat pro každý přijatý paket. Tím je zajištěna dynamičnost šifrování danou metodou.
 

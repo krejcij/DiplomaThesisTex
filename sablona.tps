@@ -72,7 +72,7 @@ Document=text\embed.tex
 
 [Frame3_View0,0]
 TopLine=500
-Cursor=39902
+Cursor=39900
 
 [Frame4]
 Flags=0
@@ -89,8 +89,8 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame4_View0,0]
-TopLine=308
-Cursor=16834
+TopLine=113
+Cursor=6745
 
 [Frame5]
 Flags=0
@@ -107,7 +107,7 @@ Class=LaTeXView
 Document=text\modul.tex
 
 [Frame5_View0,0]
-TopLine=18
+TopLine=84
 Cursor=1414
 
 [Frame6]
@@ -125,8 +125,8 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame6_View0,0]
-TopLine=204
-Cursor=16209
+TopLine=143
+Cursor=13795
 
 [Frame7]
 Flags=0
@@ -143,8 +143,8 @@ Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame7_View0,0]
-TopLine=437
-Cursor=25597
+TopLine=170
+Cursor=12390
 
 [Frame8]
 Flags=0
@@ -161,8 +161,8 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame8_View0,0]
-TopLine=106
-Cursor=6520
+TopLine=267
+Cursor=15671
 
 [Frame9]
 Flags=0
@@ -215,8 +215,8 @@ Class=LaTeXView
 Document=text\zkratky.tex
 
 [Frame11_View0,0]
-TopLine=0
-Cursor=56
+TopLine=68
+Cursor=5202
 
 [Frame12]
 Flags=0
@@ -256,7 +256,7 @@ Cursor=0
 
 [SessionInfo]
 FrameCount=14
-ActiveFrame=5
+ActiveFrame=8
 
 [Bookmarks]
 text\implementace.tex=309 

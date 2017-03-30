@@ -49,9 +49,9 @@ Disponuje (viz Obr.~\ref{ObrazekUnipiV1}) osmi relé pro střídavý proud, čtr
 
  \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.35]{obrazky/unipi_v1}
+    \includegraphics[scale=0.75]{obrazky/unipi_v1}
   \end{center}
-  \caption{Popis UniPi v1 \cite{UniPiBoard1} \colorbox[rgb]{1,0,0}{NOVE KOMENTY}  }
+  \caption{Popis UniPi v1 \cite{UniPiBoard1}}
 	\label{ObrazekUnipiV1}
 \end{figure}
 
@@ -74,9 +74,9 @@ Velkou výhodou řídicí jednotky UniPi je zabudovaný čip pro obsluhu teplotn
 S RaspberryPi je deska UniPi propojena 26\,žilovým kabelem přes GPIO konektor. Jak bylo popsáno v kapitole o konektoru GPIO, toto propojení je z důvodu kompatibility shodné pro všechny verze RaspberryPi. Vnitřní uspořádání desky je řešeno pomocí funkčních celků  (znázorněno na Obr.~\ref{SchemaBlok1}), které jsou propojeny pomocí I2C sběrnice. Výstupy jednotlivých celků jsou poté vyvedeny na konektory desky.
  \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.7]{obrazky/unipi_schema1}
+    \includegraphics[scale=0.85]{obrazky/unipi_schema1}
   \end{center}
-  \caption{Blokové schéma UniPi v1 \colorbox[rgb]{1,0,0}{PREKRESLIT}}
+  \caption{Blokové schéma UniPi v1}
 	\label{SchemaBlok1}
 \end{figure}
 
@@ -108,7 +108,7 @@ UniPi Neuron představuje modulární PLC (Programmable Logic Controller) pro ch
 	\label{UnipiV2DeskaUnipi}
 \end{figure}
 
-UniPi Neuron je na rozdíl od první verze, kdy se rozšiřující deska RaspberryPi distribuovala zvlášt, již hotové řešení, které se skládá z RaspberryPi, rozšiřující desky UniPi verze 2 (viz Obr.~\ref{UnipiV2DeskaUnipi}), propojovací desky pro komunikační moduly (viz Obr.~\ref{PicureUniPiConnectionImage}) a diodového panelu. To vše propojené a uzavřené v modrém plechovém pouzdru s možností montáže na DIN lištu. K dostání je tedy pouze jako hotový výrobek.
+UniPi Neuron je na rozdíl od první verze, kdy se rozšiřující deska RaspberryPi distribuovala zvlášt, již hotové řešení, které se skládá z RaspberryPi, rozšiřující desky UniPi verze 2 (viz Obr.~\ref{UnipiV2DeskaUnipi}), propojovací desky pro komunikační moduly (viz Obr.~\ref{unipi_osazeny}) a diodového panelu. To vše propojené a uzavřené v modrém plechovém pouzdru s možností montáže na DIN lištu. K dostání je tedy pouze jako hotový výrobek.
 
 
 \subsubsection{Popis desky}
@@ -205,9 +205,9 @@ Celá sestava desek je poté uložena v kovové krabičce s označením vstupů 
 Vnitřní uspořádání desky je řešeno pomocí funkčních celků (viz Obr.~\ref{BlokUniPi2Schema}), které jsou propojeny pomocí I2C sběrnice. Výstupy jednotlivých celků jsou poté vyvedeny na konektory desky.
  \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.55]{obrazky/unipi_schema2}
+    \includegraphics[scale=0.75]{obrazky/unipi_schema2}
   \end{center}
-	\caption{Blokové schéma UniPi v2 \colorbox[rgb]{1,0,0}{PREKRESLIT}}
+	\caption{Blokové schéma UniPi v2}
 	\label{BlokUniPi2Schema}
 \end{figure}
 
@@ -220,15 +220,10 @@ Napájení desky je pomocí 24\,V/1.5\,A adaptéru přímo na rozšiřující de
  % \caption{UniPi Neuron S10x (v2) [docasne prevzeti]}
 %\end{figure}
 
-
- 
- 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+
 \section{Srovnání obou verzí}
 
 Jak bylo popsáno v předchozím textu (Kap.~\ref{KapitolaUnipi1}~a~\ref{KapitolaUnipi2}), obě verze UniPi se liší svými parametry a využitím. I když vývoj UniPi byl nahrazen vývojem UniPi NEURONu, stále se najdou aplikace vhodné pouze pro původní desku:
@@ -262,16 +257,15 @@ Jak je patrné z předhozích kapitol, jednodeskové počítače i rozšiřujíc
 \subsection{UART}
 UART je synchronní a asynchronní sériové rozhraní pro přenos dat mezi zařízeními v obou směrech. Používá se pro komunikaci mezi mikrokontroléry, počítači a dalšími zařízeními podporující tento standard. Využívá dvouvodičovou sběrnici, vysílá data na pinu označovaném obvykle jako TX, přijímá na pinu RX.
 
-Pro přenos se používají rámce, které mohou mít 5 až 9 bitů a jsou od sebe odděleny jedním start bitem a jedním nebo dvěma stop bity. Každý rámec může obsahovat ještě paritní bit pro kontrolu rámce. Dále je možné nastavit rychlost přenosu dat od 1 200 bps až do 250 kbps. Lze nastavit buď pro asynchronní režim, označovaný jako SCI, například pro RS-232 či RS-485, anebo pro synchronní režim, běžně označovaný jako SPI.
-
  \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=1.0]{obrazky/sbernice_uart}
   \end{center}
   \caption{UART rámec}
 \end{figure}
+Pro přenos se používají rámce, které mohou mít 5 až 9 bitů a jsou od sebe odděleny jedním start bitem a jedním nebo dvěma stop bity. Každý rámec může obsahovat ještě paritní bit pro kontrolu rámce. 
 
-Tato sběrnice je ve verzi 1 vyvedená do modulárního konektoru na desce, ve verzi není vyvedená na kontakty, ale je součástí desky plošného spoje, na kterém se přímo nachází slot pro komunikační modul.
+Dále je možné nastavit rychlost přenosu dat od 1~200\,bps až do 250\,kbps. Lze nastavit buď pro asynchronní režim, označovaný jako SCI, například pro RS-232 či RS-485, anebo pro synchronní režim, běžně označovaný jako SPI. Tato sběrnice je ve verzi 1 vyvedená do modulárního konektoru na desce, ve verzi není vyvedená na kontakty, ale je součástí desky plošného spoje, na kterém se přímo nachází slot pro komunikační modul.
 
 
 
@@ -305,9 +299,9 @@ Obrázek \ref{ObrazekGPIO} demonstruje rozložení GPIO konektoru napříč verz
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.6]{obrazky/unipi_gpio}
+    \includegraphics[scale=1.0]{obrazky/unipi_gpio}
   \end{center}
-  \caption{Zpětná kompatibilita GPIO konektoru \cite{SberniceGPIO} \colorbox[rgb]{1,0,0}{PREKRESLIT}}
+  \caption{Zpětná kompatibilita GPIO konektoru}
 	\label{ObrazekGPIO}
 \end{figure}
 

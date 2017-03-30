@@ -259,7 +259,7 @@ Nasledne dojde ke spusteni smycky naslouchani prichozich telegramu. Kazdy pricho
  Na zaklade analyzy posledni hodnoty se program dale vetvi:
 \begin{itemize}
 	\item nesifrovane telegramy jsou zapsany do databaze, pote dle vyrobce daneho mericiho zarizeni podrobeny dukladne analyze prenasenych dat. Zjistene hodnoty doplnene o casovou znacku a informace o mericim zarizeni zapsany do databaze a sdeleny na graficky vstup.
-	\item v pripade ze analyzou pole ConfigurationWord je zjisteno sifrovani prenasenych dat algoritmem AES128 v modu CBC, dojde k rozsifrovani dat dle postupu popsanem v kapitole \colorbox[rgb]{0,0,0}{LINK} a pote program s telegramem zachazi jako s nesifrovanym, popsanym v predchozim bode.
+	\item v pripade ze analyzou pole ConfigurationWord je zjisteno sifrovani prenasenych dat algoritmem AES128 v modu CBC, dojde k rozsifrovani dat dle postupu popsanem v kapitole \colorbox[rgb]{1,0,0}{LINK} a pote program s telegramem zachazi jako s nesifrovanym, popsanym v predchozim bode.
 \end{itemize}
 Pokud nektera z operaci nad telegramem selze, dojde k vyjimce, dany telegram je zaevidovan, v jeho zpracovani se jiz nepokracuje a aplikace se vrati do stavu cekani na prichod dalsiho telegramu.
 
