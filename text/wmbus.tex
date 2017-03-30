@@ -10,12 +10,12 @@ Wireless M-Bus má svůj původ v rámci norem Meter-Bus. Wireless Meter Bus je 
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|}
 \hline
-{\textbf{Standard}} & \multicolumn{1}{c|}{\textbf{Podrobnosti}} \\ \hline
+{\textbf{Standard}} & \multicolumn{1}{c|}{\textbf{Podrobnosti}} \\ \hline \hline
 EN 13757-1 & \begin{tabular}[c]{@{}l@{}}Část 1 standardu definuje výměnu dat, která podrobně popisuje základní \\ komunikaci mezi vodoměry a centrálním sběračem dat. Poskytuje přehled \\ komunikačního systému.\end{tabular}\\ \hline
 EN 13757-2 & \begin{tabular}[c]{@{}l@{}}Tato část normy Meter Bus řeší fyzickou a spojovou vrstvu pro fyzický přenos \\ dat pomocí kabelových spojů. Také popisuje protokol používaný pro přenos dat\end{tabular} \\ \hline
 EN 13757-3 & \begin{tabular}[c]{@{}l@{}}Část 3  se týká speciální aplikační vrstvy. Ta popisuje standardní aplikační\\  protokol používaný k tomu, aby se zachovala kompatibilita výrobců, což \\ umožňuje zařízení od několika různých dodavatelů působit v jednom systému.\end{tabular} \\ \hline
 EN 13757-4 & \begin{tabular}[c]{@{}l@{}}Oddíl 4 popisuje bezdrátový systém. Jedná se o radiový odečet pro provoz v pásmu \\ 868 MHz až 870 MHz . Tato část normy se zabývá fyzickou a linkovou vrstvou pro\\  bezdrátová zařízení.\end{tabular} \\ \hline
-EN 13757-5 & \begin{tabular}[c]{@{}l@{}}Tato část adresy předávání. To zahrnuje celou řadu návrhů na předávání datových \\ rámců jako prostředek k překonání problémů souvisejících se pohybují mezi \\ měřičem a sběru dat bodů.\end{tabular} \\ \hline
+EN 13757-5 & \begin{tabular}[c]{@{}l@{}}Tato část adresy předávání. To zahrnuje celou řadu návrhů na předávání datových \\ rámců jako prostředek k překonání problémů souvisejících se pohybují mezi \\ měřičem a sběru dat bodů.\end{tabular} \\ \hline \hline
 \end{tabular}}
 \vspace{-10pt}
 \end{table}
@@ -50,13 +50,13 @@ Protokol podporuje několik režimů přenosu, lišících se dle požadavků na
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|l|l|l|l|}
 \hline
-\textbf{Mód} & \multicolumn{1}{c|}{\textbf{Mód přenosu}} & \multicolumn{1}{c|}{\textbf{Směr}} & \multicolumn{1}{c|}{\textbf{Frekvence}} & \multicolumn{1}{c|}{\textbf{Kódování}} & \multicolumn{1}{c|}{\textbf{Rychlost}} \\ \hline
+\textbf{Mód} & \multicolumn{1}{c|}{\textbf{Mód přenosu}} & \multicolumn{1}{c|}{\textbf{Směr}} & \multicolumn{1}{c|}{\textbf{Frekvence}} & \multicolumn{1}{c|}{\textbf{Kódování}} & \multicolumn{1}{c|}{\textbf{Rychlost}} \\ \hline \hline
 S & Stacionární & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & Manchester & 32768\,kbps \\ \hline
 T & Častý vysílací & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & \begin{tabular}[c]{@{}l@{}}Manchester \\  a 3 z 6\end{tabular} & 100\,kbps \\ \hline
 R & Častý přijímací & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & Manchester & 4.8\,kbps \\ \hline
 N & Úzkopásmový & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 169\,MHz & NRZ &  \\ \hline
 C & Kompaktní & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & Manchester & 50\,kbps \\ \hline
-F & \begin{tabular}[c]{@{}l@{}}Častý vysílací \\ i přijímací mód\end{tabular} & Obousměrný & 433\,MHz & NRZ &  \\ \hline
+F & \begin{tabular}[c]{@{}l@{}}Častý vysílací \\ i přijímací mód\end{tabular} & Obousměrný & 433\,MHz & NRZ &  \\ \hline \hline
 \end{tabular}}
 \end{table}
 
@@ -181,7 +181,7 @@ Princip kódování 3 ze 6 spočívá v tom, že každé 4 bity (nibble) jsou za
 \caption{Tabulka kódování 3 ze 6 \cite{WMencodeing}}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{NRZ kód} & \textbf{Desítkově} & \textbf{3 ze 6} & \textbf{Desítkově} & \textbf{Počet změn v kódu} \\ \hline
+\textbf{NRZ kód} & \textbf{Desítkově} & \textbf{3 ze 6} & \textbf{Desítkově} & \textbf{Počet změn v kódu} \\ \hline \hline
 0                & 0                  & 10110               & 22                 & 4                          \\ \hline
 1                & 1                  & 1101                & 13                 & 3                          \\ \hline
 10               & 2                  & 1110                & 14                 & 2                          \\ \hline
@@ -197,7 +197,7 @@ Princip kódování 3 ze 6 spočívá v tom, že každé 4 bity (nibble) jsou za
 1100             & 12                 & 110100              & 52                 & 3                          \\ \hline
 1101             & 13                 & 110001              & 49                 & 2                          \\ \hline
 1110             & 14                 & 110010              & 50                 & 3                          \\ \hline
-1111             & 15                 & 101001              & 41                 & 4                          \\ \hline
+1111             & 15                 & 101001              & 41                 & 4                          \\ \hline \hline
 \end{tabular}
 \end{table}
 

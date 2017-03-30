@@ -167,7 +167,7 @@ Poté lze dešifrovaná data vyparsovat jako při nešifrovaném přenosu popsan
 \label{PacketTableAnalysis}
 \begin{tabular}{|c|c|c|l|l|c|c|l|}
 \hline
-\textbf{Pozice} & \textbf{\begin{tabular}[c]{@{}c@{}}Tele-\\ gram\end{tabular}} & \multicolumn{1}{c|}{\textbf{Pole}} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{Hodnota} & \textbf{\begin{tabular}[c]{@{}c@{}}Číselné\\ vyjádření\end{tabular}} & \multicolumn{1}{c|}{\textbf{Význam pro uživatele}} \\ \hline
+\textbf{Pozice} & \textbf{\begin{tabular}[c]{@{}c@{}}Tele-\\ gram\end{tabular}} & \multicolumn{1}{c|}{\textbf{Pole}} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{Hodnota} & \textbf{\begin{tabular}[c]{@{}c@{}}Číselné\\ vyjádření\end{tabular}} & \multicolumn{1}{c|}{\textbf{Význam pro uživatele}} \\ \hline \hline
 4 & 2E & L-Pole & Délka telegramu & 1Eh & 46 & Paket má 46 bytů \\ \hline
 6 & 44 & C-Pole & Typ telegramu & 44h & 44 & \begin{tabular}[c]{@{}l@{}}Paket je typu \\ SND-NR\end{tabular} \\ \hline
 8 & B0 & M-Pole & Výrobce zařízení & B0h & 5CB0 & \begin{tabular}[c]{@{}l@{}}Výrobcem \\ je WEPtech\end{tabular} \\ \hline
@@ -193,7 +193,7 @@ Poté lze dešifrovaná data vyparsovat jako při nešifrovaném přenosu popsan
 64 & 01 & DR3 & Příznak sabotáže & 00h & 1 & Čidlo bylo otevřeno \\ \hline
 66 & 00 & DR3 & \begin{tabular}[c]{@{}l@{}}Příznak vybité\\  baterie\end{tabular} & 00h & 0 & Baterie je nabitá \\ \hline
 94 & 87 & CRC & Kontrolní součet & 87h &  &  \\ \hline
-96 & 9e & RSSI & \begin{tabular}[c]{@{}l@{}}Síla přijímaného \\ signálu\end{tabular} & 9Eh & 158 & \begin{tabular}[c]{@{}l@{}}Síla signálu \\ je -51dBm\end{tabular} \\ \hline
+96 & 9e & RSSI & \begin{tabular}[c]{@{}l@{}}Síla přijímaného \\ signálu\end{tabular} & 9Eh & 158 & \begin{tabular}[c]{@{}l@{}}Síla signálu \\ je -51dBm\end{tabular} \\ \hline \hline
 \end{tabular}}
 \end{table}
 

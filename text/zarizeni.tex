@@ -58,7 +58,7 @@ Telegram má specifickou základní strukturu popsanou v Tab.~\ref{TabulkaTelegr
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
-\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+\textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
 L-Field            & Délka telegramu                                & 1Eh              \\ \hline
 C-Field            & Typ telegramu                                  & 44h              \\ \hline
 M-Field            & Výrobce zařízení                               & B0h              \\ \hline
@@ -91,7 +91,7 @@ DR3                & VIFE0: Chybové stavy                           & 97h      
 DR3                & VIFE1: Norma 																	& 1Dh              \\ \hline
 DR3                & Příznak sabotáže                               & 00h              \\ \hline
 DR3                & Příznak vybité baterie                         & 00h              \\ \hline
-Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline
+Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline \hline
 
 \end{tabular}}
 \end{table}
@@ -123,11 +123,11 @@ První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná 
 \label{TablukaDIP}
 \begin{tabular}{|c|c|c|}
 \hline
-\textbf{Interval zasílání} & DIP 3 & DIP 4 \\ \hline
+\textbf{Interval zasílání} & přepínač DIP 3 & přepínač DIP 4 \\ \hline \hline
 1 minuta & ON & ON \\ \hline
 5 minut & OFF & ON \\ \hline
 10 minut & ON & OFF \\ \hline
-15 minut & OFF & OFF \\ \hline
+15 minut & OFF & OFF \\ \hline \hline
 \end{tabular}
 \end{table}
 
@@ -139,11 +139,11 @@ Jiné mohou být nastaveny pouze během výroby daného setu, a to do přísluš
 \label{TablukaSETUP}
 \begin{tabular}{|c|l|c|}
 \hline
-\textbf{Parametr} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{\begin{tabular}[c]{@{}c@{}}DIP \\ přepínač\end{tabular}} \\ \hline
+\textbf{Parametr} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{\begin{tabular}[c]{@{}c@{}}DIP přepínač\end{tabular}} \\ \hline \hline
 AES enable & \begin{tabular}[c]{@{}l@{}}Možnost zapnutí či vypnutí šifrování \\ přenášených dat.\end{tabular} & 1 \\ \hline
 %AES key & \begin{tabular}[c]{@{}l@{}}AES klíč je zapsán při výrobě zařízení, \\ nelze ho uživatelsky měnit. Hodnota \\ klíče je 00 01 02 03 04 05 06 07 08 \\ 09 0A 0B 0C 0D 0E 0F.\end{tabular} &  \\ \hline
 wM-Bus mode & \begin{tabular}[c]{@{}l@{}}Implementovány jsou módy S1-m \\ a T1. Ostatní módy lze nastavit\\ pouze při tovární výrobě.\end{tabular} & 2 \\ \hline
-Transmission interval & \begin{tabular}[c]{@{}l@{}}Interval je výrobcem konfigurovatelný \\ v intervalu 2 až 65534 sekund. \\ Předvolby (60s, 300s, 600s, 900s) \\ jsou uživatelsky nastavitelné pomocí \\ DIP přepínače.\end{tabular} & 3 a 4 \\ \hline
+Transmission interval & \begin{tabular}[c]{@{}l@{}}Interval je výrobcem konfigurovatelný \\ v intervalu 2 až 65534 sekund. \\ Předvolby (60s, 300s, 600s, 900s) \\ jsou uživatelsky nastavitelné pomocí \\ DIP přepínače.\end{tabular} & 3 a 4 \\ \hline \hline
 %Address & \begin{tabular}[c]{@{}l@{}}Adresa zařízení je výrobcem udaná \\ hodnota, obsahující identifikaci \\ výrobce „WEP“, sériového číslo čidla, \\ verzi zařízení (1) a typ \\ zařízení (1Bh - pokojové čidlo)\end{tabular} &  \\ \hline
 %Tamper & \begin{tabular}[c]{@{}l@{}}Odezva od čidla pro otevření \\ boxu může být povolena či \\ zakázána, samotné zařízení \\ existuje i ve verzích bez \\ tohoto čidla.\end{tabular} & \multicolumn{1}{l|}{} \\ \hline
 %Config & \begin{tabular}[c]{@{}l@{}}Změna nastavení pomocí DIP \\ přepínače může být povolena \\ či zakázána, samotné zařízení \\ existuje i ve verzích bez\\  tohoto přepínače.\end{tabular} & \multicolumn{1}{l|}{} \\ \hline
@@ -200,7 +200,7 @@ Telegram má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegr
 \label{TabulkaTelegram2}
 \begin{tabular}{|c|l|c|}
 \hline
-\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+\textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
 L-Field            & Délka telegramu                                & 1Eh              \\ \hline
 C-Field            & Typ telegramu                                  & 44h              \\ \hline
 M-Field            & Výrobce zařízení                               & B0h              \\ \hline
@@ -231,7 +231,7 @@ Data               & Čas odeslání měření                           & 99h  
 Data               & Čas odeslání měření                           & 99h               \\ \hline
 Data               & Čas odeslání měření                           & 99h               \\ \hline	
 Data						   & Ověření AES                                    & 2Fh              \\ \hline
-Data						   & Ověření AES                                    & 2Fh              \\ \hline
+Data						   & Ověření AES                                    & 2Fh              \\ \hline \hline
 
 \end{tabular}}
 \end{table}
@@ -257,7 +257,7 @@ Některé z položek je potřeba blíže vysvětlit:
 	Kamstrup Multical 402 je kompatkní ultrazvukový měřič tepla a chladu, tedy kombinace kalorimetru a ultrazvukového průtokoměru. Je určen k měření tepla, chladu a kombinovanemu měření tepla a chladu ve všech systémech na bázi vody s rozmetím teplot 2\,$^{\circ}$C az 130\,$^{\circ}$C. Skládá se z kalkulátoru, průtokoměru a dvou teplotních snímačů. 
 	
  \begin{figure}[!ht]
-\vspace{-30pt}
+\vspace{-20pt}
   \begin{center}
     \includegraphics[scale=0.7]{obrazky/zarizeni_kamstrup}
   \end{center}
@@ -323,7 +323,7 @@ Telegram je ve výchozím stavu vysílán každých 15 minut pro aktuální hodn
 %\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
-\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+\textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
 A-Field            & Sériové číslo         & 11h \\ \hline
 A-Field            & Sériové číslo         & 37h \\ \hline
 A-Field            & Sériové číslo         & 35h \\ \hline
@@ -355,7 +355,7 @@ Fill               & Výplňové byty         & 2Fh \\ \hline
 Fill               & Výplňové byty         & 2Fh \\ \hline
 Fill               & Výplňové byty         & 2Fh \\ \hline
 Fill               & Výplňové byty         & 2Fh \\ \hline
-Fill               & Výplňové byty         & 2Fh \\ \hline
+Fill               & Výplňové byty         & 2Fh \\ \hline \hline
 \end{tabular}%}
 \end{table}
 
@@ -397,7 +397,7 @@ Telegram je ve výchozím stavu vysílán každou minutu a poskytuje výrobcem d
 %\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
-\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+\textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
 L-Field & Délka telegramu & 2Ah \\ \hline
 C-Field & Typ telegramu & 44h \\ \hline
 M-Field & Výrobce zařízení & 01h \\ \hline
@@ -439,7 +439,7 @@ DATA1 & Hodnota spotřeby tafifu 1 & 23h \\ \hline
 %\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
-\textbf{POLE}      & \textbf{POPIS}            & \textbf{HODNOTA} \\ \hline
+\textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 85h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 01h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
@@ -457,7 +457,7 @@ CRC & Kontrolní součet & C8h \\ \hline
 CRC & Kontrolní součet & 97h \\ \hline
 Data & Kontrolní data & 00h \\ \hline
 CRC & Kontrolní součet & C8h \\ \hline
-CRC & Kontrolní součet & 97h \\ \hline
+CRC & Kontrolní součet & 97h \\ \hline \hline
 \end{tabular}
 \end{table}
 
