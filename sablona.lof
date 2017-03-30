@@ -31,9 +31,9 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RaspberryPi 2}}}{25}{figure.72}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RaspberryPi 3}}}{25}{figure.72}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {RaspberryPi Zero}}}{25}{figure.72}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces BananaPi BPI-M2 a OrangePi Plus2}}{27}{figure.78}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BananaPi BPI-M2}}}{27}{figure.78}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {OrangePi Plus2}}}{27}{figure.78}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces BananaPi BPI-M2 a OrangePi Plus2}}{26}{figure.78}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BananaPi BPI-M2}}}{26}{figure.78}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {OrangePi Plus2}}}{26}{figure.78}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Cubieboard1 a UpBoard 1}}{28}{figure.83}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cubieboard1}}}{28}{figure.83}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {UpBoard 1}}}{28}{figure.83}
@@ -41,7 +41,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PINE A64+ 2GB}}}{29}{figure.88}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HardKernel Odroid-C2}}}{29}{figure.88}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces BeagleBone Black~\cite {BeagleBone}}}{31}{figure.91}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Intel Galileo~\cite {IntelGalileo}}}{32}{figure.94}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Intel Galileo~\cite {IntelGalileo}}}{31}{figure.94}
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Intel Edison zasazeny na boardech}}{32}{figure.98}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arduino board}}}{32}{figure.98}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Intel breakout board}}}{32}{figure.98}
@@ -63,7 +63,7 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {P\IeC {\v r}ipojen\IeC {\'\i } diodov\IeC {\'e}ho panelu}}}{39}{figure.124}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v2}}{40}{figure.125}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces UART r\IeC {\'a}mec}}{41}{figure.129}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru}}{44}{figure.135}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru}}{43}{figure.135}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72DA-WMB \cite {ModulIQRF}}}{45}{figure.139}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma modulu TR-72D-WMB \cite {ModulIQRF}}}{46}{figure.140}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces P\IeC {\v r}ehled typu modulu dle ant\IeC {\'e}ny \cite {ModulIQRF}}}{46}{figure.144}
@@ -71,16 +71,16 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {TR-72DC-WMB}}}{46}{figure.144}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {TR-72DA-WMB}}}{46}{figure.144}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {ModulIQRF}}}{47}{figure.146}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester}}{54}{figure.165}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{58}{figure.188}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{58}{figure.188}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deska \IeC {\v c}idla}}}{58}{figure.188}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Sada Bonega~\cite {CidloBonega}}}{63}{figure.199}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vodom\IeC {\v e}r studen\IeC {\'e} vody}}}{63}{figure.199}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezdr\IeC {\'a}tov\IeC {\'y} modul}}}{63}{figure.199}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vodom\IeC {\v e}r tepl\IeC {\'e} vody}}}{63}{figure.199}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{65}{figure.204}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{68}{figure.221}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{78}{figure.265}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Ukazka vizualizace dat}}{79}{figure.272}
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Ukazka vizualizace dat}}{93}{figure.311}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester}}{54}{figure.161}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{58}{figure.184}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{58}{figure.184}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deska \IeC {\v c}idla}}}{58}{figure.184}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Sada Bonega~\cite {CidloBonega}}}{63}{figure.195}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vodom\IeC {\v e}r studen\IeC {\'e} vody}}}{63}{figure.195}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezdr\IeC {\'a}tov\IeC {\'y} modul}}}{63}{figure.195}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vodom\IeC {\v e}r tepl\IeC {\'e} vody}}}{63}{figure.195}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{65}{figure.200}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{68}{figure.217}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{77}{figure.261}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Ukazka vizualizace dat}}{78}{figure.268}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Ukazka vizualizace dat}}{93}{figure.307}

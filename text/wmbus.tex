@@ -17,6 +17,7 @@ EN 13757-3 & \begin{tabular}[c]{@{}l@{}}Část 3  se týká speciální aplikač
 EN 13757-4 & \begin{tabular}[c]{@{}l@{}}Oddíl 4 popisuje bezdrátový systém. Jedná se o radiový odečet pro provoz v pásmu \\ 868 MHz až 870 MHz . Tato část normy se zabývá fyzickou a linkovou vrstvou pro\\  bezdrátová zařízení.\end{tabular} \\ \hline
 EN 13757-5 & \begin{tabular}[c]{@{}l@{}}Tato část adresy předávání. To zahrnuje celou řadu návrhů na předávání datových \\ rámců jako prostředek k překonání problémů souvisejících se pohybují mezi \\ měřičem a sběru dat bodů.\end{tabular} \\ \hline
 \end{tabular}}
+\vspace{-10pt}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
@@ -82,6 +83,7 @@ V režimech S, T a R je každý bajt vysílán s nejvíce důležitým bitem na 
 Komunikace probíjá následovně: nadřazené aplikace realizující aplikační vrstvu standardu M-Bus vyšlou svá data do RF modemu v podobě datové jednotky, která je zobrazena v Tab.~\ref{PaketWm1}:
 
 \begin{table}[!ht]
+\vspace{-10pt}
 \centering
 \begin{tabular}{ccc}
 1 Bajt & 1 Bajt & n Bajtů \\ \hline
@@ -89,6 +91,7 @@ Komunikace probíjá následovně: nadřazené aplikace realizující aplikačn�
 \end{tabular}
 \caption{Formát datové jednotky~\cite{FormatDatoveJednotky}}
 \label{PaketWm1}
+\vspace{-10pt}
 \end{table}
 
 Komunikační modul pracující jako modem dle požadavků standardu Wireless M-Bus automaticky přidá následující pole:
@@ -110,12 +113,14 @@ Komunikační modul pracující jako modem dle požadavků standardu Wireless M-
 \end{tabular}
 \caption{Formát datové jednotky protokolu Wireless M-Bus~\cite{FormatDatoveJednotky}}
 \label{PaketWm2}
+\vspace{-5pt}
 \end{table}
 
 Takovýto paket se pak zašifruje (obvykle algoritmem AES-128) a přenáší se vzduchem. V případě, že se realizuje jen bezdrátové tunelování přenosu mezi dvěma Wireless M-Bus modemy, je povolen i režim bez zasílání adresy a jí přidružených informacích o měřící jednotce. Rámec se pak výrazně zjednoduší a jeho struktura je zobrazena v Tab.~\ref{PaketWm3}.
 
 			
 			\begin{table}[!ht]
+			\vspace{-10pt}
 \centering
 \begin{tabular}{cccc}
 1 Bajt & 1 Bajt & n Bajtů & 1 Bajt \\ \hline
@@ -123,6 +128,7 @@ Takovýto paket se pak zašifruje (obvykle algoritmem AES-128) a přenáší se 
 \end{tabular}
 \caption{Zkrácený formát datové jednotky~\cite{FormatDatoveJednotky}}
 \label{PaketWm3}
+\vspace{-20pt}
 \end{table}
 			
 Obsah pole AppLayer je již dán aplikační hladinou definovanou ve standardu M-Bus, které se používá jako mechanizmus komunikace z linkové vrstvy do vyšších protokolových vrstev, a je tedy shodný s obsahem pro klasický drátový M-Bus přenos.  Data následující za polem Cl jsou již závislá na aplikační vrstvě M-Bus. Komunikace mezi měřící jednotkou a RF modemem či mezi koncentrátorem a RF modem obvykle probíhá prostřednictvím sériového přenosu UART, například s využitím RS-232, RS-485 či USB.
@@ -155,11 +161,14 @@ Wireless M-Bus definuje dvojí možné kódování:
 Kódování Manchester (viz Obr. \ref{ObrazekManechester}) slučuje datový a hodinový signál do jediného signálu. Toto kódování se krom bezdrátových přenosů používá i v sítích LAN, konkrétně v síti Ethernet. Výhodou kódu Manchester je konstantní střední hodnota takového signálu, která je 50\,\% z maximální hodnoty. Náběžné hrany ohraničují jeden bit dat a sestupné hrany určují kód Manchester. Logická jednička je reprezentována náběžnou hranou a logická nula hranou sestupnou. 
 
 				\begin{figure}[!ht]
+				\vspace{-20pt}
  \begin{center}
     \includegraphics[scale=1.0]{obrazky/wmbus_manchester}
   \end{center}
+	\vspace{-40pt}
   \caption{Princip kódování Manchester}
 	\label{ObrazekManechester}
+	\vspace{-10pt}
 \end{figure}
 
 Pokud nejsou vysílána žádná data, výstup kódování Manchester je hodinový signál. Nevýhodou použití Manchester kódování je to, že na přenos jednoho bitu informace je potřeba dvou hodinových taktů.
@@ -288,8 +297,10 @@ Pro šifrování přenášených dat se v protokolu Wireless M-Bus používají 
 Inicializační vektor má délku 16 Bajtů (128 bitů, odtud označení AES128) a je tvořený dynamicky z nešifrovaných bajtů způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor}:
 
 \begin{table}[!ht]
+	\vspace{-5pt}
   \caption{Formát inicializačního vektoru}
 	\label{TabulkaInicializacniVektor}
+	\vspace{-5pt}
 	\begin{center}
 \resizebox{\textwidth}{!}{%
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -298,6 +309,7 @@ LSB & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 &... & 13 & 14 & MSB \\ \hline
 \multicolumn{2}{|c|}{M-Pole} & \multicolumn{6}{c|}{A-Pole} & \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} &  \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} & ... & \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} & \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} & \begin{tabular}[c]{@{}c@{}}Přístupové\\ číslo\end{tabular} \\ \hline
 
 	\end{tabular}}
+	\vspace{-10pt}
 \end{center}
 \end{table}
 

@@ -51,8 +51,10 @@ Disponuje (viz Obr.~\ref{ObrazekUnipiV1}) osmi relé pro střídavý proud, čtr
   \begin{center}
     \includegraphics[scale=0.75]{obrazky/unipi_v1}
   \end{center}
+	\vspace{-20pt}
   \caption{Popis UniPi v1 \cite{UniPiBoard1}}
 	\label{ObrazekUnipiV1}
+	\vspace{-30pt}
 \end{figure}
 
 \subsubsection{Popis desky}
@@ -69,15 +71,20 @@ Disponuje (viz Obr.~\ref{ObrazekUnipiV1}) osmi relé pro střídavý proud, čtr
 	\item Notifikační diody pro zobrazení stavu jednotlivých portů.
 \end{itemize}
 
+\vspace{10pt}
 Velkou výhodou řídicí jednotky UniPi je zabudovaný čip pro obsluhu teplotních čidel na sběrnici 1Wire. Digitální teploměry mají svou adresu, není tedy nutné je jakkoliv kalibrovat či nastavovat, stačí zapojit.
 
 S RaspberryPi je deska UniPi propojena 26\,žilovým kabelem přes GPIO konektor. Jak bylo popsáno v kapitole o konektoru GPIO, toto propojení je z důvodu kompatibility shodné pro všechny verze RaspberryPi. Vnitřní uspořádání desky je řešeno pomocí funkčních celků  (znázorněno na Obr.~\ref{SchemaBlok1}), které jsou propojeny pomocí I2C sběrnice. Výstupy jednotlivých celků jsou poté vyvedeny na konektory desky.
- \begin{figure}[!ht]
+ 
+\begin{figure}[!ht]
+\vspace{-20pt}
   \begin{center}
     \includegraphics[scale=0.85]{obrazky/unipi_schema1}
   \end{center}
+	\vspace{-30pt}
   \caption{Blokové schéma UniPi v1}
 	\label{SchemaBlok1}
+	
 \end{figure}
 
 Napájení desky je řízeno jumperem JP1 a může být řešeno dvěma způsoby:
@@ -86,7 +93,7 @@ Napájení desky je řízeno jumperem JP1 a může být řešeno dvěma způsoby
 	\item Samostatným nápajením obou desek.
 \end{itemize}
 
-
+\vspace{10pt}
 Pro účely testování a implementace byla zapůjčena deska UniPi s počítačem RaspberryPi 2. Vývoj této desky byl již ukončen a nahrazen druhou verzí, označovanou jako UniPi NEURON.
 
 
@@ -101,11 +108,14 @@ Pro účely testování a implementace byla zapůjčena deska UniPi s počítač
 UniPi Neuron představuje modulární PLC (Programmable Logic Controller) pro chytrou domácnost a inteligentní systémy budov, řízení a průmyslovou automatizaci. Díky modulární a kompaktní konstrukci nabízí jedinečnou variabilitu funkcí. UniPi Neuron je univerzální řídící jednotka. Neuron lze použít k řízení chytrého domu nebo jako domácí server. Je vhodný pro monitorování, sběr a ukládání dat na vzdálený server, nebo jako výkonná a plně vybavená brána pro ostatní zařízení \cite{UniPiBoard2}.
 
  \begin{figure}[!ht]
+  \vspace{-30pt}
   \begin{center}
     \includegraphics[scale=0.25]{obrazky/unipi_unipi_deska}
   \end{center}
+	\vspace{-20pt}
   \caption{UniPi rozšiřující deska}
 	\label{UnipiV2DeskaUnipi}
+	\vspace{-10pt}
 \end{figure}
 
 UniPi Neuron je na rozdíl od první verze, kdy se rozšiřující deska RaspberryPi distribuovala zvlášt, již hotové řešení, které se skládá z RaspberryPi, rozšiřující desky UniPi verze 2 (viz Obr.~\ref{UnipiV2DeskaUnipi}), propojovací desky pro komunikační moduly (viz Obr.~\ref{unipi_osazeny}) a diodového panelu. To vše propojené a uzavřené v modrém plechovém pouzdru s možností montáže na DIN lištu. K dostání je tedy pouze jako hotový výrobek.
@@ -123,6 +133,7 @@ UniPi Neuron je na rozdíl od první verze, kdy se rozšiřující deska Raspber
 \item Notifikační diody pro zobrazení stavu jednotlivých portů.
 \end{itemize}
 
+\vspace{10pt}
 UniPi Neuron existuje v několika verzích (viz Obr.~\ref{UnipiNeuronModels}), odvislých od počtu digitálních vstupů a výstupů, parametrů procesoru a velikosti paměti RAM. Do budoucna by měly být také k dostání verze s jedním konkrétním modulem (Wireless M-Bus, ZigBee, GPRS, \ldots) uvnitř.
 
 \begin{figure*}[!ht]
@@ -136,13 +147,12 @@ UniPi Neuron existuje v několika verzích (viz Obr.~\ref{UnipiNeuronModels}), o
 			\label{UnipiNeuronModels}
 \end{figure*}
 
-
+\vspace{10pt}
 Standardní modely NEURON mají proměnlivé množství digitálních vstupů a reléových výstupů. Jejich počet je uveden v Tab.~\ref{TableUnipiIO}.
-
-
 
 \begin{table}[!ht]
 \caption{Porovnání modelů UniPi NEURON dle I/O \cite{UniPiBoard2}}
+\vspace{-20pt}
 \label{TableUnipiIO}
 	\begin{center}
 	\resizebox{\textwidth}{!}{%
@@ -161,10 +171,12 @@ Standardní modely NEURON mají proměnlivé množství digitálních vstupů a 
 	\end{center}
 \end{table}
 
+\newpage
 Písmeno x v Tab.~\ref{TableUnipiVar} bývá nahrazeno číslem 1-3 dle osazeného typu RaspberryPi:
 
 \begin{table}[!ht]
 \caption{Varianty modelů UniPi NEURON dle CPU a RAM \cite{UniPiBoard2}}
+\vspace{-10pt}
 \label{TableUnipiVar}
 	\begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -182,11 +194,13 @@ x & \textbf{Osazená deska} & \textbf{CPU} & \textbf{RAM} & \textbf{Další vlas
 S RaspberryPi je deska UniPi propojena, obdobně jako u první verze, pomocí 26 pinové desky propoující GPIO port na RaspberryPi s konektorem na rozšiřující desce UniPi. Na samotné propojující desce (viz Obr.~\ref{unipi_propojbrain}) je vyvedena UART a I2C sběrnice. 
 
 \begin{figure*}[!ht]
+		\vspace{-10pt}
     \centering
 			\subfigure[Propojení desek]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_propojbrain}\label{unipi_propojbrain}}
 			\hspace*{5mm}
 			\subfigure[Osazená UniPi deska]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_osazeny}\label{unipi_osazeny}}
 			\caption{Detaily UNiPi desky}
+			\vspace{-5pt}
 \end{figure*}
 
 Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{unipi_propojuvnitr}) se signalizačními diodami. UART sběrnice je zde připravena pro připojenů dalších modulů. Tyto desky jsou k dostání v několika verzích, přizpůsobené konektorem pro konkrétní komunikační modul (viz Obr.~\ref{unipi_osazeny}).
@@ -195,20 +209,24 @@ Celá sestava desek je poté uložena v kovové krabičce s označením vstupů 
 
 
 \begin{figure*}[!ht]
-    \centering
+		\centering
 			\subfigure[Uložení v krabičce]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_unipi_box}\label{unipi_unipi_box}}
 			\hspace*{5mm}
 			\subfigure[Připojení diodového panelu]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_propojuvnitr}\label{unipi_propojuvnitr}}
 			\caption{Detaily vnitřního uspořádání UniPi Neuronu S103}
+			\vspace{-5pt}
 \end{figure*}
 
 Vnitřní uspořádání desky je řešeno pomocí funkčních celků (viz Obr.~\ref{BlokUniPi2Schema}), které jsou propojeny pomocí I2C sběrnice. Výstupy jednotlivých celků jsou poté vyvedeny na konektory desky.
  \begin{figure}[!ht]
+	\vspace{-10pt}
   \begin{center}
     \includegraphics[scale=0.75]{obrazky/unipi_schema2}
   \end{center}
+	\vspace{-30pt}
 	\caption{Blokové schéma UniPi v2}
 	\label{BlokUniPi2Schema}
+	\vspace{-10pt}
 \end{figure}
 
 Napájení desky je pomocí 24\,V/1.5\,A adaptéru přímo na rozšiřující desku UniPi. Pro účely testování a implementace byla zapůjčena deska UniPi Neuron S103 vybavená počítačem RaspberryPi3.
@@ -235,6 +253,7 @@ Jak bylo popsáno v předchozím textu (Kap.~\ref{KapitolaUnipi1}~a~\ref{Kapitol
 	\item Software EVOK a software postavené na něm jsou v tomto okamžiku plně funkční pouze na desce první verze.	
 \end{itemize}
 
+\vspace{10pt}
 Na některé aplikace však již tato deska vhodná není a je lepší využít UniPi NEURON:
 
 \begin{itemize}
@@ -244,6 +263,7 @@ Na některé aplikace však již tato deska vhodná není a je lepší využít 
 	\item UniPi NEURON má na kontaktech vysouvací svorky a celý modul zabírá méně místa.	
 \end{itemize}
 
+\vspace{10pt}
 Vzhledem k tomu, že UniPi NEURON je v době vypracování práce jediná vývojem podporovaná verze, bude implementaci WM-Bus protokolu provedena na této verzi, avšak lze bez jakýchkoliv softwarových modifikací a pouze s jednou hardwarovou modifikací implementovat WM-Bus protokol i na UniPi první verze. Stačí pouze propojit příslušné piny IQRF modulu s piny modulárního konektoru UART sběrnice.
 
 
@@ -258,10 +278,13 @@ Jak je patrné z předhozích kapitol, jednodeskové počítače i rozšiřujíc
 UART je synchronní a asynchronní sériové rozhraní pro přenos dat mezi zařízeními v obou směrech. Používá se pro komunikaci mezi mikrokontroléry, počítači a dalšími zařízeními podporující tento standard. Využívá dvouvodičovou sběrnici, vysílá data na pinu označovaném obvykle jako TX, přijímá na pinu RX.
 
  \begin{figure}[!ht]
+	\vspace{-10pt}
   \begin{center}
     \includegraphics[scale=1.0]{obrazky/sbernice_uart}
   \end{center}
+	\vspace{-30pt}
   \caption{UART rámec}
+	\vspace{-5pt}
 \end{figure}
 Pro přenos se používají rámce, které mohou mít 5 až 9 bitů a jsou od sebe odděleny jedním start bitem a jedním nebo dvěma stop bity. Každý rámec může obsahovat ještě paritní bit pro kontrolu rámce. 
 
@@ -298,11 +321,14 @@ GPIO jsou piny, které lze programovat pomocí softwaru. Do těchto pinů lze po
 Obrázek \ref{ObrazekGPIO} demonstruje rozložení GPIO konektoru napříč verzemi RaspberryPi.
 
 \begin{figure}[!ht]
+\vspace{-20pt}
   \begin{center}
     \includegraphics[scale=1.0]{obrazky/unipi_gpio}
   \end{center}
+	\vspace{-20pt}
   \caption{Zpětná kompatibilita GPIO konektoru}
 	\label{ObrazekGPIO}
+	\vspace{-10pt}
 \end{figure}
 
 Jak již bylo popsáno v předchozích kapitolách, GPIO konektor není ve všech verzích RaspberryPi shodný. Model RaspberryPi B má 26 pinový konektor, zatímco verze B+, 2 a 3 mají konektor 40 pinový. Rozdíl je v tom, že u 40 pinového konektoru je prvních 26 pinů shodných a konektor je na zbývajících 14 pinech rozšířen o další vstupy a výstupy. Je tedy zpětně kompatibilní.
@@ -317,6 +343,7 @@ Jak již bylo popsáno v předchozích kapitolách, GPIO konektor není ve všec
 
 Hlavní výhodou otevřené platformy RaspberryPi je možnost použít zákazníkem zvolený libovolný software. Neexistují omezení ze strany výrobce, proto si může každý svoje řešení postavit na míru.
 
+\vspace{10pt}
 Výrobce poskytuje vlastní software EVOK, který se stará o komunikaci desky UniPi přes virtuální server či API (Application Programming Interface) s uživatelem. Většina dalších open-source programů využívá toto API pro svůj provoz. Výrobcem je taktéž podporován software Mervis \cite{MervisWeb}, který z UniPi dělá plnohodnotné PLC. Dále je k dipozici několik open-source programů:
 \begin{itemize}
 \item EVOK - oficiální Python API s websocket a REST podporou.
@@ -327,6 +354,8 @@ Výrobce poskytuje vlastní software EVOK, který se stará o komunikaci desky U
 \item FHEM.de - domácí automatizační projekt napsaný v jazyce Perl.
 \item JEEDOM - automatizační projekt napsaný v jazyce PHP.
 \end{itemize}
+
+\vspace{10pt}
 A tři komerční:
 \begin{itemize}
 \item Mervis - profesionální domácí automatizační řešení s on-line SCADA.
@@ -334,6 +363,7 @@ A tři komerční:
 \item HomeSeer - odhlehčená platforma pro automatizaci domácnosti.
 \end{itemize}
 
+\vspace{10pt}
 V době psaní této práce byl EVOK k dispozici i pro druhou verzi desky, avšak bez podpory komunikačních modulů. Implementace protokolu tedy bude prováděna jako samostatná aplikace s vlastní formou vizualizace naměřených dat.
 
 

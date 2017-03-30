@@ -7,10 +7,13 @@ Spolu se zařízením UniPi Neuron S103 byl zapůjčen i modul IQRF TR-72DC-WMB,
 Modul IQRF TR-72DA-WMB je bezdrátový komunikační modul velikosti SIM karty z výroby české firmy \href{http://microrisc.com/cs/}{MICRORISC s.r.o.}. Vychází z řady produktů technologie IQRF, s tím rozdílem, že místo IQRF softwaru má přímo implementovaný Wireless M-Bus protokol \cite{ModulIQRF}. 
 
  \begin{figure}[!ht]
+\vspace{-20pt}
   \begin{center}
-    \includegraphics[scale=0.6]{obrazky/modul_modul}
+    \includegraphics[scale=0.76]{obrazky/modul_modul}
   \end{center}
+	\vspace{-20pt}
   \caption{Modul IQRF TR-72DA-WMB \cite{ModulIQRF}}
+	\vspace{-10pt}
 \end{figure}
 
 Na malém prostoru se nachází vše potřebné pro uskutečnění bezdrátového přenosu: mikrokontrolér, externí EEPROM, teplotní senzor, kontrolní LED , 6 pinů a anténa dle typu komunikačního modulu (Obr.~\ref{BlokovkaIQRF}).
@@ -23,11 +26,14 @@ V České republice je využíván pro přenos v bezlicenčním pásmu 868\,MHz,
 \newpage
 
  \begin{figure}[!ht]
+	\vspace{-20pt}
   \begin{center}
     \includegraphics[scale=0.6]{obrazky/modul_block}
   \end{center}
+	\vspace{-30pt}
   \caption{Blokové schéma modulu TR-72D-WMB \cite{ModulIQRF}}
 	\label{BlokovkaIQRF}
+	\vspace{-5pt}
 \end{figure}
 
 Modul je vyráběn ve třech verzích (viz Obr.~\ref{ObrazekAnteny}) dle připojení antény:
@@ -46,6 +52,7 @@ Modul je vyráběn ve třech verzích (viz Obr.~\ref{ObrazekAnteny}) dle připoj
 			\subfigure[TR-72DA-WMB]{\includegraphics[width=0.28\textwidth]{obrazky/modul_antenac}\label{modul_antenac}}
 		\caption{Přehled typu modulu dle antény \cite{ModulIQRF}}
 		\label{ObrazekAnteny}
+		\vspace{-20pt}
 \end{figure*}
 
 \section{Komunikační módy}
@@ -61,11 +68,14 @@ V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu p
 Praktické využíti jednotlivých módu zobrazuje Obr.~\ref{TopologieIQRF}.
 
  \begin{figure}[!ht]
+\vspace{-20pt}
   \begin{center}
     \includegraphics[scale=0.65]{obrazky/modul_topologie}
   \end{center}
+	\vspace{-30pt}
   \caption{Různé módy dle použité topologie \cite{ModulIQRF}}
 	\label{TopologieIQRF}
+	\vspace{-20pt}
 \end{figure}
 
 \section{Komunikační protokol}
@@ -74,35 +84,44 @@ S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož 
 		
 Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i ke samotné komunikaci s modulem. Každý příkaz začíná znakem \textgreater. Každá zpráva odpověďi začíná znakem \textless. Každému příkazu musí předcházet budící znak NULL (0x00) následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem CR (0x0D). 
 
+\newpage
 Obecná struktura~\cite{ModulIQRF}~paketu příkazu je 
 
-\begin{eqnarray}
+\begin{figure}[!ht]
+\begin{centerverbatim}
 			>[CC][RW][DATA][CR]
-\end{eqnarray}
+\end{centerverbatim}
+\end{figure}
 
 kde CC je jednobajtový kód daného příkazu, RW je jednobajtový příznak zápisu (\textbf{:}) či čtení dat (\textbf{?}) dat, DATA jsou zapisovaná data, pokud se jedná o zápis a CR je znak ukončení.
 
 Obecná skruktura odpovědi je následující
 
-\begin{eqnarray}
+\begin{figure}[!ht]
+\begin{centerverbatim}
 	<[DATA][CR]
-\end{eqnarray}
+\end{centerverbatim}
+\end{figure}
 
 kde DATA obsahuje přenášená data či návratové kódy (OK pro správné dokončení příkazu, ERR1 pro chybu syntaxe a ERR2 pro neplatnou vstupní hodnotu). Některé bajty jsou kódovány v šestnáckové soustavě či využívají uložení BigEndian.
 
 Například dotaz a odpověd pro aktuální AES klíč je:
 
-\begin{eqnarray}
+\begin{figure}[!ht]
+\begin{centerverbatim}
 	>03?[CR]
-	<010203040506070809a0b0c0d0e0f[CR]
-\end{eqnarray}
+	<010203040506070809a0b0c0d0e0f[CR]  
+\end{centerverbatim}
+\end{figure}
 
 a pro případnou změnu AES klíče:
 
-\begin{eqnarray}
->03:112233445566778899aabbccddeeff[CR]\\
+\begin{figure}[!ht]
+\begin{centerverbatim}
+>03:112233445566778899aabbccddeeff[CR]
 >OK[CR]
-\end{eqnarray}
+\end{centerverbatim}
+\end{figure}
 
 Při přenosu datové jednotky uvedené v Tab.~\ref{PaketWm3} modulem dochází k jejímu rozšíření o položky uvedené v Tab.~\ref{PaketWm4}.
 

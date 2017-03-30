@@ -44,6 +44,7 @@ jehož výstup by měl být následující:
 [    0.000974] console [tty1] enabled
 [    0.130442] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 81, base_baud = 0) is a PL011 rev2
 	\end{lstlisting}
+	\vspace{-20pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -101,6 +102,7 @@ Je nutné doinstalovat nezbytné balíčky:
 		sudo install python-crypto
 		sudo install python-dev
 	\end{lstlisting}
+	\vspace{-20pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,10 +115,13 @@ Je nutné doinstalovat nezbytné balíčky:
 
 Jednoduchým spuštěním komunikačního modulu v módu snifferu, byl zachycen telegram
 
-\begin{verbatim}
+\vspace{-10pt}
+\begin{figure}[!ht]
+\begin{centerverbatim}
 	32002E44B05C10000000021B7A620800002F2F0A6699010AFB1
 	A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
-\end{verbatim}
+\end{centerverbatim}
+\end{figure}
 
 který byl pomoci datasheetu použitého komunikačního modulu~\cite{ModulIQRF} a~čidla~\cite{CidloWeptech} analyzován, a přehledně zobrazen do Tab. \ref{PacketTableAnalysis}.
 
@@ -124,10 +129,12 @@ který byl pomoci datasheetu použitého komunikačního modulu~\cite{ModulIQRF}
 
 V okamžiku kdy bylo zařízení přepnuto do šifrovaného módu dle Tab.~\ref{TablukaSETUP} byl zachycen šifrovaný telegram
 
-\begin{verbatim}
+\begin{figure}[!ht]
+\begin{centerverbatim}
 	32002e44b05c10000000021b7ac40820053ed44a38a9c3c86f5
 	8210f9b979353c39dc1d5e0c873eb81994d28c099ef1d55b008
-\end{verbatim}
+\end{centerverbatim}
+\end{figure}
 
 který byl pomoci datasheetů použitého komunikačního modulu \cite{ModulIQRF} a normy~\cite{Norma1,NormaFIPS} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
 \begin{itemize}
@@ -144,10 +151,12 @@ Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována:
 
  a byl získán dešifrovaný telegram:
 
-\begin{verbatim}
+\begin{figure}[!ht]
+\begin{centerverbatim}
 	32002e44b05c10000000021b7ac40820052F2F0A6699010AFB1
 	A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
-\end{verbatim}
+\end{centerverbatim}
+\end{figure}
 
 Poté lze dešifrovaná data vyparsovat jako při nešifrovaném přenosu popsaném v předchozí kapitole.
 
@@ -239,9 +248,11 @@ V následujících podkapitolách budou jednotlivé bloky aplikace představeny 
 Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. Tím je zajištěna nezávilost na typu nasazení RaspberryPi a případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
 
  \begin{figure}[!ht]
+	\vspace{-30pt}
   \begin{center}
     \includegraphics[scale=0.6]{obrazky/aplikace_diagram}
   \end{center}
+	\vspace{-20pt}
   \caption{Vývojový diagram aplikace pro vyčítání dat}
 	\label{AplikaceDiagram}
 \end{figure}
@@ -286,7 +297,7 @@ Nad temito daty se potom provadi vizualizace pomoci Google Graphs. Ten umoznuje 
 
  \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.8]{obrazky/chart_weptech}
+    \includegraphics[scale=0.3]{obrazky/chart_weptech}
   \end{center}
   \caption{Ukazka vizualizace dat}
 	\label{fig_sec4_chart_example}
