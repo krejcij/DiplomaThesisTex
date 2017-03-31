@@ -112,21 +112,23 @@
 \contentsline {subsection}{\numberline {7.6.1}Ne\IeC {\v s}ifrovan\IeC {\'y} p\IeC {\v r}enos}{73}{subsection.251}
 \contentsline {subsection}{\numberline {7.6.2}\IeC {\v S}ifrovan\IeC {\'y} p\IeC {\v r}enos}{73}{subsection.252}
 \contentsline {section}{\numberline {7.7}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } ulo\IeC {\v z}en\IeC {\'\i } dat}{75}{section.254}
-\contentsline {section}{\numberline {7.8}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } vizualizace dat}{75}{section.258}
-\contentsline {section}{\numberline {7.9}Struktura aplikace}{75}{section.259}
-\contentsline {subsection}{\numberline {7.9.1}Start programu v r\IeC {\'a}mci opera\IeC {\v c}n\IeC {\'\i }ho syst\IeC {\'e}mu}{76}{subsection.260}
+\contentsline {section}{\numberline {7.8}Zaji\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } vizualizace dat}{75}{section.259}
+\contentsline {section}{\numberline {7.9}Struktura aplikace}{76}{section.260}
+\contentsline {subsection}{\numberline {7.9.1}Start programu v r\IeC {\'a}mci opera\IeC {\v c}n\IeC {\'\i }ho syst\IeC {\'e}mu}{76}{subsection.261}
 \contentsline {subsection}{\numberline {7.9.2}Start programu z pohledu aplikace}{76}{subsection.262}
-\contentsline {subsection}{\numberline {7.9.3}Z\IeC {\'a}kladn\IeC {\'\i } kontrola a parsov\IeC {\'a}n\IeC {\'\i } dat}{76}{subsection.263}
-\contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{76}{subsection.264}
-\contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{78}{subsection.265}
-\contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{78}{subsection.266}
-\contentsline {subsection}{\numberline {7.9.7}Vizualizace dat}{78}{subsection.267}
-\contentsline {subsection}{\numberline {7.9.8}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } chyb a vyj\IeC {\'\i }mek}{79}{subsection.269}
-\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{80}{chapter.270}
-\contentsline {chapter}{Literatura}{81}{section*.272}
-\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{86}{section*.274}
-\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{90}{section*.276}
-\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{91}{chapter.277}
-\contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{92}{chapter.278}
-\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{93}{chapter.304}
-\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{94}{chapter.306}
+\contentsline {subsection}{\numberline {7.9.3}Z\IeC {\'a}kladn\IeC {\'\i } kontrola a cyklus p\IeC {\v r}\IeC {\'\i }jmu dat}{76}{subsection.263}
+\contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{77}{subsection.264}
+\contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{77}{subsection.265}
+\contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{77}{subsection.266}
+\contentsline {subsection}{\numberline {7.9.7}Vizualizace dat}{77}{subsection.267}
+\contentsline {subsection}{\numberline {7.9.8}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } v\IeC {\'y}jimek}{78}{subsection.268}
+\contentsline {subsection}{\numberline {7.9.9}Export dat}{78}{subsection.269}
+\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{79}{chapter.270}
+\contentsline {chapter}{Literatura}{80}{section*.272}
+\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{85}{section*.274}
+\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{89}{section*.276}
+\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{90}{chapter.277}
+\contentsline {chapter}{\numberline {B}V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat }{91}{chapter.278}
+\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{92}{chapter.279}
+\contentsline {chapter}{\numberline {D}Uk\IeC {\'a}zka vizualizace dat }{93}{chapter.305}
+\contentsline {chapter}{\numberline {E}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{94}{chapter.307}

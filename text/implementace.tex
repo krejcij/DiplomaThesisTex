@@ -208,11 +208,11 @@ Z tabulky je patrné, že nutné vyparsovat položky na následujících pozicí
 	\item 96 pro úroveň signálu.	
 \end{itemize}
 
-a jejich následnou správnou interpretací dle specifikace (zohlednění uložení LSB, převod hexadecimálních hodnot na dekadické) předat k dalšímu zpracování či uložení do databáze.
+a jejich následnou správnou interpretací dle specifikace (zohlednění uložení LSB, převod hexadecimálních hodnot na dekadické, \ldots) předat k dalšímu zpracování či uložení do databáze.
 
 
 \section{Zajištění uložení dat}
-Zachycená a naměřená data se ukládají do databáze k pozdějšímu zpracování. Zvolena byla databáze SqLite3 pro svoji jednoduchost, nenáročnost na sytémové prostředky a možností instalace z repozitáře Raspbianu:
+Zachycená a naměřená data se ukládají do databáze k pozdějšímu zpracování či vizualizaci. Zvolena byla databáze SqLite3 pro svoji jednoduchost, nenáročnost na sytémové prostředky a možností instalace z repozitáře Raspbianu:
  
 \begin{lstlisting}[style=MyCodeBash]
 		sudo apt-get update
@@ -224,9 +224,20 @@ Byla zvolena jedna databáze se třemi tabulkami:
 	\item DEVICES - evidence známých zařízení a jejich AES klíčů
 	\item VALUES - uložení naměřených hodnot
 	\item TELEGRAMS - uložení zachycených dat a AES klíče modulu
+	\item ERRORS - zachytávání telegramů které se nepodařilo validně analyzovat
 \end{itemize}
 
-Struktura tabulek je popsána na obrázku... \colorbox[rgb]{1,0,0}{DOPSAT + SCHEMA}
+Strukturu tabulek, definici sloupcu v vazby mezi nimi popisuje schéma na Obr.~\ref{databazovy_model}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[scale=0.55]{obrazky/aplikace_databaze}
+  \end{center}
+	\vspace{-10pt}
+  \caption{Model zvolené SqLite databáze}
+	\label{databazovy_model}
+	\vspace{-30pt}
+\end{figure}
 	
 \section{Zajištění vizualizace dat}	
 \colorbox[rgb]{1,0,0}{POPSAT GOOGLE API}
@@ -245,70 +256,45 @@ Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura
 V následujících podkapitolách budou jednotlivé bloky aplikace představeny podrobněji.
 
 \subsection{Start programu v rámci operačního systému}
-Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. Tím je zajištěna nezávilost na typu nasazení RaspberryPi a případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
-
- \begin{figure}[!ht]
-	\vspace{-30pt}
-  \begin{center}
-    \includegraphics[scale=0.6]{obrazky/aplikace_diagram}
-  \end{center}
-	\vspace{-20pt}
-  \caption{Vývojový diagram aplikace pro vyčítání dat}
-	\label{AplikaceDiagram}
-\end{figure}
+Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. Tím je zajištěna nezávilost nasazení RaspberryPi a případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
 
 \subsection{Start programu z pohledu aplikace}
 Program při startu kontroluje, zdali  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQLite databázi.
 Dále program kontroluje přítomnost a možnost otevření sériového portu. V případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následujě příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
 
-\subsection{Základní kontrola a parsování dat}
-\colorbox[rgb]{1,0,0}{ta cestin!}
-Nasledne dojde ke spusteni smycky naslouchani prichozich telegramu. Kazdy prichozi telegram je podroben serii kontrol, zdali doslo ke spravnemu odposlechnuti. Jako prvni kontrola je delka telegramu odpovidajici sudemu nasobku. Telegram je dale podroben zakladni analyze na parsovani polozek aplikacni a linkove vrstvy. Zde dochazi ke kontrole delky telegramu vuci hodnote uvedene v hlavicce, dale je provedena kontrola platnosti CRC souctu. Je take provedena kontrola obsahu Cl-pole, Status pole a ConfigurationWord pole.
+\subsection{Základní kontrola a cyklus příjmu dat}
+Následně dojde ke spuštění smyčky naslouchání příchozích telegramů. Každý příchozí telgram je podroben sérii kontrol, pro ověření správnosti příjmu. Jako první je telegram podroben kontrole délky odpovídající sudým násobkům. Následně je telegram podroben základní analýze položek aplikační a linkové vrstvy. Dochází ke kontrole délky telegramu a jeho CRC součtu. Je provedena kontrola obsahu Cl-pole, Status pole a ConfigurationWord pole. Pokud některá z položek neodpovídá, telegram je zaevidován a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
+Na základě obsahu položky ConfigurationWord se program nadále větví na zpracování šifrovaného (Kap. \ref{KapitolaDesifrovani}) a nešifrovaného (Kap. \ref{KapitolaParsovani}) telegramu.
 
 \subsection{Dešifrování dat}
-\colorbox[rgb]{1,0,0}{ta cestin!}
- Na zaklade analyzy posledni hodnoty se program dale vetvi:
-\begin{itemize}
-	\item nesifrovane telegramy jsou zapsany do databaze, pote dle vyrobce daneho mericiho zarizeni podrobeny dukladne analyze prenasenych dat. Zjistene hodnoty doplnene o casovou znacku a informace o mericim zarizeni zapsany do databaze a sdeleny na graficky vstup.
-	\item v pripade ze analyzou pole ConfigurationWord je zjisteno sifrovani prenasenych dat algoritmem AES128 v modu CBC, dojde k rozsifrovani dat dle postupu popsanem v kapitole \colorbox[rgb]{1,0,0}{LINK} a pote program s telegramem zachazi jako s nesifrovanym, popsanym v predchozim bode.
-\end{itemize}
-Pokud nektera z operaci nad telegramem selze, dojde k vyjimce, dany telegram je zaevidovan, v jeho zpracovani se jiz nepokracuje a aplikace se vrati do stavu cekani na prichod dalsiho telegramu.
+\label{KapitolaDesifrovani}
+Pokud je analýzou položky ConfigurationWord je zjištěno šifrování dat přenášených dat algoritmem AES128 CBC, dojde k rozšifrování dat.
+
+
+\colorbox[rgb]{1,0,0}{DOPLNIT DOPLNIT DOPLNIT DOPLNIT}
+
+
+\colorbox[rgb]{1,0,0}{DOPLNIT DOPLNIT DOPLNIT DOPLNIT}
+
+
+Poté program s telegramem zachází jako s nešifrovaným, popsaným v Kap~\ref{KapitolaParsovani}
 
 \subsection{Parsování dat}
-\colorbox[rgb]{1,0,0}{DOPSAT}
-\begin{itemize}
-\item - co to umí
-\item - jaká je aplikační logika pro RSSI a VendorID
-\item - jak se to dělá pro jednotlivé výrobce
-\item - co se tam kontroluje (signatura, rozsifrovani, delka paketu, statove bajty)
-\end{itemize}
+\label{KapitolaParsovani}
+Každý telegram je před svým zpracováním uložen do databáze, aby v případě potřeby (špatné dešifrování, neadekvátní dešifrovací klíč, chyba aplikace, neznámý senzor, \ldots) mohlo být provedeno nové zpracování daného telegramu. Poté je analyzováno M-Pole a v případě že se jedná o výrobce, jehož parsovací schéma je v této aplikaci implementováno, dochází k vyparsování přenášených hodnot. Následně v souladu s parsovacím schématem dochází k formátování a odpovídající interpretaci získaných dat (viz Kap.~\ref{PacketTableAnalysis}). Poté jsou získaná data uložena do databáze a zobrazena uživateli na výstup konzole.
+Pokud parsování dat selže, dojde k výjimce, daný telegram je zaevidovánm v jeho zpracování se již nepokrečuje a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
 
 \subsection{Uložení dat}
-\colorbox[rgb]{1,0,0}{DOPSAT}
-\begin{itemize}
-\item - jak se osetri ktere chyby
-\item - co davame kam jak na vedomi
-\item - co se zapise do logu a co do db
-\end{itemize}
+Správně interpretované hodnoty doplněné o časovou značku a informaci o měřícím zařízení jsou zapsány do databáze. Do této databáze se ukládají všechny příchozí validně zpracované telegramy, určené k pozdějšímu zpracování. Obohacení o časovou značku a údaje o zařízení je možné později tyto data efektivně třídit či v nich vyhledávat.
 
 \subsection{Vizualizace dat}
-\colorbox[rgb]{1,0,0}{ta cestin!}
-Nad temito daty se potom provadi vizualizace pomoci Google Graphs. Ten umoznuje interaktivni odecitani vykreslenych hodnot zachycenych danym senzorem v danem dni, viz Obr.~\ref{fig_sec4_chart_example}). 
+Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API~\cite{uvod_google_charts_api}. To umožňuje interaktivní vykreslení a vyčítání uložných hodnot zachycených daným senzorem za vybraný časový úsek. Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
 
- \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.3]{obrazky/chart_weptech}
-  \end{center}
-  \caption{Ukazka vizualizace dat}
-	\label{fig_sec4_chart_example}
-\end{figure}
+\subsection{Ošetření výjimek}
+Aplikace má ošetřeny dva chybové stavy. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a následně přejde do stavu čekání na příchod dalšího telegramu.
+Všechny tyto chyby jsou ukládány do příslušné tabulky v databázi, do chybového logu a taktéž sdělovány uživateli do konzole.
 
-\subsection{Ošetření chyb a vyjímek}
-\colorbox[rgb]{1,0,0}{DOPSAT}
-\begin{itemize}
-\item - jak se ukladaji vysledky
-\item - jak to vypada v DB, kolik je tabulek s cim
-\item - kdy se kam co uklada a v jakem formatu
-\item - co se zapise do logu a co do db
-\end{itemize}
+\subsection{Export dat}
+V případě potřeby je vizualizační aplikace schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k časové náročnosti při daném počtu naměřených hodnot je tato funkcionalita implementována spíše jako experimentální a v praxi se projevila jako nedostačující.
+
 
