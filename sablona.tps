@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame1_View0,0]
-TopLine=240
+TopLine=268
 Cursor=10108
 
 [Frame2]
@@ -53,7 +53,7 @@ Class=LaTeXView
 Document=text\iot.tex
 
 [Frame2_View0,0]
-TopLine=12
+TopLine=13
 Cursor=2789
 
 [Frame3]
@@ -71,7 +71,7 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame3_View0,0]
-TopLine=249
+TopLine=236
 Cursor=12775
 
 [Frame4]
@@ -89,8 +89,8 @@ Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame4_View0,0]
-TopLine=453
-Cursor=25999
+TopLine=377
+Cursor=23454
 
 [Frame5]
 Flags=0
@@ -107,7 +107,7 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame5_View0,0]
-TopLine=183
+TopLine=191
 Cursor=8249
 
 [Frame6]
@@ -143,8 +143,8 @@ Class=LaTeXView
 Document=text\prilohy.tex
 
 [Frame7_View0,0]
-TopLine=205
-Cursor=23657
+TopLine=156
+Cursor=22990
 
 [Frame8]
 Flags=0
@@ -161,7 +161,7 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame8_View0,0]
-TopLine=378
+TopLine=453
 Cursor=22027
 
 [Frame9]
@@ -184,7 +184,7 @@ Cursor=1284
 
 [SessionInfo]
 FrameCount=10
-ActiveFrame=9
+ActiveFrame=7
 
 [Bookmarks]
 text\implementace.tex=309 

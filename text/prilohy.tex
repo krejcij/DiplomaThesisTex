@@ -137,20 +137,23 @@
 \label{PrilohaMedium}
 K diplomové práci je přiloženo CD, obsahující bitový obraz MicroSD karty se systémem Raspbian, ve kterém je nainstalováno a nastaveno vše potřebné ke spuštění vzorové aplikace a zahájení komunikace s vyčítanými Wireless M-Bus zařízeními. Taktéž jsou zde uloženy zdrojové kódy vyčítačí i vizualizační aplikace.
 
+\vspace{10pt}
 Médium obsahuje následující strukturu: 
+\vspace{-20pt}
+	 \begin{figure}[!h]
+  \begin{center}
+    \includegraphics[scale=1.0]{obrazky/priloha_medium}
+  \end{center}
+	\vspace{-30pt}
+\end{figure}
+
+Návod pro spuštění aplikace:
+		\begin{enumerate}
+			\item Pomocí aplikace Win32DiskImager z \texttt{$\backslash$ObrazKarty$\backslash$Win32diskimager.exe} zapište obraz \texttt{$\backslash$ImageKarty$\backslash$UniPiRaspiWmBus.img} na pamětovou kartu typu MicroSD minimální velikosti 4GB.
+			\item Kartu zasuňte do jednotky UniPi Neuron a zapněte tuto jednotku. Po startu jednotky dojde k aktivaci aplikace a zachytávání WM-Bus komunikace.
+			\item Jednotka očekává přidělení IP adresy z DHCP serveru. Po přidělení IP adresy lze provádět vizualizaci zachytávaných dat pomocí aplikace na adrese \texttt{http:$\backslash$$\backslash$ip-adresa-jednotky$\backslash$}
+			\item Případně po ssh přihlášení [\texttt{pi$\backslash$raspberry}] a zadání příkazu \texttt{screen -r} lze sledovat přímo výstup aplikace v konzoli.
+		\end{enumerate}
 
 
-
-Návod pro spuštení aplikace:
-%1. Z obou DVD rozbalte soubor: VMware - FEKT NS-3.13 WM-BUS.part0X.rar
-%2. Obraz následně otevřete v programu VMware a spusťte systém Ubuntu.
-%3. Ze složky Files na DVD 1 zkopírujte soubor SimpleApplication.cc do adresáře
-%\Home- \ns-allinone-3.13\ns-3.13\scratch
-%4. Ze složky Files na DVD 1 zkopírujte složku sw do adresáře \Home\ns-allinone-3.13\ns3.13\
-%src
-%5. Spusťte terminál a zadejte do něj:
-%(a) cd ns-allinone-3.13/ns-3.13/
-%(b) ./waf –run SimpleApplication
-%6. Pro zobrazení informací o argumentech nastavujících parametry spuštění aplikace
-%použijte příkaz ./waf --run "SimpleApplication --PrintHelp"
 
