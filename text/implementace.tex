@@ -13,7 +13,7 @@ Jelikož žádný z dostupných softwarů pro UniPi nepodporuje daný bezdrátov
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Výběr OS}
-Jako operační sytém je využita aktuální verze Raspbianu Jessie s datem vydání 2017-01-11. UART rozhraní se na RaspberryPi verze 1 a 2 nachází v /dev/ttyAMA0. To se ale v případě RaspberryPi 3 odkazuje na integrovaný BT modul a původní sériový port je zde v /dev/ttyS0. Samotné UART rozhraní je ale ve výchozím nastavení Raspbianu zakázáno.
+Jako operační sytém je využita aktuální verze Raspbianu Jessie s datem vydání 2017-01-11. UART rozhraní se na RaspberryPi verze 1 a 2 nachází v \texttt{/dev/ttyAMA0}. To se ale v případě RaspberryPi 3 odkazuje na integrovaný BT modul a původní sériový port je zde v \texttt{/dev/ttyS0}. Samotné UART rozhraní je ale ve výchozím nastavení Raspbianu zakázáno.
 
 Pro zpřístupnění UART rozhraní je nutné provést drobné úpravy jeho konfigurace:
 
@@ -28,9 +28,9 @@ Pro zpřístupnění UART rozhraní je nutné provést drobné úpravy jeho konf
 		sudo apt-get rpi-upgrade	
 	\end{lstlisting}
 					
-	\item Poté je potřeba v /boot/config.txt změnit položku ENABLE\_UART na hodnotu 1. Tím dojde k zpřístupnení sběrnice UART. Tato položka může být v budoucnu při aktualizaci Raspbianu přepsána, proto při prvním náznaku nefunkčnosti, je potřeba tuto položku zkontrolovat jako první.
-	\item V souboru /boot/cmdline.txt je potřeba odebrat úsek textu \textit{console=ttyAMA0, 115200}, aby při startování systému nedocházelo k výpisu do seríové linky. 
-	\item V případě, že se jedná o RaspberryPi verze 3, je potřeba do /boot/config.txt dopsat položku \textit{dtoverlay=pi3-miniuart-bt}, která zakáže BT na mini-UART a provede přemapování zpět na /dev/ttyAMA0. Tento krok je takto řešený z důvodu kompatibility, kdy je sériová komunikace směrována přes /dev/ttyAMAO nezávisle na použité verzi RaspberryPi.
+	\item Poté je potřeba v \texttt{/boot/config.txt} změnit položku \texttt{ENABLE\_UART} na hodnotu 1. Tím dojde k zpřístupnení sběrnice UART. Tato položka může být v budoucnu při aktualizaci Raspbianu přepsána, proto při prvním náznaku nefunkčnosti, je potřeba tuto položku zkontrolovat jako první.
+	\item V souboru \texttt{/boot/cmdline.txt} je potřeba odebrat úsek textu \texttt{console=ttyAMA0, 115200}, aby při startování systému nedocházelo k výpisu do seríové linky. 
+	\item V případě, že se jedná o RaspberryPi verze 3, je potřeba do \texttt{/boot/config.txt} dopsat položku \texttt{dtoverlay=pi3-miniuart-bt}, která zakáže BT na mini-UART a provede přemapování zpět na \texttt{/dev/ttyAMA0}. Tento krok je takto řešený z důvodu kompatibility, kdy je sériová komunikace směrována přes \texttt{/dev/ttyAMAO} nezávisle na použité verzi RaspberryPi.
 \end{enumerate}
 
 Po každém z těchto kroků je doporučován restart zařízení. Kroky byly otestovány pouze na výše zmíněné verzi Raspbianu a v jiných distribucích se monou mírně lišit. Úspěšnost provedení těchto kroků lze zkontrolovat pomocí zadání příkazu konzole 
@@ -92,8 +92,8 @@ Pro zajištění běhu aplikace nezávisle na typu provozu RaspberryPi bude dan�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Zajištění podpory šifrování}
-Některá ze zařízení používají pro přenos dat šifrování AES. Pro zajištění podpory šifrování byla zvolena knihovna PyCrypto, která podporuje jak šifrování DES tak i AES. 
-Umoňuje pohodlnou implementaci AES128 pomocí jazyku Python3. Na rozdíl od ostatních knihoven není závislá na balíčku OpenSSL a je součástí repozitářů Raspbianu. 
+Některá ze zařízení používají pro přenos dat šifrování. Pro zajištění podpory šifrování byla zvolena knihovna PyCrypto, která podporuje jak šifrování DES tak i AES. 
+Umožňuuje pohodlnou implementaci AES128 pomocí jazyku Python3. Na rozdíl od ostatních knihoven není závislá na balíčku OpenSSL a je součástí repozitářů Raspbianu. 
 
 Je nutné doinstalovat nezbytné balíčky:	
  
@@ -113,7 +113,7 @@ Je nutné doinstalovat nezbytné balíčky:
 
 \subsection{Nešifrovaný přenos}
 
-Jednoduchým spuštěním komunikačního modulu v módu snifferu, byl zachycen telegram
+Jednoduchým spuštěním komunikačního modulu v módu skeneru byl zachycen telegram
 
 \vspace{-10pt}
 \begin{figure}[!ht]
