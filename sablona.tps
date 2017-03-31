@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame1_View0,0]
-TopLine=227
+TopLine=240
 Cursor=10108
 
 [Frame2]
@@ -71,7 +71,7 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame3_View0,0]
-TopLine=220
+TopLine=249
 Cursor=12775
 
 [Frame4]
@@ -107,7 +107,7 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame5_View0,0]
-TopLine=179
+TopLine=183
 Cursor=8249
 
 [Frame6]
@@ -161,12 +161,30 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame8_View0,0]
-TopLine=345
+TopLine=378
 Cursor=22027
 
+[Frame9]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=1916
+NormalPos.bottom=663
+Class=LaTeXView
+Document=text\zkratky.tex
+
+[Frame9_View0,0]
+TopLine=19
+Cursor=1284
+
 [SessionInfo]
-FrameCount=9
-ActiveFrame=0
+FrameCount=10
+ActiveFrame=9
 
 [Bookmarks]
 text\implementace.tex=309 

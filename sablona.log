@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  31 MAR 2017 15:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  31 MAR 2017 16:50
 entering extended mode
 **sablona.tex
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.tex"
@@ -1889,10 +1889,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
  ) 
 Here is how much of TeX's memory you used:
- 17607 strings out of 493921
- 256343 string characters out of 3147279
- 480312 words of memory out of 3000000
- 19946 multiletter control sequences out of 15000+200000
+ 17613 strings out of 493921
+ 256387 string characters out of 3147279
+ 480410 words of memory out of 3000000
+ 19952 multiletter control sequences out of 15000+200000
  88915 words of font info for 71 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,18n,118p,1124b,1400s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1907,7 +1907,7 @@ onts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
  2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on sablona.pdf (94 pages, 20747052 bytes).
+Output written on sablona.pdf (94 pages, 20746766 bytes).
 PDF statistics:
  2008 PDF objects out of 2073 (max. 8388607)
  453 named destinations out of 1000 (max. 500000)
