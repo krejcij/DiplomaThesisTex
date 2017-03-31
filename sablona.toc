@@ -128,5 +128,5 @@
 \contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{90}{section*.276}
 \contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{91}{chapter.277}
 \contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{92}{chapter.278}
-\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{93}{chapter.305}
-\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{94}{chapter.307}
+\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{93}{chapter.304}
+\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{94}{chapter.306}

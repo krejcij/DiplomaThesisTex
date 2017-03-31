@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame1_View0,0]
-TopLine=188
+TopLine=227
 Cursor=10108
 
 [Frame2]
@@ -71,7 +71,7 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame3_View0,0]
-TopLine=133
+TopLine=220
 Cursor=12775
 
 [Frame4]
@@ -89,7 +89,7 @@ Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame4_View0,0]
-TopLine=444
+TopLine=453
 Cursor=25999
 
 [Frame5]
@@ -107,7 +107,7 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame5_View0,0]
-TopLine=167
+TopLine=179
 Cursor=8249
 
 [Frame6]
@@ -143,8 +143,8 @@ Class=LaTeXView
 Document=text\prilohy.tex
 
 [Frame7_View0,0]
-TopLine=0
-Cursor=341
+TopLine=205
+Cursor=23657
 
 [Frame8]
 Flags=0
@@ -161,12 +161,12 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame8_View0,0]
-TopLine=246
+TopLine=345
 Cursor=22027
 
 [SessionInfo]
 FrameCount=9
-ActiveFrame=7
+ActiveFrame=0
 
 [Bookmarks]
 text\implementace.tex=309 

@@ -13,9 +13,9 @@
 \rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{Mikrokontrolér}}} & 
 \rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{Platforma}}} & 
 \rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{Frekvence}}} & 
-\rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{Flash}}} & 
-\rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{EEPROM}}} & 
-\rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{RAM}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{Flash [KiB]}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{EEPROM [KiB]}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{RAM [KiB]}}} & 
 \rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{Digitální piny}}} &
 \rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{PWM kanály}}} &
 \rotatebox[origin=c]{90}{\parbox[b]{4cm}{\hspace{10pt}\textbf{Analogové vstupy}}} & 
@@ -86,53 +86,71 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
 \chapter{Ukázka zachycených dat}
 \label{PrilohaVystup}
-	\colorbox[rgb]{1,0,0}{bude update - vystup z vice senzoru. polozit na sirku bude lepsi}
-	\begin{lstlisting}[style=MyCodeBash]
+	\begin{lstlisting}[style=MyCodeBash]%
 		Device is on AMA0: True
 		Device is waked up: True
 		Device is set as Sniffer T: <OK
 		Sniffing now:
 
-		05:32:43 10/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 44.8C    Vlhkost:  7.9%      RSSI:  -73dBm      Mereni: 56
-		05:33:42 10/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 44.7C    Vlhkost:  7.3%      RSSI:  -65dBm      Mereni: 57
-		05:34:40 10/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 44.8C    Vlhkost:  6.2%      RSSI:  -81dBm      Mereni: 58
+		05:32:43 10/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 44.8C  Vlhkost:  7.9%  RSSI: -73dBm 
+		05:33:42 10/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 44.7C  Vlhkost:  7.3%  RSSI: -65dBm 
+		05:34:40 10/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 44.8C  Vlhkost:  6.2%  RSSI: -81dBm
 		...
-		20:32:43 11/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 19.8C    Vlhkost: 34.9%      RSSI:  -70dBm      Mereni: 107
-		20:33:42 11/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 19.8C    Vlhkost: 34.3%      RSSI:  -57dBm      Mereni: 108
-		20:34:40 11/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 19.8C    Vlhkost: 34.2%      RSSI:  -64dBm      Mereni: 109
+		20:32:43 11/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 19.8C  Vlhkost: 34.9%  RSSI:  -70dBm
+		20:33:42 11/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 19.8C  Vlhkost: 34.3%  RSSI:  -57dBm
+		20:34:40 11/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 19.8C  Vlhkost: 34.2%  RSSI:  -64dBm
 		...
-		12:22:10 12/12/2016    Senzor: WEP.1b.00000010.02    Teplota: -2.7C    Vlhkost: 61.6%      RSSI: -104dBm      Mereni: 182
-		12:23:09 12/12/2016    Senzor: WEP.1b.00000010.02    Teplota: -2.7C    Vlhkost: 61.1%      RSSI: -108dBm      Mereni: 183 
-		12:24:08 12/12/2016    Senzor: WEP.1b.00000010.02    Teplota: -2.8C    Vlhkost: 61.4%      RSSI:  -93dBm      Mereni: 184
+		12:22:10 12/12/2016  Senzor: WEP.1b.00000010.02  Teplota: -2.7C  Vlhkost: 61.6%  RSSI: -104dBm
+		12:23:09 12/12/2016  Senzor: WEP.1b.00000010.02  Teplota: -2.7C  Vlhkost: 61.1%  RSSI: -108dBm
+		12:24:08 12/12/2016  Senzor: WEP.1b.00000010.02  Teplota: -2.8C  Vlhkost: 61.4%  RSSI:  -93dBm
 		...
-		09:52:17 13/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 14.3C    Vlhkost: 39.6%      RSSI:  -34dBm      Mereni: 2
-		09:53:16 13/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 13.4C    Vlhkost: 38.1%      RSSI:  -28dBm      Mereni: 3 
-		09:54:18 13/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 13.8C    Vlhkost: 37.4%      RSSI:  -33dBm      Mereni: 4
+		09:52:17 13/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 14.3C  Vlhkost: 39.6%  RSSI:  -34dBm
+		09:53:16 13/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 13.4C  Vlhkost: 38.1%  RSSI:  -28dBm 
+		09:54:18 13/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 13.8C  Vlhkost: 37.4%  RSSI:  -33dBm
 		...
-		17:45:07 14/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 25.7C    Vlhkost: 30.9%      RSSI:  -91dBm      Mereni: 165
-		17:46:07 14/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 25.7C    Vlhkost: 31.2%      RSSI:  -84dBm      Mereni: 166
-		17:47:06 14/12/2016    Senzor: WEP.1b.00000010.02    Teplota: 25.8C    Vlhkost: 31.7%      RSSI:  -96dBm      Mereni: 167
+		17:45:07 14/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 25.7C  Vlhkost: 30.9%  RSSI:  -91dBm
+		17:46:07 14/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 25.7C  Vlhkost: 31.2%  RSSI:  -84dBm
+		17:47:06 14/12/2016  Senzor: WEP.1b.00000010.02  Teplota: 25.8C  Vlhkost: 31.7%  RSSI:  -96dBm
 
 	\end{lstlisting}
+
+	\end{landscape}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
 \chapter{Ukázka vizualizace dat}
 \label{PrilohaGrafy}
-	\colorbox[rgb]{1,0,0}{tady budou grafy, pokud budeme chtit prezentovat vic nez ukazkovy graf}
 	 \begin{figure}[!ht]
   \begin{center}
     \includegraphics[scale=0.8]{obrazky/chart_weptech}
   \end{center}
-  \caption{Ukazka vizualizace dat}
+  \caption{Měření teploty a vlhkosti pomocí čidla Weptech OSMF-868A během jednoho dne}
 	\label{GrafPriloha1}
 \end{figure}
+\end{landscape}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Obsah přiloženého DVD}
 \label{PrilohaMedium}
-K diplomové práci je přiloženo CD, obsahující bitový obraz MicroSD karty se systémem Raspbian, ve kterém je nainstalováno a nastaveno vše potřebné ke spuštění vzorové aplikace a zahájení komunikace s vyčítanými Wireless M-Bus zařízeními. Taktéž jsou zde uloženy zdrojové kódy vyčítačí i visualizační aplikace.
+K diplomové práci je přiloženo CD, obsahující bitový obraz MicroSD karty se systémem Raspbian, ve kterém je nainstalováno a nastaveno vše potřebné ke spuštění vzorové aplikace a zahájení komunikace s vyčítanými Wireless M-Bus zařízeními. Taktéž jsou zde uloženy zdrojové kódy vyčítačí i vizualizační aplikace.
 
-Médium obsahuje následující strukturu: \colorbox[rgb]{1,0,0}{DOPLNIT}
+Médium obsahuje následující strukturu: 
+
+
+
+Návod pro spuštení aplikace:
+%1. Z obou DVD rozbalte soubor: VMware - FEKT NS-3.13 WM-BUS.part0X.rar
+%2. Obraz následně otevřete v programu VMware a spusťte systém Ubuntu.
+%3. Ze složky Files na DVD 1 zkopírujte soubor SimpleApplication.cc do adresáře
+%\Home- \ns-allinone-3.13\ns-3.13\scratch
+%4. Ze složky Files na DVD 1 zkopírujte složku sw do adresáře \Home\ns-allinone-3.13\ns3.13\
+%src
+%5. Spusťte terminál a zadejte do něj:
+%(a) cd ns-allinone-3.13/ns-3.13/
+%(b) ./waf –run SimpleApplication
+%6. Pro zobrazení informací o argumentech nastavujících parametry spuštění aplikace
+%použijte příkaz ./waf --run "SimpleApplication --PrintHelp"
 
