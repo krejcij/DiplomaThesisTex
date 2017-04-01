@@ -101,9 +101,9 @@ Fill               & Výplňové byty (13x)                                 & 2F
 Některé z položek je potřeba blíže vysvětlit:
 
 \begin{itemize}
-	\item Access number - Toto číslo se s každým požadavkem zvýší o hodnotu 1.
-	\item Status - V případě úspěšného přenosu je zde uložena nula, v opačném případě je zde uložena logická jednička a nastal tedy chybový stav 'sabotáž' nebo 'vybitá baterie'.
-	\item Configuration word - V případě zapnutého šifrovaní, první bajt obsahuje počet zašifrovaných bloků, obsah telegarmu a inkrement. Druhý bajt obsahuje záznam o obousměrnosti, dostupnosti, synchronizaci a šifrování. Pokud je šifrování zapnuto, je nastaven mód 5, v opačném případě jsou oba bajty nulové.
+	%\item Access number - Toto číslo se s každým požadavkem zvýší o hodnotu 1.
+	%\item Status - V případě úspěšného přenosu je zde uložena nula, v opačném případě je zde uložena logická jednička a nastal tedy chybový stav 'sabotáž' nebo 'vybitá baterie'.
+	%\item Configuration word - V případě zapnutého šifrovaní, první bajt obsahuje počet zašifrovaných bloků, obsah telegarmu a inkrement. Druhý bajt obsahuje záznam o obousměrnosti, dostupnosti, synchronizaci a šifrování. Pokud je šifrování zapnuto, je nastaven mód 5, v opačném případě jsou oba bajty nulové.
 	\item Příznak sabotáže čidla - Pokud čidlo pomocí integrovaného spínače detekuje uvolnění krytu z montážní desky, pošle výstrahu přes rádio do přijímače, tedy změní pro nejbližší a všechny následující vysílání tamper bit v telegramu. Tento bit slouží jako ochrana před neoprávněnou manipulací s čidlem a může být vymazán pouze restartem zařízení. Tedy vyjmutím starých baterií, ponecháním zařízení několik minut bez napájení, aby došlo k vybití všech kondenzátorů a následným vložením baterií.
 \item Příznak vybité baterie - Pokud elektronika v čidlu vyhodnotí úroveň nabití baterie jako nedostatečnou, nastaví bit vybití baterie do sekce chyb v telegramu. Tento bit ošetřuje stavy, kdy nedostatečně nabité baterie způsobí příliš velký rozptyl naměřených hodnot, v krajních případech i mimo měřící rozsah čidla. Tento bit může být vymazán také pouze restartem zařízení, jako v předchozím případě.
 \item Položky hodnota teploty, hodnota vlhkosti, výrobce zařízení a sériové číslo jsou uloženy v kódování big-endian, tedy na paměťové místo s nejnižší adresou se uloží nejvíce významný bajt a za něj se ukládají ostatní bajty až po nejméně významný bajt na konci. Uživatelská hodnota se tedy vyčítá pozpátku pod jednotlivých bajtech.

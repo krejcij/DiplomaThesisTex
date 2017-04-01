@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  31 MAR 2017 23:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  1 APR 2017 16:06
 entering extended mode
 **sablona.tex
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.tex"
@@ -1174,12 +1174,12 @@ ink-op_vavpi.png>]
 ] [8] [9])
 \tf@toc=\write5
  [10]
-("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.lof")
+("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.lof" [11
+
+
+])
 \tf@lof=\write6
- [11
-
-
-] [12] ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.lot")
+ [12] ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.lot")
 \tf@lot=\write7
  [13
 
@@ -1196,7 +1196,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-<obrazky/iot_industry4.png, id=881, 632.3625pt x 508.90125pt>
+<obrazky/iot_industry4.png, id=893, 632.3625pt x 508.90125pt>
 File: obrazky/iot_industry4.png Graphic file (type png)
  <use obrazky/iot_industry4.png>
 Package pdftex.def Info: obrazky/iot_industry4.png used on input line 37.
@@ -1221,19 +1221,19 @@ Overfull \hbox (3.52034pt too wide) in paragraph at lines 27--28
 
 
 
-] <obrazky/emded_arduino_duemilanove.png, id=909, 550.055pt x 401.5pt>
+] <obrazky/emded_arduino_duemilanove.png, id=921, 550.055pt x 401.5pt>
 File: obrazky/emded_arduino_duemilanove.png Graphic file (type png)
  <use obrazky/emded_arduino_duemilanove.png>
 Package pdftex.def Info: obrazky/emded_arduino_duemilanove.png used on input line 40.
 (pdftex.def)             Requested size: 128.0387pt x 93.45805pt.
 
-<obrazky/emded_arduino_uno.png, id=910, 438.8897pt x 301.125pt>
+<obrazky/emded_arduino_uno.png, id=922, 438.8897pt x 301.125pt>
 File: obrazky/emded_arduino_uno.png Graphic file (type png)
  <use obrazky/emded_arduino_uno.png>
 Package pdftex.def Info: obrazky/emded_arduino_uno.png used on input line 42.
 (pdftex.def)             Requested size: 128.0387pt x 87.84781pt.
 
-<obrazky/emded_arduino_leonardo.png, id=911, 389.66196pt x 292.80525pt>
+<obrazky/emded_arduino_leonardo.png, id=923, 389.66196pt x 292.80525pt>
 File: obrazky/emded_arduino_leonardo.png Graphic file (type png)
  <use obrazky/emded_arduino_leonardo.png>
 Package pdftex.def Info: obrazky/emded_arduino_leonardo.png used on input line 44.
@@ -1241,55 +1241,55 @@ Package pdftex.def Info: obrazky/emded_arduino_leonardo.png used on input line 4
 
 [18 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/emded_arduino_duemilanove.png> <C:/Users/krejci/OneDrive/VUT - dipl
 omka/obrazky/emded_arduino_uno.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/emded_arduino_leonardo.png>]
-<obrazky/emded_arduino_mega.png, id=924, 225.84375pt x 114.4275pt>
+<obrazky/emded_arduino_mega.png, id=936, 225.84375pt x 114.4275pt>
 File: obrazky/emded_arduino_mega.png Graphic file (type png)
  <use obrazky/emded_arduino_mega.png>
 Package pdftex.def Info: obrazky/emded_arduino_mega.png used on input line 61.
 (pdftex.def)             Requested size: 192.0548pt x 97.31271pt.
 
-<obrazky/emded_arduino_due.png, id=925, 501.875pt x 268.00125pt>
+<obrazky/emded_arduino_due.png, id=937, 501.875pt x 268.00125pt>
 File: obrazky/emded_arduino_due.png Graphic file (type png)
  <use obrazky/emded_arduino_due.png>
 Package pdftex.def Info: obrazky/emded_arduino_due.png used on input line 63.
 (pdftex.def)             Requested size: 192.0548pt x 102.55716pt.
 
-<obrazky/emded_arduino_mini.png, id=929, 559.08875pt x 313.17pt>
+<obrazky/emded_arduino_mini.png, id=941, 559.08875pt x 313.17pt>
 File: obrazky/emded_arduino_mini.png Graphic file (type png)
  <use obrazky/emded_arduino_mini.png>
 Package pdftex.def Info: obrazky/emded_arduino_mini.png used on input line 81.
 (pdftex.def)             Requested size: 128.0387pt x 71.71696pt.
 
-<obrazky/emded_arduino_micro.png, id=930, 836.12375pt x 324.21124pt>
+<obrazky/emded_arduino_micro.png, id=942, 836.12375pt x 324.21124pt>
 File: obrazky/emded_arduino_micro.png Graphic file (type png)
  <use obrazky/emded_arduino_micro.png>
 Package pdftex.def Info: obrazky/emded_arduino_micro.png used on input line 83.
 (pdftex.def)             Requested size: 128.0387pt x 49.64372pt.
 
-<obrazky/emded_arduino_nano.png, id=931, 300.3722pt x 128.73094pt>
+<obrazky/emded_arduino_nano.png, id=943, 300.3722pt x 128.73094pt>
 File: obrazky/emded_arduino_nano.png Graphic file (type png)
  <use obrazky/emded_arduino_nano.png>
 Package pdftex.def Info: obrazky/emded_arduino_nano.png used on input line 85.
 (pdftex.def)             Requested size: 128.0387pt x 54.87589pt.
  [19 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/emded_arduino_mega.png> <C:/Users/krejci/OneDrive/VUT - diplomka/o
-brazky/emded_arduino_due.png>] <obrazky/emded_arduino_fio.png, id=945, 355.3275pt x 150.5625pt>
+brazky/emded_arduino_due.png>] <obrazky/emded_arduino_fio.png, id=957, 355.3275pt x 150.5625pt>
 File: obrazky/emded_arduino_fio.png Graphic file (type png)
  <use obrazky/emded_arduino_fio.png>
 Package pdftex.def Info: obrazky/emded_arduino_fio.png used on input line 100.
 (pdftex.def)             Requested size: 140.84192pt x 59.67944pt.
 
-<obrazky/emded_arduino_mkr1000.png, id=946, 401.5pt x 156.585pt>
+<obrazky/emded_arduino_mkr1000.png, id=958, 401.5pt x 156.585pt>
 File: obrazky/emded_arduino_mkr1000.png Graphic file (type png)
  <use obrazky/emded_arduino_mkr1000.png>
 Package pdftex.def Info: obrazky/emded_arduino_mkr1000.png used on input line 102.
 (pdftex.def)             Requested size: 140.84192pt x 54.92981pt.
 
-<obrazky/emded_arduino_lilipad.png, id=948, 481.8pt x 160.6pt>
+<obrazky/emded_arduino_lilipad.png, id=960, 481.8pt x 160.6pt>
 File: obrazky/emded_arduino_lilipad.png Graphic file (type png)
  <use obrazky/emded_arduino_lilipad.png>
 Package pdftex.def Info: obrazky/emded_arduino_lilipad.png used on input line 112.
 (pdftex.def)             Requested size: 234.73653pt x 78.24377pt.
 
-<obrazky/emded_arduino_yun.png, id=949, 602.25pt x 411.5375pt>
+<obrazky/emded_arduino_yun.png, id=961, 602.25pt x 411.5375pt>
 File: obrazky/emded_arduino_yun.png Graphic file (type png)
  <use obrazky/emded_arduino_yun.png>
 Package pdftex.def Info: obrazky/emded_arduino_yun.png used on input line 114.
@@ -1303,26 +1303,26 @@ Overfull \hbox (4.14624pt too wide) in paragraph at lines 141--142
  []
 
 [21 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/emded_arduino_lilipad.png> <C:/Users/krejci/OneDrive/VUT - diplomka
-/obrazky/emded_arduino_yun.png>] <obrazky/embed_barebones.png, id=973, 887.315pt x 666.49pt>
+/obrazky/emded_arduino_yun.png>] <obrazky/embed_barebones.png, id=985, 887.315pt x 666.49pt>
 File: obrazky/embed_barebones.png Graphic file (type png)
 
 <use obrazky/embed_barebones.png>
 Package pdftex.def Info: obrazky/embed_barebones.png used on input line 152.
 (pdftex.def)             Requested size: 192.0548pt x 144.24852pt.
- <obrazky/embed_freaduino.png, id=974, 476.78125pt x 380.42125pt>
+ <obrazky/embed_freaduino.png, id=986, 476.78125pt x 380.42125pt>
 File: obrazky/embed_freaduino.png Graphic file (type png)
 
 <use obrazky/embed_freaduino.png>
 Package pdftex.def Info: obrazky/embed_freaduino.png used on input line 154.
 (pdftex.def)             Requested size: 192.0548pt x 153.23967pt.
  [22 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_barebones.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obra
-zky/embed_freaduino.png>] <obrazky/embed_diavolino.png, id=982, 602.25pt x 455.7025pt>
+zky/embed_freaduino.png>] <obrazky/embed_diavolino.png, id=994, 602.25pt x 455.7025pt>
 File: obrazky/embed_diavolino.png Graphic file (type png)
 
 <use obrazky/embed_diavolino.png>
 Package pdftex.def Info: obrazky/embed_diavolino.png used on input line 179.
 (pdftex.def)             Requested size: 192.0548pt x 145.32016pt.
- <obrazky/embed_boarduino.png, id=983, 501.875pt x 288.07625pt>
+ <obrazky/embed_boarduino.png, id=995, 501.875pt x 288.07625pt>
 File: obrazky/embed_boarduino.png Graphic file (type png)
 
 <use obrazky/embed_boarduino.png>
@@ -1330,37 +1330,37 @@ Package pdftex.def Info: obrazky/embed_boarduino.png used on input line 181.
 (pdftex.def)             Requested size: 192.0548pt x 110.23935pt.
  [23 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_diavolino.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obra
 zky/embed_boarduino.png>] [24]
-<obrazky/embed_raspi_1a.png, id=1005, 120.45pt x 84.315pt>
+<obrazky/embed_raspi_1a.png, id=1017, 120.45pt x 84.315pt>
 File: obrazky/embed_raspi_1a.png Graphic file (type png)
  <use obrazky/embed_raspi_1a.png>
 Package pdftex.def Info: obrazky/embed_raspi_1a.png used on input line 227.
 (pdftex.def)             Requested size: 128.0387pt x 89.6359pt.
 
-<obrazky/embed_raspi_1b.png, id=1006, 131.74219pt x 89.58469pt>
+<obrazky/embed_raspi_1b.png, id=1018, 131.74219pt x 89.58469pt>
 File: obrazky/embed_raspi_1b.png Graphic file (type png)
  <use obrazky/embed_raspi_1b.png>
 Package pdftex.def Info: obrazky/embed_raspi_1b.png used on input line 229.
 (pdftex.def)             Requested size: 128.0387pt x 87.07063pt.
 
-<obrazky/embed_raspi_1bp.png, id=1007, 128.73094pt x 89.58469pt>
+<obrazky/embed_raspi_1bp.png, id=1019, 128.73094pt x 89.58469pt>
 File: obrazky/embed_raspi_1bp.png Graphic file (type png)
  <use obrazky/embed_raspi_1bp.png>
 Package pdftex.def Info: obrazky/embed_raspi_1bp.png used on input line 231.
 (pdftex.def)             Requested size: 128.0387pt x 89.11012pt.
 
-<obrazky/embed_raspi_2.png, id=1010, 225.84375pt x 148.30406pt>
+<obrazky/embed_raspi_2.png, id=1022, 225.84375pt x 148.30406pt>
 File: obrazky/embed_raspi_2.png Graphic file (type png)
  <use obrazky/embed_raspi_2.png>
 Package pdftex.def Info: obrazky/embed_raspi_2.png used on input line 245.
 (pdftex.def)             Requested size: 128.0387pt x 84.08385pt.
 
-<obrazky/embed_raspi_3.png, id=1011, 233.37187pt x 151.3153pt>
+<obrazky/embed_raspi_3.png, id=1023, 233.37187pt x 151.3153pt>
 File: obrazky/embed_raspi_3.png Graphic file (type png)
  <use obrazky/embed_raspi_3.png>
 Package pdftex.def Info: obrazky/embed_raspi_3.png used on input line 247.
 (pdftex.def)             Requested size: 128.0387pt x 83.0228pt.
 
-<obrazky/embed_raspi_zero.png, id=1012, 652.4375pt x 298.11375pt>
+<obrazky/embed_raspi_zero.png, id=1024, 652.4375pt x 298.11375pt>
 File: obrazky/embed_raspi_zero.png Graphic file (type png)
  <use obrazky/embed_raspi_zero.png>
 Package pdftex.def Info: obrazky/embed_raspi_zero.png used on input line 249.
@@ -1368,14 +1368,14 @@ Package pdftex.def Info: obrazky/embed_raspi_zero.png used on input line 249.
  [25 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_raspi_1a.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obraz
 ky/embed_raspi_1b.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_raspi_1bp.png> <C:/Users/krejci/OneDrive/V
 UT - diplomka/obrazky/embed_raspi_2.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_raspi_3.png> <C:/Users/k
-rejci/OneDrive/VUT - diplomka/obrazky/embed_raspi_zero.png>] <obrazky/embed_bananapim2.png, id=1034, 612.2875pt x 405.51
+rejci/OneDrive/VUT - diplomka/obrazky/embed_raspi_zero.png>] <obrazky/embed_bananapim2.png, id=1046, 612.2875pt x 405.51
 5pt>
 File: obrazky/embed_bananapim2.png Graphic file (type png)
 
 <use obrazky/embed_bananapim2.png>
 Package pdftex.def Info: obrazky/embed_bananapim2.png used on input line 286.
 (pdftex.def)             Requested size: 192.0548pt x 127.19337pt.
- <obrazky/embed_orangepiplus2.png, id=1035, 395.4775pt x 233.87375pt>
+ <obrazky/embed_orangepiplus2.png, id=1047, 395.4775pt x 233.87375pt>
 File: obrazky/embed_orangepiplus2.png Graphic file (type png)
 
 <use obrazky/embed_orangepiplus2.png>
@@ -1387,13 +1387,13 @@ Overfull \hbox (1.78719pt too wide) in paragraph at lines 297--298
  []
 
 [26 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_bananapim2.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obra
-zky/embed_orangepiplus2.png>] [27] <obrazky/embed_cubie_1.png, id=1051, 314.67563pt x 183.68625pt>
+zky/embed_orangepiplus2.png>] [27] <obrazky/embed_cubie_1.png, id=1063, 314.67563pt x 183.68625pt>
 File: obrazky/embed_cubie_1.png Graphic file (type png)
 
 <use obrazky/embed_cubie_1.png>
 Package pdftex.def Info: obrazky/embed_cubie_1.png used on input line 326.
 (pdftex.def)             Requested size: 192.0548pt x 112.10728pt.
- <obrazky/embed_upboard.png, id=1052, 549.55313pt x 373.395pt>
+ <obrazky/embed_upboard.png, id=1064, 549.55313pt x 373.395pt>
 File: obrazky/embed_upboard.png Graphic file (type png)
 
 <use obrazky/embed_upboard.png>
@@ -1405,38 +1405,38 @@ Overfull \hbox (2.1164pt too wide) in paragraph at lines 334--335
  []
 
 [28 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_cubie_1.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky
-/embed_upboard.png>] <obrazky/embed_pine.png, id=1063, 317.68687pt x 191.9672pt>
+/embed_upboard.png>] <obrazky/embed_pine.png, id=1075, 317.68687pt x 191.9672pt>
 File: obrazky/embed_pine.png Graphic file (type png)
  <use obrazky/embed_pine.png>
 Package pdftex.def Info: obrazky/embed_pine.png used on input line 355.
 (pdftex.def)             Requested size: 192.0548pt x 116.05702pt.
 
-<obrazky/embed_odroidc2.png, id=1064, 420.82219pt x 273.27094pt>
+<obrazky/embed_odroidc2.png, id=1076, 420.82219pt x 273.27094pt>
 File: obrazky/embed_odroidc2.png Graphic file (type png)
  <use obrazky/embed_odroidc2.png>
 Package pdftex.def Info: obrazky/embed_odroidc2.png used on input line 357.
 (pdftex.def)             Requested size: 192.0548pt x 124.71791pt.
  [29 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_pine.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/e
 mbed_odroidc2.png>]
-<obrazky/embed_beaglebone_black.png, id=1078, 318.43968pt x 196.48407pt>
+<obrazky/embed_beaglebone_black.png, id=1090, 318.43968pt x 196.48407pt>
 File: obrazky/embed_beaglebone_black.png Graphic file (type png)
  <use obrazky/embed_beaglebone_black.png>
 Package pdftex.def Info: obrazky/embed_beaglebone_black.png used on input line 386.
 (pdftex.def)             Requested size: 222.90625pt x 137.5379pt.
 
-<obrazky/embed_intel_galileo.png, id=1082, 622.325pt x 368.37625pt>
+<obrazky/embed_intel_galileo.png, id=1094, 622.325pt x 368.37625pt>
 File: obrazky/embed_intel_galileo.png Graphic file (type png)
  <use obrazky/embed_intel_galileo.png>
 Package pdftex.def Info: obrazky/embed_intel_galileo.png used on input line 411.
 (pdftex.def)             Requested size: 280.04366pt x 165.76778pt.
  [30] [31 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_beaglebone_black.png> <C:/Users/krejci/OneDrive/VUT - d
-iplomka/obrazky/embed_intel_galileo.png>] <obrazky/embed_intel_edison2.png, id=1096, 331.2375pt x 150.5625pt>
+iplomka/obrazky/embed_intel_galileo.png>] <obrazky/embed_intel_edison2.png, id=1108, 331.2375pt x 150.5625pt>
 File: obrazky/embed_intel_edison2.png Graphic file (type png)
 
 <use obrazky/embed_intel_edison2.png>
 Package pdftex.def Info: obrazky/embed_intel_edison2.png used on input line 431.
 (pdftex.def)             Requested size: 192.0548pt x 87.29643pt.
- <obrazky/embed_intel_edison1.png, id=1097, 256.96pt x 144.54pt>
+ <obrazky/embed_intel_edison1.png, id=1109, 256.96pt x 144.54pt>
 File: obrazky/embed_intel_edison1.png Graphic file (type png)
 
 <use obrazky/embed_intel_edison1.png>
@@ -1444,13 +1444,13 @@ Package pdftex.def Info: obrazky/embed_intel_edison1.png used on input line 433.
 (pdftex.def)             Requested size: 192.0548pt x 108.03198pt.
  [32 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_intel_edison2.png> <C:/Users/krejci/OneDrive/VUT - diplomka/
 obrazky/embed_intel_edison1.png>]
-<obrazky/embed_amd_gizmo1.png, id=1108, 599.99156pt x 421.575pt>
+<obrazky/embed_amd_gizmo1.png, id=1120, 599.99156pt x 421.575pt>
 File: obrazky/embed_amd_gizmo1.png Graphic file (type png)
  <use obrazky/embed_amd_gizmo1.png>
 Package pdftex.def Info: obrazky/embed_amd_gizmo1.png used on input line 460.
 (pdftex.def)             Requested size: 192.0548pt x 134.94534pt.
 
-<obrazky/embed_amd_gizmo2.png, id=1109, 471.26062pt x 337.26pt>
+<obrazky/embed_amd_gizmo2.png, id=1121, 471.26062pt x 337.26pt>
 File: obrazky/embed_amd_gizmo2.png Graphic file (type png)
  <use obrazky/embed_amd_gizmo2.png>
 Package pdftex.def Info: obrazky/embed_amd_gizmo2.png used on input line 462.
@@ -1468,12 +1468,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-<obrazky/unipi_v1.png, id=1137, 483.8075pt x 212.795pt>
+<obrazky/unipi_v1.png, id=1149, 483.8075pt x 212.795pt>
 File: obrazky/unipi_v1.png Graphic file (type png)
  <use obrazky/unipi_v1.png>
 Package pdftex.def Info: obrazky/unipi_v1.png used on input line 52.
 (pdftex.def)             Requested size: 362.85474pt x 159.59584pt.
- [35 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_v1.png>] <obrazky/unipi_schema1.pdf, id=1146, 533.74406pt x 
+ [35 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_v1.png>] <obrazky/unipi_schema1.pdf, id=1158, 533.74406pt x 
 304.13625pt>
 File: obrazky/unipi_schema1.pdf Graphic file (type pdf)
 
@@ -1485,25 +1485,25 @@ Overfull \hbox (26.89325pt too wide) in paragraph at lines 82--83
  [] 
  []
 
-<obrazky/unipi_unipi_deska.png, id=1148, 1003.75pt x 687.56876pt>
+<obrazky/unipi_unipi_deska.png, id=1160, 1003.75pt x 687.56876pt>
 File: obrazky/unipi_unipi_deska.png Graphic file (type png)
  <use obrazky/unipi_unipi_deska.png>
 Package pdftex.def Info: obrazky/unipi_unipi_deska.png used on input line 113.
 (pdftex.def)             Requested size: 250.93689pt x 171.89177pt.
- [36 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_schema1.pdf>] <obrazky/unipi_neuron_s.png, id=1173, 602.25pt
+ [36 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_schema1.pdf>] <obrazky/unipi_neuron_s.png, id=1185, 602.25pt
  x 602.25pt>
 File: obrazky/unipi_neuron_s.png Graphic file (type png)
 
 <use obrazky/unipi_neuron_s.png>
 Package pdftex.def Info: obrazky/unipi_neuron_s.png used on input line 141.
 (pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
- <obrazky/unipi_neuron_m.png, id=1174, 602.25pt x 602.25pt>
+ <obrazky/unipi_neuron_m.png, id=1186, 602.25pt x 602.25pt>
 File: obrazky/unipi_neuron_m.png Graphic file (type png)
 
 <use obrazky/unipi_neuron_m.png>
 Package pdftex.def Info: obrazky/unipi_neuron_m.png used on input line 143.
 (pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
- <obrazky/unipi_neuron_l.png, id=1175, 602.25pt x 602.25pt>
+ <obrazky/unipi_neuron_l.png, id=1187, 602.25pt x 602.25pt>
 File: obrazky/unipi_neuron_l.png Graphic file (type png)
 
 <use obrazky/unipi_neuron_l.png>
@@ -1512,31 +1512,31 @@ Package pdftex.def Info: obrazky/unipi_neuron_l.png used on input line 145.
  [37 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_unipi_deska.png>] [38 <C:/Users/krejci/OneDrive/VUT - diplom
 ka/obrazky/unipi_neuron_s.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_neuron_m.png> <C:/Users/krejci/One
 Drive/VUT - diplomka/obrazky/unipi_neuron_l.png>]
-<obrazky/unipi_propojbrain.png, id=1196, 761.84625pt x 375.4025pt>
+<obrazky/unipi_propojbrain.png, id=1208, 761.84625pt x 375.4025pt>
 File: obrazky/unipi_propojbrain.png Graphic file (type png)
  <use obrazky/unipi_propojbrain.png>
 Package pdftex.def Info: obrazky/unipi_propojbrain.png used on input line 199.
 (pdftex.def)             Requested size: 192.0548pt x 94.63515pt.
 
-<obrazky/unipi_osazeny.png, id=1197, 803.0pt x 533.995pt>
+<obrazky/unipi_osazeny.png, id=1209, 803.0pt x 533.995pt>
 File: obrazky/unipi_osazeny.png Graphic file (type png)
  <use obrazky/unipi_osazeny.png>
 Package pdftex.def Info: obrazky/unipi_osazeny.png used on input line 201.
 (pdftex.def)             Requested size: 192.0548pt x 127.71327pt.
 
-<obrazky/unipi_unipi_box.png, id=1201, 1003.75pt x 768.8725pt>
+<obrazky/unipi_unipi_box.png, id=1213, 1003.75pt x 768.8725pt>
 File: obrazky/unipi_unipi_box.png Graphic file (type png)
  <use obrazky/unipi_unipi_box.png>
 Package pdftex.def Info: obrazky/unipi_unipi_box.png used on input line 213.
 (pdftex.def)             Requested size: 192.0548pt x 147.10797pt.
 
-<obrazky/unipi_propojuvnitr.png, id=1202, 831.105pt x 616.3025pt>
+<obrazky/unipi_propojuvnitr.png, id=1214, 831.105pt x 616.3025pt>
 File: obrazky/unipi_propojuvnitr.png Graphic file (type png)
  <use obrazky/unipi_propojuvnitr.png>
 Package pdftex.def Info: obrazky/unipi_propojuvnitr.png used on input line 215.
 (pdftex.def)             Requested size: 192.0548pt x 142.41428pt.
 
-<obrazky/unipi_schema2.pdf, id=1204, 535.2497pt x 326.72063pt>
+<obrazky/unipi_schema2.pdf, id=1216, 535.2497pt x 326.72063pt>
 File: obrazky/unipi_schema2.pdf Graphic file (type pdf)
  <use obrazky/unipi_schema2.pdf>
 Package pdftex.def Info: obrazky/unipi_schema2.pdf used on input line 224.
@@ -1545,12 +1545,12 @@ Package pdftex.def Info: obrazky/unipi_schema2.pdf used on input line 224.
 razky/unipi_osazeny.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_unipi_box.png> <C:/Users/krejci/OneDrive
 /VUT - diplomka/obrazky/unipi_propojuvnitr.png>] [40 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_schema2.pdf>
 ]
-<obrazky/sbernice_uart.pdf, id=1235, 350.81062pt x 70.76437pt>
+<obrazky/sbernice_uart.pdf, id=1247, 350.81062pt x 70.76437pt>
 File: obrazky/sbernice_uart.pdf Graphic file (type pdf)
  <use obrazky/sbernice_uart.pdf>
 Package pdftex.def Info: obrazky/sbernice_uart.pdf used on input line 283.
 (pdftex.def)             Requested size: 350.80975pt x 70.76419pt.
- [41 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/sbernice_uart.pdf>] [42] <obrazky/unipi_gpio.pdf, id=1253, 350.810
+ [41 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/sbernice_uart.pdf>] [42] <obrazky/unipi_gpio.pdf, id=1265, 350.810
 62pt x 243.15843pt>
 File: obrazky/unipi_gpio.pdf Graphic file (type pdf)
 
@@ -1563,7 +1563,7 @@ Overfull \hbox (6.46037pt too wide) in paragraph at lines 1--1
 []\T1/lmr/bx/n/17.28 KOMUNIKAƒNÍ MO-DUL WI-RE-LESS M-BUS 
  []
 
-<obrazky/modul_modul.png, id=1291, 451.6875pt x 169.38281pt>
+<obrazky/modul_modul.png, id=1303, 451.6875pt x 169.38281pt>
 File: obrazky/modul_modul.png Graphic file (type png)
  <use obrazky/modul_modul.png>
 Package pdftex.def Info: obrazky/modul_modul.png used on input line 12.
@@ -1578,32 +1578,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
 
  <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/modul_modul.png>]
-<obrazky/modul_block.pdf, id=1300, 683.55376pt x 385.44pt>
+<obrazky/modul_block.pdf, id=1312, 683.55376pt x 385.44pt>
 File: obrazky/modul_block.pdf Graphic file (type pdf)
  <use obrazky/modul_block.pdf>
 Package pdftex.def Info: obrazky/modul_block.pdf used on input line 31.
 (pdftex.def)             Requested size: 410.13542pt x 231.26578pt.
 
-<obrazky/modul_antenaa.png, id=1303, 228.10219pt x 221.32687pt>
+<obrazky/modul_antenaa.png, id=1315, 228.10219pt x 221.32687pt>
 File: obrazky/modul_antenaa.png Graphic file (type png)
  <use obrazky/modul_antenaa.png>
 Package pdftex.def Info: obrazky/modul_antenaa.png used on input line 48.
 (pdftex.def)             Requested size: 119.50105pt x 115.94843pt.
 
-<obrazky/modul_antenab.png, id=1304, 222.8325pt x 226.59656pt>
+<obrazky/modul_antenab.png, id=1316, 222.8325pt x 226.59656pt>
 File: obrazky/modul_antenab.png Graphic file (type png)
  <use obrazky/modul_antenab.png>
 Package pdftex.def Info: obrazky/modul_antenab.png used on input line 50.
 (pdftex.def)             Requested size: 119.50105pt x 121.52011pt.
 
-<obrazky/modul_antenac.png, id=1305, 234.8775pt x 222.8325pt>
+<obrazky/modul_antenac.png, id=1317, 234.8775pt x 222.8325pt>
 File: obrazky/modul_antenac.png Graphic file (type png)
  <use obrazky/modul_antenac.png>
 Package pdftex.def Info: obrazky/modul_antenac.png used on input line 52.
 (pdftex.def)             Requested size: 119.50105pt x 113.37105pt.
  [46 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/modul_block.pdf> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/
 modul_antenaa.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/modul_antenab.png> <C:/Users/krejci/OneDrive/VUT - d
-iplomka/obrazky/modul_antenac.png>] <obrazky/modul_topologie.pdf, id=1338, 658.71094pt x 285.31593pt>
+iplomka/obrazky/modul_antenac.png>] <obrazky/modul_topologie.pdf, id=1350, 658.71094pt x 285.31593pt>
 File: obrazky/modul_topologie.pdf Graphic file (type pdf)
  <use obrazky/modul_topologie.pdf>
 Package pdftex.def Info: obrazky/modul_topologie.pdf used on input line 73.
@@ -1623,78 +1623,94 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 
 
-] [50] [51] [52] <obrazky/wmbus_manchester.pdf, id=1406, 419.31656pt x 141.52875pt>
+] [50] [51] [52] <obrazky/wmbus_manchester.pdf, id=1418, 419.31656pt x 141.52875pt>
 File: obrazky/wmbus_manchester.pdf Graphic file (type pdf)
 
 <use obrazky/wmbus_manchester.pdf>
-Package pdftex.def Info: obrazky/wmbus_manchester.pdf used on input line 166.
+Package pdftex.def Info: obrazky/wmbus_manchester.pdf used on input line 167.
 (pdftex.def)             Requested size: 419.31552pt x 141.5284pt.
  [53] [54 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/wmbus_manchester.pdf>]
-[55] [56]
-Overfull \hbox (0.87144pt too wide) in paragraph at lines 322--323
-[][][][][][][] 
+Overfull \hbox (3.80789pt too wide) in paragraph at lines 222--223
+[]\T1/lmr/m/n/12 Ur£uje ve-li-kost p°e-ná-²e-ných dat, ale bez sa-mot-ného L-pole a kon-t-rol-ního sou£tu. 
  []
 
-) [57] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zarizeni.tex"
-<obrazky/zarizeni_weptech1.png, id=1459, 466.74374pt x 338.26375pt>
+[55] [56] [57] <obrazky/wmbus_aes_cbc.pdf, id=1475, 646.66594pt x 276.28218pt>
+File: obrazky/wmbus_aes_cbc.pdf Graphic file (type pdf)
+ <use obrazky/wmbus_aes_cbc.pdf>
+Package pdftex.def Info: obrazky/wmbus_aes_cbc.pdf used on input line 412.
+(pdftex.def)             Requested size: 452.66307pt x 193.3962pt.
+
+Overfull \hbox (25.87173pt too wide) in paragraph at lines 412--413
+ [] 
+ []
+
+[58] [59 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/wmbus_aes_cbc.pdf>]
+<obrazky/wmbus_aes_schema.pdf, id=1507, 491.58656pt x 173.14688pt>
+File: obrazky/wmbus_aes_schema.pdf Graphic file (type pdf)
+ <use obrazky/wmbus_aes_schema.pdf>
+Package pdftex.def Info: obrazky/wmbus_aes_schema.pdf used on input line 510.
+(pdftex.def)             Requested size: 393.26978pt x 138.51768pt.
+ [60]) [61 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/wmbus_aes_schema.pdf>]
+("C:\Users\krejci\OneDrive\VUT - diplomka\text/zarizeni.tex"
+<obrazky/zarizeni_weptech1.png, id=1539, 466.74374pt x 338.26375pt>
 File: obrazky/zarizeni_weptech1.png Graphic file (type png)
  <use obrazky/zarizeni_weptech1.png>
 Package pdftex.def Info: obrazky/zarizeni_weptech1.png used on input line 28.
 (pdftex.def)             Requested size: 192.0548pt x 139.18968pt.
 
-<obrazky/zarizeni_weptech2.png, id=1460, 412.54124pt x 338.26375pt>
+<obrazky/zarizeni_weptech2.png, id=1540, 412.54124pt x 338.26375pt>
 File: obrazky/zarizeni_weptech2.png Graphic file (type png)
  <use obrazky/zarizeni_weptech2.png>
 Package pdftex.def Info: obrazky/zarizeni_weptech2.png used on input line 30.
 (pdftex.def)             Requested size: 192.0548pt x 157.47682pt.
- [58
+ [62
 
 
 
  <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_weptech1.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazk
-y/zarizeni_weptech2.png>] [59]
+y/zarizeni_weptech2.png>] [63]
 
-LaTeX Warning: Text page 60 contains only floats.
+LaTeX Warning: Text page 64 contains only floats.
 
-[60] [61] <obrazky/zarizeni_bonega1.png, id=1492, 178.6675pt x 174.6525pt>
+[64] [65] <obrazky/zarizeni_bonega1.png, id=1570, 178.6675pt x 174.6525pt>
 File: obrazky/zarizeni_bonega1.png Graphic file (type png)
  <use obrazky/zarizeni_bonega1.png>
 Package pdftex.def Info: obrazky/zarizeni_bonega1.png used on input line 166.
 (pdftex.def)             Requested size: 128.0387pt x 125.16873pt.
 
-<obrazky/zarizeni_bonega2.png, id=1493, 250.9375pt x 244.915pt>
+<obrazky/zarizeni_bonega2.png, id=1571, 250.9375pt x 244.915pt>
 File: obrazky/zarizeni_bonega2.png Graphic file (type png)
  <use obrazky/zarizeni_bonega2.png>
 Package pdftex.def Info: obrazky/zarizeni_bonega2.png used on input line 168.
 (pdftex.def)             Requested size: 128.0387pt x 124.97224pt.
 
-<obrazky/zarizeni_bonega3.png, id=1494, 189.70876pt x 176.66pt>
+<obrazky/zarizeni_bonega3.png, id=1572, 189.70876pt x 176.66pt>
 File: obrazky/zarizeni_bonega3.png Graphic file (type png)
  <use obrazky/zarizeni_bonega3.png>
 Package pdftex.def Info: obrazky/zarizeni_bonega3.png used on input line 170.
 (pdftex.def)             Requested size: 128.0387pt x 119.23495pt.
- [62] [63 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_bonega1.png> <C:/Users/krejci/OneDrive/VUT - diplomk
+ [66] [67 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_bonega1.png> <C:/Users/krejci/OneDrive/VUT - diplomk
 a/obrazky/zarizeni_bonega2.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_bonega3.png>]
 Overfull \hbox (2.52914pt too wide) in paragraph at lines 241--242
 []\T1/lmr/m/n/12 Modul Bo-nega pra-cuje pouze v re-ºimu ²if-ro-vání p°e-ná-²en-ných dat po-mocí AES128
  []
 
-[64] <obrazky/zarizeni_kamstrup.png, id=1517, 330.23375pt x 359.3425pt>
+[68] <obrazky/zarizeni_kamstrup.png, id=1596, 330.23375pt x 359.3425pt>
 File: obrazky/zarizeni_kamstrup.png Graphic file (type png)
  <use obrazky/zarizeni_kamstrup.png>
 Package pdftex.def Info: obrazky/zarizeni_kamstrup.png used on input line 262.
 (pdftex.def)             Requested size: 231.16203pt x 251.53802pt.
- [65 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_kamstrup.png>] [66] [67]
-<obrazky/zarizeni_zpa.png, id=1550, 444.66125pt x 549.05125pt>
+ [69 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_kamstrup.png>] [70] [71]
+<obrazky/zarizeni_zpa.png, id=1628, 444.66125pt x 549.05125pt>
 File: obrazky/zarizeni_zpa.png Graphic file (type png)
  <use obrazky/zarizeni_zpa.png>
 Package pdftex.def Info: obrazky/zarizeni_zpa.png used on input line 373.
 (pdftex.def)             Requested size: 155.63376pt x 192.1708pt.
- [68 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_zpa.png>]
+ [72 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_zpa.png>]
 
-LaTeX Warning: Text page 69 contains only floats.
+LaTeX Warning: Text page 73 contains only floats.
 
-[69]) [70] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/implementace.tex"
+[73]) [74] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/implementace.tex"
 Overfull \hbox (14.50714pt too wide) in paragraph at lines 32--33
 []\T1/lmr/m/n/12 V sou-boru \T1/lmtt/m/n/12 /boot/cmdline.txt \T1/lmr/m/n/12 je po-t°eba ode-brat úsek textu \T1/lmtt/m/
 n/12 console=ttyAMA0,
@@ -1705,16 +1721,16 @@ Overfull \hbox (2.18599pt too wide) in paragraph at lines 33--34
 \T1/lmr/m/n/12 do-psat po-loºku \T1/lmtt/m/n/12 dtoverlay=pi3-miniuart-bt\T1/lmr/m/n/12 , která za-káºe BT na mini-UART
  []
 
-[71
+[75
 
 
 
-] [72] [73] [74]
+] [76] [77] [78]
 Overfull \hbox (4.89494pt too wide) in paragraph at lines 230--231
 []\T1/lmr/m/n/12 Strukturu ta-bu-lek, de-fi-nici sloupcu v vazby mezi nimi po-pi-suje schéma na Obr. []7.1[]. 
  []
 
-<obrazky/aplikace_databaze.png, id=1620, 782.925pt x 268.00125pt>
+<obrazky/aplikace_databaze.png, id=1697, 782.925pt x 268.00125pt>
 File: obrazky/aplikace_databaze.png Graphic file (type png)
  <use obrazky/aplikace_databaze.png>
 Package pdftex.def Info: obrazky/aplikace_databaze.png used on input line 234.
@@ -1724,8 +1740,8 @@ Overfull \hbox (3.81874pt too wide) in paragraph at lines 234--235
  [] 
  []
 
-[75 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_databaze.png>] [76] [77]) [78]
-("C:\Users\krejci\OneDrive\VUT - diplomka\text/zaver.tex") [79
+[79 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_databaze.png>] [80] [81]) [82]
+("C:\Users\krejci\OneDrive\VUT - diplomka\text/zaver.tex") [83
 
 
 
@@ -1748,7 +1764,7 @@ Underfull \hbox (badness 1360) in paragraph at lines 13--14
 []
  []
 
-[80
+[84
 
 
 
@@ -1758,7 +1774,7 @@ Underfull \hbox (badness 3364) in paragraph at lines 53--54
 \T1/lmr/m/n/12 2016-12-14]. Do-stupné z: []$\T1/lmtt/m/n/12 https : / / www . element14 . com / community / docs /
  []
 
-[81]
+[85]
 Underfull \hbox (badness 4242) in paragraph at lines 71--72
 []\T1/lmr/m/n/12 SoC and Me-mory Spe-ci-fi-cation \T1/lmr/m/it/12 PINE64 \T1/lmr/m/n/12 [on-line]. 2016 [cit. 2016-12-
  []
@@ -1769,7 +1785,7 @@ Underfull \hbox (badness 1648) in paragraph at lines 77--78
 Do-
  []
 
-[82]
+[86]
 Underfull \hbox (badness 5203) in paragraph at lines 99--100
 []\T1/lmr/m/n/12 PiBrella com-pa-ti-bi-lity \T1/lmr/m/it/12 Mod-MyPi \T1/lmr/m/n/12 [on-line]. 2016 [cit. 2016-12-14]. D
 o-
@@ -1812,28 +1828,28 @@ Underfull \hbox (badness 2990) in paragraph at lines 115--116
 es /
  []
 
-[83]
-Underfull \hbox (badness 8151) in paragraph at lines 119--120
+[87]
+Underfull \hbox (badness 8151) in paragraph at lines 123--124
 []\T1/lmr/m/n/12 Wireless M-Bus / OMS Hu-mi-dity and tem-pe-ra-ture sen-sor WEP-
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 119--120
+Underfull \hbox (badness 2469) in paragraph at lines 123--124
 \T1/lmr/m/n/12 OMSF-868A \T1/lmr/m/it/12 WEP-TECH elek-tro-nik GmbH \T1/lmr/m/n/12 [on-line]. 2016 [cit. 2016-12-
  []
 
-[84]) ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zkratky.tex" [85
+[88]) ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zkratky.tex" [89
 
 
 
 
-] [86] [87] [88])
+] [90] [91] [92])
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.toa")
 \tf@toa=\write8
- [89
+ [93
 
 
-] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/prilohy.tex" [90
+] ("C:\Users\krejci\OneDrive\VUT - diplomka\text/prilohy.tex" [94
 
 
 
@@ -1842,34 +1858,34 @@ Overfull \hbox (15.1934pt too wide) in paragraph at lines 85--85
 []\T1/lmr/bx/n/17.28 VÝVOJOVÝ DI-A-GRAM APLI-KACE PRO VY-
  []
 
-<obrazky/aplikace_diagram.pdf, id=1800, 733.99219pt x 1075.76906pt>
+<obrazky/aplikace_diagram.pdf, id=1880, 733.99219pt x 1075.76906pt>
 File: obrazky/aplikace_diagram.pdf Graphic file (type pdf)
  <use obrazky/aplikace_diagram.pdf>
 Package pdftex.def Info: obrazky/aplikace_diagram.pdf used on input line 90.
 (pdftex.def)             Requested size: 403.69695pt x 591.67482pt.
- [91
+ [95
 
 
- <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_diagram.pdf>] [92
+ <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_diagram.pdf>] [96
 
 
 ]
-<obrazky/chart_weptech.pdf, id=1850, 493.844pt x 416.28323pt>
+<obrazky/chart_weptech.pdf, id=1929, 493.844pt x 416.28323pt>
 File: obrazky/chart_weptech.pdf Graphic file (type pdf)
  <use obrazky/chart_weptech.pdf>
 Package pdftex.def Info: obrazky/chart_weptech.pdf used on input line 132.
 (pdftex.def)             Requested size: 395.07573pt x 333.02704pt.
- [93
+ [97
 
 
 
  <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/chart_weptech.pdf, page is rotated 90 degrees>]
-<obrazky/priloha_medium.pdf, id=1871, 395.22656pt x 241.65282pt>
+<obrazky/priloha_medium.pdf, id=1951, 395.22656pt x 241.65282pt>
 File: obrazky/priloha_medium.pdf Graphic file (type pdf)
  <use obrazky/priloha_medium.pdf>
 Package pdftex.def Info: obrazky/priloha_medium.pdf used on input line 149.
 (pdftex.def)             Requested size: 395.22559pt x 241.65222pt.
-) [94
+) [98
 
 
  <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/priloha_medium.pdf>]
@@ -1887,14 +1903,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 270.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 270.
 Package rerunfilecheck Info: File `sablona.out' has not changed.
-(rerunfilecheck)             Checksum: 431797BBBD0ED0F82092D93503B781DE;16906.
+(rerunfilecheck)             Checksum: 735FCE34B40D70B46953778770A391A2;16968.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
  ) 
 Here is how much of TeX's memory you used:
- 17634 strings out of 493921
- 256835 string characters out of 3147279
- 480414 words of memory out of 3000000
- 19965 multiletter control sequences out of 15000+200000
+ 17680 strings out of 493921
+ 257581 string characters out of 3147279
+ 480141 words of memory out of 3000000
+ 19995 multiletter control sequences out of 15000+200000
  88915 words of font info for 71 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,18n,118p,1124b,1400s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1909,9 +1925,9 @@ onts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
  2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on sablona.pdf (94 pages, 20873276 bytes).
+Output written on sablona.pdf (98 pages, 20965365 bytes).
 PDF statistics:
- 2050 PDF objects out of 2073 (max. 8388607)
- 459 named destinations out of 1000 (max. 500000)
- 1321 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2133 PDF objects out of 2487 (max. 8388607)
+ 473 named destinations out of 1000 (max. 500000)
+ 1331 words of extra memory for PDF output out of 10000 (max. 10000000)
 
