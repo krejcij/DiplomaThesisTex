@@ -122,6 +122,7 @@ Jednoduchým spuštěním komunikačního modulu v módu skeneru byl zachycen te
 	A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
 \end{centerverbatim}
 \end{figure}
+\vspace{-5pt}
 
 který byl pomoci datasheetu použitého komunikačního modulu~\cite{ModulIQRF} a~čidla~\cite{CidloWeptech} analyzován, a přehledně zobrazen do Tab. \ref{PacketTableAnalysis}.
 
@@ -135,6 +136,7 @@ V okamžiku kdy bylo zařízení přepnuto do šifrovaného módu dle Tab.~\ref{
 	8210f9b979353c39dc1d5e0c873eb81994d28c099ef1d55b008
 \end{centerverbatim}
 \end{figure}
+\vspace{-5pt}
 
 který byl pomoci datasheetů použitého komunikačního modulu \cite{ModulIQRF} a normy~\cite{Norma1,NormaFIPS} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
 \begin{itemize}
@@ -143,13 +145,7 @@ který byl pomoci datasheetů použitého komunikačního modulu \cite{ModulIQRF
 	\item 38-93 pro šifrovanou část dat.
 \end{itemize}
 
-Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována:
-
-
-..\colorbox[rgb]{1,0,0}{popsat prakticky jak se to dešifrovalo}..
-
-
- a byl získán dešifrovaný telegram:
+Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována~\ref{KapitolaDesifrovani} a byl získán dešifrovaný telegram:
 
 \begin{figure}[!ht]
 \begin{centerverbatim}
@@ -158,16 +154,17 @@ Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována:
 \end{centerverbatim}
 \end{figure}
 
-Poté lze dešifrovaná data vyparsovat jako při nešifrovaném přenosu popsaném v předchozí kapitole.
+který je až na číslo přístupu a CRC shodný s předchozím nešifrovaným telegramem. Nyní tedy lze dešifrovaná data vyparsovat jako při nešifrovaném přenosu popsaném v předchozí kapitole.
 
 \begin{table}[!ht]
 \centering
+\vspace{-10pt}
 \caption{Rozklíčovaný zachycený paket}
 \resizebox{\textwidth}{!}{%
 \label{PacketTableAnalysis}
 \begin{tabular}{|c|c|c|l|l|c|c|l|}
 \hline
-\textbf{Pozice} & \textbf{\begin{tabular}[c]{@{}c@{}}Tele-\\ gram\end{tabular}} & \multicolumn{1}{c|}{\textbf{Pole}} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{Hodnota} & \textbf{\begin{tabular}[c]{@{}c@{}}Číselné\\ vyjádření\end{tabular}} & \multicolumn{1}{c|}{\textbf{Význam pro uživatele}} \\ \hline \hline
+\textbf{Pozice} & \textbf{Bajty} & \multicolumn{1}{c|}{\textbf{Pole}} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{Hodnota} & \textbf{Vyjádření} & \multicolumn{1}{c|}{\textbf{Význam pro uživatele}} \\ \hline \hline
 4 & 2E & L-Pole & Délka telegramu & 1Eh & 46 & Paket má 46 bytů \\ \hline
 6 & 44 & C-Pole & Typ telegramu & 44h & 44 & \begin{tabular}[c]{@{}l@{}}Paket je typu \\ SND-NR\end{tabular} \\ \hline
 8 & B0 & M-Pole & Výrobce zařízení & B0h & 5CB0 & \begin{tabular}[c]{@{}l@{}}Výrobcem \\ je WEPtech\end{tabular} \\ \hline
@@ -240,10 +237,18 @@ Strukturu tabulek, definici sloupcu v vazby mezi nimi popisuje schéma na Obr.~\
 \end{figure}
 	
 \section{Zajištění vizualizace dat}	
-\colorbox[rgb]{1,0,0}{POPSAT GOOGLE API}
+Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Charts API~\cite{uvod_google_charts_api} běžící na webovém serveru Apache2 a generovaném pomocí PHP/Pythonu. Pro tyto potřeby je nutné doinstalovat následující balíčky:
+ 
+\begin{lstlisting}[style=MyCodeBash]
+		sudo apt-get update
+		sudo apt-get install apache2
+		sudo apt-get install php7.0 
+	\end{lstlisting}
+
+Dále je nezbytné do umístění \texttt{$\backslash$var$\backslash$www$\backslash$html$\backslash$} nahrát zdrojové soubory visualizační aplikace. 
 
 \section{Struktura aplikace}
-Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura aplikace znázorněná na Obr.~\ref{AplikaceDiagram}. Diagram je pro přehlednost odlišen barevnými bloky:
+Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura aplikace znázorněná na schématu přílohy~\ref{AplikaceDiagram}. Diagram je pro přehlednost odlišen barevnými bloky:
 \begin{itemize}
 	\item modrou barvou je znázorněna kostra programu,
 	\item zelenou barvou je nekonečná smyčka naslouchání dat,
@@ -263,21 +268,24 @@ Program při startu kontroluje, zdali  má k dispozici všechny potřebné kompo
 Dále program kontroluje přítomnost a možnost otevření sériového portu. V případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následujě příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
 
 \subsection{Základní kontrola a cyklus příjmu dat}
-Následně dojde ke spuštění smyčky naslouchání příchozích telegramů. Každý příchozí telgram je podroben sérii kontrol, pro ověření správnosti příjmu. Jako první je telegram podroben kontrole délky odpovídající sudým násobkům. Následně je telegram podroben základní analýze položek aplikační a linkové vrstvy. Dochází ke kontrole délky telegramu a jeho CRC součtu. Je provedena kontrola obsahu Cl-pole, Status pole a ConfigurationWord pole. Pokud některá z položek neodpovídá, telegram je zaevidován a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
-Na základě obsahu položky ConfigurationWord se program nadále větví na zpracování šifrovaného (Kap. \ref{KapitolaDesifrovani}) a nešifrovaného (Kap. \ref{KapitolaParsovani}) telegramu.
+Následně dojde ke spuštění smyčky naslouchání příchozích telegramů. Každý příchozí telgram je podroben sérii kontrol, pro ověření správnosti příjmu. Jako první je telegram podroben kontrole délky odpovídající sudým násobkům. Následně je telegram podroben základní analýze položek aplikační a linkové vrstvy. Dochází ke kontrole délky telegramu a jeho CRC součtu. Je provedena kontrola obsahu CI-pole, \texttt{Status} pole a \texttt{ConfigurationWord} pole. Pokud některá z položek neodpovídá, telegram je zaevidován a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
+Na základě obsahu položky \texttt{ConfigurationWord} (viz Kap.~\ref{KapitolaConfigurationWord}) se program nadále větví na zpracování šifrovaného (Kap. \ref{KapitolaDesifrovani}) a nešifrovaného (Kap. \ref{KapitolaParsovani}) telegramu.
 
 \subsection{Dešifrování dat}
 \label{KapitolaDesifrovani}
-Pokud je analýzou položky ConfigurationWord je zjištěno šifrování dat přenášených dat algoritmem AES128 CBC, dojde k rozšifrování dat.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Pokud je analýzou položky \texttt{ConfigurationWord} zjištěno šifrování dat přenášených dat algoritmem AES128 CBC, je zahájen proces dešifrování dat.
 
+Díky vnitřní implementaci IQRF modulu jsou všechny zachycené šifrované pakety automaticky rozšifrovány pomocí AES klíče nahraného v paměti modulu. Jedná se však o klíč daného modulu, nikoliv vyčítaného zařízení. Tato dešifrovaná data jsou tedy nevalidní. Celý postup dešifrování se tak komplikuje:
 
-\colorbox[rgb]{1,0,0}{DOPLNIT DOPLNIT DOPLNIT DOPLNIT}
+\begin{enumerate}
+	\item Dojde ke stažení aktuálního AES klíče (viz Kap.~\ref{KapitolaStazeniKlice}) nastaveného v IQRF modulu, s pomocí něj a sestaveného inicializačního vektoru (viz Kap.~\ref{KapitolaInicializacniVektor})
+jsou přijatá data zašifrována zpět do šifrovaného stavu jaký mají při přenosu, tedy data vyslaná daným měřícím zařízením, zašifrovaná AES klíčem daného měřícího zařízení.
+	\item Pokud existuje, tak je z databáze načten odpovídající klíč příslušného měřícího zařízení a s pomocí již sestaveného inicializačního vektoru jsou data rozšifrována.
+	\item Správnost rozšifrování se ověřuje pomocí kontrolních bajtů, v případě AES šifrování mají první dva bajty rozšifrovaných dat hodnotu 2Fh.
+\end{enumerate}
 
-
-\colorbox[rgb]{1,0,0}{DOPLNIT DOPLNIT DOPLNIT DOPLNIT}
-
-
-Poté program s telegramem zachází jako s nešifrovaným, popsaným v Kap~\ref{KapitolaParsovani}
+Poté program s telegramem zachází jako s nešifrovaným, popsaným v Kap.~\ref{KapitolaParsovani}. Pokud není nalezen AES klíč odpovídajícího zařízení, pole \texttt{ConfigurationWord} obsahuje neimplementovaný algoritmus dešifrování či se proces dešifrování nezdaří, program vyvolá vyjímku, telegram je zaevidován a pokračuje se zpracováváním dalšího telegramu.
 
 \subsection{Parsování dat}
 \label{KapitolaParsovani}

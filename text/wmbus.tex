@@ -422,6 +422,7 @@ Pro šifrovaný přenos dat v protokolu WM-Bus se využívá AES, kontrétně m�
 
 
 \subsection{Inicializační vektor}
+\label{KapitolaInicializacniVektor}
 Inicializační vektor má délku 16 Bajtů (128 bitů, odtud označení AES-128) a v případě protokolu WM-Bus je tvořený dynamicky z nešifrovaných bajtů polí paketu, způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor}.
 
 \begin{table}[!ht]
@@ -461,6 +462,7 @@ První 2 bajty obsahují přidělené identifikační údaje výrobce, další �
 
 
 \subsection{Určení šifrovaných dat}
+\label{KapitolaConfigurationWord}
 Aplikační vrstva protokolu WM-Bus obsahuje položku \texttt{ConfigurationWord} případně \texttt{SignatureField}, která deklaruje typ použitý šifrovací algoritmus, délku šifrované části a způsob datového šifrování. Pole je složeno ze dvou bajtů. První byte obsahuje \texttt{NNNNCCHHb} a druhý byte obsahuje \texttt{BAS0MMMMb}. Význam jednotlivých položek je shrnut v Tab.~\ref{TableConfigurationWord}.
 
 
