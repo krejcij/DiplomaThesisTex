@@ -72,18 +72,18 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {TR-72DA-WMB}}}{46}{figure.144}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {ModulIQRF}}}{47}{figure.146}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester}}{54}{figure.161}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip algoritmu AES v m\IeC {\'o}du CBC}}{59}{figure.180}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Obecn\IeC {\'e} sch\IeC {\'e}ma de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES-128 CBC}}{61}{figure.187}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{62}{figure.193}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{62}{figure.193}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deska \IeC {\v c}idla}}}{62}{figure.193}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Sada Bonega~\cite {CidloBonega}}}{67}{figure.204}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vodom\IeC {\v e}r studen\IeC {\'e} vody}}}{67}{figure.204}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezdr\IeC {\'a}tov\IeC {\'y} modul}}}{67}{figure.204}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vodom\IeC {\v e}r tepl\IeC {\'e} vody}}}{67}{figure.204}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{69}{figure.209}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{72}{figure.226}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Model zvolen\IeC {\'e} SqLite datab\IeC {\'a}ze}}{79}{figure.267}
-\contentsline {figure}{\numberline {D.1}{\ignorespaces M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech b\IeC {\v e}hem t\IeC {\v r}\IeC {\'\i } hodin}}{98}{figure.322}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech b\IeC {\v e}hem jednoho dne}}{99}{figure.323}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech b\IeC {\v e}hem t\IeC {\'y}dne}}{100}{figure.324}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip algoritmu AES v m\IeC {\'o}du CBC}}{62}{figure.197}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Obecn\IeC {\'e} sch\IeC {\'e}ma de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES-128 CBC}}{65}{figure.204}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{66}{figure.210}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{66}{figure.210}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deska \IeC {\v c}idla}}}{66}{figure.210}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Sada Bonega~\cite {CidloBonega}}}{71}{figure.221}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vodom\IeC {\v e}r studen\IeC {\'e} vody}}}{71}{figure.221}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezdr\IeC {\'a}tov\IeC {\'y} modul}}}{71}{figure.221}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vodom\IeC {\v e}r tepl\IeC {\'e} vody}}}{71}{figure.221}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{73}{figure.226}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{76}{figure.243}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Model zvolen\IeC {\'e} SqLite datab\IeC {\'a}ze}}{83}{figure.284}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech b\IeC {\v e}hem t\IeC {\v r}\IeC {\'\i } hodin}}{102}{figure.339}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech b\IeC {\v e}hem jednoho dne}}{103}{figure.340}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech b\IeC {\v e}hem t\IeC {\'y}dne}}{104}{figure.341}

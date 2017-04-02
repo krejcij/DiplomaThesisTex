@@ -332,6 +332,19 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 	\item Jako kontrolní polynom se dle specifikace používá x\textsuperscript{16} + x\textsuperscript{13} + x\textsuperscript{12} + x\textsuperscript{11} + x\textsuperscript{10} + x\textsuperscript{8} +\textsuperscript{6} + x\textsuperscript{5} + x\textsuperscript{2} + 1.
 \end{itemize}
 
+\subsubsection{RSSI}
+\begin{itemize}
+	\item Received Signal Strength Indication.
+	\item Určuje sílu signálu při přijetí paketu.
+	\item Pro převod je využita lineární konverze:
+\end{itemize}	
+				\begin{figure}[!ht]
+				\begin{centerverbatim}
+				RSSI [dBm] = RSSI_LEVEL/2 - 130
+				\end{centerverbatim}
+			\end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -377,18 +390,187 @@ V souladu se specifikací OMS~(Open Metering Standard)~3.0.1~\cite{NormaOMS}, kt
 				\end{tabular}
 				\end{table}
 
-\subsubsection{RSSI}
-\begin{itemize}
-	\item Received Signal Strength Indication.
-	\item Určuje sílu signálu při přijetí paketu.
-	\item Pro převod je využita lineární konverze:
-\end{itemize}	
-				\begin{figure}[!ht]
-				\begin{centerverbatim}
-				RSSI [dBm] = RSSI_LEVEL/2 - 130
-				\end{centerverbatim}
-			\end{figure}
-			\vspace{-30pt}
+
+Struktura zbytku aplikační vrstvy je dána opakováním určité sekvence (viz Tab.~\ref{TableStrukturaDat}) bajtů, určující typ a hodnotu přenášených dat.
+\begin{table}[!ht]
+\centering
+\caption{Struktura dat aplikační vrstvy}
+\label{TableStrukturaDat}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Byte 1}                                                                & \textbf{Byte 2}                                                                             & \textbf{Byte 3}                                                                & \textbf{Byte 4}                                                                             & \textbf{Byte 5-n}                                                      \\ \hline \hline
+\multicolumn{2}{|c|}{\begin{tabular}[c]{@{}c@{}}Data Information \\ Block (DIB)\end{tabular}}                                                                                & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Value information \\ block (VIB)\end{tabular}}                                                                                & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Data\\ Values\end{tabular}} \\ \cline{1-4}
+\begin{tabular}[c]{@{}c@{}}Data  \\ Information \\ Field\\  (DIF)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Data \\ Information \\ Field \\ Extension \\ (DIFE)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Value \\ Information \\ Field \\ (VIF)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Data \\ Information \\ Field \\ Extension \\ (VIFE)\end{tabular} &                                                                        \\ \hline \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Data Information Block (DIB)}
+DIB definuje typ přenášených dat a skládá se z DIF a z nepovinného DIFE.
+
+\subsubsection{Data information Field (DIF)}
+DIF definuje datový typ přenášených dat a má strukturu dle Tab.~\ref{KodovaniDIFu}.
+	\begin{table}[!ht]
+	\centering
+	\caption{Kódování DIF Pole}
+	\label{KodovaniDIFu}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	\textbf{Bit 1}                                           & \textbf{Bit2}                                                    & \textbf{Bit 3}                         & \textbf{Bit 4}                        & \textbf{Bit 5} & \textbf{Bit 6} & \textbf{Bit 7} & \textbf{Bit 8} \\ \hline \hline
+	\begin{tabular}[c]{@{}c@{}}Rozšiřující \\ Bit\end{tabular} & \begin{tabular}[c]{@{}c@{}}LSB uložení\end{tabular} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Funkční \\ Položka\end{tabular}} & \multicolumn{4}{c|}{Data}                                         \\ \hline \hline
+	\end{tabular}
+	\end{table}
+
+Rozšiřující bit pole určuje jaký blok bajtů následuje po DIF. Možnosti jsou shrnuty v Tab.~\ref{KodovaniRozsBituDIFu}.
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování rozšiřujícího bitu DIF pole}
+\label{KodovaniRozsBituDIFu}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Bit} & \textbf{Další informace je obsažena v} \\ \hline \hline
+0            & DIF                                    \\ \hline
+1            & DIFE                                   \\ \hline \hline
+\end{tabular}
+\end{table}
+
+Funkční pole definuje typ přenášené hodnoty z hlediska její aktuálnosti či limitnosti. Možnosti jsou shrnuty v Tab.~\ref{KodovaniFunkPoleDIFu}.
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování funkčního pole DIF pole}
+\label{KodovaniFunkPoleDIFu}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Hodnota} & \multicolumn{1}{c|}{\textbf{Význam}} \\ \hline \hline
+00b              & Okamžitá hodnota                     \\ \hline
+01b              & Minimální hodnota                    \\ \hline
+10b              & Maximální hodnota                    \\ \hline
+11b              & Hodnota při chybovém stavu         \\ \hline \hline
+\end{tabular}
+\end{table}
+
+Data pole určuje datový typ přenášené hodnoty. Možnosti jsou shrnuty v Tab.~\ref{KodovaniDataPoleDIFu}.
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování Data pole DIF pole}
+\label{KodovaniDataPoleDIFu}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Délka hodnoty {[}b{]}} & \textbf{Kód} & \textbf{Význam} & \textbf{Kód} & \textbf{Význam}   \\ \hline \hline
+0                              & 0000         & Žádná data      & 1000         & Volba pro hodnotu \\ \hline
+8                              & 0001         & 8-bit Integer   & 1001         & 2 cifry BCD       \\ \hline
+16                             & 0010         & 16-bit Integer  & 1010         & 4 cifry BCD       \\ \hline
+24                             & 0011         & 24-bit Integer  & 1011         & 6 cifer BCD       \\ \hline
+32                             & 0100         & 32-bit Integer  & 1100         & 8 cifer BCD       \\ \hline
+32                             & 0101         & 32-bit Real     & 1101         & Proměnlivá délka  \\ \hline \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{DIFE}
+DIFE obsahují upřesnění, doplňující informaci či přenos chybového stavu dané položky. Jejich kompletní přehled je uveden v Tab.~\ref{KodovaniDIFE}.
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování DIFE Pole}
+\label{KodovaniDIFE}
+\begin{tabular}{|c|}
+\hline
+   \\ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Value Information Block (VIB)}
+DIB definuje typ přenášené hodnoty a skládá se z DIF a z nepovinného DIFE.
+
+\subsubsection{VIF}
+VIF definuje veličinu přenášených dat a má strukturu dle Tab.~\ref{KodovaniVIFu}.
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování VIF Pole}
+\label{KodovaniVIFu}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Bit 1}  & \textbf{Bit2} & \textbf{Bit 3} & \textbf{Bit 4} & \textbf{Bit 5} & \textbf{Bit 6} & \textbf{Bit 7} & \textbf{Bit 8} \\ \hline \hline
+Rozšiřující bit & \multicolumn{7}{c|}{Data}                                                                                           \\ \hline \hline
+\end{tabular}
+\end{table}
+
+Rozšiřující bit pole určuje jaký blok bajtů následuje po VIF. Možnosti jsou shrnuty v Tab.~\ref{KodovaniRozsBituVIFu}.
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování rozšiřujícího bitu VIF pole}
+\label{KodovaniRozsBituVIFu}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Bit} & \textbf{Další informace je obsažena v} \\ \hline \hline
+0            & VIF                                    \\ \hline
+1            & VIFE                                   \\ \hline \hline
+\end{tabular}
+\end{table}
+
+Data pole určuje datový typ přenášené hodnoty. Možnosti jsou shrnuty v Tab.~\ref{KodovaniDataPoleVIFu}.
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování Data pole VIF pole}
+\label{KodovaniDataPoleVIFu}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Bity}} & \multicolumn{1}{c|}{\textbf{Veličina}} & \multicolumn{1}{c|}{\textbf{Jednotka}}                                                                                & \multicolumn{1}{c|}{\textbf{Rozsah}} \\ \hline \hline
+E000 0nnn                             & Energie                                    & 10\textsuperscript{(nnn-3)}\,Wh                                                                                                              & 0.001\,Wh - 10000\,Wh \\ \hline
+E000 1nnn                             & Energie                                    & 10\textsuperscript{(nnn)}\,J                                                                                                                 & 0.001\,kJ - 10000 \,kJ                \\ \hline
+E001 0nnn                             & Objem                                    & 10\textsuperscript{(nnn-6)}\,m\textsuperscript{3}                                                                                                              & 0.001\,l - 10000\,l                    \\ \hline
+E001 1nnn                             & Hmotnost                                      & 10\textsuperscript{(nnn-3)}\,kg                                                                                                              & 0.001\,kg - 10000\,kg                \\ \hline
+\multirow{2}{*}{E010 00nn}            & \multirow{2}{*}{Provozní čas}                  & \multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}nn = 00 sekundy\\ nn = 01 minuty\\ nn = 10 hodiny\\ nn = 11 dny\end{tabular}} & \multirow{2}{*}{}                   \\
+                                      &                                           &                                                                                                                           &                                     \\ \cline{1-2} \cline{4-4} 
+\multirow{2}{*}{E010 01nn}            & \multirow{2}{*}{Operační čas}            &                                                                                                                           & \multirow{2}{*}{}                   \\
+                                      &                                           &                                                                                                                           &                                     \\ \hline
+E010 1nnn                             & Výkon                                     & 10\textsuperscript{(nnn-3)}\,W                                                                                                               & 0.001\,W - 10000\,W                  \\ \hline
+E011 0nnn                             & Výkon                                     & 10\textsuperscript{(nnn)}\,J/h                                                                                                               & 0.001\,kJ/h - 10000\,kJ/h            \\ \hline
+E011 1nnn                             & Průtok                              & 10\textsuperscript{(nnn-6)}\,m\textsuperscript{3}/h                                                                                                            & 0.001\,l/h - 10000 l/h              \\ \hline
+E100 0nnn                             & Průtok                           & 10\textsuperscript{(nnn-7)}\,m\textsuperscript{3}/min                                                                                                          & 0.0001\,l/min - 1000 l/min          \\ \hline
+E100 1nnn                             & Průtok                           & 10\textsuperscript{(nnn-9)}\,m\textsuperscript{3}/s                                                                                                            & 0.001\,ml/s - 10000 ml/s            \\ \hline
+E101 0nnn                             & Protok (hmotnosti)                              & 10\textsuperscript{(nnn-3)} kg/h                                                                                                            & 0.001\,kg/h - 10000 kg/h            \\ \hline
+E101 10nn                             & Teplota (průtoku)                           & 10\textsuperscript{(nn-3)}\,°C                                                                                                               & 0.001\,°C - 1\,°C                    \\ \hline
+E101 11nn                             & Teplota (návratová)                         & 10\textsuperscript{(nn-3)}\,°C                                                                                                               & 0.001\,°C - 1\,°C                    \\ \hline
+E110 00nn                             & Teplota (rozdíl)                    & 10\textsuperscript{(nn-3)}\,K                                                                                                                & 1\,mK - 1000\,mK                     \\ \hline
+E110 01nn                             & Temperature (externí)                       & 10\textsuperscript{(nn-3)}\,°C                                                                                                               & 0.001\,°C - 1\,°C                    \\ \hline
+E110 10nn                             & Tlak                                 & 10\textsuperscript{(nn-3)}\,bar                                                                                                              & 1\,mbar - 1000\,mbar                 \\ \hline
+\multirow{2}{*}{E110 110n}                             & \multirow{2}{*}{Datum a čas}                                & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}n = 0 datum\\ n = 1 datum a čas\end{tabular}}                                                                                            & \multirow{2}{*}{Datový typ F a G}             \\ 
+                                      &                                           &                                                                                                                           &                                     \\ \hline
+E110 1110                             & Tepelná výměna                          &                                                                                                                           & bezrozměrné                 \\ \hline
+E110 1111                             & Rezervováno                                 &                                                                                                                           &                                     \\ \hline
+\multirow{2}{*}{E111 00nn}            & \multirow{2}{*}{Průměrné trvání}        & \multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}nn = 00 sekundy\\ nn = 01 minuty\\ nn = 10 hodiny\\ nn = 11 dny\end{tabular}} & \multirow{2}{*}{}                   \\
+                                      &                                           &                                                                                                                           &                                     \\ \cline{1-2} \cline{4-4} 
+\multirow{2}{*}{E111 01nn}            & \multirow{2}{*}{Aktuální trvání}        &                                                                                                                           & \multirow{2}{*}{}                   \\
+                                      &                                           &                                                                                                                           &                                     \\ \hline
+E111 1000                             & Výrobní číslo                            &                                                                                                                           &                 \\ \hline
+E111 1001                             & Rozšířená identifikace                &                                                                                                                           & Datový typ C                    \\ \hline
+E111 1010                             & Adresa sběrnice                               &                                                                                                                           & Datový typ C                    \\ \hline \hline
+\end{tabular}}
+\end{table}
+
+\subsubsection{VIFE}
+VIFE obsahují upřesnění, doplňující informaci či přenos chybového stavu dané položky. Jejich kompletní přehled je uveden v Tab.~\ref{KodovaniVIFE}.
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování VIFE Pole}
+\label{KodovaniVIFE}
+\begin{tabular}{|c|}
+\hline
+   \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsubsection{Data Value}
+Pole \texttt{Data Value} již obsahuje přenášenou hodnotu, definovanou dle DIB a VIB.
 	
 \section{Šifrování dat}
 Pro šifrování přenášených dat se v protokolu Wireless M-Bus používají tři šifrovací algoritmy:
