@@ -5,7 +5,7 @@ Jak již bylo zmíněno na začátku práce, samotná implementace je rozdělena
 	\item Zachytávání šifrované i nešifrované komunikace s WM-Bus zařízeními. Uložení, analýza a následná vizualizace zachycených dat. 
 \end{enumerate}
 
-Jelikož žádný z dostupných softwarů pro UniPi nepodporuje daný bezdrátový modul, ani UART zařízení obecně, je nutné tuto komunikaci implementovat již na úrovni operačního systému.
+Jelikož žádný z dostupných softwarů pro UniPi nepodporuje daný bezdrátový modul, ani UART zařízení obecně, je nutné tuto komunikaci implementovat již na~úrovni operačního systému.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -13,7 +13,7 @@ Jelikož žádný z dostupných softwarů pro UniPi nepodporuje daný bezdrátov
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Výběr OS}
-Jako operační sytém je využita aktuální verze Raspbianu Jessie s datem vydání 2017-01-11. UART rozhraní se na RaspberryPi verze 1 a 2 nachází v \texttt{/dev/ttyAMA0}. To se ale v případě RaspberryPi 3 odkazuje na integrovaný BT modul a původní sériový port je zde v \texttt{/dev/ttyS0}. Samotné UART rozhraní je ale ve výchozím nastavení Raspbianu zakázáno.
+Jako operační sytém je využita aktuální verze Raspbianu Jessie s datem vydání 2017-03-02. UART rozhraní se na RaspberryPi verze 1 a 2 nachází v \texttt{/dev/ttyAMA0}. To~se~ale~v~případě RaspberryPi 3 odkazuje na integrovaný BT modul a původní sériový port je zde v \texttt{/dev/ttyS0}. Samotné UART rozhraní je ale ve výchozím nastavení Raspbianu zakázáno.
 
 Pro zpřístupnění UART rozhraní je nutné provést drobné úpravy jeho konfigurace:
 
@@ -29,7 +29,7 @@ Pro zpřístupnění UART rozhraní je nutné provést drobné úpravy jeho konf
 	\end{lstlisting}
 					
 	\item Poté je potřeba v \texttt{/boot/config.txt} změnit položku \texttt{ENABLE\_UART} na hodnotu 1. Tím dojde k zpřístupnení sběrnice UART. Tato položka může být v budoucnu při aktualizaci Raspbianu přepsána, proto při prvním náznaku nefunkčnosti, je potřeba tuto položku zkontrolovat jako první.
-	\item V souboru \texttt{/boot/cmdline.txt} je potřeba odebrat úsek textu \texttt{console=ttyAMA0, 115200}, aby při startování systému nedocházelo k výpisu do seríové linky. 
+	\item V souboru \texttt{/boot/cmdline.txt} je potřeba odebrat úsek textu \texttt{console=ttyAMA0, 115200}, aby při startování systému nedocházelo k výpisu do sériové linky. 
 	\item V případě, že se jedná o RaspberryPi verze 3, je potřeba do \texttt{/boot/config.txt} dopsat položku \texttt{dtoverlay=pi3-miniuart-bt}, která zakáže BT na mini-UART a provede přemapování zpět na \texttt{/dev/ttyAMA0}. Tento krok je takto řešený z důvodu kompatibility, kdy je sériová komunikace směrována přes \texttt{/dev/ttyAMAO} nezávisle na použité verzi RaspberryPi.
 \end{enumerate}
 
@@ -67,7 +67,7 @@ Před samotným vyčítáním dat bylo potřeba zjistit či nastavit přenosové
 \begin{itemize}
 	\item Komunikační modul IQRF nastaven do módu T1 ve funkci skeneru.
 	\item Čidlo Weptech je nastaveno do módu T1 s intervalem zasílání 1 minuta. 
-	\item Modul Bonega je nastaven do módu T1 se zapnutým šifrováním AES128 v módu 5 a s intervalem zasílání 20-24 sekund v odpočtovém období a 4 intervalem minuty mimo odpočtové období.
+	\item Modul Bonega je nastaven do módu T1 se zapnutým šifrováním AES128 v~módu 5 a s intervalem zasílání 20-24 sekund v odpočtovém období a 4 intervalem minuty mimo odpočtové období.
 	\item Elektroměr ZPA je nastaven do módu T2 s intervalem vysílání 1 minuta.
 	\item Měřič Kamstrup je nastaven do módu T1 s intervalem vysílání 15 minut.
 \end{itemize}
@@ -128,7 +128,7 @@ který byl pomoci datasheetu použitého komunikačního modulu~\cite{ModulIQRF}
 
 \subsection{Šifrovaný přenos}
 
-V okamžiku kdy bylo zařízení přepnuto do šifrovaného módu dle Tab.~\ref{TablukaSETUP} byl zachycen šifrovaný telegram
+V okamžiku, kdy bylo zařízení přepnuto do šifrovaného módu dle Tab.~\ref{TablukaSETUP}, byl zachycen šifrovaný telegram
 
 \begin{figure}[!ht]
 \begin{centerverbatim}
@@ -195,7 +195,7 @@ který je až na číslo přístupu a CRC shodný s předchozím nešifrovaným 
 \end{table}
 
 
-Z tabulky je patrné, že nutné vyparsovat položky na následujících pozicích:
+Z tabulky je patrné, že je nutné vyparsovat položky na následujících pozicích:
 \begin{itemize}
 	\item 8-23 pro informace o daném čidlu,
 	\item 24-25 pro určení pořadí telegramu,
@@ -205,11 +205,11 @@ Z tabulky je patrné, že nutné vyparsovat položky na následujících pozicí
 	\item 96 pro úroveň signálu.	
 \end{itemize}
 
-a jejich následnou správnou interpretací dle specifikace (zohlednění uložení LSB, převod hexadecimálních hodnot na dekadické, \ldots) předat k dalšímu zpracování či uložení do databáze.
+a jejich následnou správnou interpretací dle specifikace (zohlednění uložení LSB, převod hexadecimálních hodnot na dekadické, \ldots) předat k dalšímu zpracování či~uložení do databáze.
 
 
 \section{Zajištění uložení dat}
-Zachycená a naměřená data se ukládají do databáze k pozdějšímu zpracování či vizualizaci. Zvolena byla databáze SqLite3 pro svoji jednoduchost, nenáročnost na sytémové prostředky a možností instalace z repozitáře Raspbianu:
+Zachycená a naměřená data se ukládají do databáze k pozdějšímu zpracování či~vizualizaci. Zvolena byla databáze SqLite3 pro svoji jednoduchost, nenáročnost na~sytémové prostředky a možností instalace z repozitáře Raspbianu:
  
 \begin{lstlisting}[style=MyCodeBash]
 		sudo apt-get update
@@ -221,10 +221,9 @@ Byla zvolena jedna databáze se třemi tabulkami:
 	\item DEVICES - evidence známých zařízení a jejich AES klíčů
 	\item VALUES - uložení naměřených hodnot
 	\item TELEGRAMS - uložení zachycených dat a AES klíče modulu
-	\item ERRORS - zachytávání telegramů které se nepodařilo validně analyzovat
 \end{itemize}
 
-Strukturu tabulek, definici sloupcu v vazby mezi nimi popisuje schéma na Obr.~\ref{databazovy_model}.
+Strukturu tabulek, definici sloupců a vazby mezi nimi popisuje schéma na Obr.~\ref{databazovy_model}.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -265,11 +264,11 @@ Program je nyní spouštěn automaticky po startu operačního systému interpre
 
 \subsection{Start programu z pohledu aplikace}
 Program při startu kontroluje, zdali  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQLite databázi.
-Dále program kontroluje přítomnost a možnost otevření sériového portu. V případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následujě příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
+Dále program kontroluje přítomnost a možnost otevření sériového portu. V~případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následuje příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
 
 \subsection{Základní kontrola a cyklus příjmu dat}
-Následně dojde ke spuštění smyčky naslouchání příchozích telegramů. Každý příchozí telgram je podroben sérii kontrol, pro ověření správnosti příjmu. Jako první je telegram podroben kontrole délky odpovídající sudým násobkům. Následně je telegram podroben základní analýze položek aplikační a linkové vrstvy. Dochází ke kontrole délky telegramu a jeho CRC součtu. Je provedena kontrola obsahu CI-pole, \texttt{Status} pole a \texttt{ConfigurationWord} pole. Pokud některá z položek neodpovídá, telegram je zaevidován a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
-Na základě obsahu položky \texttt{ConfigurationWord} (viz Kap.~\ref{KapitolaConfigurationWord}) se program nadále větví na zpracování šifrovaného (Kap. \ref{KapitolaDesifrovani}) a nešifrovaného (Kap. \ref{KapitolaParsovani}) telegramu.
+Následně dojde ke spuštění smyčky naslouchání příchozích telegramů. Každý příchozí telegram je podroben sérii kontrol, pro ověření správnosti příjmu. Jako první je telegram podroben kontrole délky odpovídající sudým násobkům. Následně je telegram podroben základní analýze položek aplikační a linkové vrstvy. Dochází ke~kontrole délky telegramu a jeho CRC součtu. Je provedena kontrola obsahu CI-pole, \texttt{Status} pole a \texttt{ConfigurationWord} pole. Pokud některá z položek neodpovídá, telegram je~zaevidován a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
+Na~základě obsahu položky \texttt{ConfigurationWord} (viz Kap.~\ref{KapitolaConfigurationWord}) se program nadále větví na zpracování šifrovaného (Kap. \ref{KapitolaDesifrovani}) a nešifrovaného (Kap. \ref{KapitolaParsovani}) telegramu.
 
 \subsection{Dešifrování dat}
 \label{KapitolaDesifrovani}
@@ -289,20 +288,20 @@ Poté program s telegramem zachází jako s nešifrovaným, popsaným v Kap.~\re
 
 \subsection{Parsování dat}
 \label{KapitolaParsovani}
-Každý telegram je před svým zpracováním uložen do databáze, aby v případě potřeby (špatné dešifrování, neadekvátní dešifrovací klíč, chyba aplikace, neznámý senzor, \ldots) mohlo být provedeno nové zpracování daného telegramu. Poté je analyzováno M-Pole a v případě že se jedná o výrobce, jehož parsovací schéma je v této aplikaci implementováno, dochází k vyparsování přenášených hodnot. Následně v souladu s parsovacím schématem dochází k formátování a odpovídající interpretaci získaných dat (viz Kap.~\ref{PacketTableAnalysis}). Poté jsou získaná data uložena do databáze a zobrazena uživateli na výstup konzole.
-Pokud parsování dat selže, dojde k výjimce, daný telegram je zaevidovánm v jeho zpracování se již nepokrečuje a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
+Každý telegram je před svým zpracováním uložen do databáze, aby v případě potřeby (špatné dešifrování, neadekvátní dešifrovací klíč, chyba aplikace, neznámý senzor, \ldots) mohlo být provedeno nové zpracování daného telegramu. Poté je analyzováno M-Pole a v případě že se jedná o výrobce, jehož parsovací schéma je~v~této aplikaci implementováno, dochází k vyparsování přenášených hodnot. Následně v~souladu s parsovacím schématem dochází k formátování a odpovídající interpretaci získaných dat (viz Kap.~\ref{PacketTableAnalysis}). Poté jsou získaná data uložena do databáze a zobrazena uživateli na výstup konzole.
+Pokud parsování dat selže, dojde k výjimce, daný telegram je zaevidován, v jeho zpracování se již nepokračuje a aplikace se vrátí do~stavu čekání na příchod dalšího telegramu.
 
 \subsection{Uložení dat}
 Správně interpretované hodnoty doplněné o časovou značku a informaci o měřícím zařízení jsou zapsány do databáze. Do této databáze se ukládají všechny příchozí validně zpracované telegramy, určené k pozdějšímu zpracování. Obohacení o časovou značku a údaje o zařízení je možné později tyto data efektivně třídit či v nich vyhledávat.
 
 \subsection{Vizualizace dat}
-Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API~\cite{uvod_google_charts_api}. To umožňuje interaktivní vykreslení a vyčítání uložných hodnot zachycených daným senzorem za vybraný časový úsek. Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
+Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API~\cite{uvod_google_charts_api}. To~umožňuje interaktivní vykreslení a vyčítání uložených hodnot zachycených daným senzorem za vybraný časový úsek. Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
 
 \subsection{Ošetření výjimek}
-Aplikace má ošetřeny dva chybové stavy. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a následně přejde do stavu čekání na příchod dalšího telegramu.
+Aplikace má ošetřeny dva chybové stavy. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a~následně přejde do stavu čekání na příchod dalšího telegramu.
 Všechny tyto chyby jsou ukládány do příslušné tabulky v databázi, do chybového logu a taktéž sdělovány uživateli do konzole.
 
 \subsection{Export dat}
-V případě potřeby je vizualizační aplikace schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k časové náročnosti při daném počtu naměřených hodnot je tato funkcionalita implementována spíše jako experimentální a v praxi se projevila jako nedostačující.
+V případě potřeby je vizualizační aplikace schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k~časové náročnosti při daném počtu naměřených hodnot je tato funkcionalita implementována spíše jako experimentální a v praxi se projevila jako nedostačující.
 
 

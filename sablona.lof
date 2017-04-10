@@ -14,33 +14,33 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Arduino Fio a MKR1000}}{20}{figure.37}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arduino Fio}}}{20}{figure.37}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arduino MKR1000}}}{20}{figure.37}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Lilypad Arduino a Arduino Fio}}{21}{figure.41}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Lilypad Arduino }}}{21}{figure.41}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arduino Yun }}}{21}{figure.41}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Bare Bones Board a Freaduino}}{22}{figure.50}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Bare Bones Board}}}{22}{figure.50}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Freaduino}}}{22}{figure.50}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Diavolino a Boarduino}}{23}{figure.59}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Diavolino}}}{23}{figure.59}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Boarduino}}}{23}{figure.59}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Lilypad Arduino a Arduino Yun}}{21}{figure.42}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Lilypad Arduino }}}{21}{figure.42}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arduino Yun }}}{21}{figure.42}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Bare Bones Board a Freaduino}}{22}{figure.51}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Bare Bones Board}}}{22}{figure.51}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Freaduino}}}{22}{figure.51}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Diavolino a Boarduino}}{23}{figure.60}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Diavolino}}}{23}{figure.60}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Boarduino}}}{23}{figure.60}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces RaspberryPi prvn\IeC {\'\i }ch verz\IeC {\'\i }}}{25}{figure.66}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Model A+}}}{25}{figure.66}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Model B}}}{25}{figure.66}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Model B+}}}{25}{figure.66}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces RaspberryPi n\IeC {\'a}sleduj\IeC {\'\i }c\IeC {\'\i }ch verz\IeC {\'\i }}}{25}{figure.72}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RaspberryPi 2}}}{25}{figure.72}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RaspberryPi 3}}}{25}{figure.72}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {RaspberryPi Zero}}}{25}{figure.72}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces RaspberryPi n\IeC {\'a}sleduj\IeC {\'\i }c\IeC {\'\i }ch verz\IeC {\'\i }}}{25}{figure.73}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RaspberryPi 2}}}{25}{figure.73}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RaspberryPi 3}}}{25}{figure.73}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {RaspberryPi Zero}}}{25}{figure.73}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces BananaPi BPI-M2 a OrangePi Plus2}}{26}{figure.78}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BananaPi BPI-M2}}}{26}{figure.78}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {OrangePi Plus2}}}{26}{figure.78}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Cubieboard1 a UpBoard 1}}{28}{figure.83}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cubieboard1}}}{28}{figure.83}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {UpBoard 1}}}{28}{figure.83}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces PINE A64+ 2GB a HardKernel Odroid-C2}}{29}{figure.88}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PINE A64+ 2GB}}}{29}{figure.88}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HardKernel Odroid-C2}}}{29}{figure.88}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces BeagleBone Black~\cite {BeagleBone}}}{31}{figure.91}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces CubieBoard1 a UpBoard1}}{28}{figure.84}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CubieBoard1}}}{28}{figure.84}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {UpBoard1}}}{28}{figure.84}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces PINE A64+ 2GB a HardKernel Odroid-C2}}{30}{figure.89}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PINE A64+ 2GB}}}{30}{figure.89}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HardKernel Odroid-C2}}}{30}{figure.89}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces BeagleBone Black~\cite {BeagleBone}}}{30}{figure.91}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Intel Galileo~\cite {IntelGalileo}}}{31}{figure.94}
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Intel Edison zasazeny na boardech}}{32}{figure.98}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arduino board}}}{32}{figure.98}
@@ -63,7 +63,7 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {P\IeC {\v r}ipojen\IeC {\'\i } diodov\IeC {\'e}ho panelu}}}{39}{figure.124}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v2}}{40}{figure.125}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces UART r\IeC {\'a}mec}}{41}{figure.129}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru}}{43}{figure.135}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru}}{44}{figure.135}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72DA-WMB \cite {ModulIQRF}}}{45}{figure.139}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma modulu TR-72D-WMB \cite {ModulIQRF}}}{46}{figure.140}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces P\IeC {\v r}ehled typu modulu dle ant\IeC {\'e}ny \cite {ModulIQRF}}}{46}{figure.144}
@@ -72,7 +72,7 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {TR-72DA-WMB}}}{46}{figure.144}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {ModulIQRF}}}{47}{figure.146}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester}}{54}{figure.161}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip algoritmu AES v m\IeC {\'o}du CBC}}{62}{figure.197}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip algoritmu AES v m\IeC {\'o}du CBC}}{63}{figure.197}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Obecn\IeC {\'e} sch\IeC {\'e}ma de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES-128 CBC}}{65}{figure.204}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{66}{figure.210}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{66}{figure.210}

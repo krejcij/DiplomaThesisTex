@@ -1,4 +1,4 @@
-\chapter{Vyčítaná Wireless M-Bus zařízení}
+\chapter{Wireless M-Bus zařízení}
 
 Pro účely testování komunikace bylo využito několik typů dostupných zařízení:
 \begin{itemize}
@@ -10,7 +10,7 @@ Pro účely testování komunikace bylo využito několik typů dostupných zař
 
 Všechna tyto zařízení poskytují formát dat dle platné specifikace OMS~(Open Metering Standard)~3.0.1~\cite{NormaOMS}, která vychází z normy EN 13757-4~\cite{Norma4} pro bezdrátový protokol WM-Bus.
 
-Pro základní komunikaci bylo zvoleno čidlo teploty a vlhkosti Weptech OMST-868A, z důvodu volné dostupnosti kompletní dokumentace a možnosto nastavení parametrů vysílání včetně volitelného šifrování přenášených dat. Jako jediné z výše jmenovaných čidel nevyžaduje ke své činnosti žádná doplňující média či přístroje.
+Pro základní komunikaci bylo zvoleno čidlo teploty a vlhkosti Weptech OMST-868A, z důvodu volné dostupnosti kompletní dokumentace a možností nastavení parametrů vysílání včetně volitelného šifrování přenášených dat. Jako jediné z výše jmenovaných čidel nevyžaduje ke své činnosti žádná doplňující média či přístroje.
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,7 +40,7 @@ Pro základní komunikaci bylo zvoleno čidlo teploty a vlhkosti Weptech OMST-86
 	\item Přesnost měření teploty: ± 0,3\,°C.
 	\item Teplotní hystereze: 0,1\,°C.
 	\item Mód přenosu: S nebo T.
-	\item Interval přenosu: konfiugurovatelný v rozsahu 5~sekund až 24~hodin.
+	\item Interval přenosu: konfigurovatelný v rozsahu 5~sekund až 24~hodin.
 	\item Šifrování přenosu: volitelný AES-128~mód~5.
 	\item Napájení: 2~x~AA baterie.
 	\item Výdrž baterie: dle módu a intervalu přenosu až 10~let.
@@ -104,9 +104,9 @@ Některé z položek je potřeba blíže vysvětlit:
 	%\item Access number - Toto číslo se s každým požadavkem zvýší o hodnotu 1.
 	%\item Status - V případě úspěšného přenosu je zde uložena nula, v opačném případě je zde uložena logická jednička a nastal tedy chybový stav 'sabotáž' nebo 'vybitá baterie'.
 	%\item Configuration word - V případě zapnutého šifrovaní, první bajt obsahuje počet zašifrovaných bloků, obsah telegarmu a inkrement. Druhý bajt obsahuje záznam o obousměrnosti, dostupnosti, synchronizaci a šifrování. Pokud je šifrování zapnuto, je nastaven mód 5, v opačném případě jsou oba bajty nulové.
-	\item Příznak sabotáže čidla - Pokud čidlo pomocí integrovaného spínače detekuje uvolnění krytu z montážní desky, pošle výstrahu přes rádio do přijímače, tedy změní pro nejbližší a všechny následující vysílání tamper bit v telegramu. Tento bit slouží jako ochrana před neoprávněnou manipulací s čidlem a může být vymazán pouze restartem zařízení. Tedy vyjmutím starých baterií, ponecháním zařízení několik minut bez napájení, aby došlo k vybití všech kondenzátorů a následným vložením baterií.
+	\item Příznak sabotáže čidla - Pokud čidlo pomocí integrovaného spínače detekuje uvolnění krytu z montážní desky, pošle výstrahu přes rádio do přijímače, tedy změní pro nejbližší a všechny následující vysílání tamper bit v telegramu. Tento bit slouží jako ochrana před neoprávněnou manipulací s čidlem a může být vymazán pouze restartem zařízení. Tedy vyjmutím starých baterií, ponecháním zařízení několik minut bez napájení, aby došlo k vybití všech kondenzátorů a~následným vložením baterií.
 \item Příznak vybité baterie - Pokud elektronika v čidlu vyhodnotí úroveň nabití baterie jako nedostatečnou, nastaví bit vybití baterie do sekce chyb v telegramu. Tento bit ošetřuje stavy, kdy nedostatečně nabité baterie způsobí příliš velký rozptyl naměřených hodnot, v krajních případech i mimo měřící rozsah čidla. Tento bit může být vymazán také pouze restartem zařízení, jako v předchozím případě.
-\item Položky hodnota teploty, hodnota vlhkosti, výrobce zařízení a sériové číslo jsou uloženy v kódování big-endian, tedy na paměťové místo s nejnižší adresou se uloží nejvíce významný bajt a za něj se ukládají ostatní bajty až po nejméně významný bajt na konci. Uživatelská hodnota se tedy vyčítá pozpátku pod jednotlivých bajtech.
+\item Položky hodnota teploty, hodnota vlhkosti, výrobce zařízení a sériové číslo jsou uloženy v kódování big-endian, tedy na paměťové místo s nejnižší adresou se~uloží nejvíce významný bajt a za něj se ukládají ostatní bajty až~po~nejméně významný bajt na konci. Uživatelská hodnota se tedy vyčítá pozpátku po~jednotlivých bajtech.
 \item Telegram je ukončen 13 výplňovými bajty, které nenesou žádnou informaci.
 \end{itemize}
 
@@ -131,7 +131,7 @@ První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná 
 \end{tabular}
 \end{table}
 
-Jiné mohou být nastaveny pouze během výroby daného setu, a to do příslušnch továrních nastavení, či uživatelsky vyžádaných nastavení, viz Tab.~\ref{TablukaSETUP}.
+Jiné mohou být nastaveny pouze během výroby daného setu, a to do příslušných továrních nastavení, či uživatelsky vyžádaných nastavení, viz Tab.~\ref{TablukaSETUP}.
 
 \begin{table}[!ht]
 \centering
@@ -158,7 +158,7 @@ Transmission interval & \begin{tabular}[c]{@{}l@{}}Interval je výrobcem konfigu
 
 	\section{Bonega}
 
-Modul Bonega je bezdrátové čidlo podporující protokol Wireless M-Bus. Jedná se o samostatné zařízení, které je určené pro montáž na vodoměry Bonega. Na řadu vodoměrů podporujících tento modul je možná i dodatečná montáž. Elektronická část modulu slouží současně pro vyčítání dvou vodoměrů, na teplou i studenou vodu.
+Modul Bonega je bezdrátové čidlo podporující protokol Wireless M-Bus. Jedná se~o~samostatné zařízení, které je určené pro montáž na vodoměry Bonega. Na~řadu vodoměrů podporujících tento modul je možná i dodatečná montáž. Elektronická část modulu slouží současně pro vyčítání dvou vodoměrů, na teplou i studenou vodu.
 	
 	\begin{figure*}[!ht]
 	\vspace{-20pt}
@@ -244,7 +244,7 @@ Některé z položek je potřeba blíže vysvětlit:
 
 \begin{itemize}
 	\item Hodnota průtoku - aktuální hodnota průtoku je zde vyjádřena čtyři hexadecimálními bajty v LSB pořadí.
-	\item Čas odeslání měření - Datum a čas provedení posledního měření. Nejedná se očas posledního odečtu či odeslání posledního telegramu.
+	\item Čas odeslání měření - Datum a čas provedení posledního měření. Nejedná se~o~čas posledního odečtu či odeslání posledního telegramu.
 \end{itemize}
 
 
@@ -254,7 +254,7 @@ Některé z položek je potřeba blíže vysvětlit:
 	
 	\section{Kamstrup}
 	
-	Kamstrup Multical 402 je kompatkní ultrazvukový měřič tepla a chladu, tedy kombinace kalorimetru a ultrazvukového průtokoměru. Je určen k měření tepla, chladu a kombinovanemu měření tepla a chladu ve všech systémech na bázi vody s rozmetím teplot 2\,$^{\circ}$C az 130\,$^{\circ}$C. Skládá se z kalkulátoru, průtokoměru a dvou teplotních snímačů. 
+	Kamstrup Multical 402 je kompatkní ultrazvukový měřič tepla a chladu, tedy kombinace kalorimetru a ultrazvukového průtokoměru. Je určen k měření tepla, chladu a kombinovanému měření tepla a chladu ve všech systémech na bázi vody s rozmetím teplot 2\,$^{\circ}$C az 130\,$^{\circ}$C. Skládá se z kalkulátoru, průtokoměru a dvou teplotních snímačů. 
 	
  \begin{figure}[!ht]
 \vspace{-20pt}
@@ -269,7 +269,7 @@ Některé z položek je potřeba blíže vysvětlit:
 		
 \subsubsection{Parametry zařízení}
 \begin{itemize}
-	\item Rozsah měření průtoku: 0,6 až 15 m\textsuperscript{3/hod}.
+	\item Rozsah měření průtoku: 0,6 až 15 m\textsuperscript{3}/hod.
 	\item Rozsah měření teploty vody: 2 až 180 $^{\circ}$C.
 	\item Rozsah teploty vody kalkulátorem: 2 až 130 $^{\circ}$C.
 	\item Mód přenosu: T1 nebo C1.
@@ -281,11 +281,11 @@ Některé z položek je potřeba blíže vysvětlit:
 
 \vspace{+10pt}	
 	
-Měřič pracuje v režimech T1 a C1  povinným šifrováním přenášených dat pomocí AES128 v módu CBC. Při každém přenosu poskytuje 9 aktuálních hodnot a 2 souhrné hodnoty za poslední rok:
+Měřič pracuje v režimech T1 a C1  povinným šifrováním přenášených dat pomocí AES128 v módu CBC. Při každém přenosu poskytuje 9 aktuálních hodnot a~2~souhrnné hodnoty za poslední rok:
 
 \begin{itemize}
 	\item Tepelná energie (přívodní nebo vratné potrubí)
-	\item Enegie chladu (přívodní nebo vratné potrubí))
+	\item Enegie chladu (přívodní nebo vratné potrubí)
 	\item Energie vratného potrubí
 	\item Energie přívodního potrubí
 	\item Měření průtoku
@@ -296,18 +296,18 @@ Měřič pracuje v režimech T1 a C1  povinným šifrováním přenášených da
 
 \vspace{+10pt}	
 
-Souhrné hodnoty jsou ve výchozím stavu zasílány jako roční přehled, ale lze je překonfigurováním WM-Bus modulu v měřiči změnit na měsíční interval.
+Souhrné hodnoty jsou ve výchozím stavu zasílány jako roční přehled, ale lze je~překonfigurováním WM-Bus modulu v měřiči změnit na měsíční interval.
 
 \subsubsection{Formát telegramu}
-Telegram je ve výchozím stavu vysílán každých 15 minut pro aktuální hodnoty a má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegramKamstrup}~\cite{CidloKamstrup}, kde sekce DR1 až DR12 postupně odpovídají měřeným hodnotám:
+Telegram je ve výchozím stavu vysílán každých 15 minut pro aktuální hodnoty a~má~specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegramKamstrup}~\cite{CidloKamstrup}, kde sekce DR1 až~DR12 postupně odpovídají měřeným hodnotám:
 
 	\begin{enumerate}
-		\item Tepelná energie (přívodní nebo vratné potrubí)
+		\item Tepelná energie (přívodní nebo vratné potrubí
 		\item Enegie chladu (přívodní nebo vratné potrubí))
 		\item Energie vratného potrubí
 		\item Energie přívodního potrubí
 		\item Průtok
-		\item Výkonu
+		\item Výkon
 		\item Teplota
 		\item Minimální průtok a výkon
 		\item Minimální výkon
@@ -332,30 +332,30 @@ A-Field            & Typ zařízení          & 04h \\ \hline
 Ci-pole            & Odpověd od zařízení   & 72h \\ \hline
 AccNo              & Číslo přístupu        & CAh \\ \hline
 Status             & Status zařízení       & 10h \\ \hline
-Configuration word & Položky šifrovaní AES & 50h \\ \hline
-Configuration word & Položky šifrovaní AES & 05h \\ \hline
-AES encryption     & Položky šifrovaní AES & 2Fh \\ \hline
-AES encryption     & Položky šifrovaní AES & 2Fh \\ \hline
-DR1                & DIF: 4 binarni byty   & 04h \\ \hline
+Configuration word & Nastavení šifrovaní & 50h \\ \hline
+Configuration word & Nastavení šifrovaní & 05h \\ \hline
+AES encryption     & Kontrola dešifrovaní & 2Fh \\ \hline
+AES encryption     & Kontrola dešifrovaní & 2Fh \\ \hline
+DR1                & DIF: 4 binárni bajty   & 04h \\ \hline
 DR1                & VIF: energie v kWh    & 0Fh \\ \hline
 DR1                & hodnota energie       & 99h \\ \hline
 DR1                & hodnota energie       & 99h \\ \hline
 DR1                & hodnota energie       & 99h \\ \hline
 DR1                & hodnota energie       & 99h \\ \hline
 …                  & …                     & ..  \\ \hline
-DR12               & DIF: 4 binarni byty   & 04h \\ \hline
-DR12               & VIF: průtok v m3      & 14h \\ \hline
+DR12               & DIF: 4 binární bajty   & 04h \\ \hline
+DR12               & VIF: průtok v m\textsuperscript{3}      & 14h \\ \hline
 DR12               & hodnota průtoku       & 99h \\ \hline
 DR12               & hodnota průtoku       & 99h \\ \hline
 DR12               & hodnota průtoku       & 99h \\ \hline
 DR12               & hodnota průtoku       & 99h \\ \hline
-Fill               & Výplňové byty         & 2Fh \\ \hline
-Fill               & Výplňové byty         & 2Fh \\ \hline
-Fill               & Výplňové byty         & 2Fh \\ \hline
-Fill               & Výplňové byty         & 2Fh \\ \hline
-Fill               & Výplňové byty         & 2Fh \\ \hline
-Fill               & Výplňové byty         & 2Fh \\ \hline
-Fill               & Výplňové byty         & 2Fh \\ \hline \hline
+Fill               & Výplňové bajty         & 2Fh \\ \hline
+Fill               & Výplňové bajty         & 2Fh \\ \hline
+Fill               & Výplňové bajty         & 2Fh \\ \hline
+Fill               & Výplňové bajty         & 2Fh \\ \hline
+Fill               & Výplňové bajty         & 2Fh \\ \hline
+Fill               & Výplňové bajty         & 2Fh \\ \hline
+Fill               & Výplňové bajty         & 2Fh \\ \hline \hline
 \end{tabular}%}
 \end{table}
 
@@ -366,7 +366,7 @@ Fill               & Výplňové byty         & 2Fh \\ \hline \hline
 	
 	\section{ZPA}
 
-ZPA ZE310 je třífázový elektronický dvoutarifní elektroměr pro měření činné energie, určený pro přímé i nepřímé připojení. Daný model vysílá v módu T2 s intervalem vysílání jedna minuta, vysílány jsou hodnoty spotřeby v obou tarfiech.
+ZPA ZE310 je třífázový elektronický dvoutarifní elektroměr pro měření činné energie, určený pro přímé i nepřímé připojení. Daný model vysílá v módu T2 s intervalem vysílání jedna minuta, vysílány jsou hodnoty spotřeby v obou tarifech.
 
 	 \begin{figure}[!h]
   \begin{center}
@@ -440,6 +440,7 @@ DATA1 & Hodnota spotřeby tafifu 1 & 23h \\ \hline
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline
+
 DATA1 & Hodnota spotřeby tafifu 1 & 85h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 01h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
