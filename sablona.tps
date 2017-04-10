@@ -71,7 +71,7 @@ Class=LaTeXView
 Document=text\modul.tex
 
 [Frame3_View0,0]
-TopLine=103
+TopLine=111
 Cursor=6146
 
 [Frame4]
@@ -125,7 +125,7 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame6_View0,0]
-TopLine=362
+TopLine=377
 Cursor=10108
 
 [Frame7]
@@ -161,8 +161,8 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame8_View0,0]
-TopLine=599
-Cursor=44749
+TopLine=0
+Cursor=45019
 
 [Frame9]
 Flags=0
@@ -197,7 +197,7 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame10_View0,0]
-TopLine=248
+TopLine=253
 Cursor=13542
 
 [Frame11]
@@ -215,8 +215,8 @@ Class=LaTeXView
 Document=text\literatura.tex
 
 [Frame11_View0,0]
-TopLine=98
-Cursor=10023
+TopLine=101
+Cursor=10303
 
 [Frame12]
 Flags=0
@@ -233,8 +233,8 @@ Class=LaTeXView
 Document=text\prilohy.tex
 
 [Frame12_View0,0]
-TopLine=0
-Cursor=263
+TopLine=211
+Cursor=23173
 
 [Frame13]
 Flags=0
@@ -251,7 +251,7 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame13_View0,0]
-TopLine=507
+TopLine=519
 Cursor=22027
 
 [SessionInfo]

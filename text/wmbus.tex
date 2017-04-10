@@ -414,8 +414,8 @@ DIF definuje datový typ přenášených dat a má strukturu dle Tab.~\ref{Kodov
 	\caption{Kódování DIF Pole}
 	\label{KodovaniDIFu}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
-	\hline
-	\textbf{Bit 1}                                           & \textbf{Bit2}                                                    & \textbf{Bit 3}                         & \textbf{Bit 4}                        & \textbf{Bit 5} & \textbf{Bit 6} & \textbf{Bit 7} & \textbf{Bit 8} \\ \hline \hline
+	\hline \hline
+	\textbf{Bit 1}                                           & \textbf{Bit2}                                                    & \textbf{Bit 3}                         & \textbf{Bit 4}                        & \textbf{Bit 5} & \textbf{Bit 6} & \textbf{Bit 7} & \textbf{Bit 8} \\ \hline 
 	\begin{tabular}[c]{@{}c@{}}Rozšiřující \\ Bit\end{tabular} & \begin{tabular}[c]{@{}c@{}}LSB uložení\end{tabular} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Funkční \\ Položka\end{tabular}} & \multicolumn{4}{c|}{Data}                                         \\ \hline \hline
 	\end{tabular}
 	\end{table}
@@ -468,23 +468,24 @@ Data pole určuje datový typ přenášené hodnoty. Možnosti jsou shrnuty v Ta
 \end{tabular}
 \end{table}
 
-\subsubsection{DIFE}
-DIFE obsahují upřesnění, doplňující informaci či přenos chybového stavu dané položky. Jejich kompletní přehled je uveden v Tab.~\ref{KodovaniDIFE}.
+\subsubsection{Data Information Field Extension (DIFE)}
+DIFE obsahuje upřesnění veličiny či informace o tarifu dle struktury zobrazené v Tab.~\ref{KodovaniDIFE}.
 
 \begin{table}[!ht]
 \centering
 \caption{Kódování DIFE Pole}
 \label{KodovaniDIFE}
-\begin{tabular}{|c|}
-\hline
-   \\ \hline
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline \hline
+\textbf{Bit 7}  & \textbf{Bit 6} & \textbf{Bit 5} & \textbf{Bit 4} & \textbf{Bit 3} & \textbf{Bit 2} & \textbf{Bit 1} & \textbf{Bit 0} \\ \hline 
+Rozšiřující bit & Jednotka       & \multicolumn{2}{c|}{Tarif}      & \multicolumn{4}{c|}{Hodnota}                                      \\ \hline \hline
 \end{tabular}
 \end{table}
 
 \subsubsection{Value Information Block (VIB)}
-DIB definuje typ přenášené hodnoty a skládá se z DIF a z nepovinného DIFE.
+VIB definuje typ přenášené hodnoty a skládá se z VIF a z nepovinného VIFE.
 
-\subsubsection{VIF}
+\subsubsection{Value Information Field (VIF)}
 VIF definuje veličinu přenášených dat a má strukturu dle Tab.~\ref{KodovaniVIFu}.
 
 \begin{table}[!ht]
@@ -492,8 +493,8 @@ VIF definuje veličinu přenášených dat a má strukturu dle Tab.~\ref{Kodovan
 \caption{Kódování VIF Pole}
 \label{KodovaniVIFu}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
-\textbf{Bit 1}  & \textbf{Bit2} & \textbf{Bit 3} & \textbf{Bit 4} & \textbf{Bit 5} & \textbf{Bit 6} & \textbf{Bit 7} & \textbf{Bit 8} \\ \hline \hline
+\hline \hline
+\textbf{Bit 1}  & \textbf{Bit2} & \textbf{Bit 3} & \textbf{Bit 4} & \textbf{Bit 5} & \textbf{Bit 6} & \textbf{Bit 7} & \textbf{Bit 8} \\ \hline 
 Rozšiřující bit & \multicolumn{7}{c|}{Data}                                                                                           \\ \hline \hline
 \end{tabular}
 \end{table}
@@ -555,16 +556,17 @@ E111 1010                             & Adresa sběrnice                        
 \end{tabular}}
 \end{table}
 
-\subsubsection{VIFE}
-VIFE obsahují upřesnění, doplňující informaci či přenos chybového stavu dané položky. Jejich kompletní přehled je uveden v Tab.~\ref{KodovaniVIFE}.
+\subsubsection{Value Information Field Extension (VIFE)}
+VIFE obsahují upřesnění, doplňující informaci či přenos chybového stavu dané položky. Jejich kompletní přehled je uveden ve specifikaci~\cite{WmBusSpecka}.
 
 \begin{table}[!ht]
 \centering
 \caption{Kódování VIFE Pole}
 \label{KodovaniVIFE}
-\begin{tabular}{|c|}
-\hline
-   \\ \hline
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline \hline
+\textbf{Bit 7}  & \textbf{Bit 6} & \textbf{Bit 5} & \textbf{Bit 4} & \textbf{Bit 3} & \textbf{Bit 2} & \textbf{Bit 1} & \textbf{Bit 0} \\ \hline 
+Rozšiřující bit & Jednotka       & \multicolumn{2}{c|}{Tarif}      & \multicolumn{4}{c|}{Hodnota}                                      \\ \hline \hline
 \end{tabular}
 \end{table}
 

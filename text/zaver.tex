@@ -1,23 +1,23 @@
 \chapter{Závěr}
 
-V této diplomové práci byla popsána problematika M2M (Machine to Machine) komunikace pomocí protokolu Wireless M-bus a její implementace do produktu UniPi NEURON.
+V~této diplomové práci byla popsána problematika M2M (Machine to~Machine) komunikace pomocí protokolu Wireless M-bus a~její implementace do~produktu UniPi NEURON.
 
 
-V první části práce byla popsána M2M komunikace z pohledu spotřebitelského a průmyslového Internetu věcí.
+V~první části práce byla popsána M2M komunikace z pohledu spotřebitelského a průmyslového Internetu věcí.
 
-Druhá část se zabývá embedded zařízeními pro IoT (Internet of Things), přináší přehled nejznámějších z nich, popisuje jejich možnosti, uvádí možnosti připojení senzorů a zmiňuje nedostatky zařízení. Zařízení RaspberryPi je následně použité k samotné implementaci v praktické části. Jsou zde popsány předchozí verze, důvod výběru konkrétního modelu, design i kroky potřebné k implementaci.
+Druhá část se~zabývá embedded zařízeními pro~IoT (Internet of Things), přináší přehled nejznámějších z~nich, popisuje jejich možnosti, uvádí možnosti připojení senzorů a~zmiňuje nedostatky zařízení. Zařízení RaspberryPi je~následně použité k~samotné implementaci v praktické části. Jsou zde popsány předchozí verze, důvod výběru konkrétního modelu, design i~kroky potřebné k~implementaci.
 
-Třetí část obsahuje popis rozšiřující desky UniPi a zařízení UniPi NEURON. Popisuje blíže parametry obou zařízení, možnosti jejich konektivity a softwarového vybavení. Zařízení bylo vyvinuto primárně jako rozhraní pro příjem vstupních signálů, jejich vyhodnocení a realizaci výstupní reakce na základě naprogramovaných algoritmů. Je vhodné pro monitorování, sběr a ukládání dat na vzdálený server, nebo jako výkonná a plně vybavená brána pro ostatní zařízení.
+Třetí část obsahuje popis rozšiřující desky UniPi a~zařízení UniPi NEURON. Popisuje blíže parametry obou zařízení, možnosti jejich konektivity a~softwarového vybavení. Zařízení bylo vyvinuto primárně jako rozhraní pro~příjem vstupních signálů, jejich vyhodnocení a~realizaci výstupní reakce na~základě naprogramovaných algoritmů. Je~vhodné pro~monitorování, sběr a~ukládání dat na~vzdálený server, nebo~jako výkonná a~plně vybavená brána pro~ostatní zařízení.
 
-Čtvtrá část se zabývá Wireless M-Bus modulem TR-72D-WMB výrobce IQRF, komunikující přes sběrnici UART, a popisuje strukturu příkazů a formát dat pro komunikaci s tímto modulem.
+Čtvtrá část se~zabývá Wireless M-Bus modulem TR-72D-WMB výrobce IQRF, komunikující přes~sběrnici UART, a~popisuje strukturu příkazů a~formát dat pro~komunikaci s~tímto modulem.
 
-Pátá část se zaměřila na protokol Wireless M-Bus, konkrétně na princip komunikace, režimy přenosu a jednotlivé vrstvy. 
-Díky nutnosti znalosti fyzické a linkové vrstvy pro pozdější analýzu zachytávaných dat byly tyto vrstvy rozebrány podrobněji. 
+Pátá část se~zaměřila na~protokol Wireless M-Bus, konkrétně na~princip komunikace, režimy přenosu a~jednotlivé vrstvy. 
+Díky nutnosti znalosti fyzické a~linkové vrstvy pro~pozdější analýzu zachytávaných dat byly tyto vrstvy rozebrány podrobněji. 
 
-V šesté části byly popsány vyčítaná zařízení a struktura dat jejich telegramů.
+V šesté části byly popsány vyčítaná zařízení a~struktura dat jejich telegramů.
 
-Závěrečná (sedmá) část obsahuje návrh a samotnou implementaci vzorové aplikace pro vyčítání dat. Jsou popsány jednotlivé kroky nutné ke zprovoznění komunikace mezi RaspberryPi a vyčítaným senzorem, provedeno zachycení vzorového telegramu, jeho analýza a následné předání zvolených informací. Z výstupu aplikace je patrné, že pakety obsahují příslušná data, komunikace mezi modulem a zařízením funguje, data ze senzoru se přenášejí, následně vyčítají a přehledně zobrazují v implementované vizualiaci pomocí Google Charts API.
+Závěrečná (sedmá) část obsahuje návrh a~samotnou implementaci vzorové aplikace pro~vyčítání dat. Jsou popsány jednotlivé kroky nutné ke~zprovoznění komunikace mezi RaspberryPi a~vyčítaným senzorem, provedeno zachycení vzorového telegramu, jeho analýza a~následné předání zvolených informací. Z~výstupu aplikace je patrné, že~pakety obsahují příslušná data, komunikace mezi modulem a~zařízením funguje, data ze~senzoru se~přenášejí, následně vyčítají a~přehledně zobrazují v~implementované vizualiaci pomocí Google Charts API.
 
-Na zakládě této realizace je vytvořená aplikace analyzovat jen předem známá zařízení. Pokud by mřešení mělo být plně využitelné pro Internet věcí, bylo by nutné implementovat velké množství parsovacích schémat, nebo vytvořit obecný algoritmus pro parsování datových jednotek všech výrobců dodržující platnou specifikaci.
+Na~zakládě této realizace je~vytvořená aplikace analyzovat jen předem známá zařízení. Pokud by~řešení mělo být plně využitelné pro Internet věcí, bylo by nutné implementovat velké množství parsovacích schémat, nebo vytvořit obecný algoritmus pro~parsování datových jednotek všech výrobců dodržující platnou specifikaci.
 
 

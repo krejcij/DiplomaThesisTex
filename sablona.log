@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  3 APR 2017 00:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  10 APR 2017 20:16
 entering extended mode
 **sablona.tex
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.tex"
@@ -1644,35 +1644,39 @@ Overfull \hbox (6.75414pt too wide) in paragraph at lines 453--454
  []
 
 [59]
-Overfull \hbox (6.75414pt too wide) in paragraph at lines 515--516
+Overfull \hbox (6.75414pt too wide) in paragraph at lines 516--517
 []\T1/lmr/m/n/12 Data pole ur-£uje da-tový typ p°e-ná-²ené hod-noty. Moº-nosti jsou shr-nuty v Tab. []5.18[]. 
  []
 
-[60] [61] <obrazky/wmbus_aes_cbc.pdf, id=1532, 646.66594pt x 276.28218pt>
+[60]
+
+LaTeX Warning: Text page 61 contains only floats.
+
+[61] <obrazky/wmbus_aes_cbc.pdf, id=1533, 646.66594pt x 276.28218pt>
 File: obrazky/wmbus_aes_cbc.pdf Graphic file (type pdf)
  <use obrazky/wmbus_aes_cbc.pdf>
-Package pdftex.def Info: obrazky/wmbus_aes_cbc.pdf used on input line 594.
+Package pdftex.def Info: obrazky/wmbus_aes_cbc.pdf used on input line 596.
 (pdftex.def)             Requested size: 452.66307pt x 193.3962pt.
 
-Overfull \hbox (25.87173pt too wide) in paragraph at lines 594--595
+Overfull \hbox (25.87173pt too wide) in paragraph at lines 596--597
  [] 
  []
 
 [62 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/wmbus_aes_cbc.pdf>] [63]
-<obrazky/wmbus_aes_schema.pdf, id=1564, 491.58656pt x 173.14688pt>
+<obrazky/wmbus_aes_schema.pdf, id=1565, 491.58656pt x 173.14688pt>
 File: obrazky/wmbus_aes_schema.pdf Graphic file (type pdf)
  <use obrazky/wmbus_aes_schema.pdf>
-Package pdftex.def Info: obrazky/wmbus_aes_schema.pdf used on input line 694.
+Package pdftex.def Info: obrazky/wmbus_aes_schema.pdf used on input line 696.
 (pdftex.def)             Requested size: 393.26978pt x 138.51768pt.
  [64]) [65 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/wmbus_aes_schema.pdf>]
 ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zarizeni.tex"
-<obrazky/zarizeni_weptech1.png, id=1595, 466.74374pt x 338.26375pt>
+<obrazky/zarizeni_weptech1.png, id=1596, 466.74374pt x 338.26375pt>
 File: obrazky/zarizeni_weptech1.png Graphic file (type png)
  <use obrazky/zarizeni_weptech1.png>
 Package pdftex.def Info: obrazky/zarizeni_weptech1.png used on input line 28.
 (pdftex.def)             Requested size: 192.0548pt x 139.18968pt.
 
-<obrazky/zarizeni_weptech2.png, id=1596, 412.54124pt x 338.26375pt>
+<obrazky/zarizeni_weptech2.png, id=1597, 412.54124pt x 338.26375pt>
 File: obrazky/zarizeni_weptech2.png Graphic file (type png)
  <use obrazky/zarizeni_weptech2.png>
 Package pdftex.def Info: obrazky/zarizeni_weptech2.png used on input line 30.
@@ -1686,19 +1690,19 @@ y/zarizeni_weptech2.png>] [67]
 
 LaTeX Warning: Text page 68 contains only floats.
 
-[68] [69] <obrazky/zarizeni_bonega1.png, id=1627, 178.6675pt x 174.6525pt>
+[68] [69] <obrazky/zarizeni_bonega1.png, id=1628, 178.6675pt x 174.6525pt>
 File: obrazky/zarizeni_bonega1.png Graphic file (type png)
  <use obrazky/zarizeni_bonega1.png>
 Package pdftex.def Info: obrazky/zarizeni_bonega1.png used on input line 166.
 (pdftex.def)             Requested size: 128.0387pt x 125.16873pt.
 
-<obrazky/zarizeni_bonega2.png, id=1628, 250.9375pt x 244.915pt>
+<obrazky/zarizeni_bonega2.png, id=1629, 250.9375pt x 244.915pt>
 File: obrazky/zarizeni_bonega2.png Graphic file (type png)
  <use obrazky/zarizeni_bonega2.png>
 Package pdftex.def Info: obrazky/zarizeni_bonega2.png used on input line 168.
 (pdftex.def)             Requested size: 128.0387pt x 124.97224pt.
 
-<obrazky/zarizeni_bonega3.png, id=1629, 189.70876pt x 176.66pt>
+<obrazky/zarizeni_bonega3.png, id=1630, 189.70876pt x 176.66pt>
 File: obrazky/zarizeni_bonega3.png Graphic file (type png)
  <use obrazky/zarizeni_bonega3.png>
 Package pdftex.def Info: obrazky/zarizeni_bonega3.png used on input line 170.
@@ -1709,13 +1713,13 @@ Overfull \hbox (2.52914pt too wide) in paragraph at lines 241--242
 []\T1/lmr/m/n/12 Modul Bo-nega pra-cuje pouze v re-ºimu ²if-ro-vání p°e-ná-²en-ných dat po-mocí AES128
  []
 
-[72] <obrazky/zarizeni_kamstrup.png, id=1652, 330.23375pt x 359.3425pt>
+[72] <obrazky/zarizeni_kamstrup.png, id=1653, 330.23375pt x 359.3425pt>
 File: obrazky/zarizeni_kamstrup.png Graphic file (type png)
  <use obrazky/zarizeni_kamstrup.png>
 Package pdftex.def Info: obrazky/zarizeni_kamstrup.png used on input line 262.
 (pdftex.def)             Requested size: 231.16203pt x 251.53802pt.
  [73 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_kamstrup.png>] [74] [75]
-<obrazky/zarizeni_zpa.png, id=1685, 444.66125pt x 549.05125pt>
+<obrazky/zarizeni_zpa.png, id=1686, 444.66125pt x 549.05125pt>
 File: obrazky/zarizeni_zpa.png Graphic file (type png)
  <use obrazky/zarizeni_zpa.png>
 Package pdftex.def Info: obrazky/zarizeni_zpa.png used on input line 373.
@@ -1744,7 +1748,7 @@ Overfull \hbox (4.89494pt too wide) in paragraph at lines 227--228
 []\T1/lmr/m/n/12 Strukturu ta-bu-lek, de-fi-nici sloupcu v vazby mezi nimi po-pi-suje schéma na Obr. []7.1[]. 
  []
 
-<obrazky/aplikace_databaze.png, id=1755, 782.925pt x 268.00125pt>
+<obrazky/aplikace_databaze.png, id=1756, 782.925pt x 268.00125pt>
 File: obrazky/aplikace_databaze.png Graphic file (type png)
  <use obrazky/aplikace_databaze.png>
 Package pdftex.def Info: obrazky/aplikace_databaze.png used on input line 231.
@@ -1843,12 +1847,12 @@ es /
  []
 
 [92]
-Underfull \hbox (badness 8151) in paragraph at lines 123--124
+Underfull \hbox (badness 8151) in paragraph at lines 125--126
 []\T1/lmr/m/n/12 Wireless M-Bus / OMS Hu-mi-dity and tem-pe-ra-ture sen-sor WEP-
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 123--124
+Underfull \hbox (badness 2469) in paragraph at lines 125--126
 \T1/lmr/m/n/12 OMSF-868A \T1/lmr/m/it/12 WEP-TECH elek-tro-nik GmbH \T1/lmr/m/n/12 [on-line]. 2016 [cit. 2016-12-
  []
 
@@ -1872,7 +1876,7 @@ Overfull \hbox (15.1934pt too wide) in paragraph at lines 85--85
 []\T1/lmr/bx/n/17.28 VÝVOJOVÝ DI-A-GRAM APLI-KACE PRO VY-
  []
 
-<obrazky/aplikace_diagram.pdf, id=1953, 733.99219pt x 1075.76906pt>
+<obrazky/aplikace_diagram.pdf, id=1955, 733.99219pt x 1075.76906pt>
 File: obrazky/aplikace_diagram.pdf Graphic file (type pdf)
  <use obrazky/aplikace_diagram.pdf>
 Package pdftex.def Info: obrazky/aplikace_diagram.pdf used on input line 90.
@@ -1884,7 +1888,7 @@ Package pdftex.def Info: obrazky/aplikace_diagram.pdf used on input line 90.
 
 
 ]
-<obrazky/chart_weptech.png, id=2002, 353.1594pt x 177.5433pt>
+<obrazky/chart_weptech.png, id=2004, 353.1594pt x 177.5433pt>
 File: obrazky/chart_weptech.png Graphic file (type png)
  <use obrazky/chart_weptech.png>
 Package pdftex.def Info: obrazky/chart_weptech.png used on input line 132.
@@ -1902,7 +1906,7 @@ Package pdftex.def Info: obrazky/chart_weptech.png used on input line 146.
 
 
 
- <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/chart_weptech.png>] [103] [104] <obrazky/priloha_medium.pdf, id=2016, 
+ <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/chart_weptech.png>] [103] [104] <obrazky/priloha_medium.pdf, id=2018, 
 395.22656pt x 241.65282pt>
 File: obrazky/priloha_medium.pdf Graphic file (type pdf)
 
@@ -1931,13 +1935,13 @@ Package rerunfilecheck Info: File `sablona.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
  ) 
 Here is how much of TeX's memory you used:
- 17745 strings out of 493921
- 258510 string characters out of 3147279
- 480933 words of memory out of 3000000
- 20027 multiletter control sequences out of 15000+200000
+ 17748 strings out of 493921
+ 258552 string characters out of 3147279
+ 480969 words of memory out of 3000000
+ 20029 multiletter control sequences out of 15000+200000
  88915 words of font info for 71 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 58i,18n,118p,1124b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,18n,118p,1134b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.en
 c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
 nc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx
@@ -1948,9 +1952,9 @@ m/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/P
 ic/lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmsso12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on sablona.pdf (105 pages, 21114843 bytes).
+Output written on sablona.pdf (105 pages, 21196709 bytes).
 PDF statistics:
- 2203 PDF objects out of 2487 (max. 8388607)
- 506 named destinations out of 1000 (max. 500000)
+ 2205 PDF objects out of 2487 (max. 8388607)
+ 507 named destinations out of 1000 (max. 500000)
  1331 words of extra memory for PDF output out of 10000 (max. 10000000)
 

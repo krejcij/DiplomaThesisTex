@@ -85,10 +85,10 @@
 \contentsline {subsubsection}{Status}{57}{section*.175}
 \contentsline {subsubsection}{Data Information Block (DIB)}{58}{section*.178}
 \contentsline {subsubsection}{Data information Field (DIF)}{58}{section*.179}
-\contentsline {subsubsection}{DIFE}{59}{section*.184}
-\contentsline {subsubsection}{Value Information Block (VIB)}{60}{section*.186}
-\contentsline {subsubsection}{VIF}{60}{section*.187}
-\contentsline {subsubsection}{VIFE}{60}{section*.191}
+\contentsline {subsubsection}{Data Information Field Extension (DIFE)}{59}{section*.184}
+\contentsline {subsubsection}{Value Information Block (VIB)}{59}{section*.186}
+\contentsline {subsubsection}{Value Information Field (VIF)}{60}{section*.187}
+\contentsline {subsubsection}{Value Information Field Extension (VIFE)}{60}{section*.191}
 \contentsline {subsubsection}{Data Value}{60}{section*.193}
 \contentsline {section}{\numberline {5.5}\IeC {\v S}ifrov\IeC {\'a}n\IeC {\'\i } dat}{60}{section.194}
 \contentsline {subsection}{\numberline {5.5.1}\IeC {\v S}ifrovac\IeC {\'\i } algoritmus DES}{62}{subsection.195}
