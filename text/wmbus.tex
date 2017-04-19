@@ -69,13 +69,22 @@ V	módu T měřič samostatně odesílá data, buď periodicky nebo aperiodicky 
 V	módu R měřič samostatně neodesílá změřená data, ale vyčkává na výzvu od~koncentrátoru. Měřič je v úsporném režimu a v pravidelných úsecích se periodicky probouzí do režimu přijmu a očekává rámec. Když není přijat žádný validní wake-up rámec, měřič se přepne zpět do úsporného režimu. V	opačném případě se naváže obousměrná komunikace mezi měřičem a koncentrátorem.
 
 V režimech S, T a R je každý bajt vysílán s nejvíce důležitým bitem (MSB - Most
-Significant Bit) na prvním místě.
+Significant Bit) na prvním místě. Implementace MSB v jazyce Python je zobrazena v Kódu~\ref{CodeMSB}.
+
+\begin{lstlisting}[caption={Implementace vyčítaní uložení MSB},captionpos=b,label=CodeMSB,style=MyCodePython]
+def MSB(bytes):
+    new = ""
+    size = len(bytes)
+    while (size>0):
+        new = new + bytes[size-2:size]
+        size=size-2
+    return new
+\end{lstlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
-
 
 \section{Struktura zasílaných dat}
 Komunikace probíhá následovně: nadřazené aplikace realizující aplikační vrstvu standardu M-Bus vyšlou svá data do RF modemu v podobě datové jednotky, která je~zobrazena v Tab.~\ref{PaketWm1}:
@@ -582,9 +591,91 @@ Rozšiřující bit & Jednotka       & \multicolumn{2}{c|}{Tarif}      & \multic
 \end{tabular}
 \end{table}
 
-
 \subsubsection{Data Value}
 Pole \texttt{Data Value} již obsahuje přenášenou hodnotu, definovanou dle DIB a VIB.
+
+
+\subsubsection{Datové typy F a G}
+V protokolu Wireless M-Bus je datum kódováno ve formátu G, viz Tab.~\ref{KodovaniDataG} 
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování data ve formátu G}
+\label{KodovaniDataG}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 7}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 6}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 5}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 4}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 3}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 2}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 1}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 0}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 7}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 6}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 5}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 4}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 3}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 2}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 1}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 0}}} \\ \hline \hline
+\multicolumn{8}{|c|}{Bajt 1} & \multicolumn{8}{c|}{Bajt 2} \\ \hline
+\multicolumn{3}{|c|}{Rok (1/2)} & \multicolumn{5}{c|}{Den} & \multicolumn{4}{c|}{Rok (2/2)} & \multicolumn{4}{c|}{Měsíc} \\ \hline \hline
+\end{tabular}
+\end{table}
+
+a datum i čas ve formátu F, viz Tab.~\ref{KodovaniDataF}.  
+
+\begin{table}[!ht]
+\centering
+\caption{Kódování data a času ve formátu F}
+\label{KodovaniDataF}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 7}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 6}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 5}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 4}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 3}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 2}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 1}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 0}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 7}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 6}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 5}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 4}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 3}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 2}}} & 
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 1}}} &
+\rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 0}}} & & \\ \hline \hline
+\multicolumn{8}{|c|}{Bajt 1}                                  & \multicolumn{8}{c|}{Bajt 2}                                   & Bajt 3           & Bajt 4          \\ \hline
+0     & 0     & \multicolumn{6}{c|}{Hodina}                   & 0     & 0     & 0     & \multicolumn{5}{c|}{Minuta}           & \multicolumn{2}{c|}{Dle formátu G} \\ \hline \hline
+\end{tabular}
+\end{table}
+
+Ukázky implementace obou formátů v jazyce Python uvádí Kód~\ref{CodeFG}.
+
+\begin{lstlisting}[caption={Implementace F a G formátu},captionpos=b,label=CodeFG,style=MyCodePython]
+# Get date in G format
+def get_date(date_bytes):
+    date = str(bin(int(date_bytes[0:2], 16))[2:]).zfill(8) + str(bin(int(date_bytes[2:4], 16))[2:]).zfill(8)
+    year = str(int(date[0:4] + date[8:11], 2))
+    month = str(int(date[4:8], 2))
+    day = str(int(date[11:16], 2))
+    vysledek = day + "." + month + ".20" + year
+    return vysledek
+
+# Get time from F format
+def get_time(time_bytes):
+    time = str(bin(int(time_bytes[0:2], 16))[2:]).zfill(8) + str(bin(int(time_bytes[2:4], 16))[2:]).zfill(8)
+    hour = str(int(time[3:8], 2))
+    minute = str(int(time[10:16], 2)).zfill(2)
+    vysledek = hour + ":" + minute
+    return vysledek
+\end{lstlisting}
+	
+\newpage{}	
 	
 \section{Šifrování dat}
 Pro šifrování přenášených dat se v protokolu Wireless M-Bus používají tři šifrovací algoritmy:
@@ -605,7 +696,7 @@ Advanced Encryption Standard je symetrická bloková šifra (pro šifrování i 
 \begin{figure}[!ht]
 \vspace{-10pt}
  \begin{center}
-    \includegraphics[scale=0.7]{obrazky/wmbus_aes_cbc}
+    \includegraphics[scale=0.65]{obrazky/wmbus_aes_cbc}
   \end{center}
 	\vspace{-30pt}
   \caption{Princip algoritmu AES v módu CBC}
@@ -613,13 +704,20 @@ Advanced Encryption Standard je symetrická bloková šifra (pro šifrování i 
 	\vspace{-10pt}
 \end{figure}
 
-Pro šifrovaný přenos dat v protokolu WM-Bus se využívá AES, kontrétně mód s~inicializačním vektorem (CBC - Cipher Block Chaining). Ten funguje (viz~Obr.\ref{SchemaAEScbc}) tak, že před zašifrováním se odpovídající blok otevřeného textu xoruje předcházejícím blokem zašifrovaného textu. To znamená, že jednotlivé bloky jsou na sobě závislé, aby došlo k dešifrování konkrétního bloku, je nutné  dešifrovat i všechny předchozí. Je tedy nutné mít nějaký nulový blok dat pro zašifrování prvního bloku dat. K tomu se využívá inicializační vektor. Tomuto bloku se pak říká inicializační vektor (IV). Tento blok se použije k dešifrování prvního bloku a pak zahodí.
+Pro šifrovaný přenos dat v protokolu WM-Bus se využívá AES, kontrétně mód s~inicializačním vektorem (CBC - Cipher Block Chaining). Ten funguje (viz~Obr.~\ref{SchemaAEScbc}) tak, že před zašifrováním se odpovídající blok otevřeného textu xoruje předcházejícím blokem zašifrovaného textu. To znamená, že jednotlivé bloky jsou na sobě závislé, aby došlo k dešifrování konkrétního bloku, je nutné  dešifrovat i všechny předchozí. Je tedy nutné mít nějaký nulový blok dat pro zašifrování prvního bloku dat. K tomu se využívá inicializační vektor. Tomuto bloku se pak říká inicializační vektor (IV). Tento blok se použije k dešifrování prvního bloku a pak zahodí.
 
 
 
 \subsection{Inicializační vektor}
 \label{KapitolaInicializacniVektor}
-Inicializační vektor má délku 16 Bajtů (128 bitů, odtud označení AES-128) a~v~případě protokolu WM-Bus je tvořený dynamicky z nešifrovaných bajtů polí paketu, způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor}.
+Inicializační vektor má délku 16 Bajtů (128 bitů, odtud označení AES-128) a~v~případě protokolu WM-Bus je tvořený dynamicky z nešifrovaných bajtů polí paketu, způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor} a implemetovaných dle Kódu~\ref{CodeIV}.
+
+\begin{lstlisting}[caption={Sestavení inicializačního vektoru},captionpos=b,label=CodeIV,style=MyCodePython]
+# Build Initialization Vector from incoming packet data
+device = parsedstring[8:24].upper()
+access = str(parsedstring[26:28])
+AES_IV = binascii.unhexlify(device + access * 8)
+\end{lstlisting}
 
 \begin{table}[!ht]
 	%\vspace{-30pt}
@@ -656,6 +754,7 @@ První 2 bajty obsahují přidělené identifikační údaje výrobce, další �
 \subsection{Šifrovací klíč}
 Šifrovací klíč AES je sekvence bajtů o velikosti 128, 192 nebo 256 bitů. Tento klíč slouží pro šifrování a dešifrování přenášených dat a je unikátní pro každé vyčítané zařízení. Bez znalosti tohoto klíče nelze tedy vyčítat zařízení se šifrovaným přenosem dat.
 
+\newpage{}
 
 \subsection{Určení šifrovaných dat}
 \label{KapitolaConfigurationWord}
@@ -689,7 +788,6 @@ LSB          & H                 & Počítač skoků          \\  \hline  \hline
 %\vspace{-5pt}
 \end{table}
 
-\newpage
 Bity šifrování nabývají těchto hodnot:
 \begin{itemize}
 	\item 4 pro AES se statickým inicializačním vektorem,
@@ -699,9 +797,10 @@ Bity šifrování nabývají těchto hodnot:
 \end{itemize}
 Pro režim AES s dynamickým inicializačním vektorem bity jsou 0101 a vyjadřují hodnotu 5.
 
+\newpage{}
 
 \subsection{Princip dešifrování}
-Pro dešifrování přijatých dat je nutná znalost šifrovacího algoritmu, šifrovacího klíče a sestavení inicializačního vektoru. Potom lze aplikací dešifrovacího algoritmu získat přenášená data. Obecné schéma dešifrování AES-128 CBC je znázorněno na Obr.~\ref{SchemaAESobecne}.
+Pro dešifrování přijatých dat je nutná znalost šifrovacího algoritmu, šifrovacího klíče a sestavení inicializačního vektoru. Potom lze aplikací dešifrovacího algoritmu získat přenášená data. Obecné schéma dešifrování AES-128 CBC je znázorněno na~Obr.~\ref{SchemaAESobecne} a~implementováno v~Kódu~\ref{CodeCrypto}.
 \begin{figure}[!ht]
 \vspace{-20pt}
  \begin{center}
@@ -713,6 +812,20 @@ Pro dešifrování přijatých dat je nutná znalost šifrovacího algoritmu, š
 	\vspace{-20pt}
 \end{figure}
 
+\begin{lstlisting}[caption={Implementace AES},captionpos=b,label=CodeCrypto,style=MyCodePython]
+from Crypto.Cipher import AES
+
+encryptor = AES.new(AES_KEY_IQRF, AES.MODE_CBC, IV=AES_IV)
+OUTPUT_DECRYPTED = encryptor.decrypt(INPUT_ENCRYPTED)
+\end{lstlisting}
+
 \subsection{Kontrola rozšifrování dat}
-Ke kontrole správnosti dešifrovaných dat slouží definovaná počáteční sekvence dat. U algoritmu DES začínají dešifrovaná data dvěma bajty obsahujícími datum a čas. Pro algoritmus AES jsou první dva bajty šestnáckové a oba obsahují znak 2Fh.
+Ke kontrole správnosti dešifrovaných dat slouží definovaná počáteční sekvence dat. U algoritmu DES začínají dešifrovaná data dvěma bajty obsahujícími datum a čas. Pro algoritmus AES jsou první dva bajty šestnáckové a oba obsahují znak 2Fh, jak znázorňuje Kód~\ref{CodeVerify}.
+
+\begin{lstlisting}[caption={Ověření kontrolní sekvence AES},captionpos=b,label=CodeVerify,style=MyCodePython]
+# Verify control sequence after decrypt
+aes_control = binascii.hexlify(TELEGRAM_ORIGINAL[0:2]).upper()
+if (aes_control == b'2F2F'):
+		binascii.hexlify(TELEGRAM_ORIGINAL).upper().decode('ascii'))
+\end{lstlisting}
 

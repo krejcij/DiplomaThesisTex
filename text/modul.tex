@@ -124,6 +124,27 @@ a pro případnou změnu AES klíče:
 \end{centerverbatim}
 \end{figure}
 
+Ukázku jednoduché komunikace s modulem v jazyce Python obsahuje~Kód~\ref{CodeSerial}.
+
+\begin{lstlisting}[caption={Komunikace s modulem přes sériový port},captionpos=b,label=CodeSerial,style=MyCodePython]
+import serial
+
+# Setup a serial port
+	ser = serial.Serial(
+		port='/dev/ttyAMA0',
+		baudrate=19200,
+		parity=serial.PARITY_NONE,
+		stopbits=serial.STOPBITS_ONE,
+		bytesize=serial.EIGHTBITS,
+		timeout=1
+	)
+  output("SCR", "Device is ready: " + str(ser.isOpen()))
+
+# Set default AES key
+	ser.write("\x00\x00>03:" + AES_IQRF_DEFAULT + "\x0D")
+	y = ser.readline()
+	output("SCR", "Default AES key set: " + y[1:])
+\end{lstlisting}
 
 
 

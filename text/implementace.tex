@@ -33,16 +33,12 @@ Pro zpřístupnění UART rozhraní je nutné provést drobné úpravy jeho konf
 	\item V případě, že se jedná o RaspberryPi verze 3, je potřeba do \texttt{/boot/config.txt} dopsat položku \texttt{dtoverlay=pi3-miniuart-bt}, která zakáže BT na mini-UART a provede přemapování zpět na \texttt{/dev/ttyAMA0}. Tento krok je takto řešený z důvodu kompatibility, kdy je sériová komunikace směrována přes \texttt{/dev/ttyAMAO} nezávisle na použité verzi RaspberryPi.
 \end{enumerate}
 
-Po každém z těchto kroků je doporučován restart zařízení. Kroky byly otestovány pouze na výše zmíněné verzi Raspbianu a v jiných distribucích se monou mírně lišit. Úspěšnost provedení těchto kroků lze zkontrolovat pomocí zadání příkazu konzole 
-	\begin{lstlisting}[style=MyCodeBash]
-			sudo dmesg | grep tty
-	\end{lstlisting}
-
-jehož výstup by měl být následující:
+Po každém z těchto kroků je doporučován restart zařízení. Kroky byly otestovány pouze na výše zmíněné verzi Raspbianu a v jiných distribucích se monou mírně lišit. Úspěšnost provedení těchto kroků lze zkontrolovat pomocí zadání příkazu konzole \texttt{sudo dmesg | grep tty} jehož výstup by měl být následující:
 					
 	\begin{lstlisting}[style=MyCodeBash]
 [    0.000974] console [tty1] enabled
-[    0.130442] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 81, base_baud = 0) is a PL011 rev2
+[    0.130442] 20201000.uart: ttyAMA0 at MMIO 0x20201000 
+		(irq = 81, base_baud = 0) is a PL011 rev2
 	\end{lstlisting}
 	\vspace{-20pt}
 
@@ -145,7 +141,7 @@ který byl pomoci datasheetů použitého komunikačního modulu \cite{ModulIQRF
 	\item 38-93 pro šifrovanou část dat.
 \end{itemize}
 
-Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována~\ref{KapitolaDesifrovani} a byl získán dešifrovaný telegram:
+Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována dle Kap.~\ref{KapitolaDesifrovani} a byl získán dešifrovaný telegram:
 
 \begin{figure}[!ht]
 \begin{centerverbatim}
@@ -236,7 +232,7 @@ Strukturu tabulek, definici sloupců a vazby mezi nimi popisuje schéma na Obr.~
 \end{figure}
 	
 \section{Zajištění vizualizace dat}	
-Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Charts API~\cite{uvod_google_charts_api} běžící na webovém serveru Apache2 a generovaném pomocí PHP/Pythonu. Pro tyto potřeby je nutné doinstalovat následující balíčky:
+Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Charts API~\cite{uvod_google_charts_api} běžící na webovém serveru Apache2 a generovaném pomocí PHP. Pro tyto potřeby je nutné doinstalovat následující balíčky:
  
 \begin{lstlisting}[style=MyCodeBash]
 		sudo apt-get update
@@ -275,7 +271,7 @@ Na~základě obsahu položky \texttt{ConfigurationWord} (viz Kap.~\ref{KapitolaC
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Pokud je analýzou položky \texttt{ConfigurationWord} zjištěno šifrování dat přenášených dat algoritmem AES128 CBC, je zahájen proces dešifrování dat.
 
-Díky vnitřní implementaci IQRF modulu jsou všechny zachycené šifrované pakety automaticky rozšifrovány pomocí AES klíče nahraného v paměti modulu. Jedná se však o klíč daného modulu, nikoliv vyčítaného zařízení. Tato dešifrovaná data jsou tedy nevalidní. Celý postup dešifrování se tak komplikuje:
+Díky vnitřní implementaci IQRF modulu jsou všechny zachycené šifrované pakety automaticky rozšifrovány pomocí AES klíče nahraného v paměti modulu. Jedná se však o klíč daného modulu, nikoliv vyčítaného zařízení. Tato dešifrovaná data jsou tedy nevalidní. Celý postup dešifrování (viz Kód~\ref{CodeAES}) se tak komplikuje:
 
 \begin{enumerate}
 	\item Dojde ke stažení aktuálního AES klíče (viz Kap.~\ref{KapitolaStazeniKlice}) nastaveného v IQRF modulu, s pomocí něj a sestaveného inicializačního vektoru (viz Kap.~\ref{KapitolaInicializacniVektor})
@@ -284,25 +280,84 @@ jsou přijatá data zašifrována zpět do šifrovaného stavu jaký mají při 
 	\item Správnost rozšifrování se ověřuje pomocí kontrolních bajtů, v případě AES šifrování mají první dva bajty rozšifrovaných dat hodnotu 2Fh.
 \end{enumerate}
 
+\begin{lstlisting}[caption={Implementace AES dešifrování},captionpos=b,label=CodeAES,style=MyCodePython]
+from Crypto.Cipher import AES
+
+# Encrypt telegram with AES key from IQRF module
+encryptor_back = AES.new(AES_KEY_IQRF, AES.MODE_CBC, IV=AES_IV)
+TELEGRAM_CRYPTED = encryptor_back.encrypt(TELEGRAM_DECRYPTED)
+
+# Decrypt telegram with  AES key of used device
+encryptor_new = AES.new(AES_KEY_DEVICE, AES.MODE_CBC, IV=AES_IV)
+TELEGRAM_ORIGINAL = encryptor_new.decrypt(TELEGRAM_CRYPTED)
+\end{lstlisting}
+
+
 Poté program s telegramem zachází jako s nešifrovaným, popsaným v Kap.~\ref{KapitolaParsovani}. Pokud není nalezen AES klíč odpovídajícího zařízení, pole \texttt{ConfigurationWord} obsahuje neimplementovaný algoritmus dešifrování či se proces dešifrování nezdaří, program vyvolá vyjímku, telegram je zaevidován a pokračuje se zpracováváním dalšího telegramu.
 
 \subsection{Parsování dat}
 \label{KapitolaParsovani}
-Každý telegram je před svým zpracováním uložen do databáze, aby v případě potřeby (špatné dešifrování, neadekvátní dešifrovací klíč, chyba aplikace, neznámý senzor, \ldots) mohlo být provedeno nové zpracování daného telegramu. Poté je analyzováno M-Pole a v případě že se jedná o výrobce, jehož parsovací schéma je~v~této aplikaci implementováno, dochází k vyparsování přenášených hodnot. Následně v~souladu s parsovacím schématem dochází k formátování a odpovídající interpretaci získaných dat (viz Kap.~\ref{PacketTableAnalysis}). Poté jsou získaná data uložena do databáze a zobrazena uživateli na výstup konzole.
+Každý telegram je před svým zpracováním uložen do databáze, aby v případě potřeby (špatné dešifrování, neadekvátní dešifrovací klíč, chyba aplikace, neznámý senzor, \ldots) mohlo být provedeno nové zpracování daného telegramu. Poté je analyzováno M-Pole a v případě že se jedná o výrobce, jehož parsovací schéma je~v~této aplikaci implementováno, dochází k vyparsování (viz Kód~\ref{CodeParse}) přenášených hodnot. Následně v~souladu s parsovacím schématem dochází k formátování a odpovídající interpretaci získaných dat (viz Kap.~\ref{PacketTableAnalysis}). Poté jsou získaná data uložena do databáze a zobrazena uživateli na výstup konzole.
+
+
+\begin{lstlisting}[caption={Ukázka parsování dat},captionpos=b,label=CodeParse,style=MyCodePython]
+# Parse values from Weptech
+if (sensor_manu == "WEP"):
+	if parsedstring[66:68] == "01": errors = "Battery dead"
+		temperature = str(int(LSB(parsedstring[42:46])) / 10)
+		humidity = str(int(LSB(parsedstring[52:56])) / 10)
+# Parse values from Bonega       
+elif (sensor_manu == "BON"):
+	Spotreba = str(int(LSB(parsedstring[42:46]), 16))
+	Cascteni = get_date(LSB(parsedstring[58:62])) + " " + get_time(LSB(parsedstring[54:58]))
+\end{lstlisting}
 Pokud parsování dat selže, dojde k výjimce, daný telegram je zaevidován, v jeho zpracování se již nepokračuje a aplikace se vrátí do~stavu čekání na příchod dalšího telegramu.
 
 \subsection{Uložení dat}
-Správně interpretované hodnoty doplněné o časovou značku a informaci o měřícím zařízení jsou zapsány do databáze. Do této databáze se ukládají všechny příchozí validně zpracované telegramy, určené k pozdějšímu zpracování. Obohacení o časovou značku a údaje o zařízení je možné později tyto data efektivně třídit či v nich vyhledávat.
+Správně interpretované hodnoty doplněné o časovou značku a informaci o měřícím zařízení jsou zapsány do databáze. Do této databáze se ukládají všechny příchozí validně zpracované telegramy, určené k pozdějšímu zpracování. Obohacení o časovou značku a údaje o zařízení je možné později tyto data efektivně třídit či v nich vyhledávat. Ukázka implementace je v Kódu~\ref{CodeStore}.
+
+\vspace{10pt}
+
+\begin{lstlisting}[caption={Ukázka ukládání dat},captionpos=b,label=CodeStore,style=MyCodePython]
+db = sqlite3.connect(SQLITE_DB_NAME)
+def sql(query):
+    db.execute(query)
+    db.commit()
+    output('SQL', query)
+    return
+...
+sql("INSERT INTO TELEGRAMS VALUES ('"+time.strftime("%Y-%m-%d %H:%M")+"', '"+parsedstring[0:4]+"', '"+parsedstring[4:34]+"', '"+parsedstring[34:-4]+"', '"+parsedstring[-4:]+"','"+AES_IQRF_DEFAULT+"')")		
+\end{lstlisting}
 
 \subsection{Ošetření výjimek}
 Aplikace má ošetřeny dva chybové stavy. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a~následně přejde do stavu čekání na příchod dalšího telegramu.
 Všechny tyto chyby jsou ukládány do příslušné tabulky v databázi, do chybového logu a taktéž sdělovány uživateli do konzole.
 
 \section{Export dat}
-V případě potřeby je vizualizační aplikace schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k~časové náročnosti při daném počtu naměřených hodnot je tato funkcionalita implementována spíše jako experimentální a v praxi se projevila jako nedostačující.
+V případě potřeby je vizualizační aplikace (viz~Kód~\ref{CodeExport}) schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k~časové náročnosti při daném počtu naměřených hodnot je tato funkcionalita implementována spíše jako experimentální a v praxi se projevila jako nedostačující.
+
+\newpage{}
+
+\begin{lstlisting}[caption={Ukázka exportu dat},captionpos=b,label=CodeExport,style=MyCodePython]
+from oauth2client.service_account import ServiceAccountCredentials
+
+scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+creds = ServiceAccountCredentials.from_json_keyfile_name('Account.json', scope)
+client = gspread.authorize(creds)
+...
+DOKUMENT = client.create(dokument_name)
+LIST = DOKUMENT.add_worksheet(list_name, 1, 3)
+...
+for value in values:
+	LIST.append_row([value["DATETIME"], value["VAL1"], value["VAL2"]])
+\end{lstlisting}
 
 \section{Vizualizace dat}
-Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API~\cite{uvod_google_charts_api}. To~umožňuje interaktivní vykreslení a vyčítání uložených hodnot zachycených daným senzorem za vybraný časový úsek. Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
+Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API~\cite{uvod_google_charts_api}. To~umožňuje interaktivní vykreslení a vyčítání uložených hodnot zachycených daným senzorem za vybraný časový úsek.
 
 \colorbox[rgb]{0.2,0.8,0.2}{\textcolor[rgb]{1,0,0}{\textbf{tady jeste doplnim cca pulku az stranku o dane vizualizaci}}}
 
+\colorbox[rgb]{0.2,0.8,0.2}{\textcolor[rgb]{1,0,0}{\textbf{az nachytam nejaka data a vygeruji nejake kloudne grafy}}}
+
+
+ Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.

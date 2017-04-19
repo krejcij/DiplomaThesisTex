@@ -1,33 +1,35 @@
 \select@language {czech}
-\contentsline {table}{\numberline {1.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } pr\IeC {\r u}myslov\IeC {\'e}ho a spot\IeC {\v r}ebitelsk\IeC {\'e}ho IoT \cite {iot_svet_hardware_internet_veci, iot_pohanka_internet_veci}}}{15}{table.9}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } model\IeC {\r u} UniPi NEURON dle I/O \cite {UniPiBoard2}}}{38}{table.117}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Varianty model\IeC {\r u} UniPi NEURON dle CPU a RAM \cite {UniPiBoard2}}}{38}{table.118}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Popis standardu EN-13757~\cite {WmbusTables}}}{49}{table.149}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Re\IeC {\v z}imy p\IeC {\v r}enosu WM-Bus protokolu~\cite {WmbusTables}}}{51}{table.152}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky~\cite {FormatDatoveJednotky}}}{52}{table.154}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky protokolu Wireless M-Bus~\cite {FormatDatoveJednotky}}}{52}{table.155}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Zkr\IeC {\'a}cen\IeC {\'y} form\IeC {\'a}t datov\IeC {\'e} jednotky~\cite {FormatDatoveJednotky}}}{52}{table.156}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky po p\IeC {\v r}ijet\IeC {\'\i } modulem IQRF}}{53}{table.157}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Tabulka k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } 3 ze 6 \cite {WMencodeing}}}{55}{table.162}
-\contentsline {table}{\numberline {5.8}{\ignorespaces Identifikace typu za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}}{56}{table.168}
-\contentsline {table}{\numberline {5.9}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } CI-Pole}}{57}{table.170}
-\contentsline {table}{\numberline {5.10}{\ignorespaces Hodnoty Status pole}}{58}{table.176}
-\contentsline {table}{\numberline {5.11}{\ignorespaces Struktura dat aplika\IeC {\v c}n\IeC {\'\i } vrstvy}}{58}{table.177}
-\contentsline {table}{\numberline {5.12}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } DIF Pole}}{59}{table.180}
-\contentsline {table}{\numberline {5.13}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i }ho bitu DIF pole}}{59}{table.181}
-\contentsline {table}{\numberline {5.14}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } funk\IeC {\v c}n\IeC {\'\i }ho pole DIF pole}}{59}{table.182}
-\contentsline {table}{\numberline {5.15}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Data pole DIF pole}}{59}{table.183}
-\contentsline {table}{\numberline {5.16}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } DIFE Pole}}{60}{table.185}
-\contentsline {table}{\numberline {5.17}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } VIF Pole}}{60}{table.188}
-\contentsline {table}{\numberline {5.18}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i }ho bitu VIF pole}}{60}{table.189}
-\contentsline {table}{\numberline {5.19}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Data pole VIF pole}}{61}{table.190}
-\contentsline {table}{\numberline {5.20}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } VIFE Pole}}{61}{table.192}
-\contentsline {table}{\numberline {5.21}{\ignorespaces Form\IeC {\'a}t inicializa\IeC {\v c}n\IeC {\'\i }ho vektoru}}{63}{table.199}
-\contentsline {table}{\numberline {5.22}{\ignorespaces V\IeC {\'y}znam bit\IeC {\r u} pole ConfigurationWord}}{64}{table.202}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Weptech 868A~\cite {CidloWeptech}}}{68}{table.213}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Konfigurace intervalu zas\IeC {\'\i }l\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } DIP p\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e~\cite {CidloWeptech}}}{70}{table.215}
-\contentsline {table}{\numberline {6.3}{\ignorespaces P\IeC {\v r}ehled nastaven\IeC {\'\i } \IeC {\v c}idla \cite {CidloWeptech}}}{70}{table.216}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Telegram z modulu Bonega~\cite {CidloBonega}}}{72}{table.224}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Kamstrup Multical 402~\cite {CidloKamstrup}}}{75}{table.241}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } ZPA ZE.302~\cite {CidloZpa}}}{77}{table.246}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{82}{table.279}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } pr\IeC {\r u}myslov\IeC {\'e}ho a spot\IeC {\v r}ebitelsk\IeC {\'e}ho IoT \cite {iot_svet_hardware_internet_veci, iot_pohanka_internet_veci}}}{16}{table.10}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Porovn\IeC {\'a}n\IeC {\'\i } model\IeC {\r u} UniPi NEURON dle I/O \cite {UniPiBoard2}}}{39}{table.118}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Varianty model\IeC {\r u} UniPi NEURON dle CPU a RAM \cite {UniPiBoard2}}}{39}{table.119}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Popis standardu EN-13757~\cite {WmbusTables}}}{50}{table.168}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Re\IeC {\v z}imy p\IeC {\v r}enosu WM-Bus protokolu~\cite {WmbusTables}}}{52}{table.171}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky~\cite {FormatDatoveJednotky}}}{53}{table.181}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky protokolu Wireless M-Bus~\cite {FormatDatoveJednotky}}}{54}{table.182}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Zkr\IeC {\'a}cen\IeC {\'y} form\IeC {\'a}t datov\IeC {\'e} jednotky~\cite {FormatDatoveJednotky}}}{54}{table.183}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Form\IeC {\'a}t datov\IeC {\'e} jednotky po p\IeC {\v r}ijet\IeC {\'\i } modulem IQRF}}{54}{table.184}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Tabulka k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } 3 ze 6 \cite {WMencodeing}}}{56}{table.189}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Identifikace typu za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}}{57}{table.195}
+\contentsline {table}{\numberline {5.9}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } CI-Pole}}{58}{table.197}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Hodnoty Status pole}}{59}{table.203}
+\contentsline {table}{\numberline {5.11}{\ignorespaces Struktura dat aplika\IeC {\v c}n\IeC {\'\i } vrstvy}}{60}{table.204}
+\contentsline {table}{\numberline {5.12}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } DIF Pole}}{60}{table.207}
+\contentsline {table}{\numberline {5.13}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i }ho bitu DIF pole}}{60}{table.208}
+\contentsline {table}{\numberline {5.14}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } funk\IeC {\v c}n\IeC {\'\i }ho pole DIF pole}}{60}{table.209}
+\contentsline {table}{\numberline {5.15}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Data pole DIF pole}}{61}{table.210}
+\contentsline {table}{\numberline {5.16}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } DIFE Pole}}{61}{table.212}
+\contentsline {table}{\numberline {5.17}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } VIF Pole}}{61}{table.215}
+\contentsline {table}{\numberline {5.18}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i }ho bitu VIF pole}}{62}{table.216}
+\contentsline {table}{\numberline {5.19}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Data pole VIF pole}}{63}{table.217}
+\contentsline {table}{\numberline {5.20}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } VIFE Pole}}{63}{table.219}
+\contentsline {table}{\numberline {5.21}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } data ve form\IeC {\'a}tu G}}{64}{table.222}
+\contentsline {table}{\numberline {5.22}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } data a \IeC {\v c}asu ve form\IeC {\'a}tu F}}{64}{table.223}
+\contentsline {table}{\numberline {5.23}{\ignorespaces Form\IeC {\'a}t inicializa\IeC {\v c}n\IeC {\'\i }ho vektoru}}{66}{table.251}
+\contentsline {table}{\numberline {5.24}{\ignorespaces V\IeC {\'y}znam bit\IeC {\r u} pole ConfigurationWord}}{67}{table.254}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Weptech 868A~\cite {CidloWeptech}}}{71}{table.275}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Konfigurace intervalu zas\IeC {\'\i }l\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } DIP p\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e~\cite {CidloWeptech}}}{73}{table.277}
+\contentsline {table}{\numberline {6.3}{\ignorespaces P\IeC {\v r}ehled nastaven\IeC {\'\i } \IeC {\v c}idla \cite {CidloWeptech}}}{73}{table.278}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Telegram z modulu Bonega~\cite {CidloBonega}}}{75}{table.286}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Kamstrup Multical 402~\cite {CidloKamstrup}}}{78}{table.303}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } ZPA ZE.302~\cite {CidloZpa}}}{80}{table.308}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{85}{table.340}
