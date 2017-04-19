@@ -130,9 +130,9 @@
 \contentsline {subsection}{\numberline {7.9.4}De\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } dat}{85}{subsection.294}
 \contentsline {subsection}{\numberline {7.9.5}Parsov\IeC {\'a}n\IeC {\'\i } dat}{85}{subsection.298}
 \contentsline {subsection}{\numberline {7.9.6}Ulo\IeC {\v z}en\IeC {\'\i } dat}{86}{subsection.299}
-\contentsline {subsection}{\numberline {7.9.7}Vizualizace dat}{86}{subsection.300}
-\contentsline {subsection}{\numberline {7.9.8}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } v\IeC {\'y}jimek}{86}{subsection.301}
-\contentsline {subsection}{\numberline {7.9.9}Export dat}{87}{subsection.302}
+\contentsline {subsection}{\numberline {7.9.7}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } v\IeC {\'y}jimek}{86}{subsection.300}
+\contentsline {section}{\numberline {7.10}Export dat}{86}{section.301}
+\contentsline {section}{\numberline {7.11}Vizualizace dat}{87}{section.302}
 \contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{88}{chapter.303}
 \contentsline {chapter}{Literatura}{89}{section*.305}
 \contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{94}{section*.307}
@@ -140,5 +140,5 @@
 \contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{99}{chapter.310}
 \contentsline {chapter}{\numberline {B}V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat }{100}{chapter.311}
 \contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{101}{chapter.312}
-\contentsline {chapter}{\numberline {D}Uk\IeC {\'a}zka vizualizace dat }{102}{chapter.338}
-\contentsline {chapter}{\numberline {E}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{105}{chapter.342}
+\contentsline {chapter}{\numberline {D}Uk\IeC {\'a}zka vizualizace dat }{102}{chapter.340}
+\contentsline {chapter}{\numberline {E}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{106}{chapter.345}

@@ -294,14 +294,15 @@ Pokud parsování dat selže, dojde k výjimce, daný telegram je zaevidován, v
 \subsection{Uložení dat}
 Správně interpretované hodnoty doplněné o časovou značku a informaci o měřícím zařízení jsou zapsány do databáze. Do této databáze se ukládají všechny příchozí validně zpracované telegramy, určené k pozdějšímu zpracování. Obohacení o časovou značku a údaje o zařízení je možné později tyto data efektivně třídit či v nich vyhledávat.
 
-\subsection{Vizualizace dat}
-Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API~\cite{uvod_google_charts_api}. To~umožňuje interaktivní vykreslení a vyčítání uložených hodnot zachycených daným senzorem za vybraný časový úsek. Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
-
 \subsection{Ošetření výjimek}
 Aplikace má ošetřeny dva chybové stavy. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a~následně přejde do stavu čekání na příchod dalšího telegramu.
 Všechny tyto chyby jsou ukládány do příslušné tabulky v databázi, do chybového logu a taktéž sdělovány uživateli do konzole.
 
-\subsection{Export dat}
+\section{Export dat}
 V případě potřeby je vizualizační aplikace schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k~časové náročnosti při daném počtu naměřených hodnot je tato funkcionalita implementována spíše jako experimentální a v praxi se projevila jako nedostačující.
 
+\section{Vizualizace dat}
+Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API~\cite{uvod_google_charts_api}. To~umožňuje interaktivní vykreslení a vyčítání uložených hodnot zachycených daným senzorem za vybraný časový úsek. Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
+
+\colorbox[rgb]{0.2,0.8,0.2}{\textcolor[rgb]{1,0,0}{\textbf{tady jeste doplnim cca pulku az stranku o dane vizualizaci}}}
 
