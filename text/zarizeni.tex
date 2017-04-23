@@ -26,9 +26,9 @@ Pro základní komunikaci bylo zvoleno čidlo teploty a vlhkosti Weptech OMST-86
 \begin{figure*}[!ht]
 \vspace{-5pt}
     \centering
-			\subfigure[Zapouzdřené čidlo]{\includegraphics[width=0.45\textwidth]{obrazky/zarizeni_weptech1}\label{zarizeni_weptech1}}
+			\subfigure[Zapouzdřené čidlo]{\includegraphics[width=0.32\textwidth]{obrazky/zarizeni_weptech1}\label{zarizeni_weptech1}}
 			\hspace*{5mm}
-			\subfigure[Deska čidla]{\includegraphics[width=0.45\textwidth]{obrazky/zarizeni_weptech2}\label{zarizeni_weptech2}}
+			\subfigure[Deska čidla]{\includegraphics[width=0.32\textwidth]{obrazky/zarizeni_weptech2}\label{zarizeni_weptech2}}
 		\caption{Čidlo Weptech OMST-868A~\cite{CidloWeptech}}
 		\vspace{-25pt}
 \end{figure*}
@@ -56,7 +56,8 @@ Telegram má specifickou základní strukturu popsanou v Tab.~\ref{TabulkaTelegr
 \centering
 \caption{Telegram ze zařízení Weptech 868A~\cite{CidloWeptech}}
 \label{TabulkaTelegramWeptech}
-\resizebox{\textwidth}{!}{%
+%\resizebox{\textwidth}{!}{%
+\resizebox{.42\paperheight}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
@@ -93,7 +94,6 @@ DR3                & VIFE1: Norma 																	& 1Dh              \\ \hline
 DR3                & Příznak sabotáže                               & 00h              \\ \hline
 DR3                & Příznak vybité baterie                         & 00h              \\ \hline
 Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline \hline
-
 \end{tabular}}
 \end{table}
 
@@ -116,7 +116,6 @@ Některé z položek je potřeba blíže vysvětlit:
 Čidlo má k dispozici několik nastavení. Některé z nich lze nastavit pomocí čtyř přepínačů DIP (Dual Inline Package) na desce plošných spojů.
 První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná mezí módem vysílání S (poloha ON) a módem T (poloha OFF), třetí a čtvrtý přpínač určují interval zasílání telegramu, jejich nastavení shrnuje Tab.~\ref{TablukaDIP}.
 
-\newpage{}
 
 \begin{table}[!ht]
 \centering
@@ -197,7 +196,8 @@ Telegram má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegr
 \begin{table}[!ht]
 \centering
 \caption{Telegram z modulu Bonega~\cite{CidloBonega}}
-\resizebox{\textwidth}{!}{%
+%\resizebox{\textwidth}{!}{%
+\resizebox{.43\paperheight}{!}{%
 \label{TabulkaTelegram2}
 \begin{tabular}{|c|l|c|}
 \hline
@@ -371,7 +371,7 @@ ZPA ZE310 je třífázový elektronický dvoutarifní elektroměr pro měření 
 
 	 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[scale=0.35]{obrazky/zarizeni_zpa}
+    \includegraphics[scale=0.30]{obrazky/zarizeni_zpa}
   \end{center}
 	\vspace{-20pt}
   \caption{ZPA ZE.310~\cite{CidloZpa}}

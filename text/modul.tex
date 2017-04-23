@@ -86,44 +86,24 @@ S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož 
 Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i k samotné komunikaci s modulem. Každý příkaz začíná znakem \texttt{\textgreater}. Každá zpráva odpověďi začíná znakem \texttt{\textless}. Každému příkazu musí předcházet budící znak \texttt{NULL (0x00)} následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem \texttt{CR (0x0D)}. 
 
 \newpage
-Obecná struktura~\cite{ModulIQRF}~paketu příkazu je 
+Obecná struktura~\cite{ModulIQRF}~paketu příkazu je	\texttt{>[CC][RW][DATA][CR],} kde CC je jednobajtový kód daného příkazu, RW je jednobajtový příznak zápisu (\textbf{:}) či čtení dat (\textbf{?}) dat, DATA jsou zapisovaná data, pokud se jedná o zápis a CR je znak ukončení.
 
-\begin{figure}[!ht]
-\begin{centerverbatim}
-			>[CC][RW][DATA][CR]
-\end{centerverbatim}
-\end{figure}
-
-kde CC je jednobajtový kód daného příkazu, RW je jednobajtový příznak zápisu (\textbf{:}) či čtení dat (\textbf{?}) dat, DATA jsou zapisovaná data, pokud se jedná o zápis a CR je znak ukončení.
-
-Obecná skruktura odpovědi je následující
-
-\begin{figure}[!ht]
-\begin{centerverbatim}
-	<[DATA][CR]
-\end{centerverbatim}
-\end{figure}
-
-kde DATA obsahuje přenášená data či návratové kódy (OK pro správné dokončení příkazu, ERR1 pro chybu syntaxe a ERR2 pro neplatnou vstupní hodnotu). Některé bajty jsou kódovány v šestnáckové soustavě či využívají uložení BigEndian.
+Obecná skruktura odpovědi je \texttt{<[DATA][CR]}, kde DATA obsahuje přenášená data či návratové kódy (OK pro správné dokončení příkazu, ERR1 pro chybu syntaxe a ERR2 pro neplatnou vstupní hodnotu). Některé bajty jsou kódovány v šestnáckové soustavě či využívají uložení BigEndian.
 
 Například dotaz a odpověd pro aktuální AES klíč je:
 \label{KapitolaStazeniKlice}
 
-\begin{figure}[!ht]
-\begin{centerverbatim}
-	>03?[CR]
-	<010203040506070809a0b0c0d0e0f[CR]  
-\end{centerverbatim}
-\end{figure}
+\begin{lstlisting}[style=MyCodeBash]
+				>03?[CR]
+				<010203040506070809a0b0c0d0e0f[CR]  
+\end{lstlisting}
 
 a pro případnou změnu AES klíče:
 
-\begin{figure}[!ht]
-\begin{centerverbatim}
->03:112233445566778899aabbccddeeff[CR]
->OK[CR]
-\end{centerverbatim}
-\end{figure}
+\begin{lstlisting}[style=MyCodeBash]
+				>03:112233445566778899aabbccddeeff[CR]
+				>OK[CR]
+\end{lstlisting}
 
 Ukázku jednoduché komunikace s modulem v jazyce Python obsahuje~Kód~\ref{CodeSerial}.
 

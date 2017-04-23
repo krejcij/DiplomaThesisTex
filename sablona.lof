@@ -31,61 +31,60 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RaspberryPi 2}}}{26}{figure.74}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RaspberryPi 3}}}{26}{figure.74}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {RaspberryPi Zero}}}{26}{figure.74}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces BananaPi BPI-M2 a OrangePi Plus2}}{27}{figure.79}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BananaPi BPI-M2}}}{27}{figure.79}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {OrangePi Plus2}}}{27}{figure.79}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces BananaPi BPI-M2 a OrangePi Plus2}}{28}{figure.80}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BananaPi BPI-M2}}}{28}{figure.80}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {OrangePi Plus2}}}{28}{figure.80}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces CubieBoard1 a UpBoard1}}{29}{figure.85}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CubieBoard1}}}{29}{figure.85}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {UpBoard1}}}{29}{figure.85}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces PINE A64+ 2GB a HardKernel Odroid-C2}}{31}{figure.90}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PINE A64+ 2GB}}}{31}{figure.90}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HardKernel Odroid-C2}}}{31}{figure.90}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces PINE A64+ 2GB a HardKernel Odroid-C2}}{30}{figure.89}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PINE A64+ 2GB}}}{30}{figure.89}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {HardKernel Odroid-C2}}}{30}{figure.89}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces BeagleBone Black~\cite {BeagleBone}}}{31}{figure.92}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Intel Galileo~\cite {IntelGalileo}}}{32}{figure.95}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Intel Edison zasazen\IeC {\'y} na boardech}}{33}{figure.99}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arduino board pro Intel Edison}}}{33}{figure.99}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Intel breakout board}}}{33}{figure.99}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces AMD Gizmo}}{34}{figure.103}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gizmo Board 1}}}{34}{figure.103}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gizmo Board 2}}}{34}{figure.103}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Popis UniPi v1 \cite {UniPiBoard1}}}{36}{figure.108}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v1}}{37}{figure.110}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces UniPi roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i } deska}}{38}{figure.112}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Unipi Neuron~\cite {UniPiBoard2}}}{39}{figure.117}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {S103}}}{39}{figure.117}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {M203}}}{39}{figure.117}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {L303}}}{39}{figure.117}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Detaily UNiPi desky}}{40}{figure.122}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Propojen\IeC {\'\i } desek}}}{40}{figure.122}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {UniPi deska osazen\IeC {\'a} WM-Bus modulem}}}{40}{figure.122}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Detaily vnit\IeC {\v r}n\IeC {\'\i }ho uspo\IeC {\v r}\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } UniPi Neuronu S103}}{40}{figure.125}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ulo\IeC {\v z}en\IeC {\'\i } v krabi\IeC {\v c}ce}}}{40}{figure.125}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {P\IeC {\v r}ipojen\IeC {\'\i } diodov\IeC {\'e}ho panelu}}}{40}{figure.125}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v2}}{41}{figure.126}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces UART r\IeC {\'a}mec}}{42}{figure.130}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru}}{45}{figure.136}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72DA-WMB \cite {ModulIQRF}}}{46}{figure.140}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma modulu TR-72D-WMB \cite {ModulIQRF}}}{47}{figure.141}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces P\IeC {\v r}ehled typu modulu dle ant\IeC {\'e}ny \cite {ModulIQRF}}}{47}{figure.145}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {TR-72D-WMB}}}{47}{figure.145}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {TR-72DC-WMB}}}{47}{figure.145}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {TR-72DA-WMB}}}{47}{figure.145}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {ModulIQRF}}}{48}{figure.147}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester}}{55}{figure.188}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip algoritmu AES v m\IeC {\'o}du CBC}}{65}{figure.244}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Obecn\IeC {\'e} sch\IeC {\'e}ma de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES-128 CBC}}{68}{figure.256}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{69}{figure.272}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{69}{figure.272}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deska \IeC {\v c}idla}}}{69}{figure.272}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Sada Bonega~\cite {CidloBonega}}}{74}{figure.283}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vodom\IeC {\v e}r studen\IeC {\'e} vody}}}{74}{figure.283}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezdr\IeC {\'a}tov\IeC {\'y} modul}}}{74}{figure.283}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vodom\IeC {\v e}r tepl\IeC {\'e} vody}}}{74}{figure.283}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{76}{figure.288}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{79}{figure.305}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Model zvolen\IeC {\'e} SqLite 3 datab\IeC {\'a}ze}}{86}{figure.345}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{88}{figure.352}
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech}}{106}{figure.443}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idly Bonega}}{107}{figure.444}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } elektrom\IeC {\v e}rem ZPA}}{108}{figure.445}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } m\IeC {\v e}\IeC {\v r}i\IeC {\v c}em Kamstrup}}{109}{figure.446}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Arduino board pro Intel Edison}}{33}{figure.97}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Intel breakout board}}{33}{figure.98}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces AMD Gizmo}}{34}{figure.102}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gizmo Board 1}}}{34}{figure.102}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gizmo Board 2}}}{34}{figure.102}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces UniPi v1 \cite {UniPiBoard1}}}{36}{figure.107}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v1}}{37}{figure.109}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces UniPi roz\IeC {\v s}i\IeC {\v r}uj\IeC {\'\i }c\IeC {\'\i } deska}}{38}{figure.111}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Unipi Neuron~\cite {UniPiBoard2}}}{39}{figure.116}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {S103}}}{39}{figure.116}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {M203}}}{39}{figure.116}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {L303}}}{39}{figure.116}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Detaily UNiPi desky}}{40}{figure.121}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Propojen\IeC {\'\i } desek}}}{40}{figure.121}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {UniPi deska osazen\IeC {\'a} WM-Bus modulem}}}{40}{figure.121}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Detaily vnit\IeC {\v r}n\IeC {\'\i }ho uspo\IeC {\v r}\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } UniPi Neuronu S103}}{40}{figure.124}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ulo\IeC {\v z}en\IeC {\'\i } v krabi\IeC {\v c}ce}}}{40}{figure.124}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {P\IeC {\v r}ipojen\IeC {\'\i } diodov\IeC {\'e}ho panelu}}}{40}{figure.124}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma UniPi v2}}{41}{figure.125}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces UART r\IeC {\'a}mec}}{42}{figure.129}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Zp\IeC {\v e}tn\IeC {\'a} kompatibilita GPIO konektoru}}{45}{figure.135}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Modul IQRF TR-72DA-WMB \cite {ModulIQRF}}}{46}{figure.139}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Blokov\IeC {\'e} sch\IeC {\'e}ma modulu TR-72D-WMB \cite {ModulIQRF}}}{47}{figure.140}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces P\IeC {\v r}ehled typu modulu dle ant\IeC {\'e}ny \cite {ModulIQRF}}}{47}{figure.144}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {TR-72D-WMB}}}{47}{figure.144}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {TR-72DC-WMB}}}{47}{figure.144}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {TR-72DA-WMB}}}{47}{figure.144}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {ModulIQRF}}}{48}{figure.146}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester}}{55}{figure.193}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip algoritmu AES v m\IeC {\'o}du CBC}}{65}{figure.249}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Obecn\IeC {\'e} sch\IeC {\'e}ma de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES-128 CBC}}{68}{figure.261}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{69}{figure.277}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{69}{figure.277}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deska \IeC {\v c}idla}}}{69}{figure.277}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Sada Bonega~\cite {CidloBonega}}}{72}{figure.288}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vodom\IeC {\v e}r studen\IeC {\'e} vody}}}{72}{figure.288}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezdr\IeC {\'a}tov\IeC {\'y} modul}}}{72}{figure.288}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vodom\IeC {\v e}r tepl\IeC {\'e} vody}}}{72}{figure.288}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{74}{figure.293}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{77}{figure.310}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Model zvolen\IeC {\'e} SqLite 3 datab\IeC {\'a}ze}}{84}{figure.359}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{86}{figure.366}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech}}{104}{figure.457}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idly Bonega}}{105}{figure.458}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } elektrom\IeC {\v e}rem ZPA}}{106}{figure.459}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } m\IeC {\v e}\IeC {\v r}i\IeC {\v c}em Kamstrup}}{107}{figure.460}

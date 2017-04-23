@@ -113,14 +113,10 @@ Je nutné doinstalovat nezbytné balíčky:
 
 Jednoduchým spuštěním komunikačního modulu v módu skeneru byl zachycen telegram
 
-\vspace{-10pt}
-\begin{figure}[!ht]
-\begin{centerverbatim}
-	32002E44B05C10000000021B7A620800002F2F0A6699010AFB1
-	A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
-\end{centerverbatim}
-\end{figure}
-\vspace{-5pt}
+\begin{lstlisting}[style=MyCodePHP]
+			32002E44B05C10000000021B7A620800002F2F0A6699010AFB1
+			A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
+\end{lstlisting}
 
 který byl pomocí datasheetu použitého komunikačního modulu~\cite{ModulIQRF} a~čidla~\cite{CidloWeptech} analyzován, a přehledně zobrazen do Tab. \ref{PacketTableAnalysis}.
 
@@ -128,13 +124,10 @@ který byl pomocí datasheetu použitého komunikačního modulu~\cite{ModulIQRF
 
 V okamžiku, kdy bylo zařízení přepnuto do šifrovaného módu dle Tab.~\ref{TablukaSETUP}, byl zachycen šifrovaný telegram
 
-\begin{figure}[!ht]
-\begin{centerverbatim}
-	32002e44b05c10000000021b7ac40820053ed44a38a9c3c86f5
-	8210f9b979353c39dc1d5e0c873eb81994d28c099ef1d55b008
-\end{centerverbatim}
-\end{figure}
-\vspace{-5pt}
+\begin{lstlisting}[style=MyCodePHP]
+			32002e44b05c10000000021b7ac40820053ed44a38a9c3c86f5
+			8210f9b979353c39dc1d5e0c873eb81994d28c099ef1d55b008
+\end{lstlisting}
 
 který byl pomocí datasheetů použitého komunikačního modulu \cite{ModulIQRF} a normy~\cite{Norma1,NormaFIPS} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
 \begin{itemize}
@@ -145,12 +138,10 @@ který byl pomocí datasheetů použitého komunikačního modulu \cite{ModulIQR
 
 Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována dle Kap.~\ref{KapitolaDesifrovani} a byl získán dešifrovaný telegram:
 
-\begin{figure}[!ht]
-\begin{centerverbatim}
-	32002e44b05c10000000021b7ac40820052F2F0A6699010AFB1
-	A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
-\end{centerverbatim}
-\end{figure}
+\begin{lstlisting}[style=MyCodePHP]
+			32002e44b05c10000000021b7ac40820052F2F0A6699010AFB1
+			A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
+\end{lstlisting}
 
 který je až na číslo přístupu a CRC shodný s předchozím nešifrovaným telegramem. Nyní tedy lze dešifrovaná data vyparsovat jako při nešifrovaném přenosu popsaném v předchozí kapitole.
 
@@ -348,8 +339,6 @@ Všechny tyto chyby jsou ukládány do příslušné tabulky v databázi, do chy
 
 \section{Export dat}
 V případě potřeby je vizualizační aplikace (viz~Kód~\ref{CodeExport}) schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k~časové náročnosti (dáno odezvou Google~Charts~API~\cite{uvod_google_charts_api}) při daném počtu naměřených hodnot (pro čidlo vysílající každou minutu je za den nasbíráno 1440 hodnot, jejichž export zabere cca 3 hodiny) je tato funkcionalita implementována spíše jako experimentální pro jednorázové exporty. V praxi se při automatických exportech velkých objemů naměřených hodnot projevila jako náročná na výpočetní čas.
-
-\newpage{}
 
 \begin{lstlisting}[caption={Ukázka exportu dat},captionpos=b,label=CodeExport,style=MyCodePython]
 from oauth2client.service_account import ServiceAccountCredentials
