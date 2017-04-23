@@ -1,4 +1,5 @@
 \chapter{Wireless M-Bus zařízení}
+\label{ChapterZarizeni}
 
 Pro účely testování komunikace bylo využito několik typů dostupných zařízení:
 \begin{itemize}
@@ -112,7 +113,7 @@ Některé z položek je potřeba blíže vysvětlit:
 
 
 \subsubsection{Nastavení čidla}
-Čidlo má k dispozici několik nastavení. Některé z nich lze nastavit pomocí čtyř přepínačů DIP na desce plošných spojů.
+Čidlo má k dispozici několik nastavení. Některé z nich lze nastavit pomocí čtyř přepínačů DIP (Dual Inline Package) na desce plošných spojů.
 První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná mezí módem vysílání S (poloha ON) a módem T (poloha OFF), třetí a čtvrtý přpínač určují interval zasílání telegramu, jejich nastavení shrnuje Tab.~\ref{TablukaDIP}.
 
 \newpage{}
@@ -284,14 +285,14 @@ Některé z položek je potřeba blíže vysvětlit:
 Měřič pracuje v režimech T1 a C1  povinným šifrováním přenášených dat pomocí AES128 v módu CBC. Při každém přenosu poskytuje 9 aktuálních hodnot a~2~souhrnné hodnoty za poslední rok:
 
 \begin{itemize}
-	\item Tepelná energie (přívodní nebo vratné potrubí)
-	\item Enegie chladu (přívodní nebo vratné potrubí)
-	\item Energie vratného potrubí
-	\item Energie přívodního potrubí
-	\item Měření průtoku
-	\item Měření výkonu
-	\item Minimální a maximální průtok a výkon
-	\item Měření teploty
+	\item Tepelná energie (přívodní nebo vratné potrubí).
+	\item Enegie chladu (přívodní nebo vratné potrubí).
+	\item Energie vratného potrubí.
+	\item Energie přívodního potrubí.
+	\item Měření průtoku.
+	\item Měření výkonu.
+	\item Minimální a maximální průtok a výkon.
+	\item Měření teploty.
 \end{itemize}
 
 \vspace{+10pt}	
@@ -302,18 +303,18 @@ Souhrné hodnoty jsou ve výchozím stavu zasílány jako roční přehled, ale 
 Telegram je ve výchozím stavu vysílán každých 15 minut pro aktuální hodnoty a~má~specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegramKamstrup}~\cite{CidloKamstrup}, kde sekce DR1 až~DR12 postupně odpovídají měřeným hodnotám:
 
 	\begin{enumerate}
-		\item Tepelná energie (přívodní nebo vratné potrubí
-		\item Enegie chladu (přívodní nebo vratné potrubí))
-		\item Energie vratného potrubí
-		\item Energie přívodního potrubí
-		\item Průtok
-		\item Výkon
-		\item Teplota
-		\item Minimální průtok a výkon
-		\item Minimální výkon
-		\item Maximální průtok
-		\item Maximální výkon
-		\item Čas provedení odečtu
+		\item Tepelná energie (přívodní nebo vratné potrubí).
+		\item Enegie chladu (přívodní nebo vratné potrubí).
+		\item Energie vratného potrubí.
+		\item Energie přívodního potrubí.
+		\item Průtok.
+		\item Výkon.
+		\item Teplota.
+		\item Minimální průtok a výkon.
+		\item Minimální výkon.
+		\item Maximální průtok.
+		\item Maximální výkon.
+		\item Čas provedení odečtu.
 	\end{enumerate}
 
 \begin{table}[!ht]
@@ -380,11 +381,11 @@ ZPA ZE310 je třífázový elektronický dvoutarifní elektroměr pro měření 
 
 \subsubsection{Parametry zařízení}
 \begin{itemize}
-	\item Počet měřených fází: 3 (daný subtyp)
-	\item Počet tarifů: 2 (daný subtyp)
-	\item Režim krytí: IP54
+	\item Počet měřených fází: 3 (daný subtyp).
+	\item Počet tarifů: 2 (daný subtyp).
+	\item Režim krytí: IP54.
 	\item Mód přenosu: T1.
-	\item Interval přenosu: 1\,minuta 
+	\item Interval přenosu: 1\,minuta.
 \end{itemize}
 
 \subsubsection{Formát telegramu}

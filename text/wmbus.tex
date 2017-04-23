@@ -1,5 +1,6 @@
 \chapter{Wireless M-Bus protokol}
-Wireless M-Bus je v Evropě perspektivní otevřený standard pro automatické měření, který pracuje v subgi-gaherzovém bezlicenčním pásmu v okolí 868 MHz. Wireless M-Bus se primárně zaměřuje na použití v SRD (Short Range Device) zařízeních pro bezdrátovou komunikaci s měřiči energií, jako jsou: voda, plyn, teplo, elektřina, atd. Měřiče energií, vybavené bezdrátovým rozhraním Wireless M-Bus jsou schopny komunikovat jak se stacionárními, tak i s mobilními čtecími zařízeními. Předpokládá se, že rádiová část měřiče je napájena z baterie a je schopna provozu po dlouhou dobu bez zásahu, tj. bez výměny baterie. Na čtecích zařízeních, ať už stacionárních nebo mobilních, není takový požadavek na dobu provozu na baterie a čtecí zařízení mohou být napájena i z externího zdroje.
+\label{ChapterWMBus}
+Wireless M-Bus je v Evropě perspektivní otevřený standard pro automatické měření, který pracuje v sub-gigahertzovém bezlicenčním pásmu v okolí 868 MHz. Wireless M-Bus se primárně zaměřuje na použití v SRD (Short Range Device) zařízeních pro bezdrátovou komunikaci s měřiči energií, jako jsou: voda, plyn, teplo, elektřina, atd. Měřiče energií, vybavené bezdrátovým rozhraním Wireless M-Bus jsou schopny komunikovat jak se stacionárními, tak i s mobilními čtecími zařízeními. Předpokládá se, že rádiová část měřiče je napájena z baterie a je schopna provozu po dobu 10-15 let bez výměny baterie. Na čtecích zařízeních, ať už stacionárních nebo mobilních, není takový požadavek na dobu provozu na baterie a čtecí zařízení mohou být napájena i z externího zdroje.
 
 Wireless M-Bus má svůj původ v rámci norem Meter-Bus. Wireless Meter Bus je~bezdrátovou variantou drátového Meter-Bus. To je standard zaměřený na aplikace pro sběr dat měřiče plynu, elektřiny a vody. Sběrnice je specifikována v evropské normě EN 13757~\cite{Norma1}. Tato specifikace je rozdělena do pěti částí (viz Tab.~\ref{TableNorma}), z~nichž jedna se zaměřuje na Wireless M-Bus.
 
@@ -12,9 +13,9 @@ Wireless M-Bus má svůj původ v rámci norem Meter-Bus. Wireless Meter Bus je~
 \hline
 {\textbf{Standard}} & \multicolumn{1}{c|}{\textbf{Podrobnosti}} \\ \hline \hline
 EN 13757-1 & \begin{tabular}[c]{@{}l@{}}Část 1 standardu definuje výměnu dat, která podrobně popisuje základní \\ komunikaci mezi vodoměry a centrálním sběračem dat. Poskytuje přehled \\ komunikačního systému.\end{tabular}\\ \hline
-EN 13757-2 & \begin{tabular}[c]{@{}l@{}}Tato část normy Meter Bus řeší fyzickou a spojovou vrstvu pro fyzický přenos \\ dat pomocí kabelových spojů. Také popisuje protokol používaný pro přenos dat\end{tabular} \\ \hline
+EN 13757-2 & \begin{tabular}[c]{@{}l@{}}Tato část normy Meter Bus řeší fyzickou a spojovou vrstvu pro fyzický přenos \\ dat pomocí kabelových spojů. Také popisuje protokol používaný pro přenos dat.\end{tabular} \\ \hline
 EN 13757-3 & \begin{tabular}[c]{@{}l@{}}Část 3  se týká speciální aplikační vrstvy. Ta popisuje standardní aplikační\\  protokol používaný k tomu, aby se zachovala kompatibilita výrobců, což \\ umožňuje zařízení od několika různých dodavatelů působit v jednom systému.\end{tabular} \\ \hline
-EN 13757-4 & \begin{tabular}[c]{@{}l@{}}Oddíl 4 popisuje bezdrátový systém. Jedná se o radiový odečet pro provoz v pásmu \\ 868 MHz až 870 MHz . Tato část normy se zabývá fyzickou a linkovou vrstvou pro\\  bezdrátová zařízení.\end{tabular} \\ \hline
+EN 13757-4 & \begin{tabular}[c]{@{}l@{}}Oddíl 4 popisuje bezdrátový systém. Jedná se o radiový odečet pro provoz v pásmu \\ 868\,MHz až 870\,MHz. Tato část normy se zabývá fyzickou a linkovou vrstvou pro\\  bezdrátová zařízení.\end{tabular} \\ \hline
 EN 13757-5 & \begin{tabular}[c]{@{}l@{}}Tato část definuje adresy předávání. To zahrnuje celou řadu návrhů na předávání \\ datových rámců jako prostředek komunikace mezi měřičem a koncentrátorem.\end{tabular} \\ \hline \hline
 \end{tabular}}
 \vspace{-10pt}
@@ -27,7 +28,7 @@ EN 13757-5 & \begin{tabular}[c]{@{}l@{}}Tato část definuje adresy předáván�
 
 \section{Princip komunikace}
 
-Bezdrátová komunikace Wireless M-Bus fyzicky probíhá ve 12 kanálech v bezplatném vysílacím pásmu ISM (industrial, scientific and medical) okolo frekvence 868\,MHz (2~kanály\,868,3 a 868,95\,MHz jsou využívány režimem S a T, 10 uživatelem volitelných kanálů 868.03 + n x 0.06\,MHz v režimu R2), přičemž každý z výše uvedených režimů vyžaduje různé požadavky. Těmi například jsou specifikovaný kanál, přesnost frekvence, toleranci přenosové rychlosti atd. Velmi dobrá je stabilita frekvence až 27 let (dle údaje výrobce). V případě použití čtvrtvlné antény (délky 8,2 cm), tak na přímou viditelnost vysílací a přijímacího modulu je komunikační dosah 500 až 600\,m.
+Bezdrátová komunikace Wireless M-Bus fyzicky probíhá ve 12 kanálech v bezlicenčním vysílacím pásmu ISM (industrial, scientific and medical) okolo frekvence 868\,MHz (2~kanály\,868,3 a 868,95\,MHz jsou využívány režimem S a T, 10 uživatelem volitelných kanálů 868,03 + n x 0,06\,MHz v režimu R2), přičemž každý z výše uvedených režimů vyžaduje různé požadavky. Těmi například jsou specifikovaný kanál, přesnost frekvence, toleranci přenosové rychlosti atd. Velmi dobrá je stabilita frekvence až 27 let (dle údaje výrobce). V případě použití čtvrtvlné antény (délky 8,2 cm), tak na přímou viditelnost vysílacího a přijímacího modulu je komunikační dosah 500 až 600\,m.
 
 Komunikace má hvězdicovitou strukturu, kdy několik měřících jednotek/snímačů přenáší svá naměřená data jedné centrální jednotce, obvykle tvořené koncentrátorem. Ten tedy obvykle slouží pro příjem a shromaždování dat z několika měřících míst, z dále uvedených důvodů nikdy neinicializuje (nezahajuje) vzájemnou komunikaci. Pracuje tedy jako server (Master), tzn. že stále naslouchá a čeká na navázání komunikace měřící jednotkou a jí inicializovaný přenos dat. Ta tedy pracuje jako klient (Slave). V případě nastavené obousměrné komunikace přechází měřič/snímač do přijímacího režimu pouze po krátký čas jím navázané komunikace. Pouze v tomto momentu může koncentrátor vyslat nějaké jednotce řídící data. Časování je rozdílné pro různé režimy a je přesně specifikováno ve standardu.
 
@@ -39,7 +40,7 @@ Adresování ve Wireless M-Bus sběrnici je převzato z klasické drátové verz
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
 
 \section{Režimy přenosu}
-Nejdůležitější vlastností technologie WM-Bus je možnost bateriového napájení měřicích zařízení. V případě bezdrátové komunikace je výhodné například měřiče tepla nebo vodoměry napájet jen bateriově a tím eliminovat jakoukoliv nutnost pokládání kabelů. To ale znamená velmi omezenou spotřebu elektrické energie, aby baterie vydržely co nejdéle, alespoň několik let. V současné době v případě napájení modulu lze dosáhnout životnost na jednu baterii až 12~let~\cite{CidloBonega,CidloWeptech}. Aby to však bylo možné, řízení přenosu dat musí co nejčastěji přecházet do nízkopříkonového stavu (sleep mode) a vysílat data jen v nutných případech v co nejkratších časových slotech. Proto také centrální zařízení (koncentrátor), který obvykle slouží pro příjem a shromaždování dat z několika měřících míst, nikdy nesmí inicializovat vzájemnou komunikaci.
+Nejdůležitější vlastností technologie WM-Bus je možnost bateriového napájení měřicích zařízení. V případě bezdrátové komunikace je výhodné například měřiče tepla nebo vodoměry napájet jen bateriově a tím eliminovat jakoukoliv nutnost pokládání kabelů. To ale znamená velmi omezenou spotřebu elektrické energie, aby baterie vydržely co nejdéle, alespoň několik let. V současné době v případě napájení modulu lze dosáhnout životnost na jednu baterii až 12~let~\cite{CidloWeptech,CidloBonega}. Aby to však bylo možné, řízení přenosu dat musí co nejčastěji přecházet do nízkopříkonového stavu (sleep mode) a vysílat data jen v nutných případech v co nejkratších časových slotech. Proto také centrální zařízení (koncentrátor), který obvykle slouží pro příjem a shromaždování dat z několika měřících míst, nikdy nesmí inicializovat vzájemnou komunikaci.
 
 Protokol podporuje několik režimů přenosu, lišících se dle požadavků na konkretní aplikaci. Je definováno několik režimů označených jako S, T a R představující 3 různé různé přenosové rychlosti, které se dále dělí na režim 1 a 2, což značí jednosměrný či obousměrný přenos dat. U některých zařízení mohou být doplněny o~režimy N, C a F. Tyto režimy jsou shrnuty v Tab.~\ref{TableRezimy}.
 
@@ -51,9 +52,9 @@ Protokol podporuje několik režimů přenosu, lišících se dle požadavků na
 \begin{tabular}{|c|l|l|l|l|l|}
 \hline
 \textbf{Mód} & \multicolumn{1}{c|}{\textbf{Mód přenosu}} & \multicolumn{1}{c|}{\textbf{Směr}} & \multicolumn{1}{c|}{\textbf{Frekvence}} & \multicolumn{1}{c|}{\textbf{Kódování}} & \multicolumn{1}{c|}{\textbf{Rychlost}} \\ \hline \hline
-S & Stacionární & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & Manchester & 32768\,kbps \\ \hline
+S & Stacionární & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & Manchester & 32,768\,kbps \\ \hline
 T & Častý vysílací & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & \begin{tabular}[c]{@{}l@{}}Manchester \\  a 3 z 6\end{tabular} & 100\,kbps \\ \hline
-R & Častý přijímací & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & Manchester & 4.8\,kbps \\ \hline
+R & Častý přijímací & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & Manchester & 4,8\,kbps \\ \hline
 N & Úzkopásmový & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 169\,MHz & NRZ &  \\ \hline
 C & Kompaktní & \begin{tabular}[c]{@{}l@{}}Jednosměrný,\\ i obousměrný\end{tabular} & 868\,MHz & Manchester & 50\,kbps \\ \hline
 F & \begin{tabular}[c]{@{}l@{}}Častý vysílací \\ i přijímací mód\end{tabular} & Obousměrný & 433\,MHz & NRZ &  \\ \hline \hline
@@ -64,7 +65,7 @@ Mód S je určen pro jednosměrnou nebo obousměrnou komunikaci mezi pevnými ne
 Submód S1-m je~modifikací submódu S1 pro komunikaci mezi čidlem a koncentrátorem, zasílaný rámec obsahuje zkrácenou hlavičku.
 Submód S2M podporuje oboustranou komunikaci v~kontinuálních cyklech bez nutnosti probouzet zařízení.
 
-V	módu T měřič samostatně odesílá data, buď periodicky nebo aperiodicky (když jsou k dispozici). Pro přenos rámce z měřiče k dalším zařízením je použita přenosová rychlost 100 kbps s kódováním 3 z 6, zatímco komunikace v opačném směru má přenosovou rychlost 32768 kbps a kódování je použito Manchester. Submód T1 je definován jako jednosměrná komunikace, při které měřič nevyžaduje potvrzení od příjemce o přijatém rámci. Měřič odešle data a přepne se do úsporného režimu. Zatímco submód T2 je definován jako obousměrná komunikace. Měřič po odeslání rámce krátkou dobu vyčkává na potvrzení od příjemce. Pokud měřič neobdrží odpověď přepne se do úsporného režimu. Pokud ve stanoveném čase příjemce odpoví, naváže se obousměrná komunikace mezi měřičem a koncentrátorem.
+V	módu T měřič samostatně odesílá data, buď periodicky nebo aperiodicky (když jsou k dispozici). Pro přenos rámce z měřiče k dalším zařízením je použita přenosová rychlost 100 kbps s kódováním 3 z 6, zatímco komunikace v opačném směru má přenosovou rychlost 32,768 kbps a kódování je použito Manchester. Submód T1 je definován jako jednosměrná komunikace, při které měřič nevyžaduje potvrzení od příjemce o přijatém rámci. Měřič odešle data a přepne se do úsporného režimu. Zatímco submód T2 je definován jako obousměrná komunikace. Měřič po odeslání rámce krátkou dobu vyčkává na potvrzení od příjemce. Pokud měřič neobdrží odpověď přepne se do úsporného režimu. Pokud ve stanoveném čase příjemce odpoví, naváže se obousměrná komunikace mezi měřičem a koncentrátorem.
 
 V	módu R měřič samostatně neodesílá změřená data, ale vyčkává na výzvu od~koncentrátoru. Měřič je v úsporném režimu a v pravidelných úsecích se periodicky probouzí do režimu přijmu a očekává rámec. Když není přijat žádný validní wake-up rámec, měřič se přepne zpět do úsporného režimu. V	opačném případě se naváže obousměrná komunikace mezi měřičem a koncentrátorem.
 
@@ -107,7 +108,7 @@ Komunikační modul pracující jako modem dle požadavků standardu Wireless M-
 	\item Řídicí pole.
 \item Označení výrobce dle~\cite{WmbusVendors}.
 \item Unikátní komunikační adresy založené na parametrech uložených v paměti modulu.
-\item Případně se ještě na závěr přidá informace o síle přijímaného signálu RSSI.
+\item Případně se ještě na závěr přidá informace o síle přijímaného signálu RSSI (Received Signal Strength Indication).
 \end{itemize}
 
 
@@ -138,7 +139,7 @@ Takovýto paket se pak zašifruje (obvykle algoritmem AES-128) a přenáší se 
 \vspace{-20pt}
 \end{table}
 			
-Obsah pole AppLayer je již dán aplikační hladinou definovanou ve standardu M-Bus, které se používá jako mechanizmus komunikace z linkové vrstvy do vyšších protokolových vrstev, a je tedy shodný s obsahem pro klasický drátový M-Bus přenos.  Data následující za polem Cl jsou již závislá na aplikační vrstvě M-Bus. Komunikace mezi měřící jednotkou a RF modemem či mezi koncentrátorem a RF modem obvykle probíhá prostřednictvím sériového přenosu UART, například s využitím RS-232, RS-485 či USB.
+Obsah pole AppLayer je již dán aplikační vrstvou definovanou ve standardu M-Bus, které se používá jako mechanizmus komunikace z linkové vrstvy do vyšších protokolových vrstev, a je tedy shodný s obsahem pro klasický drátový M-Bus přenos.  Data následující za polem Cl jsou již závislá na aplikační vrstvě M-Bus. Komunikace mezi měřící jednotkou a RF modemem či mezi koncentrátorem a RF modem obvykle probíhá prostřednictvím sériového přenosu UART, například s využitím RS-232, RS-485 či USB.
 
 Při přenosu datové jednotky uvedené v Tab.~\ref{PaketWm3} IQRF modulem dochází k jejímu rozšíření o položky uvedené v Tab.~\ref{PaketWm4}.
 
@@ -596,7 +597,7 @@ Pole \texttt{Data Value} již obsahuje přenášenou hodnotu, definovanou dle DI
 
 
 \subsubsection{Datové typy F a G}
-V protokolu Wireless M-Bus je datum kódováno ve formátu G, viz Tab.~\ref{KodovaniDataG} 
+V protokolu Wireless M-Bus je datum kódováno ve formátu G, viz Tab.~\ref{KodovaniDataG} a datum i čas ve formátu F, viz Tab.~\ref{KodovaniDataF}.  
 
 \begin{table}[!ht]
 \centering
@@ -625,7 +626,6 @@ V protokolu Wireless M-Bus je datum kódováno ve formátu G, viz Tab.~\ref{Kodo
 \end{tabular}
 \end{table}
 
-a datum i čas ve formátu F, viz Tab.~\ref{KodovaniDataF}.  
 
 \begin{table}[!ht]
 \centering
@@ -685,7 +685,7 @@ Pro šifrování přenášených dat se v protokolu Wireless M-Bus používají 
 	\item AES (Advanced Encryption Standard) s inicializačním vektorem.
 \end{itemize}
 
-Šifrování DES dnes již není moc využívané, je již nedostačující a zastaralé. Drtivá většina dnešních zařízení umožnujících šifrovaný přenos využívají šifrování AES, konkrétně verzi AES128 CBC.
+Šifrování DES dnes již není moc využívané, je již nedostačující a zastaralé. Drtivá většina dnešních zařízení umožnujících šifrovaný přenos využívá šifrování AES, konkrétně verzi AES128 CBC.
 
 \subsection{Šifrovací algoritmus DES}
 Data Encryption Standard je v kryptografii symetrická šifra vyvinutá v 70. letech. V roce 1977 byla zvolena za standard FIPS 46~\cite{NormaFIPS46}. V současnosti je tato šifra považována za nespolehlivou, protože používá klíč pouze o délce 64 bitů, z toho 8 je kontrolních a 56 efektivních. Navíc algoritmus obsahuje slabiny, které dále snižují bezpečnost šifry. Díky tomu je možné šifru prolomit útokem hrubou silou za méně než 24 hodin.
@@ -710,7 +710,7 @@ Pro šifrovaný přenos dat v protokolu WM-Bus se využívá AES, kontrétně m�
 
 \subsection{Inicializační vektor}
 \label{KapitolaInicializacniVektor}
-Inicializační vektor má délku 16 Bajtů (128 bitů, odtud označení AES-128) a~v~případě protokolu WM-Bus je tvořený dynamicky z nešifrovaných bajtů polí paketu, způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor} a implemetovaných dle Kódu~\ref{CodeIV}.
+Inicializační vektor má délku 16 bajtů (128 bitů, odtud označení AES-128) a~v~případě protokolu WM-Bus je tvořený dynamicky z nešifrovaných bajtů polí paketu, způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor} a implemetovaných dle Kódu~\ref{CodeIV}.
 
 \begin{lstlisting}[caption={Sestavení inicializačního vektoru},captionpos=b,label=CodeIV,style=MyCodePython]
 # Build Initialization Vector from incoming packet data

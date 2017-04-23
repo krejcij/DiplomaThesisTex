@@ -1,7 +1,7 @@
 \chapter{Rozšiřující deska UniPi}
 \label{KapUnipi}
 
-UniPi je česká firma, nyní dceřiná společnost Faster.cz, původně její oddělení měření a regulace, která se zaměřuje na inteligentní stavební řešení, domácí automatizaci a~Internet věcí. Dále provozuje výzkum a vývoj rozšiřujicích desek UniPi, včetně jejich softwarového vybavení \cite{UniPi}.
+UniPi je česká firma, nyní dceřiná společnost Faster.cz, původně její oddělení měření a regulace, které se zaměřuje na inteligentní stavební řešení, domácí automatizaci a~Internet věcí. Dále provozuje výzkum a vývoj rozšiřujicích desek UniPi, včetně jejich softwarového vybavení \cite{UniPi}.
 
 UniPi je taktéž pojmenování pro přídavné rozšiřující desky pro RaspberryPi, se~kterou je plně kompatibilní ve všech verzích. Je vybavena řadou komponent, jako jsou například digitální galvanicky oddělené vstupy s LED signalizací, 0\,-\,10\,V analogové vstupy, 0\,-\,10\,V analogové výstupy, spínací relé, jednokanálová 1Wire sběrnice, I2C sběrnice, UART sběrnice, SPI sběrnice a RS-485 sběrnice.
 
@@ -43,7 +43,7 @@ Desky se liší svými vstupně-výstupními možnostmi, rozměry a jsou dostupn
 \section{UniPi v1}
 \label{KapitolaUnipi1}
 
-Deska UniPi je prezentována jako nejlevnější a nejjednodušší řešení pro inteligentní budovy a IoT. Je navržena pro maximální kompatibilitu s embedded zařízením RaspberryPi, který se dnes dá pořídit již za několik stokorun.  Zařízení bylo vyvinuto primárně jako rozhraní pro příjem vstupních signálů, jejich vyhodnocení a~realizaci výstupní reakce na základě naprogramovaných algoritmů \cite{UniPiBoard1}.
+Deska UniPi je prezentována jako nejlevnější a nejjednodušší řešení pro inteligentní budovy a IoT. Je navržena pro maximální kompatibilitu s embedded zařízením RaspberryPi. Zařízení bylo vyvinuto primárně jako rozhraní pro příjem vstupních signálů, jejich vyhodnocení a~realizaci výstupní reakce na základě naprogramovaných algoritmů \cite{UniPiBoard1}.
 
 Disponuje (viz Obr.~\ref{ObrazekUnipiV1}) osmi relé pro střídavý proud, čtrnácti digitálními vstupy, jedním jednokanálovým 1Wire rozhraním, dvěma 0\,-\,10\,V analogovými vstupy a jedním 0\,-\,10\,V analogovým výstupem. Zajímavou součástí desky je také modul reálného času. Druhý I2C port na RaspberryPi v sobě navíc ukrývá 5\,V měnič napětí a ochranu ESD (ElectroStatic Discharge), umožňující tak připojení dalších zařízení. Pro jednoduché připojení jednotlivých sběrnic jsou na desce umístěny konektory.
 
@@ -74,7 +74,7 @@ Disponuje (viz Obr.~\ref{ObrazekUnipiV1}) osmi relé pro střídavý proud, čtr
 \vspace{10pt}
 Velkou výhodou řídicí jednotky UniPi je zabudovaný čip pro obsluhu teplotních čidel na sběrnici 1Wire. Digitální teploměry mají svou adresu, není tedy nutné je~jakkoliv kalibrovat či nastavovat, stačí zapojit.
 
-S RaspberryPi je deska UniPi propojena 26\,žilovým kabelem přes GPIO konektor. Jak bylo popsáno v kapitole o konektoru GPIO, toto propojení je z důvodu kompatibility shodné pro všechny verze RaspberryPi. Vnitřní uspořádání desky je~řešeno pomocí funkčních celků  (znázorněno na Obr.~\ref{SchemaBlok1}), které jsou propojeny pomocí I2C sběrnice. Výstupy jednotlivých celků jsou poté vyvedeny na konektory desky.
+S RaspberryPi je deska UniPi propojena 26\,žilovým kabelem přes GPIO konektor. Jak bylo popsáno v kapitole~\ref{KapGPIO} o konektoru GPIO, toto propojení je z důvodu kompatibility shodné pro všechny verze RaspberryPi. Vnitřní uspořádání desky je~řešeno pomocí funkčních celků  (znázorněno na Obr.~\ref{SchemaBlok1}), které jsou propojeny pomocí I2C sběrnice. Výstupy jednotlivých celků jsou poté vyvedeny na konektory desky.
  
 \begin{figure}[!ht]
 \vspace{-20pt}
@@ -105,7 +105,7 @@ Pro účely testování a implementace byla zapůjčena deska UniPi s počítač
 \section{UniPi v2 - Neuron}
 \label{KapitolaUnipi2}
 
-UniPi Neuron představuje modulární PLC (Programmable Logic Controller) pro~chytrou domácnost a inteligentní systémy budov, řízení a průmyslovou automatizaci. Díky modulární a kompaktní konstrukci nabízí jedinečnou variabilitu funkcí. UniPi Neuron je univerzální řídící jednotka. Neuron lze použít k řízení chytrého domu nebo jako domácí server. Je vhodný pro monitorování, sběr a ukládání dat na vzdálený server, nebo jako výkonná a plně vybavená brána pro ostatní zařízení \cite{UniPiBoard2}.
+UniPi Neuron představuje modulární PLC (Programmable Logic Controller) pro chytrou domácnost a inteligentní systémy budov, řízení a průmyslovou automatizaci. Díky modulární a kompaktní konstrukci nabízí jedinečnou variabilitu funkcí. UniPi Neuron je univerzální řídící jednotka. Neuron lze použít k řízení chytrého domu nebo jako domácí server. Je vhodný pro monitorování, sběr a ukládání dat na vzdálený server, nebo jako výkonná a plně vybavená brána pro ostatní zařízení \cite{UniPiBoard2}.
 
  \begin{figure}[!ht]
   \vspace{-30pt}
@@ -183,8 +183,8 @@ Písmeno x v Tab.~\ref{TableUnipiVar} bývá nahrazeno číslem 1-3 dle osazené
 \hline
 x & \textbf{Osazená deska} & \textbf{CPU} & \textbf{RAM} & \textbf{Další vlastnosti} \\ \hline \hline
 \textbf{1} & RaspberryPi B+ & 700\,MHz & 512\,MB &  \\ \hline
-\textbf{2} & RaspberryPi 2 & 4x900\,MHz & 1\,GB &  \\ \hline
-\textbf{3} & RaspberryPi 3 & 4x1200\,MHz & 1\,GB & BT 4.1, WiFi 802.11n \\ \hline \hline
+\textbf{2} & RaspberryPi 2 & 4\,x\,900\,MHz & 1\,GB &  \\ \hline
+\textbf{3} & RaspberryPi 3 & 4\,x\,1200\,MHz & 1\,GB & BT 4.1, WiFi 802.11n \\ \hline \hline
 \end{tabular}
 	\end{center}
 \end{table}
@@ -198,12 +198,12 @@ S RaspberryPi je deska UniPi propojena, obdobně jako u první verze, pomocí 26
     \centering
 			\subfigure[Propojení desek]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_propojbrain}\label{unipi_propojbrain}}
 			\hspace*{5mm}
-			\subfigure[Osazená UniPi deska]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_osazeny}\label{unipi_osazeny}}
+			\subfigure[UniPi deska osazená WM-Bus modulem]{\includegraphics[width=0.45\textwidth]{obrazky/unipi_osazeny}\label{unipi_osazeny}}
 			\caption{Detaily UNiPi desky}
 			\vspace{-5pt}
 \end{figure*}
 
-Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{unipi_propojuvnitr}) se signalizačními diodami. UART sběrnice je zde připravena pro připojenů dalších modulů. Tyto desky jsou k~dostání v několika verzích, přizpůsobené konektorem pro konkrétní komunikační modul (viz Obr.~\ref{unipi_osazeny}).
+Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{unipi_propojuvnitr}) se signalizačními diodami. UART sběrnice je zde připravena pro připojenů dalších modulů. Tyto desky jsou k~dostání v několika verzích, přizpůsobené konektorem pro konkrétní komunikační modul. Deska na obrázku~\ref{unipi_osazeny} je osazena WM-Bus modulem.
  
 Celá sestava desek je poté uložena v kovové krabičce s označením vstupů a výstupů (viz Obr.~\ref{unipi_unipi_box}).
 
@@ -229,7 +229,7 @@ Vnitřní uspořádání desky je řešeno pomocí funkčních celků (viz Obr.~
 	\vspace{-10pt}
 \end{figure}
 
-Napájení desky je pomocí 24\,V/1.5\,A adaptéru přímo na rozšiřující desku UniPi. Pro účely testování a implementace byla zapůjčena deska UniPi Neuron S103 vybavená počítačem RaspberryPi3.
+Napájení desky je pomocí 24\,V/1,5\,A adaptéru přímo na rozšiřující desku UniPi. Pro účely testování a implementace byla zapůjčena deska UniPi Neuron S103 vybavená počítačem RaspberryPi 3.
 
  %\begin{figure}[!h]
  % \begin{center}
@@ -272,7 +272,7 @@ Vzhledem k tomu, že UniPi NEURON je v době vypracování práce jediná vývoj
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Sběrnice na UniPi}
-Jak je patrné z předhozích kapitol, jednodeskové počítače i rozšiřující moduly disponují množstvím komunikačních sběrnic. V této kapitole budou stručně představeny všechny výše zmíněné a zaměříme se na sběrnici UART, která bude sloužit pro~komunikaci mezi RaspberryPi a WM-Bus modulem.
+Jak je patrné z předchozích kapitol, jednodeskové počítače i rozšiřující moduly disponují množstvím komunikačních sběrnic. V této kapitole budou stručně představeny všechny výše zmíněné a pozornost bude zaměřena na~sběrnici UART, která bude sloužit pro~komunikaci mezi RaspberryPi a~WM-Bus modulem.
 
 \subsection{UART}
 UART je synchronní a asynchronní sériové rozhraní pro přenos dat mezi zařízeními v obou směrech. Používá se pro komunikaci mezi mikrokontroléry, počítači a dalšími zařízeními podporující tento standard. Využívá dvouvodičovou sběrnici, vysílá data na pinu označovaném obvykle jako TX, přijímá na pinu RX.
@@ -291,12 +291,10 @@ Pro přenos se používají rámce, které mohou mít 5 až 9 bitů a jsou od se
 Dále je možné nastavit rychlost přenosu dat od 1~200\,bps až do 250\,kbps. Lze nastavit buď pro asynchronní režim, označovaný jako SCI, například pro RS-232 či RS-485, anebo pro synchronní režim, běžně označovaný jako SPI. Tato sběrnice je~ve~verzi 1 vyvedená do modulárního konektoru na desce, ve verzi 2 již není vyvedená na kontakty, ale je součástí desky plošného spoje, na kterém se přímo nachází slot pro komunikační modul.
 
 
-
-
 \subsection{SPI}
 SPI je sériové periferní rozhraní. Používá se pro komunikaci mezi řídícími mikroprocesory a ostatními integrovanými obvody. Jednotlivé obvody jsou propojeny čtyřmi vodiči:
 \begin{itemize}
-	\item Datový výstup MOSI (Master Out, Slave In) obvodu Master je připojen na~vstupy MOSI všech obvodů Slave.
+	\item Datový výstup MOSI (Master Out, Slave In) obvodu Master je připojen na vstupy MOSI všech obvodů Slave.
 	\item Datový vstup MISO (Master In, Slave Out) obvodu Master je propojen s~výstupy MISO všech obvodů Slave.
 	\item Výstup hodinového signálu SCK je připojen na vstupy SCK všech obvodů Slave.
 	\item Každý obvod Slave má vstup SS (Slave Select) pro výběr obvodu.
@@ -310,14 +308,14 @@ RS-485 se používá především v průmyslovém prostředí. Vyznačuje se dvo
 I2C je interní datová sběrnice sloužící pro komunikaci a přenos dat mezi jednotlivými integrovanými obvody většinou v rámci jednoho zařízení. Sběrnice je duplexní a dvoudrátová. Na jednu sběrnici může být připojeno více obvodů, v základní sedmibitové verzi až 128 obvodů.
 Vodiče jsou označeny jako serial data (SDA) a serial clock (SCL). Sběrnice je typu master-slave. Master při přenosu generuje hodinový signál na vodiči SCL. Když jeden obvod vysílá, všechny ostatní poslouchají a pouze podle adresy určují, zda jsou data určena jim. Obvod, který chce vyslat/přijmout data musí nejprve definovat adresu čipu, s kterým chce komunikovat a zda půjde o příjem nebo vysílání - tedy o čtení nebo zápis. To určuje bit, který je součástí adresy. 
 
-Tato sběrnice je součástí obou verzí desky, využívá se pro propojení vnitřních funkčních bloků (EEPROM, RTC modul, AD převodník, 1Wire master, ...), v první verzi je i vyvedená do modulárního konektoru na desce, v druhé verzi již ne.
+Tato sběrnice je součástí obou verzí desky, využívá se pro propojení vnitřních funkčních bloků (EEPROM, RTC modul, AD převodník, 1Wire master, ...), v první verzi je také vyvedená do modulárního konektoru na desce, v druhé verzi již ne.
 
 \subsection{1Wire}
 Sběrnice 1Wire, navržená firmou Dallas Semiconductor, umožňuje připojit několik zařízení k řídící jednotce prostřednictvím pouhých dvou vodičů: data a zem. Sběrnice má jeden řídící obvod (master) a jeden či více ovládaných zařízení (slave). Všechny obvody jsou zapojeny jednak na společnou zem, a jednak paralelně na společný datový vodič. Tato sběrnice je součástí obou verzí desky, slouží pro připojení externích čidel (nejčastěji teplotní čidla) a u obou verzí desky je vyvedena do modulárního konektoru.
 
 \subsection{GPIO}
 \label{KapGPIO}
-GPIO jsou piny, které lze programovat pomocí softwaru. Do těchto pinů lze posílat elektrický signál nebo jej z nich naopak přijímat. Na RaspberryPi 1 je takových vývodů celkem 26, na RaspberryPi 2 a RaspberryPi 3 je vývodů 40. GPIO vývodů je~zde standardně 8, krom nich se zde nachází i dva piny pro UART, 2 pro I2C a~6 pro SPI, ty však jdou také přenastavit pro GPIO využití. Nesmíme zapomenout ani na dva výstupy s napětím (3,3\,V a 5\,V) a zem.
+GPIO jsou piny, které lze programovat pomocí softwaru. Do těchto pinů lze posílat elektrický signál nebo jej z nich naopak přijímat. Na RaspberryPi 1 je takových vývodů celkem 26, na RaspberryPi 2 a RaspberryPi 3 je vývodů 40. GPIO vývodů je~zde standardně 8, krom nich se zde nachází i dva piny pro UART, 2 pro I2C a~6 pro SPI, ty však jdou také přenastavit pro GPIO využití. Nelze opomenout ani dva výstupy s napětím (3,3\,V a 5\,V) a zem.
 Obrázek \ref{ObrazekGPIO} demonstruje rozložení GPIO konektoru napříč verzemi RaspberryPi.
 
 \begin{figure}[!ht]
@@ -343,7 +341,7 @@ Jak již bylo popsáno v předchozích kapitolách, GPIO konektor není ve všec
 
 Hlavní výhodou otevřené platformy RaspberryPi je možnost použít zákazníkem zvolený libovolný software. Neexistují omezení ze strany výrobce, proto si může každý svoje řešení postavit na míru.
 
-Výrobce poskytuje vlastní software EVOK, který se stará o komunikaci desky UniPi přes virtuální server či API (Application Programming Interface) s uživatelem. Většina dalších open-source programů využívá toto API pro svůj provoz. Výrobcem je taktéž podporován software Mervis \cite{MervisWeb}, který z UniPi dělá plnohodnotné PLC. Dále je k dipozici několik open-source programů:
+Výrobce poskytuje vlastní software EVOK, který se stará o komunikaci desky UniPi přes virtuální server či API (Application Programming Interface) s uživatelem. Většina dalších open-source programů využívá toto API pro svůj provoz. Výrobcem je taktéž podporován software Mervis \cite{MervisWeb}, který z UniPi dělá plnohodnotné PLC (Programmable Logic Controller). Dále je k dipozici několik open-source programů:
 \begin{itemize}
 \item EVOK - oficiální Python API s websocket a REST podporou.
 \item PiDome - platforma pro domácí automatizaci.
@@ -363,7 +361,7 @@ A tři komerční:
 \end{itemize}
 
 \vspace{10pt}
-V době psaní této práce byl EVOK k dispozici i pro druhou verzi desky, avšak bez podpory komunikačních modulů. Implementace protokolu tedy bude prováděna jako samostatná aplikace s vlastní formou vizualizace naměřených dat.
+V době psaní této práce byl EVOK k dispozici i pro druhou verzi desky, avšak bez podpory komunikačních modulů. \textbf{Implementace protokolu tedy bude prováděna jako samostatná aplikace s vlastní formou vizualizace naměřených dat.}
 
 
 

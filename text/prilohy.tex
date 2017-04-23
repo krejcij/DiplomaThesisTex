@@ -82,14 +82,14 @@
 \end{landscape}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Vývojový diagram aplikace pro vyčítání dat}
-\label{AplikaceDiagram}
-\vspace{-20pt}
- \begin{figure}[!ht]
-  \begin{center}
-    \includegraphics[scale=0.55]{obrazky/aplikace_diagram}
-  \end{center}
-\end{figure}
+%\chapter{Vývojový diagram aplikace pro vyčítání dat}
+%\label{AplikaceDiagram}
+%\vspace{-20pt}
+% \begin{figure}[!ht]
+%  \begin{center}
+%    \includegraphics[scale=0.55]{obrazky/aplikace_diagram}
+%  \end{center}
+%\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{landscape}
@@ -183,11 +183,17 @@ Návod pro spuštění aplikace:
 		\end{enumerate}
 
 	\vspace{10pt}
-Vyčítací aplikace může být spuštěna samostatně, bez přítomnosti zařízení RaspberryPi, rozšiřující desky UniPi či IQRF komunikačního modulu. Je implementován demostrační režim s předpřipravenou sadou zachycených telegramů:
+Vyčítací aplikace může být spuštěna samostatně, bez přítomnosti RaspberryPi, rozšiřující desky UniPi či IQRF komunikačního modulu. Je implementován demostrační režim s předpřipravenou sadou zachycených telegramů:
 \begin{itemize}
-	\item Režim příjmu zašifrovaných telegramů modulem IQRF: \texttt{python MainApplication.py aes\_iqrf}
-	\item Režim příjmu zašifrovaných obecných telegramů: \texttt{python MainApplication.py aes\_clean}
-	\item Režim příjmu nešifrovaných telegramů: \texttt{python MainApplication.py clean}
+	\item Režim příjmu zašifrovaných telegramů modulem IQRF: 
+		\newline 
+		\texttt{python MainApplication.py aes\_iqrf}
+	\item Režim příjmu zašifrovaných obecných telegramů: 
+		\newline 
+		\texttt{python MainApplication.py aes\_clean}
+	\item Režim příjmu nešifrovaných telegramů: 
+		\newline 
+		\texttt{python MainApplication.py clean}
 \end{itemize}
 
 

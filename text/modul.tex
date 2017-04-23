@@ -1,4 +1,5 @@
 \chapter{Komunikační modul Wireless M-Bus}
+\label{ChapterKomunikacniModul}
 
 Spolu se zařízením UniPi Neuron S103 byl zapůjčen i modul IQRF TR-72DC-WMB, který do budoucna bude součástí tohoto produktu a bude rozšiřovat konektivitu zařízení o protokol Wireless M-Bus. 
 
@@ -20,7 +21,7 @@ Na malém prostoru se nachází vše potřebné pro uskutečnění bezdrátovéh
 
 
 
-Modul podporuje módy přenosu S1, S2, T1 a T2. Napájecí napětí modulu je~v~rozsahu 3.1 až 5.3\,V se spotřebou 1\,$\mu$A v režimu spánku a 8-22\,mA ve vysílacím režimu, dle nastavení výstupního výkonu, jehož maximální hodnota je 12.5\,W.
+Modul podporuje módy přenosu S1, S2, T1 a T2. Napájecí napětí modulu je~v~rozsahu 3,1 až 5,3\,V se spotřebou 1\,$\mu$A v režimu spánku a 8-22\,mA ve vysílacím režimu, dle nastavení výstupního výkonu, jehož maximální hodnota je 12,5\,W.
 V~České republice je využíván pro přenos v bezlicenčním pásmu 868\,MHz, případně 433\,MHz nebo 169\,MHz.\newline
 
 \newpage
@@ -82,7 +83,7 @@ Praktické využíti jednotlivých módu zobrazuje Obr.~\ref{TopologieIQRF}.
 
 S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož parametry jsou 19200\,Bd, 8\,bitů, žádná parita a 1 stop bit.
 		
-Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i ke samotné komunikaci s modulem. Každý příkaz začíná znakem \textgreater. Každá zpráva odpověďi začíná znakem \textless. Každému příkazu musí předcházet budící znak NULL (0x00) následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem CR (0x0D). 
+Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i k samotné komunikaci s modulem. Každý příkaz začíná znakem \texttt{\textgreater}. Každá zpráva odpověďi začíná znakem \texttt{\textless}. Každému příkazu musí předcházet budící znak \texttt{NULL (0x00)} následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem \texttt{CR (0x0D)}. 
 
 \newpage
 Obecná struktura~\cite{ModulIQRF}~paketu příkazu je 

@@ -1,4 +1,6 @@
 \chapter{Návrh implementace}
+\label{ChapterImplementace}
+
 Jak již bylo zmíněno na začátku práce, samotná implementace je rozdělena do dvou částí:
 \begin{enumerate}
 	\item Komunikace RaspberryPi přes rozšiřující desku UniPi s bezdrátovým modulem a pomocí něj s poskytnutými WM-Bus zařízeními.
@@ -29,15 +31,15 @@ Pro zpřístupnění UART rozhraní je nutné provést drobné úpravy jeho konf
 	\end{lstlisting}
 					
 	\item Poté je potřeba v \texttt{/boot/config.txt} změnit položku \texttt{ENABLE\_UART} na hodnotu 1. Tím dojde k zpřístupnení sběrnice UART. Tato položka může být v budoucnu při aktualizaci Raspbianu přepsána, proto při prvním náznaku nefunkčnosti, je potřeba tuto položku zkontrolovat jako první.
-	\item V souboru \texttt{/boot/cmdline.txt} je potřeba odebrat úsek textu \texttt{console=ttyAMA0, 115200}, aby při startování systému nedocházelo k výpisu do sériové linky. 
+	\item V souboru \texttt{/boot/cmdline.txt} je potřeba odebrat text \texttt{console=ttyAMA0, 115200}, aby při startování systému nedocházelo k výpisu do sériové linky. 
 	\item V případě, že se jedná o RaspberryPi verze 3, je potřeba do \texttt{/boot/config.txt} dopsat položku \texttt{dtoverlay=pi3-miniuart-bt}, která zakáže BT na mini-UART a provede přemapování zpět na \texttt{/dev/ttyAMA0}. Tento krok je takto řešený z důvodu kompatibility, kdy je sériová komunikace směrována přes \texttt{/dev/ttyAMAO} nezávisle na použité verzi RaspberryPi.
 \end{enumerate}
 
 Po každém z těchto kroků je doporučován restart zařízení. Kroky byly otestovány pouze na výše zmíněné verzi Raspbianu a v jiných distribucích se monou mírně lišit. Úspěšnost provedení těchto kroků lze zkontrolovat pomocí zadání příkazu konzole \texttt{sudo dmesg | grep tty} jehož výstup by měl být následující:
 					
 	\begin{lstlisting}[style=MyCodeBash]
-[    0.000974] console [tty1] enabled
-[    0.130442] 20201000.uart: ttyAMA0 at MMIO 0x20201000 
+		[0.000974] console [tty1] enabled
+		[0.130442] 20201000.uart: ttyAMA0 at MMIO 0x20201000 
 		(irq = 81, base_baud = 0) is a PL011 rev2
 	\end{lstlisting}
 	\vspace{-20pt}
@@ -49,7 +51,7 @@ Po každém z těchto kroků je doporučován restart zařízení. Kroky byly ot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Výběr programovacího jazyka}
-Jelikož primárním jazykem využívaným na platformě RaspberryPi je Python, který již obsahuje knihovny pro sériovou komunikaci, je současný kód napsán v jazyce Python 3.
+Jelikož primárním jazykem využívaným na platformě RaspberryPi je Python, který již obsahuje knihovny pro sériovou komunikaci, je současný kód napsán v programovacím jazyce Python 3.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,7 +65,7 @@ Před samotným vyčítáním dat bylo potřeba zjistit či nastavit přenosové
 \begin{itemize}
 	\item Komunikační modul IQRF nastaven do módu T1 ve funkci skeneru.
 	\item Čidlo Weptech je nastaveno do módu T1 s intervalem zasílání 1 minuta. 
-	\item Modul Bonega je nastaven do módu T1 se zapnutým šifrováním AES128 v~módu 5 a s intervalem zasílání 20-24 sekund v odpočtovém období a 4 intervalem minuty mimo odpočtové období.
+	\item Modul Bonega je nastaven do módu T1 se zapnutým šifrováním AES128 v~módu 5 a s intervalem zasílání 20-24 sekund v odpočtovém období a intervalem 4 minuty mimo odpočtové období.
 	\item Elektroměr ZPA je nastaven do módu T2 s intervalem vysílání 1 minuta.
 	\item Měřič Kamstrup je nastaven do módu T1 s intervalem vysílání 15 minut.
 \end{itemize}
@@ -120,7 +122,7 @@ Jednoduchým spuštěním komunikačního modulu v módu skeneru byl zachycen te
 \end{figure}
 \vspace{-5pt}
 
-který byl pomoci datasheetu použitého komunikačního modulu~\cite{ModulIQRF} a~čidla~\cite{CidloWeptech} analyzován, a přehledně zobrazen do Tab. \ref{PacketTableAnalysis}.
+který byl pomocí datasheetu použitého komunikačního modulu~\cite{ModulIQRF} a~čidla~\cite{CidloWeptech} analyzován, a přehledně zobrazen do Tab. \ref{PacketTableAnalysis}.
 
 \subsection{Šifrovaný přenos}
 
@@ -134,7 +136,7 @@ V okamžiku, kdy bylo zařízení přepnuto do šifrovaného módu dle Tab.~\ref
 \end{figure}
 \vspace{-5pt}
 
-který byl pomoci datasheetů použitého komunikačního modulu \cite{ModulIQRF} a normy~\cite{Norma1,NormaFIPS} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
+který byl pomocí datasheetů použitého komunikačního modulu \cite{ModulIQRF} a normy~\cite{Norma1,NormaFIPS} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
 \begin{itemize}
 	\item 30-33 pro informaci použitém šifrování,
 	\item 8-25 pro sestavení inicializačního vektoru a
@@ -201,7 +203,7 @@ Z tabulky je patrné, že je nutné vyparsovat položky na následujících pozi
 	\item 96 pro úroveň signálu.	
 \end{itemize}
 
-a jejich následnou správnou interpretací dle specifikace (zohlednění uložení LSB, převod hexadecimálních hodnot na dekadické, \ldots) předat k dalšímu zpracování či~uložení do databáze.
+Jejich následnou správnou interpretací dle specifikace (zohlednění uložení LSB, převod hexadecimálních hodnot na dekadické, \ldots) předat k dalšímu zpracování či~uložení do databáze.
 
 
 \section{Zajištění uložení dat}
@@ -214,9 +216,9 @@ Zachycená a naměřená data se ukládají do databáze k pozdějšímu zpracov
 
 Byla zvolena jedna databáze se třemi tabulkami:
 \begin{itemize}
-	\item DEVICES - evidence známých zařízení a jejich AES klíčů
-	\item VALUES - uložení naměřených hodnot
-	\item TELEGRAMS - uložení zachycených dat a AES klíče modulu
+	\item DEVICES - evidence známých zařízení a jejich AES klíčů.
+	\item VALUES - uložení naměřených hodnot.
+	\item TELEGRAMS - uložení zachycených dat a AES klíče modulu.
 \end{itemize}
 
 Strukturu tabulek, definici sloupců a vazby mezi nimi popisuje schéma na Obr.~\ref{databazovy_model}.
@@ -226,7 +228,7 @@ Strukturu tabulek, definici sloupců a vazby mezi nimi popisuje schéma na Obr.~
     \includegraphics[scale=0.55]{obrazky/aplikace_databaze}
   \end{center}
 	\vspace{-10pt}
-  \caption{Model zvolené SqLite databáze}
+  \caption{Model zvolené SqLite 3 databáze}
 	\label{databazovy_model}
 	\vspace{-30pt}
 \end{figure}
@@ -243,7 +245,7 @@ Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Chart
 Dále je nezbytné do umístění \texttt{$\backslash$var$\backslash$www$\backslash$html$\backslash$} nahrát zdrojové soubory visualizační aplikace. 
 
 \section{Struktura aplikace}
-Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura aplikace znázorněná na schématu přílohy~\ref{AplikaceDiagram}. Diagram je pro přehlednost odlišen barevnými bloky:
+Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura aplikace znázorněná na Obr.~\ref{AplikaceDiagram}. Diagram je pro přehlednost odlišen barevnými bloky:
 \begin{itemize}
 	\item modrou barvou je znázorněna kostra programu,
 	\item zelenou barvou je nekonečná smyčka naslouchání dat,
@@ -253,10 +255,20 @@ Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura
 	\item černou barvu je řízení samotného programu.
 \end{itemize}
 
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[scale=0.55]{obrazky/aplikace_diagram}
+  \end{center}
+	%\vspace{-10pt}
+  \caption{Vývojový diagram aplikace pro vyčítání dat}
+	\label{AplikaceDiagram}
+	%\vspace{-30pt}
+\end{figure}
+
 V následujících podkapitolách budou jednotlivé bloky aplikace představeny podrobněji.
 
 \subsection{Start programu v rámci operačního systému}
-Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. Tím je zajištěna nezávilost nasazení RaspberryPi a případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
+Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. Tímto dojde k oddělení běhu programu od ostatních aplikací, možností vzdáleného připojení ke konzolovým výstupům aplikace a nezávislosti na případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
 
 \subsection{Start programu z pohledu aplikace}
 Program při startu kontroluje, zdali  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQLite databázi.
@@ -329,12 +341,13 @@ def sql(query):
 sql("INSERT INTO TELEGRAMS VALUES ('"+time.strftime("%Y-%m-%d %H:%M")+"', '"+parsedstring[0:4]+"', '"+parsedstring[4:34]+"', '"+parsedstring[34:-4]+"', '"+parsedstring[-4:]+"','"+AES_IQRF_DEFAULT+"')")		
 \end{lstlisting}
 
+\vspace{-20pt}
 \subsection{Ošetření výjimek}
 Aplikace má ošetřeny dva chybové stavy. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a~následně přejde do stavu čekání na příchod dalšího telegramu.
 Všechny tyto chyby jsou ukládány do příslušné tabulky v databázi, do chybového logu a taktéž sdělovány uživateli do konzole.
 
 \section{Export dat}
-V případě potřeby je vizualizační aplikace (viz~Kód~\ref{CodeExport}) schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k~časové náročnosti při daném počtu naměřených hodnot je tato funkcionalita implementována spíše jako experimentální a v praxi se projevila jako nedostačující.
+V případě potřeby je vizualizační aplikace (viz~Kód~\ref{CodeExport}) schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k~časové náročnosti (dáno odezvou Google~Charts~API~\cite{uvod_google_charts_api}) při daném počtu naměřených hodnot (pro čidlo vysílající každou minutu je za den nasbíráno 1440 hodnot, jejichž export zabere cca 3 hodiny) je tato funkcionalita implementována spíše jako experimentální pro jednorázové exporty. V praxi se při automatických exportech velkých objemů naměřených hodnot projevila jako náročná na výpočetní čas.
 
 \newpage{}
 
