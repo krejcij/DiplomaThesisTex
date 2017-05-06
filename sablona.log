@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  6 MAY 2017 22:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  6 MAY 2017 22:21
 entering extended mode
 **sablona.tex
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.tex"
@@ -1804,11 +1804,11 @@ Overfull \hbox (7.21288pt too wide) in paragraph at lines 382--383
 [][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[90] [91] <obrazky/aplikace_vizualizace.png, id=2008, 767.11594pt x 798.73407pt>
+[90] [91] <obrazky/aplikace_vizualizace.png, id=2008, 703.87968pt x 788.19469pt>
 File: obrazky/aplikace_vizualizace.png Graphic file (type png)
  <use obrazky/aplikace_vizualizace.png>
 Package pdftex.def Info: obrazky/aplikace_vizualizace.png used on input line 423.
-(pdftex.def)             Requested size: 421.91507pt x 439.3051pt.
+(pdftex.def)             Requested size: 387.13503pt x 433.50842pt.
 ) [92 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_vizualizace.png>]
 ("C:\Users\krejci\OneDrive\VUT - diplomka\text/zaver.tex") [93
 
@@ -2063,7 +2063,7 @@ m/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Pro
 blic/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/lm/lmtt12.pfb>
-Output written on sablona.pdf (109 pages, 27088035 bytes).
+Output written on sablona.pdf (109 pages, 27058576 bytes).
 PDF statistics:
  2479 PDF objects out of 2487 (max. 8388607)
  664 named destinations out of 1000 (max. 500000)
