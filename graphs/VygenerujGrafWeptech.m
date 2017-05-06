@@ -12,11 +12,11 @@ teplota = weptech(:,2);
 vlhkost = weptech(:,3);
 
 % Title
-title('Senzor teploty a vlhkosti Weptech OSMF868-A (interval 24 hodin)',...
-    'HorizontalAlignment','center',...
-    'FontWeight','bold',...
-    'FontSize',16,...
-    'FontName','CMU Serif');
+%title('Senzor teploty a vlhkosti Weptech OSMF868-A (interval 24 hodin)',...
+   % 'HorizontalAlignment','center',...
+    %'FontWeight','bold',...
+    %'FontSize',16,...
+    %'FontName','CMU Serif');
 
 % Axis Y1
 hold('on');
@@ -27,7 +27,7 @@ pl1 = plot(timestamp,teplota,'DisplayName','teplota',...
     'MarkerSize',4,...
     'Marker','o',...
     'Color',[0 0.447058826684952 0.74117648601532]);
-ylabel('Teplota [C]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
+ylabel('Teplota [C]','HorizontalAlignment','center','FontSize',13,'FontName','CMU Serif');
 ax.YMinorTick = 'on'
 ylim([17.75 27.25]);
 
@@ -39,12 +39,12 @@ pl2 = plot(timestamp,vlhkost,'DisplayName','vlhkost',...
     'MarkerSize',4,...
     'Marker','square',...
     'Color',[0.850980401039124 0.325490206480026 0.0980392172932625]);
-ylabel('Vlhkost [RV]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
+ylabel('Vlhkost [RV]','HorizontalAlignment','center','FontSize',13,'FontName','CMU Serif');
 ax.YMinorTick = 'on'
 ylim([34.75 44.25]);
 
 % Axis X
-xlabel('Cas [hh:mm]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
+xlabel('Cas [hh:mm]','HorizontalAlignment','center','FontSize',13,'FontName','CMU Serif');
 ax.XTick = 0:60:1440
 xlim([0 1440]);
 
@@ -72,7 +72,7 @@ legend1 = legend('show');
 set(legend1,'Location','north','FontSize',11,'FontName','CMU Serif');
 
 % Export
-set(gcf, 'Position', [1 1 1600 700]);
+set(gcf, 'Position', [1 1 1600 900]);
 set(gcf,'PaperPositionMode','auto');  
 set(gcf,'PaperOrientation','landscape');
 export_fig VygenerujGrafWeptech.pdf
