@@ -1,4 +1,4 @@
-% Figure
+% Globals
 figure('InvertHardcopy','off','Color',[1 1 1]);
 ax = gca;
 ax.FontName = 'CMU Serif'
@@ -61,6 +61,12 @@ ax.TickLength = [0.005 0.0035]
 legend1 = legend('show');
 set(legend1,'Location','north','FontSize',12,'FontName','CMU Serif');
 
+% Export
+h=gcf;
+set(h,'PaperPositionMode','auto');  
+set(h,'PaperOrientation','landscape');
+set(h,'Position',[1 1 1200 800]);
+print(gcf, '-dpdf', 'VygenerujGrafWeptech.pdf')
 
 
 
