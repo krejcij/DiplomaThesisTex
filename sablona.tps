@@ -17,7 +17,7 @@ Class=LaTeXView
 Document=sablona.tex
 
 [Frame0_View0,0]
-TopLine=237
+TopLine=224
 Cursor=11648
 
 [Frame1]
@@ -71,7 +71,7 @@ Class=LaTeXView
 Document=text\modul.tex
 
 [Frame3_View0,0]
-TopLine=88
+TopLine=85
 Cursor=6236
 
 [Frame4]
@@ -125,8 +125,8 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame6_View0,0]
-TopLine=238
-Cursor=11787
+TopLine=217
+Cursor=11956
 
 [Frame7]
 Flags=0
@@ -161,7 +161,7 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame8_View0,0]
-TopLine=391
+TopLine=431
 Cursor=24421
 
 [Frame9]
@@ -179,7 +179,7 @@ Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame9_View0,0]
-TopLine=353
+TopLine=369
 Cursor=21555
 
 [Frame10]
@@ -197,8 +197,8 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame10_View0,0]
-TopLine=349
-Cursor=22931
+TopLine=423
+Cursor=27038
 
 [Frame11]
 Flags=0
@@ -215,7 +215,7 @@ Class=LaTeXView
 Document=text\literatura.tex
 
 [Frame11_View0,0]
-TopLine=107
+TopLine=96
 Cursor=10303
 
 [Frame12]
@@ -233,8 +233,8 @@ Class=LaTeXView
 Document=text\prilohy.tex
 
 [Frame12_View0,0]
-TopLine=191
-Cursor=20704
+TopLine=238
+Cursor=24962
 
 [Frame13]
 Flags=0
@@ -251,7 +251,7 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame13_View0,0]
-TopLine=443
+TopLine=490
 Cursor=31227
 
 [Frame14]
