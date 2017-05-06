@@ -29,7 +29,7 @@ pl1 = plot(timestamp,teplota,'DisplayName','teplota',...
     'Color',[0 0.447058826684952 0.74117648601532]);
 ylabel('Teplota [C]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
 ax.YMinorTick = 'on'
-ylim([17.75 24.25]);
+ylim([17.75 27.25]);
 
 % Axis Y2
 yyaxis('right');

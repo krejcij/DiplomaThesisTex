@@ -29,7 +29,7 @@ pl1 = plot(timestamp,studena,'DisplayName','SA-E/15 studená voda',...
     'Color',[0 0.447058826684952 0.74117648601532]);
 ylabel('Studená voda [l]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
 ax.YMinorTick = 'on'
-ylim([38300 38390]);
+ylim([38280 38390]);
 
 % Axis Y2
 yyaxis('right');
@@ -41,7 +41,7 @@ pl2 = plot(timestamp,tepla,'DisplayName','TA-E/15 teplá voda',...
     'Color',[0.850980401039124 0.325490206480026 0.0980392172932625]);
 ylabel('Teplá voda [l]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
 ax.YMinorTick = 'on'
-ylim([31560 31680]);
+ylim([31520 31860]);
 
 % Axis X
 xlabel('Cas [hh:mm]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
