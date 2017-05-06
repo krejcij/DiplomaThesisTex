@@ -179,11 +179,11 @@ Návod pro spuštění aplikace:
 			\item Pomocí aplikace Win32DiskImager z \texttt{$\backslash$ObrazKarty$\backslash$Win32diskimager.exe} zapište obraz \texttt{$\backslash$ImageKarty$\backslash$UniPiRaspiWmBus.img} na pamětovou kartu typu MicroSD minimální velikosti 4GB.
 			\item Kartu zasuňte do jednotky UniPi Neuron a zapněte tuto jednotku. Po startu jednotky dojde k aktivaci aplikace a zachytávání WM-Bus komunikace.
 			\item Jednotka očekává přidělení IP adresy z DHCP serveru. Po přidělení IP adresy lze provádět vizualizaci zachytávaných dat pomocí aplikace na adrese \texttt{http:$\backslash$$\backslash$ip-adresa-jednotky$\backslash$}
-			\item Případně po ssh přihlášení [\texttt{pi$\backslash$raspberry}] a zadání příkazu \texttt{screen -r} lze sledovat přímo výstup aplikace v konzoli.
+			\item Případně po ssh přihlášení [\texttt{unipiraspiwmbus$\backslash$wmbusunipiraspi}] a zadání příkazu \texttt{screen -r} lze sledovat přímo výstup aplikace v konzoli.
 		\end{enumerate}
 
 	\vspace{10pt}
-Vyčítací aplikace může být spuštěna samostatně, bez přítomnosti RaspberryPi, rozšiřující desky UniPi či IQRF komunikačního modulu. Je implementován demostrační režim s předpřipravenou sadou zachycených telegramů:
+Vyčítací aplikace může být spuštěna samostatně, bez přítomnosti RaspberryPi, rozšiřující desky UniPi či IQRF komunikačního modulu. Je implementován demostrační režim s předpřipravenou sadou dříve zachycených telegramů:
 \begin{itemize}
 	\item Režim příjmu zašifrovaných telegramů modulem IQRF: 
 		\newline 

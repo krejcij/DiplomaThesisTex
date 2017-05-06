@@ -8,3 +8,5 @@
 \contentsline {lstlisting}{\numberline {7.2}Uk\IeC {\'a}zka parsov\IeC {\'a}n\IeC {\'\i } dat}{88}{lstlisting.385}
 \contentsline {lstlisting}{\numberline {7.3}Uk\IeC {\'a}zka ukl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } dat}{89}{lstlisting.396}
 \contentsline {lstlisting}{\numberline {7.4}Uk\IeC {\'a}zka exportu dat}{90}{lstlisting.407}
+\contentsline {lstlisting}{\numberline {7.5}Uk\IeC {\'a}zka vizualizace dat}{90}{lstlisting.420}
+\contentsline {lstlisting}{\numberline {7.6}Uk\IeC {\'a}zka parametrizace vizualizovan\IeC {\'y}ch dat}{91}{lstlisting.428}

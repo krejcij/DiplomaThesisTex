@@ -198,6 +198,7 @@ Jejich následnou správnou interpretací dle specifikace (zohlednění uložen�
 
 
 \section{Zajištění uložení dat}
+\label{SectionUlozeniDatabaze}
 Zachycená a naměřená data se ukládají do databáze k pozdějšímu zpracování či~vizualizaci. Zvolena byla databáze SqLite3 pro svoji jednoduchost, nenáročnost na~sytémové prostředky a možností instalace z repozitáře Raspbianu:
  
 \begin{lstlisting}[style=MyCodeBash]
@@ -221,10 +222,12 @@ Strukturu tabulek, definici sloupců a vazby mezi nimi popisuje schéma na Obr.~
 	\vspace{-10pt}
   \caption{Model zvolené SqLite 3 databáze}
 	\label{databazovy_model}
-	\vspace{-30pt}
 \end{figure}
+
+Prohlížení obsahu databáze je součástí vizualizační aplikace pod záložkou \texttt{Database explorer}.
 	
 \section{Zajištění vizualizace dat}	
+\label{SectionVizualizaceDat}
 Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Charts API~\cite{uvod_google_charts_api} běžící na webovém serveru Apache2 a generovaném pomocí PHP. Pro tyto potřeby je nutné doinstalovat následující balíčky:
  
 \begin{lstlisting}[style=MyCodeBash]
@@ -234,6 +237,8 @@ Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Chart
 	\end{lstlisting}
 
 Dále je nezbytné do umístění \texttt{$\backslash$var$\backslash$www$\backslash$html$\backslash$} nahrát zdrojové soubory visualizační aplikace. 
+
+Prohlížení vizualizovaných dat se ve visualizační aplikaci nachází pod záložkou \texttt{Graphs Explorer}.
 
 \section{Struktura aplikace}
 Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura aplikace znázorněná na Obr.~\ref{AplikaceDiagram}. Diagram je pro přehlednost odlišen barevnými bloky:
@@ -317,6 +322,7 @@ elif (sensor_manu == "BON"):
 Pokud parsování dat selže, dojde k výjimce, daný telegram je zaevidován, v jeho zpracování se již nepokračuje a aplikace se vrátí do~stavu čekání na příchod dalšího telegramu.
 
 \subsection{Uložení dat}
+\label{SectionUlozeniDatabaze2}
 Správně interpretované hodnoty doplněné o časovou značku a informaci o měřícím zařízení jsou zapsány do databáze. Do této databáze se ukládají všechny příchozí validně zpracované telegramy, určené k pozdějšímu zpracování. Obohacení o časovou značku a údaje o zařízení je možné později tyto data efektivně třídit či v nich vyhledávat. Ukázka implementace je v Kódu~\ref{CodeStore}.
 
 \vspace{10pt}
@@ -332,13 +338,19 @@ def sql(query):
 sql("INSERT INTO TELEGRAMS VALUES ('"+time.strftime("%Y-%m-%d %H:%M")+"', '"+parsedstring[0:4]+"', '"+parsedstring[4:34]+"', '"+parsedstring[34:-4]+"', '"+parsedstring[-4:]+"','"+AES_IQRF_DEFAULT+"')")		
 \end{lstlisting}
 
-\vspace{-20pt}
+Prohlížení obsahu databáze je součástí vizualizační aplikace pod záložkou \texttt{Database explorer}.
+
+
 \subsection{Ošetření výjimek}
+\label{SectionUlozeniLogu}
 Aplikace má ošetřeny dva chybové stavy. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a~následně přejde do stavu čekání na příchod dalšího telegramu.
+
 Všechny tyto chyby jsou ukládány do příslušné tabulky v databázi, do chybového logu a taktéž sdělovány uživateli do konzole.
+Prohlížení obsahu chybových logů je součástí vizualizační aplikace pod záložkou \texttt{Logs explorer}.
+
 
 \section{Export dat}
-V případě potřeby je vizualizační aplikace (viz~Kód~\ref{CodeExport}) schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. Vzhledem k~časové náročnosti (dáno odezvou Google~Charts~API~\cite{uvod_google_charts_api}) při daném počtu naměřených hodnot (pro čidlo vysílající každou minutu je za den nasbíráno 1440 hodnot, jejichž export zabere cca 3 hodiny) je tato funkcionalita implementována spíše jako experimentální pro jednorázové exporty. V praxi se při automatických exportech velkých objemů naměřených hodnot projevila jako náročná na výpočetní čas.
+V případě potřeby je vizualizační aplikace (viz~Kód~\ref{CodeExport}) schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. 
 
 \begin{lstlisting}[caption={Ukázka exportu dat},captionpos=b,label=CodeExport,style=MyCodePython]
 from oauth2client.service_account import ServiceAccountCredentials
@@ -353,13 +365,77 @@ LIST = DOKUMENT.add_worksheet(list_name, 1, 3)
 for value in values:
 	LIST.append_row([value["DATETIME"], value["VAL1"], value["VAL2"]])
 \end{lstlisting}
+\vspace{-10pt}
+
+Vzhledem k~časové náročnosti (dáno odezvou Google~Charts~API~\cite{uvod_google_charts_api}) při daném počtu naměřených hodnot (pro čidlo vysílající každou minutu je za den nasbíráno 1440 hodnot, jejichž export zabere cca 3 hodiny) je tato funkcionalita implementována spíše jako experimentální pro jednorázové exporty. V praxi se při automatických exportech velkých objemů naměřených hodnot projevila jako náročná na výpočetní čas.
 
 \section{Vizualizace dat}
-Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API~\cite{uvod_google_charts_api}. To~umožňuje interaktivní vykreslení a vyčítání uložených hodnot zachycených daným senzorem za vybraný časový úsek.
+\label{SectionVizualizaceDat2}
+Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API (viz.~Kód~\ref{CodeVisualise}). 
 
-\colorbox[rgb]{0.2,0.8,0.2}{\textcolor[rgb]{1,0,0}{\textbf{tady jeste doplnim cca pulku az stranku o dane vizualizaci}}}
+\begin{lstlisting}[caption={Ukázka vizualizace dat},captionpos=b,label=CodeVisualise,style=MyCodePython]
+//Load GoogleAPI and corechart package
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);     
 
-\colorbox[rgb]{0.2,0.8,0.2}{\textcolor[rgb]{1,0,0}{\textbf{az nachytam nejaka data a vygeruji nejake kloudne grafy}}}
+// Create and draw our chart
+var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+\end{lstlisting}
+
+To~umožňuje interaktivní vykreslení a vyčítání uložených hodnot zachycených daným senzorem za vybraný časový úsek. Parametry vykreslení definuje funkce pro vykreslení grafu, zobrazená v Kódu~\ref{CodeVisualiseFunction}.
+
+\begin{lstlisting}[caption={Ukázka parametrizace vizualizovaných dat},captionpos=b,label=CodeVisualiseFunction,style=MyCodePython]
+// Define values and options of the graph
+function drawChart() {
+	var data = google.visualization.arrayToDataTable([
+		['Timestamp', 'Temperature (C)', 'Humidity (%RH)'],
+		['2017-04-09 18:10',20.6,35.8],
+		['2017-04-09 18:11',20.5,36.0],
+		['2017-04-09 18:12',20.8,35.9],
+		['2017-04-09 18:13',20.9,36.1],
+		['2017-04-09 18:14',20.6,36.0],
+		['2017-04-09 18:15',20.7,36.2],
+		['2017-04-09 18:16',20.6,35.9]
+		['2017-04-09 18:17',20.6,36.0],
+		['2017-04-09 18:18',20.7,36.2],
+		['2017-04-09 18:19',20.6,35.9]]);
+
+  var options = { 
+		enableInteractivity: true,
+		legend: { position: 'top',textStyle:{ fontSize: 12, bold: true } },
+		hAxis: {title: 'Measure time', format: 'mm-dd HH:MM', textStyle:{ fontSize: 12, bold: true },titleTextStyle:{ fontSize: 14, bold: true, italic: false}},
+		vAxes: {
+			0:{title: 'Temperature', format:'##,##C', textStyle:{ fontSize: 12, bold: true },titleTextStyle:{ fontSize: 14, bold: true, italic: false },gridlines:{color: 'gray'}},
+			1:{title: 'Humidity', format:'#,##%', textStyle:{ fontSize: 12, bold: true },titleTextStyle:{ fontSize: 14, bold: true, italic: false },gridlines:{color: 'gray'}}
+		},
+		series: {0: {pointShape: 'circle',targetAxisIndex:0 }, 1: { pointShape: 'circle',targetAxisIndex:1 }, 2: {pointShape: 'circle',targetAxisIndex:0 }
+	}          
+};
+\end{lstlisting}	
+
+\newpage
+
+Snímek obrazovky vizualizační aplikace je uveden na Obr.~\ref{SectionVisualizaceDat}.
+
+ \begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[scale=0.55]{obrazky/aplikace_vizualizace}
+  \end{center}
+	\vspace{-10pt}
+	\caption{Snímek obrazovky vizualizační aplikace}
+	\label{SectionVisualizaceDat}
+\end{figure}
+
+Záhlaví stránky obsahuje rozcestník:
+\begin{itemize}
+	\item Graphs explorer - Samotná vizualizační aplikace, popsaná v Kap.~\ref{SectionVizualizaceDat} a~\ref{SectionVizualizaceDat2}.
+	\item Database explorer - Prohlížeč obsahu databáze, popsaný v Kap.~\ref{SectionUlozeniDatabaze} a~\ref{SectionUlozeniDatabaze2}.
+	\item Logs explorer - Prohlížeč průběžných i chybových logů, zmíněný v Kap.~\ref{SectionUlozeniLogu}.
+\end{itemize}
 
 
- Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
+ Stránka je rozdělena do dvou částí. V první části stránky se nachází formulář s výběrem čidla, intervalu pro zobrazení a dalších možných parametrů, pomocí kterých lze filtrovat data k vizualizaci. Pod formulářem se nachází již vykreslený graf.
+
+
+Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
