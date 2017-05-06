@@ -2,6 +2,9 @@
 figure('InvertHardcopy','off','Color',[1 1 1]);
 ax = gca;
 ax.FontName = 'CMU Serif'
+set(0,'defaulttextinterpreter','latex')
+set(0,'DefaultTextFontname', 'CMU Serif')
+set(0,'DefaultAxesFontName', 'CMU Serif')
 
 % Data
 timestamp = weptech(:,1);
@@ -9,7 +12,7 @@ teplota = weptech(:,2);
 vlhkost = weptech(:,3);
 
 % Title
-title('Teplota a vlhkost zachycená èidlem Weptech OSMF86-A za 24 hodin',...
+title('Teplota a vlhkost zachycená pomocí Weptech OSMF868-A za 24 hodin',...
     'HorizontalAlignment','center',...
     'FontWeight','bold',...
     'FontSize',16,...
@@ -41,9 +44,9 @@ ax.YMinorTick = 'on'
 ylim([34.75 44.25]);
 
 % Axis X
-xlabel('Èas mìøení [Minuty]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
-ax.XTick = 0:60:1433
-xlim([0 1433]);
+xlabel('Cas [minuty]','HorizontalAlignment','center','FontSize',12,'FontName','CMU Serif');
+ax.XTick = 0:60:1440
+xlim([0 1440]);
 
 % Grid
 box('on');
@@ -59,14 +62,10 @@ ax.TickLength = [0.005 0.0035]
 
 % Legend
 legend1 = legend('show');
-set(legend1,'Location','north','FontSize',12,'FontName','CMU Serif');
+set(legend1,'Location','north','FontSize',11,'FontName','CMU Serif');
 
 % Export
-h=gcf;
-set(h,'PaperPositionMode','auto');  
-set(h,'PaperOrientation','landscape');
-set(h,'Position',[1 1 1200 800]);
-print(gcf, '-dpdf', 'VygenerujGrafWeptech.pdf')
-
-
-
+set(gcf, 'Position', [1 1 1200 800]);
+set(gcf,'PaperPositionMode','auto');  
+set(gcf,'PaperOrientation','landscape');
+export_fig VygenerujGrafWeptech.pdf
