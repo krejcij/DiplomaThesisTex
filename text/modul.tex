@@ -10,7 +10,7 @@ Modul IQRF TR-72DA-WMB je bezdrátový komunikační modul velikosti SIM karty z
  \begin{figure}[!ht]
 \vspace{-1,pt}
   \begin{center}
-    \includegraphics[scale=0.76]{obrazky/modul_modul}
+    \includegraphics[scale=0.80]{obrazky/modul_modul}
   \end{center}
 	\vspace{-20pt}
   \caption{Modul IQRF TR-72DA-WMB \cite{ModulIQRF}}
@@ -90,7 +90,6 @@ S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož 
 		
 Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i k samotné komunikaci s modulem. Každý příkaz začíná znakem \texttt{\textgreater}. Každá zpráva odpověďi začíná znakem \texttt{\textless}. Každému příkazu musí předcházet budící znak \texttt{NULL (0x00)} následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem \texttt{CR (0x0D)}. 
 
-\newpage
 Obecná struktura~\cite{ModulIQRF}~paketu příkazu je	\texttt{>[CC][RW][DATA][CR],} kde CC je jednobajtový kód daného příkazu, RW je jednobajtový příznak zápisu (symbol dvojtečky) či čtení dat (symbol otazníku) dat, DATA jsou zapisovaná data, pokud se jedná o zápis a CR je znak ukončení řádku.
 
 Obecná skruktura odpovědi je \texttt{<[DATA][CR]}, kde DATA obsahuje přenášená data či návratové kódy (OK pro správné dokončení příkazu, ERR1 pro chybu syntaxe a ERR2 pro neplatnou vstupní hodnotu). Některé bajty jsou kódovány v šestnáckové soustavě či využívají uložení BigEndian.

@@ -48,7 +48,7 @@ Protokol podporuje několik režimů přenosu, lišících se dle požadavků na
 \centering
 \caption{Režimy přenosu WM-Bus protokolu~\cite{WmbusTables}}
 \label{TableRezimy}
-\resizebox{\textwidth}{!}{%
+\resizebox{0.85\textwidth}{!}{%
 \begin{tabular}{|c|l|l|l|l|l|}
 \hline
 \textbf{Mód} & \multicolumn{1}{c|}{\textbf{Mód přenosu}} & \multicolumn{1}{c|}{\textbf{Směr}} & \multicolumn{1}{c|}{\textbf{Frekvence}} & \multicolumn{1}{c|}{\textbf{Kódování}} & \multicolumn{1}{c|}{\textbf{Rychlost}} \\ \hline \hline
@@ -203,6 +203,7 @@ Princip kódování 3 ze 6 (viz Tab.~\ref{Table3out6}) spočívá v tom, že ka�
 \centering
 \caption{Tabulka kódování 3 ze 6 \cite{WMencodeing}}
 \label{Table3out6}
+\resizebox{0.75\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \textbf{NRZ kód} & \textbf{Desítkově} & \textbf{3 ze 6} & \textbf{Desítkově} & \textbf{Počet změn v kódu} \\ \hline \hline
@@ -222,7 +223,7 @@ Princip kódování 3 ze 6 (viz Tab.~\ref{Table3out6}) spočívá v tom, že ka�
 1101             & 13                 & 110001              & 49                 & 2                          \\ \hline
 1110             & 14                 & 110010              & 50                 & 3                          \\ \hline
 1111             & 15                 & 101001              & 41                 & 4                          \\ \hline \hline
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 \subsection{Linková vrstva Wireless M-Bus}
@@ -251,6 +252,8 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 	\item Používá se pro zasílání základních příkazů.
 \end{itemize}
 
+\newpage
+
 \subsubsection{M-Pole}
 \begin{itemize}
 	\item Obsahuje identifikaci výrobce zařízení.
@@ -263,7 +266,6 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 				\end{centerverbatim}
 			\end{figure}
 \end{itemize}
-\vspace{-30pt}
 
 \subsubsection{A-Pole}
 \begin{itemize}
@@ -280,9 +282,10 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 
 			\begin{table}[!ht]
 			\centering
-			\vspace{-10pt}
+			%\vspace{-10pt}
 			\caption{Identifikace typu zařízení}
 			\label{def_device_type_identification}
+			\resizebox{0.75\textwidth}{!}{%
 			\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
 			\textbf{Hodnota} & \textbf{Bit 16}   & \textbf{Bit 15}   & \textbf{Bit 8}   & \textbf{Bit 7}  & \textbf{Médium  }                      \\ \hline\hline
@@ -302,11 +305,11 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 			D           & 1        & 1        & 0       & 1      & Voda 2            \\ \hline
 			E           & 1        & 1        & 1       & 0      & Tepelné čerpadlo 2           \\ \hline
 			F           & 1        & 1        & 1       & 1      & Rezervováno                 \\ \hline\hline
-			\end{tabular}
+			\end{tabular}}
 			\vspace{-5pt}
 			\end{table}
 
-\vspace{-10pt}
+
 \subsubsection{CI-Pole}
 \begin{itemize}
 	\item Určuje typ přenášených dat.
@@ -315,9 +318,9 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 
 		\begin{table}[!ht]
 		\centering
-		\vspace{-10pt}
 		\caption{Kódování CI-Pole}
 		\label{def_ci_pole}
+		\resizebox{0.65\textwidth}{!}{%
 		\begin{tabular}{|c|c|c|}
 \hline
 \textbf{Hodnota} & \multicolumn{1}{c|}{\textbf{Direction}} & \multicolumn{1}{c|}{\textbf{Protokol}} \\ \hline \hline
@@ -345,8 +348,7 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 7Dh               & Odpověd zařízení                     & DLMS                                         \\ \hline
 7Eh               & Odpověd zařízení                     & SML                                           \\ \hline
 7Fh               & Odpověd zařízení                     & SML                                           \\ \hline \hline
-\end{tabular}
-\vspace{-10pt}
+\end{tabular}}
 \end{table}
 
 \subsubsection{CRC}
@@ -354,6 +356,8 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 	\item CRC obsahuje kontrolní součet pro kontrolu správnosti přenosu. 
 	\item Jako kontrolní polynom se dle specifikace používá x\textsuperscript{16} + x\textsuperscript{13} + x\textsuperscript{12} + x\textsuperscript{11} + x\textsuperscript{10} + x\textsuperscript{8} +\textsuperscript{6} + x\textsuperscript{5} + x\textsuperscript{2} + 1.
 \end{itemize}
+
+\newpage
 
 \subsubsection{RSSI}
 \begin{itemize}
@@ -394,9 +398,9 @@ V souladu se specifikací OMS~(Open Metering Standard)~3.0.1~\cite{NormaOMS}, kt
 
 				\begin{table}[!ht]
 				\centering
-				\vspace{-10pt}
 				\caption{Hodnoty Status pole}
 				\label{def_status}
+				\resizebox{0.55\textwidth}{!}{%
 				\begin{tabular}{|c|c|l|}
 				\hline
 				\textbf{Bit}       & \textbf{Hex hodnota} & \textbf{Význam}        \\ \hline \hline
@@ -410,7 +414,7 @@ V souladu se specifikací OMS~(Open Metering Standard)~3.0.1~\cite{NormaOMS}, kt
 				5                  & 20h                  & Specifický kód výrobce \\ \hline
 				6                  & 40h                  & Specifický kód výrobce \\ \hline
 				7                  & 80h                  & Specifický kód výrobce \\ \hline \hline
-				\end{tabular}
+				\end{tabular}}
 				\end{table}
 
 
@@ -448,17 +452,19 @@ Rozšiřující bit pole určuje jaký blok bajtů následuje po DIF. Možnosti 
 
 \begin{table}[!ht]
 \centering
-\caption{Kódování rozšiřujícího bitu DIF pole}
+\caption{Kódování rozšiřujícího bitu DIF a VIF pole}
 \label{KodovaniRozsBituDIFu}
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Bit} & \textbf{Další informace je obsažena v} \\ \hline \hline
-0            & DIF                                    \\ \hline
-1            & DIFE                                   \\ \hline \hline
+0            & DIF (VIF)                                    \\ \hline
+1            & DIFE  (VIFE)                                  \\ \hline \hline
 \end{tabular}
 \end{table}
 
 Funkční pole definuje typ přenášené hodnoty z hlediska její aktuálnosti či limitnosti. Možnosti jsou shrnuty v Tab.~\ref{KodovaniFunkPoleDIFu}.
+
+\newpage
 
 \begin{table}[!ht]
 \centering
@@ -512,6 +518,8 @@ VIB definuje typ přenášené hodnoty a skládá se z VIF a z nepovinného VIFE
 \subsubsection{Value Information Field (VIF)}
 VIF definuje veličinu přenášených dat a má strukturu dle Tab.~\ref{KodovaniVIFu}.
 
+\newpage
+
 \begin{table}[!ht]
 \centering
 \caption{Kódování VIF Pole}
@@ -523,19 +531,19 @@ Rozšiřující bit & \multicolumn{7}{c|}{Data}                                 
 \end{tabular}
 \end{table}
 
-Rozšiřující bit pole určuje jaký blok bajtů následuje po VIF. Možnosti jsou shrnuty v Tab.~\ref{KodovaniRozsBituVIFu}.
+Rozšiřující bit pole určuje jaký blok bajtů následuje po VIF. Možnosti jsou stejné jako v případě rozšiřujícího bitu DIFu (viz Tab.~\ref{KodovaniRozsBituDIFu}).
 
-\begin{table}[!ht]
-\centering
-\caption{Kódování rozšiřujícího bitu VIF pole}
-\label{KodovaniRozsBituVIFu}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Bit} & \textbf{Další informace je obsažena v} \\ \hline \hline
-0            & VIF                                    \\ \hline
-1            & VIFE                                   \\ \hline \hline
-\end{tabular}
-\end{table}
+%\begin{table}[!ht]
+%\centering
+%\caption{Kódování rozšiřujícího bitu VIF pole}
+%\label{KodovaniRozsBituVIFu}
+%\begin{tabular}{|c|c|}
+%\hline
+%\textbf{Bit} & \textbf{Další informace je obsažena v} \\ \hline \hline
+%0            & VIF                                    \\ \hline
+%1            & VIFE                                   \\ \hline \hline
+%\end{tabular}
+%\end{table}
 
 Data pole určuje datový typ přenášené hodnoty. Možnosti jsou shrnuty v Tab.~\ref{KodovaniDataPoleVIFu}.
 
@@ -575,10 +583,12 @@ E110 1111                             & Rezervováno                            
 \multirow{2}{*}{E111 01nn}            & \multirow{2}{*}{Aktuální trvání}        &                                                                                                                           & \multirow{2}{*}{}                   \\
                                       &                                           &                                                                                                                           &                                     \\ \hline
 E111 1000                             & Výrobní číslo                            &                                                                                                                           &                 \\ \hline
-E111 1001                             & Rozšířená identifikace                &                                                                                                                           & Datový typ C                    \\ \hline
-E111 1010                             & Adresa sběrnice                               &                                                                                                                           & Datový typ C                    \\ \hline \hline
+%E111 1001                             & Rozšířená identifikace                &                                                                                                                           & Datový typ C                    \\ \hline
+%E111 1010                             & Adresa sběrnice                               &                                                                                                                           & Datový typ C                    \\ \hline \hline
 \end{tabular}}
 \end{table}
+
+\newpage
 
 \subsubsection{Value Information Field Extension (VIFE)}
 VIFE obsahují upřesnění, doplňující informaci či přenos chybového stavu dané položky. Jejich kompletní přehled je uveden ve specifikaci protokolu WM-Bus~\cite{WmBusSpecka}.
@@ -599,7 +609,7 @@ Pole \texttt{Data Value} již obsahuje přenášenou hodnotu, definovanou dle DI
 
 
 \subsubsection{Datové typy F a G}
-V protokolu Wireless M-Bus je datum kódováno ve formátu G, viz Tab.~\ref{KodovaniDataG} a datum i čas ve formátu F, viz Tab.~\ref{KodovaniDataF}.  
+V protokolu Wireless M-Bus je datum kódováno ve formátu G, kombinace datumu i času ve formátu F, viz Tab.~\ref{KodovaniDataF}.  
 
 \begin{table}[!ht]
 \centering
@@ -714,19 +724,13 @@ Pro šifrovaný přenos dat v protokolu WM-Bus se využívá AES, kontrétně m�
 \label{KapitolaInicializacniVektor}
 Inicializační vektor má délku 16 bajtů (128 bitů, odtud označení AES-128) a~v~případě protokolu WM-Bus je tvořený dynamicky z nešifrovaných bajtů polí paketu, způsobem popsaným v Tab.~\ref{TabulkaInicializacniVektor} a implemetovaných dle Kódu~\ref{CodeIV}.
 
-\begin{lstlisting}[caption={Sestavení inicializačního vektoru},captionpos=b,label=CodeIV,style=MyCodePython]
-# Build Initialization Vector from incoming packet data
-device = parsedstring[8:24].upper()
-access = str(parsedstring[26:28]).upper()
-AES_IV = binascii.unhexlify(device + access * 8)
-\end{lstlisting}
-
 \begin{table}[!ht]
-	%\vspace{-30pt}
+\vspace{-5pt}
   \caption{Formát inicializačního vektoru}
 	\label{TabulkaInicializacniVektor}
-	\vspace{-10pt}
+	\vspace{-5pt}
 	\begin{center}
+	\resizebox{0.40\textwidth}{!}{%
 \begin{tabular}{|c|c|l|}
 \hline
 \textbf{Bit} & \textbf{Obsah}                 & \textbf{Význam}                        \\ \hline \hline
@@ -746,14 +750,19 @@ LSB          & \multirow{2}{*}{M-Pole}        & \multirow{2}{*}{Identifikace vý
 13           &                                &                                        \\ \cline{1-2}
 14           & \multirow{2}{*}{Access Number} &                                        \\ \cline{1-1}
 MSB          &                                &                                        \\ \hline \hline
-\end{tabular}
-\vspace{-20pt}
+\end{tabular}}
 \end{center}
 \end{table}
+\vspace{-20pt}
 
 První 2 bajty obsahují přidělené identifikační údaje výrobce, další čtyři obsahují sériové číslo daného zařízení, následující dva obsahují verzi zařízení a zbylých osm Bajtů je tvořeno opakováním se přístupového čísla. Vzhledem k faktu, že přístupové číslo se s každým vysláním telegramu změní, je nutné inicializační vektor přepočítat pro každý přijatý paket. Tím je zajištěna dynamičnost šifrování danou metodou.
 
-\newpage{}
+\begin{lstlisting}[caption={Sestavení inicializačního vektoru},captionpos=b,label=CodeIV,style=MyCodePython]
+# Build Initialization Vector from incoming packet data
+device = parsedstring[8:24].upper()
+access = str(parsedstring[26:28]).upper()
+AES_IV = binascii.unhexlify(device + access * 8)
+\end{lstlisting}
 
 
 \subsection{Šifrovací klíč}
@@ -769,6 +778,7 @@ Aplikační vrstva protokolu WM-Bus obsahuje položku \texttt{ConfigurationWord}
 \centering
 \caption{Význam bitů pole ConfigurationWord}
 \label{TableConfigurationWord}
+\resizebox{0.50\textwidth}{!}{%
 \begin{tabular}{|c|c|l|}
 \hline
 \textbf{Bit} & \textbf{Označení} & \textbf{Význam}        \\ \hline \hline
@@ -788,7 +798,7 @@ MSB          & B                 & Obousměrnost           \\ \hline
 2            & C                 & Obsah telegramu        \\ \hline
 1            & H                 & Počítač skoků          \\ \hline
 LSB          & H                 & Počítač skoků          \\  \hline  \hline
-\end{tabular}
+\end{tabular}}
 %\vspace{-5pt}
 \end{table}
 
@@ -814,8 +824,6 @@ Pro dešifrování přijatých dat je nutná znalost šifrovacího algoritmu, š
 	\label{SchemaAESobecne}
 	\vspace{-20pt}
 \end{figure}
-
-\newpage{}
 
 \begin{lstlisting}[caption={Implementace AES},captionpos=b,label=CodeCrypto,style=MyCodePython]
 from Crypto.Cipher import AES

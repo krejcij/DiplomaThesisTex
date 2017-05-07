@@ -57,43 +57,42 @@ Telegram má specifickou základní strukturu popsanou v Tab.~\ref{TabulkaTelegr
 \caption{Telegram ze zařízení Weptech 868A~\cite{CidloWeptech}}
 \label{TabulkaTelegramWeptech}
 %\resizebox{\textwidth}{!}{%
-\resizebox{.42\paperheight}{!}{%
+\resizebox{.35\paperheight}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
-\textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
-L-Field            & Délka telegramu                                & 1Eh              \\ \hline
-C-Field            & Typ telegramu                                  & 44h              \\ \hline
-M-Field            & Výrobce zařízení                               & B0h              \\ \hline
-M-Field            & Výrobce zařízení                               & 5Ch              \\ \hline
-A-Field            & Sériové číslo                                  & 11h              \\ \hline
-A-Field            & Sériové číslo                                  & 47h              \\ \hline
-A-Field            & Sériové číslo                                  & 15h              \\ \hline
-A-Field            & Sériové číslo                                  & 08h              \\ \hline
-A-Field            & Verze zařízení                                 & 01h              \\ \hline
-A-Field            & Typ zařízení                                   & 1Bh              \\ \hline
-Ci-pole            & Odpověd od zařízení                            & 7Ah              \\ \hline
-Access Number      & Číslo přístupu                                 & 41h              \\ \hline
-Status             & Status zařízení                                & 00h              \\ \hline
-Configuration word & Konfigurační řetězec AES                       & 00h              \\ \hline
-Configuration word & Konfigurační řetězec AES                       & 00h              \\ \hline
-AES verification   & Ověření AES                                  & 2Fh              \\ \hline
-AES verification   & Ověření AES                                  & 2Fh              \\ \hline
-DR1                & DIF: 4 cifry BCD                               & 0Ah              \\ \hline
-DR1                & VIF: teplota ve stupních Celsia na mínus první & 66h              \\ \hline
-DR1                & Hodnota teploty                                & 99h              \\ \hline
-DR1                & Hodnota teploty                                & 01h              \\ \hline
-DR2                & DIF: 4 cifry BCD                               & 0Ah              \\ \hline
-DR2                & VIF: První rozšiřovací tabulka                 & FBh              \\ \hline
-DR2                & VIFE: vlhkost procentech na mínus první        & 1Ah              \\ \hline
-DR2                & Hodnota relativní vlhkosti                               & 93h              \\ \hline
-DR2                & Hodnota relativní vlhkosti                               & 02h              \\ \hline
-DR3                & DIF: 16bit integer/binary                      & 02h              \\ \hline
-DR3                & VIF: Druhá rozšiřovací tabulka                 & FDh              \\ \hline
-DR3                & VIFE0: Chybové stavy                           & 97h              \\ \hline
-DR3                & VIFE1: Norma 																	& 1Dh              \\ \hline
-DR3                & Příznak sabotáže                               & 00h              \\ \hline
-DR3                & Příznak vybité baterie                         & 00h              \\ \hline
-Fill               & Výplňové byty (13x)                                 & 2Fh              \\ \hline \hline
+\textbf{Pole} & \textbf{Popis} & \textbf{Hodnota} \\ \hline \hline
+ L-Field & Délka telegramu & 1Eh  \\ \hline
+ C-Field & Typ telegramu & 44h  \\ \hline
+ \multirow{2}{*}{M-Field} & \multirow{2}{*}{Výrobce zařízení} & B0h   \\ \cline{3-3} 
+  &  & 5C \\ \hline 
+  \multirow{6}{*}{A-Field} & \multirow{4}{*}{Sériové číslo} & 11h  \\ \cline{3-3} 
+  &  & 47h  \\ \cline{3-3}  
+  &  & 15h  \\ \cline{3-3} 
+ &  & 08h  \\ \cline{2-3} 
+ & Verze zařízení & 01h \\ \cline{2-3} 
+ & Typ zařízení & 1Bh  \\ \hline
+ CI-Field & Odpověd zařízení & 7Ah  \\ \hline
+ Access Number & Číslo přístupu & 41h \\ \hline
+ Status & Status zařízení & 00h \\ \hline
+ \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Configuration\\ Word \end{tabular}} & \multirow{2}{*}{Šifrování AES} & 00h  \\ \cline{3-3} 
+  &  &  00h \\ \hline
+ \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}AES\\ Verification \end{tabular}} & \multirow{2}{*}{Ověření AES} & 2Fh \\ \cline{3-3} 
+  & &  2Fh \\ \hline
+ \multirow{4}{*}{1. data block} & DIF: 2 cifry BCD (určení teploty) & 0Ah  \\ \cline{2-3} 
+  & VIF: Teplota v °C\textsuperscript{-1} & 66h  \\ \cline{2-3} 
+  & \multirow{2}{*}{DATA: hodnota teploty} & 99h \\ \cline{3-3} 
+  &  & 01h  \\ \hline
+ \multirow{4}{*}{2. data block} & DIF: 2 cifry BCD (určení vlhkosti) & 0Ah  \\ \cline{2-3} 
+  & VIF: Relativní vlhkost v \%\textsuperscript{-1} & 1Ah  \\ \cline{2-3} 
+  & \multirow{2}{*}{DATA: hodnota vlhkosti} & 93h  \\ \cline{3-3} 
+  &  & 02h   \\ \hline
+ \multirow{5}{*}{3. data block} & DIF: datový typ & FDh \\ \cline{2-3} 
+  & DIFE: rozš. tabulka & 02h \\ \cline{2-3} 
+  & VIFE: Norma & 1Dh \\ \cline{2-3} 
+  & VIFE: Příznak sabotáže & 00h  \\ \cline{2-3} 
+  & VIFE: Příznak baterie & 00h \\ \hline
+ CRC & Kontrolní součet & 87h  \\ \hline
+ RSSI & Síla přij. signálu& 9Eh  \\ \hline \hline
 \end{tabular}}
 \end{table}
 
@@ -114,13 +113,14 @@ Některé z položek je potřeba blíže vysvětlit:
 
 \subsubsection{Nastavení čidla}
 Čidlo má k dispozici několik nastavení. Některé z nich lze nastavit pomocí čtyř přepínačů DIP (Dual Inline Package) na desce plošných spojů.
-První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná mezí módem vysílání S (poloha ON) a módem T (poloha OFF), třetí a čtvrtý přpínač určují interval zasílání telegramu, jejich nastavení shrnuje Tab.~\ref{TablukaDIP}.
+První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná mezi módem vysílání S (poloha ON) a módem T (poloha OFF), třetí a čtvrtý přepínač určuje interval zasílání telegramu, jejich nastavení shrnuje Tab.~\ref{TablukaDIP}.
 
 
 \begin{table}[!ht]
 \centering
 \caption{Konfigurace intervalu zasílání pomocí DIP přepínače~\cite{CidloWeptech}}
 \label{TablukaDIP}
+\resizebox{.6\textwidth}{!}{%
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Interval zasílání} & přepínač DIP 3 & přepínač DIP 4 \\ \hline \hline
@@ -128,7 +128,7 @@ První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná 
 5 minut & OFF & ON \\ \hline
 10 minut & ON & OFF \\ \hline
 15 minut & OFF & OFF \\ \hline \hline
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 Jiné hodnoty mohou být nastaveny pouze během výroby daného zařízení, viz Tab.~\ref{TablukaSETUP}.
@@ -137,6 +137,7 @@ Jiné hodnoty mohou být nastaveny pouze během výroby daného zařízení, viz
 \centering
 \caption{Přehled nastavení čidla \cite{CidloWeptech}}
 \label{TablukaSETUP}
+\resizebox{.8\textwidth}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{Parametr} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{\begin{tabular}[c]{@{}c@{}}DIP přepínač\end{tabular}} \\ \hline \hline
@@ -147,7 +148,7 @@ Transmission interval & \begin{tabular}[c]{@{}l@{}}Interval je výrobcem konfigu
 %Address & \begin{tabular}[c]{@{}l@{}}Adresa zařízení je výrobcem udaná \\ hodnota, obsahující identifikaci \\ výrobce „WEP“, sériového číslo čidla, \\ verzi zařízení (1) a typ \\ zařízení (1Bh - pokojové čidlo)\end{tabular} &  \\ \hline
 %Tamper & \begin{tabular}[c]{@{}l@{}}Odezva od čidla pro otevření \\ boxu může být povolena či \\ zakázána, samotné zařízení \\ existuje i ve verzích bez \\ tohoto čidla.\end{tabular} & \multicolumn{1}{l|}{} \\ \hline
 %Config & \begin{tabular}[c]{@{}l@{}}Změna nastavení pomocí DIP \\ přepínače může být povolena \\ či zakázána, samotné zařízení \\ existuje i ve verzích bez\\  tohoto přepínače.\end{tabular} & \multicolumn{1}{l|}{} \\ \hline
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 
@@ -190,47 +191,47 @@ Modul Bonega je bezdrátové čidlo podporující protokol Wireless M-Bus. Jedn�
 Zařízení vysílá postupně dva telegramy, s rozlišením šestým bajtem adresy zařízení, jeden pro vodoměr teplé vody a druhý pro vodoměr studené vody.
 Telegram má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegram2}~\cite{CidloBonega}:
 
+\vspace{-10pt}
+
 \begin{table}[!ht]
 \centering
 \caption{Telegram z modulu Bonega~\cite{CidloBonega}}
 %\resizebox{\textwidth}{!}{%
-\resizebox{.43\paperheight}{!}{%
+\resizebox{.35\paperheight}{!}{%
 \label{TabulkaTelegram2}
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
 L-Field            & Délka telegramu                                & 1Eh              \\ \hline
 C-Field            & Typ telegramu                                  & 44h              \\ \hline
-M-Field            & Výrobce zařízení                               & B0h              \\ \hline
-M-Field            & Výrobce zařízení                               & 5Ch              \\ \hline
-A-Field            & Sériové číslo                                  & 11h              \\ \hline
-A-Field            & Sériové číslo                                  & 47h              \\ \hline
-A-Field            & Sériové číslo                                  & 15h              \\ \hline
-A-Field            & Sériové číslo                                  & 08h              \\ \hline
-A-Field            & Verze zařízení                                 & 01h              \\ \hline
-A-Field            & Typ zařízení                                   & 1Bh              \\ \hline
-Ci-pole            & Odpověd od zařízení                            & 7Ah              \\ \hline
+\multirow{2}{*}{M-Field} & \multirow{2}{*}{Výrobce zařízení}        & 09h              \\ \cline{3-3}
+                   &                                                & EEh              \\ \hline
+\multirow{6}{*}{A-Field}& \multirow{4}{*}{Sériové číslo}            & 11h              \\ \cline{3-3}
+                   &                                                & 47h              \\ \cline{3-3}
+                   &                                                & 15h              \\ \cline{3-3}
+                   &                                                & 08h              \\ \cline{2-3}
+                   & Verze zařízení                                 & 01h              \\ \cline{2-3}
+                   & Typ zařízení                                   & 1Bh              \\ \hline
+CI-Field           & Odpověd zařízení                            & 7Ah              \\ \hline
 Access Number      & Číslo přístupu                                 & 41h              \\ \hline
 Status             & Status zařízení                                & 00h              \\ \hline
-Signature field 	 & Konfigurační řetězec AES                       & 00h              \\ \hline
-Signature field    & Konfigurační řetězec AES                       & 00h              \\ \hline
-Data						   & Ověření AES                                    & 2Fh              \\ \hline
-Data						   & Ověření AES                                    & 2Fh              \\ \hline
-Data               & DIF: 2 cifry BCD (určení formátu průtoku)      & 04h              \\ \hline
-Data               & VIF: Objemový průtok v m krychlových na mínus první & 13h         \\ \hline
-Data               & Hodnota průtoku                               & 99h               \\ \hline
-Data               & Hodnota průtoku                               & 99h               \\ \hline
-Data               & Hodnota průtoku                               & 99h               \\ \hline
-Data               & Hodnota průtoku                               & 99h               \\ \hline
-Data               & DIF: 2 cifry BCD (určení formátu času)         & 6Dh              \\ \hline
-Data               & DIF: 2 cifry BCD                               & 6Dh              \\ \hline
-Data               & Čas odeslání měření                           & 99h               \\ \hline
-Data               & Čas odeslání měření                           & 99h               \\ \hline
-Data               & Čas odeslání měření                           & 99h               \\ \hline
-Data               & Čas odeslání měření                           & 99h               \\ \hline	
-Data						   & Ověření AES                                    & 2Fh              \\ \hline
-Data						   & Ověření AES                                    & 2Fh              \\ \hline \hline
-
+\multirow{2}{*}{Signature Field} & \multirow{2}{*}{Konfigurační řetězec AES} & 00h              \\ \cline{3-3}
+									&                        													& 00h              \\ \hline
+\multirow{15}{*}{Data} 						   & \multirow{2}{*}{Ověření AES}                  & 2Fh              \\ \cline{3-3}
+						   &                                     						& 2Fh              \\ \cline{2-3}
+               & DIF: 4 cifry BCD (určení průtoku)      & 04h              \\ \cline{2-3}
+               & VIF: Objemový průtok v m\textsuperscript{-3} & 13h         \\ \cline{2-3}
+              & \multirow{4}{*}{DATA1: hodnota průtoku}            & 99h               \\ \cline{3-3}
+               &                               											& 99h               \\  \cline{3-3}
+               &                               											& 99h               \\   \cline{3-3}
+              &                               											& 99h               \\ \cline{2-3}
+               & DIF: 4 cifry BCD (určení času)         & 6Dh              \\ \cline{2-3}
+               & VIF: Datový formát G                               & 6Dh              \\ \cline{2-3}
+               & \multirow{4}{*}{DATA2: čas odeslání měření}   & 99h               \\  \cline{3-3}
+              &                           												& 99h               \\  \cline{3-3}
+               &                           												& 99h               \\  \cline{3-3}
+               &                            											& 99h               \\ \cline{2-3}
+						   & Výplňové bajty (2x)                                  & 2Fh              \\  \hline \hline
 \end{tabular}}
 \end{table}
 
@@ -257,7 +258,7 @@ Některé z položek je potřeba blíže vysvětlit:
  \begin{figure}[!ht]
 \vspace{-20pt}
   \begin{center}
-    \includegraphics[scale=0.7]{obrazky/zarizeni_kamstrup}
+    \includegraphics[scale=0.65]{obrazky/zarizeni_kamstrup}
   \end{center}
 	\vspace{-30pt}
   \caption{Kamstrup Multical 402~\cite{CidloKamstrup}}
@@ -314,52 +315,65 @@ Telegram je ve výchozím stavu vysílán každých 15 minut pro aktuální hodn
 		\item Čas provedení odečtu.
 	\end{enumerate}
 
+\vspace{10pt}
+
+Zařízení bylo zapůjčeno třetí stranou, za účelem ověření funkčnosti příjmu hodnot z daného zařízení. Zařízení bylo celou dobu testování v reálném provozu, proto vyčítané hodnoty nebyly ukládány ani nijak dále zpracovávány.
+
+\newpage
+
 \begin{table}[!ht]
 \centering
 \caption{Telegram ze zařízení Kamstrup Multical 402~\cite{CidloKamstrup}}
 \label{TabulkaTelegramKamstrup}
-%\resizebox{\textwidth}{!}{%
+\resizebox{.42\paperheight}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
-A-Field            & Sériové číslo         & 11h \\ \hline
-A-Field            & Sériové číslo         & 37h \\ \hline
-A-Field            & Sériové číslo         & 35h \\ \hline
-A-Field            & Verze zařízení        & 11h \\ \hline
-A-Field            & Typ zařízení          & 04h \\ \hline
-Ci-pole            & Odpověd od zařízení   & 72h \\ \hline
-AccNo              & Číslo přístupu        & CAh \\ \hline
+
+L-Field & Délka telegramu & 2Ah \\ \hline
+C-Field & Typ telegramu & 44h \\ \hline
+\multirow{2}{*}{M-Field}  & \multirow{2}{*}{Výrobce zařízení}  & 01h \\ \cline{3-3}
+ &  & 6Ah \\ \hline
+\multirow{6}{*}{A-Field}            & \multirow{4}{*}{Sériové číslo}         & 11h \\ \cline{3-3}
+&         & 44h \\ \cline{3-3}
+            &         & 37h \\ \cline{3-3}
+           &          & 35h \\ \cline{2-3}
+            & Verze zařízení        & 11h \\ \cline{2-3}
+           & Typ zařízení          & 04h \\ \hline
+CI-Field            & Odpověd zařízení   & 72h \\ \hline
+Access Number              & Číslo přístupu        & CAh \\ \hline
 Status             & Status zařízení       & 10h \\ \hline
-Configuration word & Nastavení šifrovaní & 50h \\ \hline
-Configuration word & Nastavení šifrovaní & 05h \\ \hline
-AES encryption     & Kontrola dešifrovaní & 2Fh \\ \hline
-AES encryption     & Kontrola dešifrovaní & 2Fh \\ \hline
-DR1                & DIF: 4 binárni bajty   & 04h \\ \hline
-DR1                & VIF: energie v kWh    & 0Fh \\ \hline
-DR1                & hodnota energie       & 99h \\ \hline
-DR1                & hodnota energie       & 99h \\ \hline
-DR1                & hodnota energie       & 99h \\ \hline
-DR1                & hodnota energie       & 99h \\ \hline
-…                  & …                     & ..  \\ \hline
-DR12               & DIF: 4 binární bajty   & 04h \\ \hline
-DR12               & VIF: průtok v m\textsuperscript{3}      & 14h \\ \hline
-DR12               & hodnota průtoku       & 99h \\ \hline
-DR12               & hodnota průtoku       & 99h \\ \hline
-DR12               & hodnota průtoku       & 99h \\ \hline
-DR12               & hodnota průtoku       & 99h \\ \hline
-Fill               & Výplňové bajty         & 2Fh \\ \hline
-Fill               & Výplňové bajty         & 2Fh \\ \hline
-Fill               & Výplňové bajty         & 2Fh \\ \hline
-Fill               & Výplňové bajty         & 2Fh \\ \hline
-Fill               & Výplňové bajty         & 2Fh \\ \hline
-Fill               & Výplňové bajty         & 2Fh \\ \hline
-Fill               & Výplňové bajty         & 2Fh \\ \hline \hline
-\end{tabular}%}
+\multirow{2}{*}{Configuration Word} & \multirow{2}{*}{Nastavení šifrovaní}  & 50h \\ \cline{3-3}
+ &  & 05h \\ \hline
+\multirow{2}{*}{AES Encryption}    & \multirow{2}{*}{Kontrola dešifrovaní} & 2Fh \\ \cline{3-3}
+     &  & 2Fh \\ \hline
+\multirow{6}{*}{1. data block}                & DIF: 4 cifry BCD    & 04h \\ \cline{2-3}
+                & VIF: Energie v kWh    & 0Fh \\ \cline{2-3}
+               & \multirow{4}{*}{DATA: Hodnota energie}       & 99h \\ \cline{3-3}
+               &      & 99h \\ \cline{3-3}
+							 &        & 99h \\ \cline{3-3}
+               &        & 99h \\ \hline
+\ldots              & \ldots                     & \ldots  \\ \hline
+2. data block                  & Energie vratného potrubí & \ldots  \\ \hline
+3. data block                  & Tepelná energie (přívodní nebo vratné potrubí) & \ldots  \\ \hline
+4. data block                  & Enegie chladu (přívodní nebo vratné potrubí) &\ldots  \\ \hline
+5. data block                 & Čas provedení odečtu & \ldots  \\ \hline
+6. data block                  & Výkon & \ldots  \\ \hline
+7. data block                  & Teplota & \ldots  \\ \hline
+8. data block                  & Minimální průtok & \ldots \\ \hline
+9. data block                  & Minimální výkon & \ldots  \\ \hline
+10. data block                 & Maximální průtok & \ldots  \\ \hline
+11. data block                 & Maximální výkon & \ldots  \\ \hline
+\ldots                 & \ldots                     & \ldots  \\ \hline
+\multirow{6}{*}{12. data block}               & DIF: 4 cifry BCD   & 04h \\ \cline{2-3}
+              & VIF: Průtok v m\textsuperscript{3}      & 14h \\ \cline{2-3}
+               & \multirow{4}{*}{DATA: Hodnota průtoku}       & 99h \\ \cline{3-3}
+               &      & 99h \\ \cline{3-3}
+               &        & 99h \\ \cline{3-3}
+               &       & 99h \\ \hline
+Fill              & Výplňové bajty (7x)       & 2Fh \\ \hline \hline
+\end{tabular}}
 \end{table}
-
-\vspace{10pt}
-
-Zařízení bylo pro účely práce pouze zapůjčeno, aby byla ověřena funkčnost příjmu hodnot z daného zařízení. Zařízení bylo celou dobu testování v reálném provozu, proto vyčítané hodnoty nebyly ukládány ani nijak dále zpracovávány.
 
 \newpage
 	
@@ -372,7 +386,7 @@ ZPA ZE310 je třífázový elektronický dvoutarifní elektroměr pro měření 
 
 	 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[scale=0.30]{obrazky/zarizeni_zpa}
+    \includegraphics[scale=0.40]{obrazky/zarizeni_zpa}
   \end{center}
 	\vspace{-20pt}
   \caption{ZPA ZE.310~\cite{CidloZpa}}
@@ -396,53 +410,43 @@ Telegram je ve výchozím stavu vysílán každou minutu a poskytuje výrobcem d
 \centering
 \caption{Telegram ze zařízení ZPA ZE.302~\cite{CidloZpa}}
 \label{TabulkaTelegramZPA}
-%\resizebox{\textwidth}{!}{%
+\resizebox{.28\paperheight}{!}{%
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
 L-Field & Délka telegramu & 2Ah \\ \hline
 C-Field & Typ telegramu & 44h \\ \hline
-M-Field & Výrobce zařízení & 01h \\ \hline
-M-Field & Výrobce zařízení & 6Ah \\ \hline
-A-Field & Sériové číslo & 44h \\ \hline
-A-Field & Sériové číslo & 93h \\ \hline
-A-Field & Sériové číslo & 67h \\ \hline
-A-Field & Sériové číslo & 12h \\ \hline
-A-Field & Verze zařízení & 01h \\ \hline
-A-Field & Typ zařízení & 02h \\ \hline
-CRC & Kontrolní součet & 22h \\ \hline
-CRC & Kontrolní součet & 80h \\ \hline
-Ci-pole & Odpověd od zařízení & 72h \\ \hline
-Identification Number & Sériové číslo & 44h \\ \hline
-Identification Number & Sériové číslo & 93h \\ \hline
-Identification Number & Sériové číslo & 67h \\ \hline
-Identification Number & Sériové číslo & 12h \\ \hline
-Manifacturer ID & Výrobce zařízení & 01h \\ \hline
-Manifacturer ID & Výrobce zařízení & 6Ah \\ \hline
-Version & Verze zařízení & 01h \\ \hline
-Device type & Typ zařízení & 02h \\ \hline
-AccNo & Číslo přístupu & CAh \\ \hline
+\multirow{2}{*}{M-Field}  & \multirow{2}{*}{Výrobce zařízení}  & 01h \\ \cline{3-3}
+ &  & 6Ah \\ \hline
+\multirow{6}{*}{A-Field}            & \multirow{4}{*}{Sériové číslo}         & 44h \\ \cline{3-3}
+&         & 93h \\ \cline{3-3}
+            &         & 67h \\ \cline{3-3}
+           &          & 12h \\ \cline{2-3}
+            & Verze zařízení        & 11h \\ \cline{2-3}
+           & Typ zařízení          & 04h \\ \hline
+\multirow{2}{*}{CRC}  & \multirow{2}{*}{Kontrolní součet}  & 22h \\ \cline{3-3}
+ &  & 80h \\ \hline
+CI-Field & Odpověd zařízení & 72h \\ \hline
+\multirow{4}{*}{Identification Number} & \multirow{4}{*}{Sériové číslo}  & 44h \\ \cline{3-3}
+ &  & 93h \\ \cline{3-3}
+ &  & 67h \\ \cline{3-3}
+ &  & 12h \\ \hline
+\multirow{2}{*}{Manufacturer ID} & \multirow{2}{*}{Výrobce zařízení} & 01h \\ \cline{3-3}
+ &  & 6Ah \\ \hline
+Version            & Verze zařízení        & 01h \\ \hline
+Device Type & Typ zařízení          & 02h \\ \hline
+Access Number & Číslo přístupu & CAh \\ \hline
 Status & Status zařízení & 10h \\ \hline
-Configuration word & Položky šifrovaní AES & 50h \\ \hline
-Configuration word & Položky šifrovaní AES & 05h \\ \hline
+\multirow{2}{*}{Configuration Word} & \multirow{2}{*}{Položky šifrovaní AES} & 50h \\ \cline{3-3}
+ &  & 05h \\ \hline
 DIF & DIF & 86h \\ \hline
 DIFE & DIFE & 20h \\ \hline
 VIF & VIF & 83h \\ \hline
-CRC & Kontrolní součet & C8h \\ \hline
-CRC & Kontrolní součet & 97h \\ \hline
+\multirow{2}{*}{CRC}  & \multirow{2}{*}{Kontrolní součet}  & C8h \\ \cline{3-3}
+ &  & 97h \\ \hline
 VIFE & VIFE & 00h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 76h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 23h \\ \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-\centering
-%\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|l|c|}
-\hline
-\textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline
-
 DATA1 & Hodnota spotřeby tafifu 1 & 85h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 01h \\ \hline
 DATA1 & Hodnota spotřeby tafifu 1 & 00h \\ \hline
@@ -456,17 +460,13 @@ DATA2 & Hodnota spotřeby tafifu 2 & 31h \\ \hline
 DATA2 & Hodnota spotřeby tafifu 2 & 92h \\ \hline
 DATA2 & Hodnota spotřeby tafifu 2 & 00h \\ \hline
 DATA2 & Hodnota spotřeby tafifu 2 & 00h \\ \hline
-CRC & Kontrolní součet & C8h \\ \hline
-CRC & Kontrolní součet & 97h \\ \hline
+\multirow{2}{*}{CRC}  & \multirow{2}{*}{Kontrolní součet}  & C8h \\ \cline{3-3}
+ &  & 97h \\ \hline
 Data & Kontrolní data & 00h \\ \hline
-CRC & Kontrolní součet & C8h \\ \hline
-CRC & Kontrolní součet & 97h \\ \hline \hline
-\end{tabular}
+\multirow{2}{*}{CRC}  & \multirow{2}{*}{Kontrolní součet}  & C8h \\ \cline{3-3}
+ &  & 97h \\ \hline
+\end{tabular}}
 \end{table}
 
-\newpage
 
-\vspace{+10pt}	
-
-Položky DATA1 a DATA2 obsahují hodnoty obou tarifů uložené v LSB a vyjádřené v KWh.
 
