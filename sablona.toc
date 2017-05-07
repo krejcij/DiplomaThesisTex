@@ -134,11 +134,12 @@
 \contentsline {subsection}{\numberline {7.9.7}O\IeC {\v s}et\IeC {\v r}en\IeC {\'\i } v\IeC {\'y}jimek}{89}{subsection.405}
 \contentsline {section}{\numberline {7.10}Export dat}{90}{section.406}
 \contentsline {section}{\numberline {7.11}Vizualizace dat}{90}{section.419}
-\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{93}{chapter.456}
-\contentsline {chapter}{Literatura}{94}{section*.458}
-\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{99}{section*.460}
-\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{103}{section*.462}
-\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{104}{chapter.463}
-\contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{105}{chapter.464}
-\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{106}{chapter.492}
-\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{109}{chapter.496}
+\contentsline {section}{\numberline {7.12}Shrnut\IeC {\'\i } realizace}{93}{section.456}
+\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{94}{chapter.458}
+\contentsline {chapter}{Literatura}{95}{section*.460}
+\contentsline {chapter}{Seznam symbol\r {u}, veli\v {c}in a zkratek}{100}{section*.462}
+\contentsline {chapter}{Seznam p\v {r}\'{\i }loh}{104}{section*.464}
+\contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{105}{chapter.465}
+\contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{106}{chapter.466}
+\contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{107}{chapter.494}
+\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{110}{chapter.498}

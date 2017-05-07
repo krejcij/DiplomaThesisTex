@@ -420,7 +420,7 @@ Snímek obrazovky vizualizační aplikace je uveden na Obr.~\ref{SectionVisualiz
 
  \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.7]{obrazky/aplikace_vizualizace}
+    \includegraphics[scale=0.8]{obrazky/aplikace_vizualizace}
   \end{center}
 	\vspace{-10pt}
 	\caption{Snímek obrazovky vizualizační aplikace}
@@ -430,12 +430,35 @@ Snímek obrazovky vizualizační aplikace je uveden na Obr.~\ref{SectionVisualiz
 Záhlaví stránky obsahuje rozcestník:
 \begin{itemize}
 	\item Graphs explorer - Samotná vizualizační aplikace, popsaná v Kap.~\ref{SectionVizualizaceDat} a~\ref{SectionVizualizaceDat2}.
-	\item Database explorer - Prohlížeč obsahu databáze, popsaný v Kap.~\ref{SectionUlozeniDatabaze} a~\ref{SectionUlozeniDatabaze2}.
+	\item Database explorer - Webový prohlížeč obsahu databáze, popsaný v Kap.~\ref{SectionUlozeniDatabaze} a~\ref{SectionUlozeniDatabaze2}.
 	\item Logs explorer - Prohlížeč průběžných i chybových logů, zmíněný v Kap.~\ref{SectionUlozeniLogu}.
 \end{itemize}
 
+Stránka je rozdělena do dvou částí. V první části stránky se nachází formulář, pomocí kterého lze filtrovat data k vizualizaci:
+\begin{itemize}
+	\item výběr daného senzoru, případně schématu (spojení více čidel do jednoho grafu),
+	\item výběr denního intervalu k zobrazení,
+	\item možnost zobrazení jen určitého počtu posledních hodnot daného čidla,
+	\item možnost zobrazení jen určitého časového úseku příjmu daného čidla,
+	\item možnost agregace hodnot. Tato volba umožňuje aproximaxi dat po zprůměrování několika následujícíh hodnot. Je určená pro oientační vykreslení dlouhého časového úseku.
+\end{itemize}
+ 
+Pod formulářem se nachází již vykreslený interaktivní graf.
 
- Stránka je rozdělena do dvou částí. V první části stránky se nachází formulář s výběrem čidla, intervalu pro zobrazení a dalších možných parametrů, pomocí kterých lze filtrovat data k vizualizaci. Pod formulářem se nachází již vykreslený graf.
+Ukázky vizualizací zachycených dat (přegenerovaných programem Matlab) jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
+
+\section{Shrnutí realizace}
+Schéma výsledné realizace a vazby mezi jednotlivými HW a SW celky je zobrazeno na Obr.~\ref{SchemaFinal}.
+\begin{figure}[!ht]
+	\vspace{-10pt}
+  \begin{center}
+    \includegraphics[scale=0.85]{obrazky/aplikace_schema}
+  \end{center}
+	\vspace{-50pt}
+  \caption{Schéma výsledné realizace}
+	\label{SchemaFinal}
+	\vspace{-5pt}
+\end{figure}
 
 
-Ukázky vizualizací zachycených dat jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
+
