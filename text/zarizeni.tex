@@ -6,7 +6,7 @@ Pro účely testování komunikace bylo využito několik typů dostupných zař
 	\item pokojové čidlo teploty a vlhkosti Weptech OMST-868A~\cite{CidloWeptech},
 	\item modul pro vodoměry Bonega~\cite{CidloBonega},
 	\item ultrazvukový měřič tepla a chladu Kamstrup Multical 402~\cite{CidloKamstrup},
-	\item třífázový elektroměr ZPA ZE302~\cite{CidloZpa}.
+	\item třífázový elektroměr ZPA ZE.310~\cite{CidloZpa}.
 \end{itemize}
 
 Všechna tyto zařízení poskytují formát dat dle platné specifikace OMS~(Open Metering Standard)~3.0.1~\cite{NormaOMS}, která vychází z normy EN 13757-4~\cite{Norma4} pro bezdrátový protokol WM-Bus.
@@ -106,7 +106,7 @@ Některé z položek je potřeba blíže vysvětlit:
 	%\item Status - V případě úspěšného přenosu je zde uložena nula, v opačném případě je zde uložena logická jednička a nastal tedy chybový stav 'sabotáž' nebo 'vybitá baterie'.
 	%\item Configuration word - V případě zapnutého šifrovaní, první bajt obsahuje počet zašifrovaných bloků, obsah telegarmu a inkrement. Druhý bajt obsahuje záznam o obousměrnosti, dostupnosti, synchronizaci a šifrování. Pokud je šifrování zapnuto, je nastaven mód 5, v opačném případě jsou oba bajty nulové.
 	\item Příznak sabotáže čidla - Pokud čidlo pomocí integrovaného spínače detekuje uvolnění krytu z montážní desky, pošle výstrahu přes rádio do přijímače, tedy změní pro nejbližší a všechny následující vysílání tamper bit v telegramu. Tento bit slouží jako ochrana před neoprávněnou manipulací s čidlem a může být vymazán pouze restartem zařízení. Tedy vyjmutím starých baterií, ponecháním zařízení několik minut bez napájení, aby došlo k vybití všech kondenzátorů a~následným vložením baterií.
-\item Příznak vybité baterie - Pokud elektronika v čidlu vyhodnotí úroveň nabití baterie jako nedostatečnou, nastaví bit vybití baterie do sekce chyb v telegramu. Tento bit ošetřuje stavy, kdy nedostatečně nabité baterie způsobí příliš velký rozptyl naměřených hodnot, v krajních případech i mimo měřící rozsah čidla. Tento bit může být vymazán také pouze restartem zařízení, jako v předchozím případě.
+\item Příznak vybité baterie - Pokud elektronika v čidlu vyhodnotí úroveň nabití baterie jako nedostatečnou, nastaví bit vybití baterie v telegramu. Tento bit ošetřuje stavy, kdy nedostatečně nabité baterie způsobí příliš velký rozptyl naměřených hodnot, v krajních případech i mimo měřící rozsah čidla. Tento bit může být vymazán také pouze restartem zařízení, jako v předchozím případě.
 \item Položky hodnota teploty, hodnota vlhkosti, výrobce zařízení a sériové číslo jsou uloženy v kódování big-endian, tedy na paměťové místo s nejnižší adresou se~uloží nejvíce významný bajt a za něj se ukládají ostatní bajty až~po~nejméně významný bajt na konci. Uživatelská hodnota se tedy vyčítá pozpátku po~jednotlivých bajtech.
 \item Telegram je ukončen 13 výplňovými bajty, které nenesou žádnou informaci.
 \end{itemize}
@@ -131,7 +131,7 @@ První přepínač zapíná AES-128 šifrování, druhý přepínač přepíná 
 \end{tabular}
 \end{table}
 
-Jiné mohou být nastaveny pouze během výroby daného setu, a to do příslušných továrních nastavení, či uživatelsky vyžádaných nastavení, viz Tab.~\ref{TablukaSETUP}.
+Jiné hodnoty mohou být nastaveny pouze během výroby daného zařízení, viz Tab.~\ref{TablukaSETUP}.
 
 \begin{table}[!ht]
 \centering
@@ -148,20 +148,18 @@ Transmission interval & \begin{tabular}[c]{@{}l@{}}Interval je výrobcem konfigu
 %Tamper & \begin{tabular}[c]{@{}l@{}}Odezva od čidla pro otevření \\ boxu může být povolena či \\ zakázána, samotné zařízení \\ existuje i ve verzích bez \\ tohoto čidla.\end{tabular} & \multicolumn{1}{l|}{} \\ \hline
 %Config & \begin{tabular}[c]{@{}l@{}}Změna nastavení pomocí DIP \\ přepínače může být povolena \\ či zakázána, samotné zařízení \\ existuje i ve verzích bez\\  tohoto přepínače.\end{tabular} & \multicolumn{1}{l|}{} \\ \hline
 \end{tabular}
-\vspace{-10pt}
 \end{table}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-
 	\section{Bonega}
 
 Modul Bonega je bezdrátové čidlo podporující protokol Wireless M-Bus. Jedná se~o~samostatné zařízení, které je určené pro montáž na vodoměry Bonega. Na~řadu vodoměrů podporujících tento modul je možná i dodatečná montáž. Elektronická část modulu slouží současně pro vyčítání dvou vodoměrů, na teplou i studenou vodu.
 	
 	\begin{figure*}[!ht]
-	\vspace{-20pt}
+	\vspace{-15pt}
     \centering
 			\subfigure[Vodoměr studené vody]{\includegraphics[width=0.3\textwidth]{obrazky/zarizeni_bonega1}\label{zarizeni_bonega1}}
 			\hspace*{5mm}
@@ -169,11 +167,10 @@ Modul Bonega je bezdrátové čidlo podporující protokol Wireless M-Bus. Jedn�
 			\hspace*{5mm}
 			\subfigure[Vodoměr teplé vody]{\includegraphics[width=0.3\textwidth]{obrazky/zarizeni_bonega3}\label{zarizeni_bonega3}}
 		\caption{Sada Bonega~\cite{CidloBonega}}
-		\vspace{-10pt}
 \end{figure*}
 
 
-
+\vspace{-30pt}
 \subsubsection{Parametry modulu}
 \begin{itemize}
 	\item Rozsah měření: 0 až 65536 m\textsuperscript{2}.
@@ -359,6 +356,10 @@ Fill               & Výplňové bajty         & 2Fh \\ \hline
 Fill               & Výplňové bajty         & 2Fh \\ \hline \hline
 \end{tabular}%}
 \end{table}
+
+\vspace{10pt}
+
+Zařízení bylo pro účely práce pouze zapůjčeno, aby byla ověřena funkčnost příjmu hodnot z daného zařízení. Zařízení bylo celou dobu testování v reálném provozu, proto vyčítané hodnoty nebyly ukládány ani nijak dále zpracovávány.
 
 \newpage
 	

@@ -17,7 +17,7 @@ Class=LaTeXView
 Document=sablona.tex
 
 [Frame0_View0,0]
-TopLine=248
+TopLine=250
 Cursor=12199
 
 [Frame1]
@@ -36,7 +36,7 @@ Document=text\zaver.tex
 
 [Frame1_View0,0]
 TopLine=0
-Cursor=373
+Cursor=2194
 
 [Frame2]
 Flags=0
@@ -71,8 +71,8 @@ Class=LaTeXView
 Document=text\modul.tex
 
 [Frame3_View0,0]
-TopLine=109
-Cursor=6236
+TopLine=67
+Cursor=4606
 
 [Frame4]
 Flags=0
@@ -104,11 +104,11 @@ NormalPos.top=26
 NormalPos.right=1916
 NormalPos.bottom=649
 Class=LaTeXView
-Document=text\zkratky.tex
+Document=text\unipi.tex
 
 [Frame5_View0,0]
-TopLine=6
-Cursor=1186
+TopLine=376
+Cursor=22339
 
 [Frame6]
 Flags=0
@@ -122,11 +122,11 @@ NormalPos.top=26
 NormalPos.right=1916
 NormalPos.bottom=649
 Class=LaTeXView
-Document=text\unipi.tex
+Document=text\wmbus.tex
 
 [Frame6_View0,0]
-TopLine=309
-Cursor=15648
+TopLine=893
+Cursor=60186
 
 [Frame7]
 Flags=0
@@ -143,8 +143,8 @@ Class=LaTeXView
 Document=text\iot.tex
 
 [Frame7_View0,0]
-TopLine=0
-Cursor=3167
+TopLine=7
+Cursor=1467
 
 [Frame8]
 Flags=0
@@ -158,11 +158,11 @@ NormalPos.top=26
 NormalPos.right=1916
 NormalPos.bottom=649
 Class=LaTeXView
-Document=text\wmbus.tex
+Document=text\zarizeni.tex
 
 [Frame8_View0,0]
-TopLine=812
-Cursor=24421
+TopLine=371
+Cursor=22909
 
 [Frame9]
 Flags=0
@@ -176,11 +176,11 @@ NormalPos.top=26
 NormalPos.right=1916
 NormalPos.bottom=649
 Class=LaTeXView
-Document=text\zarizeni.tex
+Document=text\implementace.tex
 
 [Frame9_View0,0]
-TopLine=456
-Cursor=21555
+TopLine=463
+Cursor=28497
 
 [Frame10]
 Flags=0
@@ -194,11 +194,11 @@ NormalPos.top=26
 NormalPos.right=1916
 NormalPos.bottom=649
 Class=LaTeXView
-Document=text\implementace.tex
+Document=text\literatura.tex
 
 [Frame10_View0,0]
-TopLine=458
-Cursor=28258
+TopLine=122
+Cursor=11579
 
 [Frame11]
 Flags=0
@@ -212,11 +212,11 @@ NormalPos.top=26
 NormalPos.right=1916
 NormalPos.bottom=649
 Class=LaTeXView
-Document=text\literatura.tex
+Document=text\prilohy.tex
 
 [Frame11_View0,0]
-TopLine=118
-Cursor=10303
+TopLine=239
+Cursor=25249
 
 [Frame12]
 Flags=0
@@ -230,11 +230,11 @@ NormalPos.top=26
 NormalPos.right=1916
 NormalPos.bottom=649
 Class=LaTeXView
-Document=text\prilohy.tex
+Document=mystyles.tex
 
 [Frame12_View0,0]
-TopLine=191
-Cursor=20126
+TopLine=0
+Cursor=308
 
 [Frame13]
 Flags=0
@@ -251,8 +251,8 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame13_View0,0]
-TopLine=522
-Cursor=31227
+TopLine=529
+Cursor=41089
 
 [Frame14]
 Flags=0
@@ -266,15 +266,15 @@ NormalPos.top=26
 NormalPos.right=1916
 NormalPos.bottom=649
 Class=LaTeXView
-Document=mystyles.tex
+Document=text\zkratky.tex
 
 [Frame14_View0,0]
-TopLine=0
-Cursor=308
+TopLine=48
+Cursor=2781
 
 [SessionInfo]
 FrameCount=15
-ActiveFrame=10
+ActiveFrame=0
 
 [Bookmarks]
 text\implementace.tex=309 

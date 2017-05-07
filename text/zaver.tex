@@ -14,9 +14,9 @@ Třetí část (Kap.~\ref{KapUnipi}) obsahuje popis rozšiřující desky UniPi 
 Pátá část (Kap.~\ref{ChapterWMBus}) se~zaměřila na~protokol Wireless M-Bus, konkrétně na~princip komunikace, režimy přenosu a~jednotlivé vrstvy. 
 Díky nutnosti znalosti fyzické a~linkové vrstvy pro~pozdější analýzu zachytávaných dat byly tyto vrstvy rozebrány podrobněji. 
 
-V šesté části (Kap.~\ref{ChapterZarizeni}) byly popsány vyčítaná zařízení a~struktura dat jejich telegramů.
+V šesté části (Kap.~\ref{ChapterZarizeni}) byly popsány vyčítaná zařízení Bonega, Kamstrup, Weptech, ZPA a~struktura dat jejich telegramů.
 
-Závěrečná (Kap.~\ref{ChapterImplementace}) část obsahuje návrh a~samotnou implementaci vzorové aplikace pro~vyčítání dat. Jsou popsány jednotlivé kroky nutné ke~zprovoznění komunikace mezi RaspberryPi a~vyčítaným senzorem, provedeno zachycení vzorového telegramu, jeho analýza a~následné předání zvolených informací. Z~výstupu aplikace je patrné, že~pakety obsahují příslušná data, komunikace mezi modulem a~zařízením funguje, data ze~senzoru se~přenášejí, následně vyčítají a~přehledně zobrazují v~implementované vizualiaci pomocí Google Charts API.
+Závěrečná (Kap.~\ref{ChapterImplementace}) část obsahuje návrh a~samotnou implementaci vzorové aplikace pro~vyčítání a~vizualizaci dat. Jsou popsány jednotlivé kroky nutné ke~zprovoznění komunikace mezi RaspberryPi a~vyčítaným senzorem, provedeno zachycení vzorového telegramu, jeho analýza a~následné předání zvolených informací. Z~výstupu aplikace je patrné, že~pakety obsahují příslušná data, komunikace mezi modulem a~zařízením funguje, data ze~senzoru se~přenášejí, následně vyčítají a~přehledně zobrazují v~implementované vizualiaci pomocí Google Charts API.
 
 Na~zakládě této realizace je~vytvořená aplikace schopna analyzovat jen předem známá zařízení. Pokud by~řešení mělo být plně využitelné pro Internet věcí, bylo by nutné implementovat velké množství parsovacích schémat, nebo vytvořit obecný algoritmus pro~parsování datových jednotek všech výrobců dodržující platnou specifikaci.
 

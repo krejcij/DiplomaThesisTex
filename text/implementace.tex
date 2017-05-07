@@ -1,10 +1,12 @@
 \chapter{Návrh implementace}
 \label{ChapterImplementace}
 
-Jak již bylo zmíněno na začátku práce, samotná implementace je rozdělena do dvou částí:
+Samotná implementace je rozdělena do dvou částí:
 \begin{enumerate}
 	\item Komunikace RaspberryPi přes rozšiřující desku UniPi s bezdrátovým modulem a pomocí něj s poskytnutými WM-Bus zařízeními.
-	\item Zachytávání šifrované i nešifrované komunikace s WM-Bus zařízeními. Uložení, analýza a následná vizualizace zachycených dat. 
+	\item Zachytávání šifrované i nešifrované komunikace s WM-Bus zařízeními. 
+	\item Analýza, dešifrování, parsování a uložení zachycených dat. 
+	\item Vizualizace získaných dat.
 \end{enumerate}
 
 Jelikož žádný z dostupných softwarů pro UniPi nepodporuje daný bezdrátový modul, ani UART zařízení obecně, je nutné tuto komunikaci implementovat již na~úrovni operačního systému.
@@ -17,17 +19,16 @@ Jelikož žádný z dostupných softwarů pro UniPi nepodporuje daný bezdrátov
 \section{Výběr OS}
 Jako operační sytém je využita aktuální verze Raspbianu Jessie s datem vydání 2017-03-02. UART rozhraní se na RaspberryPi verze 1 a 2 nachází v \texttt{/dev/ttyAMA0}. To~se~ale~v~případě RaspberryPi 3 odkazuje na integrovaný BT modul a původní sériový port je zde v \texttt{/dev/ttyS0}. Samotné UART rozhraní je ale ve výchozím nastavení Raspbianu zakázáno.
 
-Pro zpřístupnění UART rozhraní je nutné provést drobné úpravy jeho konfigurace:
+Pro zpřístupnění UART rozhraní je nutné provést úpravy jeho konfigurace:
 
 
 \begin{enumerate}
 	\item Nejdříve je nutné provést kompletní aktualizaci Raspbianu, tedy v konzoli spustit posloupnost příkazů:
 	
 	\begin{lstlisting}[style=MyCodeBash]
-		sudo apt-get update
-		sudo apt-get upgrade
-		sudo apt-get dist-upgrade
-		sudo apt-get rpi-upgrade	
+		sudo apt update
+		sudo apt upgrade
+		sudo apt dist-upgrade
 	\end{lstlisting}
 					
 	\item Poté je potřeba v \texttt{/boot/config.txt} změnit položku \texttt{ENABLE\_UART} na hodnotu 1. Tím dojde k zpřístupnení sběrnice UART. Tato položka může být v budoucnu při aktualizaci Raspbianu přepsána, proto při prvním náznaku nefunkčnosti, je potřeba tuto položku zkontrolovat jako první.
@@ -79,8 +80,7 @@ Před samotným vyčítáním dat bylo potřeba zjistit či nastavit přenosové
 Pro zajištění běhu aplikace nezávisle na typu provozu RaspberryPi bude daný program spouštěn ihned po startu operačního systému pomocí příkazu screen. Je tedy nutné ho doinstalovat:
  
 \begin{lstlisting}[style=MyCodeBash]
-		sudo apt-get update
-		sudo install screen		
+		sudo apt install screen		
 	\end{lstlisting}
 
 
@@ -96,9 +96,8 @@ Umožňuuje pohodlnou implementaci AES128 pomocí jazyku Python3. Na rozdíl od 
 Je nutné doinstalovat nezbytné balíčky:	
  
 \begin{lstlisting}[style=MyCodeBash]
-		sudo apt-get update
-		sudo install python-crypto
-		sudo install python-dev
+		sudo apt install python-crypto
+		sudo apt install python-dev
 	\end{lstlisting}
 	\vspace{-20pt}
 
@@ -115,7 +114,7 @@ Jednoduchým spuštěním komunikačního modulu v módu skeneru byl zachycen te
 
 \begin{lstlisting}[style=MyCodePHP]
 			32002E44B05C10000000021B7A620800002F2F0A6699010AFB1
-			A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
+			A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F459e0D0A
 \end{lstlisting}
 
 který byl pomocí datasheetu použitého komunikačního modulu~\cite{ModulIQRF} a~čidla~\cite{CidloWeptech} analyzován, a přehledně zobrazen do Tab. \ref{PacketTableAnalysis}.
@@ -125,8 +124,8 @@ který byl pomocí datasheetu použitého komunikačního modulu~\cite{ModulIQRF
 V okamžiku, kdy bylo zařízení přepnuto do šifrovaného módu dle Tab.~\ref{TablukaSETUP}, byl zachycen šifrovaný telegram
 
 \begin{lstlisting}[style=MyCodePHP]
-			32002e44b05c10000000021b7ac40820053ed44a38a9c3c86f5
-			8210f9b979353c39dc1d5e0c873eb81994d28c099ef1d55b008
+			32002E44B05C10000000021B7AC40820053ED44A38A9C3C86F5
+			8210F9B979353C39DC1D5E0C873EB81994D28C099EF1D55B008
 \end{lstlisting}
 
 který byl pomocí datasheetů použitého komunikačního modulu \cite{ModulIQRF} a normy~\cite{Norma1,NormaFIPS} analyzován a byly vyparsovány položky nezbytné pro dešifrování dat:
@@ -136,10 +135,13 @@ který byl pomocí datasheetů použitého komunikačního modulu \cite{ModulIQR
 	\item 38-93 pro šifrovanou část dat.
 \end{itemize}
 
+
 Poté byla daná data v souladu s normou \cite{NormaFIPS} dešifrována dle Kap.~\ref{KapitolaDesifrovani} a byl získán dešifrovaný telegram:
 
+\newpage
+
 \begin{lstlisting}[style=MyCodePHP]
-			32002e44b05c10000000021b7ac40820052F2F0A6699010AFB1
+			32002E44B05C10000000021B7AC40800002F2F0A6699010AFB1
 			A930202FD971D01002F2F2F2F2F2F2F2F2F2F2F2F2F879e0D0A
 \end{lstlisting}
 
@@ -228,7 +230,7 @@ Prohlížení obsahu databáze je součástí vizualizační aplikace pod zálo�
 	
 \section{Zajištění vizualizace dat}	
 \label{SectionVizualizaceDat}
-Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Charts API~\cite{uvod_google_charts_api} běžící na webovém serveru Apache2 a generovaném pomocí PHP. Pro tyto potřeby je nutné doinstalovat následující balíčky:
+Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Charts API~\cite{uvod_google_charts_api} běžící na webovém serveru Apache 2 a generovaném pomocí PHP 7. Pro tyto potřeby je nutné doinstalovat následující balíčky:
  
 \begin{lstlisting}[style=MyCodeBash]
 		sudo apt-get update
@@ -255,7 +257,7 @@ Vzhledem k výše uvedeným požadavakům a technologiím byla zvolena struktura
   \begin{center}
     \includegraphics[scale=0.55]{obrazky/aplikace_diagram}
   \end{center}
-	%\vspace{-10pt}
+	%\vspace{-20pt}
   \caption{Vývojový diagram aplikace pro vyčítání dat}
 	\label{AplikaceDiagram}
 	%\vspace{-30pt}
@@ -267,11 +269,11 @@ V následujících podkapitolách budou jednotlivé bloky aplikace představeny 
 Program je nyní spouštěn automaticky po startu operačního systému interpretem jazyka Python v příkazu screen. Tímto dojde k oddělení běhu programu od ostatních aplikací, možností vzdáleného připojení ke konzolovým výstupům aplikace a nezávislosti na případných restartech zařízení. Ukončení programu nastává pouze násilným ukončením aplikace, restartem zařízení nebo závažnou chybou při startu programu. 
 
 \subsection{Start programu z pohledu aplikace}
-Program při startu kontroluje, zdali  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQLite databázi.
+Program při startu kontroluje, jestli  má k dispozici všechny potřebné komponenty pro svůj běh. Program je závislý na knihovně PyCrypto, Serial nebo SQLite databázi.
 Dále program kontroluje přítomnost a možnost otevření sériového portu. V~případě úspěšného otevření portu je na něj zaslán příznak pro probuzení komunikačního modulu z úsporného režimu. Po probuzení následuje příkaz, který nastaví modul do režimu skeneru v komunikačním módu T1. Pokud některá z operací selže, je zaznamenán chybový stav a dojde k ukončení programu.
 
 \subsection{Základní kontrola a cyklus příjmu dat}
-Následně dojde ke spuštění smyčky naslouchání příchozích telegramů. Každý příchozí telegram je podroben sérii kontrol, pro ověření správnosti příjmu. Jako první je telegram podroben kontrole délky odpovídající sudým násobkům. Následně je telegram podroben základní analýze položek aplikační a linkové vrstvy. Dochází ke~kontrole délky telegramu a jeho CRC součtu. Je provedena kontrola obsahu CI-pole, \texttt{Status} pole a \texttt{ConfigurationWord} pole. Pokud některá z položek neodpovídá, telegram je~zaevidován a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
+Následně dojde ke spuštění smyčky naslouchání příchozích telegramů. Každý příchozí telegram je podroben sérii kontrol, pro ověření správnosti příjmu. Jako první je telegram podroben kontrole délky odpovídající sudým násobkům. Následně je telegram podroben základní analýze položek aplikační a linkové vrstvy. Dochází ke~kontrole délky telegramu a jeho CRC součtu. Je provedena kontrola obsahu \texttt{CI}-pole, \texttt{Status} pole a \texttt{ConfigurationWord} pole. Pokud některá z položek neodpovídá, telegram je~zaevidován a aplikace se vrátí do stavu čekání na příchod dalšího telegramu.
 Na~základě obsahu položky \texttt{ConfigurationWord} (viz Kap.~\ref{KapitolaConfigurationWord}) se program nadále větví na zpracování šifrovaného (Kap. \ref{KapitolaDesifrovani}) a nešifrovaného (Kap. \ref{KapitolaParsovani}) telegramu.
 
 \subsection{Dešifrování dat}
@@ -279,7 +281,7 @@ Na~základě obsahu položky \texttt{ConfigurationWord} (viz Kap.~\ref{KapitolaC
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Pokud je analýzou položky \texttt{ConfigurationWord} zjištěno šifrování dat přenášených dat algoritmem AES128 CBC, je zahájen proces dešifrování dat.
 
-Díky vnitřní implementaci IQRF modulu jsou všechny zachycené šifrované pakety automaticky rozšifrovány pomocí AES klíče nahraného v paměti modulu. Jedná se však o klíč daného modulu, nikoliv vyčítaného zařízení. Tato dešifrovaná data jsou tedy nevalidní. Celý postup dešifrování (viz Kód~\ref{CodeAES}) se tak komplikuje:
+Díky vnitřní implementaci IQRF modulu (zmíněno v Kap.~\ref{KapKomMody}) jsou všechny zachycené šifrované pakety automaticky rozšifrovány pomocí AES klíče nahraného v paměti modulu. Jedná se však o klíč daného modulu, nikoliv vyčítaného zařízení. Tato dešifrovaná data jsou tedy nevalidní. Celý postup dešifrování (viz Kód~\ref{CodeAES}) se tak komplikuje:
 
 \begin{enumerate}
 	\item Dojde ke stažení aktuálního AES klíče (viz Kap.~\ref{KapitolaStazeniKlice}) nastaveného v IQRF modulu, s pomocí něj a sestaveného inicializačního vektoru (viz Kap.~\ref{KapitolaInicializacniVektor})
@@ -305,7 +307,7 @@ Poté program s telegramem zachází jako s nešifrovaným, popsaným v Kap.~\re
 
 \subsection{Parsování dat}
 \label{KapitolaParsovani}
-Každý telegram je před svým zpracováním uložen do databáze, aby v případě potřeby (špatné dešifrování, neadekvátní dešifrovací klíč, chyba aplikace, neznámý senzor, \ldots) mohlo být provedeno nové zpracování daného telegramu. Poté je analyzováno M-Pole a v případě že se jedná o výrobce, jehož parsovací schéma je~v~této aplikaci implementováno, dochází k vyparsování (viz Kód~\ref{CodeParse}) přenášených hodnot. Následně v~souladu s parsovacím schématem dochází k formátování a odpovídající interpretaci získaných dat (viz Kap.~\ref{PacketTableAnalysis}). Poté jsou získaná data uložena do databáze a zobrazena uživateli na výstup konzole.
+Každý telegram je před svým zpracováním uložen do databáze, aby v případě potřeby (špatné dešifrování, neadekvátní dešifrovací klíč, chyba aplikace, neznámý senzor, \ldots) mohlo být provedeno opětovné zpracování daného telegramu. Poté je analyzováno M-Pole a v případě že se jedná o výrobce, jehož parsovací schéma je~v~této aplikaci implementováno, dochází k vyparsování  přenášených hodnot (viz Kód~\ref{CodeParse}). Následně v~souladu s parsovacím schématem dochází k formátování a odpovídající interpretaci získaných dat (viz Kap.~\ref{PacketTableAnalysis}). Poté jsou získaná data uložena do databáze a zobrazena uživateli na výstup konzole.
 
 
 \begin{lstlisting}[caption={Ukázka parsování dat},captionpos=b,label=CodeParse,style=MyCodePython]
@@ -323,12 +325,12 @@ Pokud parsování dat selže, dojde k výjimce, daný telegram je zaevidován, v
 
 \subsection{Uložení dat}
 \label{SectionUlozeniDatabaze2}
-Správně interpretované hodnoty doplněné o časovou značku a informaci o měřícím zařízení jsou zapsány do databáze. Do této databáze se ukládají všechny příchozí validně zpracované telegramy, určené k pozdějšímu zpracování. Obohacení o časovou značku a údaje o zařízení je možné později tyto data efektivně třídit či v nich vyhledávat. Ukázka implementace je v Kódu~\ref{CodeStore}.
+Správně interpretované hodnoty doplněné o časovou značku a informaci o měřícím zařízení jsou zapsány do databáze. Do této databáze se ukládají všechny příchozí validně zpracované telegramy, určené k pozdějšímu zpracování. Po doplnění o časovou značku a údaje o zařízení je možné tyto data efektivně třídit či v nich vyhledávat. Ukázka implementace je v Kódu~\ref{CodeStore}.
 
 \vspace{10pt}
 
 \begin{lstlisting}[caption={Ukázka ukládání dat},captionpos=b,label=CodeStore,style=MyCodePython]
-db = sqlite3.connect(SQLITE_DB_NAME)
+db = sqlite3.connect('\MainDatabase.db')
 def sql(query):
     db.execute(query)
     db.commit()
@@ -343,14 +345,14 @@ Prohlížení obsahu databáze je součástí vizualizační aplikace pod zálo�
 
 \subsection{Ošetření výjimek}
 \label{SectionUlozeniLogu}
-Aplikace má ošetřeny dva chybové stavy. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a~následně přejde do stavu čekání na příchod dalšího telegramu.
+Aplikace má ošetřeny dvě skupiny chybových stavů. Hrubé chyby vedoucí k násilnému ukončení programu a lehké chyby znemožňující analýzu konkrétního telegramu. Hrubé chyby mohou vyvolat chybějící komponenty (databáze, komunikační modul, sériový port, \ldots), zatímco lehké chyby nastanou v případě, že daný telegram nemůže být zpracován (nevalidní příjem telegramu, neznámá struktura telegramu, neznámé zařízení, neznámý výrobce zařízení, neplatný šifrovací klíč, neplatné parsovací schéma, \ldots ), program vyvolá danou výjimku, zanechá zpracovávání aktuálního telegramu a~následně přejde do stavu čekání na příchod dalšího telegramu.
 
 Všechny tyto chyby jsou ukládány do příslušné tabulky v databázi, do chybového logu a taktéž sdělovány uživateli do konzole.
 Prohlížení obsahu chybových logů je součástí vizualizační aplikace pod záložkou \texttt{Logs explorer}.
 
 
 \section{Export dat}
-V případě potřeby je vizualizační aplikace (viz~Kód~\ref{CodeExport}) schopna dávkově vyexportovat uložená data určitého senzoru za daný časový úsek do Google Spreadsheets. 
+V případě potřeby je vizualizační aplikace (viz~Kód~\ref{CodeExport}) schopna dávkově vyexportovat uložená data daného senzoru za určitý časový úsek do Google Spreadsheets. 
 
 \begin{lstlisting}[caption={Ukázka exportu dat},captionpos=b,label=CodeExport,style=MyCodePython]
 from oauth2client.service_account import ServiceAccountCredentials
@@ -367,11 +369,11 @@ for value in values:
 \end{lstlisting}
 \vspace{-10pt}
 
-Vzhledem k~časové náročnosti (dáno odezvou Google~Charts~API~\cite{uvod_google_charts_api}) při daném počtu naměřených hodnot (pro čidlo vysílající každou minutu je za den nasbíráno 1440 hodnot, jejichž export zabere cca 3 hodiny) je tato funkcionalita implementována spíše jako experimentální pro jednorázové exporty. V praxi se při automatických exportech velkých objemů naměřených hodnot projevila jako náročná na výpočetní čas.
+Vzhledem k~časové náročnosti (dáno odezvou Google~Charts~API~\cite{uvod_google_charts_api}) při daném počtu naměřených hodnot (pro čidlo vysílající každou minutu je za den nasbíráno 1440 hodnot, jejichž export zabere cca 2 hodiny) je tato funkcionalita implementována spíše pro nárázové exporty. V praxi se při automatických exportech velkých objemů naměřených hodnot projevila jako velmi náročná na výpočetní čas.
 
 \section{Vizualizace dat}
 \label{SectionVizualizaceDat2}
-Nad těmito daty se potom provádí vizualizace pomocí Google~Charts~API (viz.~Kód~\ref{CodeVisualise}). 
+Nad těmito uloženými daty se potom provádí vizualizace pomocí Google~Charts~API (viz.~Kód~\ref{CodeVisualise}). 
 
 \begin{lstlisting}[caption={Ukázka vizualizace dat},captionpos=b,label=CodeVisualise,style=MyCodePython]
 //Load GoogleAPI and corechart package
@@ -436,23 +438,24 @@ Záhlaví stránky obsahuje rozcestník:
 
 Stránka je rozdělena do dvou částí. V první části stránky se nachází formulář, pomocí kterého lze filtrovat data k vizualizaci:
 \begin{itemize}
-	\item výběr daného senzoru, případně schématu (spojení více čidel do jednoho grafu),
-	\item výběr denního intervalu k zobrazení,
+	\item výběr daného senzoru, případně schématu (spojení více senzorů do jednoho grafu),
+	\item výběr dne k zobrazení,
 	\item možnost zobrazení jen určitého počtu posledních hodnot daného čidla,
 	\item možnost zobrazení jen určitého časového úseku příjmu daného čidla,
-	\item možnost agregace hodnot. Tato volba umožňuje aproximaxi dat po zprůměrování několika následujícíh hodnot. Je určená pro oientační vykreslení dlouhého časového úseku.
+	\item možnost agregace hodnot. Tato volba umožňuje aproximaxi dat po zprůměrování několika následujících hodnot. Je určená pro orientační vykreslení dlouhého časového úseku s velkým množstvím hodnot,
+	\item možnost automatického obnovení stránky v určitém intervalu.
 \end{itemize}
  
 Pod formulářem se nachází již vykreslený interaktivní graf.
 
-Ukázky vizualizací zachycených dat (přegenerovaných programem Matlab) jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
+Ukázky vizualizací zachycených dat (pro přehlednost přegenerovaných programem Matlab) jednotlivých zařízení jsou uvedeny v Příloze~\ref{PrilohaGrafy}.
 
 \section{Shrnutí realizace}
 Schéma výsledné realizace a vazby mezi jednotlivými HW a SW celky je zobrazeno na Obr.~\ref{SchemaFinal}.
 \begin{figure}[!ht]
 	\vspace{-10pt}
   \begin{center}
-    \includegraphics[scale=0.85]{obrazky/aplikace_schema}
+    \includegraphics[scale=0.75]{obrazky/aplikace_schema}
   \end{center}
 	\vspace{-50pt}
   \caption{Schéma výsledné realizace}

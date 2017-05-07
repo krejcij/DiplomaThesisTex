@@ -57,6 +57,7 @@ Modul je vyráběn ve třech verzích (viz Obr.~\ref{ObrazekAnteny}) dle připoj
 \end{figure*}
 
 \section{Komunikační módy}
+\label{KapKomMody}
 
 Modul může být v závislosti na použité topologii nastaven do jednoho ze tří provozních módů: měřič, koncentrátor, skener \cite{ModulIQRF}. 
 
@@ -64,9 +65,13 @@ V módu měřiče může být modul přes UART sběrnici zapojen k mikrokontrol�
 
 V módu koncentrátoru slouží modul jako komunikační zařízení pro sběr dat z~meřičů. Aktuální firmware podporuje pouze obousměrnou komunikaci s měřiči v~režimu S a T a je zatím ve fázi vývoje a do produkce nasazen jako experimentální. Z tohoto důvodu bude při implementaci samotné aplikace modul nasazen v režimu skeneru.
 
-V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu přenosu. Díky vnitřní implementaci Wireless M-Bus protokolu je modul schopen zachytávat a dešifrovat šifrovanou komunikaci, je však nutné počítat s tím, že současný firmware není stavěný na vyžití modulu pro příjem šifrované komunikace v módu skeneru od více zařízení zároveň. Modul totiž automaticky veškeré zachycené šifrované telegramy automaticky rozšifruje pomocí jediného interního AES klíče. Jedná se však o klíč daného modulu, nikoliv vyčítaného zařízení. Při vyčítání šifrovaných dat je tedy nutné postupovat složitěji a provést nejdříve zpětné zašifrování daných dat tímto klíčem a až poté provést rozšifrování dat dle normy.
+V módu skeneru modul zachytává veškerou dostupnou komunikaci daného módu přenosu. Díky vnitřní implementaci Wireless M-Bus protokolu je modul schopen zachytávat a dešifrovat šifrovanou komunikaci, je však nutné počítat s tím, že současný firmware není stavěný na vyžití modulu pro příjem šifrované komunikace v módu skeneru od více zařízení zároveň. 
 
-Praktické využíti jednotlivých módu zobrazuje Obr.~\ref{TopologieIQRF}.
+Modul totiž automaticky veškeré zachycené šifrované telegramy automaticky rozšifruje pomocí svého interního AES klíče. Jedná se však o klíč daného modulu, nikoliv vyčítaného zařízení. Rozšifrovaná data jsou tedy nepoužitelná. Jedná se v principu spíše o druhou iteraci zašifrování, než o dešifrování dat. Při vyčítání šifrovaných dat je tedy nutné postupovat složitěji a provést nejdříve zpětné zašifrování daných dat interním klíčem (tím dosáhneme stavu zašifrování jako před přijetím IQRF modulem) a až poté provést rozšifrování dle normy, již s klíčem zařízení, které vyslalo daný šifrovaný telegram. 
+
+Problematice rozšifrování paketu přijatého modulem IQRF se blíže věnuje Kap.~\ref{KapitolaDesifrovani}.
+
+Praktické využíti jednotlivých módů zobrazuje Obr.~\ref{TopologieIQRF}.
 
  \begin{figure}[!ht]
 \vspace{-20pt}
@@ -86,7 +91,7 @@ S řídícím mikrokontrolérem modul komunikuje pomocí rozhraní UART, jehož 
 Modul podporuje jednoduchý formát příkazů sloužící k nastavení konfiguračních parametrů modulu i k samotné komunikaci s modulem. Každý příkaz začíná znakem \texttt{\textgreater}. Každá zpráva odpověďi začíná znakem \texttt{\textless}. Každému příkazu musí předcházet budící znak \texttt{NULL (0x00)} následovaný 2\,ms pauzou a každý paket příkazů je ukončen znakem \texttt{CR (0x0D)}. 
 
 \newpage
-Obecná struktura~\cite{ModulIQRF}~paketu příkazu je	\texttt{>[CC][RW][DATA][CR],} kde CC je jednobajtový kód daného příkazu, RW je jednobajtový příznak zápisu (\textbf{:}) či čtení dat (\textbf{?}) dat, DATA jsou zapisovaná data, pokud se jedná o zápis a CR je znak ukončení.
+Obecná struktura~\cite{ModulIQRF}~paketu příkazu je	\texttt{>[CC][RW][DATA][CR],} kde CC je jednobajtový kód daného příkazu, RW je jednobajtový příznak zápisu (symbol dvojtečky) či čtení dat (symbol otazníku) dat, DATA jsou zapisovaná data, pokud se jedná o zápis a CR je znak ukončení řádku.
 
 Obecná skruktura odpovědi je \texttt{<[DATA][CR]}, kde DATA obsahuje přenášená data či návratové kódy (OK pro správné dokončení příkazu, ERR1 pro chybu syntaxe a ERR2 pro neplatnou vstupní hodnotu). Některé bajty jsou kódovány v šestnáckové soustavě či využívají uložení BigEndian.
 
@@ -98,7 +103,7 @@ Například dotaz a odpověd pro aktuální AES klíč je:
 				<010203040506070809a0b0c0d0e0f[CR]  
 \end{lstlisting}
 
-a pro případnou změnu AES klíče:
+a pro příkaz případnou změnu AES klíče:
 
 \begin{lstlisting}[style=MyCodeBash]
 				>03:112233445566778899aabbccddeeff[CR]

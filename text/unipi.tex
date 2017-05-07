@@ -5,7 +5,7 @@ UniPi je česká firma, nyní dceřiná společnost Faster.cz, původně její o
 
 UniPi je taktéž pojmenování pro přídavné rozšiřující desky pro RaspberryPi, se~kterou je plně kompatibilní ve všech verzích. Je vybavena řadou komponent, jako jsou například digitální galvanicky oddělené vstupy s LED signalizací, 0\,-\,10\,V analogové vstupy, 0\,-\,10\,V analogové výstupy, spínací relé, jednokanálová 1Wire sběrnice, I2C sběrnice, UART sběrnice, SPI sběrnice a RS-485 sběrnice.
 
-UniPi je název, odvozený od slov \uv{RaspberryPi} a \uv{univerzální}, protože jednoduchost a univerzálnost jsou základní charakteristiky této desky. Deska původně vznikla pro potřeby řízení energetických hodnot vlastního datacentra Zelená Data \cite{ZelenaData}, ale škála odvětví, kde je možné UniPi nasadit je rozsáhlá, pro představu výrobce uvádí několik příkladů \cite{UniPi}:
+UniPi je název, odvozený od slov \uv{Raspberry\textbf{Pi}} a \uv{\textbf{uni}verzální}, protože jednoduchost a univerzálnost jsou základní charakteristiky této desky. Deska původně vznikla pro potřeby řízení energetických hodnot vlastního datacentra Zelená Data \cite{ZelenaData}, ale škála odvětví, kde je možné UniPi nasadit je rozsáhlá, pro představu výrobce uvádí několik příkladů \cite{UniPi}:
 \begin{itemize}
 	\item Docházkové a přístupové systémy.
 	\item Bezpečnostní systémy.
@@ -43,7 +43,7 @@ Desky se liší svými vstupně-výstupními možnostmi, rozměry a jsou dostupn
 \section{UniPi v1}
 \label{KapitolaUnipi1}
 
-Deska UniPi je prezentována jako nejlevnější a nejjednodušší řešení pro inteligentní budovy a IoT. Je navržena pro maximální kompatibilitu s embedded zařízením RaspberryPi. Zařízení bylo vyvinuto primárně jako rozhraní pro příjem vstupních signálů, jejich vyhodnocení a~realizaci výstupní reakce na základě naprogramovaných algoritmů \cite{UniPiBoard1}.
+Deska UniPi je prezentována jako nejlevnější a nejjednodušší řešení pro inteligentní budovy a iIoT. Je navržena pro maximální kompatibilitu s embedded zařízením RaspberryPi. Zařízení bylo vyvinuto primárně jako rozhraní pro příjem vstupních signálů, jejich vyhodnocení a~realizaci výstupní reakce na základě naprogramovaných algoritmů \cite{UniPiBoard1}.
 
 Disponuje (viz Obr.~\ref{ObrazekUnipiV1}) osmi relé pro střídavý proud, čtrnácti digitálními vstupy, jedním jednokanálovým 1Wire rozhraním, dvěma 0\,-\,10\,V analogovými vstupy a jedním 0\,-\,10\,V analogovým výstupem. Zajímavou součástí desky je také modul reálného času. Druhý I2C port na RaspberryPi v sobě navíc ukrývá 5\,V měnič napětí a ochranu ESD (ElectroStatic Discharge), umožňující tak připojení dalších zařízení. Pro jednoduché připojení jednotlivých sběrnic jsou na desce umístěny konektory.
 
@@ -118,7 +118,7 @@ UniPi Neuron představuje modulární PLC (Programmable Logic Controller) pro ch
 	\vspace{-10pt}
 \end{figure}
 
-UniPi Neuron je na rozdíl od první verze, kdy se rozšiřujicí deska RaspberryPi distribuovala zvlášt, již hotové řešení, které se skládá z RaspberryPi, rozšiřující desky UniPi verze 2 (viz Obr.~\ref{UnipiV2DeskaUnipi}), propojovací desky pro komunikační moduly (viz Obr.~\ref{unipi_osazeny}) a diodového panelu. To vše propojené a uzavřené v modrém plechovém pouzdru s možností montáže na DIN lištu. K dostání je tedy pouze jako hotový výrobek.
+UniPi Neuron je na rozdíl od první verze, kdy se rozšiřujicí deska RaspberryPi distribuovala zvlášt, již hotové řešení, které se skládá z RaspberryPi, rozšiřující desky UniPi verze 2 (viz Obr.~\ref{UnipiV2DeskaUnipi}), propojovací desky pro komunikační moduly (viz Obr.~\ref{unipi_osazeny}) a diodového panelu. To vše propojené a uzavřené v modrém plechovém pouzdru s profilem ve tvaru jističe s možností montáže na DIN lištu. K dostání je tedy pouze jako hotový výrobek.
 
 
 \subsubsection{Popis desky}
@@ -134,7 +134,7 @@ UniPi Neuron je na rozdíl od první verze, kdy se rozšiřujicí deska Raspberr
 \end{itemize}
 
 \vspace{10pt}
-UniPi Neuron existuje v několika verzích (viz Obr.~\ref{UnipiNeuronModels}), rozlišených počtem digitálních vstupů a výstupů, parametrů procesoru a velikosti paměti RAM. Do budoucna by měly být také k dostání verze s jedním konkrétním modulem (Wireless M-Bus, ZigBee, GPRS, \ldots) uvnitř.
+UniPi Neuron existuje v několika verzích (viz Obr.~\ref{UnipiNeuronModels}), rozlišených počtem digitálních vstupů a výstupů, parametrů procesoru a velikosti paměti RAM. Do budoucna by měly být také k dostání verze s jedním konkrétním modulem (Wireless M-Bus, ZigBee, GPRS, LoRa, EnOcean, \ldots) uvnitř.
 
 \begin{figure*}[!ht]
     \centering
@@ -147,7 +147,7 @@ UniPi Neuron existuje v několika verzích (viz Obr.~\ref{UnipiNeuronModels}), r
 			\label{UnipiNeuronModels}
 \end{figure*}
 
-\vspace{10pt}
+\newpage{}
 Standardní modely NEURON mají proměnlivé množství digitálních vstupů a~reléových výstupů. Jejich počet je uveden v Tab.~\ref{TableUnipiIO}.
 
 \begin{table}[!ht]
@@ -171,7 +171,6 @@ Standardní modely NEURON mají proměnlivé množství digitálních vstupů a~
 	\end{center}
 \end{table}
 
-\newpage
 Písmeno x v Tab.~\ref{TableUnipiVar} bývá nahrazeno číslem 1-3 dle osazeného typu RaspberryPi:
 
 \begin{table}[!ht]
@@ -203,7 +202,7 @@ S RaspberryPi je deska UniPi propojena, obdobně jako u první verze, pomocí 26
 			\vspace{-5pt}
 \end{figure*}
 
-Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{unipi_propojuvnitr}) se signalizačními diodami. UART sběrnice je zde připravena pro připojenů dalších modulů. Tyto desky jsou k~dostání v několika verzích, přizpůsobené konektorem pro konkrétní komunikační modul. Deska na obrázku~\ref{unipi_osazeny} je osazena WM-Bus modulem.
+Na I2C sběrnici je dále připojen panel (viz Obr.~\ref{unipi_propojuvnitr}) se signalizačními diodami. UART sběrnice je zde připravena pro připojení dalších modulů. Tyto desky jsou k~dostání v několika verzích, přizpůsobené konektorem pro konkrétní komunikační modul. Deska na obrázku~\ref{unipi_osazeny} je osazena WM-Bus modulem.
  
 Celá sestava desek je poté uložena v kovové krabičce s označením vstupů a výstupů (viz Obr.~\ref{unipi_unipi_box}).
 
@@ -229,7 +228,7 @@ Vnitřní uspořádání desky je řešeno pomocí funkčních celků (viz Obr.~
 	\vspace{-10pt}
 \end{figure}
 
-Napájení desky je pomocí 24\,V/1,5\,A adaptéru přímo na rozšiřující desku UniPi. Pro účely testování a implementace byla zapůjčena deska UniPi Neuron S103 vybavená počítačem RaspberryPi 3.
+Napájení desky je řešeno pomocí 24\,V/1,5\,A adaptéru přímo na rozšiřující desku UniPi. Pro účely testování a implementace byla zapůjčena deska UniPi Neuron S103 vybavená počítačem RaspberryPi 3.
 
  %\begin{figure}[!h]
  % \begin{center}
@@ -248,7 +247,7 @@ Jak bylo popsáno v předchozím textu (Kap.~\ref{KapitolaUnipi1}~a~\ref{Kapitol
 
 
 \begin{itemize}
-	\item Deska UniPi má reléově spínané výstupy, lze pomocí ní spínat i silové výstupy do 250\,V. Zatímco UniPi NEURON má spínané tranzistorové výstupy pouze do 50\,V, pro spínání vyšších napětí je nutné připojit reléový modul.
+	\item Deska UniPi má reléově spínané výstupy a lze pomocí ní spínat i silové výstupy do 250\,V. Zatímco UniPi NEURON má spínané tranzistorové výstupy pouze do 50\,V, pro spínání vyšších napětí je nutné připojit reléový modul.
 	\item Deska UniPi má zpřístupněnou I2C a UART sběrnici, zatímco na UniPi Neuronu je I2C využita pouze pro adresování vnitřních bloků a UART sběrnice je~alokována pro rozšiřující komunikační moduly.
 	\item Software EVOK a software postavené na něm jsou v tomto okamžiku plně funkční pouze na desce první verze.	
 \end{itemize}
@@ -257,14 +256,14 @@ Jak bylo popsáno v předchozím textu (Kap.~\ref{KapitolaUnipi1}~a~\ref{Kapitol
 Na některé aplikace však již tato deska vhodná není a je lepší využít UniPi NEURON:
 
 \begin{itemize}
-	\item I když UniPi první verze má sběrnici UART a teoretecky do ní lze připojit stejné rozšiřující komunikační moduly jako do UniPi Neuronu, součástí vývoje budou jen rozšiřující desky pro UniPi NEURON, jejichž nabídka má obsahovat spoustu dostupných technologií.
+	\item I když UniPi první verze má sběrnici UART a teoretecky do ní lze připojit stejné rozšiřující komunikační moduly jako do UniPi Neuronu, součástí vývoje budou jen rozšiřující desky pro UniPi NEURON, jejichž nabídka má obsahovat spoustu dostupných rozšiřujících modulů a technologií.
 	\item Vzhledem k rozsáhlé nabídce modelů UniPi NEURON lze zvolit řešení na míru, včetně další konektivity.
 	\item UniPi NEURON disponuje sběrnici RS-485 s protokolem ModBUS.
 	\item UniPi NEURON má na kontaktech vysouvací svorky a celý modul zabírá méně místa.	
 \end{itemize}
 
 \vspace{10pt}
-Vzhledem k tomu, že UniPi NEURON je v době vypracování práce jediná vývojem podporovaná verze, bude implementaci WM-Bus protokolu provedena na této verzi, avšak lze bez jakýchkoliv softwarových modifikací a pouze s jednou hardwarovou modifikací implementovat WM-Bus protokol i na UniPi první verze. Stačí pouze propojit příslušné piny IQRF modulu s piny modulárního konektoru UART sběrnice.
+Vzhledem k tomu, že UniPi NEURON je v době vypracování práce jediná vývojem podporovaná verze, bude implementace WM-Bus protokolu provedena na této verzi desky. Avšak pouze s jednou hardwarovou modifikací a bez softwarových modifikací lze WM-Bus protokol implementovat i na UniPi první verze. Stačí pouze propojit příslušné piny IQRF modulu s piny modulárního konektoru UART sběrnice.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -272,7 +271,7 @@ Vzhledem k tomu, že UniPi NEURON je v době vypracování práce jediná vývoj
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Sběrnice na UniPi}
-Jak je patrné z předchozích kapitol, jednodeskové počítače i rozšiřující moduly disponují množstvím komunikačních sběrnic. V této kapitole budou stručně představeny všechny výše zmíněné a pozornost bude zaměřena na~sběrnici UART, která bude sloužit pro~komunikaci mezi RaspberryPi a~WM-Bus modulem.
+Jak je patrné z předchozích kapitol, jednodeskové počítače i rozšiřující moduly disponují množstvím komunikačních sběrnic. V této kapitole budou stručně představeny všechny dříve zmíněné a pozornost bude zaměřena na~sběrnici UART, která bude sloužit pro~komunikaci mezi RaspberryPi a~WM-Bus modulem.
 
 \subsection{UART}
 UART je synchronní a asynchronní sériové rozhraní pro přenos dat mezi zařízeními v obou směrech. Používá se pro komunikaci mezi mikrokontroléry, počítači a dalšími zařízeními podporující tento standard. Využívá dvouvodičovou sběrnici, vysílá data na pinu označovaném obvykle jako TX, přijímá na pinu RX.
@@ -288,7 +287,7 @@ UART je synchronní a asynchronní sériové rozhraní pro přenos dat mezi zař
 \end{figure}
 Pro přenos se používají rámce, které mohou mít 5 až 9 bitů a jsou od sebe odděleny jedním start bitem a jedním nebo dvěma stop bity. Každý rámec může obsahovat ještě paritní bit pro kontrolu rámce. 
 
-Dále je možné nastavit rychlost přenosu dat od 1~200\,bps až do 250\,kbps. Lze nastavit buď pro asynchronní režim, označovaný jako SCI, například pro RS-232 či RS-485, anebo pro synchronní režim, běžně označovaný jako SPI. Tato sběrnice je~ve~verzi 1 vyvedená do modulárního konektoru na desce, ve verzi 2 již není vyvedená na kontakty, ale je součástí desky plošného spoje, na kterém se přímo nachází slot pro komunikační modul.
+Dále je možné nastavit rychlost přenosu dat od 1~200\,bps až do 250\,kbps. Lze nastavit buď pro asynchronní režim, označovaný jako SCI (Serial Communications Interface), například pro RS-232 či RS-485, anebo pro synchronní režim, běžně označovaný jako SPI (Serial Peripherals Interface). Tato sběrnice je~ve~verzi 1 vyvedená do modulárního konektoru na desce, ve verzi 2 již není vyvedená na kontakty, ale je součástí desky plošného spoje, na kterém se přímo nachází slot pro komunikační modul.
 
 
 \subsection{SPI}
@@ -329,7 +328,7 @@ Obrázek \ref{ObrazekGPIO} demonstruje rozložení GPIO konektoru napříč verz
 	\vspace{-10pt}
 \end{figure}
 
-Jak již bylo popsáno v předchozích kapitolách, GPIO konektor není ve všech verzích RaspberryPi shodný. Model RaspberryPi B má 26 pinový konektor, zatímco verze B+, 2 a 3 mají konektor 40 pinový. Rozdíl je v tom, že u 40 pinového konektoru je prvních 26 pinů shodných a konektor je na zbývajících 14 pinech rozšířen o další vstupy a výstupy. Je tedy zpětně kompatibilní.
+Jak již bylo popsáno v Kap.~\ref{KapitolaUnipi1}, GPIO konektor není ve všech verzích RaspberryPi shodný. Model RaspberryPi B má 26 pinový konektor, zatímco verze B+, 2 a 3 mají konektor 40 pinový. Rozdíl je v tom, že u 40 pinového konektoru je prvních 26 pinů shodných a konektor je na zbývajících 14 pinech rozšířen o další vstupy a výstupy. Je tedy zpětně kompatibilní.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -345,7 +344,7 @@ Výrobce poskytuje vlastní software EVOK, který se stará o komunikaci desky U
 \begin{itemize}
 \item EVOK - oficiální Python API s websocket a REST podporou.
 \item PiDome - platforma pro domácí automatizaci.
-\item pimmatic - platforma pro domácí automatizaci založená na node.js.
+\item Pimmatic - platforma pro domácí automatizaci založená na node.js.
 \item Node-RED - platforma založená na node.js s integrací do společnosti IBM Cloud Bluemix.
 \item Wyliodrin - programování automatizace na bázi prohlížeče.
 \item FHEM.de - domácí automatizační projekt napsaný v jazyce Perl.

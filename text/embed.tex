@@ -7,7 +7,7 @@ Mezi nejznámější nízkovýkonové (embedded) zařízení patří open-source
 
 Z výše uvedených byly vybrány jen nízkovýkonová zařízení, využitelná pro chytrou domácnost či Internet věcí, s vyvedenými GPIO piny a dostatečnou dokumentací.
 
-Jejich vlastnosti jsou přehledně shrnuty v příloze \ref{PrilohaTabulkaTabulka}.
+Jejich vlastnosti jsou přehledně shrnuty v tabulce přílohy \ref{PrilohaTabulkaTabulka}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -19,21 +19,21 @@ Jejich vlastnosti jsou přehledně shrnuty v příloze \ref{PrilohaTabulkaTabulk
 \section{Arduino}
 \label{KapArduino}
 
-Ardiuno je skupina několika jednodeskových počítačů založených na~mikrokontrolérech. Nejedná se však o klasický stolní počítač IBM PC, ale o protypovací desku, ke~které se~spíše jak ovládací  zobrazovací periferie připojují senzory, moduly, serva a~displeje. Projekt je od svého počátku šířen jako open-source, příručka jazyka a~externí knihovny jsou pak šířeny pod licencí Creative Commons.
+Ardiuno je skupina několika jednodeskových počítačů založených na~mikrokontrolérech. Nejedná se však o klasický stolní počítač IBM PC, ale o protypovací desku, ke~které se~spíše jak ovládací a|zobrazovací periferie připojují senzory, moduly, serva a~displeje. Projekt je od svého počátku šířen jako open-source, příručka jazyka a~externí knihovny jsou pak šířeny pod licencí Creative Commons.
 	
 Výrobce těchto desek vytvořil vývojové prostředí shodné pro všechny produkty Ardiuno. To se nazývá Arduino IDE, je dostupné zdarma na webu výrobce a podporuje jazyk Wiring~\cite{embed_about_wiring_2011}, což je upravená verze jazyka C. Prostředí zároveň obsahuje i~Serial Monitor, který slouží k oboustranné sériové komunikaci mezi Arduinem a~PC. Alternativou ještě může být prostředí Processing~\cite{embed_about_processing_2015} využívající stejnojmenný jazyk, umožňující vytváření grafických multiplatformních aplikací.
 	
-Na deskách bývá několik diod, resetovací tlačítko, různé přídavné sběrnice (UART, I2C), konektory pro ICSP programování, napájecí konektor, oscilátor a obvod zprostředkovávající komunikaci po USB.
+Na deskách bývá několik diod, resetovací tlačítko, různé přídavné sběrnice, konektory pro ICSP (In Circuit Serial Programming) programování, napájecí konektor, oscilátor a obvod zprostředkovávající komunikaci po USB.
 	
 Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývají Shieldy, mají převážně stejný tvar jako deska Arduina a připojují se pomocí dlouhých pinů. Zabírají celou plochu, ale většina z nich dále zpřístupňuje GPIO (General Purpose Input/Output) piny, lze je tedy skládat na sebe. Stejně jako Arduino desek existuje i celá řada shieldů. Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým připojením na dané piny. Je však třeba dbát na to, že Arduino pracuje s 5\,V logikou, zatímco například RaspberryPi pracuje s 3,3\,V logikou.
 	
 		\subsection{Arduino Duemilanove} Arduino Duemilanove je vývojová jednoprocesorová deska s mikroprocesorem ATMega168 od firmy Atmel, tedy platformě Atmel AVR. 
-		Parametry zařízení jsou: ATmega168 s~16\,MHz krystalem, 16\,KB flash, 1\,KB SRAM (Static Random Access Memory), 512\,B EEPROM (Electrically Erasable Programmable Read-Only Memory). 	Konektivita: 14 digitálních vstupně/výstupných pinů, z toho 6 z nich může být využito i PWM (Pulse Width Modulation), vstupních analogových pinů (10\,bit A/D převodník, 0-5\,V), I2C (Inter-Integrated Circuit) sběrnici, UART (Universal Asynchronous Receiver/Transmitter) sběrnici, ICSP (In Circuit Serial Programming) rozhraní, USB (Universal Serial Bus) rozhraní~\cite{ArduinoDuemilanove}.	
+		Parametry zařízení jsou: ATmega168 s~16\,MHz krystalem, 16\,KB flash, 1\,KB SRAM (Static Random Access Memory), 512B EEPROM (Electrically Erasable Programmable Read-Only Memory). 	Konektivita: 14 digitálních vstupně/výstupných pinů, z toho 6 z nich může být využito i PWM (Pulse Width Modulation), vstupních analogových pinů (10\,bit A/D převodník, 0-5\,V), I2C (Inter-Integrated Circuit) sběrnici, UART (Universal Asynchronous Receiver/Transmitter) sběrnici, ICSP rozhraní, USB (Universal Serial Bus) rozhraní~\cite{ArduinoDuemilanove}.	
 	
 		\subsection{Arduino Uno} Arduino Uno je v současné době asi nejčastěji používaný typ desky. Arduino Uno je vývojová jednoprocesorová deska s mikroprocesorem ATMega328. Od roku 2011 je nástupcem Arduina Duemilanove. Změny oproti předchůdci jsou pouze v použitém mikrokontroléru, došlo k zdvojnásobení velikosti paměti na 32\,KB flash, 2\,KB SRAM, 1\,KB EEPROM~\cite{ArduinoUno}.
 	
 		\subsection{Arduino Leonardo} 
-		Arduino Leonardo designově navazuje na Arduino Uno, liší se pouze v použitém čipu ATmega32u4~\cite{ArduinoLeonardo}.
+		Arduino Leonardo designově navazuje na Arduino Uno, liší se pouze v použitém čipu ATmega32u4~\cite{ArduinoLeonardo} a využitím SMD (Surface Mount Device) součástek.
 
 
 \begin{figure*}[!ht]
@@ -51,7 +51,7 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 \newpage
 	
 					\subsection{Arduino Mega} 
-					Arduino Mega je deska pro náročnější projekty. Oproti klasickému Arduinu má~Arduino Mega rychlejší procesor (16\,MHz) a také více vstupních a výstupních pinů. K~dispozici je 54 digitálních pinů, 14 PWM výstupů, 16 analogových vstupů a~4~hardwarové sériové porty. Dále má 256\,kB flash paměti, 8\,kB RAM paměti a 4\,kB EEPROM paměti~\cite{ArduinoMega}.	
+					Arduino Mega je deska pro náročnější projekty. Oproti klasickému Arduinu má~Arduino Mega rychlejší procesor (16\,MHz) a také více vstupních a výstupních pinů. K~dispozici je 54 digitálních pinů, 14 PWM výstupů, 16 analogových vstupů a~4~hardwarové sériové porty. Dále má 256\,KB flash paměti, 8\,KB RAM paměti a 4\,KB EEPROM paměti~\cite{ArduinoMega}.	
 			
 		\subsection{Arduino Due} 
 		Arduino Due je nástupcem Arduino Mega a je to první karta Arduino, na~níž~je~umístěn 32-bitový řadič (32-bitový ARM procesor
@@ -109,13 +109,13 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 		Lilypad Arduino je postaveno na ATmega168V (energeticky úsporná verze ATmega168) nebo ATmega328V. Je určeno pro wearables projekty, zejména pro implementaci do textilií, kdy jsou spoje tvořeny vodivou nití. Není však pratelná. Existuje více variant této desky~\cite{ArduinoLilipad}.	
 	
 	\subsection{Arduino Yun} 
-	Arduino Yun je deska založená na ATmega32u4 a Atheros AR9331, který je schopný běhu odlehčeného linuxu Linino. Ve výbavě je softwarový bridge (prostředník, most), který zajišťuje komunikaci mezi oběma čipy. Procesor Atheros podporuje linuxové distribuce založené na OpenWrt s názvem OpenWrt-Yun. Deska má vestavěný Ethernet a WiFi modul, USB-A port, slot pro MicroSD kartu. Dále disponuje 20 digitálními I/O piny, z toho 7 mohou být použito jako výstupy PWM a 12 jako analogové vstupy~\cite{ArduinoYun}.	
+	Arduino Yun je deska založená na ATmega32u4 (architektura ARM) a Atheros AR9331 (architektiura x86), který je schopný běhu odlehčeného linuxu Linino. Ve výbavě je softwarový bridge (prostředník, most), který zajišťuje komunikaci mezi oběma čipy. Procesor Atheros podporuje linuxové distribuce založené na OpenWrt s názvem OpenWrt-Yun. Deska má vestavěný Ethernet a WiFi modul, USB-A port, slot pro MicroSD kartu. Dále disponuje 20 digitálními I/O piny, z toho 7 mohou být použito jako výstupy PWM a 12 jako analogové vstupy~\cite{ArduinoYun}.	
 
 	\begin{figure*}[!ht]
     \centering
-			\subfigure[Lilypad Arduino ]{\includegraphics[width=0.55\textwidth]{obrazky/emded_arduino_lilipad}\label{emded_arduino_lilipad}}
+			\subfigure[Lilypad Arduino ]{\includegraphics[width=0.55\textwidth,height=3.5cm,keepaspectratio]{obrazky/emded_arduino_lilipad}\label{emded_arduino_lilipad}}
 			\hspace*{5mm}
-			\subfigure[Arduino Yun ]{\includegraphics[width=0.35\textwidth]{obrazky/emded_arduino_yun}\label{emded_arduino_yun}}
+			\subfigure[Arduino Yun ]{\includegraphics[width=0.35\textwidth,height=3.5cm,keepaspectratio]{obrazky/emded_arduino_yun}\label{emded_arduino_yun}}
 			\caption{Lilypad Arduino a Arduino Yun}
 			\vspace{-10pt}	
 \end{figure*}
@@ -139,10 +139,10 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 	LABduino je český klon Arduina vytvořený z otevřené elektronické stavebnice MLAB.
 	
 	\subsection{Arduelo Libero}	
-	Arduelo Libero je mírně vylepšený český free klon Arduino Diecimila.
+	Arduelo Libero je mírně vylepšený český free klon Arduino Duemilanove.
 	
 	\subsection{Bare Bones Board} 
-	Bare Bones Board je kompatibilní deska, tvarově nepřipomínající žádný Arduino produkt. Kvůli rozložení pinů nepodporující shieldy. Vyráběná a prodávaná jako kit firmou Modern Device Company.
+	Bare Bones Board je kompatibilní deska, tvarově nepřipomínající žádný Arduino produkt. Kvůli rozložení pinů nepodporuje shieldy. Vyráběná a prodávaná jako kit firmou Modern Device Company.
 	
 	\subsection{Freaduino} 
 	Freaduino je kompatibilní deska, tvarově shodná s Arduino UNO, vyráběná a prodávaná firmou ElecFreak jako kit The Freaduino Uno. Podporuje 3,3\,V logiku a~napájení. Má piny na připojení modulů (XBee). Napájecí piny zvládají zátěž až 2\,A.
@@ -150,9 +150,9 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 	\begin{figure*}[!ht]
 	\vspace{-10pt}	
     \centering
-			\subfigure[Bare Bones Board]{\includegraphics[width=0.45\textwidth]{obrazky/embed_barebones}\label{emded_barebones}}
+			\subfigure[Bare Bones Board]{\includegraphics[width=0.45\textwidth,height=3.5cm,keepaspectratio]{obrazky/embed_barebones}\label{emded_barebones}}
 			\hspace*{5mm}
-			\subfigure[Freaduino]{\includegraphics[width=0.45\textwidth]{obrazky/embed_freaduino}\label{emded_freaduino}}
+			\subfigure[Freaduino]{\includegraphics[width=0.45\textwidth,height=3.5cm,keepaspectratio]{obrazky/embed_freaduino}\label{emded_freaduino}}
 					\caption{Bare Bones Board a Freaduino}
 					\vspace{-20pt}	
 	\end{figure*}	
@@ -177,9 +177,9 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 
 \begin{figure*}[!ht]
     \centering
-			\subfigure[Diavolino]{\includegraphics[width=0.45\textwidth]{obrazky/embed_diavolino}\label{emded_diavolino}}
+			\subfigure[Diavolino]{\includegraphics[width=0.45\textwidth,height=3.5cm,keepaspectratio]{obrazky/embed_diavolino}\label{emded_diavolino}}
 			\hspace*{5mm}
-			\subfigure[Boarduino]{\includegraphics[width=0.45\textwidth]{obrazky/embed_boarduino}\label{emded_boarduino}}
+			\subfigure[Boarduino]{\includegraphics[width=0.45\textwidth,height=3.5cm,keepaspectratio]{obrazky/embed_boarduino}\label{emded_boarduino}}
 					\caption{Diavolino a Boarduino}
 					\vspace{-30pt}	
 	\end{figure*}	
@@ -198,7 +198,7 @@ RaspberryPi reprezentuje jednodeskový počítač o velikosti zhruba platební k
 
 Primárním operačním systémem je Linux, k dispozici je několik jeho distribucí, případně lze použít Windows 10 IoT Core. Na rozdíl do Arduina obsahuje RaspberryPi plnohodnotný operační systém, ARM mikrokontrolér, USB pro připojení myši a klávesnice, Ethernet konektor pro připojení sítě, grafický výstup HDMI (High-Definition Multimedia Interface) a kompozitní video, DSI (Display Serial Interface) pro připojení displeje, CSI (Camera Serial Interface) pro připojení kamery a čtečku pamětových karet, tedy působí spíše jako menší počítač, než vývojová platforma. 
 
-Všechny další rozšiřující sběrnice (UART, I2C, SPI, PWM, digitální vstup a~výstup, analogový vstup) jsou vyvedeny do 26-40 pinového GPIO konektoru. Na~rozdíl od Arduina je možné RaspberryPi pomocí GPIO kontaktů použít nejen k ovládání různých zařízení, ale i~k~samotnému vývoji příslušných aplikací. Lze ho také použít jako multimediální přehrávač videa nebo hudby nebo i jen pro přístup k Internetu.
+Všechny další rozšiřující sběrnice (UART, I2C, SPI, PWM, digitální vstup a~výstup, analogový vstup) jsou vyvedeny do 26 nebo 40 pinového GPIO konektoru. Na~rozdíl od Arduina je možné RaspberryPi pomocí GPIO kontaktů použít nejen k ovládání různých zařízení, ale i~k~samotnému vývoji příslušných aplikací. Lze ho také použít jako multimediální přehrávač videa nebo hudby nebo i jen pro přístup k Internetu.
 
 RaspberryPi stejně jako Arduino podporuje připojení rozšiřujících karet:
 
@@ -208,10 +208,10 @@ RaspberryPi stejně jako Arduino podporuje připojení rozšiřujících karet:
 \item \textbf{UniPi} je rozšiřující deska která rozšiřuje I/O možnosti RaspberryPi. K~ní~se~připojuje pomocí 26 žilového plochého kabelu a dle typu připojeného UniPi zařízení poskytuje I/O funkce navíc. Rozšiřujícími moduly UniPi se bude blíže zabývat následující kapitola (Kap.~\ref{KapUnipi}).
 \item \textbf{RaspberryPi to Arduino Shield} je rozšiřující deska, která umožňuje propojení RasbperryPi a vybraných modelů Arduino.
 \end{itemize}
-Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým připojením na dané piny GPIO konektoru. Je však třeba dbát na to, že RaspberryPi pracuje s 3,3\,V logikou, zatímco například Arduino pracuje s 5\,V logikou. Popis GPIO konektoru včetně možností připojení je součástí následující kapitoly (Kap.~\ref{KapGPIO}).
+Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým připojením na dané piny GPIO konektoru. Je však třeba dbát na to, že RaspberryPi pracuje s 3,3\,V logikou, zatímco například Arduino pracuje s 5\,V logikou. Popis GPIO konektoru včetně možností připojení je součástí Kap.~\ref{KapGPIO}.
 
 	\subsection{RaspberryPi}
-	Původní model RaspberryPi~\cite{RaspiOne} byl zveřejněn v únoru roku 2012. Obsahuje jednojádrový procesor o frekvenci 700\,MHz. U této verze existovaly tři modely:
+	Původní model RaspberryPi byl zveřejněn v únoru roku 2012. Obsahuje jednojádrový procesor o frekvenci 700\,MHz. U této verze existovaly tři modely~\cite{RaspiOne}:
 	
 		\begin{itemize}
 		\item \textbf{Model A+} je odlehčená levná verze modelu B. Nemá žádný pamětový slot. Disponuje 256\,MB RAM. Neobsahuje USB port. Má 40 GPIO pinů.
@@ -227,15 +227,14 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 			\hspace*{2mm}
 			\subfigure[Model B+]{\includegraphics[height=3.5cm,keepaspectratio]{obrazky/embed_raspi_1bp}\label{embed_raspi_1bp}}
 		\caption{RaspberryPi prvních verzí}
-		\vspace{-20pt}	
 \end{figure*}
 	
 	\subsection{RaspberryPi 2}
-	RaspberryPi 2 je pokračováním RaspberryPi, které přináší zejména vyšší výkon. Díky čtyřjádrovému procesoru BCM2836 o taktu 900\,MHz by měl být 3–6× rychlejší než jeho předchůdce. Tento model disponuje 1\,GB paměti a má 4 USB porty~\cite{RaspiTwo}.
+	RaspberryPi 2 je pokračováním RaspberryPi, které přináší zejména vyšší výkon. Díky čtyřjádrovému procesoru BCM2836 o taktu 900\,MHz by měl být 3-6× rychlejší než jeho předchůdce. Tento model disponuje 1\,GB paměti a má 4 USB porty~\cite{RaspiTwo}.
 
 
 \subsection{RaspberryPi 3}
-		RaspberryPi 3, dostupný od roku 2016 je vybaven čtyřjádrovým 64bitovým procesorem ARM Cortex-A53 o taktu 1,2\,GHz. Oproti předchozímu modelu přináší integraci WiFi a Bluetooth modulů přímo na desce a měl by být 2x rychlejší~\cite{RaspiThree}.
+		RaspberryPi 3, dostupný od roku 2016 je vybaven čtyřjádrovým 64bitovým procesorem ARM Cortex-A53 o taktu 1,2\,GHz. Oproti předchozímu modelu přináší integraci WiFi a Bluetooth modulů přímo na desce a měl by být dvakrát rychlejší~\cite{RaspiThree}.
 		
 \subsection{RaspberryPi Zero}
 		RaspberryPi Zero je nejúspornější varianta RaspberryPi, ideální pro použití v IoT. Vychází z modelu A+, ve srovnání s ním nabízí procesor s frekvencí 1\,GHz a 512\,MB paměti. Má přibližně poloviční velikost, nemá však vyvedené piny GPIO konektoru, USB konektory má ve verzi micro a HDMI ve verzi mini~\cite{RaspiZero}.
@@ -248,7 +247,6 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 			\hspace*{5mm}
 			\subfigure[RaspberryPi Zero]{\includegraphics[width=0.3\textwidth,height=3.5cm,keepaspectratio]{obrazky/embed_raspi_zero}\label{embed_raspi_zero}}
 		\caption{RaspberryPi následujících verzí}
-		\vspace{-20pt}	
 \end{figure*}
 
 
@@ -262,27 +260,27 @@ Samozřejmě lze k Arduinu připojit i samotné moduly nebo senzory, přímým p
 \section{RaspberryPi klony}
 \label{KapRaspiKlony}
 
-Vzrůstající popularita RaspberryPi dala stejně jak u Arduina vzniknout celé řadě klonů. Tyto klony odvozují ze základního sestavení RaspberryPi a určitým způsobem ho rozřišují. Jelikož označení „RaspberryPi“ je registrovanou ochrannou známkou, proto mají podobně navžené počítače odvozené názvy, jako BananaPi a~OrangePi. Zmíněné klony patří k nejznámějším a každý z nich již existuje v několika verzích, v této podkapitole budou představeny ty nejznámější s uvedením jejich hlavních odchylek od RaspberryPi.
+Vzrůstající popularita RaspberryPi dala stejně jak u Arduina vzniknout celé řadě klonů. Tyto klony odvozují ze základního sestavení RaspberryPi a určitým způsobem ho rozřišují. Jelikož označení „RaspberryPi“ je registrovanou ochrannou známkou, mají podobně navžené počítače odvozené názvy, jako BananaPi a~OrangePi. Zmíněné klony patří k nejznámějším a každý z nich již existuje v několika verzích, v této podkapitole budou představeny ty nejznámější s uvedením jejich hlavních odchylek od RaspberryPi.
 
 %%% ======================================= BANANA PI ============================== %%%
 	\subsection{BananaPi}
-		Původní BananaPi, ze kterého vychází řada dalších modelů, je malý jednodeskový počítač, který se na první pohled podobá RaspberryPi.  Obsahuje dvoujádrový procesor a 512\,MB RAM. Na rozdíl od RaspberryPi obsahuje BananaPi také SATA řadič, mikrofon, který je připájen přímo na desce, gigabitový Ethernet, USB 2.0 OTG, IR přijímač, tlačítko reset a power. Počítač podporuje SATA disky až~do~velikosti 2\,TB. GPIO konektor je vždy kompatibilní s některou verzi RaspberryPi. Za~výrobou všech počítačů BananaPi stojí čínská firma SinoVoip CO., Limited~\cite{BananaPi}.
+		Původní BananaPi, ze kterého vychází řada dalších modelů, je malý jednodeskový počítač, který se na první pohled podobá RaspberryPi.  Obsahuje dvoujádrový procesor a 512\,MB RAM. Na rozdíl od RaspberryPi obsahuje BananaPi také SATA řadič, mikrofon, který je připájen přímo na desce, gigabitový Ethernet, USB 2.0 OTG (On The Go), IR (Infrared Radiation) přijímač, tlačítko reset a power. Počítač podporuje SATA disky až~do~velikosti 2\,TB. GPIO konektor je vždy kompatibilní s některou verzi RaspberryPi. Za~výrobou všech počítačů BananaPi stojí čínská firma SinoVoip CO., Limited~\cite{BananaPi}.
 		
 	\textbf{BananaPi BPI-M2} je klon RaspberryPi 2, obsahuje taktéž čtyřjádrový procesor běžící na 1 GHz, má již integrovanou WiFi (Wireless Fidelity), ale neobsahuje SATA (Serial Advanced Technology Attachment) port.
 	
-	\textbf{BananaPi BPI-M3} obsahuje osmijádrový procesor 1,8\,GHz s 2\,GB RAM, dále zahrnuje Wifi b/g/n a integrované Bluetooth 4. Obsahuje SATA port.
+	\textbf{BananaPi BPI-M3} obsahuje osmijádrový procesor 1,8\,GHz s 2\,GB RAM, dále zahrnuje WiFi b/g/n a integrované Bluetooth 4. Obsahuje SATA port.
 	
-	\textbf{BananaPi BPI-M64} obsahuje čtyřjádrový 64 bitový SoC procesor Allwinner A64.
+	\textbf{BananaPi BPI-M64} obsahuje oproti modelu M3 čtyřjádrový 64 bitový SoC procesor Allwinner A64.
 	
 	%%% ======================================= ORANGE PI ============================== %%%
 	\subsection{OrangePi}
 	OrangePi je alternativa pro RaspberryPi vznikající v posledních dvou letech. Všechny modely jsou založeny na architektuře ARM Cortex-A7 s SoC Allwinner H3 s čtyřjádrovým CPU, výjimkou jsou OrangePi a OrangePi Mini, které mají SoC Allwinner A20 s dvojádrovým CPU. Grafickým čipem je u všech modelů ARM Mali-400 MP2. Všechny modely podporují HDMI CEC~\cite{OrangePi}.
 
-		\textbf{OrangePi} je základní model z rodiny OrangePi, obsahuje čtyřjádrový procesor Allwinner A20 na 1\,GHz a 1\,GB RAM. Oproti RaspberryPi má navíc pouze mikrofon, IR (Infrared Radiation) port, USB OTG, ale nemá DSI rozhraní.
+		\textbf{OrangePi} je základní model z rodiny OrangePi, obsahuje čtyřjádrový procesor Allwinner A20 na 1\,GHz a 1\,GB RAM. Oproti RaspberryPi má navíc pouze mikrofon, IR port, USB OTG, ale nemá DSI rozhraní.
 		
 		\textbf{OrangePi Plus } má procesory běžící na 1,6\,GHz, 1\,GB RAM a 8\,GB EMMC Flash. Oproti RaspberryPi má gigabitový Ethernet, integrovaný mikrofon, USB-OTG konektor, integrovaný WiFi modul, IR přijímač. Obsahuje SATA port, který je připojený přes USB převodník.
 		
-		\textbf{OrangePi Plus2} oproti předchozí verzi došlo k navýšení pamětí na 2\,GB RAM a 16\,GB EMMC Flash a doplnění CSI konektoru.
+		\textbf{OrangePi Plus2} oproti předchozí verzi došlo k navýšení pamětí na 2\,GB RAM a 16\,GB eMMC (embedded MultiMedia Card) Flash a doplnění CSI (Camera Serial Interface) konektoru.
 		
 		\textbf{OrangePi One} vznikla jako reakce na odlehčenou verzi RaspberryPi Zero. Jedná se o čtyřjádrový procesor na frekvenci 1,2\,GHz postavený na čipu ARM Cortex-A7 s grafickým čipem Mali400 MP2. Operační paměť je 512\,MB. K dispozici je pouze 10/100\,Mbps Ethernet a jeden port USB 2.0.
 
@@ -301,25 +299,25 @@ Vzrůstající popularita RaspberryPi dala stejně jak u Arduina vzniknout celé
 %%% ======================================= CUBIE BOARD ============================== %%%
 	\subsection{CubieBoard}
 	\label{KapCubie}
-			CubieBoard je alternativou k RaspberryPi z roku 2012. Ačkoliv jsou vzhledově i~parametricky velmi podobné, není Cubieboard s RaspberryPi kompatibilní. Jsou postaveny na AllWinner A10 SoC čipu. Výrobce poskytuje vlastní sadu modulů a rozšiřujících desek. Cubieboardy poskytují pinové rozhraní, obsahující základní sběrnice (I2C, SPI, UART) ale i rozšiřující jako LVDS. Desky obsahují navíc SATA konektor~\cite{CubieBoards}.
+			CubieBoard je alternativou k RaspberryPi z roku 2012. Ačkoliv jsou vzhledově i~parametricky velmi podobné, není Cubieboard s RaspberryPi kompatibilní. Jsou postaveny na AllWinner A10 SoC čipu. Výrobce poskytuje vlastní sadu modulů a rozšiřujících desek. Cubieboardy poskytují pinové rozhraní, obsahující základní sběrnice (I2C, SPI, UART) ale i rozšiřující jako LVDS (Low-Voltage Differential Signaling). Desky obsahují navíc SATA konektor~\cite{CubieBoards}.
 	
-	\textbf{CubieBoard1} je výkonná nízkonákladová deska s ARM A8 o taktu 1\,GHz s~1\,GB RAM, 4\,GB NAND flash a Mali400 GPU. Obsahuje LAN port a dvojici USB portů. Deska má 96 pinů, které zahrnují sběrnice GPIO, I2C, UART, LVDS (Low Resolution Analog to Digital Converter), PWM, SPI, CSI, VGA a jiné. Dále obsahuje 100Mbps Ethernet a dva USB HOST porty, mini USB OTG, čtečku micro SD, HDMI, IR, line in, line out a SATA port.
+	\textbf{CubieBoard 1} je výkonná nízkopříkonová deska s ARM A8 o taktu 1\,GHz s~1\,GB RAM, 4\,GB NAND flash a Mali400 GPU. Obsahuje LAN port a dvojici USB portů. Deska má 96 pinů, které zahrnují sběrnice GPIO, I2C, UART, LVDS (Low Resolution Analog to Digital Converter), PWM, SPI, CSI, VGA a jiné. Dále obsahuje 100Mbps Ethernet a dva USB HOST porty, mini USB OTG, čtečku micro SD, HDMI, IR, line in, line out a SATA port.
 	
-	\textbf{CubieBoard2} představuje nástupce CubieBoardu1, je s ním zpětně kompatibilní a~od~předchozí verze se liší pouze dvoujádrovým provedením CPU a GPU.
+	\textbf{CubieBoard 2} představuje nástupce CubieBoardu1, je s ním zpětně kompatibilní a~od~předchozí verze se liší pouze dvoujádrovým provedením CPU a GPU.
 		
-	\textbf{CubieBoard3} oproti předchozím verzím přínaší vylepšení jako 2\,GB RAM, 8\,GB NAND flash, VGA konektor přímo na desce, gigabitový Ethernet, WiFi a Bluetooth integrované přímo na desce. Pinové rozhranní je zde redukováno na 54 pinů obsahující I2S (Inter-Integrated Sound), I2C, SPI, CVBS (Color Video Blanc Sync), UART, PWM a GPIO.
+	\textbf{CubieBoard 3} oproti předchozím verzím přínaší vylepšení jako 2\,GB RAM, 8\,GB NAND flash, VGA konektor přímo na desce, gigabitový Ethernet, WiFi a~Bluetooth integrované přímo na desce. Pinové rozhranní je zde redukováno na 54 pinů obsahující I2S (Inter-Integrated Sound), I2C, SPI, CVBS (Color Video Blanc Sync), UART, PWM a GPIO.
 	
-		\textbf{CubieBoard4} je nástupce CubieBoardu 3, je zpětně kompatibilní a oproti předchůdci přináší čtyřjádrové CPU ARM A15x a GPU PowerVR G6230. Dále má microUSB 3.0 OTG a audio konektory umístěné přímo na desce.
+		\textbf{CubieBoard 4} je nástupce CubieBoardu 3, je zpětně kompatibilní a oproti předchůdci přináší čtyřjádrové CPU ARM A15x a GPU PowerVR G6230. Dále má microUSB 3.0 OTG a audio konektory umístěné přímo na desce.
 		
-			\textbf{CubieBoard5 }nabízí osmijádrový procesor Allwinner H8, který doplňují 2\,GB RAM. Navíc oproti předchozím verzím má kromě HDMI i DP (Display Port), přináší taktéž konektor pro připojení externí baterie. Došlo k navýšení GPIO pinů na 70, které navíc přináší LRADC (Low Resolution Analog to Digital Converter) a PS2 (Personal System/2). SATA konektor pomocí speciální desky podporuje připojení dvou SATA disků s podporou RAIDu.
+			\textbf{CubieBoard 5 }nabízí osmijádrový procesor Allwinner H8, který doplňují 2\,GB RAM. Navíc oproti předchozím verzím má kromě HDMI i DP (Display Port), přináší taktéž konektor pro připojení externí baterie. Došlo k navýšení GPIO pinů na 70, které navíc přináší LRADC (Low Resolution Analog to Digital Converter) a PS2 (Personal System/2). SATA konektor pomocí speciální desky podporuje připojení dvou SATA disků s podporou RAIDu.
 		
-CubieBoardy již poskytují dostatečný výkon pro embeeded zařízení, přináší oproti RaspberryPi mnoho rozšiřujících sběrnic, avšak pro nedostatečnou podporu či zastoupení v evropských zemí a velmi častou nedostupnost webu výrobce, včetně dostupnosti anglické dokumentace pro  programování jednotlivých rozhraní, není moc vhodná pro IoT. Hodí se spíše pro aplikace jako multimediální centrum či nízkokládový počítač. 	
+CubieBoardy již poskytují dostatečný výkon pro embeeded zařízení, přináší oproti RaspberryPi mnoho rozšiřujících sběrnic, avšak pro nedostatečnou podporu či zastoupení v evropských zemí a velmi častou nedostupnost webu výrobce, včetně dostupnosti anglické dokumentace pro  programování jednotlivých rozhraní, není moc vhodná pro IoT. Hodí se spíše pro aplikace jako multimediální centrum či nízkonákladový počítač. 	
 
 %%% ======================================= UP BOARD ============================ %%%
 
 \subsection{UpBoard}
 		UpBoard představuje miniaturní jednodeskový počítač na platformě Intel s čtyřjádrovým procesorem Intel Atom. Vzhledově je velice podpobný RaspberryPi 3. 
-		Tento počítač obsahuje čtyřjádrový procesor Intel Atom x5-Z8300 na frekvenci 1,84 GHz s~TDP 2\,W. Obsahuje 1\,GB RAM a 16\,GB flash eMMC (Embedded MultiMedia Card). 40 pinové rozhraní je totožné jako u RaspberryPi2 s níž je částečně kompatibilní. Navíc obsahuje gigabitový Ethernet port, 5 USB 2.0 a jedno USB 3.0. Čip má hardwarovou podporu šifrování AES (Advanced Encryption Standard), je tedy vhodný pro IoT projekty s vyšším zabezpečením. Podporuje Android 5.0, Linux či Windows 10. Dokumentace pro programování GPIO v současnosti neexistuje, dokumentaci tvoří pouze popis GPIO konektoru~\cite{UpBoard}.
+		Tento počítač obsahuje čtyřjádrový procesor Intel Atom x5-Z8300 na frekvenci 1,84 GHz s~TDP 2\,W. Obsahuje 1\,GB RAM a 16\,GB flash eMMC (Embedded MultiMedia Card). 40 pinové rozhraní je totožné jako u RaspberryPi 2 s níž je částečně kompatibilní. Navíc obsahuje gigabitový Ethernet port, 5 USB 2.0 a jedno USB 3.0. Čip má hardwarovou podporu šifrování AES (Advanced Encryption Standard), je tedy vhodný pro IoT projekty s vyšším zabezpečením. Podporuje Android 5.0, Linux či Windows 10 IoT Core. Dokumentace pro programování GPIO v současnosti neexistuje, dokumentaci tvoří pouze popis GPIO konektoru~\cite{UpBoard}.
 
 	\begin{figure*}[!ht]
 	\vspace{-10pt}	
@@ -333,6 +331,7 @@ CubieBoardy již poskytují dostatečný výkon pro embeeded zařízení, přin�
 		
 
 %%% ======================================= PINE64 ============================== %%%
+	\newpage{}
 	\subsection{PINE64}
 Pine64 je rodina tří jednodeskových počítačů společnosti PINE64. Tyto počítače byly navrženy tak, aby konkurovaly RaspberryPi ve výkonu a ceně. Všechny verze obsahují 64bitový čtyřjádrový procesor 1,152\,GHz Cortex-A53 a liší se pouze velikostí operační paměti a použitelným operačním systémem. Oproti RaspberryPi obsahují gigabitový Ethernet, WiFi, Bluetooth a port pro připojení dotykového panelu. Mají GPIO konektor shodný s danou verzi Raspberry, jsou s ní tedy do jisté míry kompatibilní. Zvlášností těchto desek je Eulerova sběrnice, která navyšuje počty sběrnic SPI, UART, GPIO~\cite{Pine64}.
 
@@ -343,7 +342,6 @@ Pine64 je rodina tří jednodeskových počítačů společnosti PINE64. Tyto po
 \textbf{PINE A64+ 2GB} má oproti předchozí verzi 2\,GB operační paměti.
 
 	\begin{figure*}[!ht]
-	\vspace{-10pt}
     \centering
 			\subfigure[PINE A64+ 2GB]{\includegraphics[height=4cm]{obrazky/embed_pine}\label{embed_pine}}
 			\hspace*{5mm}
@@ -353,26 +351,27 @@ Pine64 je rodina tří jednodeskových počítačů společnosti PINE64. Tyto po
 \end{figure*}
 
 %%% ======================================= ODROID ============================== %%%
+\newpage{}
 \subsection{HardKernel Odroid}
 	\label{KapKernel}
-ODROID je řada jednodeskových počítačů od společnosti Hardkernel. Název je odvozen z \textbf{O}pen An\textbf{droid}, ale podporovány jsou i linuxové distribuce. Desky disponují 40 pinovým GPIO kompatibilním s RaspberryPi, ale open-source již nejsou. Desky jsou postaveny na SoC platformě Samsung Exynos. Zvláštností desek je sériové rozhraní s 1,8\,V~\cite{HardKernel}.
+ODROID je řada jednodeskových počítačů od společnosti HardKernel. Název je odvozen z \textbf{O}pen An\textbf{droid}, ale podporovány jsou i linuxové distribuce. Desky disponují 40 pinovým GPIO kompatibilním s RaspberryPi, ale open-source již nejsou. Desky jsou postaveny na SoC platformě Samsung Exynos. Zvláštností desek je sériové rozhraní s 1,8\,V~\cite{HardKernel}.
 	
-	\textbf{ODROID-C1} je reakcí na RaspBerryPi 1. Nabízí čtyřjádrové SoC Cortex A5 s frekvencí 1,5\,GHz a 1\,GB RAM. Dále má gigabitový Ethernet a připojení flash úložiště typu eMMC. 
+	\textbf{ODROID-C1} je reakcí na RaspberryPi 1. Nabízí čtyřjádrové SoC Cortex A5 s frekvencí 1,5\,GHz a 1\,GB RAM. Dále má gigabitový Ethernet a připojení flash úložiště typu eMMC. 
 
 	\textbf{ODROID-C2} je reakcí na RaspberryPi 3. Obsahuje čtyřjádrový 64bitový procesor ARMv8 taktovaný na 2\,GHz, 2\,GB paměti a gigabitový Ethernet. Má podporu sběrnice I2S. Hlavní změnou je podpora HDMI 2.0 a schopnost přehrávat 4K video ve formátu H.265. Podporuje Ubuntu 16.04 nebo Android 5.1. 
 	
-	\textbf{ODROID-XU4} je výkonejší řada desek, obsahují čtyřjádrový procesor Samsung Exynos5 ARM Cortex-A15 na frekvenci 2\,GHz a čtyřjádrový procesor Cortex-A7 Quad 1,3\,GHz, bohužel vzhledem k výkonu je zde již potřeba aktivní chlazení. Deska disponuje grafickým čipem Mali-T628 MP6 a 2\,GB RAM paměti.
+	\textbf{ODROID-XU4} je výkonejší řada desek, obsahují čtyřjádrový procesor Samsung Exynos5 ARM Cortex-A15 na frekvenci 2\,GHz a čtyřjádrový procesor Cortex-A7 Quad 1,3\,GHz, bohužel vzhledem k výkonu je zde již aktivní chlazení. Deska disponuje grafickým čipem Mali-T628 MP6 a 2\,GB RAM paměti.
 
 	
 %%% ======================================= BeagleBoard ============================== %%%
 \subsection{BeagleBoard }
-BeagleBoard je skupina jednodeskových počítačů produkovaných společností Texas Instruments, navržených na čipu Texas Instrument's OMAP3530 SoC, ten obsahuje ARM Cortex-A8 CPU, který může provozovat Linuxové distribuce, BSD nebo Android. Desky obsahují dva 46pinové GPIO konektory, oproti ostatním přináší podporu CAN (Controller Area Network) sběrnice. Výrobce poskytuje vlastní řadu kompatibilních rozšiřujicích desek, nazýva je \uv{capes} a současně lze připojit až~4~takovéto desky. Výhodou desek je jejich nízká spotřeba, využívají maxminálně 2\,W elektrické energie a mohou být napájeny i ze samostatného napájení. Vzhledem k nízké spotřebě energie, nejsou nutné žádné přídavné chladiče~\cite{BeagleBone}.
+BeagleBoard je skupina jednodeskových počítačů produkovaných společností Texas Instruments, navržených na čipu Texas Instrument's OMAP3530 SoC, ten obsahuje ARM Cortex-A8 CPU, který může provozovat Linuxové distribuce, BSD nebo Android. Desky obsahují dva 46pinové GPIO konektory, oproti ostatním přináší podporu CAN (Controller Area Network) sběrnice. Výrobce poskytuje vlastní řadu kompatibilních rozšiřujicích desek, nazýva je \uv{capes} a současně lze připojit až~4~takovéto desky. Výhodou desek je jejich nízká spotřeba, využívají maxikmálně 2\,W elektrické energie a mohou být napájeny i ze samostatného napájení. Vzhledem k nízké spotřebě energie nejsou nutné žádné přídavné chladiče~\cite{BeagleBone}.
 
 \textbf{BeagleBoard} obsahuje procesor Sitara ARM Cortex-A8 na frekvenci 720\,MHz a disponuje dle revize 128 nebo 256\,MB RAM. Obsahuje 256\,MB NAND paměti.
 
 \textbf{BeagleBone} obsahuje procesor Sitara ARM Cortex-A8 na frekvenci 720\,MHz a~disponuje 256\,MB RAM.
 
-\textbf{BeagleBoard-X15} je založen na procesoru Sitara AM5728 s dvěma jádry ARM Cortex-A15 na frekvenci 1,5\,GHz a dvěma jádry ARM Cortex-M4 na frekvenci 212\,MHz and dvěma jádry TI C66x DSP na frekvenci 700\,MHz. Disponuje 2\,GB RAM. Použitý procesor přináší podporu HDMI 2.1, gigabit Ethernetu a grafického dvoujádrového čipu SGX544 na frekvenci 532\,MHz. 
+\textbf{BeagleBoard-X15} je založen na šestiádrovém procesoru Sitara AM5728 s dvěma jádry ARM Cortex-A15 na frekvenci 1,5\,GHz a dvěma jádry ARM Cortex-M4 na frekvenci 212\,MHz a dvěma jádry TI C66x DSP na frekvenci 700\,MHz. Disponuje 2\,GB RAM. Použitý procesor přináší podporu HDMI 2.1, gigabitového Ethernetu a grafického dvoujádrového čipu SGX544 na frekvenci 532\,MHz. 
 
 	\begin{figure}[!ht]
   \begin{center}
@@ -382,7 +381,7 @@ BeagleBoard je skupina jednodeskových počítačů produkovaných společností
   \caption{BeagleBone Black~\cite{BeagleBone}}
 \end{figure}
 
-\textbf{BeagleBone Black} má oproti předchůdci zvýšenou pamět na 512\,MB, frekvenci procesoru na 1\,GHz, bylo přidáno HDMI a 2\,GB eMMC flash paměti.
+\textbf{BeagleBone Black} má oproti předchůdci zvýšenou pamět na 512\,MB, frekvenci procesoru na 1\,GHz a 2\,GB eMMC flash paměti.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -401,7 +400,7 @@ Společnosti Intel přináší dva jednodeskové počítače založené na platf
 		Tento počítač obsahuje 14 digiálních I/O pinů, z toho 6 z nich lze využít jako PWM výstupy. Dále obsahuje 6 analogových vstupů, UART sběrnici, I2C sběrnici, SPI sběrnici, Ethernet konektor, slot na MicroSD kartu. Dále obsahuje 2~USB konektory, jeden USB-host, druhý USB-klient. Druhá generace této desky pak přináší podporu PoE (Power over Ethernet)a další drobné změny~\cite{IntelGalileo,ArduinoGalileo}.
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[height=6cm]{obrazky/embed_intel_galileo}
+    \includegraphics[height=5cm]{obrazky/embed_intel_galileo}
   \end{center}
 	\vspace{-20pt}
   \caption{Intel Galileo~\cite{IntelGalileo}}
@@ -417,7 +416,7 @@ Společnosti Intel přináší dva jednodeskové počítače založené na platf
 				
 				\begin{figure}[!ht]
   \begin{center}
-    \includegraphics[height=6cm]{obrazky/embed_intel_edison2}
+    \includegraphics[height=4.5cm]{obrazky/embed_intel_edison2}
   \end{center}
 	\vspace{-20pt}
   \caption{Arduino board pro Intel Edison}
@@ -430,7 +429,7 @@ Společnosti Intel přináší dva jednodeskové počítače založené na platf
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[height=3cm]{obrazky/embed_intel_edison1}
+    \includegraphics[height=2.5cm]{obrazky/embed_intel_edison1}
   \end{center}
 	\vspace{-20pt}
   \caption{Intel breakout board}
@@ -438,7 +437,7 @@ Společnosti Intel přináší dva jednodeskové počítače založené na platf
 	\vspace{-10pt}
 \end{figure}
 
-Desky Intel se hodí spíše pro větší typy projektů, kdy již vývojové prostředí Arduina nestačí a je potřeba využít plného potencálu operačního systému.
+Desky Intel se hodí spíše pro větší typy projektů, kdy již vývojové prostředí Arduina nestačí a je potřeba využít plného potenciálu operačního systému.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -450,11 +449,11 @@ Desky Intel se hodí spíše pro větší typy projektů, kdy již vývojové pr
  \section{AMD Gizmo}
 \label{KapAMD}
 
-	Gizmo Board a Gizmo Board 2 od firmy AMD jsou alternativou k počítačům RaspberryPi, nabízející však platformu IBM PC a plně 64bitovou architekturu. Umožňuje tedy běh klasických operačních systémů, včetně Windows.
+	Gizmo Board a Gizmo Board 2 od firmy AMD jsou alternativou k počítačům RaspberryPi, nabízející však platformu IBM PC a 64bitovou architekturu. Umožňuje tedy běh klasických operačních systémů, včetně Windows.
 	
 		\textbf{Gizmo Board 1} beží na dvoujádrovém APU G-T40E od firmy AMD na frekvenci 1GHz při příkonu 10\,W. Součástí procesoru je grafický čip Radeon HD 6250. K dispozici je 1\,GB RAM. Deska dále obsahuje dvojici USB, VGA, audio výstup, SATA a Ethernet konektor. Další sběrnice jako GPIO, SPI, I2C, UART a~PWM jsou dostupné po připojení rozšiřující karty přes LowSpeed~\cite{AmdGizmo1}.
 	
-	\textbf{ Gizmo Board 2} je vybaven APU AMD GX210HA na~frekvenci 1 GHz, s~integrovaným GPU AMD Radeon HD 8210E s frekvencí 300\,MHz. Příkon je 9\,W. Tento model má také 1\,GB RAM. Tato verze disponuje 4 USB, HDMI výstupem, MicroSD slotem a Ethernetovým portem. Mezi další rozhraní patří PCI Express (Peripheral Component Interconnect Express), GPIO, SPI, I2C, UART, DAC/ADC nebo PWM \cite{AmdGizmo2}.
+	\textbf{ Gizmo Board 2} je vybaven APU AMD GX210HA na~frekvenci 1 GHz, s~integrovaným GPU AMD Radeon HD 8210E s frekvencí 300\,MHz. Příkon je 9\,W. Tento model má také 1\,GB RAM. Tato verze disponuje 4 USB, HDMI výstupem, MicroSD slotem a Ethernetovým portem. Mezi další rozhraní patří PCI Express (Peripheral Component Interconnect Express), GPIO, SPI, I2C, UART, DAC/ADC (Digital to Analog Converter/Analog to Digital Converter) nebo PWM \cite{AmdGizmo2}.
 
 
 \begin{figure*}[!ht]
@@ -468,7 +467,7 @@ Desky Intel se hodí spíše pro větší typy projektů, kdy již vývojové pr
 
 
 	
-Oba počítače již poskytují dostatečný výkon pro embeeded zařízení, avšak druhá verze zařízení již využívá aktivní chlazení a je hlučnější. Obě zařízení jsou větších rozměrů a nemají dostatečnou dokumentaci k přístupu a programování jednotlivých rozhraní. Hodí se spíše pro~aplikace jako multimediální centrum či jednodušší počítač, než pro IoT nebo~průmyslovou automatizaci. Komunita okolo AMD Gizmo prakticky neexistuje.
+Oba počítače již poskytují dostatečný výkon pro embedded zařízení, avšak druhá verze zařízení již využívá aktivní chlazení a je hlučnější. Obě zařízení jsou větších rozměrů a nemají dostatečnou dokumentaci k přístupu a programování jednotlivých rozhraní. Hodí se spíše pro~aplikace jako multimediální centrum či jednodušší počítač, než pro IoT nebo~průmyslovou automatizaci. Komunita okolo AMD Gizmo prakticky neexistuje.
 	
 	
 
