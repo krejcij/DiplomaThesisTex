@@ -7,9 +7,9 @@ set(0,'DefaultTextFontname', 'CMU Serif')
 set(0,'DefaultAxesFontName', 'CMU Serif')
 
 % Data
-timestamp = weptech(:,1);
-teplota = weptech(:,2);
-vlhkost = weptech(:,3);
+timestamp = weptech2(:,1);
+teplota = weptech2(:,2);
+vlhkost = weptech2(:,3);
 
 % Title
 %title('Senzor teploty a vlhkosti Weptech OSMF868-A (interval 24 hodin)',...
@@ -29,7 +29,7 @@ pl1 = plot(timestamp,teplota,'DisplayName','teplota',...
     'Color',[0 0.447058826684952 0.74117648601532]);
 ylabel('Teplota [C]','HorizontalAlignment','center','FontSize',13,'FontName','CMU Serif');
 ax.YMinorTick = 'on'
-ylim([17.75 27.25]);
+ylim([16 28]);
 
 % Axis Y2
 yyaxis('right');
@@ -41,7 +41,7 @@ pl2 = plot(timestamp,vlhkost,'DisplayName','vlhkost',...
     'Color',[0.850980401039124 0.325490206480026 0.0980392172932625]);
 ylabel('Vlhkost [RV]','HorizontalAlignment','center','FontSize',13,'FontName','CMU Serif');
 ax.YMinorTick = 'on'
-ylim([34.75 44.25]);
+ylim([36 48]);
 
 % Axis X
 xlabel('Cas [hh:mm]','HorizontalAlignment','center','FontSize',13,'FontName','CMU Serif');

@@ -12,13 +12,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=sablona.tex
 
 [Frame0_View0,0]
-TopLine=216
-Cursor=11709
+TopLine=224
+Cursor=11687
 
 [Frame1]
 Flags=0
@@ -30,7 +30,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\zaver.tex
 
@@ -48,7 +48,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\todo.tex
 
@@ -66,12 +66,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\modul.tex
 
 [Frame3_View0,0]
-TopLine=91
+TopLine=99
 Cursor=6236
 
 [Frame4]
@@ -84,7 +84,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\uvod.tex
 
@@ -102,7 +102,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\zkratky.tex
 
@@ -120,12 +120,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame6_View0,0]
-TopLine=247
+TopLine=262
 Cursor=11956
 
 [Frame7]
@@ -138,7 +138,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\iot.tex
 
@@ -156,12 +156,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame8_View0,0]
-TopLine=525
+TopLine=573
 Cursor=24421
 
 [Frame9]
@@ -174,12 +174,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame9_View0,0]
-TopLine=401
+TopLine=417
 Cursor=21555
 
 [Frame10]
@@ -192,13 +192,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame10_View0,0]
-TopLine=442
-Cursor=26570
+TopLine=438
+Cursor=26781
 
 [Frame11]
 Flags=0
@@ -210,12 +210,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\literatura.tex
 
 [Frame11_View0,0]
-TopLine=102
+TopLine=106
 Cursor=10303
 
 [Frame12]
@@ -228,12 +228,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\prilohy.tex
 
 [Frame12_View0,0]
-TopLine=236
+TopLine=249
 Cursor=23764
 
 [Frame13]
@@ -246,12 +246,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=text\embed.tex
 
 [Frame13_View0,0]
-TopLine=509
+TopLine=522
 Cursor=31227
 
 [Frame14]
@@ -264,7 +264,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1916
-NormalPos.bottom=578
+NormalPos.bottom=649
 Class=LaTeXView
 Document=mystyles.tex
 
