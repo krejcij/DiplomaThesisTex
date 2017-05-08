@@ -5,17 +5,19 @@ Spolu se zařízením UniPi Neuron S103 byl zapůjčen i modul IQRF TR-72DC-WMB,
 
 \section{Obecný popis modulu TR-72D-WMB}
 
-Modul IQRF TR-72DA-WMB je bezdrátový komunikační modul velikosti SIM karty z výroby české firmy \href{http://microrisc.com/cs/}{MICRORISC s.r.o.}. Vychází z řady produktů technologie IQRF, s tím rozdílem, že místo IQRF softwaru má přímo implementovaný Wireless M-Bus protokol \cite{ModulIQRF}. 
+Modul IQRF TR-72DA-WMB (viz. Obr.~\ref{ObrazekModulu}) je bezdrátový komunikační modul velikosti SIM karty z výroby české firmy \href{http://microrisc.com/cs/}{MICRORISC s.r.o.}. Vychází z řady produktů technologie IQRF, s tím rozdílem, že místo IQRF softwaru má přímo implementovaný Wireless M-Bus protokol \cite{ModulIQRF}. 
 
- \begin{figure}[!ht]
-\vspace{-1,pt}
-  \begin{center}
-    \includegraphics[scale=0.80]{obrazky/modul_modul}
-  \end{center}
-	\vspace{-20pt}
-  \caption{Modul IQRF TR-72DA-WMB \cite{ModulIQRF}}
-	\vspace{-10pt}
-\end{figure}
+
+
+\begin{figure*}[!ht]
+		\vspace{10pt}
+    \centering
+			\subfigure[přední strana]{\includegraphics[width=0.35\textwidth]{obrazky/modul_predek}\label{modul_predek}}
+			\hspace*{15mm}
+			\subfigure[zadní strana]{\includegraphics[width=0.35\textwidth]{obrazky/modul_zadek}\label{modul_zadek}}
+		\caption{Modul IQRF TR-72DA-WMB \cite{ModulIQRF}}
+		\label{ObrazekModulu}
+\end{figure*}
 
 Na malém prostoru se nachází vše potřebné pro uskutečnění bezdrátového přenosu: mikrokontrolér, externí EEPROM, teplotní senzor, kontrolní LED, 6 pinů a~anténa dle typu komunikačního modulu (Obr.~\ref{BlokovkaIQRF}).
 

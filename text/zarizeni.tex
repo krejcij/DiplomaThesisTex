@@ -61,15 +61,15 @@ Telegram má specifickou základní strukturu popsanou v Tab.~\ref{TabulkaTelegr
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{Pole} & \textbf{Popis} & \textbf{Hodnota} \\ \hline \hline
- L-Field & Délka telegramu & 1Eh  \\ \hline
+ L-Field & Délka telegramu & 2Eh  \\ \hline
  C-Field & Typ telegramu & 44h  \\ \hline
  \multirow{2}{*}{M-Field} & \multirow{2}{*}{Výrobce zařízení} & B0h   \\ \cline{3-3} 
   &  & 5C \\ \hline 
-  \multirow{6}{*}{A-Field} & \multirow{4}{*}{Sériové číslo} & 11h  \\ \cline{3-3} 
-  &  & 47h  \\ \cline{3-3}  
-  &  & 15h  \\ \cline{3-3} 
- &  & 08h  \\ \cline{2-3} 
- & Verze zařízení & 01h \\ \cline{2-3} 
+  \multirow{6}{*}{A-Field} & \multirow{4}{*}{Sériové číslo} & 10h  \\ \cline{3-3} 
+  &  & 00h  \\ \cline{3-3}  
+  &  & 00h  \\ \cline{3-3} 
+ &  & 00h  \\ \cline{2-3} 
+ & Verze zařízení & 02h \\ \cline{2-3} 
  & Typ zařízení & 1Bh  \\ \hline
  CI-Field & Odpověd zařízení & 7Ah  \\ \hline
  Access Number & Číslo přístupu & 41h \\ \hline
@@ -204,19 +204,19 @@ Telegram má specifickou základní strukturu popsanou v Tab. \ref{TabulkaTelegr
 \textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
 L-Field            & Délka telegramu                                & 1Eh              \\ \hline
 C-Field            & Typ telegramu                                  & 44h              \\ \hline
-\multirow{2}{*}{M-Field} & \multirow{2}{*}{Výrobce zařízení}        & 09h              \\ \cline{3-3}
-                   &                                                & EEh              \\ \hline
-\multirow{6}{*}{A-Field}& \multirow{4}{*}{Sériové číslo}            & 11h              \\ \cline{3-3}
-                   &                                                & 47h              \\ \cline{3-3}
-                   &                                                & 15h              \\ \cline{3-3}
-                   &                                                & 08h              \\ \cline{2-3}
+\multirow{2}{*}{M-Field} & \multirow{2}{*}{Výrobce zařízení}        & EEh              \\ \cline{3-3}
+                   &                                                & 09h              \\ \hline
+\multirow{6}{*}{A-Field}& \multirow{4}{*}{Sériové číslo}            & 21h              \\ \cline{3-3}
+                   &                                                & 01h              \\ \cline{3-3}
+                   &                                                & 00h              \\ \cline{3-3}
+                   &                                                & 00h              \\ \cline{2-3}
                    & Verze zařízení                                 & 01h              \\ \cline{2-3}
-                   & Typ zařízení                                   & 1Bh              \\ \hline
+                   & Typ zařízení                                   & 06h              \\ \hline
 CI-Field           & Odpověd zařízení                            & 7Ah              \\ \hline
-Access Number      & Číslo přístupu                                 & 41h              \\ \hline
+Access Number      & Číslo přístupu                                 & 4Fh              \\ \hline
 Status             & Status zařízení                                & 00h              \\ \hline
-\multirow{2}{*}{Signature Field} & \multirow{2}{*}{Konfigurační řetězec AES} & 00h              \\ \cline{3-3}
-									&                        													& 00h              \\ \hline
+\multirow{2}{*}{Signature Field} & \multirow{2}{*}{Šifrování AES} & 10h              \\ \cline{3-3}
+									&                        													& 05h              \\ \hline
 \multirow{15}{*}{Data} 						   & \multirow{2}{*}{Ověření AES}                  & 2Fh              \\ \cline{3-3}
 						   &                                     						& 2Fh              \\ \cline{2-3}
                & DIF: 4 cifry BCD (určení průtoku)      & 04h              \\ \cline{2-3}
@@ -330,22 +330,22 @@ Zařízení bylo zapůjčeno třetí stranou, za účelem ověření funkčnosti
 \hline
 \textbf{Pole}      & \textbf{Popis pole}            & \textbf{Hodnota} \\ \hline \hline
 
-L-Field & Délka telegramu & 2Ah \\ \hline
+L-Field & Délka telegramu & 5Eh \\ \hline
 C-Field & Typ telegramu & 44h \\ \hline
-\multirow{2}{*}{M-Field}  & \multirow{2}{*}{Výrobce zařízení}  & 01h \\ \cline{3-3}
- &  & 6Ah \\ \hline
-\multirow{6}{*}{A-Field}            & \multirow{4}{*}{Sériové číslo}         & 11h \\ \cline{3-3}
-&         & 44h \\ \cline{3-3}
-            &         & 37h \\ \cline{3-3}
-           &          & 35h \\ \cline{2-3}
-            & Verze zařízení        & 11h \\ \cline{2-3}
-           & Typ zařízení          & 04h \\ \hline
+\multirow{2}{*}{M-Field}  & \multirow{2}{*}{Výrobce zařízení}  & 2Dh \\ \cline{3-3}
+ &  & 2Ch \\ \hline
+\multirow{6}{*}{A-Field}            & \multirow{4}{*}{Sériové číslo}         & 96h \\ \cline{3-3}
+&         & 41h \\ \cline{3-3}
+            &         & 42h \\ \cline{3-3}
+           &          & 59h \\ \cline{2-3}
+            & Verze zařízení        & D2h \\ \cline{2-3}
+           & Typ zařízení          & 10h \\ \hline
 CI-Field            & Odpověd zařízení   & 72h \\ \hline
 Access Number              & Číslo přístupu        & CAh \\ \hline
 Status             & Status zařízení       & 10h \\ \hline
-\multirow{2}{*}{Configuration Word} & \multirow{2}{*}{Nastavení šifrovaní}  & 50h \\ \cline{3-3}
+\multirow{2}{*}{Configuration Word} & \multirow{2}{*}{Šifrovaní AES}  & 50h \\ \cline{3-3}
  &  & 05h \\ \hline
-\multirow{2}{*}{AES Encryption}    & \multirow{2}{*}{Kontrola dešifrovaní} & 2Fh \\ \cline{3-3}
+\multirow{2}{*}{AES Encryption}    & \multirow{2}{*}{Ověření AES} & 2Fh \\ \cline{3-3}
      &  & 2Fh \\ \hline
 \multirow{6}{*}{1. data block}                & DIF: 4 cifry BCD    & 04h \\ \cline{2-3}
                 & VIF: Energie v kWh    & 0Fh \\ \cline{2-3}
@@ -422,8 +422,8 @@ C-Field & Typ telegramu & 44h \\ \hline
 &         & 93h \\ \cline{3-3}
             &         & 67h \\ \cline{3-3}
            &          & 12h \\ \cline{2-3}
-            & Verze zařízení        & 11h \\ \cline{2-3}
-           & Typ zařízení          & 04h \\ \hline
+            & Verze zařízení        & 01h \\ \cline{2-3}
+           & Typ zařízení          & 02h \\ \hline
 \multirow{2}{*}{CRC}  & \multirow{2}{*}{Kontrolní součet}  & 22h \\ \cline{3-3}
  &  & 80h \\ \hline
 CI-Field & Odpověd zařízení & 72h \\ \hline
@@ -436,9 +436,9 @@ CI-Field & Odpověd zařízení & 72h \\ \hline
 Version            & Verze zařízení        & 01h \\ \hline
 Device Type & Typ zařízení          & 02h \\ \hline
 Access Number & Číslo přístupu & CAh \\ \hline
-Status & Status zařízení & 10h \\ \hline
-\multirow{2}{*}{Configuration Word} & \multirow{2}{*}{Položky šifrovaní AES} & 50h \\ \cline{3-3}
- &  & 05h \\ \hline
+Status & Status zařízení & 00h \\ \hline
+\multirow{2}{*}{Configuration Word} & \multirow{2}{*}{Položky šifrovaní AES} & 00h \\ \cline{3-3}
+ &  & 25h \\ \hline
 DIF & DIF & 86h \\ \hline
 DIFE & DIFE & 20h \\ \hline
 VIF & VIF & 83h \\ \hline

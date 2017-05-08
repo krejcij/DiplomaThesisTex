@@ -157,19 +157,19 @@ který je až na číslo přístupu a CRC shodný s předchozím nešifrovaným 
 \begin{tabular}{|c|c|c|l|l|c|l|}
 \hline
 \textbf{Pozice} & \textbf{Bajty} & \multicolumn{1}{c|}{\textbf{Pole}} & \multicolumn{1}{c|}{\textbf{Popis}} & \textbf{Hodnota} & \textbf{Vyjádření} & \multicolumn{1}{c|}{\textbf{Význam pro uživatele}} \\ \hline \hline
-4 & 2E & L-Field & Délka telegramu & 1Eh & 46 & Paket má 46 bytů \\ \hline
+4 & 2E & L-Field & Délka telegramu & 2Eh & 46 & Paket má 46 bytů \\ \hline
 6 & 44 & C-Field & Typ telegramu & 44h & 44 & Paket je typu SND-NR \\ \hline
 8 & B0 & \multirow{2}{*}{M-Field} & \multirow{2}{*}{Výrobce zařízení} & B0h & \multirow{2}{*}{5CB0}& \multirow{2}{*}{Výrobcem je Weptech}  \\ \cline{1-2} \cline{5-5} 
 10 & 5C &  &  & 5Ch &  &  \\ \cline{1-3} \cline{4-7}
-12 & 10 &  \multirow{6}{*}{A-Field} & \multirow{4}{*}{Sériové číslo} & 11h & \multirow{4}{*}{10} & \multirow{4}{*}{Výrobní číslo je 00000010 } \\ \cline{1-2}  \cline{5-5} 
-14 & 00 &  &  & 47h &  &  \\ \cline{1-2}  \cline{5-5}  
-16 & 00 &  &  & 15h &  &  \\ \cline{1-2}  \cline{5-5} 
-18 & 00 & &  & 08h &  &  \\ \cline{1-2}  \cline{4-7} 
+12 & 10 &  \multirow{6}{*}{A-Field} & \multirow{4}{*}{Sériové číslo} & 10h & \multirow{4}{*}{10} & \multirow{4}{*}{Výrobní číslo je 00000010 } \\ \cline{1-2}  \cline{5-5} 
+14 & 00 &  &  & 00h &  &  \\ \cline{1-2}  \cline{5-5}  
+16 & 00 &  &  & 00h &  &  \\ \cline{1-2}  \cline{5-5} 
+18 & 00 & &  & 00h &  &  \\ \cline{1-2}  \cline{4-7} 
 20 & 02 & & Verze zařízení & 01h & 2 & Druhá verze \\ \cline{1-2}  \cline{4-7} 
 22 & 1B & & Typ zařízení & 1Bh & 1B & Pokojové čidlo \\ \hline
 24 & 7A & CI-Pole & Odpověd zařízení & 7Ah & 7A & M-Bus protokol \\ \hline
 26 & 62 & Access Number & Číslo přístupu & 41h & 214 & 214. přístup \\ \hline
-28 & 08 & Status & Status zařízení & 00h & 8 & Trvalá chyba - sabotáž\\ \hline
+28 & 08 & Status & Status zařízení & 08h & 8 & Trvalá chyba - sabotáž\\ \hline
 30 & 00 & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Configuration\\ Word \end{tabular}} & \multirow{2}{*}{Šifrování AES} & \multirow{2}{*}{00h} & \multirow{2}{*}{00} & \multirow{2}{*}{Bez šifrování} \\ \cline{1-2}
 32 & 00 &  &  &  &  &  \\ \hline
 34 & 2F & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}AES\\ Verification \end{tabular}} & \multirow{2}{*}{Ověření AES} & \multirow{2}{*}{2Fh} & \multirow{2}{*}{2F} &  \multirow{2}{*}{Kontrola v pořádku} \\ \cline{1-2}
@@ -226,15 +226,17 @@ Strukturu tabulek, definici sloupců a vazby mezi nimi popisuje schéma na Obr.~
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[scale=0.55]{obrazky/aplikace_databaze}
+    \includegraphics[scale=0.80]{obrazky/aplikace_databaze}
   \end{center}
-	\vspace{-10pt}
+	\vspace{-15pt}
   \caption{Model zvolené SqLite 3 databáze}
 	\label{databazovy_model}
 \end{figure}
 
 Prohlížení obsahu databáze je součástí vizualizační aplikace pod záložkou \texttt{Database explorer}.
-	
+
+\newpage
+
 \section{Zajištění vizualizace dat}	
 \label{SectionVizualizaceDat}
 Zachycená a uložená data lze vykreslovat do grafů. Zvoleno bylo Google Charts API~\cite{uvod_google_charts_api} běžící na webovém serveru Apache 2 a generovaném pomocí PHP 7. Pro tyto potřeby je nutné doinstalovat následující balíčky:
@@ -296,8 +298,6 @@ jsou přijatá data zašifrována zpět do šifrovaného stavu jaký mají při 
 	\item Pokud existuje, tak je z databáze načten odpovídající klíč příslušného měřícího zařízení a s pomocí již sestaveného inicializačního vektoru jsou data rozšifrována.
 	\item Správnost rozšifrování se ověřuje pomocí kontrolních bajtů, v případě AES šifrování mají první dva bajty rozšifrovaných dat hodnotu 2Fh.
 \end{enumerate}
-
-\newpage
 
 \begin{lstlisting}[caption={Implementace AES dešifrování},captionpos=b,label=CodeAES,style=MyCodePython]
 from Crypto.Cipher import AES

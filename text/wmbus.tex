@@ -203,7 +203,7 @@ Princip kódování 3 ze 6 (viz Tab.~\ref{Table3out6}) spočívá v tom, že ka�
 \centering
 \caption{Tabulka kódování 3 ze 6 \cite{WMencodeing}}
 \label{Table3out6}
-\resizebox{0.75\textwidth}{!}{%
+\resizebox{0.85\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \textbf{NRZ kód} & \textbf{Desítkově} & \textbf{3 ze 6} & \textbf{Desítkově} & \textbf{Počet změn v kódu} \\ \hline \hline
@@ -323,31 +323,31 @@ Rámec linkové vrstvy se skládá z bloků dat. Každý blok dat obsahuje 16bit
 		\resizebox{0.65\textwidth}{!}{%
 		\begin{tabular}{|c|c|c|}
 \hline
-\textbf{Hodnota} & \multicolumn{1}{c|}{\textbf{Direction}} & \multicolumn{1}{c|}{\textbf{Protokol}} \\ \hline \hline
-50h               & Výběr aplikace zařízení           & pouze M-Bus    \\ \hline
-51h               & Požadavek na zařízení                              & pouze M-Bus      \\ \hline
-52h               & Výběr zařízení                    & pouze M-Bus      \\ \hline
-5Ah               & Požadavek na zařízení                           & (W)M-Bus          \\ \hline
-5Bh               & Požadavek na zařízení                            & M-Bus         \\ \hline
-60h               & Požadavek na zařízení                            & DLMS         \\ \hline
-61h               & Požadavek na zařízení                            & DLMS        \\ \hline
-64h               & Požadavek na zařízení                            & SML     \\ \hline
-65h               & Požadavek na zařízení                            & SML a   \\ \hline
-6Ch               & Synchonizace času zařízení                     & všechny OMS     \\ \hline
-6Dh               & Synchonizace času zařízení                       & všechny OMS        \\ \hline
-6Eh               & Chyba zařízení                      & všechny OMS       \\ \hline
-6Fh               & Chyba zařízení                        & všechny OMS       \\ \hline
-70h               & Chyba zařízení                       & pouze M-Bus                    \\ \hline
-71h               & Alarm zařízení                       & pouze M-Bus                    \\ \hline
+\textbf{Hodnota} & \multicolumn{1}{c|}{\textbf{Význam}} & \multicolumn{1}{c|}{\textbf{Protokol}} \\ \hline \hline
+50h               & Výběr aplikace zařízení           & \multirow{3}{*}{pouze M-Bus}   \\ \cline{1-2}
+51h               & Požadavek na zařízení                              &       \\ \cline{1-2}
+52h               & Výběr zařízení                    &      \\ \hline
+5Ah               & \multirow{6}{*}{Požadavek na zařízení}                        & (W)M-Bus          \\ \cline{1-1} \cline{3-3}
+5Bh               &                             & M-Bus         \\ \cline{1-1} \cline{3-3}
+60h               &                            & \multirow{2}{*}{DLMS}         \\ \cline{1-1}
+61h               &                             &         \\ \cline{1-1} \cline{3-3}
+64h               &                             & \multirow{2}{*}{SML}     \\ \cline{1-1}
+65h               &                             &   \\ \hline
+6Ch               & \multirow{2}{*}{Synchonizace času zařízení}                     & \multirow{4}{*}{všechny OMS}    \\ \cline{1-1}
+6Dh               &                        &       \\ \cline{1-2}
+6Eh               & \multirow{3}{*}{Chyba zařízení}                       &      \\ \cline{1-1}
+6Fh               &                         &       \\ \cline{1-1} \cline{3-3}
+70h               &                        & \multirow{2}{*}{pouze M-Bus}                    \\ \cline{1-2}
+71h               & Alarm zařízení                       &                    \\ \hline
 72h               & Odpověd zařízení                     & (W)M-Bus                                              \\ \hline
-74h               & Alarm zařízení                         & všechny OMS                                            \\ \hline
-75h               & Alarm zařízení                         & všechny OMS                                            \\ \hline
-78h               & Odpověd zařízení                   & (W)M-Bus                           \\ \hline
-7Ah               & Odpověd zařízení                     & (W)M-Bus                                              \\ \hline
-7Ch               & Odpověd zařízení                    & DLMS                                          \\ \hline
-7Dh               & Odpověd zařízení                     & DLMS                                         \\ \hline
-7Eh               & Odpověd zařízení                     & SML                                           \\ \hline
-7Fh               & Odpověd zařízení                     & SML                                           \\ \hline \hline
+74h               & \multirow{2}{*}{Alarm zařízení}                          & \multirow{2}{*}{všechny OMS}                                           \\ \cline{1-1}
+75h               &                          &                                          \\ \hline
+78h               & \multirow{6}{*}{Odpověd zařízení}                    & \multirow{2}{*}{(W)M-Bus}                            \\ \cline{1-1}
+7Ah               &                      &                                             \\ \cline{1-1} \cline{3-3}
+7Ch               &                    & \multirow{2}{*}{DLMS}                                          \\ \cline{1-1}
+7Dh               &                     &                                         \\ \cline{1-1} \cline{3-3}
+7Eh               &                     & \multirow{2}{*}{SML}                                           \\ \cline{1-1}
+7Fh               &                     &                                            \\ \hline \hline
 \end{tabular}}
 \end{table}
 
@@ -411,9 +411,9 @@ V souladu se specifikací OMS~(Open Metering Standard)~3.0.1~\cite{NormaOMS}, kt
 				2                  & 04h                  & Vybitá baterie         \\ \hline
 				3                  & 08h                  & Trvalá chyba           \\ \hline
 				4                  & 10h                  & Dočasná chyba          \\ \hline
-				5                  & 20h                  & Specifický kód výrobce \\ \hline
-				6                  & 40h                  & Specifický kód výrobce \\ \hline
-				7                  & 80h                  & Specifický kód výrobce \\ \hline \hline
+				5                  & 20h                  & \multirow{3}{*}{Specifický kód výrobce}  \\ \cline{1-2} 
+				6                  & 40h                  &  \\ \cline{1-2}
+				7                  & 80h                  &  \\ \hline \hline
 				\end{tabular}}
 				\end{table}
 
@@ -551,28 +551,28 @@ Data pole určuje datový typ přenášené hodnoty. Možnosti jsou shrnuty v Ta
 \centering
 \caption{Kódování Data pole VIF pole}
 \label{KodovaniDataPoleVIFu}
-\resizebox{\textwidth}{!}{%
+\resizebox{0.95\textwidth}{!}{%
 \begin{tabular}{|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Bity}} & \multicolumn{1}{c|}{\textbf{Veličina}} & \multicolumn{1}{c|}{\textbf{Jednotka}}                                                                                & \multicolumn{1}{c|}{\textbf{Rozsah}} \\ \hline \hline
-E000 0nnn                             & Energie                                    & 10\textsuperscript{(nnn-3)}\,Wh                                                                                                              & 0.001\,Wh - 10000\,Wh \\ \hline
-E000 1nnn                             & Energie                                    & 10\textsuperscript{(nnn)}\,J                                                                                                                 & 0.001\,kJ - 10000 \,kJ                \\ \hline
+E000 0nnn                             & \multirow{2}{*}{Enegie}                                    & 10\textsuperscript{(nnn-3)}\,Wh                                                                                                              & 0.001\,Wh - 10000\,Wh \\ \cline{1-1} \cline{3-4}
+E000 1nnn                             &                                     & 10\textsuperscript{(nnn)}\,J                                                                                                                 & 0.001\,kJ - 10000 \,kJ                \\ \hline
 E001 0nnn                             & Objem                                    & 10\textsuperscript{(nnn-6)}\,m\textsuperscript{3}                                                                                                              & 0.001\,l - 10000\,l                    \\ \hline
 E001 1nnn                             & Hmotnost                                      & 10\textsuperscript{(nnn-3)}\,kg                                                                                                              & 0.001\,kg - 10000\,kg                \\ \hline
 \multirow{2}{*}{E010 00nn}            & \multirow{2}{*}{Provozní čas}                  & \multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}nn = 00 sekundy\\ nn = 01 minuty\\ nn = 10 hodiny\\ nn = 11 dny\end{tabular}} & \multirow{2}{*}{}                   \\
                                       &                                           &                                                                                                                           &                                     \\ \cline{1-2} \cline{4-4} 
 \multirow{2}{*}{E010 01nn}            & \multirow{2}{*}{Operační čas}            &                                                                                                                           & \multirow{2}{*}{}                   \\
                                       &                                           &                                                                                                                           &                                     \\ \hline
-E010 1nnn                             & Výkon                                     & 10\textsuperscript{(nnn-3)}\,W                                                                                                               & 0.001\,W - 10000\,W                  \\ \hline
-E011 0nnn                             & Výkon                                     & 10\textsuperscript{(nnn)}\,J/h                                                                                                               & 0.001\,kJ/h - 10000\,kJ/h            \\ \hline
-E011 1nnn                             & Průtok                              & 10\textsuperscript{(nnn-6)}\,m\textsuperscript{3}/h                                                                                                            & 0.001\,l/h - 10000 l/h              \\ \hline
-E100 0nnn                             & Průtok                           & 10\textsuperscript{(nnn-7)}\,m\textsuperscript{3}/min                                                                                                          & 0.0001\,l/min - 1000 l/min          \\ \hline
-E100 1nnn                             & Průtok                           & 10\textsuperscript{(nnn-9)}\,m\textsuperscript{3}/s                                                                                                            & 0.001\,ml/s - 10000 ml/s            \\ \hline
-E101 0nnn                             & Protok (hmotnosti)                              & 10\textsuperscript{(nnn-3)} kg/h                                                                                                            & 0.001\,kg/h - 10000 kg/h            \\ \hline
+E010 1nnn                             & \multirow{2}{*}{Výkon}                                     & 10\textsuperscript{(nnn-3)}\,W                                                                                                               & 0.001\,W - 10000\,W                  \\ \cline{1-1} \cline{3-4} 
+E011 0nnn                             &                                    & 10\textsuperscript{(nnn)}\,J/h                                                                                                               & 0.001\,kJ/h - 10000\,kJ/h            \\ \hline
+E011 1nnn                             & \multirow{3}{*}{Průtok }                               & 10\textsuperscript{(nnn-6)}\,m\textsuperscript{3}/h                                                                                                            & 0.001\,l/h - 10000 l/h              \\ \cline{1-1} \cline{3-4}
+E100 0nnn                             &                           & 10\textsuperscript{(nnn-7)}\,m\textsuperscript{3}/min                                                                                                          & 0.0001\,l/min - 1000 l/min          \\ \cline{1-1} \cline{3-4}
+E100 1nnn                             &                          & 10\textsuperscript{(nnn-9)}\,m\textsuperscript{3}/s                                                                                                            & 0.001\,ml/s - 10000 ml/s            \\ \hline
+E101 0nnn                             & Průtok (hmotnosti)                              & 10\textsuperscript{(nnn-3)} kg/h                                                                                                            & 0.001\,kg/h - 10000 kg/h            \\ \hline
 E101 10nn                             & Teplota (průtoku)                           & 10\textsuperscript{(nn-3)}\,°C                                                                                                               & 0.001\,°C - 1\,°C                    \\ \hline
 E101 11nn                             & Teplota (návratová)                         & 10\textsuperscript{(nn-3)}\,°C                                                                                                               & 0.001\,°C - 1\,°C                    \\ \hline
 E110 00nn                             & Teplota (rozdíl)                    & 10\textsuperscript{(nn-3)}\,K                                                                                                                & 1\,mK - 1000\,mK                     \\ \hline
-E110 01nn                             & Temperature (externí)                       & 10\textsuperscript{(nn-3)}\,°C                                                                                                               & 0.001\,°C - 1\,°C                    \\ \hline
+E110 01nn                             & Teplota (externí)                       & 10\textsuperscript{(nn-3)}\,°C                                                                                                               & 0.001\,°C - 1\,°C                    \\ \hline
 E110 10nn                             & Tlak                                 & 10\textsuperscript{(nn-3)}\,bar                                                                                                              & 1\,mbar - 1000\,mbar                 \\ \hline
 \multirow{2}{*}{E110 110n}                             & \multirow{2}{*}{Datum a čas}                                & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}n = 0 datum\\ n = 1 datum a čas\end{tabular}}                                                                                            & \multirow{2}{*}{Datový typ F a G}             \\ 
                                       &                                           &                                                                                                                           &                                     \\ \hline
@@ -784,20 +784,20 @@ Aplikační vrstva protokolu WM-Bus obsahuje položku \texttt{ConfigurationWord}
 \textbf{Bit} & \textbf{Označení} & \textbf{Význam}        \\ \hline \hline
 MSB          & B                 & Obousměrnost           \\ \hline
 14           & A                 & Dostupnost             \\ \hline
-13           & S                 & Synchronizace          \\ \hline
-12           & 0                 & Synchronizace          \\ \hline
-11           & M                 & Šifrování              \\ \hline
-10           & M                 & Šifrování              \\ \hline
-9            & M                 & Šifrování              \\ \hline
-8            & M                 & Šifrování              \\ \hline
-7            & N                 & Počet kódovaných bloků \\ \hline
-6            & N                 & Počet kódovaných bloků \\ \hline
-5            & N                 & Počet kódovaných bloků \\ \hline
-4            & N                 & Počet kódovaných bloků \\ \hline
-3            & C                 & Obsah telegramu        \\ \hline
-2            & C                 & Obsah telegramu        \\ \hline
-1            & H                 & Počítač skoků          \\ \hline
-LSB          & H                 & Počítač skoků          \\  \hline  \hline
+13           & S                 & \multirow{2}{*}{Synchronizace}           \\ \cline{1-2}
+12           & 0                 &           \\ \hline
+11           & M                 & \multirow{4}{*}{Šifrování}               \\ \cline{1-2}
+10           & M                 &               \\ \cline{1-2}
+9            & M                 &             \\ \cline{1-2}
+8            & M                 &              \\ \hline
+7            & N                 & \multirow{4}{*}{Počet kódovaných bloků}  \\ \cline{1-2}
+6            & N                 &  \\ \cline{1-2}
+5            & N                 &  \\ \cline{1-2}
+4            & N                 &  \\ \hline
+3            & C                 & \multirow{2}{*}{Obsah telegramu}         \\ \cline{1-2}
+2            & C                 &         \\ \hline
+1            & H                 & \multirow{2}{*}{Počítač skoků }           \\ \cline{1-2}
+LSB          & H                 &          \\  \hline  \hline
 \end{tabular}}
 %\vspace{-5pt}
 \end{table}
