@@ -325,7 +325,7 @@ if (sensor_manu == "WEP"):
 	if parsedstring[66:68] == "01": errors = "Battery dead"
 		temperature = str(int(LSB(parsedstring[42:46])) / 10)
 		humidity = str(int(LSB(parsedstring[52:56])) / 10)
-# Parse values from Bonega       
+		# Parse values from Bonega       
 elif (sensor_manu == "BON"):
 	Spotreba = str(int(LSB(parsedstring[42:46]), 16))
 	Cascteni = get_date(LSB(parsedstring[58:62])) + " " + get_time(LSB(parsedstring[54:58]))

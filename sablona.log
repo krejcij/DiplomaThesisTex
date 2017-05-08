@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  8 MAY 2017 15:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.20)  8 MAY 2017 15:17
 entering extended mode
 **sablona.tex
 ("C:\Users\krejci\OneDrive\VUT - diplomka\sablona.tex"
@@ -1424,13 +1424,13 @@ File: obrazky/embed_upboard.png Graphic file (type png)
 Package pdftex.def Info: obrazky/embed_upboard.png used on input line 327.
 (pdftex.def)             Requested size: 169.0366pt x 113.81102pt.
  [29]
-<obrazky/embed_pine.png, id=1126, 723.70375pt x 412.54124pt>
+<obrazky/embed_pine.png, id=1127, 723.70375pt x 412.54124pt>
 File: obrazky/embed_pine.png Graphic file (type png)
  <use obrazky/embed_pine.png>
 Package pdftex.def Info: obrazky/embed_pine.png used on input line 346.
 (pdftex.def)             Requested size: 199.6541pt x 113.81102pt.
 
-<obrazky/embed_odroidc2.png, id=1127, 420.82219pt x 273.27094pt>
+<obrazky/embed_odroidc2.png, id=1128, 420.82219pt x 273.27094pt>
 File: obrazky/embed_odroidc2.png Graphic file (type png)
  <use obrazky/embed_odroidc2.png>
 Package pdftex.def Info: obrazky/embed_odroidc2.png used on input line 348.
@@ -1442,38 +1442,38 @@ Overfull \hbox (2.61974pt too wide) in paragraph at lines 374--375
 []\T1/lmr/bx/n/12 BeagleBoard-X15 \T1/lmr/m/n/12 je za-lo-ºen na ²es-ti-á-dro-vém pro-ce-soru Si-tara AM5728 s dv¥ma
  []
 
-<obrazky/embed_beaglebone_black.png, id=1142, 310.15875pt x 193.47281pt>
+<obrazky/embed_beaglebone_black.png, id=1144, 310.15875pt x 193.47281pt>
 File: obrazky/embed_beaglebone_black.png Graphic file (type png)
  <use obrazky/embed_beaglebone_black.png>
 Package pdftex.def Info: obrazky/embed_beaglebone_black.png used on input line 378.
 (pdftex.def)             Requested size: 182.45255pt x 113.81102pt.
 
-[31] <obrazky/embed_intel_galileo.png, id=1152, 622.325pt x 368.37625pt>
+[31] <obrazky/embed_intel_galileo.png, id=1154, 622.325pt x 368.37625pt>
 File: obrazky/embed_intel_galileo.png Graphic file (type png)
  <use obrazky/embed_intel_galileo.png>
 Package pdftex.def Info: obrazky/embed_intel_galileo.png used on input line 403.
 (pdftex.def)             Requested size: 240.33179pt x 142.26378pt.
  [32 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_beaglebone_black.png>]
-<obrazky/embed_intel_edison2.png, id=1162, 903.375pt x 506.89375pt>
+<obrazky/embed_intel_edison2.png, id=1164, 903.375pt x 506.89375pt>
 File: obrazky/embed_intel_edison2.png Graphic file (type png)
  <use obrazky/embed_intel_edison2.png>
 Package pdftex.def Info: obrazky/embed_intel_edison2.png used on input line 419.
 (pdftex.def)             Requested size: 228.17276pt x 128.0374pt.
 
-<obrazky/embed_intel_edison1.png, id=1163, 560.0925pt x 278.03876pt>
+<obrazky/embed_intel_edison1.png, id=1165, 560.0925pt x 278.03876pt>
 File: obrazky/embed_intel_edison1.png Graphic file (type png)
  <use obrazky/embed_intel_edison1.png>
 Package pdftex.def Info: obrazky/embed_intel_edison1.png used on input line 432.
 (pdftex.def)             Requested size: 143.28746pt x 71.13188pt.
  [33 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_intel_galileo.png> <C:/Users/krejci/OneDrive/VUT - diplomka/
 obrazky/embed_intel_edison2.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/embed_intel_edison1.png>]
-<obrazky/embed_amd_gizmo1.png, id=1170, 599.99156pt x 421.575pt>
+<obrazky/embed_amd_gizmo1.png, id=1172, 599.99156pt x 421.575pt>
 File: obrazky/embed_amd_gizmo1.png Graphic file (type png)
  <use obrazky/embed_amd_gizmo1.png>
 Package pdftex.def Info: obrazky/embed_amd_gizmo1.png used on input line 461.
 (pdftex.def)             Requested size: 192.0548pt x 134.94534pt.
 
-<obrazky/embed_amd_gizmo2.png, id=1171, 471.26062pt x 337.26pt>
+<obrazky/embed_amd_gizmo2.png, id=1173, 471.26062pt x 337.26pt>
 File: obrazky/embed_amd_gizmo2.png Graphic file (type png)
  <use obrazky/embed_amd_gizmo2.png>
 Package pdftex.def Info: obrazky/embed_amd_gizmo2.png used on input line 463.
@@ -1491,12 +1491,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-<obrazky/unipi_v1.png, id=1200, 1003.75pt x 441.65pt>
+<obrazky/unipi_v1.png, id=1202, 1003.75pt x 441.65pt>
 File: obrazky/unipi_v1.png Graphic file (type png)
  <use obrazky/unipi_v1.png>
 Package pdftex.def Info: obrazky/unipi_v1.png used on input line 52.
 (pdftex.def)             Requested size: 420.33153pt x 184.9429pt.
- [36 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_v1.png>] <obrazky/unipi_schema1.pdf, id=1209, 533.74406pt x 
+ [36 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_v1.png>] <obrazky/unipi_schema1.pdf, id=1211, 533.74406pt x 
 304.13625pt>
 File: obrazky/unipi_schema1.pdf Graphic file (type pdf)
 
@@ -1508,25 +1508,25 @@ Overfull \hbox (26.89325pt too wide) in paragraph at lines 82--83
  [] 
  []
 
-<obrazky/unipi_unipi_deska.png, id=1211, 1003.75pt x 687.56876pt>
+<obrazky/unipi_unipi_deska.png, id=1213, 1003.75pt x 687.56876pt>
 File: obrazky/unipi_unipi_deska.png Graphic file (type png)
  <use obrazky/unipi_unipi_deska.png>
 Package pdftex.def Info: obrazky/unipi_unipi_deska.png used on input line 113.
 (pdftex.def)             Requested size: 250.93689pt x 171.89177pt.
- [37 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_schema1.pdf>] <obrazky/unipi_neuron_s.png, id=1237, 602.25pt
+ [37 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_schema1.pdf>] <obrazky/unipi_neuron_s.png, id=1239, 602.25pt
  x 602.25pt>
 File: obrazky/unipi_neuron_s.png Graphic file (type png)
 
 <use obrazky/unipi_neuron_s.png>
 Package pdftex.def Info: obrazky/unipi_neuron_s.png used on input line 141.
 (pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
- <obrazky/unipi_neuron_m.png, id=1238, 602.25pt x 602.25pt>
+ <obrazky/unipi_neuron_m.png, id=1240, 602.25pt x 602.25pt>
 File: obrazky/unipi_neuron_m.png Graphic file (type png)
 
 <use obrazky/unipi_neuron_m.png>
 Package pdftex.def Info: obrazky/unipi_neuron_m.png used on input line 143.
 (pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
- <obrazky/unipi_neuron_l.png, id=1239, 602.25pt x 602.25pt>
+ <obrazky/unipi_neuron_l.png, id=1241, 602.25pt x 602.25pt>
 File: obrazky/unipi_neuron_l.png Graphic file (type png)
 
 <use obrazky/unipi_neuron_l.png>
@@ -1535,31 +1535,31 @@ Package pdftex.def Info: obrazky/unipi_neuron_l.png used on input line 145.
  [38 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_unipi_deska.png>] [39 <C:/Users/krejci/OneDrive/VUT - diplom
 ka/obrazky/unipi_neuron_s.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_neuron_m.png> <C:/Users/krejci/One
 Drive/VUT - diplomka/obrazky/unipi_neuron_l.png>]
-<obrazky/unipi_propojbrain.png, id=1259, 761.84625pt x 375.4025pt>
+<obrazky/unipi_propojbrain.png, id=1261, 761.84625pt x 375.4025pt>
 File: obrazky/unipi_propojbrain.png Graphic file (type png)
  <use obrazky/unipi_propojbrain.png>
 Package pdftex.def Info: obrazky/unipi_propojbrain.png used on input line 198.
 (pdftex.def)             Requested size: 192.0548pt x 94.63515pt.
 
-<obrazky/unipi_osazeny.png, id=1260, 803.0pt x 533.995pt>
+<obrazky/unipi_osazeny.png, id=1262, 803.0pt x 533.995pt>
 File: obrazky/unipi_osazeny.png Graphic file (type png)
  <use obrazky/unipi_osazeny.png>
 Package pdftex.def Info: obrazky/unipi_osazeny.png used on input line 200.
 (pdftex.def)             Requested size: 192.0548pt x 127.71327pt.
 
-<obrazky/unipi_unipi_box.png, id=1264, 1003.75pt x 768.8725pt>
+<obrazky/unipi_unipi_box.png, id=1266, 1003.75pt x 768.8725pt>
 File: obrazky/unipi_unipi_box.png Graphic file (type png)
  <use obrazky/unipi_unipi_box.png>
 Package pdftex.def Info: obrazky/unipi_unipi_box.png used on input line 212.
 (pdftex.def)             Requested size: 185.72147pt x 142.26378pt.
 
-<obrazky/unipi_propojuvnitr.png, id=1265, 831.105pt x 616.3025pt>
+<obrazky/unipi_propojuvnitr.png, id=1267, 831.105pt x 616.3025pt>
 File: obrazky/unipi_propojuvnitr.png Graphic file (type png)
  <use obrazky/unipi_propojuvnitr.png>
 Package pdftex.def Info: obrazky/unipi_propojuvnitr.png used on input line 214.
 (pdftex.def)             Requested size: 191.84761pt x 142.26378pt.
 
-<obrazky/unipi_schema2.pdf, id=1267, 535.2497pt x 326.72063pt>
+<obrazky/unipi_schema2.pdf, id=1269, 535.2497pt x 326.72063pt>
 File: obrazky/unipi_schema2.pdf Graphic file (type pdf)
  <use obrazky/unipi_schema2.pdf>
 Package pdftex.def Info: obrazky/unipi_schema2.pdf used on input line 223.
@@ -1568,12 +1568,12 @@ Package pdftex.def Info: obrazky/unipi_schema2.pdf used on input line 223.
 razky/unipi_osazeny.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_unipi_box.png> <C:/Users/krejci/OneDrive
 /VUT - diplomka/obrazky/unipi_propojuvnitr.png>] [41 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/unipi_schema2.pdf>
 ]
-<obrazky/sbernice_uart.pdf, id=1298, 350.81062pt x 70.76437pt>
+<obrazky/sbernice_uart.pdf, id=1300, 350.81062pt x 70.76437pt>
 File: obrazky/sbernice_uart.pdf Graphic file (type pdf)
  <use obrazky/sbernice_uart.pdf>
 Package pdftex.def Info: obrazky/sbernice_uart.pdf used on input line 282.
 (pdftex.def)             Requested size: 350.80975pt x 70.76419pt.
- [42 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/sbernice_uart.pdf>] [43] <obrazky/unipi_gpio.pdf, id=1317, 350.810
+ [42 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/sbernice_uart.pdf>] [43] <obrazky/unipi_gpio.pdf, id=1319, 350.810
 62pt x 243.15843pt>
 File: obrazky/unipi_gpio.pdf Graphic file (type pdf)
 
@@ -1591,13 +1591,13 @@ Overfull \hbox (6.46037pt too wide) in paragraph at lines 1--1
 []\T1/lmr/bx/n/17.28 KOMUNIKAƒNÍ MO-DUL WI-RE-LESS M-BUS 
  []
 
-<obrazky/modul_predek.png, id=1356, 401.5pt x 311.1625pt>
+<obrazky/modul_predek.png, id=1358, 401.5pt x 311.1625pt>
 File: obrazky/modul_predek.png Graphic file (type png)
  <use obrazky/modul_predek.png>
 Package pdftex.def Info: obrazky/modul_predek.png used on input line 15.
 (pdftex.def)             Requested size: 149.37956pt x 115.76929pt.
 
-<obrazky/modul_zadek.png, id=1357, 612.2875pt x 276.03125pt>
+<obrazky/modul_zadek.png, id=1359, 612.2875pt x 276.03125pt>
 File: obrazky/modul_zadek.png Graphic file (type png)
  <use obrazky/modul_zadek.png>
 Package pdftex.def Info: obrazky/modul_zadek.png used on input line 17.
@@ -1612,25 +1612,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
 
  <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/modul_predek.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/mod
-ul_zadek.png>] <obrazky/modul_block.pdf, id=1368, 683.55376pt x 385.44pt>
+ul_zadek.png>] <obrazky/modul_block.pdf, id=1370, 683.55376pt x 385.44pt>
 File: obrazky/modul_block.pdf Graphic file (type pdf)
  <use obrazky/modul_block.pdf>
 Package pdftex.def Info: obrazky/modul_block.pdf used on input line 34.
 (pdftex.def)             Requested size: 410.13542pt x 231.26578pt.
 
-<obrazky/modul_antenaa.png, id=1371, 228.10219pt x 221.32687pt>
+<obrazky/modul_antenaa.png, id=1373, 228.10219pt x 221.32687pt>
 File: obrazky/modul_antenaa.png Graphic file (type png)
  <use obrazky/modul_antenaa.png>
 Package pdftex.def Info: obrazky/modul_antenaa.png used on input line 51.
 (pdftex.def)             Requested size: 119.50105pt x 115.94843pt.
 
-<obrazky/modul_antenab.png, id=1372, 222.8325pt x 226.59656pt>
+<obrazky/modul_antenab.png, id=1374, 222.8325pt x 226.59656pt>
 File: obrazky/modul_antenab.png Graphic file (type png)
  <use obrazky/modul_antenab.png>
 Package pdftex.def Info: obrazky/modul_antenab.png used on input line 53.
 (pdftex.def)             Requested size: 119.50105pt x 121.52011pt.
 
-<obrazky/modul_antenac.png, id=1373, 234.8775pt x 222.8325pt>
+<obrazky/modul_antenac.png, id=1375, 234.8775pt x 222.8325pt>
 File: obrazky/modul_antenac.png Graphic file (type png)
  <use obrazky/modul_antenac.png>
 Package pdftex.def Info: obrazky/modul_antenac.png used on input line 55.
@@ -1642,7 +1642,7 @@ Overfull \hbox (18.68164pt too wide) in paragraph at lines 74--75
 []\T1/lmr/m/n/12 Problematice roz-²if-ro-vání pa-ketu p°i-ja-tého mo-du-lem IQRF se blíºe v¥-nuje Kap. []7.9.4[]. 
  []
 
-<obrazky/modul_topologie.pdf, id=1407, 658.71094pt x 285.31593pt>
+<obrazky/modul_topologie.pdf, id=1409, 658.71094pt x 285.31593pt>
 File: obrazky/modul_topologie.pdf Graphic file (type pdf)
  <use obrazky/modul_topologie.pdf>
 Package pdftex.def Info: obrazky/modul_topologie.pdf used on input line 81.
@@ -1666,7 +1666,7 @@ Overfull \hbox (1.62814pt too wide) in paragraph at lines 91--92
 \T1/lmr/m/n/12 Komunikace pro-bíhá ná-sle-dovn¥: nad-°a-zené apli-kace re-a-li-zu-jící apli-ka£ní vrstvu stan-
  []
 
-[53] [54] <obrazky/wmbus_manchester.pdf, id=1516, 419.31656pt x 141.52875pt>
+[53] [54] <obrazky/wmbus_manchester.pdf, id=1518, 419.31656pt x 141.52875pt>
 File: obrazky/wmbus_manchester.pdf Graphic file (type pdf)
  <use obrazky/wmbus_manchester.pdf>
 Package pdftex.def Info: obrazky/wmbus_manchester.pdf used on input line 189.
@@ -1691,26 +1691,26 @@ Overfull \hbox (6.75414pt too wide) in paragraph at lines 553--554
 []\T1/lmr/m/n/12 Data pole ur-£uje da-tový typ p°e-ná-²ené hod-noty. Moº-nosti jsou shr-nuty v Tab. []5.18[]. 
  []
 
-[62] [63] <obrazky/wmbus_aes_cbc.pdf, id=1626, 646.66594pt x 276.28218pt>
+[62] [63] <obrazky/wmbus_aes_cbc.pdf, id=1628, 646.66594pt x 276.28218pt>
 File: obrazky/wmbus_aes_cbc.pdf Graphic file (type pdf)
  <use obrazky/wmbus_aes_cbc.pdf>
 Package pdftex.def Info: obrazky/wmbus_aes_cbc.pdf used on input line 716.
 (pdftex.def)             Requested size: 420.32788pt x 179.58128pt.
  [64 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/wmbus_aes_cbc.pdf>] [65] [66]
-<obrazky/wmbus_aes_schema.pdf, id=1678, 491.58656pt x 173.14688pt>
+<obrazky/wmbus_aes_schema.pdf, id=1672, 491.58656pt x 173.14688pt>
 File: obrazky/wmbus_aes_schema.pdf Graphic file (type pdf)
  <use obrazky/wmbus_aes_schema.pdf>
 Package pdftex.def Info: obrazky/wmbus_aes_schema.pdf used on input line 825.
 (pdftex.def)             Requested size: 393.26978pt x 138.51768pt.
 ) [67 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/wmbus_aes_schema.pdf>] ("C:\Users\krejci\OneDrive\VUT - diplomka\
 text/zarizeni.tex"
-<obrazky/zarizeni_weptech1.png, id=1720, 466.74374pt x 338.26375pt>
+<obrazky/zarizeni_weptech1.png, id=1709, 466.74374pt x 338.26375pt>
 File: obrazky/zarizeni_weptech1.png Graphic file (type png)
  <use obrazky/zarizeni_weptech1.png>
 Package pdftex.def Info: obrazky/zarizeni_weptech1.png used on input line 29.
 (pdftex.def)             Requested size: 136.57634pt x 98.98174pt.
 
-<obrazky/zarizeni_weptech2.png, id=1721, 412.54124pt x 338.26375pt>
+<obrazky/zarizeni_weptech2.png, id=1710, 412.54124pt x 338.26375pt>
 File: obrazky/zarizeni_weptech2.png Graphic file (type png)
  <use obrazky/zarizeni_weptech2.png>
 Package pdftex.def Info: obrazky/zarizeni_weptech2.png used on input line 31.
@@ -1720,19 +1720,19 @@ Package pdftex.def Info: obrazky/zarizeni_weptech2.png used on input line 31.
 
 
  <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_weptech1.png> <C:/Users/krejci/OneDrive/VUT - diplomka/obrazk
-y/zarizeni_weptech2.png>] [69] [70] <obrazky/zarizeni_bonega1.png, id=1752, 178.6675pt x 174.6525pt>
+y/zarizeni_weptech2.png>] [69] [70] <obrazky/zarizeni_bonega1.png, id=1736, 178.6675pt x 174.6525pt>
 File: obrazky/zarizeni_bonega1.png Graphic file (type png)
 
 <use obrazky/zarizeni_bonega1.png>
 Package pdftex.def Info: obrazky/zarizeni_bonega1.png used on input line 165.
 (pdftex.def)             Requested size: 128.0387pt x 125.16873pt.
- <obrazky/zarizeni_bonega2.png, id=1753, 250.9375pt x 244.915pt>
+ <obrazky/zarizeni_bonega2.png, id=1737, 250.9375pt x 244.915pt>
 File: obrazky/zarizeni_bonega2.png Graphic file (type png)
 
 <use obrazky/zarizeni_bonega2.png>
 Package pdftex.def Info: obrazky/zarizeni_bonega2.png used on input line 167.
 (pdftex.def)             Requested size: 128.0387pt x 124.97224pt.
- <obrazky/zarizeni_bonega3.png, id=1754, 189.70876pt x 176.66pt>
+ <obrazky/zarizeni_bonega3.png, id=1738, 189.70876pt x 176.66pt>
 File: obrazky/zarizeni_bonega3.png Graphic file (type png)
 
 <use obrazky/zarizeni_bonega3.png>
@@ -1744,13 +1744,13 @@ Overfull \hbox (2.52914pt too wide) in paragraph at lines 240--241
 []\T1/lmr/m/n/12 Modul Bo-nega pra-cuje pouze v re-ºimu ²if-ro-vání p°e-ná-²en-ných dat po-mocí AES128
  []
 
-<obrazky/zarizeni_kamstrup.png, id=1776, 330.23375pt x 359.3425pt>
+<obrazky/zarizeni_kamstrup.png, id=1757, 330.23375pt x 359.3425pt>
 File: obrazky/zarizeni_kamstrup.png Graphic file (type png)
  <use obrazky/zarizeni_kamstrup.png>
 Package pdftex.def Info: obrazky/zarizeni_kamstrup.png used on input line 261.
 (pdftex.def)             Requested size: 214.64938pt x 233.56985pt.
  [73 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/zarizeni_kamstrup.png>] [74] [75]
-<obrazky/zarizeni_zpa.png, id=1812, 444.66125pt x 549.05125pt>
+<obrazky/zarizeni_zpa.png, id=1790, 444.66125pt x 549.05125pt>
 File: obrazky/zarizeni_zpa.png Graphic file (type png)
  <use obrazky/zarizeni_zpa.png>
 Package pdftex.def Info: obrazky/zarizeni_zpa.png used on input line 389.
@@ -1774,7 +1774,7 @@ Overfull \hbox (4.56842pt too wide) in paragraph at lines 225--226
 []\T1/lmr/m/n/12 Strukturu ta-bu-lek, de-fi-nici sloupc· a vazby mezi nimi po-pi-suje schéma na Obr. []7.1[]. 
  []
 
-<obrazky/aplikace_databaze.pdf, id=1897, 524.57982pt x 281.56192pt>
+<obrazky/aplikace_databaze.pdf, id=1864, 524.57982pt x 281.56192pt>
 File: obrazky/aplikace_databaze.pdf Graphic file (type pdf)
  <use obrazky/aplikace_databaze.pdf>
 Package pdftex.def Info: obrazky/aplikace_databaze.pdf used on input line 229.
@@ -1786,7 +1786,7 @@ tabase
  []
 
 [82 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_databaze.pdf>]
-<obrazky/aplikace_diagram.pdf, id=2120, 733.99219pt x 1075.76906pt>
+<obrazky/aplikace_diagram.pdf, id=2085, 733.99219pt x 1075.76906pt>
 File: obrazky/aplikace_diagram.pdf Graphic file (type pdf)
  <use obrazky/aplikace_diagram.pdf>
 Package pdftex.def Info: obrazky/aplikace_diagram.pdf used on input line 267.
@@ -1806,7 +1806,7 @@ Overfull \hbox (7.21288pt too wide) in paragraph at lines 393--394
 [][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[88] [89] <obrazky/aplikace_vizualizace.png, id=2273, 547.2947pt x 651.93562pt>
+[88] [89] <obrazky/aplikace_vizualizace.png, id=2223, 547.2947pt x 651.93562pt>
 File: obrazky/aplikace_vizualizace.png Graphic file (type png)
  <use obrazky/aplikace_vizualizace.png>
 Package pdftex.def Info: obrazky/aplikace_vizualizace.png used on input line 434.
@@ -1817,7 +1817,7 @@ Overfull \hbox (11.04501pt too wide) in paragraph at lines 434--435
  []
 
 [90 <C:/Users/krejci/OneDrive/VUT - diplomka/obrazky/aplikace_vizualizace.png>]
-<obrazky/aplikace_schema.pdf, id=2287, 474.27188pt x 435.12563pt>
+<obrazky/aplikace_schema.pdf, id=2236, 474.27188pt x 435.12563pt>
 File: obrazky/aplikace_schema.pdf Graphic file (type pdf)
  <use obrazky/aplikace_schema.pdf>
 Package pdftex.def Info: obrazky/aplikace_schema.pdf used on input line 467.
@@ -1964,7 +1964,7 @@ Overfull \hbox (15.67671pt too wide) in paragraph at lines 114--115
 
 
 
-] <graphs/VygenerujGrafZpa.pdf, id=2533, 1000.98969pt x 464.23438pt>
+] <graphs/VygenerujGrafZpa.pdf, id=2475, 1000.98969pt x 464.23438pt>
 File: graphs/VygenerujGrafZpa.pdf Graphic file (type pdf)
  <use graphs/VygenerujGrafZpa.pdf>
 Package pdftex.def Info: graphs/VygenerujGrafZpa.pdf used on input line 124.
@@ -1974,7 +1974,7 @@ Overfull \hbox (26.3577pt too wide) in paragraph at lines 124--125
  [] 
  []
 
-<graphs/VygenerujGrafBonega.pdf, id=2534, 1021.31563pt x 599.74063pt>
+<graphs/VygenerujGrafBonega.pdf, id=2476, 1021.31563pt x 599.74063pt>
 File: graphs/VygenerujGrafBonega.pdf Graphic file (type pdf)
  <use graphs/VygenerujGrafBonega.pdf>
 Package pdftex.def Info: graphs/VygenerujGrafBonega.pdf used on input line 132.
@@ -1987,7 +1987,7 @@ Overfull \hbox (40.58577pt too wide) in paragraph at lines 132--133
 
 LaTeX Warning: Float too large for page by 23.4242pt on input line 137.
 
-<graphs/VygenerujGrafWeptech.pdf, id=2535, 995.72pt x 586.94281pt>
+<graphs/VygenerujGrafWeptech.pdf, id=2477, 995.72pt x 586.94281pt>
 File: graphs/VygenerujGrafWeptech.pdf Graphic file (type pdf)
  <use graphs/VygenerujGrafWeptech.pdf>
 Package pdftex.def Info: graphs/VygenerujGrafWeptech.pdf used on input line 140.
@@ -2006,7 +2006,7 @@ LaTeX Warning: Float too large for page by 14.46577pt on input line 145.
 
  <C:/Users/krejci/OneDrive/VUT - diplomka/graphs/VygenerujGrafZpa.pdf>] [107 <C:/Users/krejci/OneDrive/VUT - diplomka/gr
 aphs/VygenerujGrafBonega.pdf>] [108 <C:/Users/krejci/OneDrive/VUT - diplomka/graphs/VygenerujGrafWeptech.pdf>]
-<obrazky/priloha_medium.pdf, id=2578, 395.22656pt x 241.65282pt>
+<obrazky/priloha_medium.pdf, id=2518, 395.22656pt x 241.65282pt>
 File: obrazky/priloha_medium.pdf Graphic file (type pdf)
  <use obrazky/priloha_medium.pdf>
 Package pdftex.def Info: obrazky/priloha_medium.pdf used on input line 158.
@@ -2041,7 +2041,7 @@ Package rerunfilecheck Warning: File `sablona.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `sablona.out':
-(rerunfilecheck)             Before: BA8BA6FB1C40D2E0E337D394C3285993;16748
+(rerunfilecheck)             Before: 6105B286E08DD866FB4C6386C8C2CCA7;16748
 (rerunfilecheck)             After:  7DB9B581FDE20F56A494079E2AA2326E;16748.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -2049,138 +2049,16 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 273.
  ) 
 Here is how much of TeX's memory you used:
- 20356 strings out of 493921
- 302132 string characters out of 3147279
+ 20295 strings out of 493921
+ 301425 string characters out of 3147279
  807693 words of memory out of 3000000
  22398 multiletter control sequences out of 15000+200000
  91903 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,18n,118p,1171b,2991s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{lstlisting.426} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{figure.84} has been referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{lstlisting.418} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lstlisting.405} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lstlisting.394} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lstlisting.383} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lstlisting.372} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lstlisting.267} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lstlisting.261} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lstlisting.251} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.352} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.312} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.307} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.290} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.282} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.279} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.258} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.250} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.495} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.455} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.453} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.364} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.357} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.309} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.292} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.287} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.276} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.260} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.248} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.496} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.492} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.464} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.462} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.460} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.458} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.456} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.454} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.417} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.404} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.403} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.393} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.382} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.368} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.363} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.358} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.353} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.345} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.341} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.340} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.336} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.333} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.318} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.313} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.308} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.291} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.283} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.273} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.272} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.266} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.259} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.257} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.249} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.247} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.245} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.85} has been referenced but does not exist, replaced by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc
@@ -2193,9 +2071,9 @@ m/lmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/P
 ic/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/public/lm/lmtt12.pfb>
-Output written on sablona.pdf (109 pages, 27447482 bytes).
+Output written on sablona.pdf (109 pages, 27441549 bytes).
 PDF statistics:
- 2815 PDF objects out of 2984 (max. 8388607)
- 726 named destinations out of 1000 (max. 500000)
+ 2742 PDF objects out of 2984 (max. 8388607)
+ 665 named destinations out of 1000 (max. 500000)
  1356 words of extra memory for PDF output out of 10000 (max. 10000000)
 

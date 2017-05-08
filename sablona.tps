@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=sablona.tex
 
 [Frame0_View0,0]
-TopLine=248
-Cursor=11957
+TopLine=250
+Cursor=12105
 
 [Frame1]
 Flags=0
@@ -107,7 +107,7 @@ Class=LaTeXView
 Document=text\unipi.tex
 
 [Frame5_View0,0]
-TopLine=374
+TopLine=376
 Cursor=22339
 
 [Frame6]
@@ -125,7 +125,7 @@ Class=LaTeXView
 Document=text\wmbus.tex
 
 [Frame6_View0,0]
-TopLine=746
+TopLine=828
 Cursor=51427
 
 [Frame7]
@@ -161,7 +161,7 @@ Class=LaTeXView
 Document=text\zarizeni.tex
 
 [Frame8_View0,0]
-TopLine=212
+TopLine=225
 Cursor=13760
 
 [Frame9]
@@ -179,8 +179,8 @@ Class=LaTeXView
 Document=text\implementace.tex
 
 [Frame9_View0,0]
-TopLine=155
-Cursor=9700
+TopLine=342
+Cursor=21039
 
 [Frame10]
 Flags=0
@@ -197,7 +197,7 @@ Class=LaTeXView
 Document=text\literatura.tex
 
 [Frame10_View0,0]
-TopLine=120
+TopLine=122
 Cursor=11579
 
 [Frame11]
@@ -215,7 +215,7 @@ Class=LaTeXView
 Document=text\prilohy.tex
 
 [Frame11_View0,0]
-TopLine=237
+TopLine=239
 Cursor=25249
 
 [Frame12]
@@ -233,8 +233,8 @@ Class=LaTeXView
 Document=mystyles.tex
 
 [Frame12_View0,0]
-TopLine=0
-Cursor=308
+TopLine=12
+Cursor=1194
 
 [Frame13]
 Flags=0
@@ -251,8 +251,8 @@ Class=LaTeXView
 Document=text\embed.tex
 
 [Frame13_View0,0]
-TopLine=527
-Cursor=41089
+TopLine=366
+Cursor=30523
 
 [Frame14]
 Flags=0
@@ -269,12 +269,12 @@ Class=LaTeXView
 Document=text\zkratky.tex
 
 [Frame14_View0,0]
-TopLine=48
-Cursor=2781
+TopLine=64
+Cursor=4275
 
 [SessionInfo]
 FrameCount=15
-ActiveFrame=6
+ActiveFrame=14
 
 [Bookmarks]
 text\implementace.tex=309 
