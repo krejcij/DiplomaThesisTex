@@ -73,21 +73,21 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {TR-72DA-WMB}}}{47}{figure.146}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces R\IeC {\r u}zn\IeC {\'e} m\IeC {\'o}dy dle pou\IeC {\v z}it\IeC {\'e} topologie \cite {ModulIQRF}}}{48}{figure.148}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Princip k\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Manchester}}{55}{figure.195}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip algoritmu AES v m\IeC {\'o}du CBC}}{65}{figure.249}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Obecn\IeC {\'e} sch\IeC {\'e}ma de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES-128 CBC}}{68}{figure.261}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{69}{figure.277}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{69}{figure.277}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deska \IeC {\v c}idla}}}{69}{figure.277}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Sada Bonega~\cite {CidloBonega}}}{72}{figure.288}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vodom\IeC {\v e}r studen\IeC {\'e} vody}}}{72}{figure.288}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezdr\IeC {\'a}tov\IeC {\'y} modul}}}{72}{figure.288}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vodom\IeC {\v e}r tepl\IeC {\'e} vody}}}{72}{figure.288}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{74}{figure.293}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{77}{figure.310}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Model zvolen\IeC {\'e} SqLite 3 datab\IeC {\'a}ze}}{83}{figure.358}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{85}{figure.365}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Sn\IeC {\'\i }mek obrazovky vizualiza\IeC {\v c}n\IeC {\'\i } aplikace}}{91}{figure.454}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Sch\IeC {\'e}ma v\IeC {\'y}sledn\IeC {\'e} realizace}}{92}{figure.456}
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } elektrom\IeC {\v e}rem ZPA (interval 24 hodin)}}{107}{figure.494}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } vodom\IeC {\v e}ry Bonega (interval 24 hodin)}}{108}{figure.495}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech (interval 24 hodin)}}{109}{figure.496}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Princip algoritmu AES v m\IeC {\'o}du CBC}}{64}{figure.247}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Obecn\IeC {\'e} sch\IeC {\'e}ma de\IeC {\v s}ifrov\IeC {\'a}n\IeC {\'\i } AES-128 CBC}}{67}{figure.259}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \IeC {\v C}idlo Weptech OMST-868A~\cite {CidloWeptech}}}{68}{figure.275}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zapouzd\IeC {\v r}en\IeC {\'e} \IeC {\v c}idlo}}}{68}{figure.275}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deska \IeC {\v c}idla}}}{68}{figure.275}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Sada Bonega~\cite {CidloBonega}}}{71}{figure.286}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vodom\IeC {\v e}r studen\IeC {\'e} vody}}}{71}{figure.286}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezdr\IeC {\'a}tov\IeC {\'y} modul}}}{71}{figure.286}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Vodom\IeC {\v e}r tepl\IeC {\'e} vody}}}{71}{figure.286}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Kamstrup Multical 402~\cite {CidloKamstrup}}}{73}{figure.291}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ZPA ZE.310~\cite {CidloZpa}}}{76}{figure.308}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Model zvolen\IeC {\'e} SqLite 3 datab\IeC {\'a}ze}}{82}{figure.356}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces V\IeC {\'y}vojov\IeC {\'y} diagram aplikace pro vy\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } dat}}{84}{figure.363}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Sn\IeC {\'\i }mek obrazovky vizualiza\IeC {\v c}n\IeC {\'\i } aplikace}}{90}{figure.452}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Sch\IeC {\'e}ma v\IeC {\'y}sledn\IeC {\'e} realizace}}{91}{figure.454}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } elektrom\IeC {\v e}rem ZPA (interval 24 hodin)}}{106}{figure.492}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } vodom\IeC {\v e}ry Bonega (interval 24 hodin)}}{107}{figure.493}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Vizualizace m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } \IeC {\v c}idlem Weptech (interval 24 hodin)}}{108}{figure.494}

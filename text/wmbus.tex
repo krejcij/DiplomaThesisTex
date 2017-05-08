@@ -466,6 +466,7 @@ Funkční pole definuje typ přenášené hodnoty z hlediska její aktuálnosti 
 
 \newpage
 
+\vspace{-20pt}
 \begin{table}[!ht]
 \centering
 \caption{Kódování funkčního pole DIF pole}
@@ -498,9 +499,11 @@ Data pole určuje datový typ přenášené hodnoty. Možnosti jsou shrnuty v Ta
 \end{tabular}
 \end{table}
 
+\vspace{-10pt}
 \subsubsection{Data Information Field Extension (DIFE)}
 DIFE obsahuje upřesnění veličiny či informace o tarifu dle struktury zobrazené v Tab.~\ref{KodovaniDIFE}.
 
+\vspace{-10pt}
 \begin{table}[!ht]
 \centering
 \caption{Kódování DIFE Pole}
@@ -512,13 +515,13 @@ Rozšiřující bit & Jednotka       & \multicolumn{2}{c|}{Tarif}      & \multic
 \end{tabular}
 \end{table}
 
+\vspace{-15pt}
 \subsubsection{Value Information Block (VIB)}
 VIB definuje typ přenášené hodnoty a skládá se z VIF a z nepovinného VIFE.
 
+\vspace{-5pt}
 \subsubsection{Value Information Field (VIF)}
 VIF definuje veličinu přenášených dat a má strukturu dle Tab.~\ref{KodovaniVIFu}.
-
-\newpage
 
 \begin{table}[!ht]
 \centering
@@ -530,6 +533,8 @@ VIF definuje veličinu přenášených dat a má strukturu dle Tab.~\ref{Kodovan
 Rozšiřující bit & \multicolumn{7}{c|}{Data}                                                                                           \\ \hline \hline
 \end{tabular}
 \end{table}
+
+\newpage
 
 Rozšiřující bit pole určuje jaký blok bajtů následuje po VIF. Možnosti jsou stejné jako v případě rozšiřujícího bitu DIFu (viz Tab.~\ref{KodovaniRozsBituDIFu}).
 
@@ -588,8 +593,7 @@ E111 1000                             & Výrobní číslo                       
 \end{tabular}}
 \end{table}
 
-\newpage
-
+\vspace{-10pt}
 \subsubsection{Value Information Field Extension (VIFE)}
 VIFE obsahují upřesnění, doplňující informaci či přenos chybového stavu dané položky. Jejich kompletní přehled je uveden ve specifikaci protokolu WM-Bus~\cite{WmBusSpecka}.
 
@@ -609,12 +613,13 @@ Pole \texttt{Data Value} již obsahuje přenášenou hodnotu, definovanou dle DI
 
 
 \subsubsection{Datové typy F a G}
-V protokolu Wireless M-Bus je datum kódováno ve formátu G, kombinace datumu i času ve formátu F, viz Tab.~\ref{KodovaniDataF}.  
+V protokolu Wireless M-Bus je datum kódováno ve formátu G (viz~Tab.~\ref{KodovaniDataG}), kombinace datumu i času ve formátu F (viz Tab.~\ref{KodovaniDataF}).
 
 \begin{table}[!ht]
 \centering
 \caption{Kódování data ve formátu G}
 \label{KodovaniDataG}
+\resizebox{0.75\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 7}}} & 
@@ -635,14 +640,16 @@ V protokolu Wireless M-Bus je datum kódováno ve formátu G, kombinace datumu i
 \rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 0}}} \\ \hline \hline
 \multicolumn{8}{|c|}{Bajt 1} & \multicolumn{8}{c|}{Bajt 2} \\ \hline
 \multicolumn{3}{|c|}{Rok (1/2)} & \multicolumn{5}{c|}{Den} & \multicolumn{4}{c|}{Rok (2/2)} & \multicolumn{4}{c|}{Měsíc} \\ \hline \hline
-\end{tabular}
+\end{tabular}}
 \end{table}
 
+\vspace{-20pt}
 
 \begin{table}[!ht]
 \centering
 \caption{Kódování data a času ve formátu F}
 \label{KodovaniDataF}
+\resizebox{0.95\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 7}}} & 
@@ -663,7 +670,7 @@ V protokolu Wireless M-Bus je datum kódováno ve formátu G, kombinace datumu i
 \rotatebox[origin=c]{90}{\parbox[b]{1.75cm}{\hspace{10pt}\textbf{Bit 0}}} & & \\ \hline \hline
 \multicolumn{8}{|c|}{Bajt 1}                                  & \multicolumn{8}{c|}{Bajt 2}                                   & Bajt 3           & Bajt 4          \\ \hline
 0     & 0     & \multicolumn{6}{c|}{Hodina}                   & 0     & 0     & 0     & \multicolumn{5}{c|}{Minuta}           & \multicolumn{2}{c|}{Dle formátu G} \\ \hline \hline
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 Ukázky implementace obou formátů v jazyce Python uvádí Kód~\ref{CodeFG}.
@@ -675,16 +682,14 @@ def get_date(date_bytes):
     year = str(int(date[0:4] + date[8:11], 2))
     month = str(int(date[4:8], 2))
     day = str(int(date[11:16], 2))
-    vysledek = day + "." + month + ".20" + year
-    return vysledek
+    return day + "." + month + ".20" + year
 
 # Get time from F format
 def get_time(time_bytes):
     time = str(bin(int(time_bytes[0:2], 16))[2:]).zfill(8) + str(bin(int(time_bytes[2:4], 16))[2:]).zfill(8)
     hour = str(int(time[3:8], 2))
     minute = str(int(time[10:16], 2)).zfill(2)
-    vysledek = hour + ":" + minute
-    return vysledek
+    return hour + ":" + minute
 \end{lstlisting}
 	
 \newpage{}	

@@ -18,16 +18,16 @@
 \contentsline {table}{\numberline {5.14}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } funk\IeC {\v c}n\IeC {\'\i }ho pole DIF pole}}{61}{table.216}
 \contentsline {table}{\numberline {5.15}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Data pole DIF pole}}{61}{table.217}
 \contentsline {table}{\numberline {5.16}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } DIFE Pole}}{61}{table.219}
-\contentsline {table}{\numberline {5.17}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } VIF Pole}}{62}{table.222}
+\contentsline {table}{\numberline {5.17}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } VIF Pole}}{61}{table.222}
 \contentsline {table}{\numberline {5.18}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } Data pole VIF pole}}{62}{table.223}
 \contentsline {table}{\numberline {5.19}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } data ve form\IeC {\'a}tu G}}{63}{table.227}
 \contentsline {table}{\numberline {5.20}{\ignorespaces K\IeC {\'o}dov\IeC {\'a}n\IeC {\'\i } data a \IeC {\v c}asu ve form\IeC {\'a}tu F}}{63}{table.228}
-\contentsline {table}{\numberline {5.21}{\ignorespaces Form\IeC {\'a}t inicializa\IeC {\v c}n\IeC {\'\i }ho vektoru}}{66}{table.251}
-\contentsline {table}{\numberline {5.22}{\ignorespaces V\IeC {\'y}znam bit\IeC {\r u} pole ConfigurationWord}}{67}{table.259}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Weptech 868A~\cite {CidloWeptech}}}{70}{table.280}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Konfigurace intervalu zas\IeC {\'\i }l\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } DIP p\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e~\cite {CidloWeptech}}}{71}{table.282}
-\contentsline {table}{\numberline {6.3}{\ignorespaces P\IeC {\v r}ehled nastaven\IeC {\'\i } \IeC {\v c}idla \cite {CidloWeptech}}}{72}{table.283}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Telegram z modulu Bonega~\cite {CidloBonega}}}{73}{table.291}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Kamstrup Multical 402~\cite {CidloKamstrup}}}{76}{table.308}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } ZPA ZE.302~\cite {CidloZpa}}}{78}{table.313}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{82}{table.353}
+\contentsline {table}{\numberline {5.21}{\ignorespaces Form\IeC {\'a}t inicializa\IeC {\v c}n\IeC {\'\i }ho vektoru}}{65}{table.249}
+\contentsline {table}{\numberline {5.22}{\ignorespaces V\IeC {\'y}znam bit\IeC {\r u} pole ConfigurationWord}}{66}{table.257}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Weptech 868A~\cite {CidloWeptech}}}{69}{table.278}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Konfigurace intervalu zas\IeC {\'\i }l\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } DIP p\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e~\cite {CidloWeptech}}}{70}{table.280}
+\contentsline {table}{\numberline {6.3}{\ignorespaces P\IeC {\v r}ehled nastaven\IeC {\'\i } \IeC {\v c}idla \cite {CidloWeptech}}}{71}{table.281}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Telegram z modulu Bonega~\cite {CidloBonega}}}{72}{table.289}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } Kamstrup Multical 402~\cite {CidloKamstrup}}}{75}{table.306}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Telegram ze za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i } ZPA ZE.302~\cite {CidloZpa}}}{77}{table.311}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Rozkl\IeC {\'\i }\IeC {\v c}ovan\IeC {\'y} zachycen\IeC {\'y} paket}}{81}{table.351}
