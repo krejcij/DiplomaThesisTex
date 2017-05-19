@@ -291,14 +291,14 @@ Dále je možné nastavit rychlost přenosu dat od 1~200\,bps až do 250\,kbps. 
 
 
 \subsection{SPI}
-SPI je sériové periferní rozhraní. Používá se pro komunikaci mezi řídícími mikroprocesory a ostatními integrovanými obvody. Jednotlivé obvody jsou propojeny čtyřmi vodiči:
+SPI je sériové periferní rozhraní pro komunikaci mezi řídícími mikroprocesory a ostatními integrovanými obvody. Jednotlivé obvody jsou propojeny čtyřmi vodiči:
 \begin{itemize}
 	\item Datový výstup MOSI (Master Out, Slave In) obvodu Master je připojen na vstupy MOSI všech obvodů Slave.
 	\item Datový vstup MISO (Master In, Slave Out) obvodu Master je propojen s~výstupy MISO všech obvodů Slave.
 	\item Výstup hodinového signálu SCK je připojen na vstupy SCK všech obvodů Slave.
 	\item Každý obvod Slave má vstup SS (Slave Select) pro výběr obvodu.
 \end{itemize}
-Komunikace je realizována pomocí společné sběrnice, je typu master-slave. Adresace se provádí pomocí zvláštních vodičů, které při logické nule aktivují příjem a vysílání zvoleného zařízení. Tato sběrnice se ani v jedné z desek UniPi nepoužívá ani není vyvedena ven.
+Komunikace je zajištěna společnou sběrnicí typu master-slave. Adresace je realizována zvláštními vodiči, které při logických stavech aktivují příjem nebo vysílání zvoleného zařízení. Tato sběrnice se ani v jedné z desek UniPi nepoužívá ani není vyvedena ven.
 
 \subsection{RS-485}
 RS-485 se používá především v průmyslovém prostředí. Vyznačuje se dvouvodičovým propojením jednotek. Tyto vodiče se označují písmeny A a B. Přenos je poloduplexní, a proto se vyžaduje řízení přenosu dat. Pomocí dvouvodičové linky je možné připojit až 32 zařízení. Tato sběrnice není součástí první verze desky, v druhé verzi je vyvedena na kontakty.

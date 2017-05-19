@@ -30,10 +30,10 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 		\subsection{Arduino Duemilanove} Arduino Duemilanove je vývojová jednoprocesorová deska s mikroprocesorem ATMega168 od firmy Atmel, tedy platformě Atmel AVR. 
 		Parametry zařízení jsou: ATmega168 s~16\,MHz krystalem, 16\,KB flash, 1\,KB SRAM (Static Random Access Memory), 512B EEPROM (Electrically Erasable Programmable Read-Only Memory). 	Konektivita: 14 digitálních vstupně/výstupných pinů, z toho 6 z nich může být využito i PWM (Pulse Width Modulation), vstupních analogových pinů (10\,bit A/D převodník, 0-5\,V), I2C (Inter-Integrated Circuit) sběrnici, UART (Universal Asynchronous Receiver/Transmitter) sběrnici, ICSP rozhraní, USB (Universal Serial Bus) rozhraní~\cite{ArduinoDuemilanove}.	
 	
-		\subsection{Arduino Uno} Arduino Uno je v současné době asi nejčastěji používaný typ desky. Arduino Uno je vývojová jednoprocesorová deska s mikroprocesorem ATMega328. Od roku 2011 je nástupcem Arduina Duemilanove. Změny oproti předchůdci jsou pouze v použitém mikrokontroléru, došlo k zdvojnásobení velikosti paměti na 32\,KB flash, 2\,KB SRAM, 1\,KB EEPROM~\cite{ArduinoUno}.
+		\subsection{Arduino Uno} Arduino Uno je v současnosti asi nejpoužívanější typ desky. Arduino Uno je vývojová jednoprocesorová deska s mikroprocesorem ATMega328. Od roku 2011 je nástupcem Arduina Duemilanove. Změny oproti předchůdci jsou pouze v použitém mikrokontroléru, došlo k zdvojnásobení velikosti paměti na 32\,KB flash, 2\,KB SRAM, 1\,KB EEPROM~\cite{ArduinoUno}.
 	
 		\subsection{Arduino Leonardo} 
-		Arduino Leonardo designově navazuje na Arduino Uno, liší se pouze v použitém čipu ATmega32u4~\cite{ArduinoLeonardo} a využitím SMD (Surface Mount Device) součástek.
+		Arduino Leonardo vzhledem navazuje na Arduino Uno, liší se pouze v použitém čipu ATmega32u4~\cite{ArduinoLeonardo} a využitím SMD (Surface Mount Device) součástek.
 
 
 \begin{figure*}[!ht]
@@ -68,7 +68,7 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 
 
 	\subsection{Arduino Mini} 
-	Arduino Mini je asi nejmenší oficiální verze Arduina, navržená pro úsporu místa. Daní za malé rozměry je~však absence USB portu. K programování je tedy nutné použít externí USB2Serial převodník. Jeho výkon však nijak nezaostává za většími deskami. Běží na procesoru ATmega328 s taktem 16\,MHz. Pro své malé rozměry je~vhodný k použití například v chytrých vypínačích, či dálkových ovladačích~\cite{ArduinoMini}.	
+	Arduino Mini je nejmenší oficiální verze Arduina, navržená pro úsporu místa. Daní za malé rozměry je~však absence USB portu. K programování je tedy nutné použít externí USB2Serial převodník. Jeho výkon však nijak nezaostává za většími deskami. Běží na procesoru ATmega328 s taktem 16\,MHz. Pro své malé rozměry je~vhodný k použití například v chytrých vypínačích, či dálkových ovladačích~\cite{ArduinoMini}.	
 	
 	\subsection{Arduino Micro} 
 	Arduino Micro je jedna z desek, která má čip obsahující předprogramovaný převodník ATmega32u4~\cite{ArduinoMicro}.	 
@@ -90,7 +90,7 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 	
 		
 		\subsection{Arduino Fio} 
-		Arduino Fio je přizpůsobená k připojení různých bezdrátových modulů (například ZigBee nebo XBee moduly). Základem je procesor ATmega328P, který běží na frekvenci 8\,MHz. Napětí je zde kvůli kompatibilitě s moduly sníženo oproti většině ostatních desek z 5\,V na 3,3\,V~\cite{ArduinoFio}.	
+		Arduino Fio je přizpůsobená k připojení různých bezdrátových modulů (například ZigBee nebo XBee moduly). Základem je procesor ATmega328P s frekvencí 8\,MHz. Napětí je zde kvůli kompatibilitě s moduly sníženo oproti většině ostatních desek z 5\,V na 3,3\,V~\cite{ArduinoFio}.	
 		
 	\subsection{Arduino MKR1000}
 	Arduino MKR1000 je postavené na čipu ATSAMW25 od Atmelu, který v sobě spojuje ARMové jádro SAMD21 Cortex-M, Wi-Fi čip a šifrovací a autentizační čip ECC508. Tento čip nabízí ECDH (Diffie-Hellman s využitím eliptických křivek) a~ECDSA (Elliptic Curve Digital Signature Algorithm). Dále pak generátor náhodných čísel, unikátní 72bitové sériové číslo nebo SHA-256 s volitelným HMAC.
@@ -106,10 +106,10 @@ Arduino podporuje připojení rozšiřujících karet. Ty se u Arduina nazývaj�
 \end{figure*}
 	
 		\subsection{Lilypad Arduino} 
-		Lilypad Arduino je postaveno na ATmega168V (energeticky úsporná verze ATmega168) nebo ATmega328V. Je určeno pro wearables projekty, zejména pro implementaci do textilií, kdy jsou spoje tvořeny vodivou nití. Není však pratelná. Existuje více variant této desky~\cite{ArduinoLilipad}.	
+		Lilypad Arduino je postaveno na ATmega168V (energeticky úsporná verze ATmega168) nebo ATmega328V. Je určeno pro wearables projekty, zejména pro implementaci do textilií, kdy jsou spoje vytvořeny pomocí vodivých nití. Není však pratelná. Existuje více variant této desky~\cite{ArduinoLilipad}.	
 	
 	\subsection{Arduino Yun} 
-	Arduino Yun je deska založená na ATmega32u4 (architektura ARM) a Atheros AR9331 (architektiura x86), který je schopný běhu odlehčeného linuxu Linino. Ve výbavě je softwarový bridge (prostředník, most), který zajišťuje komunikaci mezi oběma čipy. Procesor Atheros podporuje linuxové distribuce založené na OpenWrt s názvem OpenWrt-Yun. Deska má vestavěný Ethernet a WiFi modul, USB-A port, slot pro MicroSD kartu. Dále disponuje 20 digitálními I/O piny, z toho 7 mohou být použito jako výstupy PWM a 12 jako analogové vstupy~\cite{ArduinoYun}.	
+	Arduino Yun je deska založená na ATmega32u4 (architektura ARM) a Atheros AR9331 (architektiura x86), a umožňuje běh odlehčeného linuxu Linino. Obsahuje softwarový můstek zajišťující komunikaci obou čipů. Procesor Atheros podporuje linuxové distribuce založené na OpenWrt s názvem OpenWrt-Yun. Deska má vestavěný Ethernet a WiFi modul, USB-A port, slot pro MicroSD kartu. Dále disponuje 20 digitálními I/O piny, z toho 7 mohou být použito jako výstupy PWM a 12 jako analogové vstupy~\cite{ArduinoYun}.	
 
 	\begin{figure*}[!ht]
     \centering

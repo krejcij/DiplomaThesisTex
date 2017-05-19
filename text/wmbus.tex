@@ -171,7 +171,7 @@ Norma EN 13757-4 specifikuje fyzickou a linkovou vrstvu. Na ně následně navaz
 \subsection{Fyzická vrstva Wireless M-Bus}
 Fyzická vrstva definuje jak mají být bity kódovány a vysílány, tedy radiofrekvenční charakteristiky a radiofrekvenční parametry. Fyzická vrstva je realizována hardwarem, případně v kombinaci s firmwarem daného hardware.
 
-Wireless M-Bus dle normy ČSN~EN~13757-4~\cite{Norma4} využívá tři pásma pro tři různé módy komunikace: 868,3\,MHz pro módy Sx, 868,95\,MHz pro módy Tx a 868,33\,MHz pro mód R2 jsou definovány tři různé operační módy komunikace. Všechny tři módy používají modulaci 2-FSK, tedy dvoustavovou frekvenční modulaci. Pro některé módy jsou některé parametry fyzické vrstvy stejné, proto je fyzické zařízení schopné s nezměněným hardwarem komunikovat v různých operačních módech.
+Wireless M-Bus dle normy ČSN~EN~13757-4~\cite{Norma4} využívá tři pásma pro tři různé módy komunikace: 868,3\,MHz pro mód S, 868,95\,MHz pro mód T a 868,33\,MHz pro mód R2 jsou definovány tři různé operační módy komunikace. Všechny tři módy používají dvoustavovou frekvenční modulaci 2-FSK. Pro některé módy jsou některé parametry fyzické vrstvy stejné, proto je fyzické zařízení schopné s nezměněným hardwarem komunikovat v různých operačních módech.
 
 
 \subsubsection{Kódování používaná ve Wireless M-Bus}
@@ -196,7 +196,7 @@ Kódování Manchester (viz Obr. \ref{ObrazekManechester}) slučuje datový a ho
 
 Pokud nejsou vysílána žádná data, výstup kódování Manchester je hodinový signál. Nevýhodou použití Manchester kódování je to, že na přenos jednoho bitu informace je potřeba dvou hodinových taktů.
 
-Princip kódování 3 ze 6 (viz Tab.~\ref{Table3out6}) spočívá v tom, že každé 4 bity (nibble) jsou zakódovány jako 6ti bitová data, přičemž zakódované slovo obsahuje stejné množství nul a jedniček. Zároveň v kódu musí být alespoň dvě změny, tzn. není možné použít \uv{000111} nebo \uv{111000}. Takto zakódovaná data jsou přenášené s nejvýznamnějším bitem jako prvním. Toto kódování by mělo být aplikováno při použití módu častého vysílání (módy T1 a T2) a při komunikaci měřiče s koncentrátorem. Koncentrátor může odpovědět měřiči zprávou kódovanou kódováním Manchester.
+Princip kódování 3 ze 6 (viz Tab.~\ref{Table3out6}) spočívá v tom, že každé 4 bity (nibble) jsou zakódovány jako 6ti bitová data, přičemž zakódované slovo obsahuje stejné množství nul a jedniček. Zároveň v kódu musí být alespoň dvě změny. Takto zakódovaná data jsou přenášená s nejvýznamnějším bitem jako prvním. Toto kódování by mělo být aplikováno při použití módu častého vysílání (módy T1 a T2) a při komunikaci měřiče s koncentrátorem. Koncentrátor může odpovědět měřiči zprávou kódovanou kódováním Manchester.
 
 
 \begin{table}[!ht]
@@ -705,7 +705,7 @@ Pro šifrování přenášených dat se v protokolu Wireless M-Bus používají 
 Šifrování DES dnes již není moc využívané, je již nedostačující a zastaralé. Drtivá většina dnešních zařízení umožnujících šifrovaný přenos využívá šifrování AES, konkrétně verzi AES128 CBC.
 
 \subsection{Šifrovací algoritmus DES}
-Data Encryption Standard je symetrická šifra vyvinutá v 70. letech. V roce 1977 byla zvolena za standard FIPS 46~\cite{NormaFIPS46}. V současnosti je tato šifra považována za nespolehlivou, protože používá klíč pouze o délce 64 bitů, z toho 8 je kontrolních a 56 efektivních. Navíc algoritmus obsahuje slabiny, které dále snižují bezpečnost šifry. Díky tomu je možné šifru prolomit útokem hrubou silou za méně než 24 hodin.
+Data Encryption Standard je symetrická šifra, která byla v roce 1977 zvolena za standard FIPS 46~\cite{NormaFIPS46}. V současnosti je tato šifra již považována za nedostačující, protože používá klíč pouze o délce 64 bitů (8 kontrolních a 56 efektivních). Navíc tento algoritmus obsahuje bezpečnostní slabiny, které dále snižují bezpečnost šifry. Díky všem těmto nedostatkům možné AES šifrování pomocí útoku hrubou silou prolomit za dobu kratší než jeden den.
 
 \subsection{Šifrovací algoritmus AES}
 Advanced Encryption Standard je symetrická bloková šifra (pro šifrování i dešifrování využívá stejný klíč na data s pevně danou délkou bloku), která nahradila dříve užívanou šifru DES~\cite{NormaFIPS}. AES šifra je rychlá v softwaru i hardwaru a na rozdíl od~svého předchůdce DES nepoužívá Feistelovu síť. AES má pevně danou velikost bloku na 128 bitů a velikost klíče na 128, 192 nebo 256 bitů.   Pokud jsou šifrovaná data delší, zpracovávají se po jednotlivých blocích. 

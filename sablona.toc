@@ -142,4 +142,4 @@
 \contentsline {chapter}{\numberline {A}P\IeC {\v r}ehled parametr\IeC {\r u} jednotliv\IeC {\'y}ch jednodeskov\IeC {\'y}ch po\IeC {\v c}\IeC {\'\i }ta\IeC {\v c}\IeC {\r u} }{104}{chapter.462}
 \contentsline {chapter}{\numberline {B}Uk\IeC {\'a}zka zachycen\IeC {\'y}ch dat }{105}{chapter.463}
 \contentsline {chapter}{\numberline {C}Uk\IeC {\'a}zka vizualizace dat }{106}{chapter.491}
-\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho DVD }{109}{chapter.495}
+\contentsline {chapter}{\numberline {D}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD }{109}{chapter.495}
